@@ -1,0 +1,10 @@
+{
+  "name": "johnnys-league",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "datos": "node --env-file=.env scripts/fetch-biwenger.mjs",
+    "servir": "npx --yes serve ."
+  }
+}
