@@ -71,7 +71,8 @@
   .jump a:hover { color:var(--white); border-bottom-color:var(--red); }
   .jump a:focus-visible { outline:2px solid var(--gold); outline-offset:-2px; }
 
-  .hero { padding:52px 0 56px; border-bottom:1px solid var(--navy-line); position:relative; overflow:hidden; }
+  .hero { padding-top:52px; padding-bottom:56px; border-bottom:1px solid var(--navy-line);
+          position:relative; overflow:hidden; }
   .hero::before { content:''; position:absolute; right:-90px; top:-70px; width:420px; height:420px;
     background:url('assets/escudo.png') no-repeat center/contain;
     opacity:0.05; pointer-events:none; z-index:0; }
@@ -310,8 +311,8 @@ html, body { max-width: 100%; overflow-x: hidden; }
   .cover-frame img { max-height: 380px; }
 
   /* Menos aire vertical entre secciones */
-  .hero { padding: 32px 0 36px; }
-  section.block { padding: 36px 0; scroll-margin-top: 20px; }
+  .hero { padding-top: 32px; padding-bottom: 36px; }
+  section.block { padding-top: 36px; padding-bottom: 36px; scroll-margin-top: 20px; }
 
   /* Los datos destacados, más compactos */
   .destacado .v { font-size: 1.3rem; }
@@ -324,4 +325,21 @@ html, body { max-width: 100%; overflow-x: hidden; }
   .titles .tagline { font-size: 0.85rem; }
   .crest { width: 48px; height: 48px; }
   .masthead .bar { gap: 12px; padding: 14px 0 11px; }
+}
+
+/* ---------- Márgenes laterales, a prueba de atajos ---------- */
+/* Van al final y con selector reforzado para que nada los pise */
+@media (max-width: 760px) {
+  body .wrap,
+  body .columnas,
+  body .hero.wrap { padding-left: 20px; padding-right: 20px; }
+
+  /* La tira de partidos sí va de borde a borde, a propósito */
+  body .tira { padding-left: 0; padding-right: 0; }
+}
+
+@media (max-width: 420px) {
+  body .wrap,
+  body .columnas,
+  body .hero.wrap { padding-left: 16px; padding-right: 16px; }
 }
