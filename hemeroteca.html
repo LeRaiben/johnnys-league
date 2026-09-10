@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hemeroteca · Johnny's League</title>
+<meta name="description" content="Todas las portadas de El diario de la Johnny's.">
+<link rel="icon" href="assets/escudo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/estilo.css">
+<style>
+  .archivo-completo { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:24px; }
+  .temporada { font-family:'Anton',sans-serif; font-weight:400; text-transform:uppercase;
+               font-size:1.15rem; color:var(--gold); margin:38px 0 16px; letter-spacing:0.02em; }
+  .temporada:first-of-type { margin-top:0; }
+  .vacio { background:var(--navy-soft); border-left:3px solid var(--gold);
+           padding:20px 22px; color:var(--grey); font-size:0.95rem; }
+
+  @media (max-width:900px){ .archivo-completo { grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; } }
+  @media (max-width:640px){ .archivo-completo { grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; } }
+</style>
+</head>
+<body>
+
+<div class="lomo" aria-hidden="true"></div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="bar">
+      <a href="index.html"><img class="crest" src="assets/escudo.png" alt="Escudo de Johnny's League"></a>
+      <div class="titles">
+        <h1>Johnny's League</h1>
+        <div class="tagline">crónica semanal de la liga</div>
+      </div>
+      <div class="status">
+        <span class="cond">Portadas</span>
+        <span class="round" id="cuantas">—</span>
+      </div>
+    </div>
+    <div class="jump">
+      <a href="index.html#portada">Portada</a>
+      <a href="index.html#clasificacion">Clasificación</a>
+      <a href="index.html#mercado">Mercado</a>
+      <a href="presidentes.html">Presidentes</a>
+      <a href="index.html#cronicas">Crónicas</a>
+      <a href="hemeroteca.html" class="activo">Hemeroteca</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero wrap" style="border-bottom:none; padding-left:0; padding-right:0;">
+    <div class="hero-titulo">
+      <h2>Hemeroteca</h2>
+      <span class="pie">El diario de la Johnny's</span>
+    </div>
+    <p class="section-note" style="margin-top:-18px;">
+      Todas las portadas publicadas. Pincha en cualquiera para leerla entera.
+    </p>
+    <div id="archivo"></div>
+  </section>
+</main>
+
+<div class="visor" id="visor" role="dialog" aria-label="Portada ampliada">
+  <button class="cerrar" id="cerrarVisor">Cerrar</button>
+  <img id="visorImg" alt="Portada ampliada">
+</div>
+
+<footer class="wrap">
+  <span class="cond">Johnny's League · hecha por y para la liga</span>
+</footer>
+
+<script>
+(function () {
+  var esc = function (s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  };
+
+  function tituloArchivo(h) {
+    var jornada = h.jornada ? 'Jornada ' + h.jornada : '';
+    if (!h.titulo) return jornada;
+    return jornada ? jornada + ' · ' + h.titulo : h.titulo;
+  }
+
+  function ficha(h) {
+    var thumb = h.imagen
+      ? '<div class="thumb"><img src="' + esc(h.imagen) + '" alt="Portada de la jornada ' + esc(h.jornada) + '" loading="lazy"></div>'
+      : '<div class="thumb sin-foto">J' + esc(h.jornada) + '</div>';
+    var abrible = h.imagen ? ' data-portada="' + esc(h.imagen) + '"' : '';
+    return '<figure class="archivo-item"' + abrible + '>' + thumb +
+           '<figcaption>' + esc(tituloArchivo(h)) + '</figcaption></figure>';
+  }
+
+  function activarVisor() {
+    document.querySelectorAll('.archivo-item[data-portada]').forEach(function (item) {
+      item.addEventListener('click', function () {
+        document.getElementById('visorImg').src = item.dataset.portada;
+        document.getElementById('visor').classList.add('abierto');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+  }
+
+  (function () {
+    var visor = document.getElementById('visor');
+    function cerrar() {
+      visor.classList.remove('abierto');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('cerrarVisor').addEventListener('click', cerrar);
+    visor.addEventListener('click', function (e) { if (e.target === visor) cerrar(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') cerrar(); });
+  })();
+
+  fetch('data/contenido.json', { cache: 'no-store' })
+    .then(function (r) { return r.json(); })
+    .then(function (c) {
+      var todas = (c.hemeroteca || []).slice();
+
+      // La portada de esta semana también cuenta, va la primera
+      if (c.portada && c.portada.imagen) {
+        todas.unshift({
+          jornada: c.jornada,
+          titulo: c.portada.tituloArchivo || c.portada.titular || '',
+          imagen: c.portada.imagen,
+          temporada: c.temporada
+        });
+      }
+
+      if (!todas.length) {
+        document.getElementById('archivo').innerHTML =
+          '<div class="vacio">Todavía no hay portadas archivadas. En cuanto publiquéis la primera, aparecerá aquí.</div>';
+        return;
+      }
+
+      document.getElementById('cuantas').textContent = todas.length;
+
+      // Agrupamos por temporada, si está indicada
+      var grupos = {};
+      todas.forEach(function (h) {
+        var clave = h.temporada || c.temporada || '';
+        (grupos[clave] = grupos[clave] || []).push(h);
+      });
+
+      var claves = Object.keys(grupos).sort().reverse();
+      var html = claves.map(function (clave) {
+        var lista = grupos[clave].sort(function (a, b) {
+          return Number(b.jornada) - Number(a.jornada);
+        });
+        var cabecera = clave ? '<h3 class="temporada">Temporada ' + esc(clave) + '</h3>' : '';
+        return cabecera + '<div class="archivo-completo">' + lista.map(ficha).join('') + '</div>';
+      }).join('');
+
+      document.getElementById('archivo').innerHTML = html;
+      activarVisor();
+    })
+    .catch(function () {
+      document.getElementById('archivo').innerHTML =
+        '<div class="vacio">No se ha podido cargar la hemeroteca.</div>';
+    });
+})();
+</script>
+</body>
+</html>

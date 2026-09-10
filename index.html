@@ -36,7 +36,7 @@
       <a href="#mercado">Mercado</a>
       <a href="presidentes.html">Presidentes</a>
       <a href="#cronicas">Crónicas</a>
-      <a href="#hemeroteca">Hemeroteca</a>
+      <a href="hemeroteca.html">Hemeroteca</a>
     </div>
   </div>
 </header>
@@ -117,6 +117,7 @@
     </div>
     <p class="section-note">Cada portada que publiquéis se archiva aquí por jornada.</p>
     <div class="archive" id="listaHemeroteca"></div>
+    <a class="ver-todas" href="hemeroteca.html" id="verTodas" hidden>Ver todas las portadas →</a>
   </section>
 
     </div><!-- /principal -->
@@ -306,12 +307,20 @@
              '<span class="cond">' + esc(a.etiqueta || '') + '</span></article>';
     }).join('');
 
-    document.getElementById('listaHemeroteca').innerHTML = (c.hemeroteca || []).map(function (h) {
-      var thumb = h.imagen
-        ? '<div class="thumb"><img src="' + esc(h.imagen) + '" alt="Portada jornada ' + esc(h.jornada) + '"></div>'
-        : '<div class="thumb">J' + esc(h.jornada) + '</div>';
-      return '<figure>' + thumb + '<figcaption>Jornada ' + esc(h.jornada) + ' · ' + esc(h.titulo || '') + '</figcaption></figure>';
+    // En la portada solo enseñamos las cuatro últimas
+    var archivo = (c.hemeroteca || []).slice().sort(function (a, b) {
+      return Number(b.jornada) - Number(a.jornada);
+    });
+
+    document.getElementById('listaHemeroteca').innerHTML = archivo.slice(0, 4).map(function (h) {
+      return fichaHemeroteca(h);
     }).join('');
+
+    // Enlace a la página con todas, solo si hay más de cuatro
+    var masLink = document.getElementById('verTodas');
+    if (masLink) masLink.hidden = archivo.length <= 4;
+
+    activarVisorPortadas();
   }
 
   /* ---------- Pestañas del mercado ---------- */
@@ -399,6 +408,37 @@
       '<div class="txt"><div class="n">' + esc(j.nombre) + '</div>' +
       '<div class="d">' + esc(etiqueta) + ' · ' + esc(j.equipo || '') + '</div></div>' +
       '<span class="cifra ' + clase + '">' + esc(formatoVariacion(j.variacion)) + '</span></div>';
+  }
+
+  /* ---------- Hemeroteca ---------- */
+
+  // El título es libre: si no hay, se enseña solo la jornada
+  function tituloArchivo(h) {
+    var jornada = h.jornada ? 'Jornada ' + h.jornada : '';
+    if (!h.titulo) return jornada;
+    return jornada ? jornada + ' · ' + h.titulo : h.titulo;
+  }
+
+  function fichaHemeroteca(h) {
+    var thumb = h.imagen
+      ? '<div class="thumb"><img src="' + esc(h.imagen) + '" alt="Portada de la jornada ' + esc(h.jornada) + '" loading="lazy"></div>'
+      : '<div class="thumb sin-foto">J' + esc(h.jornada) + '</div>';
+    var abrible = h.imagen ? ' data-portada="' + esc(h.imagen) + '"' : '';
+    return '<figure class="archivo-item"' + abrible + '>' + thumb +
+           '<figcaption>' + esc(tituloArchivo(h)) + '</figcaption></figure>';
+  }
+
+  // Al pinchar una portada archivada, se abre a pantalla completa
+  function activarVisorPortadas() {
+    document.querySelectorAll('.archivo-item[data-portada]').forEach(function (item) {
+      if (item.dataset.listo) return;
+      item.dataset.listo = '1';
+      item.addEventListener('click', function () {
+        document.getElementById('visorImg').src = item.dataset.portada;
+        document.getElementById('visor').classList.add('abierto');
+        document.body.style.overflow = 'hidden';
+      });
+    });
   }
 
   /* ---------- Tira de partidos ---------- */
