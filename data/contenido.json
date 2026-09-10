@@ -1,10 +1,12 @@
 {
   "jornada": 5,
+  "temporada": "2026-27",
   "portada": {
     "titular": "Podía haber fichado a Mbappé. Fichó a Gordon.",
     "entradilla": "LXUNITED prefiere guardar el dinero para más adelante. En el grupo ya hay quien pregunta para más adelante cuándo.",
     "firma": "Redacción de Johnny's League",
-    "imagen": "assets/portadas/jornada-5.jpeg"
+    "imagen": "assets/portadas/jornada-5.jpeg",
+    "tituloArchivo": "El cagadón de los Gordon"
   },
   "cronicas": [
     {
@@ -24,9 +26,9 @@
     }
   ],
   "hemeroteca": [
-    { "jornada": 4, "titulo": "El pacto del grupo", "imagen": "assets/portadas/jornada-4.jpeg" },
-    { "jornada": 3, "titulo": "Nadie alineó a tiempo", "imagen": "" },
-    { "jornada": 2, "titulo": "La puja imposible", "imagen": "" },
+    { "jornada": 4, "titulo": "", "imagen": "" },
+    { "jornada": 3, "titulo": "", "imagen": "" },
+    { "jornada": 2, "titulo": "", "imagen": "" },
     { "jornada": 1, "titulo": "Arranca la temporada", "imagen": "" }
   ]
 }
