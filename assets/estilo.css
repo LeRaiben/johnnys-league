@@ -285,3 +285,43 @@
   .encuentro { padding:9px 15px; gap:7px; }
   .encuentro .nom { font-size:0.72rem; }
 }
+
+/* ---------- Arreglos para móvil ---------- */
+html, body { max-width: 100%; overflow-x: hidden; }
+
+@media (max-width: 760px) {
+  /* La franja rojiblanca no cabe en móvil: fuera */
+  .lomo { display: none; }
+  body { padding-left: 0; }
+
+  /* Márgenes reales a los lados */
+  .wrap, .columnas { padding-left: 20px; padding-right: 20px; }
+
+  /* La cabecera deja de ser fija para no comerse la pantalla */
+  .masthead { position: static; }
+
+  /* Titulares algo más contenidos */
+  .hero-titulo h2 { font-size: 1.9rem; }
+  .contexto h2 { font-size: 1.5rem; }
+  .section-head h3 { font-size: 1.4rem; }
+
+  /* La portada, centrada y sin desbordar */
+  .cover-frame { margin: 0 auto; }
+  .cover-frame img { max-height: 380px; }
+
+  /* Menos aire vertical entre secciones */
+  .hero { padding: 32px 0 36px; }
+  section.block { padding: 36px 0; scroll-margin-top: 20px; }
+
+  /* Los datos destacados, más compactos */
+  .destacado .v { font-size: 1.3rem; }
+  .dato-grande { font-size: 2.1rem; }
+}
+
+@media (max-width: 420px) {
+  .wrap, .columnas { padding-left: 16px; padding-right: 16px; }
+  .titles h1 { font-size: 1.55rem; }
+  .titles .tagline { font-size: 0.85rem; }
+  .crest { width: 48px; height: 48px; }
+  .masthead .bar { gap: 12px; padding: 14px 0 11px; }
+}
