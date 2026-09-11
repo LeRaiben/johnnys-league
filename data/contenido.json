@@ -26,9 +26,9 @@
     }
   ],
   "hemeroteca": [
-    { "jornada": 4, "titulo": "", "imagen": "assets/portadas/jornada-4.jpeg" },
-    { "jornada": 3, "titulo": "", "imagen": "assets/portadas/jornada-3.jpeg" },
-    { "jornada": 2, "titulo": "", "imagen": "assets/portadas/jornada-2.jpeg" },
-    { "jornada": 1, "titulo": "Arranca la temporada", "imagen": "assets/portadas/jornada-1.jpeg" }
-  ]
+  { "jornada": 4, "ocultarTitulo": true, "imagen": "assets/portadas/jornada-4.jpeg" },
+  { "jornada": 3, "ocultarTitulo": true, "imagen": "assets/portadas/jornada-3.jpeg" },
+  { "jornada": 2, "ocultarTitulo": true, "imagen": "assets/portadas/jornada-2.jpeg" },
+  { "jornada": 1, "ocultarTitulo": true, "imagen": "assets/portadas/jornada-1.jpeg" }
+]
 }
