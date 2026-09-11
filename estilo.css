@@ -366,28 +366,37 @@ html, body { max-width: 100%; overflow-x: hidden; }
 .archivo-item figcaption:empty { display: none; }
 
 /* ---------- Portada: texto, imagen y datos ---------- */
-.hero-grid { grid-template-columns: minmax(0,1fr) auto; }
-.cover-col { grid-row: 1 / span 2; }
-.datos-col { min-width: 0; }
+/* Columna izquierda con el texto y los datos, derecha la portada */
+.hero-grid { display: grid; grid-template-columns: minmax(0,1fr) 420px;
+             gap: 48px; align-items: start; }
+.cover-col { grid-column: 2; grid-row: 1 / span 2; }
+.contexto { grid-column: 1; grid-row: 1; max-width: none; }
+.datos-col { grid-column: 1; grid-row: 2; min-width: 0; margin-top: 26px; }
+.cover-frame img { max-height: 540px; }
 
-/* ---------- Quién manda, encima de la clasificación ---------- */
-.manda { background: var(--navy-soft); border-left: 3px solid var(--gold);
-         padding: 16px 20px; margin-bottom: 22px; }
-.manda .et { display: block; font-size: 0.66rem; color: var(--grey); margin-bottom: 10px; }
-.manda-fila { display: flex; align-items: center; gap: 14px; }
-.manda-fila .avatar { width: 46px; height: 46px; }
-.manda-nom { font-family: 'Anton', sans-serif; font-size: 1.35rem; text-transform: uppercase;
-             line-height: 1.05; flex: 1; min-width: 0; }
-.manda-pts { font-family: 'Anton', sans-serif; font-size: 2rem; color: var(--gold);
+/* ---------- Quién manda, dentro de la portada ---------- */
+.manda { border-top: 1px solid var(--navy-line); padding-top: 16px; margin-bottom: 4px; }
+.manda .et { display: block; font-family: 'Barlow Condensed', sans-serif; font-weight: 600;
+             letter-spacing: 0.05em; text-transform: uppercase; font-size: 0.64rem;
+             color: var(--grey); margin-bottom: 9px; }
+.manda-fila { display: flex; align-items: center; gap: 12px; }
+.manda-fila .avatar { width: 40px; height: 40px; flex-shrink: 0; }
+.manda-nom { font-family: 'Anton', sans-serif; font-size: 1.25rem; text-transform: uppercase;
+             line-height: 1.05; color: var(--gold); flex: 1; min-width: 0; }
+.manda-pts { font-family: 'Anton', sans-serif; font-size: 1.5rem; color: var(--white);
              line-height: 1; text-align: right; white-space: nowrap; }
 .manda-pts span { display: block; font-family: 'Barlow Condensed', sans-serif; font-weight: 600;
-                  font-size: 0.68rem; letter-spacing: 0.05em; text-transform: uppercase;
+                  font-size: 0.66rem; letter-spacing: 0.05em; text-transform: uppercase;
                   color: var(--grey); margin-top: 4px; }
+
+/* El primer destacado ya no necesita su propia línea arriba */
+.manda + #destacados .destacado:first-child { border-top: 1px solid var(--navy-line); }
 
 @media (max-width: 880px) {
   /* En móvil todo va apilado: texto, portada y después los datos */
-  .hero-grid { grid-template-columns: 1fr; }
-  .cover-col { grid-row: auto; }
-  .manda-nom { font-size: 1.1rem; }
-  .manda-pts { font-size: 1.6rem; }
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .cover-col, .contexto, .datos-col { grid-column: 1; grid-row: auto; }
+  .datos-col { margin-top: 0; }
+  .manda-nom { font-size: 1.05rem; }
+  .manda-pts { font-size: 1.3rem; }
 }
