@@ -55,10 +55,17 @@ const millones = (n) => (typeof n === 'number' ? `${(n / 1_000_000).toFixed(1).r
 const iniciales = (nombre = '') =>
   nombre.split(/\s+/).filter(Boolean).slice(0, 2).map((p) => p[0]).join('').toUpperCase() || '??';
 
+/**
+ * Biwenger guarda el avatar de cada usuario como un nombre de archivo.
+ * No hay documentación de dónde vive, así que probamos varias direcciones
+ * posibles y nos quedamos con la primera que responda.
+ */
 const PREFIJOS_ESCUDO = [
+  // El icono suele venir ya con su ruta ("i/u/12345.png"), así que basta el dominio
   'https://cdn.biwenger.com/',
   'https://cf.biwenger.com/',
   'https://biwenger.as.com/',
+  // Por si en algún caso llegara solo el nombre del archivo
   'https://cdn.biwenger.com/i/u/',
   'https://cdn.biwenger.com/i/a/'
 ];
@@ -66,6 +73,10 @@ const PREFIJOS_ESCUDO = [
 let prefijoBueno = null;
 let fotoJugador = null;
 
+/**
+ * Igual que con los escudos: probamos dónde guarda Biwenger las fotos
+ * de los jugadores y nos quedamos con el formato que responda.
+ */
 const FORMATOS_FOTO = [
   (id) => `https://cdn.biwenger.com/i/p/${id}.png`,
   (id) => `https://cdn.biwenger.com/i/p/${id}.jpg`,
@@ -138,6 +149,7 @@ async function traerClasificacion() {
 
   const tabla = bruto.map((equipo, i) => {
     const nombreEquipo = equipo.name || 'Sin nombre';
+    // El mánager solo se muestra si Biwenger lo da y es distinto del nombre del equipo
     const nombreManager = equipo.user?.name || equipo.owner?.name || '';
     return {
       posicion: i + 1,
@@ -214,6 +226,8 @@ async function traerMercadoPresidentes(jugadoresPorId) {
       };
     });
 
+  // Cláusulas pagadas. La ruta lleva el ID de la liga dentro:
+  //   /api/v2/league/{id}/board?type=clauses&limit=8
   let clausulas = [];
   const RUTAS = [
     `league/${LEAGUE}/board?type=clauses&limit=100`,
@@ -240,6 +254,8 @@ async function traerMercadoPresidentes(jugadoresPorId) {
   }
 
   if (entradas && entradas.length) {
+    // El tipo real ("clause" o "transfer") va dentro de cada operación,
+    // no en la entrada del tablón que las envuelve.
     clausulas = entradas.flatMap((entrada) => {
       const cuando = entrada.date ? new Date(entrada.date * 1000).toISOString() : null;
       const contenido = Array.isArray(entrada.content) ? entrada.content : [entrada.content].filter(Boolean);
@@ -247,6 +263,7 @@ async function traerMercadoPresidentes(jugadoresPorId) {
       return contenido
         .filter((op) => op && op.type === 'clause')
         .map((op) => {
+          // El jugador llega como número suelto, hay que buscarlo en el catálogo
           const idJugador = typeof op.player === 'object' ? op.player?.id : op.player;
           const info = jugadoresPorId[idJugador] || {};
           const valorMercado = info.price ?? 0;
@@ -315,6 +332,7 @@ async function detectarEscudoEquipo(idEjemplo) {
 }
 
 async function traerPartidos(equiposPorId) {
+  // Paso 1: saber en qué jornada estamos
   let jornadaActual = null;
   try {
     const res = await fetch(`${API}/rounds/la-liga`, { headers: cabeceras });
@@ -332,6 +350,8 @@ async function traerPartidos(equiposPorId) {
     return { jornada: null, partidos: [] };
   }
 
+  // Paso 2: buscar los partidos. Probamos la jornada actual y la siguiente,
+  // porque la tira interesa que muestre lo que está por jugarse.
   const ids = [jornadaActual.id + 1, jornadaActual.id];
   const PLANTILLAS = [
     (id) => `${API}/rounds/la-liga/${id}`,
@@ -396,6 +416,10 @@ async function armarPartidos(bruto, datos, equiposPorId) {
 
 /* ---------- Histórico ---------- */
 
+/**
+ * Guarda una foto de la clasificación cada día en data/historico.json.
+ * Con el tiempo esto permite dibujar la evolución de cada presidente.
+ */
 async function guardarHistorico(tabla) {
   const ruta = resolve(RAIZ, 'data', 'historico.json');
   const hoy = new Date().toISOString().slice(0, 10);
@@ -418,8 +442,9 @@ async function guardarHistorico(tabla) {
     }))
   };
 
+  // Una entrada por día: si ya hay una de hoy, la sustituimos
   const sinHoy = historico.filter((f) => f.fecha !== hoy);
-  const actualizado = [...sinHoy, foto].slice(-180);
+  const actualizado = [...sinHoy, foto].slice(-180); // medio año de margen
 
   await writeFile(ruta, JSON.stringify(actualizado, null, 2), 'utf8');
   console.log(`Histórico: ${actualizado.length} días guardados.`);
@@ -427,6 +452,9 @@ async function guardarHistorico(tabla) {
   return actualizado;
 }
 
+/**
+ * Compara la foto de hoy con la de hace unos días para ver quién sube y quién baja.
+ */
 function calcularTendencias(historico, diasAtras = 7) {
   if (historico.length < 2) return {};
 
@@ -445,7 +473,7 @@ function calcularTendencias(historico, diasAtras = 7) {
     const previo = antes.get(e.equipo);
     if (!previo) continue;
     salida[e.equipo] = {
-      puestos: previo.posicion - e.posicion,
+      puestos: previo.posicion - e.posicion,   // positivo = ha subido
       puntos: e.puntos - previo.puntos,
       desde: anterior.fecha
     };
@@ -473,6 +501,7 @@ function fichasPresidentes(tabla, clausulas, enVenta, jornadasJugadas) {
 
     const masCara = hechas.slice().sort((a, b) => b.pideBruto - a.pideBruto)[0] || null;
 
+    // Métricas de rendimiento
     const millonesPlantilla = (equipo.valorBruto || 0) / 1e6;
     const puntosPorMillon = millonesPlantilla > 0
       ? Number((equipo.puntos / millonesPlantilla).toFixed(2))
@@ -507,6 +536,7 @@ function fichasPresidentes(tabla, clausulas, enVenta, jornadasJugadas) {
     };
   });
 
+  // Medias de la liga, para poder comparar cada uno contra el conjunto
   const media = (campo) => base.reduce((s, p) => s + (Number(p[campo]) || 0), 0) / (base.length || 1);
   const medias = {
     puntos: media('puntos'),
@@ -516,6 +546,7 @@ function fichasPresidentes(tabla, clausulas, enVenta, jornadasJugadas) {
     operaciones: media('operaciones')
   };
 
+  // Posición de cada uno en cada ranking (1 = el mejor)
   const puestoEn = (campo, mayorEsMejor = true) => {
     const orden = base.slice().sort((a, b) =>
       mayorEsMejor ? b[campo] - a[campo] : a[campo] - b[campo]);
@@ -570,13 +601,13 @@ async function traerCatalogoJugadores() {
     for (const [id, j] of Object.entries(datos.players || {})) {
       salida[id] = {
         name: j.name,
-        slug: j.slug,
         position: j.position,
         price: j.price,
         priceIncrement: j.priceIncrement,
         equipo: equipos[j.teamID]?.name || ''
       };
     }
+    // Nombres de los equipos reales, para los partidos
     const nombresEquipos = {};
     for (const [id, e] of Object.entries(equipos)) nombresEquipos[id] = e.name;
     return { jugadores: salida, equipos: nombresEquipos };
@@ -590,40 +621,6 @@ function nombrePosicion(codigo) {
   return { 1: 'Portero', 2: 'Defensa', 3: 'Centrocampista', 4: 'Delantero' }[codigo] || '';
 }
 
-/* ---------- Histórico de puntos por jugador ---------- */
-
-async function traerPuntuacionesJugadores(listaJugadores) {
-  console.log('\nDescargando puntuaciones históricas de jugadores...');
-  const resultados = {};
-  const ids = Object.keys(listaJugadores);
-
-  for (let i = 0; i < ids.length; i += 5) {
-    const grupo = ids.slice(i, i + 5);
-    await Promise.all(
-      grupo.map(async (id) => {
-        const j = listaJugadores[id];
-        if (!j || !j.slug) return;
-        try {
-          const url = `${CDN}/players/la-liga/${j.slug}?lang=es&fields=reports(points,match(round))`;
-          const data = await pedir(url, false);
-
-          if (data && data.reports) {
-            resultados[id] = data.reports.map((r) => ({
-              jornada: r.match?.round?.id || r.match?.round,
-              puntos: r.points ?? 0
-            }));
-          }
-        } catch {
-          // Si falla uno en concreto, se omite
-        }
-      })
-    );
-  }
-
-  console.log(`Puntuaciones descargadas de ${Object.keys(resultados).length} jugadores.`);
-  return resultados;
-}
-
 /* ---------- Principal ---------- */
 
 async function principal() {
@@ -633,8 +630,6 @@ async function principal() {
   const jugadores = catalogo.jugadores;
   const equiposReales = catalogo.equipos;
   console.log(`Catálogo cargado: ${Object.keys(jugadores).length} jugadores.`);
-
-  const puntosJugadores = await traerPuntuacionesJugadores(jugadores);
 
   const { nombreLiga, tabla } = await traerClasificacion();
   console.log(`Clasificación: ${tabla.length} equipos.`);
@@ -656,12 +651,13 @@ async function principal() {
   const historico = await guardarHistorico(tabla);
   const tendencias = calcularTendencias(historico);
 
+  // Leemos la jornada del contenido editorial para calcular medias por jornada
   let jornadasJugadas = 1;
   try {
     const contenido = JSON.parse(await readFile(resolve(RAIZ, 'data', 'contenido.json'), 'utf8'));
     jornadasJugadas = Number(contenido.jornada) || 1;
   } catch {
-    //
+    // Si no se puede leer, seguimos con 1
   }
 
   const presidentes = fichasPresidentes(tabla, soloClausulas, soloEnVenta, jornadasJugadas)
@@ -680,8 +676,7 @@ async function principal() {
     mercadoBiwenger,
     mercadoPresidentes,
     rankingClausulas: ranking,
-    presidentes,
-    puntosJugadores
+    presidentes
   };
 
   await mkdir(resolve(RAIZ, 'data'), { recursive: true });
