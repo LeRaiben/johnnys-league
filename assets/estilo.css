@@ -361,3 +361,6 @@ html, body { max-width: 100%; overflow-x: hidden; }
   font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.06em;
   text-transform:uppercase; font-size:0.85rem; border-bottom:1px solid transparent; }
 .ver-todas:hover { border-bottom-color:var(--gold); }
+
+/* Sin pie de foto, el hueco no debe quedar cojo */
+.archivo-item figcaption:empty { display: none; }

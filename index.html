@@ -417,6 +417,8 @@
 
   // El título es libre: si no hay, se enseña solo la jornada
   function tituloArchivo(h) {
+    // Con "ocultarTitulo": true no se escribe nada debajo de la foto
+    if (h.ocultarTitulo) return '';
     var jornada = h.jornada ? 'Jornada ' + h.jornada : '';
     if (!h.titulo) return jornada;
     return jornada ? jornada + ' · ' + h.titulo : h.titulo;
