@@ -60,16 +60,18 @@
       <div class="contexto">
         <h2 id="titular">Cargando…</h2>
         <p class="lede" id="entradilla"></p>
-        <div id="destacados"></div>
-        <div class="byline" id="firma"></div>
       </div>
-      <div>
+      <div class="cover-col">
         <div class="cover-frame" id="coverFrame">
           <div class="cover-empty" id="coverEmpty">
             <span class="cond">Portada de la jornada</span>
             Aún no hay portada para esta jornada.
           </div>
         </div>
+      </div>
+      <div class="datos-col">
+        <div id="destacados"></div>
+        <div class="byline" id="firma"></div>
       </div>
     </div>
   </section>
@@ -78,6 +80,7 @@
     <div class="principal">
 
   <section class="block" id="clasificacion">
+    <div class="manda" id="manda" hidden></div>
     <div class="section-head">
       <h3>Clasificación</h3>
       <span class="cond" id="selloClasificacion">Datos de Biwenger</span>
@@ -101,25 +104,13 @@
     <div class="subpanel" id="mkt-presidentes"></div>
   </section>
 
-  <section class="block" id="cronicas">
-    <div class="section-head">
-      <h3>Crónicas de la jornada</h3>
-      <span class="cond">La redacción</span>
-    </div>
-    <p class="section-note">Las historias largas: lo que pasa en el grupo y no cabe en una portada.</p>
-    <div class="stories" id="listaCronicas"></div>
-  </section>
+
 
 
 
     </div><!-- /principal -->
 
     <aside class="lateral">
-      <div class="panel-lat">
-        <span class="cond">Manda la liga</span>
-        <div id="latLider"></div>
-      </div>
-
       <div class="panel-lat">
         <span class="cond">Se mueve el mercado</span>
         <div id="latPrecios"></div>
@@ -142,6 +133,15 @@
     </aside>
 
   </div><!-- /columnas -->
+
+  <section class="block wrap" id="cronicas">
+    <div class="section-head">
+      <h3>Crónicas de la jornada</h3>
+      <span class="cond">La redacción</span>
+    </div>
+    <p class="section-note">Las historias largas: lo que pasa en el grupo y no cabe en una portada.</p>
+    <div class="stories" id="listaCronicas"></div>
+  </section>
 
   <section class="block wrap" id="hemeroteca">
     <div class="section-head">
@@ -336,26 +336,33 @@
     });
   });
 
+  /* ---------- Quién manda, encima de la clasificación ---------- */
+  function pintarManda(tabla) {
+    if (!tabla || !tabla.length) return;
+    var lider = tabla[0];
+    var margen = tabla.length > 1 ? lider.puntos - tabla[1].puntos : 0;
+    var escudo = lider.escudo
+      ? '<div class="avatar"><img src="' + esc(lider.escudo) + '" alt=""></div>'
+      : '<div class="avatar">' + esc(lider.iniciales || '') + '</div>';
+
+    var caja = document.getElementById('manda');
+    caja.innerHTML =
+      '<span class="cond et">Manda la liga</span>' +
+      '<div class="manda-fila">' + escudo +
+        '<div class="manda-nom">' + esc(lider.equipo) + '</div>' +
+        '<div class="manda-pts">' + esc(lider.puntos) +
+          '<span>' + (margen > 0
+            ? '+' + margen + (margen === 1 ? ' punto' : ' puntos')
+            : 'empatado') + '</span></div>' +
+      '</div>';
+    caja.hidden = false;
+  }
+
   /* ---------- Barra lateral ---------- */
   function pintarLateral(d) {
     var tabla = d.clasificacion || [];
     var mercado = d.mercadoBiwenger || [];
     var ops = d.mercadoPresidentes || [];
-
-    // Quién manda y por cuánto
-    if (tabla.length) {
-      var lider = tabla[0];
-      var margen = tabla.length > 1 ? lider.puntos - tabla[1].puntos : 0;
-      var escudo = lider.escudo
-        ? '<div class="avatar"><img src="' + esc(lider.escudo) + '" alt=""></div>'
-        : '<div class="avatar">' + esc(lider.iniciales || '') + '</div>';
-      document.getElementById('latLider').innerHTML =
-        '<div class="lider">' + escudo + '<div class="tname">' + esc(lider.equipo) + '</div></div>' +
-        '<div class="dato-grande">' + esc(lider.puntos) + '</div>' +
-        '<div class="dato-pie">' + (margen > 0
-          ? 'Saca ' + margen + (margen === 1 ? ' punto' : ' puntos') + ' al segundo.'
-          : 'Empatado en lo más alto.') + '</div>';
-    }
 
     // Mayor subida y mayor bajada del día
     var conVar = mercado.filter(function (j) { return Number(j.variacion); });
@@ -512,15 +519,6 @@
     var ops = (d.mercadoPresidentes || []).filter(function (o) { return o.tipo === 'clausula'; });
     var trozos = [];
 
-    if (tabla.length) {
-      var lider = tabla[0];
-      var margen = tabla.length > 1 ? lider.puntos - tabla[1].puntos : 0;
-      trozos.push('<div class="destacado"><span class="et">Líder</span>' +
-        '<div class="v">' + esc(lider.equipo) + '</div>' +
-        '<div class="d">' + esc(lider.puntos) + ' puntos' +
-        (margen > 0 ? ', ' + margen + ' de ventaja' : '') + '</div></div>');
-    }
-
     if (ops.length) {
       var cara = ops.slice().sort(function (a, b) { return b.pideBruto - a.pideBruto; })[0];
       trozos.push('<div class="destacado"><span class="et">Cláusula más cara</span>' +
@@ -550,6 +548,7 @@
   /* ---------- Arranque ---------- */
   cargar('data/liga.json').then(function (d) {
     pintarClasificacion(d.clasificacion);
+    pintarManda(d.clasificacion);
     pintarMercadoBiwenger(d.mercadoBiwenger);
     pintarMercadoPresidentes(d.mercadoPresidentes);
     pintarLateral(d);
