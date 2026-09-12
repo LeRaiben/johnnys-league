@@ -1,7 +1,8 @@
 {
-  "actualizado": "2026-09-12T17:20:46.415Z",
+  "actualizado": "2026-09-12T17:36:51.939Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 5,
+  "jornadaEnJuego": true,
   "partidos": [
     {
       "local": "Sevilla",
@@ -41,7 +42,7 @@
       "fecha": "2026-09-12T16:30:00.000Z",
       "golesLocal": 0,
       "golesVisitante": 0,
-      "estado": "break"
+      "estado": "secondTime"
     },
     {
       "local": "Real Madrid",
@@ -116,7 +117,11 @@
       "puntos": 238,
       "valor": "40,8 M",
       "valorBruto": 40800000,
-      "esTuyo": false
+      "esTuyo": false,
+      "puntosJornada": 30,
+      "jugadosJornada": 5,
+      "alineadosJornada": 11,
+      "puntosProvisional": 268
     },
     {
       "posicion": 2,
@@ -128,7 +133,11 @@
       "puntos": 234,
       "valor": "46,0 M",
       "valorBruto": 46030000,
-      "esTuyo": false
+      "esTuyo": false,
+      "puntosJornada": 4,
+      "jugadosJornada": 1,
+      "alineadosJornada": 11,
+      "puntosProvisional": 238
     },
     {
       "posicion": 3,
@@ -140,7 +149,11 @@
       "puntos": 222,
       "valor": "35,4 M",
       "valorBruto": 35380000,
-      "esTuyo": true
+      "esTuyo": true,
+      "puntosJornada": 2,
+      "jugadosJornada": 1,
+      "alineadosJornada": 11,
+      "puntosProvisional": 224
     },
     {
       "posicion": 4,
@@ -152,7 +165,11 @@
       "puntos": 222,
       "valor": "35,9 M",
       "valorBruto": 35930000,
-      "esTuyo": false
+      "esTuyo": false,
+      "puntosJornada": 12,
+      "jugadosJornada": 4,
+      "alineadosJornada": 11,
+      "puntosProvisional": 234
     },
     {
       "posicion": 5,
@@ -164,7 +181,11 @@
       "puntos": 210,
       "valor": "45,9 M",
       "valorBruto": 45890000,
-      "esTuyo": false
+      "esTuyo": false,
+      "puntosJornada": 14,
+      "jugadosJornada": 2,
+      "alineadosJornada": 11,
+      "puntosProvisional": 224
     },
     {
       "posicion": 6,
@@ -176,7 +197,11 @@
       "puntos": 192,
       "valor": "45,4 M",
       "valorBruto": 45440000,
-      "esTuyo": false
+      "esTuyo": false,
+      "puntosJornada": 14,
+      "jugadosJornada": 4,
+      "alineadosJornada": 11,
+      "puntosProvisional": 206
     },
     {
       "posicion": 7,
@@ -188,7 +213,11 @@
       "puntos": 188,
       "valor": "56,6 M",
       "valorBruto": 56630000,
-      "esTuyo": false
+      "esTuyo": false,
+      "puntosJornada": 26,
+      "jugadosJornada": 6,
+      "alineadosJornada": 11,
+      "puntosProvisional": 214
     },
     {
       "posicion": 8,
@@ -200,7 +229,11 @@
       "puntos": 188,
       "valor": "53,3 M",
       "valorBruto": 53280000,
-      "esTuyo": false
+      "esTuyo": false,
+      "puntosJornada": 21,
+      "jugadosJornada": 4,
+      "alineadosJornada": 11,
+      "puntosProvisional": 209
     },
     {
       "posicion": 9,
@@ -212,7 +245,11 @@
       "puntos": 182,
       "valor": "58,0 M",
       "valorBruto": 58020000,
-      "esTuyo": false
+      "esTuyo": false,
+      "puntosJornada": 10,
+      "jugadosJornada": 2,
+      "alineadosJornada": 11,
+      "puntosProvisional": 192
     },
     {
       "posicion": 10,
@@ -224,7 +261,11 @@
       "puntos": 176,
       "valor": "40,1 M",
       "valorBruto": 40080000,
-      "esTuyo": false
+      "esTuyo": false,
+      "puntosJornada": 8,
+      "jugadosJornada": 2,
+      "alineadosJornada": 11,
+      "puntosProvisional": 184
     },
     {
       "posicion": 11,
@@ -236,7 +277,11 @@
       "puntos": 130,
       "valor": "39,1 M",
       "valorBruto": 39090000,
-      "esTuyo": false
+      "esTuyo": false,
+      "puntosJornada": 12,
+      "jugadosJornada": 3,
+      "alineadosJornada": 11,
+      "puntosProvisional": 142
     },
     {
       "posicion": 12,
@@ -248,7 +293,11 @@
       "puntos": 82,
       "valor": "41,2 M",
       "valorBruto": 41180000,
-      "esTuyo": false
+      "esTuyo": false,
+      "puntosJornada": 8,
+      "jugadosJornada": 2,
+      "alineadosJornada": 11,
+      "puntosProvisional": 90
     }
   ],
   "mercadoBiwenger": [
