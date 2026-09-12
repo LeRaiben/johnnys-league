@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-12T18:56:31.792Z",
+  "actualizado": "2026-09-12T19:12:27.899Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 5,
   "jornadaEnJuego": true,
@@ -50,9 +50,9 @@
       "escudoLocal": "https://cdn.biwenger.com/i/t/15.png",
       "escudoVisitante": "https://cdn.biwenger.com/i/t/70.png",
       "fecha": "2026-09-12T19:00:00.000Z",
-      "golesLocal": null,
-      "golesVisitante": null,
-      "estado": "preview"
+      "golesLocal": 0,
+      "golesVisitante": 0,
+      "estado": "firstTime"
     },
     {
       "local": "Celta",
@@ -2654,7 +2654,7 @@
             "jornada": "Round 6 (postponed)",
             "rival": "Atlético",
             "esLocal": false,
-            "dificultad": 52
+            "dificultad": 51
           },
           {
             "jornada": "Round 7",
@@ -2666,7 +2666,7 @@
             "jornada": "Round 8",
             "rival": "Betis",
             "esLocal": false,
-            "dificultad": 60
+            "dificultad": 61
           }
         ]
       },
@@ -2862,7 +2862,7 @@
             "jornada": "Round 5",
             "rival": "Real Madrid",
             "esLocal": false,
-            "dificultad": 75
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -2888,7 +2888,7 @@
             "jornada": "Round 5",
             "rival": "Real Madrid",
             "esLocal": false,
-            "dificultad": 75
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -3393,7 +3393,7 @@
             "jornada": "Round 5",
             "rival": "Rayo Vallecano",
             "esLocal": true,
-            "dificultad": 25
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -3419,13 +3419,13 @@
             "jornada": "Round 5",
             "rival": "Real Sociedad",
             "esLocal": false,
-            "dificultad": 42
+            "dificultad": 41
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Osasuna",
             "esLocal": true,
-            "dificultad": 36
+            "dificultad": 35
           },
           {
             "jornada": "Round 7",
@@ -3445,13 +3445,13 @@
             "jornada": "Round 5",
             "rival": "Real Sociedad",
             "esLocal": false,
-            "dificultad": 42
+            "dificultad": 41
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Osasuna",
             "esLocal": true,
-            "dificultad": 36
+            "dificultad": 35
           },
           {
             "jornada": "Round 7",
@@ -3497,7 +3497,7 @@
             "jornada": "Round 5",
             "rival": "Rayo Vallecano",
             "esLocal": true,
-            "dificultad": 25
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -3549,7 +3549,7 @@
             "jornada": "Round 6 (postponed)",
             "rival": "Atlético",
             "esLocal": false,
-            "dificultad": 52
+            "dificultad": 51
           },
           {
             "jornada": "Round 7",
@@ -3561,7 +3561,7 @@
             "jornada": "Round 8",
             "rival": "Betis",
             "esLocal": false,
-            "dificultad": 60
+            "dificultad": 61
           }
         ]
       },
@@ -3575,13 +3575,13 @@
             "jornada": "Round 5",
             "rival": "Atlético",
             "esLocal": true,
-            "dificultad": 49
+            "dificultad": 48
           },
           {
             "jornada": "Round 7",
             "rival": "Valencia",
             "esLocal": false,
-            "dificultad": 8
+            "dificultad": 9
           },
           {
             "jornada": "Round 8",
@@ -3627,7 +3627,7 @@
             "jornada": "Round 6 (postponed)",
             "rival": "Atlético",
             "esLocal": false,
-            "dificultad": 52
+            "dificultad": 51
           },
           {
             "jornada": "Round 7",
@@ -3639,7 +3639,7 @@
             "jornada": "Round 8",
             "rival": "Betis",
             "esLocal": false,
-            "dificultad": 60
+            "dificultad": 61
           }
         ]
       },
@@ -3679,13 +3679,13 @@
             "jornada": "Round 5",
             "rival": "Real Sociedad",
             "esLocal": false,
-            "dificultad": 42
+            "dificultad": 41
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Osasuna",
             "esLocal": true,
-            "dificultad": 36
+            "dificultad": 35
           },
           {
             "jornada": "Round 7",
@@ -3759,7 +3759,7 @@
             "jornada": "Round 6 (postponed)",
             "rival": "Atlético",
             "esLocal": false,
-            "dificultad": 52
+            "dificultad": 51
           },
           {
             "jornada": "Round 7",
@@ -3771,7 +3771,7 @@
             "jornada": "Round 8",
             "rival": "Betis",
             "esLocal": false,
-            "dificultad": 60
+            "dificultad": 61
           }
         ]
       },
@@ -3785,7 +3785,7 @@
             "jornada": "Round 6 (postponed)",
             "rival": "Atlético",
             "esLocal": false,
-            "dificultad": 52
+            "dificultad": 51
           },
           {
             "jornada": "Round 7",
@@ -3797,7 +3797,7 @@
             "jornada": "Round 8",
             "rival": "Betis",
             "esLocal": false,
-            "dificultad": 60
+            "dificultad": 61
           }
         ]
       },
@@ -3948,13 +3948,13 @@
             "jornada": "Round 5",
             "rival": "Real Sociedad",
             "esLocal": false,
-            "dificultad": 42
+            "dificultad": 41
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Osasuna",
             "esLocal": true,
-            "dificultad": 36
+            "dificultad": 35
           },
           {
             "jornada": "Round 7",
@@ -4104,7 +4104,7 @@
             "jornada": "Round 5",
             "rival": "Real Madrid",
             "esLocal": false,
-            "dificultad": 75
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -4132,13 +4132,13 @@
             "jornada": "Round 5",
             "rival": "Real Sociedad",
             "esLocal": false,
-            "dificultad": 42
+            "dificultad": 41
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Osasuna",
             "esLocal": true,
-            "dificultad": 36
+            "dificultad": 35
           },
           {
             "jornada": "Round 7",
@@ -4236,7 +4236,7 @@
             "jornada": "Round 6 (postponed)",
             "rival": "Atlético",
             "esLocal": false,
-            "dificultad": 52
+            "dificultad": 51
           },
           {
             "jornada": "Round 7",
@@ -4248,7 +4248,7 @@
             "jornada": "Round 8",
             "rival": "Betis",
             "esLocal": false,
-            "dificultad": 60
+            "dificultad": 61
           }
         ]
       },
@@ -4262,13 +4262,13 @@
             "jornada": "Round 5",
             "rival": "Real Sociedad",
             "esLocal": false,
-            "dificultad": 42
+            "dificultad": 41
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Osasuna",
             "esLocal": true,
-            "dificultad": 36
+            "dificultad": 35
           },
           {
             "jornada": "Round 7",
@@ -4628,7 +4628,7 @@
             "jornada": "Round 5",
             "rival": "Real Madrid",
             "esLocal": false,
-            "dificultad": 75
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -4680,13 +4680,13 @@
             "jornada": "Round 5",
             "rival": "Atlético",
             "esLocal": true,
-            "dificultad": 49
+            "dificultad": 48
           },
           {
             "jornada": "Round 7",
             "rival": "Valencia",
             "esLocal": false,
-            "dificultad": 8
+            "dificultad": 9
           },
           {
             "jornada": "Round 8",
@@ -4706,7 +4706,7 @@
             "jornada": "Round 5",
             "rival": "Real Madrid",
             "esLocal": false,
-            "dificultad": 75
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -4732,7 +4732,7 @@
             "jornada": "Round 5",
             "rival": "Real Madrid",
             "esLocal": false,
-            "dificultad": 75
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -4890,7 +4890,7 @@
             "jornada": "Round 5",
             "rival": "Rayo Vallecano",
             "esLocal": true,
-            "dificultad": 25
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -4916,7 +4916,7 @@
             "jornada": "Round 6 (postponed)",
             "rival": "Atlético",
             "esLocal": false,
-            "dificultad": 52
+            "dificultad": 51
           },
           {
             "jornada": "Round 7",
@@ -4928,7 +4928,7 @@
             "jornada": "Round 8",
             "rival": "Betis",
             "esLocal": false,
-            "dificultad": 60
+            "dificultad": 61
           }
         ]
       },
@@ -5204,7 +5204,7 @@
             "jornada": "Round 5",
             "rival": "Real Madrid",
             "esLocal": false,
-            "dificultad": 75
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -5315,7 +5315,7 @@
             "jornada": "Round 5",
             "rival": "Rayo Vallecano",
             "esLocal": true,
-            "dificultad": 25
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -5577,7 +5577,7 @@
             "jornada": "Round 5",
             "rival": "Rayo Vallecano",
             "esLocal": true,
-            "dificultad": 25
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -5943,13 +5943,13 @@
             "jornada": "Round 5",
             "rival": "Atlético",
             "esLocal": true,
-            "dificultad": 49
+            "dificultad": 48
           },
           {
             "jornada": "Round 7",
             "rival": "Valencia",
             "esLocal": false,
-            "dificultad": 8
+            "dificultad": 9
           },
           {
             "jornada": "Round 8",
@@ -5969,13 +5969,13 @@
             "jornada": "Round 5",
             "rival": "Real Sociedad",
             "esLocal": false,
-            "dificultad": 42
+            "dificultad": 41
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Osasuna",
             "esLocal": true,
-            "dificultad": 36
+            "dificultad": 35
           },
           {
             "jornada": "Round 7",
@@ -5995,7 +5995,7 @@
             "jornada": "Round 6 (postponed)",
             "rival": "Atlético",
             "esLocal": false,
-            "dificultad": 52
+            "dificultad": 51
           },
           {
             "jornada": "Round 7",
@@ -6007,7 +6007,7 @@
             "jornada": "Round 8",
             "rival": "Betis",
             "esLocal": false,
-            "dificultad": 60
+            "dificultad": 61
           }
         ]
       },
@@ -6073,13 +6073,13 @@
             "jornada": "Round 5",
             "rival": "Real Sociedad",
             "esLocal": false,
-            "dificultad": 42
+            "dificultad": 41
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Osasuna",
             "esLocal": true,
-            "dificultad": 36
+            "dificultad": 35
           },
           {
             "jornada": "Round 7",
@@ -6151,13 +6151,13 @@
             "jornada": "Round 5",
             "rival": "Real Sociedad",
             "esLocal": false,
-            "dificultad": 42
+            "dificultad": 41
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Osasuna",
             "esLocal": true,
-            "dificultad": 36
+            "dificultad": 35
           },
           {
             "jornada": "Round 7",
@@ -6177,13 +6177,13 @@
             "jornada": "Round 5",
             "rival": "Real Sociedad",
             "esLocal": false,
-            "dificultad": 42
+            "dificultad": 41
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Osasuna",
             "esLocal": true,
-            "dificultad": 36
+            "dificultad": 35
           },
           {
             "jornada": "Round 7",
@@ -6203,13 +6203,13 @@
             "jornada": "Round 5",
             "rival": "Atlético",
             "esLocal": true,
-            "dificultad": 49
+            "dificultad": 48
           },
           {
             "jornada": "Round 7",
             "rival": "Valencia",
             "esLocal": false,
-            "dificultad": 8
+            "dificultad": 9
           },
           {
             "jornada": "Round 8",
@@ -6264,7 +6264,7 @@
             "jornada": "Round 5",
             "rival": "Real Madrid",
             "esLocal": false,
-            "dificultad": 75
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -6394,7 +6394,7 @@
             "jornada": "Round 6 (postponed)",
             "rival": "Atlético",
             "esLocal": false,
-            "dificultad": 52
+            "dificultad": 51
           },
           {
             "jornada": "Round 7",
@@ -6406,7 +6406,7 @@
             "jornada": "Round 8",
             "rival": "Betis",
             "esLocal": false,
-            "dificultad": 60
+            "dificultad": 61
           }
         ]
       },
@@ -6524,7 +6524,7 @@
             "jornada": "Round 5",
             "rival": "Real Madrid",
             "esLocal": false,
-            "dificultad": 75
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -6826,13 +6826,13 @@
             "jornada": "Round 5",
             "rival": "Atlético",
             "esLocal": true,
-            "dificultad": 49
+            "dificultad": 48
           },
           {
             "jornada": "Round 7",
             "rival": "Valencia",
             "esLocal": false,
-            "dificultad": 8
+            "dificultad": 9
           },
           {
             "jornada": "Round 8",
@@ -6852,13 +6852,13 @@
             "jornada": "Round 5",
             "rival": "Atlético",
             "esLocal": true,
-            "dificultad": 49
+            "dificultad": 48
           },
           {
             "jornada": "Round 7",
             "rival": "Valencia",
             "esLocal": false,
-            "dificultad": 8
+            "dificultad": 9
           },
           {
             "jornada": "Round 8",
@@ -6930,7 +6930,7 @@
             "jornada": "Round 5",
             "rival": "Rayo Vallecano",
             "esLocal": true,
-            "dificultad": 25
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
