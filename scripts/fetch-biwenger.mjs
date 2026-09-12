@@ -415,6 +415,121 @@ async function armarPartidos(bruto, datos, equiposPorId) {
   return { jornada: datos.name || datos.short || null, partidos };
 }
 
+/* ---------- Fichas de jugador (caché) ---------- */
+
+/**
+ * La ficha pública de un jugador se pide varias veces a lo largo del script
+ * (para los puntos de la jornada y para el Once Ideal). Como es la misma
+ * llamada, la guardamos para no repetirla.
+ */
+const fichasJugador = new Map();
+
+async function fichaJugador(slug) {
+  if (fichasJugador.has(slug)) return fichasJugador.get(slug);
+  const campos = encodeURIComponent('reports(points,match(round,status),rawStats),scoreStats');
+  const datos = await pedir(`${CDN}/players/la-liga/${slug}?lang=es&fields=${campos}`, false);
+  fichasJugador.set(slug, datos);
+  return datos;
+}
+
+/* ---------- Puntos de la jornada en curso ---------- */
+
+/**
+ * Biwenger no suma los puntos de una jornada a la clasificación hasta que la
+ * jornada se cierra (después del último partido). Mientras tanto esos puntos
+ * sí existen, pero repartidos en las alineaciones: /rounds/league/<id> da el
+ * once de cada presidente, y la ficha de cada jugador dice lo que puntuó.
+ *
+ * Dos detalles comprobados contra la propia app:
+ *  - El capitán puntúa doble.
+ *  - Un jugador solo tiene puntuación cuando SU partido ha terminado. Lo que
+ *    se está anotando en un partido en juego ahora mismo no se publica por
+ *    aquí, entra en cuanto ese partido acaba.
+ */
+async function traerPuntosJornada(idJornada, tabla, catalogoJugadores, scoreID) {
+  if (!idJornada || !scoreID) return null;
+
+  let datos;
+  try {
+    datos = await pedir(`${API}/rounds/league/${idJornada}`);
+  } catch (e) {
+    console.warn('Aviso: no se han podido leer las alineaciones de la jornada.', e.message);
+    return null;
+  }
+
+  const filas = datos?.league?.standings || [];
+  if (!filas.length) return null;
+
+  // Todos los jugadores alineados, sin repetirlos
+  const alineados = [...new Set(
+    filas.flatMap((f) => (f.lineup?.players || []).filter(Boolean).map(String))
+  )];
+
+  if (!alineados.length) {
+    console.log('Puntos de la jornada: todavía no hay alineaciones publicadas.');
+    return null;
+  }
+
+  const puntosPorJugador = new Map();
+  const LIMITE = 8;
+  let cursor = 0;
+  async function trabajador() {
+    while (cursor < alineados.length) {
+      const id = alineados[cursor++];
+      const slug = catalogoJugadores[id]?.slug;
+      if (!slug) continue;
+      try {
+        const ficha = await fichaJugador(slug);
+        const parte = (ficha.reports || []).find((r) => r.match?.round?.id === idJornada);
+        const puntos = parte?.points?.[scoreID];
+        if (puntos != null) {
+          puntosPorJugador.set(id, { puntos, minutos: parte.rawStats?.minutesPlayed ?? 0 });
+        }
+      } catch {
+        // Un jugador sin ficha simplemente no suma
+      }
+    }
+  }
+  await Promise.all(new Array(LIMITE).fill(0).map(trabajador));
+
+  const porEquipo = new Map();
+  let alguienHaJugado = false;
+
+  for (const fila of filas) {
+    const once = (fila.lineup?.players || []).filter(Boolean).map(String);
+    let puntos = 0;
+    let jugados = 0;
+
+    for (const id of once) {
+      const dato = puntosPorJugador.get(id);
+      if (!dato) continue;
+      puntos += dato.puntos;
+      if (dato.minutos > 0) jugados++;
+    }
+
+    // El capitán cuenta doble: le sumamos otra vez lo suyo
+    const datoCapitan = puntosPorJugador.get(String(fila.lineup?.captain?.id ?? ''));
+    if (datoCapitan) puntos += datoCapitan.puntos;
+
+    if (jugados > 0) alguienHaJugado = true;
+    porEquipo.set(String(fila.id), { puntos, jugados, once: once.length, nombre: fila.name });
+  }
+
+  if (!alguienHaJugado) {
+    console.log('Puntos de la jornada: aún no ha terminado ningún partido.');
+    return null;
+  }
+
+  const resumen = [...porEquipo.values()]
+    .sort((a, b) => b.puntos - a.puntos)
+    .slice(0, 3)
+    .map((e) => `${e.nombre} ${e.puntos}`)
+    .join(', ');
+  console.log(`Puntos de la jornada en curso: ${porEquipo.size} equipos (mejores: ${resumen}).`);
+
+  return porEquipo;
+}
+
 /* ---------- Histórico ---------- */
 
 /**
@@ -794,8 +909,7 @@ async function traerPlantillas(tabla) {
  * puntuación de la liga) y si llegó a jugar minutos de verdad.
  */
 async function traerUltimaJornadaJugador(slug, scoreID) {
-  const campos = encodeURIComponent('reports(points,match(round,status),rawStats),scoreStats');
-  const datos = await pedir(`${CDN}/players/la-liga/${slug}?lang=es&fields=${campos}`, false);
+  const datos = await fichaJugador(slug);
   const reports = datos.reports || [];
   const finalizados = reports.filter((r) => r.match?.status === 'finished');
   const ultimo = finalizados[finalizados.length - 1];
@@ -990,6 +1104,20 @@ async function principal() {
     console.warn('Aviso: no se pudo leer la jornada actual.', e.message);
   }
 
+  // Puntos que ya lleva cada presidente en la jornada que se está jugando.
+  // La clasificación oficial no los incluye hasta que la jornada se cierra.
+  const puntosJornada = await traerPuntosJornada(idJornadaActual, tabla, jugadores, scoreID);
+  if (puntosJornada) {
+    for (const equipo of tabla) {
+      const vivo = puntosJornada.get(String(equipo.id));
+      if (!vivo) continue;
+      equipo.puntosJornada = vivo.puntos;
+      equipo.jugadosJornada = vivo.jugados;
+      equipo.alineadosJornada = vivo.once;
+      equipo.puntosProvisional = (equipo.puntos || 0) + vivo.puntos;
+    }
+  }
+
   const historico = await guardarHistorico(tabla, idJornadaActual, jornadasJugadas);
   const tendencias = calcularTendencias(historico);
   const escudoPorEquipo = new Map(tabla.map((e) => [e.equipo, e.escudo]));
@@ -1019,6 +1147,7 @@ async function principal() {
     actualizado: new Date().toISOString(),
     nombreLiga,
     jornadasJugadas,
+    jornadaEnJuego: Boolean(puntosJornada),
     partidos: jornada.partidos,
     nombreJornada: jornada.jornada,
     clasificacion: tabla,
