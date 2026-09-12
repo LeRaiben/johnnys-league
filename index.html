@@ -12,6 +12,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/estilo.css">
+<style>
+  /* Puntos que cada presidente lleva ya sumados en la jornada en curso */
+  .pts .vivo { display:block; font-family:'Barlow Condensed',sans-serif; font-weight:500;
+               font-size:0.76rem; line-height:1.25; letter-spacing:0.04em;
+               color:var(--gold); white-space:nowrap; }
+  .pts .vivo.seco { color:var(--grey); }
+  .nota-vivo { display:inline-flex; align-items:flex-start; gap:8px; }
+  .nota-vivo::before { content:''; width:7px; height:7px; margin-top:7px; border-radius:50%;
+                       background:var(--red); flex-shrink:0; animation:latido 1.8s ease-in-out infinite; }
+  @keyframes latido { 0%,100%{opacity:1;} 50%{opacity:0.2;} }
+  @media (prefers-reduced-motion:reduce){ .nota-vivo::before{animation:none;} }
+</style>
 </head>
 <body>
 
@@ -197,14 +209,36 @@
           'onerror="this.parentNode.textContent=\'' + esc(e.iniciales || '') + '\'"></div>'
         : '<div class="avatar">' + esc(e.iniciales || '') + '</div>';
       var manager = e.manager ? '<div class="mgr">' + esc(e.manager) + '</div>' : '';
+      // Si hay jornada en juego, debajo de los puntos va lo que lleva sumado
+      // esta jornada y el total provisional que tendría al cerrarse.
+      var vivo = '';
+      if (e.puntosJornada != null) {
+        var signo = e.puntosJornada > 0 ? '+' : (e.puntosJornada < 0 ? '−' : '');
+        vivo = '<em class="vivo' + (e.puntosJornada ? '' : ' seco') + '">' +
+               signo + esc(Math.abs(e.puntosJornada)) +
+               ' · ' + esc(e.puntosProvisional) + '</em>';
+      }
       return '<div class="' + clases + '">' +
         '<span class="pos">' + esc(e.posicion) + '</span>' +
         '<div class="team">' + escudo +
         '<div><div class="tname">' + esc(e.equipo) + '</div>' +
         manager + '</div></div>' +
         '<span class="value">' + esc(e.valor || '') + '</span>' +
-        '<span class="pts">' + esc(e.puntos) + '</span></div>';
+        '<span class="pts">' + esc(e.puntos) + vivo + '</span></div>';
     }).join('');
+  }
+
+  /* Explica debajo del título si la jornada está en juego o ya cerrada */
+  function pintarNotaClasificacion(d) {
+    var nota = document.querySelector('#clasificacion .section-note');
+    if (!nota) return;
+    if (d.jornadaEnJuego) {
+      nota.innerHTML = '<span class="nota-vivo">Jornada en juego: debajo de los puntos, lo que lleva ' +
+        'sumado cada uno y el total provisional. Biwenger no lo mete en la clasificación hasta que ' +
+        'la jornada se cierra, y los puntos de un partido entran cuando ese partido acaba.</span>';
+    } else {
+      nota.textContent = 'Se actualiza sola cada vez que Biwenger cierra una jornada.';
+    }
   }
 
   /* ---------- Mercado ---------- */
@@ -553,6 +587,7 @@
   /* ---------- Arranque ---------- */
   function pintarLiga(d) {
     pintarClasificacion(d.clasificacion);
+    pintarNotaClasificacion(d);
     pintarManda(d.clasificacion);
     pintarMercadoBiwenger(d.mercadoBiwenger);
     pintarMercadoPresidentes(d.mercadoPresidentes);
