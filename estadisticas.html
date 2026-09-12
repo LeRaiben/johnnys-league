@@ -1,4 +1,4 @@
-estadisticas.html<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -130,7 +130,7 @@ estadisticas.html<!DOCTYPE html>
       <span class="pie" id="pieFecha"></span>
     </div>
     <p class="section-note" style="margin-top:-18px;">
-      Cómo ha ido cambiando la liga día a día. Cuanto más tiempo pase, mejor se ve.
+      Cómo ha ido cambiando la liga jornada a jornada, desde el principio de temporada.
     </p>
   </section>
 
@@ -153,7 +153,7 @@ estadisticas.html<!DOCTYPE html>
   <section class="block">
     <div class="section-head">
       <h3>Evolución</h3>
-      <span class="cond">Histórico diario</span>
+      <span class="cond">Toda la temporada</span>
     </div>
     <div class="subtabs" role="tablist">
       <button role="tab" aria-selected="true" data-campo="puntos">Puntos</button>
@@ -213,9 +213,8 @@ estadisticas.html<!DOCTYPE html>
     return (n / 1e6).toFixed(1).replace('.', ',') + ' M';
   };
 
-  var diaCorto = function (fecha) {
-    var f = new Date(fecha + 'T00:00:00');
-    return f.toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit' });
+  var etiquetaJornada = function (n) {
+    return 'J' + n;
   };
 
   /* ---------- Gráfico de evolución ---------- */
@@ -228,7 +227,7 @@ estadisticas.html<!DOCTYPE html>
     }
 
     var equipos = historico[historico.length - 1].equipos.map(function (e) { return e.equipo; });
-    var fechas = historico.map(function (f) { return f.fecha; });
+    var fechas = historico.map(function (f) { return f.jornada; });
 
     var todos = [];
     historico.forEach(function (f) { f.equipos.forEach(function (e) { todos.push(e[campo]); }); });
@@ -253,11 +252,11 @@ estadisticas.html<!DOCTYPE html>
       svg += '<text class="eje-texto" x="4" y="' + (yy + 4) + '">' + esc(etiqueta) + '</text>';
     }
 
-    // fechas en el eje X (si hay muchas, no las ponemos todas)
-    var saltoFecha = Math.ceil(fechas.length / 8) || 1;
+    // jornadas en el eje X (si hay muchas, no las ponemos todas)
+    var saltoFecha = Math.ceil(fechas.length / 10) || 1;
     fechas.forEach(function (f, i) {
       if (i % saltoFecha !== 0 && i !== fechas.length - 1) return;
-      svg += '<text class="eje-texto" x="' + x(i) + '" y="' + (H - 8) + '" text-anchor="middle">' + esc(diaCorto(f)) + '</text>';
+      svg += '<text class="eje-texto" x="' + x(i) + '" y="' + (H - 8) + '" text-anchor="middle">' + esc(etiquetaJornada(f)) + '</text>';
     });
 
     // una línea por equipo
