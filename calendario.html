@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+  <html lang="es">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario · Johnny's League</title>
+  <meta name="description" content="Qué tan fácil o difícil lo tiene cada plantilla en las próximas jornadas.">
+  <link rel="icon" href="assets/escudo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/estilo.css">
+  <style>
+    .selector { margin: 4px 0 26px; }
+  .selector select { background:var(--navy-soft); color:var(--white); border:1px solid var(--navy-line);
+    font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.03em; font-size:1rem;
+    padding:10px 16px; border-radius:4px; min-width:260px; }
+
+  .tabla-cal { width:100%; border-collapse:collapse; }
+  .tabla-cal th { text-align:left; font-family:'Barlow Condensed',sans-serif; font-weight:600;
+    letter-spacing:0.04em; text-transform:uppercase; font-size:0.72rem; color:var(--grey);
+    padding:10px 12px; border-bottom:1px solid var(--navy-line); }
+  .tabla-cal td { padding:10px 12px; border-bottom:1px solid rgba(247,247,245,0.06); vertical-align:middle; }
+  .jugador-fila { display:flex; align-items:center; gap:10px; }
+  .jugador-fila .avatar { width:34px; height:34px; flex-shrink:0; }
+  .jugador-fila .nom { font-weight:600; font-size:0.92rem; }
+  .jugador-fila .pos { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; color:var(--grey);
+    text-transform:uppercase; letter-spacing:0.03em; }
+
+  .semaforo { display:inline-flex; align-items:center; gap:7px; padding:5px 10px; border-radius:14px;
+    font-size:0.82rem; }
+  .semaforo .punto { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
+  .semaforo.facil { background:rgba(111,207,151,0.12); }
+  .semaforo.facil .punto { background:#6FCF97; }
+  .semaforo.media { background:rgba(224,169,79,0.12); }
+  .semaforo.media .punto { background:var(--gold); }
+  .semaforo.dificil { background:rgba(232,116,106,0.12); }
+  .semaforo.dificil .punto { background:#E8746A; }
+    .semaforo .rival { color:rgba(247,247,245,0.85); }
+  .semaforo .fuera { color:var(--grey); font-size:0.76rem; }
+
+  .aviso-suave { background:var(--navy-soft); border-left:3px solid var(--gold-dim); padding:16px 18px;
+    font-size:0.92rem; color:rgba(247,247,245,0.82); }
+  .leyenda-cal { display:flex; gap:18px; margin-top:16px; flex-wrap:wrap; }
+  .leyenda-cal span { font-family:'Barlow Condensed',sans-serif; font-size:0.76rem; color:var(--grey);
+    display:flex; align-items:center; gap:6px; }
+  .leyenda-cal .punto { width:8px; height:8px; border-radius:50%; }
+</style>
+  </head>
+  <body>
+
+  <div class="lomo" aria-hidden="true"></div>
+
+  <header class="masthead">
+    <div class="wrap">
+      <div class="bar">
+        <a href="index.html"><img class="crest" src="assets/escudo.png" alt="Escudo de Johnny's League"></a>
+        <div class="titles">
+          <h1>Johnny's League</h1>
+          <div class="tagline">crónica semanal de la liga</div>
+        </div>
+        <div class="status">
+          <span class="cond">Calendario</span>
+          <span class="round" id="jornadaNum">—</span>
+        </div>
+      </div>
+      <div class="jump">
+        <a href="index.html#portada">Portada</a>
+        <a href="index.html#clasificacion">Clasificación</a>
+        <a href="index.html#mercado">Mercado</a>
+        <a href="presidentes.html">Presidentes</a>
+        <a href="estadisticas.html">Estadísticas</a>
+        <a href="calendario.html" class="activo">Calendario</a>
+        <a href="index.html#cronicas">Crónicas</a>
+        <a href="index.html#hemeroteca">Hemeroteca</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="hero" style="border-bottom:none;">
+      <div class="hero-titulo">
+        <h2>Calendario de dificultad</h2>
+    </div>
+      <p class="section-note" style="margin-top:-18px;">
+      Para cada jugador de la plantilla, qué tan fácil o difícil le viene el rival en sus próximos partidos.
+        La dificultad la calcula Biwenger (clasificación del rival, si juega en casa o fuera, su racha), nosotros solo la convertimos en semáforo.
+    </p>
+  </section>
+
+  <section class="block" style="border-top:none; padding-top:0;">
+      <div class="selector">
+        <label for="presidenteSel" class="cond" style="display:block; margin-bottom:8px;">Ver la plantilla de:</label>
+        <select id="presidenteSel"></select>
+      </div>
+      <div id="tablaCalendario"></div>
+      <div class="leyenda-cal">
+        <span><span class="punto" style="background:#6FCF97"></span> Fácil</span>
+        <span><span class="punto" style="background:var(--gold)"></span> Normal</span>
+        <span><span class="punto" style="background:#E8746A"></span> Difícil</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="wrap">
+    <span class="cond">Johnny's League · hecha por y para la liga</span>
+    <span class="cond" id="sellofecha"></span>
+  </footer>
+
+  <script>
+  (function () {
+    var esc = function (s) {
+    return String(s == null ? '' : s)
+            .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+      };
+
+  function cargar(ruta) {
+        return fetch(ruta, { cache: 'no-store' }).then(function (r) {
+                if (!r.ok) throw new Error(ruta);
+      return r.json();
+        });
+  }
+
+  var avatar = function (url, iniciales) {
+    return url
+            ? '<div class="avatar"><img src="' + esc(url) + '" alt="" loading="lazy" ' +
+              'onerror="this.parentNode.textContent=\'' + esc(iniciales || '') + '\'"></div>'
+            : '<div class="avatar">' + esc(iniciales || '') + '</div>';
+      };
+
+  var iniciales = function (nombre) {
+    return String(nombre || '').split(/\s+/).filter(Boolean).slice(0,2).map(function(p){return p[0];}).join('').toUpperCase();
+      };
+
+  function nivelDificultad(d) {
+        if (d == null) return null;
+    if (d < 30) return 'facil';
+    if (d <= 50) return 'media';
+    return 'dificil';
+  }
+
+  function celda(j) {
+        if (!j) return '<td><span class="semaforo"><span class="fuera">—</span></span></td>';
+    var nivel = nivelDificultad(j.dificultad);
+    return '<td><span class="semaforo ' + (nivel || '') + '">' +
+            '<span class="punto"></span>' +
+            '<span class="rival">' + (j.esLocal ? 'vs ' : '@ ') + esc(j.rival) + '</span>' +
+            '</span></td>';
+  }
+
+  function pintarTabla(jugadores) {
+        var cont = document.getElementById('tablaCalendario');
+    if (!jugadores || !jugadores.length) {
+      cont.innerHTML = '<div class="aviso-suave">Todavía no hay calendario guardado para este presidente. Se rellenará solo en la próxima actualización automática.</div>';
+      return;
+    }
+    var filas = jugadores.map(function (j) {
+      var cols = [0,1,2].map(function (i) { return celda(j.jornadas[i]); }).join('');
+              return '<tr><td><div class="jugador-fila">' + avatar(j.foto, iniciales(j.nombre)) +
+                        '<div><div class="nom">' + esc(j.nombre) + '</div><div class="pos">' + esc(j.equipoReal || '') + ' · ' + esc(j.posicion) + '</div></div></div></td>' +
+                        cols + '</tr>';
+    }).join('');
+                    cont.innerHTML = '<table class="tabla-cal"><thead><tr>' +
+                            '<th>Jugador</th><th>Próxima</th><th>Siguiente</th><th>En 2 más</th>' +
+                            '</tr></thead><tbody>' + filas + '</tbody></table>';
+    }
+
+  Promise.all([cargar('data/liga.json')]).then(function (res) {
+        var liga = res[0];
+    document.getElementById('jornadaNum').textContent = String(liga.jornadasJugadas || '—').padStart(2, '0');
+
+    var calendario = liga.calendario || {};
+    var nombres = (liga.clasificacion || []).map(function (e) { return e.equipo; });
+    var sel = document.getElementById('presidenteSel');
+    sel.innerHTML = nombres.map(function (n) {
+            return '<option value="' + esc(n) + '">' + esc(n) + '</option>';
+    }).join('');
+
+    function actualizar() {
+            pintarTabla(calendario[sel.value]);
+    }
+    sel.addEventListener('change', actualizar);
+    actualizar();
+
+    if (liga.actualizado) {
+      var f = new Date(liga.actualizado);
+      document.getElementById('sellofecha').textContent =
+                'Datos actualizados el ' + f.toLocaleDateString('es-ES') + ' a las ' +
+                f.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
+    }
+  }).catch(function () {
+    document.getElementById('tablaCalendario').innerHTML =
+            '<div class="aviso-suave">No se han podido cargar los datos. Comprueba que exista data/liga.json.</div>';
+  });
+  })();
+</script>
+  </body>
+  </html>
+  
