@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comparador · Johnny's League</title>
+<meta name="description" content="Enfrenta a dos presidentes de Johnny's League cara a cara.">
+<link rel="icon" href="assets/escudo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/estilo.css">
+<style>
+  .selectores { display:grid; grid-template-columns:1fr auto 1fr; gap:16px; align-items:end; margin-bottom:28px; }
+  .selectores select { width:100%; background:var(--navy-soft); color:var(--white);
+    border:1px solid var(--navy-line); font-family:'Barlow Condensed',sans-serif; font-weight:600;
+    letter-spacing:0.03em; font-size:1rem; padding:10px 14px; border-radius:4px; }
+  .selectores .et { display:block; font-family:'Barlow Condensed',sans-serif; font-weight:600;
+    letter-spacing:0.05em; text-transform:uppercase; font-size:0.68rem; color:var(--grey); margin-bottom:7px; }
+  .versus { font-family:'Anton',sans-serif; font-size:1.3rem; color:var(--red); padding-bottom:8px; }
+  @media (max-width:640px){
+    .selectores { grid-template-columns:1fr; gap:12px; }
+    .versus { text-align:center; padding:0; }
+  }
+
+  /* Cabecera con los dos escudos */
+  .duelo { display:grid; grid-template-columns:1fr auto 1fr; gap:14px; align-items:center;
+    background:var(--navy-soft); padding:22px; margin-bottom:22px; }
+  .duelo .lado { display:flex; flex-direction:column; align-items:center; text-align:center; gap:9px; }
+  .duelo .avatar { width:66px; height:66px; }
+  .duelo .nom { font-family:'Anton',sans-serif; font-size:1.05rem; line-height:1.1; }
+  .duelo .pos { font-family:'Barlow Condensed',sans-serif; font-size:0.72rem; letter-spacing:0.04em;
+    text-transform:uppercase; color:var(--grey); }
+  .duelo .marcador { font-family:'Anton',sans-serif; font-size:2rem; color:var(--gold); white-space:nowrap; }
+  .duelo .marcador small { display:block; font-family:'Barlow Condensed',sans-serif; font-size:0.62rem;
+    letter-spacing:0.05em; text-transform:uppercase; color:var(--grey); }
+
+  /* Filas de comparación */
+  .fila-cmp { display:grid; grid-template-columns:1fr 150px 1fr; gap:12px; align-items:center;
+    padding:13px 0; border-bottom:1px solid rgba(247,247,245,0.07); }
+  .fila-cmp .concepto { font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.05em;
+    text-transform:uppercase; font-size:0.7rem; color:var(--grey); text-align:center; }
+  .fila-cmp .dato { font-family:'Anton',sans-serif; font-size:1.2rem; display:flex; align-items:center; gap:9px; }
+  .fila-cmp .dato.izq { justify-content:flex-end; }
+  .fila-cmp .dato.der { justify-content:flex-start; }
+  .fila-cmp .dato.gana { color:var(--gold); }
+  .fila-cmp .dato.pierde { color:rgba(247,247,245,0.45); }
+  .barra-cmp { height:4px; background:rgba(255,255,255,0.08); flex:1; max-width:78px; overflow:hidden; }
+  .barra-cmp i { display:block; height:100%; background:var(--gold-dim); }
+  .fila-cmp .dato.gana .barra-cmp i { background:var(--gold); }
+  @media (max-width:640px){
+    .fila-cmp { grid-template-columns:1fr 1fr; grid-template-areas:'concepto concepto' 'izq der'; gap:6px; }
+    .fila-cmp .concepto { grid-area:concepto; text-align:center; margin-bottom:2px; }
+    .fila-cmp .dato.izq { grid-area:izq; justify-content:center; }
+    .fila-cmp .dato.der { grid-area:der; justify-content:center; }
+    .barra-cmp { display:none; }
+  }
+
+  /* Gráfico del duelo a lo largo de la temporada */
+  .grafico-duelo { background:var(--navy-soft); padding:22px; margin-top:10px; }
+  .grafico-duelo svg { display:block; width:100%; height:auto; }
+  .eje { stroke:var(--navy-line); stroke-width:1; }
+  .eje-texto { font-family:'Barlow Condensed',sans-serif; font-size:11px; fill:var(--grey); }
+  .linea-duelo { fill:none; stroke-width:2.5; }
+  .leyenda-duelo { display:flex; gap:20px; justify-content:center; margin-top:14px; flex-wrap:wrap; }
+  .leyenda-duelo span { display:flex; align-items:center; gap:7px;
+    font-family:'Barlow Condensed',sans-serif; font-size:0.78rem; color:rgba(247,247,245,0.85); }
+  .leyenda-duelo i { width:16px; height:3px; display:block; }
+
+  .veredicto { background:var(--navy-soft); border-left:3px solid var(--gold); padding:18px 20px;
+    margin-top:22px; font-size:0.95rem; color:rgba(247,247,245,0.86); }
+  .veredicto b { color:var(--gold); }
+  .aviso-suave { background:var(--navy-soft); border-left:3px solid var(--gold-dim); padding:16px 18px;
+    font-size:0.92rem; color:rgba(247,247,245,0.82); }
+</style>
+</head>
+<body>
+
+<div class="lomo" aria-hidden="true"></div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="bar">
+      <a href="index.html"><img class="crest" src="assets/escudo.png" alt="Escudo de Johnny's League"></a>
+      <div class="titles">
+        <h1>Johnny's League</h1>
+        <div class="tagline">crónica semanal de la liga</div>
+      </div>
+      <div class="status">
+        <span class="cond">Comparador</span>
+        <span class="round" id="jornadaNum">—</span>
+      </div>
+    </div>
+    <div class="jump">
+      <a href="index.html#portada">Portada</a>
+      <a href="index.html#clasificacion">Clasificación</a>
+      <a href="index.html#mercado">Mercado</a>
+      <a href="presidentes.html">Presidentes</a>
+      <a href="estadisticas.html">Estadísticas</a>
+      <a href="calendario.html">Calendario</a>
+      <a href="comparador.html" class="activo">Comparador</a>
+      <a href="index.html#cronicas">Crónicas</a>
+      <a href="index.html#hemeroteca">Hemeroteca</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" style="border-bottom:none;">
+    <div class="hero-titulo">
+      <h2>Cara a cara</h2>
+    </div>
+    <p class="section-note" style="margin-top:-18px;">
+      Elige dos presidentes y mira quién gana en cada apartado. Lo que sale en dorado es el que va por delante.
+    </p>
+  </section>
+
+  <section class="block" style="border-top:none; padding-top:0;">
+    <div class="selectores">
+      <div>
+        <label class="et" for="selA">Presidente</label>
+        <select id="selA"></select>
+      </div>
+      <div class="versus">VS</div>
+      <div>
+        <label class="et" for="selB">Presidente</label>
+        <select id="selB"></select>
+      </div>
+    </div>
+
+    <div id="duelo"></div>
+    <div id="comparacion"></div>
+    <div id="veredicto"></div>
+  </section>
+
+  <section class="block">
+    <div class="section-head">
+      <h3>La temporada, jornada a jornada</h3>
+      <span class="cond">Puntos acumulados</span>
+    </div>
+    <div id="graficoDuelo"></div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <span class="cond">Johnny's League · hecha por y para la liga</span>
+  <span class="cond" id="sellofecha"></span>
+</footer>
+
+<script>
+(function () {
+  var COLOR_A = '#E0A94F';   // dorado
+  var COLOR_B = '#7EA9D9';   // azul hielo
+
+  var esc = function (s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  };
+
+  function cargar(ruta) {
+    return fetch(ruta, { cache: 'no-store' }).then(function (r) {
+      if (!r.ok) throw new Error(ruta);
+      return r.json();
+    });
+  }
+
+  var avatar = function (url, iniciales) {
+    return url
+      ? '<div class="avatar"><img src="' + esc(url) + '" alt="" loading="lazy" ' +
+        'onerror="this.parentNode.textContent=\'' + esc(iniciales || '') + '\'"></div>'
+      : '<div class="avatar">' + esc(iniciales || '') + '</div>';
+  };
+
+  /* ---------- Cabecera del duelo ---------- */
+  function pintarDuelo(a, b) {
+    document.getElementById('duelo').innerHTML =
+      '<div class="duelo">' +
+        '<div class="lado">' + avatar(a.escudo, a.iniciales) +
+          '<div class="nom">' + esc(a.equipo) + '</div>' +
+          '<div class="pos">' + esc(a.posicion) + 'º de la liga</div></div>' +
+        '<div class="marcador">' + esc(a.puntos) + ' - ' + esc(b.puntos) + '<small>Puntos</small></div>' +
+        '<div class="lado">' + avatar(b.escudo, b.iniciales) +
+          '<div class="nom">' + esc(b.equipo) + '</div>' +
+          '<div class="pos">' + esc(b.posicion) + 'º de la liga</div></div>' +
+      '</div>';
+  }
+
+  /* ---------- Filas de comparación ---------- */
+  // mayorGana: true  -> gana quien tenga el número más alto
+  //            false -> gana quien tenga el más bajo (p. ej. la posición)
+  var APARTADOS = [
+    { clave: 'puntos',           titulo: 'Puntos',                    mayorGana: true },
+    { clave: 'posicion',         titulo: 'Posición',                  mayorGana: false, sufijo: 'º' },
+    { clave: 'mediaJornada',     titulo: 'Media por jornada',         mayorGana: true },
+    { clave: 'puntosPorMillon',  titulo: 'Puntos por millón',         mayorGana: true },
+    { clave: 'valorBruto',       titulo: 'Valor de plantilla',        mayorGana: true, formato: 'millones' },
+    { clave: 'clausulasHechas',  titulo: 'Cláusulas pagadas',         mayorGana: true },
+    { clave: 'clausulasSufridas',titulo: 'Cláusulas sufridas',        mayorGana: false },
+    { clave: 'gastadoBruto',     titulo: 'Gastado en cláusulas',      mayorGana: true, formato: 'millones' },
+    { clave: 'balanceBruto',     titulo: 'Balance de mercado',        mayorGana: true, formato: 'millones', signo: true }
+  ];
+
+  function millones(n) {
+    return (n / 1e6).toFixed(1).replace('.', ',') + ' M';
+  }
+
+  function formatear(valor, apartado) {
+    if (apartado.formato === 'millones') {
+      return (apartado.signo && valor > 0 ? '+' : '') + millones(valor);
+    }
+    return valor + (apartado.sufijo || '');
+  }
+
+  function pintarComparacion(a, b) {
+    var html = APARTADOS.map(function (ap) {
+      var va = Number(a[ap.clave]) || 0;
+      var vb = Number(b[ap.clave]) || 0;
+
+      var ganaA = false, ganaB = false;
+      if (va !== vb) {
+        if (ap.mayorGana) { ganaA = va > vb; ganaB = vb > va; }
+        else { ganaA = va < vb; ganaB = vb < va; }
+      }
+
+      // Las barras se miden sobre el mayor de los dos, en valor absoluto
+      var tope = Math.max(Math.abs(va), Math.abs(vb)) || 1;
+      var anchoA = Math.round((Math.abs(va) / tope) * 100);
+      var anchoB = Math.round((Math.abs(vb) / tope) * 100);
+
+      var claseA = ganaA ? ' gana' : (ganaB ? ' pierde' : '');
+      var claseB = ganaB ? ' gana' : (ganaA ? ' pierde' : '');
+
+      return '<div class="fila-cmp">' +
+        '<div class="dato izq' + claseA + '">' + esc(formatear(va, ap)) +
+          '<span class="barra-cmp"><i style="width:' + anchoA + '%"></i></span></div>' +
+        '<div class="concepto">' + esc(ap.titulo) + '</div>' +
+        '<div class="dato der' + claseB + '">' +
+          '<span class="barra-cmp"><i style="width:' + anchoB + '%"></i></span>' +
+          esc(formatear(vb, ap)) + '</div>' +
+      '</div>';
+    }).join('');
+
+    document.getElementById('comparacion').innerHTML = html;
+  }
+
+  /* ---------- Veredicto en una frase ---------- */
+  function pintarVeredicto(a, b) {
+    var puntosA = 0, puntosB = 0;
+    APARTADOS.forEach(function (ap) {
+      var va = Number(a[ap.clave]) || 0;
+      var vb = Number(b[ap.clave]) || 0;
+      if (va === vb) return;
+      var ganaA = ap.mayorGana ? va > vb : va < vb;
+      if (ganaA) puntosA++; else puntosB++;
+    });
+
+    var texto;
+    if (puntosA === puntosB) {
+      texto = 'Empate técnico: <b>' + esc(a.equipo) + '</b> y <b>' + esc(b.equipo) +
+              '</b> ganan en ' + puntosA + ' apartados cada uno.';
+    } else {
+      var lider = puntosA > puntosB ? a : b;
+      var otro = puntosA > puntosB ? b : a;
+      var max = Math.max(puntosA, puntosB);
+      var min = Math.min(puntosA, puntosB);
+      texto = '<b>' + esc(lider.equipo) + '</b> gana el cara a cara por ' + max + ' a ' + min +
+              '. Le saca ventaja a <b>' + esc(otro.equipo) + '</b> en la mayoría de apartados.';
+    }
+
+    document.getElementById('veredicto').innerHTML = '<div class="veredicto">' + texto + '</div>';
+  }
+
+  /* ---------- Gráfico del duelo ---------- */
+  function pintarGrafico(historico, nombreA, nombreB) {
+    var cont = document.getElementById('graficoDuelo');
+    if (!historico || historico.length < 2) {
+      cont.innerHTML = '<div class="aviso-suave">Todavía no hay suficientes jornadas para dibujar la evolución.</div>';
+      return;
+    }
+
+    function serie(nombre) {
+      return historico.map(function (f) {
+        var e = f.equipos.filter(function (x) { return x.equipo === nombre; })[0];
+        return e ? e.puntos : 0;
+      });
+    }
+
+    var serieA = serie(nombreA), serieB = serie(nombreB);
+    var todos = serieA.concat(serieB);
+    var min = Math.min.apply(null, todos), max = Math.max.apply(null, todos);
+    if (min === max) { min -= 1; max += 1; }
+    var margen = (max - min) * 0.1;
+    min = Math.max(0, min - margen); max += margen;
+
+    var W = 900, H = 300, padL = 46, padR = 14, padT = 16, padB = 28;
+    var n = historico.length;
+    function x(i) { return padL + (W - padL - padR) * (n <= 1 ? 0.5 : i / (n - 1)); }
+    function y(v) { return H - padB - (H - padT - padB) * (v - min) / (max - min); }
+
+    var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">';
+
+    for (var g = 0; g <= 4; g++) {
+      var valor = min + (max - min) * g / 4;
+      var yy = y(valor);
+      svg += '<line class="eje" x1="' + padL + '" y1="' + yy + '" x2="' + (W - padR) + '" y2="' + yy + '"/>';
+      svg += '<text class="eje-texto" x="6" y="' + (yy + 4) + '">' + Math.round(valor) + '</text>';
+    }
+
+    historico.forEach(function (f, i) {
+      svg += '<text class="eje-texto" x="' + x(i) + '" y="' + (H - 8) + '" text-anchor="middle">J' + esc(f.jornada) + '</text>';
+    });
+
+    function linea(datos, color) {
+      var puntos = datos.map(function (v, i) { return x(i) + ',' + y(v); }).join(' ');
+      var circulos = datos.map(function (v, i) {
+        return '<circle cx="' + x(i) + '" cy="' + y(v) + '" r="3.5" fill="' + color + '"/>';
+      }).join('');
+      return '<polyline class="linea-duelo" points="' + puntos + '" stroke="' + color + '"/>' + circulos;
+    }
+
+    svg += linea(serieA, COLOR_A) + linea(serieB, COLOR_B) + '</svg>';
+
+    cont.innerHTML = '<div class="grafico-duelo">' + svg +
+      '<div class="leyenda-duelo">' +
+        '<span><i style="background:' + COLOR_A + '"></i>' + esc(nombreA) + '</span>' +
+        '<span><i style="background:' + COLOR_B + '"></i>' + esc(nombreB) + '</span>' +
+      '</div></div>';
+  }
+
+  /* ---------- Arranque ---------- */
+  Promise.all([cargar('data/liga.json'), cargar('data/historico.json')]).then(function (res) {
+    var liga = res[0];
+    var historico = res[1] || [];
+    var presidentes = liga.presidentes || [];
+
+    if (!presidentes.length) {
+      document.getElementById('duelo').innerHTML =
+        '<div class="aviso-suave">Todavía no hay fichas de presidentes.</div>';
+      return;
+    }
+
+    document.getElementById('jornadaNum').textContent =
+      String(liga.jornadasJugadas || '—').padStart(2, '0');
+
+    var selA = document.getElementById('selA');
+    var selB = document.getElementById('selB');
+    var opciones = presidentes.map(function (p) {
+      return '<option value="' + esc(p.equipo) + '">' + esc(p.equipo) + '</option>';
+    }).join('');
+    selA.innerHTML = opciones;
+    selB.innerHTML = opciones;
+
+    // Empezamos comparando al primero con el segundo de la tabla
+    selA.selectedIndex = 0;
+    selB.selectedIndex = presidentes.length > 1 ? 1 : 0;
+
+    function buscar(nombre) {
+      return presidentes.filter(function (p) { return p.equipo === nombre; })[0];
+    }
+
+    function actualizar() {
+      var a = buscar(selA.value);
+      var b = buscar(selB.value);
+      if (!a || !b) return;
+      pintarDuelo(a, b);
+      pintarComparacion(a, b);
+      pintarVeredicto(a, b);
+      pintarGrafico(historico, a.equipo, b.equipo);
+    }
+
+    selA.addEventListener('change', actualizar);
+    selB.addEventListener('change', actualizar);
+    actualizar();
+
+    if (liga.actualizado) {
+      var f = new Date(liga.actualizado);
+      document.getElementById('sellofecha').textContent =
+        'Datos actualizados el ' + f.toLocaleDateString('es-ES') + ' a las ' +
+        f.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
+    }
+  }).catch(function () {
+    document.getElementById('duelo').innerHTML =
+      '<div class="aviso-suave">No se han podido cargar los datos. Comprueba que existan data/liga.json y data/historico.json.</div>';
+  });
+})();
+</script>
+</body>
+</html>
