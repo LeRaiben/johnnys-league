@@ -15,7 +15,8 @@
     font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.03em; font-size:1rem;
     padding:10px 16px; border-radius:4px; min-width:260px; }
 
-  .tabla-cal { width:100%; border-collapse:collapse; }
+    .tabla-envoltorio { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .tabla-cal { width:100%; border-collapse:collapse; min-width:560px; }
   .tabla-cal th { text-align:left; font-family:'Barlow Condensed',sans-serif; font-weight:600;
     letter-spacing:0.04em; text-transform:uppercase; font-size:0.72rem; color:var(--grey);
     padding:10px 12px; border-bottom:1px solid var(--navy-line); }
@@ -162,9 +163,9 @@
                         '<div><div class="nom">' + esc(j.nombre) + '</div><div class="pos">' + esc(j.equipoReal || '') + ' · ' + esc(j.posicion) + '</div></div></div></td>' +
                         cols + '</tr>';
     }).join('');
-                    cont.innerHTML = '<table class="tabla-cal"><thead><tr>' +
-                            '<th>Jugador</th><th>Próxima</th><th>Siguiente</th><th>En 2 más</th>' +
-                            '</tr></thead><tbody>' + filas + '</tbody></table>';
+                        cont.innerHTML = '<div class="tabla-envoltorio"><table class="tabla-cal"><thead><tr>' +
+                                '<th>Jugador</th><th>Próxima</th><th>Siguiente</th><th>En 2 más</th>' +
+                                '</tr></thead><tbody>' + filas + '</tbody></table></div>';
     }
 
   Promise.all([cargar('data/liga.json')]).then(function (res) {
