@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-11T07:15:05.960Z",
+  "actualizado": "2026-09-12T12:15:46.884Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 5,
   "partidos": [
@@ -9,9 +9,9 @@
       "escudoLocal": "https://cdn.biwenger.com/i/t/17.png",
       "escudoVisitante": "https://cdn.biwenger.com/i/t/18.png",
       "fecha": "2026-09-11T19:00:00.000Z",
-      "golesLocal": null,
-      "golesVisitante": null,
-      "estado": "preview"
+      "golesLocal": 1,
+      "golesVisitante": 0,
+      "estado": "finished"
     },
     {
       "local": "Racing",
@@ -19,9 +19,9 @@
       "escudoLocal": "https://cdn.biwenger.com/i/t/812.png",
       "escudoVisitante": "https://cdn.biwenger.com/i/t/91.png",
       "fecha": "2026-09-12T12:00:00.000Z",
-      "golesLocal": null,
-      "golesVisitante": null,
-      "estado": "preview"
+      "golesLocal": 0,
+      "golesVisitante": 0,
+      "estado": "firstTime"
     },
     {
       "local": "Osasuna",
@@ -114,8 +114,8 @@
       "iniciales": "CT",
       "escudo": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
       "puntos": 238,
-      "valor": "40,7 M",
-      "valorBruto": 40710000,
+      "valor": "40,8 M",
+      "valorBruto": 40800000,
       "esTuyo": false
     },
     {
@@ -126,8 +126,8 @@
       "iniciales": "CC",
       "escudo": "https://cdn.biwenger.com/i/u/11412340.png",
       "puntos": 234,
-      "valor": "46,2 M",
-      "valorBruto": 46170000,
+      "valor": "46,0 M",
+      "valorBruto": 46030000,
       "esTuyo": false
     },
     {
@@ -138,8 +138,8 @@
       "iniciales": "L",
       "escudo": "https://cdn.biwenger.com/i/u/12600696.png?v=83",
       "puntos": 222,
-      "valor": "35,3 M",
-      "valorBruto": 35280000,
+      "valor": "35,4 M",
+      "valorBruto": 35380000,
       "esTuyo": true
     },
     {
@@ -150,8 +150,8 @@
       "iniciales": "MF",
       "escudo": "https://cdn.biwenger.com/i/u/11412167.png?v=15",
       "puntos": 222,
-      "valor": "36,0 M",
-      "valorBruto": 35990000,
+      "valor": "35,9 M",
+      "valorBruto": 35930000,
       "esTuyo": false
     },
     {
@@ -162,8 +162,8 @@
       "iniciales": "SF",
       "escudo": "https://cdn.biwenger.com/i/u/14027560.png",
       "puntos": 210,
-      "valor": "43,5 M",
-      "valorBruto": 43490000,
+      "valor": "45,9 M",
+      "valorBruto": 45890000,
       "esTuyo": false
     },
     {
@@ -174,8 +174,8 @@
       "iniciales": "MP",
       "escudo": "https://cdn.biwenger.com/i/u/10271251.png",
       "puntos": 192,
-      "valor": "47,6 M",
-      "valorBruto": 47570000,
+      "valor": "45,4 M",
+      "valorBruto": 45440000,
       "esTuyo": false
     },
     {
@@ -186,8 +186,8 @@
       "iniciales": "FF",
       "escudo": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
       "puntos": 188,
-      "valor": "56,8 M",
-      "valorBruto": 56760000,
+      "valor": "56,6 M",
+      "valorBruto": 56630000,
       "esTuyo": false
     },
     {
@@ -198,8 +198,8 @@
       "iniciales": "UP",
       "escudo": "https://cdn.biwenger.com/i/u/12659137.png?v=9",
       "puntos": 188,
-      "valor": "53,4 M",
-      "valorBruto": 53390000,
+      "valor": "53,3 M",
+      "valorBruto": 53280000,
       "esTuyo": false
     },
     {
@@ -210,8 +210,8 @@
       "iniciales": "LV",
       "escudo": "https://cdn.biwenger.com/i/u/13934763.png",
       "puntos": 182,
-      "valor": "47,8 M",
-      "valorBruto": 47770000,
+      "valor": "58,0 M",
+      "valorBruto": 58020000,
       "esTuyo": false
     },
     {
@@ -223,7 +223,7 @@
       "escudo": "https://cdn.biwenger.com/i/u/11411835.png",
       "puntos": 176,
       "valor": "40,1 M",
-      "valorBruto": 40110000,
+      "valorBruto": 40080000,
       "esTuyo": false
     },
     {
@@ -234,8 +234,8 @@
       "iniciales": "LC",
       "escudo": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
       "puntos": 130,
-      "valor": "32,2 M",
-      "valorBruto": 32160000,
+      "valor": "39,1 M",
+      "valorBruto": 39090000,
       "esTuyo": false
     },
     {
@@ -246,131 +246,170 @@
       "iniciales": "CA",
       "escudo": "https://cdn.biwenger.com/i/u/10271084.png?v=66",
       "puntos": 82,
-      "valor": "48,3 M",
-      "valorBruto": 48300000,
+      "valor": "41,2 M",
+      "valorBruto": 41180000,
       "esTuyo": false
     }
   ],
   "mercadoBiwenger": [
     {
-      "nombre": "Bellerín",
+      "nombre": "Juanmi",
+      "posicion": "Delantero",
+      "equipo": "Getafe",
+      "foto": "https://cdn.biwenger.com/i/p/832.png",
+      "precio": "0,1 M",
+      "variacion": 0,
+      "dorsal": ""
+    },
+    {
+      "nombre": "Rüdiger",
       "posicion": "Defensa",
-      "equipo": "Betis",
-      "foto": "https://cdn.biwenger.com/i/p/2247.png",
-      "precio": "2,5 M",
-      "variacion": 20000,
-      "dorsal": ""
-    },
-    {
-      "nombre": "Oyarzabal",
-      "posicion": "Delantero",
-      "equipo": "Real Sociedad",
-      "foto": "https://cdn.biwenger.com/i/p/2603.png",
-      "precio": "11,3 M",
-      "variacion": -170000,
-      "dorsal": ""
-    },
-    {
-      "nombre": "Iván Romero",
-      "posicion": "Delantero",
-      "equipo": "Levante",
-      "foto": "https://cdn.biwenger.com/i/p/17937.png",
-      "precio": "2,8 M",
+      "equipo": "Real Madrid",
+      "foto": "https://cdn.biwenger.com/i/p/2253.png",
+      "precio": "2,3 M",
       "variacion": -40000,
       "dorsal": ""
     },
     {
-      "nombre": "De Frutos",
-      "posicion": "Delantero",
-      "equipo": "Rayo Vallecano",
-      "foto": "https://cdn.biwenger.com/i/p/18397.png",
-      "precio": "4,0 M",
-      "variacion": -110000,
-      "dorsal": ""
-    },
-    {
-      "nombre": "Aimar",
-      "posicion": "Centrocampista",
-      "equipo": "Osasuna",
-      "foto": "https://cdn.biwenger.com/i/p/27591.png",
-      "precio": "2,5 M",
-      "variacion": -60000,
-      "dorsal": ""
-    },
-    {
-      "nombre": "Cubarsí",
+      "nombre": "Hinojo",
       "posicion": "Defensa",
-      "equipo": "Barcelona",
-      "foto": "https://cdn.biwenger.com/i/p/32440.png",
-      "precio": "9,6 M",
-      "variacion": 0,
-      "dorsal": ""
-    },
-    {
-      "nombre": "Sazonov",
-      "posicion": "Defensa",
-      "equipo": "Getafe",
-      "foto": "https://cdn.biwenger.com/i/p/32569.png",
-      "precio": "0,3 M",
+      "equipo": "Espanyol",
+      "foto": "https://cdn.biwenger.com/i/p/14466.png",
+      "precio": "2,3 M",
       "variacion": -10000,
       "dorsal": ""
     },
     {
-      "nombre": "Toljan",
+      "nombre": "Bryan Zaragoza",
+      "posicion": "Delantero",
+      "equipo": "Espanyol",
+      "foto": "https://cdn.biwenger.com/i/p/30502.png",
+      "precio": "4,2 M",
+      "variacion": -100000,
+      "dorsal": ""
+    },
+    {
+      "nombre": "Starfelt",
       "posicion": "Defensa",
-      "equipo": "Levante",
-      "foto": "https://cdn.biwenger.com/i/p/38143.png",
-      "precio": "1,0 M",
+      "equipo": "Celta",
+      "foto": "https://cdn.biwenger.com/i/p/31321.png",
+      "precio": "2,2 M",
+      "variacion": 40000,
+      "dorsal": ""
+    },
+    {
+      "nombre": "Marcos Fernández",
+      "posicion": "Delantero",
+      "equipo": "Espanyol",
+      "foto": "https://cdn.biwenger.com/i/p/37644.png",
+      "precio": "0,6 M",
+      "variacion": 30000,
+      "dorsal": ""
+    },
+    {
+      "nombre": "Marc Aguado",
+      "posicion": "Centrocampista",
+      "equipo": "Elche",
+      "foto": "https://cdn.biwenger.com/i/p/37717.png",
+      "precio": "2,4 M",
+      "variacion": -60000,
+      "dorsal": ""
+    },
+    {
+      "nombre": "Mañas",
+      "posicion": "Delantero",
+      "equipo": "Alavés",
+      "foto": "https://cdn.biwenger.com/i/p/39386.png",
+      "precio": "0,1 M",
       "variacion": 0,
       "dorsal": ""
     },
     {
-      "nombre": "Hancko",
-      "posicion": "Defensa",
-      "equipo": "Atlético",
-      "foto": "https://cdn.biwenger.com/i/p/38290.png",
-      "precio": "4,2 M",
-      "variacion": -50000,
+      "nombre": "Yeremay",
+      "posicion": "Delantero",
+      "equipo": "Deportivo",
+      "foto": "https://cdn.biwenger.com/i/p/41082.png",
+      "precio": "5,8 M",
+      "variacion": -70000,
       "dorsal": ""
     },
     {
-      "nombre": "Ugrinic",
-      "posicion": "Centrocampista",
-      "equipo": "Valencia",
-      "foto": "https://cdn.biwenger.com/i/p/38368.png",
-      "precio": "1,5 M",
-      "variacion": -20000,
-      "dorsal": ""
-    },
-    {
-      "nombre": "Ali Houary",
-      "posicion": "Centrocampista",
-      "equipo": "Elche",
-      "foto": "https://cdn.biwenger.com/i/p/38457.png",
+      "nombre": "Bayindir",
+      "posicion": "Portero",
+      "equipo": "Celta",
+      "foto": "https://cdn.biwenger.com/i/p/41605.png",
       "precio": "0,4 M",
       "variacion": -10000,
       "dorsal": ""
     },
     {
-      "nombre": "Sergio Martínez",
-      "posicion": "Centrocampista",
-      "equipo": "Real Madrid",
-      "foto": "https://cdn.biwenger.com/i/p/41259.png",
-      "precio": "1,9 M",
-      "variacion": -60000,
+      "nombre": "De Haas",
+      "posicion": "Defensa",
+      "equipo": "Valencia",
+      "foto": "https://cdn.biwenger.com/i/p/42271.png",
+      "precio": "1,6 M",
+      "variacion": -20000,
       "dorsal": ""
     },
     {
-      "nombre": "Guliashvili",
+      "nombre": "Parrott",
       "posicion": "Delantero",
-      "equipo": "Racing",
-      "foto": "https://cdn.biwenger.com/i/p/41261.png",
-      "precio": "0,2 M",
-      "variacion": 0,
+      "equipo": "Betis",
+      "foto": "https://cdn.biwenger.com/i/p/42748.png",
+      "precio": "6,5 M",
+      "variacion": 10000,
+      "dorsal": ""
+    },
+    {
+      "nombre": "Elliott",
+      "posicion": "Centrocampista",
+      "equipo": "Valencia",
+      "foto": "https://cdn.biwenger.com/i/p/43260.png",
+      "precio": "3,5 M",
+      "variacion": -100000,
       "dorsal": ""
     }
   ],
   "mercadoPresidentes": [
+    {
+      "tipo": "venta",
+      "nombre": "Jugador",
+      "foto": "https://cdn.biwenger.com/i/p/25778.png",
+      "posicion": "",
+      "equipoReal": "",
+      "vendedor": "Lottin Capital",
+      "pide": "0,1 M",
+      "pideBruto": 150000,
+      "valorMercado": "0,0 M",
+      "valorBruto": 0,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Tárrega",
+      "foto": "https://cdn.biwenger.com/i/p/26592.png",
+      "posicion": "Defensa",
+      "equipoReal": "Valencia",
+      "vendedor": "Lottin Capital",
+      "pide": "1,9 M",
+      "pideBruto": 1870000,
+      "valorMercado": "1,8 M",
+      "valorBruto": 1810000,
+      "diferencia": 60000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Neyou",
+      "foto": "https://cdn.biwenger.com/i/p/33691.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "",
+      "vendedor": "Lottin Capital",
+      "pide": "0,2 M",
+      "pideBruto": 180000,
+      "valorMercado": "0,2 M",
+      "valorBruto": 180000,
+      "diferencia": 0
+    },
     {
       "tipo": "venta",
       "nombre": "Denis Suárez",
@@ -381,8 +420,8 @@
       "pide": "1,4 M",
       "pideBruto": 1390000,
       "valorMercado": "1,4 M",
-      "valorBruto": 1390000,
-      "diferencia": 0
+      "valorBruto": 1380000,
+      "diferencia": 10000
     },
     {
       "tipo": "venta",
@@ -399,19 +438,6 @@
     },
     {
       "tipo": "venta",
-      "nombre": "Ceballos",
-      "foto": "https://cdn.biwenger.com/i/p/2044.png",
-      "posicion": "Centrocampista",
-      "equipoReal": "Betis",
-      "vendedor": "C.d.F Atlético de Cohiba",
-      "pide": "2,5 M",
-      "pideBruto": 2460000,
-      "valorMercado": "2,8 M",
-      "valorBruto": 2770000,
-      "diferencia": -310000
-    },
-    {
-      "tipo": "venta",
       "nombre": "Mandi",
       "foto": "https://cdn.biwenger.com/i/p/2480.png",
       "posicion": "Defensa",
@@ -420,34 +446,8 @@
       "pide": "2,7 M",
       "pideBruto": 2730000,
       "valorMercado": "2,8 M",
-      "valorBruto": 2800000,
-      "diferencia": -70000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Comesaña",
-      "foto": "https://cdn.biwenger.com/i/p/9480.png",
-      "posicion": "Centrocampista",
-      "equipoReal": "Villarreal",
-      "vendedor": "C.d.F Atlético de Cohiba",
-      "pide": "3,2 M",
-      "pideBruto": 3200000,
-      "valorMercado": "3,1 M",
-      "valorBruto": 3150000,
-      "diferencia": 50000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Torró",
-      "foto": "https://cdn.biwenger.com/i/p/19485.png",
-      "posicion": "Centrocampista",
-      "equipoReal": "Osasuna",
-      "vendedor": "C.d.F Atlético de Cohiba",
-      "pide": "1,3 M",
-      "pideBruto": 1300000,
-      "valorMercado": "1,3 M",
-      "valorBruto": 1260000,
-      "diferencia": 40000
+      "valorBruto": 2810000,
+      "diferencia": -80000
     },
     {
       "tipo": "venta",
@@ -459,8 +459,8 @@
       "pide": "8,1 M",
       "pideBruto": 8100000,
       "valorMercado": "8,0 M",
-      "valorBruto": 8040000,
-      "diferencia": 60000
+      "valorBruto": 7980000,
+      "diferencia": 120000
     },
     {
       "tipo": "venta",
@@ -472,20 +472,7 @@
       "pide": "6,2 M",
       "pideBruto": 6160000,
       "valorMercado": "5,7 M",
-      "valorBruto": 5710000,
-      "diferencia": 450000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Hugo Duro",
-      "foto": "https://cdn.biwenger.com/i/p/6259.png",
-      "posicion": "Delantero",
-      "equipoReal": "Valencia",
-      "vendedor": "Manchester Pity",
-      "pide": "2,6 M",
-      "pideBruto": 2560000,
-      "valorMercado": "2,1 M",
-      "valorBruto": 2080000,
+      "valorBruto": 5680000,
       "diferencia": 480000
     },
     {
@@ -497,9 +484,9 @@
       "vendedor": "Manchester Pity",
       "pide": "6,2 M",
       "pideBruto": 6240000,
-      "valorMercado": "6,1 M",
-      "valorBruto": 6100000,
-      "diferencia": 140000
+      "valorMercado": "6,2 M",
+      "valorBruto": 6170000,
+      "diferencia": 70000
     },
     {
       "tipo": "venta",
@@ -511,8 +498,8 @@
       "pide": "0,4 M",
       "pideBruto": 410000,
       "valorMercado": "0,8 M",
-      "valorBruto": 840000,
-      "diferencia": -430000
+      "valorBruto": 820000,
+      "diferencia": -410000
     },
     {
       "tipo": "venta",
@@ -524,8 +511,8 @@
       "pide": "0,6 M",
       "pideBruto": 610000,
       "valorMercado": "0,5 M",
-      "valorBruto": 470000,
-      "diferencia": 140000
+      "valorBruto": 460000,
+      "diferencia": 150000
     },
     {
       "tipo": "venta",
@@ -536,9 +523,9 @@
       "vendedor": "Manchester Pity",
       "pide": "3,3 M",
       "pideBruto": 3250000,
-      "valorMercado": "2,0 M",
-      "valorBruto": 1990000,
-      "diferencia": 1260000
+      "valorMercado": "1,9 M",
+      "valorBruto": 1950000,
+      "diferencia": 1300000
     },
     {
       "tipo": "venta",
@@ -550,8 +537,8 @@
       "pide": "1,9 M",
       "pideBruto": 1860000,
       "valorMercado": "1,8 M",
-      "valorBruto": 1810000,
-      "diferencia": 50000
+      "valorBruto": 1780000,
+      "diferencia": 80000
     },
     {
       "tipo": "venta",
@@ -563,8 +550,8 @@
       "pide": "4,7 M",
       "pideBruto": 4670000,
       "valorMercado": "4,7 M",
-      "valorBruto": 4680000,
-      "diferencia": -10000
+      "valorBruto": 4650000,
+      "diferencia": 20000
     },
     {
       "tipo": "venta",
@@ -576,8 +563,8 @@
       "pide": "2,3 M",
       "pideBruto": 2320000,
       "valorMercado": "2,4 M",
-      "valorBruto": 2380000,
-      "diferencia": -60000
+      "valorBruto": 2370000,
+      "diferencia": -50000
     },
     {
       "tipo": "venta",
@@ -588,9 +575,9 @@
       "vendedor": "CD Tiro Buchón",
       "pide": "2,0 M",
       "pideBruto": 2050000,
-      "valorMercado": "2,1 M",
-      "valorBruto": 2140000,
-      "diferencia": -90000
+      "valorMercado": "2,2 M",
+      "valorBruto": 2160000,
+      "diferencia": -110000
     },
     {
       "tipo": "venta",
@@ -602,8 +589,8 @@
       "pide": "4,2 M",
       "pideBruto": 4170000,
       "valorMercado": "3,9 M",
-      "valorBruto": 3940000,
-      "diferencia": 230000
+      "valorBruto": 3890000,
+      "diferencia": 280000
     },
     {
       "tipo": "venta",
@@ -615,8 +602,8 @@
       "pide": "1,9 M",
       "pideBruto": 1930000,
       "valorMercado": "1,9 M",
-      "valorBruto": 1930000,
-      "diferencia": 0
+      "valorBruto": 1920000,
+      "diferencia": 10000
     },
     {
       "tipo": "venta",
@@ -627,9 +614,9 @@
       "vendedor": "CD Tiro Buchón",
       "pide": "10,5 M",
       "pideBruto": 10510000,
-      "valorMercado": "12,4 M",
-      "valorBruto": 12420000,
-      "diferencia": -1910000
+      "valorMercado": "12,6 M",
+      "valorBruto": 12630000,
+      "diferencia": -2120000
     },
     {
       "tipo": "venta",
@@ -640,9 +627,9 @@
       "vendedor": "CD Tiro Buchón",
       "pide": "8,6 M",
       "pideBruto": 8630000,
-      "valorMercado": "8,5 M",
-      "valorBruto": 8500000,
-      "diferencia": 130000
+      "valorMercado": "8,3 M",
+      "valorBruto": 8350000,
+      "diferencia": 280000
     },
     {
       "tipo": "venta",
@@ -667,8 +654,8 @@
       "pide": "3,2 M",
       "pideBruto": 3240000,
       "valorMercado": "3,5 M",
-      "valorBruto": 3480000,
-      "diferencia": -240000
+      "valorBruto": 3490000,
+      "diferencia": -250000
     },
     {
       "tipo": "venta",
@@ -680,8 +667,8 @@
       "pide": "0,5 M",
       "pideBruto": 480000,
       "valorMercado": "0,6 M",
-      "valorBruto": 590000,
-      "diferencia": -110000
+      "valorBruto": 620000,
+      "diferencia": -140000
     },
     {
       "tipo": "venta",
@@ -693,8 +680,8 @@
       "pide": "1,6 M",
       "pideBruto": 1640000,
       "valorMercado": "1,6 M",
-      "valorBruto": 1590000,
-      "diferencia": 50000
+      "valorBruto": 1560000,
+      "diferencia": 80000
     },
     {
       "tipo": "venta",
@@ -705,9 +692,35 @@
       "vendedor": "CD Tiro Buchón",
       "pide": "0,6 M",
       "pideBruto": 600000,
-      "valorMercado": "0,7 M",
-      "valorBruto": 710000,
-      "diferencia": -110000
+      "valorMercado": "0,8 M",
+      "valorBruto": 760000,
+      "diferencia": -160000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Koke",
+      "foto": "https://cdn.biwenger.com/i/p/1083.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Atlético",
+      "vendedor": "Gorila FC",
+      "pide": "4,0 M",
+      "pideBruto": 4000000,
+      "valorMercado": "3,1 M",
+      "valorBruto": 3150000,
+      "diferencia": 850000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Larrubia",
+      "foto": "https://cdn.biwenger.com/i/p/41412.png",
+      "posicion": "Delantero",
+      "equipoReal": "Málaga",
+      "vendedor": "Gorila FC",
+      "pide": "6,0 M",
+      "pideBruto": 6000000,
+      "valorMercado": "4,8 M",
+      "valorBruto": 4790000,
+      "diferencia": 1210000
     },
     {
       "tipo": "venta",
@@ -719,8 +732,8 @@
       "pide": "4,0 M",
       "pideBruto": 3980000,
       "valorMercado": "3,9 M",
-      "valorBruto": 3910000,
-      "diferencia": 70000
+      "valorBruto": 3880000,
+      "diferencia": 100000
     },
     {
       "tipo": "venta",
@@ -745,21 +758,8 @@
       "pide": "1,5 M",
       "pideBruto": 1460000,
       "valorMercado": "1,6 M",
-      "valorBruto": 1610000,
-      "diferencia": -150000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Rafa Núñez",
-      "foto": "https://cdn.biwenger.com/i/p/25688.png",
-      "posicion": "Delantero",
-      "equipoReal": "",
-      "vendedor": "LXUNITED",
-      "pide": "0,1 M",
-      "pideBruto": 150000,
-      "valorMercado": "0,1 M",
-      "valorBruto": 150000,
-      "diferencia": 0
+      "valorBruto": 1650000,
+      "diferencia": -190000
     },
     {
       "tipo": "venta",
@@ -776,19 +776,6 @@
     },
     {
       "tipo": "venta",
-      "nombre": "Jugador",
-      "foto": "https://cdn.biwenger.com/i/p/30801.png",
-      "posicion": "",
-      "equipoReal": "",
-      "vendedor": "LXUNITED",
-      "pide": "0,1 M",
-      "pideBruto": 150000,
-      "valorMercado": "0,0 M",
-      "valorBruto": 0,
-      "diferencia": 0
-    },
-    {
-      "tipo": "venta",
       "nombre": "Huijsen",
       "foto": "https://cdn.biwenger.com/i/p/37495.png",
       "posicion": "Defensa",
@@ -796,9 +783,9 @@
       "vendedor": "LXUNITED",
       "pide": "5,5 M",
       "pideBruto": 5530000,
-      "valorMercado": "5,7 M",
-      "valorBruto": 5730000,
-      "diferencia": -200000
+      "valorMercado": "5,8 M",
+      "valorBruto": 5780000,
+      "diferencia": -250000
     },
     {
       "tipo": "venta",
@@ -823,8 +810,8 @@
       "pide": "0,7 M",
       "pideBruto": 690000,
       "valorMercado": "0,7 M",
-      "valorBruto": 700000,
-      "diferencia": -10000
+      "valorBruto": 690000,
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -836,8 +823,8 @@
       "pide": "1,0 M",
       "pideBruto": 1030000,
       "valorMercado": "0,9 M",
-      "valorBruto": 940000,
-      "diferencia": 90000
+      "valorBruto": 920000,
+      "diferencia": 110000
     },
     {
       "tipo": "venta",
@@ -874,9 +861,9 @@
       "vendedor": "LXUNITED",
       "pide": "12,0 M",
       "pideBruto": 12040000,
-      "valorMercado": "12,2 M",
-      "valorBruto": 12160000,
-      "diferencia": -120000
+      "valorMercado": "12,3 M",
+      "valorBruto": 12270000,
+      "diferencia": -230000
     },
     {
       "tipo": "venta",
@@ -887,9 +874,9 @@
       "vendedor": "LXUNITED",
       "pide": "1,9 M",
       "pideBruto": 1900000,
-      "valorMercado": "1,8 M",
-      "valorBruto": 1770000,
-      "diferencia": 130000
+      "valorMercado": "1,7 M",
+      "valorBruto": 1730000,
+      "diferencia": 170000
     },
     {
       "tipo": "venta",
@@ -900,100 +887,22 @@
       "vendedor": "Urdinho Pernambucano",
       "pide": "21,0 M",
       "pideBruto": 21000000,
-      "valorMercado": "16,7 M",
-      "valorBruto": 16700000,
-      "diferencia": 4300000
+      "valorMercado": "16,6 M",
+      "valorBruto": 16630000,
+      "diferencia": 4370000
     },
     {
       "tipo": "venta",
-      "nombre": "Osambela",
-      "foto": "https://cdn.biwenger.com/i/p/19693.png",
-      "posicion": "Centrocampista",
-      "equipoReal": "Osasuna",
-      "vendedor": "FC FORUSIA",
-      "pide": "0,1 M",
-      "pideBruto": 150000,
-      "valorMercado": "0,1 M",
-      "valorBruto": 150000,
-      "diferencia": 0
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Javi Hernández",
-      "foto": "https://cdn.biwenger.com/i/p/25322.png",
-      "posicion": "Centrocampista",
-      "equipoReal": "Espanyol",
-      "vendedor": "FC FORUSIA",
-      "pide": "3,3 M",
-      "pideBruto": 3310000,
-      "valorMercado": "3,7 M",
-      "valorBruto": 3700000,
-      "diferencia": -390000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Kike Salas",
-      "foto": "https://cdn.biwenger.com/i/p/28115.png",
-      "posicion": "Defensa",
-      "equipoReal": "Sevilla",
-      "vendedor": "FC FORUSIA",
-      "pide": "2,8 M",
-      "pideBruto": 2800000,
-      "valorMercado": "2,8 M",
-      "valorBruto": 2750000,
-      "diferencia": 50000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Castrín",
-      "foto": "https://cdn.biwenger.com/i/p/38072.png",
-      "posicion": "Defensa",
-      "equipoReal": "Sevilla",
-      "vendedor": "FC FORUSIA",
-      "pide": "1,5 M",
-      "pideBruto": 1530000,
-      "valorMercado": "1,6 M",
-      "valorBruto": 1590000,
-      "diferencia": -60000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Odysseas",
-      "foto": "https://cdn.biwenger.com/i/p/38405.png",
-      "posicion": "Portero",
-      "equipoReal": "Sevilla",
-      "vendedor": "FC FORUSIA",
-      "pide": "3,6 M",
-      "pideBruto": 3620000,
-      "valorMercado": "3,6 M",
-      "valorBruto": 3570000,
-      "diferencia": 50000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Lookman",
-      "foto": "https://cdn.biwenger.com/i/p/39941.png",
+      "nombre": "Sierra",
+      "foto": "https://cdn.biwenger.com/i/p/39350.png",
       "posicion": "Delantero",
-      "equipoReal": "Atlético",
-      "vendedor": "FC FORUSIA",
-      "pide": "7,5 M",
-      "pideBruto": 7540000,
-      "valorMercado": "7,4 M",
-      "valorBruto": 7420000,
-      "diferencia": 120000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Jorge Domínguez",
-      "foto": "https://cdn.biwenger.com/i/p/42261.png",
-      "posicion": "Defensa",
-      "equipoReal": "Atlético",
-      "vendedor": "FC FORUSIA",
-      "pide": "0,2 M",
-      "pideBruto": 180000,
-      "valorMercado": "0,2 M",
-      "valorBruto": 180000,
-      "diferencia": 0
+      "equipoReal": "Sevilla",
+      "vendedor": "Urdinho Pernambucano",
+      "pide": "5,0 M",
+      "pideBruto": 5000000,
+      "valorMercado": "3,9 M",
+      "valorBruto": 3870000,
+      "diferencia": 1130000
     },
     {
       "tipo": "venta",
@@ -1004,9 +913,9 @@
       "vendedor": "Las Víboras FC",
       "pide": "3,0 M",
       "pideBruto": 2980000,
-      "valorMercado": "3,3 M",
-      "valorBruto": 3340000,
-      "diferencia": -360000
+      "valorMercado": "3,4 M",
+      "valorBruto": 3350000,
+      "diferencia": -370000
     },
     {
       "tipo": "venta",
@@ -1017,9 +926,9 @@
       "vendedor": "Las Víboras FC",
       "pide": "2,6 M",
       "pideBruto": 2590000,
-      "valorMercado": "2,8 M",
-      "valorBruto": 2800000,
-      "diferencia": -210000
+      "valorMercado": "3,0 M",
+      "valorBruto": 3000000,
+      "diferencia": -410000
     },
     {
       "tipo": "venta",
@@ -1031,8 +940,8 @@
       "pide": "3,7 M",
       "pideBruto": 3670000,
       "valorMercado": "3,7 M",
-      "valorBruto": 3690000,
-      "diferencia": -20000
+      "valorBruto": 3700000,
+      "diferencia": -30000
     },
     {
       "tipo": "venta",
@@ -1044,8 +953,8 @@
       "pide": "1,4 M",
       "pideBruto": 1430000,
       "valorMercado": "2,2 M",
-      "valorBruto": 2190000,
-      "diferencia": -760000
+      "valorBruto": 2220000,
+      "diferencia": -790000
     },
     {
       "tipo": "venta",
@@ -1056,9 +965,9 @@
       "vendedor": "Las Víboras FC",
       "pide": "3,5 M",
       "pideBruto": 3520000,
-      "valorMercado": "4,2 M",
-      "valorBruto": 4200000,
-      "diferencia": -680000
+      "valorMercado": "4,4 M",
+      "valorBruto": 4360000,
+      "diferencia": -840000
     },
     {
       "tipo": "venta",
@@ -1070,8 +979,8 @@
       "pide": "5,6 M",
       "pideBruto": 5580000,
       "valorMercado": "5,5 M",
-      "valorBruto": 5530000,
-      "diferencia": 50000
+      "valorBruto": 5490000,
+      "diferencia": 90000
     },
     {
       "tipo": "venta",
@@ -1083,8 +992,8 @@
       "pide": "1,5 M",
       "pideBruto": 1480000,
       "valorMercado": "2,6 M",
-      "valorBruto": 2570000,
-      "diferencia": -1090000
+      "valorBruto": 2590000,
+      "diferencia": -1110000
     },
     {
       "tipo": "venta",
@@ -1095,9 +1004,9 @@
       "vendedor": "Las Víboras FC",
       "pide": "5,2 M",
       "pideBruto": 5230000,
-      "valorMercado": "5,4 M",
-      "valorBruto": 5420000,
-      "diferencia": -190000
+      "valorMercado": "5,6 M",
+      "valorBruto": 5580000,
+      "diferencia": -350000
     },
     {
       "tipo": "venta",
@@ -1122,8 +1031,8 @@
       "pide": "5,2 M",
       "pideBruto": 5230000,
       "valorMercado": "5,3 M",
-      "valorBruto": 5250000,
-      "diferencia": -20000
+      "valorBruto": 5260000,
+      "diferencia": -30000
     },
     {
       "tipo": "venta",
@@ -1147,9 +1056,9 @@
       "vendedor": "Las Víboras FC",
       "pide": "2,2 M",
       "pideBruto": 2190000,
-      "valorMercado": "2,2 M",
-      "valorBruto": 2160000,
-      "diferencia": 30000
+      "valorMercado": "2,1 M",
+      "valorBruto": 2150000,
+      "diferencia": 40000
     },
     {
       "tipo": "venta",
@@ -1163,19 +1072,6 @@
       "valorMercado": "0,3 M",
       "valorBruto": 300000,
       "diferencia": 50000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Adrián Niño",
-      "foto": "https://cdn.biwenger.com/i/p/35706.png",
-      "posicion": "Delantero",
-      "equipoReal": "Málaga",
-      "vendedor": "Las Víboras FC",
-      "pide": "0,8 M",
-      "pideBruto": 810000,
-      "valorMercado": "0,8 M",
-      "valorBruto": 770000,
-      "diferencia": 40000
     },
     {
       "tipo": "venta",
@@ -1212,9 +1108,9 @@
       "vendedor": "Las Víboras FC",
       "pide": "3,5 M",
       "pideBruto": 3480000,
-      "valorMercado": "4,4 M",
-      "valorBruto": 4390000,
-      "diferencia": -910000
+      "valorMercado": "4,5 M",
+      "valorBruto": 4490000,
+      "diferencia": -1010000
     },
     {
       "tipo": "venta",
@@ -1225,9 +1121,9 @@
       "vendedor": "Las Víboras FC",
       "pide": "0,5 M",
       "pideBruto": 490000,
-      "valorMercado": "0,5 M",
-      "valorBruto": 530000,
-      "diferencia": -40000
+      "valorMercado": "0,6 M",
+      "valorBruto": 560000,
+      "diferencia": -70000
     },
     {
       "tipo": "venta",
@@ -1239,8 +1135,8 @@
       "pide": "2,4 M",
       "pideBruto": 2400000,
       "valorMercado": "2,6 M",
-      "valorBruto": 2610000,
-      "diferencia": -210000
+      "valorBruto": 2630000,
+      "diferencia": -230000
     },
     {
       "tipo": "venta",
@@ -1252,8 +1148,8 @@
       "pide": "4,1 M",
       "pideBruto": 4140000,
       "valorMercado": "4,0 M",
-      "valorBruto": 4020000,
-      "diferencia": 120000
+      "valorBruto": 3960000,
+      "diferencia": 180000
     },
     {
       "tipo": "venta",
@@ -1278,8 +1174,8 @@
       "pide": "0,9 M",
       "pideBruto": 880000,
       "valorMercado": "0,8 M",
-      "valorBruto": 780000,
-      "diferencia": 100000
+      "valorBruto": 760000,
+      "diferencia": 120000
     },
     {
       "tipo": "venta",
@@ -1290,9 +1186,22 @@
       "vendedor": "Seif fc",
       "pide": "18,1 M",
       "pideBruto": 18090000,
-      "valorMercado": "18,1 M",
-      "valorBruto": 18130000,
-      "diferencia": -40000
+      "valorMercado": "18,2 M",
+      "valorBruto": 18190000,
+      "diferencia": -100000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Oriol Rey",
+      "foto": "https://cdn.biwenger.com/i/p/37726.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Levante",
+      "vendedor": "Seif fc",
+      "pide": "1,1 M",
+      "pideBruto": 1090000,
+      "valorMercado": "1,1 M",
+      "valorBruto": 1090000,
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -1303,9 +1212,9 @@
       "vendedor": "Seif fc",
       "pide": "4,4 M",
       "pideBruto": 4360000,
-      "valorMercado": "4,1 M",
-      "valorBruto": 4110000,
-      "diferencia": 250000
+      "valorMercado": "4,0 M",
+      "valorBruto": 4050000,
+      "diferencia": 310000
     },
     {
       "tipo": "venta",
@@ -1317,8 +1226,8 @@
       "pide": "3,2 M",
       "pideBruto": 3170000,
       "valorMercado": "2,9 M",
-      "valorBruto": 2930000,
-      "diferencia": 240000
+      "valorBruto": 2890000,
+      "diferencia": 280000
     },
     {
       "tipo": "clausula",
@@ -1332,9 +1241,9 @@
       "escudoComprador": "https://cdn.biwenger.com/i/u/11411835.png",
       "pide": "4,5 M",
       "pideBruto": 4536000,
-      "valorMercado": "3,2 M",
-      "valorBruto": 3200000,
-      "diferencia": 1336000
+      "valorMercado": "3,1 M",
+      "valorBruto": 3150000,
+      "diferencia": 1386000
     },
     {
       "tipo": "clausula",
@@ -1348,9 +1257,9 @@
       "escudoComprador": "https://cdn.biwenger.com/i/u/11412340.png",
       "pide": "34,5 M",
       "pideBruto": 34502000,
-      "valorMercado": "24,8 M",
-      "valorBruto": 24770000,
-      "diferencia": 9732000
+      "valorMercado": "24,7 M",
+      "valorBruto": 24730000,
+      "diferencia": 9772000
     },
     {
       "tipo": "clausula",
@@ -1365,8 +1274,8 @@
       "pide": "14,9 M",
       "pideBruto": 14872000,
       "valorMercado": "11,4 M",
-      "valorBruto": 11360000,
-      "diferencia": 3512000
+      "valorBruto": 11400000,
+      "diferencia": 3472000
     },
     {
       "tipo": "clausula",
@@ -1381,8 +1290,8 @@
       "pide": "0,6 M",
       "pideBruto": 570000,
       "valorMercado": "0,2 M",
-      "valorBruto": 210000,
-      "diferencia": 360000
+      "valorBruto": 220000,
+      "diferencia": 350000
     },
     {
       "tipo": "clausula",
@@ -1396,9 +1305,9 @@
       "escudoComprador": "https://cdn.biwenger.com/i/u/11411835.png",
       "pide": "5,9 M",
       "pideBruto": 5860300,
-      "valorMercado": "3,8 M",
-      "valorBruto": 3830000,
-      "diferencia": 2030300
+      "valorMercado": "3,9 M",
+      "valorBruto": 3880000,
+      "diferencia": 1980300
     },
     {
       "tipo": "clausula",
@@ -1413,8 +1322,8 @@
       "pide": "3,3 M",
       "pideBruto": 3345000,
       "valorMercado": "2,4 M",
-      "valorBruto": 2380000,
-      "diferencia": 965000
+      "valorBruto": 2430000,
+      "diferencia": 915000
     },
     {
       "tipo": "clausula",
@@ -1444,9 +1353,9 @@
       "escudoComprador": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
       "pide": "1,7 M",
       "pideBruto": 1665000,
-      "valorMercado": "1,2 M",
-      "valorBruto": 1230000,
-      "diferencia": 435000
+      "valorMercado": "1,3 M",
+      "valorBruto": 1260000,
+      "diferencia": 405000
     },
     {
       "tipo": "clausula",
@@ -1460,9 +1369,9 @@
       "escudoComprador": "https://cdn.biwenger.com/i/u/13934763.png",
       "pide": "6,7 M",
       "pideBruto": 6734000,
-      "valorMercado": "5,4 M",
-      "valorBruto": 5420000,
-      "diferencia": 1314000
+      "valorMercado": "5,6 M",
+      "valorBruto": 5580000,
+      "diferencia": 1154000
     },
     {
       "tipo": "clausula",
@@ -1476,9 +1385,9 @@
       "escudoComprador": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
       "pide": "18,9 M",
       "pideBruto": 18913800,
-      "valorMercado": "15,7 M",
-      "valorBruto": 15700000,
-      "diferencia": 3213800
+      "valorMercado": "15,8 M",
+      "valorBruto": 15750000,
+      "diferencia": 3163800
     },
     {
       "tipo": "clausula",
@@ -1493,8 +1402,8 @@
       "pide": "2,0 M",
       "pideBruto": 2000000,
       "valorMercado": "0,8 M",
-      "valorBruto": 770000,
-      "diferencia": 1230000
+      "valorBruto": 760000,
+      "diferencia": 1240000
     },
     {
       "tipo": "clausula",
@@ -1508,9 +1417,9 @@
       "escudoComprador": "https://cdn.biwenger.com/i/u/13934763.png",
       "pide": "5,9 M",
       "pideBruto": 5880000,
-      "valorMercado": "4,2 M",
-      "valorBruto": 4200000,
-      "diferencia": 1680000
+      "valorMercado": "4,4 M",
+      "valorBruto": 4360000,
+      "diferencia": 1520000
     },
     {
       "tipo": "clausula",
@@ -1525,8 +1434,8 @@
       "pide": "1,6 M",
       "pideBruto": 1560000,
       "valorMercado": "1,7 M",
-      "valorBruto": 1660000,
-      "diferencia": -100000
+      "valorBruto": 1690000,
+      "diferencia": -130000
     },
     {
       "tipo": "clausula",
@@ -1540,9 +1449,9 @@
       "escudoComprador": "https://cdn.biwenger.com/i/u/11411835.png",
       "pide": "12,6 M",
       "pideBruto": 12558000,
-      "valorMercado": "10,2 M",
-      "valorBruto": 10220000,
-      "diferencia": 2338000
+      "valorMercado": "10,3 M",
+      "valorBruto": 10290000,
+      "diferencia": 2268000
     },
     {
       "tipo": "clausula",
@@ -1556,9 +1465,9 @@
       "escudoComprador": "https://cdn.biwenger.com/i/u/11412167.png?v=15",
       "pide": "1,6 M",
       "pideBruto": 1590000,
-      "valorMercado": "3,6 M",
-      "valorBruto": 3610000,
-      "diferencia": -2020000
+      "valorMercado": "3,7 M",
+      "valorBruto": 3720000,
+      "diferencia": -2130000
     },
     {
       "tipo": "clausula",
@@ -1573,8 +1482,8 @@
       "pide": "1,7 M",
       "pideBruto": 1720000,
       "valorMercado": "1,5 M",
-      "valorBruto": 1480000,
-      "diferencia": 240000
+      "valorBruto": 1510000,
+      "diferencia": 210000
     },
     {
       "tipo": "clausula",
@@ -1588,9 +1497,9 @@
       "escudoComprador": "https://cdn.biwenger.com/i/u/14027560.png",
       "pide": "23,1 M",
       "pideBruto": 23060000,
-      "valorMercado": "18,1 M",
-      "valorBruto": 18130000,
-      "diferencia": 4930000
+      "valorMercado": "18,2 M",
+      "valorBruto": 18190000,
+      "diferencia": 4870000
     },
     {
       "tipo": "clausula",
@@ -1605,8 +1514,8 @@
       "pide": "1,6 M",
       "pideBruto": 1590000,
       "valorMercado": "2,2 M",
-      "valorBruto": 2190000,
-      "diferencia": -600000
+      "valorBruto": 2220000,
+      "diferencia": -630000
     },
     {
       "tipo": "clausula",
@@ -1621,8 +1530,8 @@
       "pide": "1,0 M",
       "pideBruto": 1020000,
       "valorMercado": "1,3 M",
-      "valorBruto": 1290000,
-      "diferencia": -270000
+      "valorBruto": 1280000,
+      "diferencia": -260000
     },
     {
       "tipo": "clausula",
@@ -1653,8 +1562,8 @@
       "pide": "1,0 M",
       "pideBruto": 990000,
       "valorMercado": "0,3 M",
-      "valorBruto": 320000,
-      "diferencia": 670000
+      "valorBruto": 310000,
+      "diferencia": 680000
     },
     {
       "tipo": "clausula",
@@ -1668,9 +1577,9 @@
       "escudoComprador": "https://cdn.biwenger.com/i/u/11412167.png?v=15",
       "pide": "4,2 M",
       "pideBruto": 4200000,
-      "valorMercado": "4,2 M",
-      "valorBruto": 4200000,
-      "diferencia": 0
+      "valorMercado": "4,4 M",
+      "valorBruto": 4360000,
+      "diferencia": -160000
     },
     {
       "tipo": "clausula",
@@ -1685,8 +1594,8 @@
       "pide": "1,7 M",
       "pideBruto": 1695000,
       "valorMercado": "0,9 M",
-      "valorBruto": 940000,
-      "diferencia": 755000
+      "valorBruto": 920000,
+      "diferencia": 775000
     },
     {
       "tipo": "clausula",
@@ -1701,8 +1610,8 @@
       "pide": "1,3 M",
       "pideBruto": 1300000,
       "valorMercado": "1,6 M",
-      "valorBruto": 1640000,
-      "diferencia": -340000
+      "valorBruto": 1570000,
+      "diferencia": -270000
     },
     {
       "tipo": "clausula",
@@ -1733,8 +1642,8 @@
       "pide": "1,0 M",
       "pideBruto": 1040000,
       "valorMercado": "1,7 M",
-      "valorBruto": 1660000,
-      "diferencia": -620000
+      "valorBruto": 1690000,
+      "diferencia": -650000
     },
     {
       "tipo": "clausula",
@@ -1749,8 +1658,8 @@
       "pide": "0,8 M",
       "pideBruto": 810000,
       "valorMercado": "3,7 M",
-      "valorBruto": 3700000,
-      "diferencia": -2890000
+      "valorBruto": 3710000,
+      "diferencia": -2900000
     },
     {
       "tipo": "clausula",
@@ -1765,8 +1674,8 @@
       "pide": "1,7 M",
       "pideBruto": 1680000,
       "valorMercado": "1,2 M",
-      "valorBruto": 1200000,
-      "diferencia": 480000
+      "valorBruto": 1190000,
+      "diferencia": 490000
     },
     {
       "tipo": "clausula",
@@ -1781,8 +1690,8 @@
       "pide": "2,1 M",
       "pideBruto": 2055000,
       "valorMercado": "2,8 M",
-      "valorBruto": 2810000,
-      "diferencia": -755000
+      "valorBruto": 2760000,
+      "diferencia": -705000
     },
     {
       "tipo": "clausula",
@@ -1796,9 +1705,9 @@
       "escudoComprador": "https://cdn.biwenger.com/i/u/13934763.png",
       "pide": "4,2 M",
       "pideBruto": 4170000,
-      "valorMercado": "2,3 M",
-      "valorBruto": 2250000,
-      "diferencia": 1920000
+      "valorMercado": "2,2 M",
+      "valorBruto": 2220000,
+      "diferencia": 1950000
     },
     {
       "tipo": "clausula",
@@ -1813,8 +1722,8 @@
       "pide": "8,3 M",
       "pideBruto": 8329999,
       "valorMercado": "9,0 M",
-      "valorBruto": 8980000,
-      "diferencia": -650001
+      "valorBruto": 9000000,
+      "diferencia": -670001
     }
   ],
   "rankingClausulas": [
@@ -1856,10 +1765,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
       "iniciales": "CT",
       "puntos": 238,
-      "valor": "40,7 M",
-      "valorBruto": 40710000,
+      "valor": "40,8 M",
+      "valorBruto": 40800000,
       "esTuyo": false,
-      "puntosPorMillon": 5.85,
+      "puntosPorMillon": 5.83,
       "mediaJornada": 47.6,
       "clausulasHechas": 0,
       "clausulasSufridas": 2,
@@ -1879,12 +1788,12 @@
       "puestoGasto": 8,
       "puestoActividad": 10,
       "vsMediaPuntos": 26,
-      "vsMediaEficiencia": 32,
-      "vsMediaValor": -7,
+      "vsMediaEficiencia": 35,
+      "vsMediaValor": -9,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
-        "desde": "2026-09-10"
+        "desde": "Jornada 4"
       }
     },
     {
@@ -1893,10 +1802,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/11412340.png",
       "iniciales": "CC",
       "puntos": 234,
-      "valor": "46,2 M",
-      "valorBruto": 46170000,
+      "valor": "46,0 M",
+      "valorBruto": 46030000,
       "esTuyo": false,
-      "puntosPorMillon": 5.07,
+      "puntosPorMillon": 5.08,
       "mediaJornada": 46.8,
       "clausulasHechas": 1,
       "clausulasSufridas": 3,
@@ -1907,7 +1816,7 @@
       "ingresadoBruto": 7510000,
       "balance": "−27,0 M",
       "balanceBruto": -26992000,
-      "sobreprecioMedio": 39,
+      "sobreprecioMedio": 40,
       "enVenta": 0,
       "fichajeEstrella": {
         "nombre": "Mbappé",
@@ -1916,16 +1825,16 @@
       },
       "total": 12,
       "puestoEficiencia": 4,
-      "puestoValor": 6,
+      "puestoValor": 4,
       "puestoGasto": 2,
       "puestoActividad": 6,
       "vsMediaPuntos": 24,
-      "vsMediaEficiencia": 15,
-      "vsMediaValor": 5,
+      "vsMediaEficiencia": 18,
+      "vsMediaValor": 3,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
-        "desde": "2026-09-10"
+        "desde": "Jornada 4"
       }
     },
     {
@@ -1934,10 +1843,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/12600696.png?v=83",
       "iniciales": "L",
       "puntos": 222,
-      "valor": "35,3 M",
-      "valorBruto": 35280000,
+      "valor": "35,4 M",
+      "valorBruto": 35380000,
       "esTuyo": true,
-      "puntosPorMillon": 6.29,
+      "puntosPorMillon": 6.27,
       "mediaJornada": 44.4,
       "clausulasHechas": 0,
       "clausulasSufridas": 4,
@@ -1949,20 +1858,20 @@
       "balance": "+32,9 M",
       "balanceBruto": 32912000,
       "sobreprecioMedio": null,
-      "enVenta": 14,
+      "enVenta": 12,
       "fichajeEstrella": null,
       "total": 12,
       "puestoEficiencia": 1,
-      "puestoValor": 11,
+      "puestoValor": 12,
       "puestoGasto": 9,
       "puestoActividad": 7,
       "vsMediaPuntos": 18,
-      "vsMediaEficiencia": 42,
-      "vsMediaValor": -20,
+      "vsMediaEficiencia": 45,
+      "vsMediaValor": -21,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
-        "desde": "2026-09-10"
+        "desde": "Jornada 4"
       }
     },
     {
@@ -1971,10 +1880,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/11412167.png?v=15",
       "iniciales": "MF",
       "puntos": 222,
-      "valor": "36,0 M",
-      "valorBruto": 35990000,
+      "valor": "35,9 M",
+      "valorBruto": 35930000,
       "esTuyo": false,
-      "puntosPorMillon": 6.17,
+      "puntosPorMillon": 6.18,
       "mediaJornada": 44.4,
       "clausulasHechas": 4,
       "clausulasSufridas": 2,
@@ -1985,7 +1894,7 @@
       "ingresadoBruto": 7935000,
       "balance": "−0,4 M",
       "balanceBruto": -435000,
-      "sobreprecioMedio": -21,
+      "sobreprecioMedio": -22,
       "enVenta": 0,
       "fichajeEstrella": {
         "nombre": "Boyé",
@@ -1994,16 +1903,16 @@
       },
       "total": 12,
       "puestoEficiencia": 2,
-      "puestoValor": 10,
+      "puestoValor": 11,
       "puestoGasto": 7,
       "puestoActividad": 4,
       "vsMediaPuntos": 18,
-      "vsMediaEficiencia": 40,
-      "vsMediaValor": -18,
+      "vsMediaEficiencia": 43,
+      "vsMediaValor": -20,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
-        "desde": "2026-09-10"
+        "desde": "Jornada 4"
       }
     },
     {
@@ -2012,10 +1921,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/14027560.png",
       "iniciales": "SF",
       "puntos": 210,
-      "valor": "43,5 M",
-      "valorBruto": 43490000,
+      "valor": "45,9 M",
+      "valorBruto": 45890000,
       "esTuyo": false,
-      "puntosPorMillon": 4.83,
+      "puntosPorMillon": 4.58,
       "mediaJornada": 42,
       "clausulasHechas": 2,
       "clausulasSufridas": 2,
@@ -2027,7 +1936,7 @@
       "balance": "−21,3 M",
       "balanceBruto": -21275000,
       "sobreprecioMedio": 36,
-      "enVenta": 7,
+      "enVenta": 8,
       "fichajeEstrella": {
         "nombre": "Bellingham",
         "precio": "23,1 M",
@@ -2035,16 +1944,16 @@
       },
       "total": 12,
       "puestoEficiencia": 5,
-      "puestoValor": 7,
+      "puestoValor": 5,
       "puestoGasto": 4,
       "puestoActividad": 8,
       "vsMediaPuntos": 11,
-      "vsMediaEficiencia": 9,
-      "vsMediaValor": -1,
+      "vsMediaEficiencia": 6,
+      "vsMediaValor": 2,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
-        "desde": "2026-09-10"
+        "desde": "Jornada 4"
       }
     },
     {
@@ -2053,10 +1962,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/10271251.png",
       "iniciales": "MP",
       "puntos": 192,
-      "valor": "47,6 M",
-      "valorBruto": 47570000,
+      "valor": "45,4 M",
+      "valorBruto": 45440000,
       "esTuyo": false,
-      "puntosPorMillon": 4.04,
+      "puntosPorMillon": 4.23,
       "mediaJornada": 38.4,
       "clausulasHechas": 0,
       "clausulasSufridas": 2,
@@ -2068,20 +1977,20 @@
       "balance": "+13,6 M",
       "balanceBruto": 13598000,
       "sobreprecioMedio": null,
-      "enVenta": 9,
+      "enVenta": 8,
       "fichajeEstrella": null,
       "total": 12,
       "puestoEficiencia": 7,
-      "puestoValor": 5,
+      "puestoValor": 6,
       "puestoGasto": 10,
       "puestoActividad": 11,
       "vsMediaPuntos": 2,
-      "vsMediaEficiencia": -9,
-      "vsMediaValor": 8,
+      "vsMediaEficiencia": -2,
+      "vsMediaValor": 1,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
-        "desde": "2026-09-10"
+        "desde": "Jornada 4"
       }
     },
     {
@@ -2090,10 +1999,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
       "iniciales": "FF",
       "puntos": 188,
-      "valor": "56,8 M",
-      "valorBruto": 56760000,
+      "valor": "56,6 M",
+      "valorBruto": 56630000,
       "esTuyo": false,
-      "puntosPorMillon": 3.31,
+      "puntosPorMillon": 3.32,
       "mediaJornada": 37.6,
       "clausulasHechas": 9,
       "clausulasSufridas": 1,
@@ -2104,25 +2013,25 @@
       "ingresadoBruto": 1560000,
       "balance": "−36,5 M",
       "balanceBruto": -36528799,
-      "sobreprecioMedio": 27,
-      "enVenta": 7,
+      "sobreprecioMedio": 25,
+      "enVenta": 0,
       "fichajeEstrella": {
         "nombre": "Pedri",
         "precio": "18,9 M",
         "foto": "https://cdn.biwenger.com/i/p/19441.png"
       },
       "total": 12,
-      "puestoEficiencia": 11,
-      "puestoValor": 1,
+      "puestoEficiencia": 10,
+      "puestoValor": 2,
       "puestoGasto": 1,
       "puestoActividad": 2,
       "vsMediaPuntos": 0,
-      "vsMediaEficiencia": -25,
-      "vsMediaValor": 29,
+      "vsMediaEficiencia": -23,
+      "vsMediaValor": 26,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
-        "desde": "2026-09-10"
+        "desde": "Jornada 4"
       }
     },
     {
@@ -2131,10 +2040,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/12659137.png?v=9",
       "iniciales": "UP",
       "puntos": 188,
-      "valor": "53,4 M",
-      "valorBruto": 53390000,
+      "valor": "53,3 M",
+      "valorBruto": 53280000,
       "esTuyo": false,
-      "puntosPorMillon": 3.52,
+      "puntosPorMillon": 3.53,
       "mediaJornada": 37.6,
       "clausulasHechas": 0,
       "clausulasSufridas": 4,
@@ -2146,20 +2055,20 @@
       "balance": "+9,1 M",
       "balanceBruto": 9060000,
       "sobreprecioMedio": null,
-      "enVenta": 1,
+      "enVenta": 2,
       "fichajeEstrella": null,
       "total": 12,
-      "puestoEficiencia": 10,
-      "puestoValor": 2,
+      "puestoEficiencia": 8,
+      "puestoValor": 3,
       "puestoGasto": 11,
       "puestoActividad": 9,
       "vsMediaPuntos": 0,
-      "vsMediaEficiencia": -20,
-      "vsMediaValor": 21,
+      "vsMediaEficiencia": -18,
+      "vsMediaValor": 19,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
-        "desde": "2026-09-10"
+        "desde": "Jornada 4"
       }
     },
     {
@@ -2168,10 +2077,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/13934763.png",
       "iniciales": "LV",
       "puntos": 182,
-      "valor": "47,8 M",
-      "valorBruto": 47770000,
+      "valor": "58,0 M",
+      "valorBruto": 58020000,
       "esTuyo": false,
-      "puntosPorMillon": 3.81,
+      "puntosPorMillon": 3.14,
       "mediaJornada": 36.4,
       "clausulasHechas": 10,
       "clausulasSufridas": 3,
@@ -2183,24 +2092,24 @@
       "balance": "−2,5 M",
       "balanceBruto": -2461201,
       "sobreprecioMedio": 50,
-      "enVenta": 18,
+      "enVenta": 17,
       "fichajeEstrella": {
         "nombre": "Camello",
         "precio": "6,7 M",
         "foto": "https://cdn.biwenger.com/i/p/17756.png"
       },
       "total": 12,
-      "puestoEficiencia": 9,
-      "puestoValor": 4,
+      "puestoEficiencia": 11,
+      "puestoValor": 1,
       "puestoGasto": 3,
       "puestoActividad": 1,
       "vsMediaPuntos": -4,
-      "vsMediaEficiencia": -14,
-      "vsMediaValor": 9,
+      "vsMediaEficiencia": -27,
+      "vsMediaValor": 29,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
-        "desde": "2026-09-10"
+        "desde": "Jornada 4"
       }
     },
     {
@@ -2210,7 +2119,7 @@
       "iniciales": "GF",
       "puntos": 176,
       "valor": "40,1 M",
-      "valorBruto": 40110000,
+      "valorBruto": 40080000,
       "esTuyo": false,
       "puntosPorMillon": 4.39,
       "mediaJornada": 35.2,
@@ -2223,8 +2132,8 @@
       "ingresadoBruto": 10619000,
       "balance": "−13,3 M",
       "balanceBruto": -13325300,
-      "sobreprecioMedio": 82,
-      "enVenta": 0,
+      "sobreprecioMedio": 84,
+      "enVenta": 2,
       "fichajeEstrella": {
         "nombre": "Baena",
         "precio": "12,6 M",
@@ -2236,12 +2145,12 @@
       "puestoGasto": 5,
       "puestoActividad": 3,
       "vsMediaPuntos": -7,
-      "vsMediaEficiencia": -1,
-      "vsMediaValor": -9,
+      "vsMediaEficiencia": 2,
+      "vsMediaValor": -11,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
-        "desde": "2026-09-10"
+        "desde": "Jornada 4"
       }
     },
     {
@@ -2250,10 +2159,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
       "iniciales": "LC",
       "puntos": 130,
-      "valor": "32,2 M",
-      "valorBruto": 32160000,
+      "valor": "39,1 M",
+      "valorBruto": 39090000,
       "esTuyo": false,
-      "puntosPorMillon": 4.04,
+      "puntosPorMillon": 3.33,
       "mediaJornada": 26,
       "clausulasHechas": 1,
       "clausulasSufridas": 4,
@@ -2264,25 +2173,25 @@
       "ingresadoBruto": 38777000,
       "balance": "+23,9 M",
       "balanceBruto": 23905000,
-      "sobreprecioMedio": 31,
-      "enVenta": 0,
+      "sobreprecioMedio": 30,
+      "enVenta": 3,
       "fichajeEstrella": {
         "nombre": "Pépé",
         "precio": "14,9 M",
         "foto": "https://cdn.biwenger.com/i/p/34479.png"
       },
       "total": 12,
-      "puestoEficiencia": 8,
-      "puestoValor": 12,
+      "puestoEficiencia": 9,
+      "puestoValor": 10,
       "puestoGasto": 6,
       "puestoActividad": 5,
       "vsMediaPuntos": -31,
-      "vsMediaEficiencia": -9,
-      "vsMediaValor": -27,
+      "vsMediaEficiencia": -23,
+      "vsMediaValor": -13,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
-        "desde": "2026-09-10"
+        "desde": "Jornada 4"
       }
     },
     {
@@ -2291,10 +2200,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/10271084.png?v=66",
       "iniciales": "CA",
       "puntos": 82,
-      "valor": "48,3 M",
-      "valorBruto": 48300000,
+      "valor": "41,2 M",
+      "valorBruto": 41180000,
       "esTuyo": false,
-      "puntosPorMillon": 1.7,
+      "puntosPorMillon": 1.99,
       "mediaJornada": 16.4,
       "clausulasHechas": 0,
       "clausulasSufridas": 0,
@@ -2306,20 +2215,20 @@
       "balance": "+0,0 M",
       "balanceBruto": 0,
       "sobreprecioMedio": null,
-      "enVenta": 6,
+      "enVenta": 3,
       "fichajeEstrella": null,
       "total": 12,
       "puestoEficiencia": 12,
-      "puestoValor": 3,
+      "puestoValor": 7,
       "puestoGasto": 12,
       "puestoActividad": 12,
       "vsMediaPuntos": -57,
-      "vsMediaEficiencia": -62,
-      "vsMediaValor": 10,
+      "vsMediaEficiencia": -54,
+      "vsMediaValor": -8,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
-        "desde": "2026-09-10"
+        "desde": "Jornada 4"
       }
     }
   ],
@@ -2384,170 +2293,171 @@
   "onceIdeal": {
     "jornada": "Jornada 4",
     "formacion": "3-4-3",
-    "total": 154,
+    "total": 157,
     "titulares": [
       {
         "nombre": "Álvaro Valles",
         "posicion": "Portero",
         "puntos": 14,
-        "equipoReal": "",
-        "foto": "https://cdn.biwenger.com/i/p/30487.png",
-        "presidente": "Seif fc",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/14027560.png",
         "racha": [
           14,
           6,
           11,
           8
-        ]
+        ],
+        "equipoReal": "Betis",
+        "foto": "https://cdn.biwenger.com/i/p/30487.png",
+        "presidente": "",
+        "escudoPresidente": ""
       },
       {
         "nombre": "Ratiu",
         "posicion": "Defensa",
         "puntos": 12,
-        "equipoReal": "",
-        "foto": "https://cdn.biwenger.com/i/p/26276.png",
-        "presidente": "Madriguana FC",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/11412167.png?v=15",
         "racha": [
           12,
           2,
           -1
-        ]
+        ],
+        "equipoReal": "Rayo Vallecano",
+        "foto": "https://cdn.biwenger.com/i/p/26276.png",
+        "presidente": "",
+        "escudoPresidente": ""
+      },
+      {
+        "nombre": "Castrín",
+        "posicion": "Defensa",
+        "puntos": 10,
+        "racha": [
+          10,
+          2,
+          2,
+          5
+        ],
+        "equipoReal": "Sevilla",
+        "foto": "https://cdn.biwenger.com/i/p/38072.png",
+        "presidente": "",
+        "escudoPresidente": ""
       },
       {
         "nombre": "Huijsen",
         "posicion": "Defensa",
         "puntos": 8,
-        "equipoReal": "",
-        "foto": "https://cdn.biwenger.com/i/p/37495.png",
-        "presidente": "LXUNITED",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/12600696.png?v=83",
         "racha": [
           8,
           5,
           6,
           5
-        ]
-      },
-      {
-        "nombre": "Koundé",
-        "posicion": "Defensa",
-        "puntos": 7,
-        "equipoReal": "",
-        "foto": "https://cdn.biwenger.com/i/p/18945.png",
-        "presidente": "Las Víboras FC",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
-        "racha": [
-          7,
-          1,
-          3,
-          4
-        ]
+        ],
+        "equipoReal": "Real Madrid",
+        "foto": "https://cdn.biwenger.com/i/p/37495.png",
+        "presidente": "",
+        "escudoPresidente": ""
       },
       {
         "nombre": "Pedri",
         "posicion": "Centrocampista",
         "puntos": 15,
-        "equipoReal": "",
-        "foto": "https://cdn.biwenger.com/i/p/19441.png",
-        "presidente": "FC FORUSIA",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
         "racha": [
           15,
           3,
           11,
           3
-        ]
+        ],
+        "equipoReal": "Barcelona",
+        "foto": "https://cdn.biwenger.com/i/p/19441.png",
+        "presidente": "",
+        "escudoPresidente": ""
       },
       {
         "nombre": "Sancet",
         "posicion": "Centrocampista",
         "puntos": 13,
-        "equipoReal": "",
-        "foto": "https://cdn.biwenger.com/i/p/17057.png",
-        "presidente": "Manchester Pity",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/10271251.png",
         "racha": [
           13,
           2,
           3,
           3
-        ]
-      },
-      {
-        "nombre": "Pablo Ibáñez",
-        "posicion": "Centrocampista",
-        "puntos": 12,
-        "equipoReal": "",
-        "foto": "https://cdn.biwenger.com/i/p/14800.png",
-        "presidente": "FC FORUSIA",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
-        "racha": [
-          12,
-          3,
-          8,
-          1
-        ]
+        ],
+        "equipoReal": "Athletic",
+        "foto": "https://cdn.biwenger.com/i/p/17057.png",
+        "presidente": "",
+        "escudoPresidente": ""
       },
       {
         "nombre": "Yangel Herrera",
         "posicion": "Centrocampista",
         "puntos": 12,
-        "equipoReal": "",
-        "foto": "https://cdn.biwenger.com/i/p/17344.png",
-        "presidente": "Madriguana FC",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/11412167.png?v=15",
         "racha": [
           12,
           3,
           4,
-          2
-        ]
+          2,
+          3
+        ],
+        "equipoReal": "Real Sociedad",
+        "foto": "https://cdn.biwenger.com/i/p/17344.png",
+        "presidente": "",
+        "escudoPresidente": ""
+      },
+      {
+        "nombre": "Pablo Ibáñez",
+        "posicion": "Centrocampista",
+        "puntos": 12,
+        "racha": [
+          12,
+          3,
+          8,
+          1
+        ],
+        "equipoReal": "Alavés",
+        "foto": "https://cdn.biwenger.com/i/p/14800.png",
+        "presidente": "",
+        "escudoPresidente": ""
       },
       {
         "nombre": "Boyé",
         "posicion": "Delantero",
         "puntos": 23,
-        "equipoReal": "",
-        "foto": "https://cdn.biwenger.com/i/p/12494.png",
-        "presidente": "Las Víboras FC",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
         "racha": [
           23,
           10,
           3
-        ]
+        ],
+        "equipoReal": "Alavés",
+        "foto": "https://cdn.biwenger.com/i/p/12494.png",
+        "presidente": "",
+        "escudoPresidente": ""
       },
       {
         "nombre": "Camello",
         "posicion": "Delantero",
         "puntos": 20,
-        "equipoReal": "",
-        "foto": "https://cdn.biwenger.com/i/p/17756.png",
-        "presidente": "Las Víboras FC",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
         "racha": [
           20,
           16,
           11,
           2
-        ]
+        ],
+        "equipoReal": "Rayo Vallecano",
+        "foto": "https://cdn.biwenger.com/i/p/17756.png",
+        "presidente": "",
+        "escudoPresidente": ""
       },
       {
         "nombre": "Aubameyang",
         "posicion": "Delantero",
         "puntos": 18,
-        "equipoReal": "",
-        "foto": "https://cdn.biwenger.com/i/p/25769.png",
-        "presidente": "CD Tiro Buchón",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
         "racha": [
           18,
           12,
           8,
           11
-        ]
+        ],
+        "equipoReal": "Deportivo",
+        "foto": "https://cdn.biwenger.com/i/p/25769.png",
+        "presidente": "",
+        "escudoPresidente": ""
       }
     ],
     "paquete": {
@@ -2555,8 +2465,8 @@
       "puntos": -4,
       "jornada": "Jornada 4",
       "foto": "https://cdn.biwenger.com/i/p/17731.png",
-      "presidente": "Gorila FC",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/11411835.png"
+      "presidente": "",
+      "escudoPresidente": ""
     }
   },
   "premios": {
@@ -2565,8 +2475,8 @@
       "puntos": -4,
       "jornada": "Jornada 4",
       "foto": "https://cdn.biwenger.com/i/p/17731.png",
-      "presidente": "Gorila FC",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/11411835.png"
+      "presidente": "",
+      "escudoPresidente": ""
     },
     "fichajeRentable": {
       "nombre": "Javi Hernández",
@@ -2583,7 +2493,7 @@
       "comprador": "FC FORUSIA",
       "escudoComprador": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
       "pagado": "0,8 M",
-      "porcentaje": 357
+      "porcentaje": 358
     },
     "masRata": {
       "nombre": "CD Tiro Buchón",
@@ -2593,6 +2503,2582 @@
     }
   },
   "calendario": {
+    "Lottin Capital": [
+      {
+        "nombre": "Pépé",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/34479.png",
+        "equipoReal": "Villarreal",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Betis",
+            "esLocal": true,
+            "dificultad": 59
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Málaga",
+            "esLocal": false,
+            "dificultad": 28
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Levante",
+            "esLocal": true,
+            "dificultad": 45
+          }
+        ]
+      },
+      {
+        "nombre": "Rubén García",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/1602.png",
+        "equipoReal": "Osasuna",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Espanyol",
+            "esLocal": true,
+            "dificultad": 37
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Atlético",
+            "esLocal": false,
+            "dificultad": 51
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Rayo Vallecano",
+            "esLocal": true,
+            "dificultad": 31
+          }
+        ]
+      },
+      {
+        "nombre": "Ceballos",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/2044.png",
+        "equipoReal": "Betis",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Villarreal",
+            "esLocal": false,
+            "dificultad": 19
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Getafe",
+            "esLocal": true,
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Deportivo",
+            "esLocal": false,
+            "dificultad": 57
+          }
+        ]
+      },
+      {
+        "nombre": "Galilea",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/4070.png",
+        "equipoReal": "Málaga",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 30
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Villarreal",
+            "esLocal": true,
+            "dificultad": 32
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 39
+          }
+        ]
+      },
+      {
+        "nombre": "Ponce",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/5534.png",
+        "equipoReal": "Elche",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Athletic",
+            "esLocal": false,
+            "dificultad": 58
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Real Madrid",
+            "esLocal": true,
+            "dificultad": 72
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Espanyol",
+            "esLocal": false,
+            "dificultad": 52
+          }
+        ]
+      },
+      {
+        "nombre": "Iván Villar",
+        "posicion": "Portero",
+        "foto": "https://cdn.biwenger.com/i/p/10117.png",
+        "equipoReal": "Celta",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Málaga",
+            "esLocal": true,
+            "dificultad": 21
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Racing",
+            "esLocal": true,
+            "dificultad": 38
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Elche",
+            "esLocal": false,
+            "dificultad": 19
+          }
+        ]
+      },
+      {
+        "nombre": "Carreira",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/10574.png",
+        "equipoReal": "Celta",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Málaga",
+            "esLocal": true,
+            "dificultad": 21
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Racing",
+            "esLocal": true,
+            "dificultad": 38
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Elche",
+            "esLocal": false,
+            "dificultad": 19
+          }
+        ]
+      },
+      {
+        "nombre": "Iván Martín",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/12403.png",
+        "equipoReal": "Racing",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Alavés",
+            "esLocal": true,
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Barcelona",
+            "esLocal": false,
+            "dificultad": 91
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 24
+          }
+        ]
+      },
+      {
+        "nombre": "Puado",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/16317.png",
+        "equipoReal": "Espanyol",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Osasuna",
+            "esLocal": false,
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Rayo Vallecano",
+            "esLocal": false,
+            "dificultad": 36
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Elche",
+            "esLocal": true,
+            "dificultad": 16
+          }
+        ]
+      },
+      {
+        "nombre": "De Frutos",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/18397.png",
+        "equipoReal": "Rayo Vallecano",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Real Madrid",
+            "esLocal": false,
+            "dificultad": 75
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Espanyol",
+            "esLocal": true,
+            "dificultad": 42
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Osasuna",
+            "esLocal": false,
+            "dificultad": 52
+          }
+        ]
+      },
+      {
+        "nombre": "Cárdenas",
+        "posicion": "Portero",
+        "foto": "https://cdn.biwenger.com/i/p/22975.png",
+        "equipoReal": "Rayo Vallecano",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Real Madrid",
+            "esLocal": false,
+            "dificultad": 75
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Espanyol",
+            "esLocal": true,
+            "dificultad": 42
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Osasuna",
+            "esLocal": false,
+            "dificultad": 52
+          }
+        ]
+      },
+      {
+        "nombre": "Copete",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/26344.png",
+        "equipoReal": "Valencia",
+        "jornadas": [
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Alavés",
+            "esLocal": false,
+            "dificultad": 82
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Real Sociedad",
+            "esLocal": true,
+            "dificultad": 52
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Racing",
+            "esLocal": false,
+            "dificultad": 55
+          }
+        ]
+      },
+      {
+        "nombre": "Tárrega",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/26592.png",
+        "equipoReal": "Valencia",
+        "jornadas": [
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Alavés",
+            "esLocal": false,
+            "dificultad": 82
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Real Sociedad",
+            "esLocal": true,
+            "dificultad": 52
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Racing",
+            "esLocal": false,
+            "dificultad": 55
+          }
+        ]
+      },
+      {
+        "nombre": "Neyou",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/33691.png",
+        "equipoReal": "",
+        "jornadas": []
+      },
+      {
+        "nombre": "Yusi",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/37525.png",
+        "equipoReal": "Alavés",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Racing",
+            "esLocal": false,
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Valencia",
+            "esLocal": true,
+            "dificultad": 3
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Athletic",
+            "esLocal": false,
+            "dificultad": 41
+          }
+        ]
+      },
+      {
+        "nombre": "Kevin Sánchez",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/41567.png",
+        "equipoReal": "Deportivo",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 27
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Sevilla",
+            "esLocal": true,
+            "dificultad": 61
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Betis",
+            "esLocal": true,
+            "dificultad": 49
+          }
+        ]
+      },
+      {
+        "nombre": "Facundo Bernal",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/42370.png",
+        "equipoReal": "Betis",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Villarreal",
+            "esLocal": false,
+            "dificultad": 19
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Getafe",
+            "esLocal": true,
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Deportivo",
+            "esLocal": false,
+            "dificultad": 57
+          }
+        ]
+      },
+      {
+        "nombre": "Belocian",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/43259.png",
+        "equipoReal": "Racing",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Alavés",
+            "esLocal": true,
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Barcelona",
+            "esLocal": false,
+            "dificultad": 91
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 24
+          }
+        ]
+      }
+    ],
+    "C.d.F Atlético de Cohiba": [
+      {
+        "nombre": "Adrián Niño",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/35706.png",
+        "equipoReal": "Málaga",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 30
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Villarreal",
+            "esLocal": true,
+            "dificultad": 32
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 39
+          }
+        ]
+      },
+      {
+        "nombre": "David Soria",
+        "posicion": "Portero",
+        "foto": "https://cdn.biwenger.com/i/p/11.png",
+        "equipoReal": "Getafe",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Deportivo",
+            "esLocal": true,
+            "dificultad": 64
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Betis",
+            "esLocal": false,
+            "dificultad": 63
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Málaga",
+            "esLocal": true,
+            "dificultad": 19
+          }
+        ]
+      },
+      {
+        "nombre": "Denis Suárez",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/1876.png",
+        "equipoReal": "Alavés",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Racing",
+            "esLocal": false,
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Valencia",
+            "esLocal": true,
+            "dificultad": 3
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Athletic",
+            "esLocal": false,
+            "dificultad": 41
+          }
+        ]
+      },
+      {
+        "nombre": "Gerard Moreno",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/1927.png",
+        "equipoReal": "Villarreal",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Betis",
+            "esLocal": true,
+            "dificultad": 59
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Málaga",
+            "esLocal": false,
+            "dificultad": 28
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Levante",
+            "esLocal": true,
+            "dificultad": 45
+          }
+        ]
+      },
+      {
+        "nombre": "Iñaki Williams",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/1995.png",
+        "equipoReal": "Athletic",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Elche",
+            "esLocal": true,
+            "dificultad": 15
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Levante",
+            "esLocal": false,
+            "dificultad": 56
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Alavés",
+            "esLocal": true,
+            "dificultad": 67
+          }
+        ]
+      },
+      {
+        "nombre": "De Galarreta",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/2055.png",
+        "equipoReal": "Athletic",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Elche",
+            "esLocal": true,
+            "dificultad": 15
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Levante",
+            "esLocal": false,
+            "dificultad": 56
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Alavés",
+            "esLocal": true,
+            "dificultad": 67
+          }
+        ]
+      },
+      {
+        "nombre": "Mandi",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/2480.png",
+        "equipoReal": "Levante",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Barcelona",
+            "esLocal": true,
+            "dificultad": 93
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Athletic",
+            "esLocal": true,
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Villarreal",
+            "esLocal": false,
+            "dificultad": 22
+          }
+        ]
+      },
+      {
+        "nombre": "Tenaglia",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/25384.png",
+        "equipoReal": "Alavés",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Racing",
+            "esLocal": false,
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Valencia",
+            "esLocal": true,
+            "dificultad": 3
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Athletic",
+            "esLocal": false,
+            "dificultad": 41
+          }
+        ]
+      },
+      {
+        "nombre": "Terrats",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/26092.png",
+        "equipoReal": "Getafe",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Deportivo",
+            "esLocal": true,
+            "dificultad": 64
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Betis",
+            "esLocal": false,
+            "dificultad": 63
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Málaga",
+            "esLocal": true,
+            "dificultad": 19
+          }
+        ]
+      },
+      {
+        "nombre": "Gerard Martín",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/34111.png",
+        "equipoReal": "Barcelona",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Levante",
+            "esLocal": false,
+            "dificultad": 47
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Racing",
+            "esLocal": true,
+            "dificultad": 23
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Sevilla",
+            "esLocal": false,
+            "dificultad": 49
+          }
+        ]
+      },
+      {
+        "nombre": "Amatucci",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/42425.png",
+        "equipoReal": "Deportivo",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 27
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Sevilla",
+            "esLocal": true,
+            "dificultad": 61
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Betis",
+            "esLocal": true,
+            "dificultad": 49
+          }
+        ]
+      }
+    ],
+    "Manchester Pity": [
+      {
+        "nombre": "Isco",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/1249.png",
+        "equipoReal": "Betis",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Villarreal",
+            "esLocal": false,
+            "dificultad": 19
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Getafe",
+            "esLocal": true,
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Deportivo",
+            "esLocal": false,
+            "dificultad": 57
+          }
+        ]
+      },
+      {
+        "nombre": "Camavinga",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/1733.png",
+        "equipoReal": "Real Madrid",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Rayo Vallecano",
+            "esLocal": true,
+            "dificultad": 25
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Elche",
+            "esLocal": false,
+            "dificultad": 10
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Atlético",
+            "esLocal": false,
+            "dificultad": 46
+          }
+        ]
+      },
+      {
+        "nombre": "Oblak",
+        "posicion": "Portero",
+        "foto": "https://cdn.biwenger.com/i/p/1897.png",
+        "equipoReal": "Atlético",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Real Sociedad",
+            "esLocal": false,
+            "dificultad": 44
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Osasuna",
+            "esLocal": true,
+            "dificultad": 44
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Real Madrid",
+            "esLocal": true,
+            "dificultad": 61
+          }
+        ]
+      },
+      {
+        "nombre": "Marcos Llorente",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/2600.png",
+        "equipoReal": "Atlético",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Real Sociedad",
+            "esLocal": false,
+            "dificultad": 44
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Osasuna",
+            "esLocal": true,
+            "dificultad": 44
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Real Madrid",
+            "esLocal": true,
+            "dificultad": 61
+          }
+        ]
+      },
+      {
+        "nombre": "Mariano",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/5697.png",
+        "equipoReal": "Alavés",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Racing",
+            "esLocal": false,
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Valencia",
+            "esLocal": true,
+            "dificultad": 3
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Athletic",
+            "esLocal": false,
+            "dificultad": 41
+          }
+        ]
+      },
+      {
+        "nombre": "Lunin",
+        "posicion": "Portero",
+        "foto": "https://cdn.biwenger.com/i/p/15289.png",
+        "equipoReal": "Real Madrid",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Rayo Vallecano",
+            "esLocal": true,
+            "dificultad": 25
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Elche",
+            "esLocal": false,
+            "dificultad": 10
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Atlético",
+            "esLocal": false,
+            "dificultad": 46
+          }
+        ]
+      },
+      {
+        "nombre": "Sancet",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/17057.png",
+        "equipoReal": "Athletic",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Elche",
+            "esLocal": true,
+            "dificultad": 15
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Levante",
+            "esLocal": false,
+            "dificultad": 56
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Alavés",
+            "esLocal": true,
+            "dificultad": 67
+          }
+        ]
+      },
+      {
+        "nombre": "Barja",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/18256.png",
+        "equipoReal": "Osasuna",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Espanyol",
+            "esLocal": true,
+            "dificultad": 37
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Atlético",
+            "esLocal": false,
+            "dificultad": 51
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Rayo Vallecano",
+            "esLocal": true,
+            "dificultad": 31
+          }
+        ]
+      },
+      {
+        "nombre": "Sergio Gómez",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/19299.png",
+        "equipoReal": "Real Sociedad",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Atlético",
+            "esLocal": true,
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Valencia",
+            "esLocal": false,
+            "dificultad": 8
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Deportivo",
+            "esLocal": true,
+            "dificultad": 61
+          }
+        ]
+      },
+      {
+        "nombre": "Manu Bueno",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/26299.png",
+        "equipoReal": "Sevilla",
+        "jornadas": [
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Deportivo",
+            "esLocal": false,
+            "dificultad": 55
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Barcelona",
+            "esLocal": true,
+            "dificultad": 89
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Levante",
+            "esLocal": false,
+            "dificultad": 52
+          }
+        ]
+      },
+      {
+        "nombre": "Raúl Moro",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/33697.png",
+        "equipoReal": "Osasuna",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Espanyol",
+            "esLocal": true,
+            "dificultad": 37
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Atlético",
+            "esLocal": false,
+            "dificultad": 51
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Rayo Vallecano",
+            "esLocal": true,
+            "dificultad": 31
+          }
+        ]
+      },
+      {
+        "nombre": "Koski",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/39924.png",
+        "equipoReal": "Alavés",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Racing",
+            "esLocal": false,
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Valencia",
+            "esLocal": true,
+            "dificultad": 3
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Athletic",
+            "esLocal": false,
+            "dificultad": 41
+          }
+        ]
+      },
+      {
+        "nombre": "Hjulmand",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/42444.png",
+        "equipoReal": "Atlético",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Real Sociedad",
+            "esLocal": false,
+            "dificultad": 44
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Osasuna",
+            "esLocal": true,
+            "dificultad": 44
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Real Madrid",
+            "esLocal": true,
+            "dificultad": 61
+          }
+        ]
+      }
+    ],
+    "CD Tiro Buchón": [
+      {
+        "nombre": "Jonny",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/1599.png",
+        "equipoReal": "Alavés",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Racing",
+            "esLocal": false,
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Valencia",
+            "esLocal": true,
+            "dificultad": 3
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Athletic",
+            "esLocal": false,
+            "dificultad": 41
+          }
+        ]
+      },
+      {
+        "nombre": "Firpo",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/12596.png",
+        "equipoReal": "Betis",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Villarreal",
+            "esLocal": false,
+            "dificultad": 19
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Getafe",
+            "esLocal": true,
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Deportivo",
+            "esLocal": false,
+            "dificultad": 57
+          }
+        ]
+      },
+      {
+        "nombre": "Iker Muñoz",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/18128.png",
+        "equipoReal": "Osasuna",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Espanyol",
+            "esLocal": true,
+            "dificultad": 37
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Atlético",
+            "esLocal": false,
+            "dificultad": 51
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Rayo Vallecano",
+            "esLocal": true,
+            "dificultad": 31
+          }
+        ]
+      },
+      {
+        "nombre": "Sergio Herrera",
+        "posicion": "Portero",
+        "foto": "https://cdn.biwenger.com/i/p/18251.png",
+        "equipoReal": "Osasuna",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Espanyol",
+            "esLocal": true,
+            "dificultad": 37
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Atlético",
+            "esLocal": false,
+            "dificultad": 51
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Rayo Vallecano",
+            "esLocal": true,
+            "dificultad": 31
+          }
+        ]
+      },
+      {
+        "nombre": "Ilaix Moriba",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/21084.png",
+        "equipoReal": "Celta",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Málaga",
+            "esLocal": true,
+            "dificultad": 21
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Racing",
+            "esLocal": true,
+            "dificultad": 38
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Elche",
+            "esLocal": false,
+            "dificultad": 19
+          }
+        ]
+      },
+      {
+        "nombre": "Aubameyang",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/25769.png",
+        "equipoReal": "Deportivo",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 27
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Sevilla",
+            "esLocal": true,
+            "dificultad": 61
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Betis",
+            "esLocal": true,
+            "dificultad": 49
+          }
+        ]
+      },
+      {
+        "nombre": "Jon Karrikaburu",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/27625.png",
+        "equipoReal": "",
+        "jornadas": []
+      },
+      {
+        "nombre": "Pape Gueye",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/30081.png",
+        "equipoReal": "Villarreal",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Betis",
+            "esLocal": true,
+            "dificultad": 59
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Málaga",
+            "esLocal": false,
+            "dificultad": 28
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Levante",
+            "esLocal": true,
+            "dificultad": 45
+          }
+        ]
+      },
+      {
+        "nombre": "Abde Rebbach",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/30510.png",
+        "equipoReal": "Alavés",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Racing",
+            "esLocal": false,
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Valencia",
+            "esLocal": true,
+            "dificultad": 3
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Athletic",
+            "esLocal": false,
+            "dificultad": 41
+          }
+        ]
+      },
+      {
+        "nombre": "Agoumé",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/32338.png",
+        "equipoReal": "Sevilla",
+        "jornadas": [
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Deportivo",
+            "esLocal": false,
+            "dificultad": 55
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Barcelona",
+            "esLocal": true,
+            "dificultad": 89
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Levante",
+            "esLocal": false,
+            "dificultad": 52
+          }
+        ]
+      },
+      {
+        "nombre": "Musso",
+        "posicion": "Portero",
+        "foto": "https://cdn.biwenger.com/i/p/34805.png",
+        "equipoReal": "Atlético",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Real Sociedad",
+            "esLocal": false,
+            "dificultad": 44
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Osasuna",
+            "esLocal": true,
+            "dificultad": 44
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Real Madrid",
+            "esLocal": true,
+            "dificultad": 61
+          }
+        ]
+      },
+      {
+        "nombre": "Cepeda",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/39874.png",
+        "equipoReal": "Elche",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Athletic",
+            "esLocal": false,
+            "dificultad": 58
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Real Madrid",
+            "esLocal": true,
+            "dificultad": 72
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Espanyol",
+            "esLocal": false,
+            "dificultad": 52
+          }
+        ]
+      },
+      {
+        "nombre": "Freeman",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/39901.png",
+        "equipoReal": "Villarreal",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Betis",
+            "esLocal": true,
+            "dificultad": 59
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Málaga",
+            "esLocal": false,
+            "dificultad": 28
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Levante",
+            "esLocal": true,
+            "dificultad": 45
+          }
+        ]
+      },
+      {
+        "nombre": "Hernando",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/41263.png",
+        "equipoReal": "Racing",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Alavés",
+            "esLocal": true,
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Barcelona",
+            "esLocal": false,
+            "dificultad": 91
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 24
+          }
+        ]
+      },
+      {
+        "nombre": "Murillo",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/41413.png",
+        "equipoReal": "Málaga",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 30
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Villarreal",
+            "esLocal": true,
+            "dificultad": 32
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 39
+          }
+        ]
+      },
+      {
+        "nombre": "Selu Diallo",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/41560.png",
+        "equipoReal": "Alavés",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Racing",
+            "esLocal": false,
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Valencia",
+            "esLocal": true,
+            "dificultad": 3
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Athletic",
+            "esLocal": false,
+            "dificultad": 41
+          }
+        ]
+      },
+      {
+        "nombre": "Bouare",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/43172.png",
+        "equipoReal": "Rayo Vallecano",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Real Madrid",
+            "esLocal": false,
+            "dificultad": 75
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Espanyol",
+            "esLocal": true,
+            "dificultad": 42
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Osasuna",
+            "esLocal": false,
+            "dificultad": 52
+          }
+        ]
+      }
+    ],
+    "Gorila FC": [
+      {
+        "nombre": "Koke",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/1083.png",
+        "equipoReal": "Atlético",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Real Sociedad",
+            "esLocal": false,
+            "dificultad": 44
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Osasuna",
+            "esLocal": true,
+            "dificultad": 44
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Real Madrid",
+            "esLocal": true,
+            "dificultad": 61
+          }
+        ]
+      },
+      {
+        "nombre": "De la Fuente",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/37739.png",
+        "equipoReal": "Levante",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Barcelona",
+            "esLocal": true,
+            "dificultad": 93
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Athletic",
+            "esLocal": true,
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Villarreal",
+            "esLocal": false,
+            "dificultad": 22
+          }
+        ]
+      },
+      {
+        "nombre": "Marc Roca",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/5807.png",
+        "equipoReal": "Betis",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Villarreal",
+            "esLocal": false,
+            "dificultad": 19
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Getafe",
+            "esLocal": true,
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Deportivo",
+            "esLocal": false,
+            "dificultad": 57
+          }
+        ]
+      },
+      {
+        "nombre": "Sivera",
+        "posicion": "Portero",
+        "foto": "https://cdn.biwenger.com/i/p/9887.png",
+        "equipoReal": "Alavés",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Racing",
+            "esLocal": false,
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Valencia",
+            "esLocal": true,
+            "dificultad": 3
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Athletic",
+            "esLocal": false,
+            "dificultad": 41
+          }
+        ]
+      },
+      {
+        "nombre": "Catena",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/17731.png",
+        "equipoReal": "Osasuna",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Espanyol",
+            "esLocal": true,
+            "dificultad": 37
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Atlético",
+            "esLocal": false,
+            "dificultad": 51
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Rayo Vallecano",
+            "esLocal": true,
+            "dificultad": 31
+          }
+        ]
+      },
+      {
+        "nombre": "Baena",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/19547.png",
+        "equipoReal": "Atlético",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Real Sociedad",
+            "esLocal": false,
+            "dificultad": 44
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Osasuna",
+            "esLocal": true,
+            "dificultad": 44
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Real Madrid",
+            "esLocal": true,
+            "dificultad": 61
+          }
+        ]
+      },
+      {
+        "nombre": "Jofre Carreras",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/25392.png",
+        "equipoReal": "Espanyol",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Osasuna",
+            "esLocal": false,
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Rayo Vallecano",
+            "esLocal": false,
+            "dificultad": 36
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Elche",
+            "esLocal": true,
+            "dificultad": 16
+          }
+        ]
+      },
+      {
+        "nombre": "Pablo Durán",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/29185.png",
+        "equipoReal": "Celta",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Málaga",
+            "esLocal": true,
+            "dificultad": 21
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Racing",
+            "esLocal": true,
+            "dificultad": 38
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Elche",
+            "esLocal": false,
+            "dificultad": 19
+          }
+        ]
+      },
+      {
+        "nombre": "Letacek",
+        "posicion": "Portero",
+        "foto": "https://cdn.biwenger.com/i/p/34149.png",
+        "equipoReal": "Getafe",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Deportivo",
+            "esLocal": true,
+            "dificultad": 64
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Betis",
+            "esLocal": false,
+            "dificultad": 63
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Málaga",
+            "esLocal": true,
+            "dificultad": 19
+          }
+        ]
+      },
+      {
+        "nombre": "Valentín Gómez",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/38318.png",
+        "equipoReal": "Betis",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Villarreal",
+            "esLocal": false,
+            "dificultad": 19
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Getafe",
+            "esLocal": true,
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Deportivo",
+            "esLocal": false,
+            "dificultad": 57
+          }
+        ]
+      },
+      {
+        "nombre": "Nsongo",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/40911.png",
+        "equipoReal": "Deportivo",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 27
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Sevilla",
+            "esLocal": true,
+            "dificultad": 61
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Betis",
+            "esLocal": true,
+            "dificultad": 49
+          }
+        ]
+      },
+      {
+        "nombre": "Arana",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/41262.png",
+        "equipoReal": "Racing",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Alavés",
+            "esLocal": true,
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Barcelona",
+            "esLocal": false,
+            "dificultad": 91
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 24
+          }
+        ]
+      },
+      {
+        "nombre": "Facundo González",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/41275.png",
+        "equipoReal": "Racing",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Alavés",
+            "esLocal": true,
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Barcelona",
+            "esLocal": false,
+            "dificultad": 91
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 24
+          }
+        ]
+      },
+      {
+        "nombre": "Larrubia",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/41412.png",
+        "equipoReal": "Málaga",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 30
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Villarreal",
+            "esLocal": true,
+            "dificultad": 32
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 39
+          }
+        ]
+      }
+    ],
+    "Madriguana FC": [
+      {
+        "nombre": "Almeida",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/27929.png",
+        "equipoReal": "Racing",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Alavés",
+            "esLocal": true,
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Barcelona",
+            "esLocal": false,
+            "dificultad": 91
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 24
+          }
+        ]
+      },
+      {
+        "nombre": "Jutglà",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/3159.png",
+        "equipoReal": "Celta",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Málaga",
+            "esLocal": true,
+            "dificultad": 21
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Racing",
+            "esLocal": true,
+            "dificultad": 38
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Elche",
+            "esLocal": false,
+            "dificultad": 19
+          }
+        ]
+      },
+      {
+        "nombre": "Dmitrovic",
+        "posicion": "Portero",
+        "foto": "https://cdn.biwenger.com/i/p/9090.png",
+        "equipoReal": "Espanyol",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Osasuna",
+            "esLocal": false,
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Rayo Vallecano",
+            "esLocal": false,
+            "dificultad": 36
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Elche",
+            "esLocal": true,
+            "dificultad": 16
+          }
+        ]
+      },
+      {
+        "nombre": "Cucho",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/10276.png",
+        "equipoReal": "Betis",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Villarreal",
+            "esLocal": false,
+            "dificultad": 19
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Getafe",
+            "esLocal": true,
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Deportivo",
+            "esLocal": false,
+            "dificultad": 57
+          }
+        ]
+      },
+      {
+        "nombre": "Diego Conde",
+        "posicion": "Portero",
+        "foto": "https://cdn.biwenger.com/i/p/12087.png",
+        "equipoReal": "Betis",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Villarreal",
+            "esLocal": false,
+            "dificultad": 19
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Getafe",
+            "esLocal": true,
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Deportivo",
+            "esLocal": false,
+            "dificultad": 57
+          }
+        ]
+      },
+      {
+        "nombre": "Pedrosa",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/16889.png",
+        "equipoReal": "Rayo Vallecano",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Real Madrid",
+            "esLocal": false,
+            "dificultad": 75
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Espanyol",
+            "esLocal": true,
+            "dificultad": 42
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Osasuna",
+            "esLocal": false,
+            "dificultad": 52
+          }
+        ]
+      },
+      {
+        "nombre": "Víctor García",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/17121.png",
+        "equipoReal": "Levante",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Barcelona",
+            "esLocal": true,
+            "dificultad": 93
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Athletic",
+            "esLocal": true,
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Villarreal",
+            "esLocal": false,
+            "dificultad": 22
+          }
+        ]
+      },
+      {
+        "nombre": "Yangel Herrera",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/17344.png",
+        "equipoReal": "Real Sociedad",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Atlético",
+            "esLocal": true,
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Valencia",
+            "esLocal": false,
+            "dificultad": 8
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Deportivo",
+            "esLocal": true,
+            "dificultad": 61
+          }
+        ]
+      },
+      {
+        "nombre": "Ratiu",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/26276.png",
+        "equipoReal": "Rayo Vallecano",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Real Madrid",
+            "esLocal": false,
+            "dificultad": 75
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Espanyol",
+            "esLocal": true,
+            "dificultad": 42
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Osasuna",
+            "esLocal": false,
+            "dificultad": 52
+          }
+        ]
+      },
+      {
+        "nombre": "Fran Pérez",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/27995.png",
+        "equipoReal": "Rayo Vallecano",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Real Madrid",
+            "esLocal": false,
+            "dificultad": 75
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Espanyol",
+            "esLocal": true,
+            "dificultad": 42
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Osasuna",
+            "esLocal": false,
+            "dificultad": 52
+          }
+        ]
+      },
+      {
+        "nombre": "Sannadi",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/33938.png",
+        "equipoReal": "Athletic",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Elche",
+            "esLocal": true,
+            "dificultad": 15
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Levante",
+            "esLocal": false,
+            "dificultad": 56
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Alavés",
+            "esLocal": true,
+            "dificultad": 67
+          }
+        ]
+      },
+      {
+        "nombre": "Pablo García",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/35763.png",
+        "equipoReal": "Racing",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Alavés",
+            "esLocal": true,
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Barcelona",
+            "esLocal": false,
+            "dificultad": 91
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 24
+          }
+        ]
+      },
+      {
+        "nombre": "Dolan",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/38308.png",
+        "equipoReal": "Espanyol",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Osasuna",
+            "esLocal": false,
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Rayo Vallecano",
+            "esLocal": false,
+            "dificultad": 36
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Elche",
+            "esLocal": true,
+            "dificultad": 16
+          }
+        ]
+      },
+      {
+        "nombre": "Satriano",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/39792.png",
+        "equipoReal": "Getafe",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Deportivo",
+            "esLocal": true,
+            "dificultad": 64
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Betis",
+            "esLocal": false,
+            "dificultad": 63
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Málaga",
+            "esLocal": true,
+            "dificultad": 19
+          }
+        ]
+      },
+      {
+        "nombre": "Puga",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/41416.png",
+        "equipoReal": "Málaga",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 30
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Villarreal",
+            "esLocal": true,
+            "dificultad": 32
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 39
+          }
+        ]
+      }
+    ],
+    "Cañoneros CF": [
+      {
+        "nombre": "Mbappé",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/19577.png",
+        "equipoReal": "Real Madrid",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Rayo Vallecano",
+            "esLocal": true,
+            "dificultad": 25
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Elche",
+            "esLocal": false,
+            "dificultad": 10
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Atlético",
+            "esLocal": false,
+            "dificultad": 46
+          }
+        ]
+      },
+      {
+        "nombre": "Moncayola",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/8747.png",
+        "equipoReal": "Osasuna",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Espanyol",
+            "esLocal": true,
+            "dificultad": 37
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Atlético",
+            "esLocal": false,
+            "dificultad": 51
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Rayo Vallecano",
+            "esLocal": true,
+            "dificultad": 31
+          }
+        ]
+      },
+      {
+        "nombre": "Natan",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/19614.png",
+        "equipoReal": "Betis",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Villarreal",
+            "esLocal": false,
+            "dificultad": 19
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Getafe",
+            "esLocal": true,
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Deportivo",
+            "esLocal": false,
+            "dificultad": 57
+          }
+        ]
+      },
+      {
+        "nombre": "Olasagasti",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/29661.png",
+        "equipoReal": "Levante",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Barcelona",
+            "esLocal": true,
+            "dificultad": 93
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Athletic",
+            "esLocal": true,
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Villarreal",
+            "esLocal": false,
+            "dificultad": 22
+          }
+        ]
+      },
+      {
+        "nombre": "Dotor",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/31167.png",
+        "equipoReal": "Málaga",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 30
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Villarreal",
+            "esLocal": true,
+            "dificultad": 32
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 39
+          }
+        ]
+      },
+      {
+        "nombre": "Radu",
+        "posicion": "Portero",
+        "foto": "https://cdn.biwenger.com/i/p/37600.png",
+        "equipoReal": "Celta",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Málaga",
+            "esLocal": true,
+            "dificultad": 21
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Racing",
+            "esLocal": true,
+            "dificultad": 38
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Elche",
+            "esLocal": false,
+            "dificultad": 19
+          }
+        ]
+      },
+      {
+        "nombre": "Redondo",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/38422.png",
+        "equipoReal": "Elche",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Athletic",
+            "esLocal": false,
+            "dificultad": 58
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Real Madrid",
+            "esLocal": true,
+            "dificultad": 72
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Espanyol",
+            "esLocal": false,
+            "dificultad": 52
+          }
+        ]
+      },
+      {
+        "nombre": "Boselli",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/39801.png",
+        "equipoReal": "Getafe",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Deportivo",
+            "esLocal": true,
+            "dificultad": 64
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Betis",
+            "esLocal": false,
+            "dificultad": 63
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Málaga",
+            "esLocal": true,
+            "dificultad": 19
+          }
+        ]
+      },
+      {
+        "nombre": "Villares",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/41076.png",
+        "equipoReal": "Deportivo",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 27
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Sevilla",
+            "esLocal": true,
+            "dificultad": 61
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Betis",
+            "esLocal": true,
+            "dificultad": 49
+          }
+        ]
+      },
+      {
+        "nombre": "Rafa Rodríguez",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/41092.png",
+        "equipoReal": "Málaga",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 30
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Villarreal",
+            "esLocal": true,
+            "dificultad": 32
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 39
+          }
+        ]
+      },
+      {
+        "nombre": "Dani Lorenzo",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/41418.png",
+        "equipoReal": "Málaga",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 30
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Villarreal",
+            "esLocal": true,
+            "dificultad": 32
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 39
+          }
+        ]
+      },
+      {
+        "nombre": "Recio",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/41419.png",
+        "equipoReal": "Málaga",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 30
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Villarreal",
+            "esLocal": true,
+            "dificultad": 32
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 39
+          }
+        ]
+      }
+    ],
     "LXUNITED": [
       {
         "nombre": "Álvaro García",
@@ -2601,19 +5087,19 @@
         "equipoReal": "Rayo Vallecano",
         "jornadas": [
           {
-            "jornada": "Jornada 5",
+            "jornada": "Round 5",
             "rival": "Real Madrid",
             "esLocal": false,
             "dificultad": 75
           },
           {
-            "jornada": "Jornada 6 (aplazada)",
+            "jornada": "Round 6 (postponed)",
             "rival": "Espanyol",
             "esLocal": true,
             "dificultad": 42
           },
           {
-            "jornada": "Jornada 7",
+            "jornada": "Round 7",
             "rival": "Osasuna",
             "esLocal": false,
             "dificultad": 52
@@ -2621,25 +5107,84 @@
         ]
       },
       {
-        "nombre": "Iturbe",
-        "posicion": "Portero",
-        "foto": "https://cdn.biwenger.com/i/p/37526.png",
+        "nombre": "Miguel Román",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/3259.png",
+        "equipoReal": "Celta",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Málaga",
+            "esLocal": true,
+            "dificultad": 21
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Racing",
+            "esLocal": true,
+            "dificultad": 38
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Elche",
+            "esLocal": false,
+            "dificultad": 19
+          }
+        ]
+      },
+      {
+        "nombre": "Ximo Navarro",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/9065.png",
+        "equipoReal": "Deportivo",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 27
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Sevilla",
+            "esLocal": true,
+            "dificultad": 61
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Betis",
+            "esLocal": true,
+            "dificultad": 49
+          }
+        ]
+      },
+      {
+        "nombre": "Rafa Núñez",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/25688.png",
+        "equipoReal": "",
+        "jornadas": []
+      },
+      {
+        "nombre": "Barzic",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/27575.png",
         "equipoReal": "Elche",
         "jornadas": [
           {
-            "jornada": "Jornada 5",
+            "jornada": "Round 5",
             "rival": "Athletic",
             "esLocal": false,
             "dificultad": 58
           },
           {
-            "jornada": "Jornada 6 (aplazada)",
+            "jornada": "Round 6 (postponed)",
             "rival": "Real Madrid",
             "esLocal": true,
             "dificultad": 72
           },
           {
-            "jornada": "Jornada 7",
+            "jornada": "Round 7",
             "rival": "Espanyol",
             "esLocal": false,
             "dificultad": 52
@@ -2653,19 +5198,19 @@
         "equipoReal": "Real Madrid",
         "jornadas": [
           {
-            "jornada": "Jornada 5",
+            "jornada": "Round 5",
             "rival": "Rayo Vallecano",
             "esLocal": true,
             "dificultad": 25
           },
           {
-            "jornada": "Jornada 6 (aplazada)",
+            "jornada": "Round 6 (postponed)",
             "rival": "Elche",
             "esLocal": false,
             "dificultad": 10
           },
           {
-            "jornada": "Jornada 7",
+            "jornada": "Round 7",
             "rival": "Atlético",
             "esLocal": false,
             "dificultad": 46
@@ -2673,27 +5218,79 @@
         ]
       },
       {
-        "nombre": "Miguel Román",
-        "posicion": "Centrocampista",
-        "foto": "https://cdn.biwenger.com/i/p/3259.png",
+        "nombre": "Iturbe",
+        "posicion": "Portero",
+        "foto": "https://cdn.biwenger.com/i/p/37526.png",
+        "equipoReal": "Elche",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Athletic",
+            "esLocal": false,
+            "dificultad": 58
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Real Madrid",
+            "esLocal": true,
+            "dificultad": 72
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Espanyol",
+            "esLocal": false,
+            "dificultad": 52
+          }
+        ]
+      },
+      {
+        "nombre": "Álvaro Núñez",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/37719.png",
         "equipoReal": "Celta",
         "jornadas": [
           {
-            "jornada": "Jornada 5",
+            "jornada": "Round 5",
             "rival": "Málaga",
             "esLocal": true,
             "dificultad": 21
           },
           {
-            "jornada": "Jornada 7",
+            "jornada": "Round 7",
             "rival": "Racing",
             "esLocal": true,
             "dificultad": 38
           },
           {
-            "jornada": "Jornada 8",
+            "jornada": "Round 8",
             "rival": "Elche",
             "esLocal": false,
+            "dificultad": 19
+          }
+        ]
+      },
+      {
+        "nombre": "Davinchi",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/38095.png",
+        "equipoReal": "Getafe",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Deportivo",
+            "esLocal": true,
+            "dificultad": 64
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Betis",
+            "esLocal": false,
+            "dificultad": 63
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Málaga",
+            "esLocal": true,
             "dificultad": 19
           }
         ]
@@ -2705,22 +5302,1611 @@
         "equipoReal": "Athletic",
         "jornadas": [
           {
-            "jornada": "Jornada 5",
+            "jornada": "Round 5",
             "rival": "Elche",
             "esLocal": true,
             "dificultad": 15
           },
           {
-            "jornada": "Jornada 6 (aplazada)",
+            "jornada": "Round 6 (postponed)",
             "rival": "Levante",
             "esLocal": false,
             "dificultad": 56
           },
           {
-            "jornada": "Jornada 7",
+            "jornada": "Round 7",
             "rival": "Alavés",
             "esLocal": true,
             "dificultad": 67
+          }
+        ]
+      },
+      {
+        "nombre": "Alfonso Herrero",
+        "posicion": "Portero",
+        "foto": "https://cdn.biwenger.com/i/p/41101.png",
+        "equipoReal": "Málaga",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 30
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Villarreal",
+            "esLocal": true,
+            "dificultad": 32
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 39
+          }
+        ]
+      },
+      {
+        "nombre": "Gordon",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/41200.png",
+        "equipoReal": "Barcelona",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Levante",
+            "esLocal": false,
+            "dificultad": 47
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Racing",
+            "esLocal": true,
+            "dificultad": 23
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Sevilla",
+            "esLocal": false,
+            "dificultad": 49
+          }
+        ]
+      },
+      {
+        "nombre": "Maguette Gueye",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/41267.png",
+        "equipoReal": "Racing",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Alavés",
+            "esLocal": true,
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Barcelona",
+            "esLocal": false,
+            "dificultad": 91
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 24
+          }
+        ]
+      }
+    ],
+    "Urdinho Pernambucano": [
+      {
+        "nombre": "Mario Martín",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/2368.png",
+        "equipoReal": "Getafe",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Deportivo",
+            "esLocal": true,
+            "dificultad": 64
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Betis",
+            "esLocal": false,
+            "dificultad": 63
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Málaga",
+            "esLocal": true,
+            "dificultad": 19
+          }
+        ]
+      },
+      {
+        "nombre": "Dimitrievski",
+        "posicion": "Portero",
+        "foto": "https://cdn.biwenger.com/i/p/11677.png",
+        "equipoReal": "Valencia",
+        "jornadas": [
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Alavés",
+            "esLocal": false,
+            "dificultad": 82
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Real Sociedad",
+            "esLocal": true,
+            "dificultad": 52
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Racing",
+            "esLocal": false,
+            "dificultad": 55
+          }
+        ]
+      },
+      {
+        "nombre": "Vinícius Jr",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/15568.png",
+        "equipoReal": "Real Madrid",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Rayo Vallecano",
+            "esLocal": true,
+            "dificultad": 25
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Elche",
+            "esLocal": false,
+            "dificultad": 10
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Atlético",
+            "esLocal": false,
+            "dificultad": 46
+          }
+        ]
+      },
+      {
+        "nombre": "Iñigo Vicente",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/18564.png",
+        "equipoReal": "Racing",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Alavés",
+            "esLocal": true,
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Barcelona",
+            "esLocal": false,
+            "dificultad": 91
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 24
+          }
+        ]
+      },
+      {
+        "nombre": "Ez Abde",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/25127.png",
+        "equipoReal": "Betis",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Villarreal",
+            "esLocal": false,
+            "dificultad": 19
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Getafe",
+            "esLocal": true,
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Deportivo",
+            "esLocal": false,
+            "dificultad": 57
+          }
+        ]
+      },
+      {
+        "nombre": "Gonzalo Villar",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/25403.png",
+        "equipoReal": "Elche",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Athletic",
+            "esLocal": false,
+            "dificultad": 58
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Real Madrid",
+            "esLocal": true,
+            "dificultad": 72
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Espanyol",
+            "esLocal": false,
+            "dificultad": 52
+          }
+        ]
+      },
+      {
+        "nombre": "Lago",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/33474.png",
+        "equipoReal": "Celta",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Málaga",
+            "esLocal": true,
+            "dificultad": 21
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Racing",
+            "esLocal": true,
+            "dificultad": 38
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Elche",
+            "esLocal": false,
+            "dificultad": 19
+          }
+        ]
+      },
+      {
+        "nombre": "Sierra",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/39350.png",
+        "equipoReal": "Sevilla",
+        "jornadas": [
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Deportivo",
+            "esLocal": false,
+            "dificultad": 55
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Barcelona",
+            "esLocal": true,
+            "dificultad": 89
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Levante",
+            "esLocal": false,
+            "dificultad": 52
+          }
+        ]
+      },
+      {
+        "nombre": "Quagliata",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/40952.png",
+        "equipoReal": "Deportivo",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 27
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Sevilla",
+            "esLocal": true,
+            "dificultad": 61
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Betis",
+            "esLocal": true,
+            "dificultad": 49
+          }
+        ]
+      },
+      {
+        "nombre": "Rafita",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/41093.png",
+        "equipoReal": "Málaga",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 30
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Villarreal",
+            "esLocal": true,
+            "dificultad": 32
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 39
+          }
+        ]
+      },
+      {
+        "nombre": "Calatrava",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/42327.png",
+        "equipoReal": "Espanyol",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Osasuna",
+            "esLocal": false,
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Rayo Vallecano",
+            "esLocal": false,
+            "dificultad": 36
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Elche",
+            "esLocal": true,
+            "dificultad": 16
+          }
+        ]
+      }
+    ],
+    "FC FORUSIA": [
+      {
+        "nombre": "Logan Costa",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/34717.png",
+        "equipoReal": "Villarreal",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Betis",
+            "esLocal": true,
+            "dificultad": 59
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Málaga",
+            "esLocal": false,
+            "dificultad": 28
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Levante",
+            "esLocal": true,
+            "dificultad": 45
+          }
+        ]
+      },
+      {
+        "nombre": "Pablo Ibáñez",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/14800.png",
+        "equipoReal": "Alavés",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Racing",
+            "esLocal": false,
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Valencia",
+            "esLocal": true,
+            "dificultad": 3
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Athletic",
+            "esLocal": false,
+            "dificultad": 41
+          }
+        ]
+      },
+      {
+        "nombre": "Christensen",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/26678.png",
+        "equipoReal": "Barcelona",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Levante",
+            "esLocal": false,
+            "dificultad": 47
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Racing",
+            "esLocal": true,
+            "dificultad": 23
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Sevilla",
+            "esLocal": false,
+            "dificultad": 49
+          }
+        ]
+      },
+      {
+        "nombre": "Pedri",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/19441.png",
+        "equipoReal": "Barcelona",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Levante",
+            "esLocal": false,
+            "dificultad": 47
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Racing",
+            "esLocal": true,
+            "dificultad": 23
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Sevilla",
+            "esLocal": false,
+            "dificultad": 49
+          }
+        ]
+      },
+      {
+        "nombre": "Germán Parreño",
+        "posicion": "Portero",
+        "foto": "https://cdn.biwenger.com/i/p/2086.png",
+        "equipoReal": "Deportivo",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 27
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Sevilla",
+            "esLocal": true,
+            "dificultad": 61
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Betis",
+            "esLocal": true,
+            "dificultad": 49
+          }
+        ]
+      },
+      {
+        "nombre": "Pacheco",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/12424.png",
+        "equipoReal": "Real Sociedad",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Atlético",
+            "esLocal": true,
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Valencia",
+            "esLocal": false,
+            "dificultad": 8
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Deportivo",
+            "esLocal": true,
+            "dificultad": 61
+          }
+        ]
+      },
+      {
+        "nombre": "Kang-in Lee",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/17687.png",
+        "equipoReal": "Atlético",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Real Sociedad",
+            "esLocal": false,
+            "dificultad": 44
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Osasuna",
+            "esLocal": true,
+            "dificultad": 44
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Real Madrid",
+            "esLocal": true,
+            "dificultad": 61
+          }
+        ]
+      },
+      {
+        "nombre": "Osambela",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/19693.png",
+        "equipoReal": "Osasuna",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Espanyol",
+            "esLocal": true,
+            "dificultad": 37
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Atlético",
+            "esLocal": false,
+            "dificultad": 51
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Rayo Vallecano",
+            "esLocal": true,
+            "dificultad": 31
+          }
+        ]
+      },
+      {
+        "nombre": "Javi Hernández",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/25322.png",
+        "equipoReal": "Espanyol",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Osasuna",
+            "esLocal": false,
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Rayo Vallecano",
+            "esLocal": false,
+            "dificultad": 36
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Elche",
+            "esLocal": true,
+            "dificultad": 16
+          }
+        ]
+      },
+      {
+        "nombre": "Kike Salas",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/28115.png",
+        "equipoReal": "Sevilla",
+        "jornadas": [
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Deportivo",
+            "esLocal": false,
+            "dificultad": 55
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Barcelona",
+            "esLocal": true,
+            "dificultad": 89
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Levante",
+            "esLocal": false,
+            "dificultad": 52
+          }
+        ]
+      },
+      {
+        "nombre": "Barrios",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/29184.png",
+        "equipoReal": "Atlético",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Real Sociedad",
+            "esLocal": false,
+            "dificultad": 44
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Osasuna",
+            "esLocal": true,
+            "dificultad": 44
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Real Madrid",
+            "esLocal": true,
+            "dificultad": 61
+          }
+        ]
+      },
+      {
+        "nombre": "Castrín",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/38072.png",
+        "equipoReal": "Sevilla",
+        "jornadas": [
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Deportivo",
+            "esLocal": false,
+            "dificultad": 55
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Barcelona",
+            "esLocal": true,
+            "dificultad": 89
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Levante",
+            "esLocal": false,
+            "dificultad": 52
+          }
+        ]
+      },
+      {
+        "nombre": "Odysseas",
+        "posicion": "Portero",
+        "foto": "https://cdn.biwenger.com/i/p/38405.png",
+        "equipoReal": "Sevilla",
+        "jornadas": [
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Deportivo",
+            "esLocal": false,
+            "dificultad": 55
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Barcelona",
+            "esLocal": true,
+            "dificultad": 89
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Levante",
+            "esLocal": false,
+            "dificultad": 52
+          }
+        ]
+      },
+      {
+        "nombre": "Lookman",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/39941.png",
+        "equipoReal": "Atlético",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Real Sociedad",
+            "esLocal": false,
+            "dificultad": 44
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Osasuna",
+            "esLocal": true,
+            "dificultad": 44
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Real Madrid",
+            "esLocal": true,
+            "dificultad": 61
+          }
+        ]
+      },
+      {
+        "nombre": "Jorge Domínguez",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/42261.png",
+        "equipoReal": "Atlético",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Real Sociedad",
+            "esLocal": false,
+            "dificultad": 44
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Osasuna",
+            "esLocal": true,
+            "dificultad": 44
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Real Madrid",
+            "esLocal": true,
+            "dificultad": 61
+          }
+        ]
+      },
+      {
+        "nombre": "Marchal",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/42627.png",
+        "equipoReal": "Real Sociedad",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Atlético",
+            "esLocal": true,
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Valencia",
+            "esLocal": false,
+            "dificultad": 8
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Deportivo",
+            "esLocal": true,
+            "dificultad": 61
+          }
+        ]
+      }
+    ],
+    "Las Víboras FC": [
+      {
+        "nombre": "Adrián Niño",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/35706.png",
+        "equipoReal": "Málaga",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 30
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Villarreal",
+            "esLocal": true,
+            "dificultad": 32
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 39
+          }
+        ]
+      },
+      {
+        "nombre": "Tomás Mendes",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/3310.png",
+        "equipoReal": "",
+        "jornadas": []
+      },
+      {
+        "nombre": "Camello",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/17756.png",
+        "equipoReal": "Rayo Vallecano",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Real Madrid",
+            "esLocal": false,
+            "dificultad": 75
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Espanyol",
+            "esLocal": true,
+            "dificultad": 42
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Osasuna",
+            "esLocal": false,
+            "dificultad": 52
+          }
+        ]
+      },
+      {
+        "nombre": "Boyé",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/12494.png",
+        "equipoReal": "Alavés",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Racing",
+            "esLocal": false,
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Valencia",
+            "esLocal": true,
+            "dificultad": 3
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Athletic",
+            "esLocal": false,
+            "dificultad": 41
+          }
+        ]
+      },
+      {
+        "nombre": "Iago Aspas",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/1523.png",
+        "equipoReal": "Celta",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Málaga",
+            "esLocal": true,
+            "dificultad": 21
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Racing",
+            "esLocal": true,
+            "dificultad": 38
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Elche",
+            "esLocal": false,
+            "dificultad": 19
+          }
+        ]
+      },
+      {
+        "nombre": "Giménez",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/1676.png",
+        "equipoReal": "Deportivo",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 27
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Sevilla",
+            "esLocal": true,
+            "dificultad": 61
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Betis",
+            "esLocal": true,
+            "dificultad": 49
+          }
+        ]
+      },
+      {
+        "nombre": "Borja Iglesias",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/2009.png",
+        "equipoReal": "Celta",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Málaga",
+            "esLocal": true,
+            "dificultad": 21
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Racing",
+            "esLocal": true,
+            "dificultad": 38
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Elche",
+            "esLocal": false,
+            "dificultad": 19
+          }
+        ]
+      },
+      {
+        "nombre": "Arguibide",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/10292.png",
+        "equipoReal": "Osasuna",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Espanyol",
+            "esLocal": true,
+            "dificultad": 37
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Atlético",
+            "esLocal": false,
+            "dificultad": 51
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Rayo Vallecano",
+            "esLocal": true,
+            "dificultad": 31
+          }
+        ]
+      },
+      {
+        "nombre": "Leo Román",
+        "posicion": "Portero",
+        "foto": "https://cdn.biwenger.com/i/p/14630.png",
+        "equipoReal": "Deportivo",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 27
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Sevilla",
+            "esLocal": true,
+            "dificultad": 61
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Betis",
+            "esLocal": true,
+            "dificultad": 49
+          }
+        ]
+      },
+      {
+        "nombre": "Brugué",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/15396.png",
+        "equipoReal": "Levante",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Barcelona",
+            "esLocal": true,
+            "dificultad": 93
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Athletic",
+            "esLocal": true,
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Villarreal",
+            "esLocal": false,
+            "dificultad": 22
+          }
+        ]
+      },
+      {
+        "nombre": "Koundé",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/18945.png",
+        "equipoReal": "Barcelona",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Levante",
+            "esLocal": false,
+            "dificultad": 47
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Racing",
+            "esLocal": true,
+            "dificultad": 23
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Sevilla",
+            "esLocal": false,
+            "dificultad": 49
+          }
+        ]
+      },
+      {
+        "nombre": "Expósito",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/19862.png",
+        "equipoReal": "Espanyol",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Osasuna",
+            "esLocal": false,
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Rayo Vallecano",
+            "esLocal": false,
+            "dificultad": 36
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Elche",
+            "esLocal": true,
+            "dificultad": 16
+          }
+        ]
+      },
+      {
+        "nombre": "Luiz Felipe",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/26676.png",
+        "equipoReal": "Rayo Vallecano",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Real Madrid",
+            "esLocal": false,
+            "dificultad": 75
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Espanyol",
+            "esLocal": true,
+            "dificultad": 42
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Osasuna",
+            "esLocal": false,
+            "dificultad": 52
+          }
+        ]
+      },
+      {
+        "nombre": "Fortuño",
+        "posicion": "Portero",
+        "foto": "https://cdn.biwenger.com/i/p/30334.png",
+        "equipoReal": "Espanyol",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Osasuna",
+            "esLocal": false,
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Rayo Vallecano",
+            "esLocal": false,
+            "dificultad": 36
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Elche",
+            "esLocal": true,
+            "dificultad": 16
+          }
+        ]
+      },
+      {
+        "nombre": "Cubarsí",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/32440.png",
+        "equipoReal": "Barcelona",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Levante",
+            "esLocal": false,
+            "dificultad": 47
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Racing",
+            "esLocal": true,
+            "dificultad": 23
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Sevilla",
+            "esLocal": false,
+            "dificultad": 49
+          }
+        ]
+      },
+      {
+        "nombre": "Pablo Ramón",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/35408.png",
+        "equipoReal": "Racing",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Alavés",
+            "esLocal": true,
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Barcelona",
+            "esLocal": false,
+            "dificultad": 91
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 24
+          }
+        ]
+      },
+      {
+        "nombre": "El-Abdellaoui",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/35606.png",
+        "equipoReal": "Celta",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Málaga",
+            "esLocal": true,
+            "dificultad": 21
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Racing",
+            "esLocal": true,
+            "dificultad": 38
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Elche",
+            "esLocal": false,
+            "dificultad": 19
+          }
+        ]
+      },
+      {
+        "nombre": "Xavi Grande",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/37735.png",
+        "equipoReal": "",
+        "jornadas": []
+      },
+      {
+        "nombre": "Paco Cortés",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/39736.png",
+        "equipoReal": "Levante",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Barcelona",
+            "esLocal": true,
+            "dificultad": 93
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Athletic",
+            "esLocal": true,
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Villarreal",
+            "esLocal": false,
+            "dificultad": 22
+          }
+        ]
+      },
+      {
+        "nombre": "Espart",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/40075.png",
+        "equipoReal": "Barcelona",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Levante",
+            "esLocal": false,
+            "dificultad": 47
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Racing",
+            "esLocal": true,
+            "dificultad": 23
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Sevilla",
+            "esLocal": false,
+            "dificultad": 49
+          }
+        ]
+      },
+      {
+        "nombre": "Riki Rodríguez",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/41081.png",
+        "equipoReal": "Deportivo",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 27
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Sevilla",
+            "esLocal": true,
+            "dificultad": 61
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Betis",
+            "esLocal": true,
+            "dificultad": 49
+          }
+        ]
+      }
+    ],
+    "Seif fc": [
+      {
+        "nombre": "Tomás Mendes",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/3310.png",
+        "equipoReal": "",
+        "jornadas": []
+      },
+      {
+        "nombre": "Oriol Rey",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/37726.png",
+        "equipoReal": "Levante",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Barcelona",
+            "esLocal": true,
+            "dificultad": 93
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Athletic",
+            "esLocal": true,
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Villarreal",
+            "esLocal": false,
+            "dificultad": 22
+          }
+        ]
+      },
+      {
+        "nombre": "Yuri",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/1074.png",
+        "equipoReal": "Athletic",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Elche",
+            "esLocal": true,
+            "dificultad": 15
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Levante",
+            "esLocal": false,
+            "dificultad": 56
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Alavés",
+            "esLocal": true,
+            "dificultad": 67
+          }
+        ]
+      },
+      {
+        "nombre": "Bellerín",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/2247.png",
+        "equipoReal": "Betis",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Villarreal",
+            "esLocal": false,
+            "dificultad": 19
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Getafe",
+            "esLocal": true,
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Deportivo",
+            "esLocal": false,
+            "dificultad": 57
+          }
+        ]
+      },
+      {
+        "nombre": "Barrenetxea",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/2602.png",
+        "equipoReal": "Real Sociedad",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Atlético",
+            "esLocal": true,
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Valencia",
+            "esLocal": false,
+            "dificultad": 8
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Deportivo",
+            "esLocal": true,
+            "dificultad": 61
+          }
+        ]
+      },
+      {
+        "nombre": "Zubeldia",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/8376.png",
+        "equipoReal": "Real Sociedad",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Atlético",
+            "esLocal": true,
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Valencia",
+            "esLocal": false,
+            "dificultad": 8
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Deportivo",
+            "esLocal": true,
+            "dificultad": 61
+          }
+        ]
+      },
+      {
+        "nombre": "Cabrera",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/11800.png",
+        "equipoReal": "Espanyol",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Osasuna",
+            "esLocal": false,
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Rayo Vallecano",
+            "esLocal": false,
+            "dificultad": 36
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Elche",
+            "esLocal": true,
+            "dificultad": 16
+          }
+        ]
+      },
+      {
+        "nombre": "Akhomach",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/25159.png",
+        "equipoReal": "Villarreal",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Betis",
+            "esLocal": true,
+            "dificultad": 59
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Málaga",
+            "esLocal": false,
+            "dificultad": 28
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Levante",
+            "esLocal": true,
+            "dificultad": 45
+          }
+        ]
+      },
+      {
+        "nombre": "Bellingham",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/30477.png",
+        "equipoReal": "Real Madrid",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Rayo Vallecano",
+            "esLocal": true,
+            "dificultad": 25
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Elche",
+            "esLocal": false,
+            "dificultad": 10
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Atlético",
+            "esLocal": false,
+            "dificultad": 46
+          }
+        ]
+      },
+      {
+        "nombre": "Álvaro Valles",
+        "posicion": "Portero",
+        "foto": "https://cdn.biwenger.com/i/p/30487.png",
+        "equipoReal": "Betis",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Villarreal",
+            "esLocal": false,
+            "dificultad": 19
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Getafe",
+            "esLocal": true,
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Deportivo",
+            "esLocal": false,
+            "dificultad": 57
+          }
+        ]
+      },
+      {
+        "nombre": "Mario Soriano",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/41072.png",
+        "equipoReal": "Deportivo",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Getafe",
+            "esLocal": false,
+            "dificultad": 27
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Sevilla",
+            "esLocal": true,
+            "dificultad": 61
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Betis",
+            "esLocal": true,
+            "dificultad": 49
+          }
+        ]
+      },
+      {
+        "nombre": "Jorge Salinas",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/41270.png",
+        "equipoReal": "Racing",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "rival": "Alavés",
+            "esLocal": true,
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "rival": "Barcelona",
+            "esLocal": false,
+            "dificultad": 91
+          },
+          {
+            "jornada": "Round 7",
+            "rival": "Celta",
+            "esLocal": false,
+            "dificultad": 24
           }
         ]
       }
