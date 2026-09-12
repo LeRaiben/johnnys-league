@@ -351,8 +351,8 @@ async function traerPartidos(equiposPorId) {
   }
 
   // Paso 2: buscar los partidos. Probamos la jornada actual y la siguiente,
-  // porque la tira interesa que muestre lo que está por jugarse.
-  const ids = [jornadaActual.id + 1, jornadaActual.id];
+  // porque queremos la que marca Biwenger como en curso, no la que viene.
+  const ids = [jornadaActual.id, jornadaActual.id + 1];
   const PLANTILLAS = [
     (id) => `${API}/rounds/la-liga/${id}`,
     (id) => `${CDN}/rounds/la-liga/${id}`,
