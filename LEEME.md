@@ -10,6 +10,9 @@ más portadas y crónicas que subís vosotros.
 | Archivo | Para qué sirve |
 |---|---|
 | `index.html` | La web entera |
+| `estadisticas.html` | Evolución, Once Ideal, Premios y mayores movimientos de la liga |
+| `calendario.html` | Qué tan fácil o difícil lo tiene cada plantilla en las próximas jornadas |
+| `comparador.html` | Enfrenta a dos presidentes cara a cara en todas las estadísticas |
 | `assets/escudo.png` | El escudo de la liga |
 | `data/liga.json` | Clasificación y mercado. **Se genera solo, no lo toques** |
 | `data/contenido.json` | Portada, crónicas y hemeroteca. **Este sí lo editas tú** |
