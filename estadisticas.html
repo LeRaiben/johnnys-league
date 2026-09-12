@@ -1,0 +1,458 @@
+estadisticas.html<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estadísticas · Johnny's League</title>
+<meta name="description" content="Evolución, rachas y movimientos de Johnny's League.">
+<link rel="icon" href="assets/escudo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/estilo.css">
+<style>
+  /* Estilos propios de esta página */
+  .grafico-caja { background:var(--navy-soft); padding:22px 22px 8px; margin-bottom:10px; }
+  .grafico-caja svg { display:block; width:100%; height:auto; }
+  .linea-equipo { fill:none; stroke-width:2; transition:opacity .15s, stroke-width .15s; }
+  .punto-equipo { transition:opacity .15s; }
+  .eje { stroke:var(--navy-line); stroke-width:1; }
+  .eje-texto { font-family:'Barlow Condensed',sans-serif; font-size:11px; fill:var(--grey); }
+
+  .leyenda { display:flex; flex-wrap:wrap; gap:8px; padding:16px 0 22px; }
+  .leyenda button { display:flex; align-items:center; gap:7px; background:transparent;
+    border:1px solid var(--navy-line); color:rgba(247,247,245,0.82); cursor:pointer;
+    font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.03em;
+    font-size:0.76rem; padding:6px 11px 6px 8px; border-radius:20px; transition:border-color .15s, color .15s; }
+  .leyenda button:hover { border-color:var(--gold-dim); color:var(--white); }
+  .leyenda button.activa { border-color:var(--gold); color:var(--gold); background:rgba(224,169,79,0.08); }
+  .leyenda .punto { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
+  .leyenda .reset { border-style:dashed; }
+
+
+  .movs { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  @media (max-width:700px){ .movs{grid-template-columns:1fr;} }
+  .mov-caja { background:var(--navy-soft); padding:22px; border-top:3px solid transparent; }
+  .mov-caja.remontada { border-top-color:#6FCF97; }
+  .mov-caja.caida { border-top-color:#E8746A; }
+  .mov-caja .et { font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.06em;
+    text-transform:uppercase; font-size:0.72rem; color:var(--grey); }
+  .mov-caja .equipo { display:flex; align-items:center; gap:12px; margin:12px 0; }
+  .mov-caja .equipo .avatar { width:46px; height:46px; }
+  .mov-caja .equipo .nom { font-family:'Anton',sans-serif; font-size:1.3rem; }
+  .mov-caja .cifra { font-family:'Anton',sans-serif; font-size:1.6rem; }
+  .mov-caja.remontada .cifra { color:#6FCF97; }
+  .mov-caja.caida .cifra { color:#E8746A; }
+  .mov-caja .detalle { font-size:0.86rem; color:var(--grey); margin-top:4px; }
+
+  .aviso-suave { background:var(--navy-soft); border-left:3px solid var(--gold-dim); padding:16px 18px;
+    font-size:0.92rem; color:rgba(247,247,245,0.82); }
+
+  /* Once Ideal */
+  .once-cabecera { display:flex; justify-content:space-between; align-items:baseline;
+    flex-wrap:wrap; gap:8px; margin-bottom:14px; }
+  .once-total { font-family:'Anton',sans-serif; color:var(--gold); }
+  .once-total b { font-size:1.6rem; }
+  .campo { background:
+      repeating-linear-gradient(0deg, #1a5c33, #1a5c33 40px, #1e6539 40px, #1e6539 80px);
+    border:2px solid rgba(255,255,255,0.25); border-radius:6px;
+    padding:28px 14px; display:flex; flex-direction:column; justify-content:space-between; gap:18px; }
+  .fila-once { display:flex; justify-content:center; gap:22px; flex-wrap:wrap; }
+  .jugador-once { display:flex; flex-direction:column; align-items:center; width:110px; text-align:center; }
+  .jugador-once .avatar { width:52px; height:52px; border:2px solid rgba(255,255,255,0.85);
+    background:rgba(255,255,255,0.15); color:#fff; }
+  .jugador-once .nom { color:#fff; font-weight:600; font-size:0.86rem; margin-top:5px;
+    text-shadow:0 1px 3px rgba(0,0,0,0.6); line-height:1.15; }
+  .jugador-once .pts { background:var(--gold); color:var(--navy); font-family:'Anton',sans-serif;
+    font-size:0.82rem; padding:1px 8px; border-radius:10px; margin-top:2px; }
+  .jugador-once .pres { display:flex; align-items:center; gap:4px; margin-top:6px;
+    background:rgba(2,18,52,0.72); border-radius:12px; padding:2px 8px 2px 2px; }
+  .jugador-once .pres img { width:16px; height:16px; border-radius:50%; }
+  .jugador-once .pres span { font-family:'Barlow Condensed',sans-serif; font-size:0.68rem;
+    color:rgba(247,247,245,0.9); letter-spacing:0.02em; white-space:nowrap; overflow:hidden;
+    text-overflow:ellipsis; max-width:78px; }
+  .racha-tira { display:flex; gap:3px; margin-top:5px; }
+  .racha-tira span { width:19px; height:16px; border-radius:3px; display:flex; align-items:center;
+    justify-content:center; font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:0.68rem;
+    color:#fff; }
+  .racha-tira .mala { background:#c0392b; }
+  .racha-tira .floja { background:#c9822e; }
+  .racha-tira .buena { background:#3f9142; }
+
+  /* Premios */
+  .premios { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; }
+  .premio { background:var(--navy-soft); padding:20px; border-top:3px solid var(--gold-dim); }
+  .premio .et { font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.06em;
+    text-transform:uppercase; font-size:0.72rem; color:var(--grey); }
+  .premio .equipo { display:flex; align-items:center; gap:12px; margin:12px 0 8px; }
+  .premio .equipo .avatar { width:46px; height:46px; }
+  .premio .equipo .nom { font-family:'Anton',sans-serif; font-size:1.15rem; line-height:1.1; }
+  .premio .cifra { font-family:'Anton',sans-serif; font-size:1.4rem; color:var(--gold); }
+  .premio .detalle { font-size:0.82rem; color:var(--grey); margin-top:3px; }
+  .premio.malo .cifra { color:#E8746A; }
+  .premio.bueno .cifra { color:#6FCF97; }
+</style>
+</head>
+<body>
+
+<div class="lomo" aria-hidden="true"></div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="bar">
+      <a href="index.html"><img class="crest" src="assets/escudo.png" alt="Escudo de Johnny's League"></a>
+      <div class="titles">
+        <h1>Johnny's League</h1>
+        <div class="tagline">crónica semanal de la liga</div>
+      </div>
+      <div class="status">
+        <span class="cond">Estadísticas</span>
+        <span class="round" id="jornadaNum">—</span>
+      </div>
+    </div>
+    <div class="jump">
+      <a href="index.html#portada">Portada</a>
+      <a href="index.html#clasificacion">Clasificación</a>
+      <a href="index.html#mercado">Mercado</a>
+      <a href="presidentes.html">Presidentes</a>
+      <a href="estadisticas.html" class="activo">Estadísticas</a>
+      <a href="calendario.html">Calendario</a>
+      <a href="index.html#cronicas">Crónicas</a>
+      <a href="index.html#hemeroteca">Hemeroteca</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" style="border-bottom:none;">
+    <div class="hero-titulo">
+      <h2>Estadísticas</h2>
+      <span class="pie" id="pieFecha"></span>
+    </div>
+    <p class="section-note" style="margin-top:-18px;">
+      Cómo ha ido cambiando la liga día a día. Cuanto más tiempo pase, mejor se ve.
+    </p>
+  </section>
+
+  <section class="block" style="border-top:none; padding-top:0;">
+    <div class="section-head">
+      <h3>Once Ideal de la jornada</h3>
+      <span class="cond" id="onceJornadaEtiqueta">—</span>
+    </div>
+    <div id="onceIdeal"></div>
+  </section>
+
+  <section class="block">
+    <div class="section-head">
+      <h3>Premios de la semana</h3>
+      <span class="cond" id="premiosJornadaEtiqueta">—</span>
+    </div>
+    <div id="premios"></div>
+  </section>
+
+  <section class="block">
+    <div class="section-head">
+      <h3>Evolución</h3>
+      <span class="cond">Histórico diario</span>
+    </div>
+    <div class="subtabs" role="tablist">
+      <button role="tab" aria-selected="true" data-campo="puntos">Puntos</button>
+      <button role="tab" aria-selected="false" data-campo="valor">Valor de plantilla</button>
+    </div>
+    <div class="grafico-caja">
+      <div id="grafico"></div>
+      <div class="leyenda" id="leyenda"></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="section-head">
+      <h3>La última jornada</h3>
+      <span class="cond">Mayor remontada y mayor caída</span>
+    </div>
+    <div id="movimientos"></div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <span class="cond">Johnny's League · hecha por y para la liga</span>
+  <span class="cond" id="sellofecha"></span>
+</footer>
+
+<script>
+(function () {
+  var esc = function (s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  };
+
+  function cargar(ruta) {
+    return fetch(ruta, { cache: 'no-store' }).then(function (r) {
+      if (!r.ok) throw new Error(ruta);
+      return r.json();
+    });
+  }
+
+  var PALETA = ['#E0A94F','#7EA9D9','#C0182C','#6FCF97','#B39DDB','#F2994A',
+                '#56CCF2','#EB5757','#9FE6A0','#D9A5B3','#8D99AE','#F6E27A'];
+
+  var avatar = function (url, iniciales) {
+    return url
+      ? '<div class="avatar"><img src="' + esc(url) + '" alt="" loading="lazy" ' +
+        'onerror="this.parentNode.textContent=\'' + esc(iniciales || '') + '\'"></div>'
+      : '<div class="avatar">' + esc(iniciales || '') + '</div>';
+  };
+
+  var iniciales = function (nombre) {
+    return String(nombre || '').split(/\s+/).filter(Boolean).slice(0,2).map(function(p){return p[0];}).join('').toUpperCase();
+  };
+
+  var millones = function (n) {
+    return (n / 1e6).toFixed(1).replace('.', ',') + ' M';
+  };
+
+  var diaCorto = function (fecha) {
+    var f = new Date(fecha + 'T00:00:00');
+    return f.toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit' });
+  };
+
+  /* ---------- Gráfico de evolución ---------- */
+  function dibujarGrafico(historico, campo, equipoActivo) {
+    var cont = document.getElementById('grafico');
+    if (!historico.length) {
+      cont.innerHTML = '<div class="aviso-suave">Todavía no hay histórico guardado.</div>';
+      document.getElementById('leyenda').innerHTML = '';
+      return;
+    }
+
+    var equipos = historico[historico.length - 1].equipos.map(function (e) { return e.equipo; });
+    var fechas = historico.map(function (f) { return f.fecha; });
+
+    var todos = [];
+    historico.forEach(function (f) { f.equipos.forEach(function (e) { todos.push(e[campo]); }); });
+    var min = Math.min.apply(null, todos), max = Math.max.apply(null, todos);
+    if (min === max) { min -= 1; max += 1; }
+    var margen = (max - min) * 0.08;
+    min -= margen; max += margen;
+
+    var W = 900, H = 320, padL = 46, padR = 14, padT = 16, padB = 28;
+    function x(i) { return padL + (W - padL - padR) * (fechas.length <= 1 ? 0.5 : i / (fechas.length - 1)); }
+    function y(v) { return H - padB - (H - padT - padB) * (v - min) / (max - min); }
+
+    var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">';
+
+    // líneas guía horizontales con su valor
+    var pasos = 4;
+    for (var g = 0; g <= pasos; g++) {
+      var valor = min + (max - min) * g / pasos;
+      var yy = y(valor);
+      svg += '<line class="eje" x1="' + padL + '" y1="' + yy + '" x2="' + (W - padR) + '" y2="' + yy + '"/>';
+      var etiqueta = campo === 'valor' ? millones(valor) : Math.round(valor);
+      svg += '<text class="eje-texto" x="4" y="' + (yy + 4) + '">' + esc(etiqueta) + '</text>';
+    }
+
+    // fechas en el eje X (si hay muchas, no las ponemos todas)
+    var saltoFecha = Math.ceil(fechas.length / 8) || 1;
+    fechas.forEach(function (f, i) {
+      if (i % saltoFecha !== 0 && i !== fechas.length - 1) return;
+      svg += '<text class="eje-texto" x="' + x(i) + '" y="' + (H - 8) + '" text-anchor="middle">' + esc(diaCorto(f)) + '</text>';
+    });
+
+    // una línea por equipo
+    equipos.forEach(function (nombre, idx) {
+      var color = PALETA[idx % PALETA.length];
+      var puntos = historico.map(function (f, i) {
+        var e = f.equipos.filter(function (eq) { return eq.equipo === nombre; })[0];
+        return e ? x(i) + ',' + y(e[campo]) : null;
+      }).filter(Boolean);
+      if (!puntos.length) return;
+
+      var atenuada = equipoActivo && equipoActivo !== nombre;
+      svg += '<polyline class="linea-equipo" data-equipo="' + esc(nombre) + '" ' +
+        'points="' + puntos.join(' ') + '" stroke="' + color + '" ' +
+        'style="opacity:' + (atenuada ? 0.12 : 1) + ';stroke-width:' + (equipoActivo === nombre ? 3 : 2) + '"/>';
+    });
+
+    svg += '</svg>';
+    cont.innerHTML = svg;
+
+    // leyenda
+    var ly = document.getElementById('leyenda');
+    var chips = equipos.map(function (nombre, idx) {
+      var color = PALETA[idx % PALETA.length];
+      var activa = equipoActivo === nombre ? ' activa' : '';
+      return '<button class="' + activa.trim() + '" data-equipo="' + esc(nombre) + '">' +
+        '<span class="punto" style="background:' + color + '"></span>' + esc(nombre) + '</button>';
+    }).join('');
+    ly.innerHTML = chips + '<button class="reset" data-equipo="">Ver todos</button>';
+  }
+
+  /* ---------- Mayor remontada / mayor caída ---------- */
+  function pintarMovimientos(mov) {
+    var cont = document.getElementById('movimientos');
+    if (!mov) {
+      cont.innerHTML = '<div class="aviso-suave">Esto se calcula comparando una jornada con la siguiente, así que hace falta que se cierre al menos una más. Se guarda solo cada día, no hay que hacer nada.</div>';
+      return;
+    }
+    var diferencia = function (d) { return (d.delta - mov.media >= 0 ? '+' : '') + Math.round(d.delta - mov.media); };
+    cont.innerHTML = '<div class="movs">' +
+      '<div class="mov-caja remontada"><span class="et">Mayor remontada</span>' +
+      '<div class="equipo">' + avatar(mov.remontada.escudo, iniciales(mov.remontada.equipo)) +
+      '<div class="nom">' + esc(mov.remontada.equipo) + '</div></div>' +
+      '<div class="cifra">' + esc(mov.remontada.delta) + ' pts</div>' +
+      '<div class="detalle">' + diferencia(mov.remontada) + ' respecto a la media de la jornada (' + mov.media + ')</div></div>' +
+
+      '<div class="mov-caja caida"><span class="et">Mayor caída</span>' +
+      '<div class="equipo">' + avatar(mov.caida.escudo, iniciales(mov.caida.equipo)) +
+      '<div class="nom">' + esc(mov.caida.equipo) + '</div></div>' +
+      '<div class="cifra">' + esc(mov.caida.delta) + ' pts</div>' +
+      '<div class="detalle">' + diferencia(mov.caida) + ' respecto a la media de la jornada (' + mov.media + ')</div></div>' +
+      '</div>';
+  }
+
+  /* ---------- Once Ideal ---------- */
+  function pintarOnceIdeal(once) {
+    var cont = document.getElementById('onceIdeal');
+    var etiqueta = document.getElementById('onceJornadaEtiqueta');
+    if (!once || !once.titulares || !once.titulares.length) {
+      etiqueta.textContent = '';
+      cont.innerHTML = '<div class="aviso-suave">Todavía no hay una jornada cerrada de la que sacar el Once Ideal. En cuanto Biwenger cierre la próxima, aparece aquí solo.</div>';
+      return;
+    }
+    etiqueta.textContent = once.jornada + ' · Formación ' + once.formacion;
+
+    // El array viene ya en orden: portero, defensas, centrocampistas, delanteros
+    var partes = once.formacion.split('-').map(Number); // [def, med, del]
+    var t = once.titulares;
+    var filas = [
+      t.slice(1 + partes[0] + partes[1]),                    // delanteros (arriba)
+      t.slice(1 + partes[0], 1 + partes[0] + partes[1]),      // centrocampistas
+      t.slice(1, 1 + partes[0]),                              // defensas
+      t.slice(0, 1)                                           // portero (abajo)
+    ];
+
+    var jugadorHtml = function (j) {
+      var tira = (j.racha || []).slice(0, 4).map(function (v) {
+        var clase = v < 2 ? 'mala' : (v < 6 ? 'floja' : 'buena');
+        return '<span class="' + clase + '">' + esc(v) + '</span>';
+      }).join('');
+      return '<div class="jugador-once">' +
+        avatar(j.foto, iniciales(j.nombre)) +
+        '<div class="nom">' + esc(j.nombre) + '</div>' +
+        '<div class="pts">' + esc(j.puntos) + ' pts</div>' +
+        (tira ? '<div class="racha-tira">' + tira + '</div>' : '') +
+        (j.presidente ? '<div class="pres">' +
+          (j.escudoPresidente ? '<img src="' + esc(j.escudoPresidente) + '" alt="">' : '') +
+          '<span>' + esc(j.presidente) + '</span></div>' : '') +
+        '</div>';
+    };
+
+    cont.innerHTML =
+      '<div class="once-cabecera">' +
+        '<span class="cond">Los que más puntuaron de toda la liga, jueguen donde jueguen</span>' +
+        '<span class="once-total">Total: <b>' + esc(once.total) + '</b> pts</span>' +
+      '</div>' +
+      '<div class="campo">' +
+        filas.map(function (fila) {
+          return '<div class="fila-once">' + fila.map(jugadorHtml).join('') + '</div>';
+        }).join('') +
+      '</div>';
+  }
+
+  /* ---------- Premios de la semana ---------- */
+  function pintarPremios(premios) {
+    var cont = document.getElementById('premios');
+    var etiqueta = document.getElementById('premiosJornadaEtiqueta');
+    if (!premios) {
+      etiqueta.textContent = '';
+      cont.innerHTML = '<div class="aviso-suave">Todavía no hay suficientes cláusulas y jornadas jugadas para repartir premios. Aparecerán solos según avance la temporada.</div>';
+      return;
+    }
+    etiqueta.textContent = premios.paquete ? premios.paquete.jornada : '';
+
+    var tarjetas = [];
+
+    if (premios.paquete) {
+      var p = premios.paquete;
+      tarjetas.push('<div class="premio malo"><span class="et">El paquete de la semana</span>' +
+        '<div class="equipo">' + avatar(p.foto, iniciales(p.nombre)) + '<div class="nom">' + esc(p.nombre) + '</div></div>' +
+        '<div class="cifra">' + esc(p.puntos) + ' pts</div>' +
+        '<div class="detalle">Jugó de verdad y aun así fue el que menos sumó de toda la liga (' + esc(p.presidente) + ')</div></div>');
+    }
+
+    if (premios.fichajeRentable) {
+      var f = premios.fichajeRentable;
+      tarjetas.push('<div class="premio bueno"><span class="et">El fichaje más rentable</span>' +
+        '<div class="equipo">' + avatar(f.foto, iniciales(f.nombre)) + '<div class="nom">' + esc(f.nombre) + '</div></div>' +
+        '<div class="cifra">+' + esc(f.ganancia) + '</div>' +
+        '<div class="detalle">Pagado ' + esc(f.pagado) + ' por ' + esc(f.comprador) + ', hoy vale ' + esc(f.valorAhora) + '</div></div>');
+    }
+
+    if (premios.mejorSubida) {
+      var s = premios.mejorSubida;
+      tarjetas.push('<div class="premio bueno"><span class="et">Mejor subida de valor</span>' +
+        '<div class="equipo">' + avatar(s.foto, iniciales(s.nombre)) + '<div class="nom">' + esc(s.nombre) + '</div></div>' +
+        '<div class="cifra">+' + esc(s.porcentaje) + '%</div>' +
+        '<div class="detalle">' + esc(s.comprador) + ' lo clausuló por ' + esc(s.pagado) + ' y ya se ha revalorizado así</div></div>');
+    }
+
+    if (premios.masRata) {
+      var r = premios.masRata;
+      tarjetas.push('<div class="premio"><span class="et">Presidente más rata</span>' +
+        '<div class="equipo">' + avatar(r.escudo, iniciales(r.nombre)) + '<div class="nom">' + esc(r.nombre) + '</div></div>' +
+        '<div class="cifra">' + esc(r.gastado) + '</div>' +
+        '<div class="detalle">Lo que lleva gastado en cláusulas esta temporada. Cero riesgos, cero gloria.</div></div>');
+    }
+
+    cont.innerHTML = '<div class="premios">' + tarjetas.join('') + '</div>';
+  }
+
+  /* ---------- Arranque ---------- */
+  var historicoGlobal = [];
+  var campoActivo = 'puntos';
+  var equipoActivo = '';
+
+  Promise.all([cargar('data/liga.json'), cargar('data/historico.json')]).then(function (res) {
+    var liga = res[0];
+    historicoGlobal = res[1] || [];
+
+    document.getElementById('jornadaNum').textContent = String(liga.jornadasJugadas || '—').padStart(2, '0');
+    pintarOnceIdeal(liga.onceIdeal);
+    pintarPremios(liga.premios);
+    pintarMovimientos(liga.movimientos);
+    dibujarGrafico(historicoGlobal, campoActivo, equipoActivo);
+
+    if (liga.actualizado) {
+      var f = new Date(liga.actualizado);
+      document.getElementById('sellofecha').textContent =
+        'Datos actualizados el ' + f.toLocaleDateString('es-ES') + ' a las ' +
+        f.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
+    }
+  }).catch(function () {
+    document.getElementById('grafico').innerHTML =
+      '<div class="aviso-suave">No se han podido cargar los datos. Comprueba que existan data/liga.json y data/historico.json.</div>';
+  });
+
+  // Pestañas Puntos / Valor
+  document.querySelectorAll('.subtabs button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.subtabs button').forEach(function (b) { b.setAttribute('aria-selected', 'false'); });
+      btn.setAttribute('aria-selected', 'true');
+      campoActivo = btn.dataset.campo;
+      dibujarGrafico(historicoGlobal, campoActivo, equipoActivo);
+    });
+  });
+
+  // Clic en la leyenda: resalta un equipo (o los enseña todos)
+  document.getElementById('leyenda').addEventListener('click', function (e) {
+    var btn = e.target.closest('button');
+    if (!btn) return;
+    equipoActivo = btn.dataset.equipo || '';
+    dibujarGrafico(historicoGlobal, campoActivo, equipoActivo);
+  });
+})();
+</script>
+</body>
+</html>
