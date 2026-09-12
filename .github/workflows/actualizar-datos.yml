@@ -2,12 +2,25 @@ name: Actualizar datos de Biwenger
 
 on:
   schedule:
-        - cron: '0 6-21 * * *'  # 8:00-23:00 hora de España (UTC+2 en verano)
+    # Cada 10 minutos. La franja 6-23 UTC cubre "8:00 a 00:00, hora de Espana"
+    # tanto en horario de verano (UTC+2, 8:00-24:00 = 6:00-22:00 UTC) como en
+    # horario de invierno (UTC+1, 8:00-24:00 = 7:00-23:00 UTC). GitHub no
+    # garantiza el minuto exacto (puede retrasarse un poco si hay mucha carga
+    # en GitHub Actions), pero si que se ejecuta con esta frecuencia.
+    - cron: '*/10 6-23 * * *'
   workflow_dispatch:
+
+concurrency:
+  # Si una ejecucion tarda mas de lo normal, la siguiente espera en vez de
+  # arrancar en paralelo. Dos "actualizar" a la vez son las dos intentando
+  # hacer "git push" sobre el mismo commit, y una de ellas fallaria.
+  group: actualizar-datos
+  cancel-in-progress: false
 
 jobs:
   actualizar:
     runs-on: ubuntu-latest
+    timeout-minutes: 8
     permissions:
       contents: write
     steps:
@@ -26,5 +39,19 @@ jobs:
           git config user.name "Johnny's League bot"
           git config user.email "bot@users.noreply.github.com"
           git add data/
-          git diff --staged --quiet || git commit -m "Datos actualizados"
+          if git diff --staged --quiet; then
+            echo "Sin cambios, no hago commit."
+            exit 0
+          fi
+          git commit -m "Datos actualizados"
+          # Por si otra ejecucion (o una edicion manual de contenido.json)
+          # ha subido algo mientras tanto: sincronizamos y reintentamos una
+          # vez antes de rendirnos, en vez de fallar directamente.
+          for intento in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rechazado, sincronizando y reintentando ($intento)..."
+            git pull --rebase --autostash
+          done
           git push
