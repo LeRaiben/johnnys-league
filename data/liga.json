@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-12T16:13:40.653Z",
+  "actualizado": "2026-09-12T17:20:46.415Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 5,
   "partidos": [
@@ -39,9 +39,9 @@
       "escudoLocal": "https://cdn.biwenger.com/i/t/1.png",
       "escudoVisitante": "https://cdn.biwenger.com/i/t/75.png",
       "fecha": "2026-09-12T16:30:00.000Z",
-      "golesLocal": null,
-      "golesVisitante": null,
-      "estado": "preview"
+      "golesLocal": 0,
+      "golesVisitante": 0,
+      "estado": "break"
     },
     {
       "local": "Real Madrid",
@@ -2357,8 +2357,8 @@
   },
   "onceIdeal": {
     "jornada": "Jornada 4",
-    "formacion": "3-4-3",
-    "total": 143,
+    "formacion": "4-3-3",
+    "total": 142,
     "titulares": [
       {
         "nombre": "Álvaro Valles",
@@ -2420,6 +2420,20 @@
         "escudoPresidente": ""
       },
       {
+        "nombre": "Cubarsí",
+        "posicion": "Defensa",
+        "puntos": 8,
+        "racha": [
+          8,
+          6,
+          10
+        ],
+        "equipoReal": "Barcelona",
+        "foto": "https://cdn.biwenger.com/i/p/32440.png",
+        "presidente": "",
+        "escudoPresidente": ""
+      },
+      {
         "nombre": "Pedri",
         "posicion": "Centrocampista",
         "puntos": 15,
@@ -2462,21 +2476,6 @@
         ],
         "equipoReal": "Real Sociedad",
         "foto": "https://cdn.biwenger.com/i/p/17344.png",
-        "presidente": "",
-        "escudoPresidente": ""
-      },
-      {
-        "nombre": "Expósito",
-        "posicion": "Centrocampista",
-        "puntos": 9,
-        "racha": [
-          9,
-          3,
-          5,
-          4
-        ],
-        "equipoReal": "Espanyol",
-        "foto": "https://cdn.biwenger.com/i/p/19862.png",
         "presidente": "",
         "escudoPresidente": ""
       },
@@ -2527,20 +2526,20 @@
       }
     ],
     "paquete": {
-      "nombre": "Catena",
-      "puntos": -4,
+      "nombre": "Oblak",
+      "puntos": -3,
       "jornada": "Jornada 4",
-      "foto": "https://cdn.biwenger.com/i/p/17731.png",
+      "foto": "https://cdn.biwenger.com/i/p/1897.png",
       "presidente": "",
       "escudoPresidente": ""
     }
   },
   "premios": {
     "paquete": {
-      "nombre": "Catena",
-      "puntos": -4,
+      "nombre": "Oblak",
+      "puntos": -3,
       "jornada": "Jornada 4",
-      "foto": "https://cdn.biwenger.com/i/p/17731.png",
+      "foto": "https://cdn.biwenger.com/i/p/1897.png",
       "presidente": "",
       "escudoPresidente": ""
     },
@@ -2684,7 +2683,7 @@
             "jornada": "Round 5",
             "rival": "Athletic",
             "esLocal": false,
-            "dificultad": 55
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -3135,7 +3134,7 @@
             "jornada": "Round 5",
             "rival": "Elche",
             "esLocal": true,
-            "dificultad": 15
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -3161,7 +3160,7 @@
             "jornada": "Round 5",
             "rival": "Elche",
             "esLocal": true,
-            "dificultad": 15
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -3475,7 +3474,7 @@
             "jornada": "Round 5",
             "rival": "Elche",
             "esLocal": true,
-            "dificultad": 15
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -3926,7 +3925,7 @@
             "jornada": "Round 5",
             "rival": "Athletic",
             "esLocal": false,
-            "dificultad": 55
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -4710,7 +4709,7 @@
             "jornada": "Round 5",
             "rival": "Elche",
             "esLocal": true,
-            "dificultad": 15
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -4998,7 +4997,7 @@
             "jornada": "Round 5",
             "rival": "Athletic",
             "esLocal": false,
-            "dificultad": 55
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -5241,7 +5240,7 @@
             "jornada": "Round 5",
             "rival": "Athletic",
             "esLocal": false,
-            "dificultad": 55
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -5293,7 +5292,7 @@
             "jornada": "Round 5",
             "rival": "Athletic",
             "esLocal": false,
-            "dificultad": 55
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -5371,7 +5370,7 @@
             "jornada": "Round 5",
             "rival": "Elche",
             "esLocal": true,
-            "dificultad": 15
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -5607,7 +5606,7 @@
             "jornada": "Round 5",
             "rival": "Athletic",
             "esLocal": false,
-            "dificultad": 55
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -6726,7 +6725,7 @@
             "jornada": "Round 5",
             "rival": "Elche",
             "esLocal": true,
-            "dificultad": 15
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
