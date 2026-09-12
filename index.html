@@ -551,7 +551,7 @@
   })();
 
   /* ---------- Arranque ---------- */
-  cargar('data/liga.json').then(function (d) {
+  function pintarLiga(d) {
     pintarClasificacion(d.clasificacion);
     pintarManda(d.clasificacion);
     pintarMercadoBiwenger(d.mercadoBiwenger);
@@ -565,7 +565,9 @@
         'Datos actualizados el ' + f.toLocaleDateString('es-ES') + ' a las ' +
         f.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
     }
-  }).catch(function () {
+  }
+
+  cargar('data/liga.json').then(pintarLiga).catch(function () {
     document.getElementById('tabla').innerHTML =
       '<div class="aviso">No se han podido cargar los datos de la liga. Comprueba que existe el archivo data/liga.json.</div>';
   });
@@ -573,6 +575,17 @@
   cargar('data/contenido.json').then(pintarContenido).catch(function () {
     document.getElementById('titular').textContent = 'No se ha podido cargar el contenido';
   });
+
+  /* Mientras la pestaña esté abierta, refresca la clasificación y el mercado
+     solos cada pocos minutos, sin recargar la página. El bot de GitHub va
+     dejando datos nuevos en data/liga.json a lo largo del día, así que esto
+     hace que la web se vaya poniendo al día en jornada sin que nadie tenga
+     que darle a F5. Si un refresco falla (sin conexión, etc.) simplemente
+     se ignora y se mantiene lo último que sí cargó bien. */
+  setInterval(function () {
+    if (document.hidden) return;
+    cargar('data/liga.json').then(pintarLiga).catch(function () {});
+  }, 3 * 60 * 1000);
 })();
 </script>
 </body>
