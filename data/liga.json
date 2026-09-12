@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-12T19:12:27.899Z",
+  "actualizado": "2026-09-12T19:28:28.822Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 5,
   "jornadaEnJuego": true,
@@ -50,7 +50,7 @@
       "escudoLocal": "https://cdn.biwenger.com/i/t/15.png",
       "escudoVisitante": "https://cdn.biwenger.com/i/t/70.png",
       "fecha": "2026-09-12T19:00:00.000Z",
-      "golesLocal": 0,
+      "golesLocal": 2,
       "golesVisitante": 0,
       "estado": "firstTime"
     },
@@ -118,10 +118,10 @@
       "valor": "40,8 M",
       "valorBruto": 40800000,
       "esTuyo": false,
-      "puntosJornada": 30,
-      "jugadosJornada": 5,
+      "puntosJornada": 32,
+      "jugadosJornada": 6,
       "alineadosJornada": 11,
-      "puntosProvisional": 268
+      "puntosProvisional": 270
     },
     {
       "posicion": 2,
@@ -134,10 +134,10 @@
       "valor": "46,0 M",
       "valorBruto": 46030000,
       "esTuyo": false,
-      "puntosJornada": 4,
-      "jugadosJornada": 1,
+      "puntosJornada": 10,
+      "jugadosJornada": 2,
       "alineadosJornada": 11,
-      "puntosProvisional": 238
+      "puntosProvisional": 244
     },
     {
       "posicion": 3,
@@ -182,10 +182,10 @@
       "valor": "45,9 M",
       "valorBruto": 45890000,
       "esTuyo": false,
-      "puntosJornada": 14,
-      "jugadosJornada": 2,
+      "puntosJornada": 19,
+      "jugadosJornada": 3,
       "alineadosJornada": 11,
-      "puntosProvisional": 224
+      "puntosProvisional": 229
     },
     {
       "posicion": 6,
@@ -198,10 +198,10 @@
       "valor": "45,4 M",
       "valorBruto": 45440000,
       "esTuyo": false,
-      "puntosJornada": 14,
-      "jugadosJornada": 4,
+      "puntosJornada": 19,
+      "jugadosJornada": 5,
       "alineadosJornada": 11,
-      "puntosProvisional": 206
+      "puntosProvisional": 211
     },
     {
       "posicion": 7,
@@ -230,10 +230,10 @@
       "valor": "53,3 M",
       "valorBruto": 53280000,
       "esTuyo": false,
-      "puntosJornada": 21,
-      "jugadosJornada": 4,
+      "puntosJornada": 27,
+      "jugadosJornada": 5,
       "alineadosJornada": 11,
-      "puntosProvisional": 209
+      "puntosProvisional": 215
     },
     {
       "posicion": 9,
@@ -294,10 +294,10 @@
       "valor": "41,2 M",
       "valorBruto": 41180000,
       "esTuyo": false,
-      "puntosJornada": 8,
-      "jugadosJornada": 2,
+      "puntosJornada": 18,
+      "jugadosJornada": 4,
       "alineadosJornada": 11,
-      "puntosProvisional": 90
+      "puntosProvisional": 100
     }
   ],
   "mercadoBiwenger": [
@@ -2407,7 +2407,7 @@
   "onceIdeal": {
     "jornada": "Jornada 4",
     "formacion": "4-3-3",
-    "total": 142,
+    "total": 136,
     "titulares": [
       {
         "nombre": "Álvaro Valles",
@@ -2498,21 +2498,6 @@
         "escudoPresidente": ""
       },
       {
-        "nombre": "Sancet",
-        "posicion": "Centrocampista",
-        "puntos": 13,
-        "racha": [
-          13,
-          2,
-          3,
-          3
-        ],
-        "equipoReal": "Athletic",
-        "foto": "https://cdn.biwenger.com/i/p/17057.png",
-        "presidente": "",
-        "escudoPresidente": ""
-      },
-      {
         "nombre": "Yangel Herrera",
         "posicion": "Centrocampista",
         "puntos": 12,
@@ -2525,6 +2510,22 @@
         ],
         "equipoReal": "Real Sociedad",
         "foto": "https://cdn.biwenger.com/i/p/17344.png",
+        "presidente": "",
+        "escudoPresidente": ""
+      },
+      {
+        "nombre": "Iker Muñoz",
+        "posicion": "Centrocampista",
+        "puntos": 7,
+        "racha": [
+          7,
+          3,
+          2,
+          4,
+          5
+        ],
+        "equipoReal": "Osasuna",
+        "foto": "https://cdn.biwenger.com/i/p/18128.png",
         "presidente": "",
         "escudoPresidente": ""
       },
