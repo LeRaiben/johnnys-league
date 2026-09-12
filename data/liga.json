@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-12T12:15:46.884Z",
+  "actualizado": "2026-09-12T13:11:58.954Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 5,
   "partidos": [
@@ -19,9 +19,9 @@
       "escudoLocal": "https://cdn.biwenger.com/i/t/812.png",
       "escudoVisitante": "https://cdn.biwenger.com/i/t/91.png",
       "fecha": "2026-09-12T12:00:00.000Z",
-      "golesLocal": 0,
-      "golesVisitante": 0,
-      "estado": "firstTime"
+      "golesLocal": 1,
+      "golesVisitante": 1,
+      "estado": "secondTime"
     },
     {
       "local": "Osasuna",
@@ -880,19 +880,6 @@
     },
     {
       "tipo": "venta",
-      "nombre": "Vinícius Jr",
-      "foto": "https://cdn.biwenger.com/i/p/15568.png",
-      "posicion": "Delantero",
-      "equipoReal": "Real Madrid",
-      "vendedor": "Urdinho Pernambucano",
-      "pide": "21,0 M",
-      "pideBruto": 21000000,
-      "valorMercado": "16,6 M",
-      "valorBruto": 16630000,
-      "diferencia": 4370000
-    },
-    {
-      "tipo": "venta",
       "nombre": "Sierra",
       "foto": "https://cdn.biwenger.com/i/p/39350.png",
       "posicion": "Delantero",
@@ -1158,11 +1145,11 @@
       "posicion": "Defensa",
       "equipoReal": "Real Sociedad",
       "vendedor": "Seif fc",
-      "pide": "1,6 M",
-      "pideBruto": 1650000,
+      "pide": "1,8 M",
+      "pideBruto": 1830000,
       "valorMercado": "1,8 M",
       "valorBruto": 1830000,
-      "diferencia": -180000
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -2055,7 +2042,7 @@
       "balance": "+9,1 M",
       "balanceBruto": 9060000,
       "sobreprecioMedio": null,
-      "enVenta": 2,
+      "enVenta": 1,
       "fichajeEstrella": null,
       "total": 12,
       "puestoEficiencia": 8,
