@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oportunidades · Johnny's League</title>
+<meta name="description" content="Qué jugadores están baratos de clausular y cuáles corres riesgo de perder.">
+<link rel="icon" href="assets/escudo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/estilo.css">
+<style>
+  .filtro { margin: 4px 0 24px; }
+  .filtro select { background:var(--navy-soft); color:var(--white); border:1px solid var(--navy-line);
+    font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.03em;
+    font-size:1rem; padding:10px 16px; border-radius:4px; min-width:240px; }
+  .filtro .et { display:block; font-family:'Barlow Condensed',sans-serif; font-weight:600;
+    letter-spacing:0.05em; text-transform:uppercase; font-size:0.68rem; color:var(--grey); margin-bottom:7px; }
+
+  .lista-riesgo { display:grid; gap:10px; }
+  .riesgo { background:var(--navy-soft); padding:15px 18px; display:grid;
+    grid-template-columns:46px minmax(0,1fr) auto; gap:14px; align-items:center;
+    border-left:3px solid transparent; }
+  .riesgo.alto { border-left-color:#E8746A; }
+  .riesgo.medio { border-left-color:#c9822e; }
+  .riesgo .pic { width:46px; height:46px; }
+  .riesgo .nom { font-weight:600; font-size:1rem; }
+  .riesgo .sub { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; color:var(--grey);
+    text-transform:uppercase; letter-spacing:0.03em; margin-top:2px; }
+  .riesgo .dueno { display:inline-flex; align-items:center; gap:5px; margin-top:6px;
+    background:rgba(2,18,52,0.6); border-radius:12px; padding:2px 9px 2px 3px; }
+  .riesgo .dueno img { width:17px; height:17px; border-radius:50%; }
+  .riesgo .dueno span { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem;
+    color:rgba(247,247,245,0.88); letter-spacing:0.02em; }
+
+  .riesgo .cifras { text-align:right; white-space:nowrap; }
+  .riesgo .margen { font-family:'Anton',sans-serif; font-size:1.5rem; line-height:1; }
+  .riesgo.alto .margen { color:#E8746A; }
+  .riesgo.medio .margen { color:#c9822e; }
+  .riesgo .margen small { display:block; font-family:'Barlow Condensed',sans-serif; font-size:0.6rem;
+    letter-spacing:0.05em; text-transform:uppercase; color:var(--grey); font-weight:600; margin-top:3px; }
+  .riesgo .precios { font-family:'Barlow Condensed',sans-serif; font-size:0.72rem;
+    color:var(--grey); margin-top:7px; letter-spacing:0.02em; }
+  .riesgo .precios b { color:var(--ice); font-weight:600; }
+
+  .racha-mini { display:flex; gap:3px; margin-top:6px; }
+  .racha-mini span { width:19px; height:16px; border-radius:3px; display:flex; align-items:center;
+    justify-content:center; font-family:'Barlow Condensed',sans-serif; font-weight:600;
+    font-size:0.66rem; color:#fff; }
+  .racha-mini .mala { background:#c0392b; }
+  .racha-mini .floja { background:#c9822e; }
+  .racha-mini .buena { background:#3f9142; }
+
+  .aviso-suave { background:var(--navy-soft); border-left:3px solid var(--gold-dim); padding:16px 18px;
+    font-size:0.92rem; color:rgba(247,247,245,0.82); }
+  .nota-metodo { font-size:0.82rem; color:var(--grey); margin-top:14px; font-style:italic; }
+
+  .leyenda-riesgo { display:flex; gap:20px; margin-top:16px; flex-wrap:wrap; }
+  .leyenda-riesgo span { font-family:'Barlow Condensed',sans-serif; font-size:0.76rem; color:var(--grey);
+    display:flex; align-items:center; gap:7px; }
+  .leyenda-riesgo i { width:10px; height:10px; border-radius:50%; display:block; }
+
+  @media (max-width:600px){
+    .riesgo { grid-template-columns:40px minmax(0,1fr); gap:11px; padding:13px 14px; }
+    .riesgo .pic { width:40px; height:40px; }
+    .riesgo .cifras { grid-column:1 / -1; text-align:left; border-top:1px solid var(--navy-line);
+      padding-top:10px; margin-top:2px; }
+    .riesgo .margen small { display:inline; margin-left:6px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="lomo" aria-hidden="true"></div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="bar">
+      <a href="index.html"><img class="crest" src="assets/escudo.png" alt="Escudo de Johnny's League"></a>
+      <div class="titles">
+        <h1>Johnny's League</h1>
+        <div class="tagline">crónica semanal de la liga</div>
+      </div>
+      <div class="status">
+        <span class="cond">Oportunidades</span>
+        <span class="round" id="jornadaNum">—</span>
+      </div>
+    </div>
+    <div class="jump">
+      <a href="index.html#portada">Portada</a>
+      <a href="index.html#clasificacion">Clasificación</a>
+      <a href="index.html#mercado">Mercado</a>
+      <a href="presidentes.html">Presidentes</a>
+      <a href="estadisticas.html">Estadísticas</a>
+      <a href="jugadores.html">Jugadores</a>
+      <a href="oportunidades.html" class="activo">Oportunidades</a>
+      <a href="calendario.html">Calendario</a>
+      <a href="comparador.html">Comparador</a>
+      <a href="index.html#cronicas">Crónicas</a>
+      <a href="hemeroteca.html">Hemeroteca</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" style="border-bottom:none;">
+    <div class="hero-titulo">
+      <h2>Oportunidades</h2>
+      <span class="pie" id="pieTotal"></span>
+    </div>
+    <p class="section-note" style="margin-top:-18px;">
+      Jugadores que salen baratos de clausular para lo que están rindiendo.
+      Si son tuyos, súbeles la cláusula. Si no, ya sabes dónde mirar.
+    </p>
+  </section>
+
+  <section class="block" style="border-top:none; padding-top:0;">
+    <div class="filtro">
+      <label class="et" for="presidenteSel">Ver los de:</label>
+      <select id="presidenteSel"></select>
+    </div>
+    <div id="listaRiesgo"></div>
+    <div class="leyenda-riesgo">
+      <span><i style="background:#E8746A"></i> Peligro alto · de los más baratos de robar</span>
+      <span><i style="background:#c9822e"></i> Ojo · margen por debajo de lo normal en la liga</span>
+    </div>
+    <p class="nota-metodo">
+      El margen es lo que hay que pagar de más sobre su valor de mercado para llevárselo.
+      El listón no es fijo: sale de vuestra propia liga, cogiendo el cuarto de jugadores con
+      menos margen en ese momento. Solo aparecen los que además rinden por encima de la media
+      y no están blindados, porque son los que de verdad le interesan a alguien.
+      Precio, cláusula y blindaje vienen de Biwenger.
+    </p>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <span class="cond">Johnny's League · hecha por y para la liga</span>
+  <span class="cond" id="sellofecha"></span>
+</footer>
+
+<script>
+(function () {
+  var esc = function (s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  };
+
+  function cargar(ruta) {
+    return fetch(ruta, { cache: 'no-store' }).then(function (r) {
+      if (!r.ok) throw new Error(ruta);
+      return r.json();
+    });
+  }
+
+  function cajaFoto(url, respaldo) {
+    if (url) {
+      return '<div class="pic"><img src="' + esc(url) + '" alt="" loading="lazy" ' +
+             'onerror="this.parentNode.textContent=\'' + esc(respaldo || '·') + '\'"></div>';
+    }
+    return '<div class="pic">' + esc(respaldo || '·') + '</div>';
+  }
+
+  var iniciales = function (nombre) {
+    return String(nombre || '').split(/\s+/).filter(Boolean).slice(0,2)
+      .map(function(p){return p[0];}).join('').toUpperCase();
+  };
+
+  function tiraRacha(racha) {
+    if (!racha || !racha.length) return '';
+    return '<div class="racha-mini">' + racha.slice(0, 4).map(function (v) {
+      var clase = v < 2 ? 'mala' : (v < 6 ? 'floja' : 'buena');
+      return '<span class="' + clase + '">' + esc(v) + '</span>';
+    }).join('') + '</div>';
+  }
+
+  function fila(j) {
+    var dueno = j.presidente
+      ? '<div class="dueno">' +
+        (j.escudoPresidente ? '<img src="' + esc(j.escudoPresidente) + '" alt="">' : '') +
+        '<span>' + esc(j.presidente) + '</span></div>'
+      : '';
+
+    return '<div class="riesgo ' + esc(j.nivel) + '">' +
+      cajaFoto(j.foto, iniciales(j.nombre)) +
+      '<div>' +
+        '<div class="nom">' + esc(j.nombre) + '</div>' +
+        '<div class="sub">' + esc([j.equipoReal, j.posicion].filter(Boolean).join(' · ')) + '</div>' +
+        dueno +
+        tiraRacha(j.racha) +
+      '</div>' +
+      '<div class="cifras">' +
+        '<div class="margen">+' + esc(j.margenPorcentaje) + '%<small>de margen</small></div>' +
+        '<div class="precios">Vale <b>' + esc(j.precioTexto) + '</b> · ' +
+          'cláusula <b>' + esc(j.clausulaTexto) + '</b></div>' +
+        '<div class="precios">' + esc(j.media) + ' pts de media</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  var todos = [];
+
+  function pintar(filtro) {
+    var lista = filtro === '__todos'
+      ? todos
+      : todos.filter(function (j) { return j.presidente === filtro; });
+
+    var cont = document.getElementById('listaRiesgo');
+    if (!lista.length) {
+      cont.innerHTML = '<div class="aviso-suave">Ninguno de esta plantilla está en riesgo ahora mismo. O tienen las cláusulas altas, o están blindados, o no rinden lo suficiente como para que a alguien le compense.</div>';
+      return;
+    }
+    cont.innerHTML = '<div class="lista-riesgo">' + lista.map(fila).join('') + '</div>';
+  }
+
+  cargar('data/liga.json').then(function (liga) {
+    document.getElementById('jornadaNum').textContent =
+      String(liga.jornadasJugadas || '—').padStart(2, '0');
+
+    todos = liga.riesgoClausula || [];
+
+    if (!todos.length) {
+      document.getElementById('listaRiesgo').innerHTML =
+        '<div class="aviso-suave">Todavía no hay datos de cláusulas. Se rellenará solo en la próxima actualización automática.</div>';
+      return;
+    }
+
+    document.getElementById('pieTotal').textContent = todos.length + ' en riesgo';
+
+    // El desplegable solo lista presidentes que tengan a alguien en riesgo
+    var presidentes = [];
+    todos.forEach(function (j) {
+      if (j.presidente && presidentes.indexOf(j.presidente) === -1) presidentes.push(j.presidente);
+    });
+    presidentes.sort();
+
+    var sel = document.getElementById('presidenteSel');
+    sel.innerHTML = '<option value="__todos">Toda la liga</option>' +
+      presidentes.map(function (n) {
+        return '<option value="' + esc(n) + '">' + esc(n) + '</option>';
+      }).join('');
+
+    sel.addEventListener('change', function () { pintar(sel.value); });
+    pintar('__todos');
+
+    if (liga.actualizado) {
+      var f = new Date(liga.actualizado);
+      document.getElementById('sellofecha').textContent =
+        'Datos actualizados el ' + f.toLocaleDateString('es-ES') + ' a las ' +
+        f.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
+    }
+  }).catch(function () {
+    document.getElementById('listaRiesgo').innerHTML =
+      '<div class="aviso-suave">No se han podido cargar los datos. Comprueba que exista data/liga.json.</div>';
+  });
+})();
+</script>
+</body>
+</html>
