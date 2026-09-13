@@ -11,6 +11,7 @@ más portadas y crónicas que subís vosotros.
 |---|---|
 | `index.html` | La web entera |
 | `estadisticas.html` | Evolución, Once Ideal, Premios y mayores movimientos de la liga |
+| `jugadores.html` | Quién rinde por lo que cuesta, estado de forma y gangas del mercado |
 | `calendario.html` | Qué tan fácil o difícil lo tiene cada plantilla en las próximas jornadas |
 | `comparador.html` | Enfrenta a dos presidentes cara a cara en todas las estadísticas |
 | `assets/escudo.png` | El escudo de la liga |

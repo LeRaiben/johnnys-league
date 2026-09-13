@@ -43,6 +43,37 @@
 
   .aviso-suave { background:var(--navy-soft); border-left:3px solid var(--gold-dim); padding:16px 18px;
     font-size:0.92rem; color:rgba(247,247,245,0.82); }
+
+  /* A quién alinear / predictor */
+  .reco-lista { display:grid; gap:9px; }
+  .reco { background:var(--navy-soft); padding:13px 16px; display:grid;
+    grid-template-columns:42px minmax(0,1fr) auto; gap:13px; align-items:center;
+    border-left:3px solid transparent; }
+  .reco.alta { border-left-color:#6FCF97; }
+  .reco.media { border-left-color:var(--gold-dim); }
+  .reco.baja { border-left-color:#E8746A; }
+  .reco .pic { width:42px; height:42px; }
+  .reco .nom { font-weight:600; font-size:0.96rem; }
+  .reco .sub { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; color:var(--grey);
+    text-transform:uppercase; letter-spacing:0.03em; margin-top:2px; }
+  .reco .nota { font-family:'Anton',sans-serif; font-size:1.45rem; text-align:right; white-space:nowrap; }
+  .reco .nota small { display:block; font-family:'Barlow Condensed',sans-serif; font-size:0.6rem;
+    letter-spacing:0.05em; text-transform:uppercase; color:var(--grey); font-weight:600; }
+  .reco.alta .nota { color:#6FCF97; }
+  .reco.media .nota { color:var(--gold); }
+  .reco.baja .nota { color:#E8746A; }
+  .reco .racha-mini { display:flex; gap:3px; margin-top:5px; }
+  .reco .racha-mini span { width:18px; height:15px; border-radius:3px; display:flex;
+    align-items:center; justify-content:center; font-family:'Barlow Condensed',sans-serif;
+    font-weight:600; font-size:0.64rem; color:#fff; }
+  .reco .racha-mini .mala { background:#c0392b; }
+  .reco .racha-mini .floja { background:#c9822e; }
+  .reco .racha-mini .buena { background:#3f9142; }
+
+  @media (max-width:600px){
+    .reco { grid-template-columns:36px minmax(0,1fr) auto; gap:10px; padding:11px 12px; }
+    .reco .pic { width:36px; height:36px; }
+  }
   .leyenda-cal { display:flex; gap:18px; margin-top:16px; flex-wrap:wrap; }
   .leyenda-cal span { font-family:'Barlow Condensed',sans-serif; font-size:0.76rem; color:var(--grey);
     display:flex; align-items:center; gap:6px; }
@@ -72,6 +103,7 @@
       <a href="index.html#mercado">Mercado</a>
       <a href="presidentes.html">Presidentes</a>
       <a href="estadisticas.html">Estadísticas</a>
+      <a href="jugadores.html">Jugadores</a>
       <a href="calendario.html" class="activo">Calendario</a>
       <a href="comparador.html">Comparador</a>
       <a href="index.html#cronicas">Crónicas</a>
@@ -103,6 +135,26 @@
       <span><span class="punto" style="background:var(--gold)"></span> Normal</span>
       <span><span class="punto" style="background:#E8746A"></span> Difícil</span>
     </div>
+  </section>
+
+  <section class="block">
+    <div class="section-head">
+      <h3>A quién alinear</h3>
+      <span class="cond" id="etiquetaRecomendados">De esa misma plantilla</span>
+    </div>
+    <p class="section-note">
+      Nota de 0 a 10 que junta dos cosas: cómo viene de forma el jugador y lo fácil
+      que le viene el próximo rival. Es una orientación calculada, no una verdad absoluta.
+    </p>
+    <div id="recomendados"></div>
+  </section>
+
+  <section class="block">
+    <div class="section-head">
+      <h3>Los que mejor pintan de toda la liga</h3>
+      <span class="cond">Próxima jornada</span>
+    </div>
+    <div id="predictor"></div>
   </section>
 
 </main>
@@ -138,6 +190,14 @@
     return String(nombre || '').split(/\s+/).filter(Boolean).slice(0,2).map(function(p){return p[0];}).join('').toUpperCase();
   };
 
+  function cajaFoto(url, respaldo) {
+    if (url) {
+      return '<div class="pic"><img src="' + esc(url) + '" alt="" loading="lazy" ' +
+             'onerror="this.parentNode.textContent=\'' + esc(respaldo || '·') + '\'"></div>';
+    }
+    return '<div class="pic">' + esc(respaldo || '·') + '</div>';
+  }
+
   function nivelDificultad(d) {
     if (d == null) return null;
     if (d < 30) return 'facil';
@@ -171,11 +231,69 @@
       '</tr></thead><tbody>' + filas + '</tbody></table></div>';
   }
 
+  /* ---------- A quién alinear ---------- */
+  function nivelNota(n) {
+    if (n >= 6.5) return 'alta';
+    if (n >= 4.5) return 'media';
+    return 'baja';
+  }
+
+  function tiraRacha(racha) {
+    if (!racha || !racha.length) return '';
+    return '<div class="racha-mini">' + racha.slice(0, 4).map(function (v) {
+      var clase = v < 2 ? 'mala' : (v < 6 ? 'floja' : 'buena');
+      return '<span class="' + clase + '">' + esc(v) + '</span>';
+    }).join('') + '</div>';
+  }
+
+  function filaReco(j, mostrarPresidente) {
+    var contra = j.rival
+      ? (j.esLocal ? 'vs ' : '@ ') + j.rival
+      : 'Sin partido';
+    var segunda = mostrarPresidente
+      ? esc(j.presidente || '')
+      : esc([j.equipoReal, j.posicion].filter(Boolean).join(' · '));
+
+    return '<div class="reco ' + nivelNota(j.nota) + '">' +
+      cajaFoto(j.foto, iniciales(j.nombre)) +
+      '<div>' +
+        '<div class="nom">' + esc(j.nombre) + '</div>' +
+        '<div class="sub">' + segunda + '</div>' +
+        '<div class="sub">' + esc(contra) + '</div>' +
+        tiraRacha(j.racha) +
+      '</div>' +
+      '<div class="nota">' + esc(j.nota) + '<small>de 10</small></div>' +
+    '</div>';
+  }
+
+  function pintarRecomendados(lista) {
+    var cont = document.getElementById('recomendados');
+    if (!lista || !lista.length) {
+      cont.innerHTML = '<div class="aviso-suave">Todavía no hay datos suficientes para recomendar alineación. Se rellena solo en la próxima actualización.</div>';
+      return;
+    }
+    cont.innerHTML = '<div class="reco-lista">' +
+      lista.slice(0, 11).map(function (j) { return filaReco(j, false); }).join('') +
+      '</div>';
+  }
+
+  function pintarPredictor(lista) {
+    var cont = document.getElementById('predictor');
+    if (!lista || !lista.length) {
+      cont.innerHTML = '<div class="aviso-suave">Todavía no hay datos suficientes para el predictor.</div>';
+      return;
+    }
+    cont.innerHTML = '<div class="reco-lista">' +
+      lista.map(function (j) { return filaReco(j, true); }).join('') +
+      '</div>';
+  }
+
   Promise.all([cargar('data/liga.json')]).then(function (res) {
     var liga = res[0];
     document.getElementById('jornadaNum').textContent = String(liga.jornadasJugadas || '—').padStart(2, '0');
 
     var calendario = liga.calendario || {};
+    var recomendaciones = liga.recomendaciones || {};
     var nombres = (liga.clasificacion || []).map(function (e) { return e.equipo; });
     var sel = document.getElementById('presidenteSel');
     sel.innerHTML = nombres.map(function (n) {
@@ -184,9 +302,13 @@
 
     function actualizar() {
       pintarTabla(calendario[sel.value]);
+      pintarRecomendados(recomendaciones[sel.value]);
+      document.getElementById('etiquetaRecomendados').textContent = sel.value;
     }
     sel.addEventListener('change', actualizar);
     actualizar();
+
+    pintarPredictor(liga.predictor);
 
     if (liga.actualizado) {
       var f = new Date(liga.actualizado);

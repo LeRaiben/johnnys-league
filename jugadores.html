@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jugadores · Johnny's League</title>
+<meta name="description" content="Quién rinde de verdad por lo que cuesta, quién está en racha y dónde están las gangas.">
+<link rel="icon" href="assets/escudo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/estilo.css">
+<style>
+  .lista-jug { display:grid; gap:9px; }
+  .jug-fila { background:var(--navy-soft); padding:13px 16px; display:grid;
+    grid-template-columns:30px 42px minmax(0,1fr) auto; gap:13px; align-items:center;
+    border-left:3px solid transparent; }
+  .jug-fila.top { border-left-color:var(--gold); }
+  .jug-fila .num { font-family:'Anton',sans-serif; font-size:1rem; color:var(--grey); text-align:center; }
+  .jug-fila.top .num { color:var(--gold); }
+  .jug-fila .pic { width:42px; height:42px; }
+  .jug-fila .nom { font-weight:600; font-size:0.97rem; line-height:1.2; }
+  .jug-fila .sub { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; color:var(--grey);
+    text-transform:uppercase; letter-spacing:0.03em; margin-top:2px; }
+  .jug-fila .cifra { font-family:'Anton',sans-serif; font-size:1.25rem; text-align:right; white-space:nowrap; }
+  .jug-fila .cifra small { display:block; font-family:'Barlow Condensed',sans-serif; font-size:0.6rem;
+    letter-spacing:0.05em; text-transform:uppercase; color:var(--grey); font-weight:600; }
+  .jug-fila .cifra.buena { color:#6FCF97; }
+  .jug-fila .cifra.mala { color:#E8746A; }
+  .jug-fila .cifra.oro { color:var(--gold); }
+
+  .racha-mini { display:flex; gap:3px; margin-top:5px; }
+  .racha-mini span { width:19px; height:16px; border-radius:3px; display:flex; align-items:center;
+    justify-content:center; font-family:'Barlow Condensed',sans-serif; font-weight:600;
+    font-size:0.66rem; color:#fff; }
+  .racha-mini .mala { background:#c0392b; }
+  .racha-mini .floja { background:#c9822e; }
+  .racha-mini .buena { background:#3f9142; }
+
+  .titular-tag { display:inline-flex; align-items:center; gap:5px;
+    font-family:'Barlow Condensed',sans-serif; font-size:0.66rem; letter-spacing:0.04em;
+    text-transform:uppercase; padding:2px 8px; border-radius:10px; margin-top:5px; }
+  .titular-tag.si { background:rgba(111,207,151,0.14); color:#6FCF97; }
+  .titular-tag.duda { background:rgba(201,130,46,0.16); color:#c9822e; }
+  .titular-tag.no { background:rgba(232,116,106,0.14); color:#E8746A; }
+
+  .ganga { background:var(--navy-soft); padding:18px; border-top:3px solid #6FCF97; }
+  .gangas { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; }
+  .ganga .et { font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.06em;
+    text-transform:uppercase; font-size:0.66rem; color:#6FCF97; }
+  .ganga .cab { display:flex; align-items:center; gap:11px; margin:11px 0 10px; }
+  .ganga .pic { width:44px; height:44px; }
+  .ganga .nom { font-family:'Anton',sans-serif; font-size:1.05rem; line-height:1.1; }
+  .ganga .detalle { font-size:0.84rem; color:rgba(247,247,245,0.8); line-height:1.45; }
+  .ganga .detalle b { color:#6FCF97; }
+
+  .aviso-suave { background:var(--navy-soft); border-left:3px solid var(--gold-dim); padding:16px 18px;
+    font-size:0.92rem; color:rgba(247,247,245,0.82); }
+  .nota-metodo { font-size:0.82rem; color:var(--grey); margin-top:12px; font-style:italic; }
+
+  @media (max-width:600px){
+    .jug-fila { grid-template-columns:24px 36px minmax(0,1fr) auto; gap:9px; padding:11px 12px; }
+    .jug-fila .pic { width:36px; height:36px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="lomo" aria-hidden="true"></div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="bar">
+      <a href="index.html"><img class="crest" src="assets/escudo.png" alt="Escudo de Johnny's League"></a>
+      <div class="titles">
+        <h1>Johnny's League</h1>
+        <div class="tagline">crónica semanal de la liga</div>
+      </div>
+      <div class="status">
+        <span class="cond">Jugadores</span>
+        <span class="round" id="jornadaNum">—</span>
+      </div>
+    </div>
+    <div class="jump">
+      <a href="index.html#portada">Portada</a>
+      <a href="index.html#clasificacion">Clasificación</a>
+      <a href="index.html#mercado">Mercado</a>
+      <a href="presidentes.html">Presidentes</a>
+      <a href="estadisticas.html">Estadísticas</a>
+      <a href="jugadores.html" class="activo">Jugadores</a>
+      <a href="calendario.html">Calendario</a>
+      <a href="comparador.html">Comparador</a>
+      <a href="index.html#cronicas">Crónicas</a>
+      <a href="index.html#hemeroteca">Hemeroteca</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" style="border-bottom:none;">
+    <div class="hero-titulo">
+      <h2>Jugadores</h2>
+      <span class="pie" id="pieTotal"></span>
+    </div>
+    <p class="section-note" style="margin-top:-18px;">
+      Todos los jugadores repartidos entre las 12 plantillas, analizados por lo que rinden de verdad.
+    </p>
+  </section>
+
+  <section class="block" style="border-top:none; padding-top:0;">
+    <div class="section-head">
+      <h3>Gangas del mercado</h3>
+      <span class="cond">Libres en Biwenger ahora mismo</span>
+    </div>
+    <div id="gangas"></div>
+  </section>
+
+  <section class="block">
+    <div class="section-head">
+      <h3>Quién rinde por lo que cuesta</h3>
+      <span class="cond">Puntos por cada millón de precio</span>
+    </div>
+    <div class="subtabs" role="tablist">
+      <button role="tab" aria-selected="true" data-lista="chollos">Los más rentables</button>
+      <button role="tab" aria-selected="false" data-lista="caros">Los menos rentables</button>
+    </div>
+    <div id="valorJusto"></div>
+    <p class="nota-metodo">
+      Se cuentan solo jugadores con 2 partidos o más, para que uno con un único
+      partido bueno no se cuele arriba del todo.
+    </p>
+  </section>
+
+  <section class="block">
+    <div class="section-head">
+      <h3>Estado de forma</h3>
+      <span class="cond">Media de sus dos últimos partidos</span>
+    </div>
+    <div class="subtabs" role="tablist">
+      <button role="tab" aria-selected="true" data-forma="calientes">Están que se salen</button>
+      <button role="tab" aria-selected="false" data-forma="frios">Están desaparecidos</button>
+    </div>
+    <div id="enRacha"></div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <span class="cond">Johnny's League · hecha por y para la liga</span>
+  <span class="cond" id="sellofecha"></span>
+</footer>
+
+<script>
+(function () {
+  var esc = function (s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  };
+
+  function cargar(ruta) {
+    return fetch(ruta, { cache: 'no-store' }).then(function (r) {
+      if (!r.ok) throw new Error(ruta);
+      return r.json();
+    });
+  }
+
+  function cajaFoto(url, respaldo) {
+    if (url) {
+      return '<div class="pic"><img src="' + esc(url) + '" alt="" loading="lazy" ' +
+             'onerror="this.parentNode.textContent=\'' + esc(respaldo || '·') + '\'"></div>';
+    }
+    return '<div class="pic">' + esc(respaldo || '·') + '</div>';
+  }
+
+  var iniciales = function (nombre) {
+    return String(nombre || '').split(/\s+/).filter(Boolean).slice(0,2)
+      .map(function(p){return p[0];}).join('').toUpperCase();
+  };
+
+  function tiraRacha(racha) {
+    if (!racha || !racha.length) return '';
+    return '<div class="racha-mini">' + racha.slice(0, 4).map(function (v) {
+      var clase = v < 2 ? 'mala' : (v < 6 ? 'floja' : 'buena');
+      return '<span class="' + clase + '">' + esc(v) + '</span>';
+    }).join('') + '</div>';
+  }
+
+  function etiquetaTitular(j) {
+    if (j.rachaTitular >= 3) {
+      return '<span class="titular-tag si">Fijo · ' + j.rachaTitular + ' seguidas</span>';
+    }
+    if (j.rachaTitular >= 1) {
+      return '<span class="titular-tag duda">Titular · ' + j.rachaTitular + '</span>';
+    }
+    if (j.ultimoMinutos != null && j.ultimoMinutos > 0) {
+      return '<span class="titular-tag duda">Entró ' + j.ultimoMinutos + "'" + '</span>';
+    }
+    return '<span class="titular-tag no">No jugó</span>';
+  }
+
+  function filaJugador(j, i, campo, sufijo, clase) {
+    return '<div class="jug-fila' + (i === 0 ? ' top' : '') + '">' +
+      '<span class="num">' + (i + 1) + '</span>' +
+      cajaFoto(j.foto, iniciales(j.nombre)) +
+      '<div>' +
+        '<div class="nom">' + esc(j.nombre) + '</div>' +
+        '<div class="sub">' + esc([j.equipoReal, j.posicion].filter(Boolean).join(' · ')) + '</div>' +
+        '<div class="sub">' + esc(j.presidente || 'Sin presidente') + '</div>' +
+        tiraRacha(j.racha) +
+        etiquetaTitular(j) +
+      '</div>' +
+      '<div class="cifra ' + (clase || '') + '">' + esc(j[campo]) +
+        '<small>' + esc(sufijo) + '</small></div>' +
+    '</div>';
+  }
+
+  /* ---------- Gangas del mercado ---------- */
+  function pintarGangas(gangas) {
+    var cont = document.getElementById('gangas');
+    if (!gangas || !gangas.length) {
+      cont.innerHTML = '<div class="aviso-suave">Ahora mismo no hay ninguna ganga clara en el mercado libre. Esto se revisa solo en cada actualización.</div>';
+      return;
+    }
+    cont.innerHTML = '<div class="gangas">' + gangas.map(function (g) {
+      return '<div class="ganga">' +
+        '<span class="et">Rinde un ' + esc(g.ventaja) + '% más que la media</span>' +
+        '<div class="cab">' + cajaFoto(g.foto, iniciales(g.nombre)) +
+        '<div class="nom">' + esc(g.nombre) + '</div></div>' +
+        '<div class="detalle">Cuesta <b>' + esc(g.precio) + '</b> y lleva ' +
+        '<b>' + esc(g.media) + ' puntos de media</b>. ' +
+        esc([g.equipoReal, g.posicion].filter(Boolean).join(' · ')) + '</div>' +
+      '</div>';
+    }).join('') + '</div>';
+  }
+
+  /* ---------- Arranque ---------- */
+  var datos = { valorJusto: null, enRacha: null };
+
+  function pintarValorJusto(cual) {
+    var lista = (datos.valorJusto || {})[cual] || [];
+    var cont = document.getElementById('valorJusto');
+    if (!lista.length) {
+      cont.innerHTML = '<div class="aviso-suave">Todavía no hay suficientes partidos jugados para este ranking.</div>';
+      return;
+    }
+    var clase = cual === 'chollos' ? 'buena' : 'mala';
+    cont.innerHTML = '<div class="lista-jug">' + lista.map(function (j, i) {
+      return filaJugador(j, i, 'puntosPorMillon', 'pts por millón', clase);
+    }).join('') + '</div>';
+  }
+
+  function pintarEnRacha(cual) {
+    var lista = (datos.enRacha || {})[cual] || [];
+    var cont = document.getElementById('enRacha');
+    if (!lista.length) {
+      cont.innerHTML = '<div class="aviso-suave">Todavía no hay suficientes partidos jugados para medir el estado de forma.</div>';
+      return;
+    }
+    var clase = cual === 'calientes' ? 'buena' : 'mala';
+    cont.innerHTML = '<div class="lista-jug">' + lista.map(function (j, i) {
+      return filaJugador(j, i, 'mediaReciente', 'media últimos 2', clase);
+    }).join('') + '</div>';
+  }
+
+  cargar('data/liga.json').then(function (liga) {
+    document.getElementById('jornadaNum').textContent =
+      String(liga.jornadasJugadas || '—').padStart(2, '0');
+
+    datos.valorJusto = liga.valorJusto;
+    datos.enRacha = liga.enRacha;
+
+    var total = (liga.jugadores || []).length;
+    document.getElementById('pieTotal').textContent =
+      total ? total + ' jugadores analizados' : '';
+
+    pintarGangas(liga.gangas);
+    pintarValorJusto('chollos');
+    pintarEnRacha('calientes');
+
+    if (liga.actualizado) {
+      var f = new Date(liga.actualizado);
+      document.getElementById('sellofecha').textContent =
+        'Datos actualizados el ' + f.toLocaleDateString('es-ES') + ' a las ' +
+        f.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
+    }
+  }).catch(function () {
+    document.getElementById('gangas').innerHTML =
+      '<div class="aviso-suave">No se han podido cargar los datos. Comprueba que exista data/liga.json.</div>';
+  });
+
+  document.querySelectorAll('[data-lista]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('[data-lista]').forEach(function (b) { b.setAttribute('aria-selected', 'false'); });
+      btn.setAttribute('aria-selected', 'true');
+      pintarValorJusto(btn.dataset.lista);
+    });
+  });
+
+  document.querySelectorAll('[data-forma]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('[data-forma]').forEach(function (b) { b.setAttribute('aria-selected', 'false'); });
+      btn.setAttribute('aria-selected', 'true');
+      pintarEnRacha(btn.dataset.forma);
+    });
+  });
+})();
+</script>
+</body>
+</html>

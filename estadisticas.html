@@ -47,6 +47,33 @@
   .aviso-suave { background:var(--navy-soft); border-left:3px solid var(--gold-dim); padding:16px 18px;
     font-size:0.92rem; color:rgba(247,247,245,0.82); }
 
+  /* Termómetro de la liga */
+  .termometro { display:grid; gap:10px; }
+  .term-linea { background:var(--navy-soft); padding:15px 18px; display:flex; align-items:flex-start; gap:13px;
+    border-left:3px solid var(--gold-dim); font-size:0.96rem; color:rgba(247,247,245,0.9); line-height:1.45; }
+  .term-linea .icono { font-family:'Anton',sans-serif; font-size:0.72rem; letter-spacing:0.06em;
+    text-transform:uppercase; color:var(--navy); background:var(--gold-dim); padding:3px 9px;
+    border-radius:3px; flex-shrink:0; margin-top:2px; }
+  .term-linea.liderato { border-left-color:var(--gold); }
+  .term-linea.liderato .icono { background:var(--gold); }
+  .term-linea.colista { border-left-color:#E8746A; }
+  .term-linea.colista .icono { background:#E8746A; color:#fff; }
+  .term-linea.racha { border-left-color:#6FCF97; }
+  .term-linea.racha .icono { background:#6FCF97; }
+  .term-linea.remontada { border-left-color:#7EA9D9; }
+  .term-linea.remontada .icono { background:#7EA9D9; }
+
+  /* Mapa de amenazas */
+  .amenazas { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; }
+  .amenaza { background:var(--navy-soft); padding:20px; border-top:3px solid #E8746A; }
+  .amenaza .puesto-am { font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.06em;
+    text-transform:uppercase; font-size:0.68rem; color:var(--grey); }
+  .amenaza .equipo { display:flex; align-items:center; gap:12px; margin:11px 0 12px; }
+  .amenaza .equipo .avatar { width:44px; height:44px; }
+  .amenaza .equipo .nom { font-family:'Anton',sans-serif; font-size:1.1rem; line-height:1.1; }
+  .amenaza .motivo { font-size:0.86rem; color:rgba(247,247,245,0.8); line-height:1.45; }
+  .amenaza .motivo b { color:#E8746A; }
+
   /* Once Ideal */
   .once-cabecera { display:flex; justify-content:space-between; align-items:baseline;
     flex-wrap:wrap; gap:8px; margin-bottom:14px; }
@@ -115,6 +142,7 @@
       <a href="index.html#mercado">Mercado</a>
       <a href="presidentes.html">Presidentes</a>
       <a href="estadisticas.html" class="activo">Estadísticas</a>
+      <a href="jugadores.html">Jugadores</a>
       <a href="calendario.html">Calendario</a>
       <a href="comparador.html">Comparador</a>
       <a href="index.html#cronicas">Crónicas</a>
@@ -136,6 +164,14 @@
   </section>
 
   <section class="block" style="border-top:none; padding-top:0;">
+    <div class="section-head">
+      <h3>El termómetro de la liga</h3>
+      <span class="cond">Lo que está pasando esta semana</span>
+    </div>
+    <div id="termometro"></div>
+  </section>
+
+  <section class="block">
     <div class="section-head">
       <h3>Once Ideal de la jornada</h3>
       <span class="cond" id="onceJornadaEtiqueta">—</span>
@@ -172,6 +208,14 @@
       <span class="cond">Mayor remontada y mayor caída</span>
     </div>
     <div id="movimientos"></div>
+  </section>
+
+  <section class="block">
+    <div class="section-head">
+      <h3>Mapa de amenazas</h3>
+      <span class="cond">Quién está subiendo más de nivel ahora mismo</span>
+    </div>
+    <div id="amenazas"></div>
   </section>
 
 </main>
@@ -409,6 +453,53 @@
     cont.innerHTML = '<div class="premios">' + tarjetas.join('') + '</div>';
   }
 
+  /* ---------- Termómetro de la liga ---------- */
+  function pintarTermometro(titulares) {
+    var cont = document.getElementById('termometro');
+    if (!titulares || !titulares.length) {
+      cont.innerHTML = '<div class="aviso-suave">Todavía no hay suficiente movimiento en la liga para contar nada. Se irá llenando según avance la temporada.</div>';
+      return;
+    }
+    var ETIQUETAS = {
+      liderato: 'Arriba',
+      colista: 'Abajo',
+      racha: 'Racha',
+      remontada: 'Golpe',
+      mercado: 'Mercado'
+    };
+    cont.innerHTML = '<div class="termometro">' + titulares.map(function (t) {
+      return '<div class="term-linea ' + esc(t.tipo) + '">' +
+        '<span class="icono">' + esc(ETIQUETAS[t.tipo] || '·') + '</span>' +
+        '<span>' + esc(t.texto) + '</span></div>';
+    }).join('') + '</div>';
+  }
+
+  /* ---------- Mapa de amenazas ---------- */
+  function pintarAmenazas(amenazas) {
+    var cont = document.getElementById('amenazas');
+    if (!amenazas || !amenazas.length) {
+      cont.innerHTML = '<div class="aviso-suave">Ningún rival está apretando ahora mismo. En cuanto se cierre una jornada nueva y alguien pegue un tirón, aparecerá aquí.</div>';
+      return;
+    }
+    cont.innerHTML = '<div class="amenazas">' + amenazas.map(function (a, i) {
+      var motivos = [];
+      if (a.puestos > 0) {
+        motivos.push('Ha subido <b>' + a.puestos + (a.puestos === 1 ? ' puesto' : ' puestos') + '</b> en la última jornada.');
+      }
+      if (a.sobreMedia > 0) {
+        motivos.push('Sumó <b>' + a.sobreMedia + ' puntos</b> por encima de la media de la liga.');
+      }
+      if (!motivos.length) motivos.push('Va de menos a más.');
+
+      return '<div class="amenaza">' +
+        '<span class="puesto-am">Amenaza nº' + (i + 1) + '</span>' +
+        '<div class="equipo">' + avatar(a.escudo, iniciales(a.equipo)) +
+        '<div class="nom">' + esc(a.equipo) + '</div></div>' +
+        '<div class="motivo">' + motivos.join(' ') + '</div>' +
+      '</div>';
+    }).join('') + '</div>';
+  }
+
   /* ---------- Arranque ---------- */
   var historicoGlobal = [];
   var campoActivo = 'puntos';
@@ -419,9 +510,11 @@
     historicoGlobal = res[1] || [];
 
     document.getElementById('jornadaNum').textContent = String(liga.jornadasJugadas || '—').padStart(2, '0');
+    pintarTermometro(liga.termometro);
     pintarOnceIdeal(liga.onceIdeal);
     pintarPremios(liga.premios);
     pintarMovimientos(liga.movimientos);
+    pintarAmenazas(liga.amenazas);
     dibujarGrafico(historicoGlobal, campoActivo, equipoActivo);
 
     if (liga.actualizado) {
