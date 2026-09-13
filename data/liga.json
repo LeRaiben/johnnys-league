@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-13T13:42:54.902Z",
+  "actualizado": "2026-09-13T13:56:51.768Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 5,
   "jornadaEnJuego": true,
@@ -61,8 +61,8 @@
       "escudoVisitante": "https://cdn.biwenger.com/i/t/65.png",
       "fecha": "2026-09-13T12:00:00.000Z",
       "golesLocal": 1,
-      "golesVisitante": 0,
-      "estado": "secondTime"
+      "golesVisitante": 1,
+      "estado": "injuryTime"
     },
     {
       "local": "Levante",
@@ -179,8 +179,8 @@
       "iniciales": "SF",
       "escudo": "https://cdn.biwenger.com/i/u/14027560.png",
       "puntos": 210,
-      "valor": "45,9 M",
-      "valorBruto": 45940000,
+      "valor": "44,1 M",
+      "valorBruto": 44140000,
       "esTuyo": false,
       "puntosJornada": 46,
       "jugadosJornada": 4,
@@ -1332,19 +1332,6 @@
     },
     {
       "tipo": "venta",
-      "nombre": "Zubeldia",
-      "foto": "https://cdn.biwenger.com/i/p/8376.png",
-      "posicion": "Defensa",
-      "equipoReal": "Real Sociedad",
-      "vendedor": "Seif fc",
-      "pide": "1,8 M",
-      "pideBruto": 1830000,
-      "valorMercado": "1,8 M",
-      "valorBruto": 1800000,
-      "diferencia": 30000
-    },
-    {
-      "tipo": "venta",
       "nombre": "Cabrera",
       "foto": "https://cdn.biwenger.com/i/p/11800.png",
       "posicion": "Defensa",
@@ -1980,8 +1967,8 @@
       "puestoGasto": 8,
       "puestoActividad": 10,
       "vsMediaPuntos": 26,
-      "vsMediaEficiencia": 36,
-      "vsMediaValor": -10,
+      "vsMediaEficiencia": 35,
+      "vsMediaValor": -9,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
@@ -2021,7 +2008,7 @@
       "puestoGasto": 2,
       "puestoActividad": 6,
       "vsMediaPuntos": 24,
-      "vsMediaEficiencia": 19,
+      "vsMediaEficiencia": 18,
       "vsMediaValor": 2,
       "tendencia": {
         "puestos": 0,
@@ -2113,10 +2100,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/14027560.png",
       "iniciales": "SF",
       "puntos": 210,
-      "valor": "45,9 M",
-      "valorBruto": 45940000,
+      "valor": "44,1 M",
+      "valorBruto": 44140000,
       "esTuyo": false,
-      "puntosPorMillon": 4.57,
+      "puntosPorMillon": 4.76,
       "mediaJornada": 42,
       "clausulasHechas": 2,
       "clausulasSufridas": 2,
@@ -2128,7 +2115,7 @@
       "balance": "−21,3 M",
       "balanceBruto": -21275000,
       "sobreprecioMedio": 35,
-      "enVenta": 10,
+      "enVenta": 9,
       "fichajeEstrella": {
         "nombre": "Bellingham",
         "precio": "23,1 M",
@@ -2136,12 +2123,12 @@
       },
       "total": 12,
       "puestoEficiencia": 5,
-      "puestoValor": 5,
+      "puestoValor": 6,
       "puestoGasto": 4,
       "puestoActividad": 8,
       "vsMediaPuntos": 11,
-      "vsMediaEficiencia": 7,
-      "vsMediaValor": 1,
+      "vsMediaEficiencia": 11,
+      "vsMediaValor": -2,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
@@ -2173,12 +2160,12 @@
       "fichajeEstrella": null,
       "total": 12,
       "puestoEficiencia": 6,
-      "puestoValor": 6,
+      "puestoValor": 5,
       "puestoGasto": 10,
       "puestoActividad": 11,
       "vsMediaPuntos": 2,
-      "vsMediaEficiencia": -1,
-      "vsMediaValor": 0,
+      "vsMediaEficiencia": -2,
+      "vsMediaValor": 1,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
@@ -2219,7 +2206,7 @@
       "puestoActividad": 2,
       "vsMediaPuntos": 0,
       "vsMediaEficiencia": -24,
-      "vsMediaValor": 26,
+      "vsMediaValor": 27,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
@@ -2255,8 +2242,8 @@
       "puestoGasto": 11,
       "puestoActividad": 9,
       "vsMediaPuntos": 0,
-      "vsMediaEficiencia": -17,
-      "vsMediaValor": 17,
+      "vsMediaEficiencia": -18,
+      "vsMediaValor": 18,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
@@ -2297,7 +2284,7 @@
       "puestoActividad": 1,
       "vsMediaPuntos": -4,
       "vsMediaEficiencia": -31,
-      "vsMediaValor": 35,
+      "vsMediaValor": 36,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
@@ -2338,7 +2325,7 @@
       "puestoActividad": 3,
       "vsMediaPuntos": -7,
       "vsMediaEficiencia": -3,
-      "vsMediaValor": -7,
+      "vsMediaValor": -6,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
@@ -2378,7 +2365,7 @@
       "puestoGasto": 6,
       "puestoActividad": 5,
       "vsMediaPuntos": -31,
-      "vsMediaEficiencia": -22,
+      "vsMediaEficiencia": -23,
       "vsMediaValor": -14,
       "tendencia": {
         "puestos": 0,
@@ -6946,32 +6933,6 @@
         "nombre": "Barrenetxea",
         "posicion": "Centrocampista",
         "foto": "https://cdn.biwenger.com/i/p/2602.png",
-        "equipoReal": "Real Sociedad",
-        "jornadas": [
-          {
-            "jornada": "Round 5",
-            "rival": "Atlético",
-            "esLocal": true,
-            "dificultad": 48
-          },
-          {
-            "jornada": "Round 7",
-            "rival": "Valencia",
-            "esLocal": false,
-            "dificultad": 9
-          },
-          {
-            "jornada": "Round 8",
-            "rival": "Deportivo",
-            "esLocal": true,
-            "dificultad": 61
-          }
-        ]
-      },
-      {
-        "nombre": "Zubeldia",
-        "posicion": "Defensa",
-        "foto": "https://cdn.biwenger.com/i/p/8376.png",
         "equipoReal": "Real Sociedad",
         "jornadas": [
           {
