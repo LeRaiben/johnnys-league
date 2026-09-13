@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-13T10:56:10.363Z",
+  "actualizado": "2026-09-13T11:12:43.774Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 5,
   "jornadaEnJuego": true,
@@ -243,8 +243,8 @@
       "iniciales": "LV",
       "escudo": "https://cdn.biwenger.com/i/u/13934763.png",
       "puntos": 182,
-      "valor": "65,1 M",
-      "valorBruto": 65110000,
+      "valor": "61,4 M",
+      "valorBruto": 61420000,
       "esTuyo": false,
       "puntosJornada": 34,
       "jugadosJornada": 3,
@@ -1085,19 +1085,6 @@
     },
     {
       "tipo": "venta",
-      "nombre": "Borja Iglesias",
-      "foto": "https://cdn.biwenger.com/i/p/2009.png",
-      "posicion": "Delantero",
-      "equipoReal": "Celta",
-      "vendedor": "Las Víboras FC",
-      "pide": "3,7 M",
-      "pideBruto": 3670000,
-      "valorMercado": "3,7 M",
-      "valorBruto": 3690000,
-      "diferencia": -20000
-    },
-    {
-      "tipo": "venta",
       "nombre": "Arguibide",
       "foto": "https://cdn.biwenger.com/i/p/10292.png",
       "posicion": "Defensa",
@@ -1277,6 +1264,19 @@
       "valorMercado": "0,6 M",
       "valorBruto": 590000,
       "diferencia": -100000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Parrott",
+      "foto": "https://cdn.biwenger.com/i/p/42748.png",
+      "posicion": "Delantero",
+      "equipoReal": "Betis",
+      "vendedor": "Las Víboras FC",
+      "pide": "6,5 M",
+      "pideBruto": 6470000,
+      "valorMercado": "6,5 M",
+      "valorBruto": 6470000,
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -2009,7 +2009,7 @@
       "puestoActividad": 6,
       "vsMediaPuntos": 24,
       "vsMediaEficiencia": 19,
-      "vsMediaValor": 1,
+      "vsMediaValor": 2,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
@@ -2045,7 +2045,7 @@
       "puestoGasto": 9,
       "puestoActividad": 7,
       "vsMediaPuntos": 18,
-      "vsMediaEficiencia": 47,
+      "vsMediaEficiencia": 46,
       "vsMediaValor": -22,
       "tendencia": {
         "puestos": 0,
@@ -2086,7 +2086,7 @@
       "puestoGasto": 7,
       "puestoActividad": 4,
       "vsMediaPuntos": 18,
-      "vsMediaEficiencia": 45,
+      "vsMediaEficiencia": 44,
       "vsMediaValor": -21,
       "tendencia": {
         "puestos": 0,
@@ -2128,7 +2128,7 @@
       "puestoActividad": 8,
       "vsMediaPuntos": 11,
       "vsMediaEficiencia": 7,
-      "vsMediaValor": 0,
+      "vsMediaValor": 1,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
@@ -2205,7 +2205,7 @@
       "puestoGasto": 1,
       "puestoActividad": 2,
       "vsMediaPuntos": 0,
-      "vsMediaEficiencia": -23,
+      "vsMediaEficiencia": -24,
       "vsMediaValor": 26,
       "tendencia": {
         "puestos": 0,
@@ -2256,10 +2256,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/13934763.png",
       "iniciales": "LV",
       "puntos": 182,
-      "valor": "65,1 M",
-      "valorBruto": 65110000,
+      "valor": "61,4 M",
+      "valorBruto": 61420000,
       "esTuyo": false,
-      "puntosPorMillon": 2.8,
+      "puntosPorMillon": 2.96,
       "mediaJornada": 36.4,
       "clausulasHechas": 10,
       "clausulasSufridas": 3,
@@ -2283,8 +2283,8 @@
       "puestoGasto": 3,
       "puestoActividad": 1,
       "vsMediaPuntos": -4,
-      "vsMediaEficiencia": -34,
-      "vsMediaValor": 42,
+      "vsMediaEficiencia": -31,
+      "vsMediaValor": 35,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
@@ -2324,7 +2324,7 @@
       "puestoGasto": 5,
       "puestoActividad": 3,
       "vsMediaPuntos": -7,
-      "vsMediaEficiencia": -2,
+      "vsMediaEficiencia": -3,
       "vsMediaValor": -7,
       "tendencia": {
         "puestos": 0,
@@ -2403,7 +2403,7 @@
       "puestoActividad": 12,
       "vsMediaPuntos": -57,
       "vsMediaEficiencia": -54,
-      "vsMediaValor": -10,
+      "vsMediaValor": -9,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
@@ -6468,32 +6468,6 @@
             "rival": "Betis",
             "esLocal": true,
             "dificultad": 49
-          }
-        ]
-      },
-      {
-        "nombre": "Borja Iglesias",
-        "posicion": "Delantero",
-        "foto": "https://cdn.biwenger.com/i/p/2009.png",
-        "equipoReal": "Celta",
-        "jornadas": [
-          {
-            "jornada": "Round 5",
-            "rival": "Málaga",
-            "esLocal": true,
-            "dificultad": 21
-          },
-          {
-            "jornada": "Round 7",
-            "rival": "Racing",
-            "esLocal": true,
-            "dificultad": 46
-          },
-          {
-            "jornada": "Round 8",
-            "rival": "Elche",
-            "esLocal": false,
-            "dificultad": 21
           }
         ]
       },
