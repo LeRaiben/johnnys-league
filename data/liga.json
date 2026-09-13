@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-13T14:14:17.211Z",
+  "actualizado": "2026-09-13T14:30:38.534Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 5,
   "jornadaEnJuego": true,
@@ -70,9 +70,9 @@
       "escudoLocal": "https://cdn.biwenger.com/i/t/10.png",
       "escudoVisitante": "https://cdn.biwenger.com/i/t/3.png",
       "fecha": "2026-09-13T14:15:00.000Z",
-      "golesLocal": null,
-      "golesVisitante": null,
-      "estado": "preview"
+      "golesLocal": 0,
+      "golesVisitante": 1,
+      "estado": "firstTime"
     },
     {
       "local": "Getafe",
@@ -3067,13 +3067,13 @@
             "jornada": "Round 5",
             "rival": "Getafe",
             "esLocal": false,
-            "dificultad": 29
+            "dificultad": 27
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
-            "dificultad": 60
+            "dificultad": 59
           },
           {
             "jornada": "Round 7",
@@ -3185,7 +3185,7 @@
             "jornada": "Round 7",
             "rival": "Málaga",
             "esLocal": true,
-            "dificultad": 19
+            "dificultad": 21
           }
         ]
       },
@@ -3303,19 +3303,19 @@
             "jornada": "Round 5",
             "rival": "Barcelona",
             "esLocal": true,
-            "dificultad": 94
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Athletic",
             "esLocal": true,
-            "dificultad": 53
+            "dificultad": 52
           },
           {
             "jornada": "Round 7",
             "rival": "Villarreal",
             "esLocal": false,
-            "dificultad": 23
+            "dificultad": 21
           }
         ]
       },
@@ -3367,7 +3367,7 @@
             "jornada": "Round 7",
             "rival": "Málaga",
             "esLocal": true,
-            "dificultad": 19
+            "dificultad": 21
           }
         ]
       },
@@ -3381,19 +3381,19 @@
             "jornada": "Round 5",
             "rival": "Levante",
             "esLocal": false,
-            "dificultad": 44
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Racing",
             "esLocal": true,
-            "dificultad": 31
+            "dificultad": 30
           },
           {
             "jornada": "Round 7",
             "rival": "Sevilla",
             "esLocal": false,
-            "dificultad": 48
+            "dificultad": 47
           }
         ]
       },
@@ -3407,13 +3407,13 @@
             "jornada": "Round 5",
             "rival": "Getafe",
             "esLocal": false,
-            "dificultad": 29
+            "dificultad": 27
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
-            "dificultad": 60
+            "dificultad": 59
           },
           {
             "jornada": "Round 7",
@@ -3905,13 +3905,13 @@
             "jornada": "Round 5",
             "rival": "Getafe",
             "esLocal": false,
-            "dificultad": 29
+            "dificultad": 27
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
-            "dificultad": 60
+            "dificultad": 59
           },
           {
             "jornada": "Round 7",
@@ -4219,19 +4219,19 @@
             "jornada": "Round 5",
             "rival": "Barcelona",
             "esLocal": true,
-            "dificultad": 94
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Athletic",
             "esLocal": true,
-            "dificultad": 53
+            "dificultad": 52
           },
           {
             "jornada": "Round 7",
             "rival": "Villarreal",
             "esLocal": false,
-            "dificultad": 23
+            "dificultad": 21
           }
         ]
       },
@@ -4439,7 +4439,7 @@
             "jornada": "Round 7",
             "rival": "Málaga",
             "esLocal": true,
-            "dificultad": 19
+            "dificultad": 21
           }
         ]
       },
@@ -4479,13 +4479,13 @@
             "jornada": "Round 5",
             "rival": "Getafe",
             "esLocal": false,
-            "dificultad": 29
+            "dificultad": 27
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
-            "dificultad": 60
+            "dificultad": 59
           },
           {
             "jornada": "Round 7",
@@ -4715,19 +4715,19 @@
             "jornada": "Round 5",
             "rival": "Barcelona",
             "esLocal": true,
-            "dificultad": 94
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Athletic",
             "esLocal": true,
-            "dificultad": 53
+            "dificultad": 52
           },
           {
             "jornada": "Round 7",
             "rival": "Villarreal",
             "esLocal": false,
-            "dificultad": 23
+            "dificultad": 21
           }
         ]
       },
@@ -4935,7 +4935,7 @@
             "jornada": "Round 7",
             "rival": "Málaga",
             "esLocal": true,
-            "dificultad": 19
+            "dificultad": 21
           }
         ]
       },
@@ -5055,19 +5055,19 @@
             "jornada": "Round 5",
             "rival": "Barcelona",
             "esLocal": true,
-            "dificultad": 94
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Athletic",
             "esLocal": true,
-            "dificultad": 53
+            "dificultad": 52
           },
           {
             "jornada": "Round 7",
             "rival": "Villarreal",
             "esLocal": false,
-            "dificultad": 23
+            "dificultad": 21
           }
         ]
       },
@@ -5171,7 +5171,7 @@
             "jornada": "Round 7",
             "rival": "Málaga",
             "esLocal": true,
-            "dificultad": 19
+            "dificultad": 21
           }
         ]
       },
@@ -5185,13 +5185,13 @@
             "jornada": "Round 5",
             "rival": "Getafe",
             "esLocal": false,
-            "dificultad": 29
+            "dificultad": 27
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
-            "dificultad": 60
+            "dificultad": 59
           },
           {
             "jornada": "Round 7",
@@ -5343,13 +5343,13 @@
             "jornada": "Round 5",
             "rival": "Getafe",
             "esLocal": false,
-            "dificultad": 29
+            "dificultad": 27
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
-            "dificultad": 60
+            "dificultad": 59
           },
           {
             "jornada": "Round 7",
@@ -5492,7 +5492,7 @@
             "jornada": "Round 7",
             "rival": "Málaga",
             "esLocal": true,
-            "dificultad": 19
+            "dificultad": 21
           }
         ]
       },
@@ -5558,19 +5558,19 @@
             "jornada": "Round 5",
             "rival": "Levante",
             "esLocal": false,
-            "dificultad": 44
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Racing",
             "esLocal": true,
-            "dificultad": 31
+            "dificultad": 30
           },
           {
             "jornada": "Round 7",
             "rival": "Sevilla",
             "esLocal": false,
-            "dificultad": 48
+            "dificultad": 47
           }
         ]
       },
@@ -5624,7 +5624,7 @@
             "jornada": "Round 7",
             "rival": "Málaga",
             "esLocal": true,
-            "dificultad": 19
+            "dificultad": 21
           }
         ]
       },
@@ -5820,13 +5820,13 @@
             "jornada": "Round 5",
             "rival": "Getafe",
             "esLocal": false,
-            "dificultad": 29
+            "dificultad": 27
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
-            "dificultad": 60
+            "dificultad": 59
           },
           {
             "jornada": "Round 7",
@@ -5952,19 +5952,19 @@
             "jornada": "Round 5",
             "rival": "Levante",
             "esLocal": false,
-            "dificultad": 44
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Racing",
             "esLocal": true,
-            "dificultad": 31
+            "dificultad": 30
           },
           {
             "jornada": "Round 7",
             "rival": "Sevilla",
             "esLocal": false,
-            "dificultad": 48
+            "dificultad": 47
           }
         ]
       },
@@ -5978,19 +5978,19 @@
             "jornada": "Round 5",
             "rival": "Levante",
             "esLocal": false,
-            "dificultad": 44
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Racing",
             "esLocal": true,
-            "dificultad": 31
+            "dificultad": 30
           },
           {
             "jornada": "Round 7",
             "rival": "Sevilla",
             "esLocal": false,
-            "dificultad": 48
+            "dificultad": 47
           }
         ]
       },
@@ -6004,13 +6004,13 @@
             "jornada": "Round 5",
             "rival": "Getafe",
             "esLocal": false,
-            "dificultad": 29
+            "dificultad": 27
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
-            "dificultad": 60
+            "dificultad": 59
           },
           {
             "jornada": "Round 7",
@@ -6455,13 +6455,13 @@
             "jornada": "Round 5",
             "rival": "Getafe",
             "esLocal": false,
-            "dificultad": 29
+            "dificultad": 27
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
-            "dificultad": 60
+            "dificultad": 59
           },
           {
             "jornada": "Round 7",
@@ -6507,13 +6507,13 @@
             "jornada": "Round 5",
             "rival": "Getafe",
             "esLocal": false,
-            "dificultad": 29
+            "dificultad": 27
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
-            "dificultad": 60
+            "dificultad": 59
           },
           {
             "jornada": "Round 7",
@@ -6533,19 +6533,19 @@
             "jornada": "Round 5",
             "rival": "Barcelona",
             "esLocal": true,
-            "dificultad": 94
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Athletic",
             "esLocal": true,
-            "dificultad": 53
+            "dificultad": 52
           },
           {
             "jornada": "Round 7",
             "rival": "Villarreal",
             "esLocal": false,
-            "dificultad": 23
+            "dificultad": 21
           }
         ]
       },
@@ -6559,19 +6559,19 @@
             "jornada": "Round 5",
             "rival": "Levante",
             "esLocal": false,
-            "dificultad": 44
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Racing",
             "esLocal": true,
-            "dificultad": 31
+            "dificultad": 30
           },
           {
             "jornada": "Round 7",
             "rival": "Sevilla",
             "esLocal": false,
-            "dificultad": 48
+            "dificultad": 47
           }
         ]
       },
@@ -6663,19 +6663,19 @@
             "jornada": "Round 5",
             "rival": "Levante",
             "esLocal": false,
-            "dificultad": 44
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Racing",
             "esLocal": true,
-            "dificultad": 31
+            "dificultad": 30
           },
           {
             "jornada": "Round 7",
             "rival": "Sevilla",
             "esLocal": false,
-            "dificultad": 48
+            "dificultad": 47
           }
         ]
       },
@@ -6748,19 +6748,19 @@
             "jornada": "Round 5",
             "rival": "Barcelona",
             "esLocal": true,
-            "dificultad": 94
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Athletic",
             "esLocal": true,
-            "dificultad": 53
+            "dificultad": 52
           },
           {
             "jornada": "Round 7",
             "rival": "Villarreal",
             "esLocal": false,
-            "dificultad": 23
+            "dificultad": 21
           }
         ]
       },
@@ -6774,19 +6774,19 @@
             "jornada": "Round 5",
             "rival": "Levante",
             "esLocal": false,
-            "dificultad": 44
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Racing",
             "esLocal": true,
-            "dificultad": 31
+            "dificultad": 30
           },
           {
             "jornada": "Round 7",
             "rival": "Sevilla",
             "esLocal": false,
-            "dificultad": 48
+            "dificultad": 47
           }
         ]
       },
@@ -6800,13 +6800,13 @@
             "jornada": "Round 5",
             "rival": "Getafe",
             "esLocal": false,
-            "dificultad": 29
+            "dificultad": 27
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
-            "dificultad": 60
+            "dificultad": 59
           },
           {
             "jornada": "Round 7",
@@ -6861,19 +6861,19 @@
             "jornada": "Round 5",
             "rival": "Barcelona",
             "esLocal": true,
-            "dificultad": 94
+            "dificultad": null
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Athletic",
             "esLocal": true,
-            "dificultad": 53
+            "dificultad": 52
           },
           {
             "jornada": "Round 7",
             "rival": "Villarreal",
             "esLocal": false,
-            "dificultad": 23
+            "dificultad": 21
           }
         ]
       },
@@ -7069,13 +7069,13 @@
             "jornada": "Round 5",
             "rival": "Getafe",
             "esLocal": false,
-            "dificultad": 29
+            "dificultad": 27
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
-            "dificultad": 60
+            "dificultad": 59
           },
           {
             "jornada": "Round 7",
