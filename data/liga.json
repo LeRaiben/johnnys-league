@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-13T14:56:22.738Z",
+  "actualizado": "2026-09-13T15:13:50.032Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 5,
   "jornadaEnJuego": true,
@@ -72,7 +72,7 @@
       "fecha": "2026-09-13T14:15:00.000Z",
       "golesLocal": 0,
       "golesVisitante": 2,
-      "estado": "firstTime"
+      "estado": "break"
     },
     {
       "local": "Getafe",
@@ -118,10 +118,10 @@
       "valor": "41,0 M",
       "valorBruto": 41010000,
       "esTuyo": false,
-      "puntosJornada": 31,
-      "jugadosJornada": 6,
+      "puntosJornada": 36,
+      "jugadosJornada": 7,
       "alineadosJornada": 11,
-      "puntosProvisional": 269
+      "puntosProvisional": 274
     },
     {
       "posicion": 2,
@@ -134,10 +134,10 @@
       "valor": "46,1 M",
       "valorBruto": 46100000,
       "esTuyo": false,
-      "puntosJornada": 52,
-      "jugadosJornada": 3,
+      "puntosJornada": 57,
+      "jugadosJornada": 6,
       "alineadosJornada": 11,
-      "puntosProvisional": 286
+      "puntosProvisional": 291
     },
     {
       "posicion": 3,
@@ -150,10 +150,10 @@
       "valor": "35,5 M",
       "valorBruto": 35490000,
       "esTuyo": true,
-      "puntosJornada": 3,
-      "jugadosJornada": 2,
+      "puntosJornada": 20,
+      "jugadosJornada": 4,
       "alineadosJornada": 11,
-      "puntosProvisional": 225
+      "puntosProvisional": 242
     },
     {
       "posicion": 4,
@@ -166,10 +166,10 @@
       "valor": "35,9 M",
       "valorBruto": 35930000,
       "esTuyo": false,
-      "puntosJornada": 18,
-      "jugadosJornada": 4,
+      "puntosJornada": 35,
+      "jugadosJornada": 6,
       "alineadosJornada": 11,
-      "puntosProvisional": 240
+      "puntosProvisional": 257
     },
     {
       "posicion": 5,
@@ -230,10 +230,10 @@
       "valor": "53,3 M",
       "valorBruto": 53310000,
       "esTuyo": false,
-      "puntosJornada": 46,
-      "jugadosJornada": 6,
+      "puntosJornada": 53,
+      "jugadosJornada": 8,
       "alineadosJornada": 11,
-      "puntosProvisional": 234
+      "puntosProvisional": 241
     },
     {
       "posicion": 9,
@@ -246,10 +246,10 @@
       "valor": "61,4 M",
       "valorBruto": 61420000,
       "esTuyo": false,
-      "puntosJornada": 34,
-      "jugadosJornada": 3,
+      "puntosJornada": 36,
+      "jugadosJornada": 4,
       "alineadosJornada": 11,
-      "puntosProvisional": 216
+      "puntosProvisional": 218
     },
     {
       "posicion": 10,
@@ -262,10 +262,10 @@
       "valor": "42,4 M",
       "valorBruto": 42350000,
       "esTuyo": false,
-      "puntosJornada": 11,
-      "jugadosJornada": 2,
+      "puntosJornada": 14,
+      "jugadosJornada": 3,
       "alineadosJornada": 11,
-      "puntosProvisional": 187
+      "puntosProvisional": 190
     },
     {
       "posicion": 11,
@@ -278,10 +278,10 @@
       "valor": "39,1 M",
       "valorBruto": 39130000,
       "esTuyo": false,
-      "puntosJornada": 11,
-      "jugadosJornada": 3,
+      "puntosJornada": 19,
+      "jugadosJornada": 5,
       "alineadosJornada": 11,
-      "puntosProvisional": 141
+      "puntosProvisional": 149
     },
     {
       "posicion": 12,
@@ -294,10 +294,10 @@
       "valor": "41,3 M",
       "valorBruto": 41320000,
       "esTuyo": false,
-      "puntosJornada": 18,
-      "jugadosJornada": 4,
+      "puntosJornada": 29,
+      "jugadosJornada": 5,
       "alineadosJornada": 11,
-      "puntosProvisional": 100
+      "puntosProvisional": 111
     }
   ],
   "mercadoBiwenger": [
@@ -2472,7 +2472,7 @@
   "onceIdeal": {
     "jornada": "Jornada 4",
     "formacion": "4-3-3",
-    "total": 147,
+    "total": 138,
     "titulares": [
       {
         "nombre": "Álvaro Valles",
@@ -2486,20 +2486,6 @@
         ],
         "equipoReal": "Betis",
         "foto": "https://cdn.biwenger.com/i/p/30487.png",
-        "presidente": "",
-        "escudoPresidente": ""
-      },
-      {
-        "nombre": "Starfelt",
-        "posicion": "Defensa",
-        "puntos": 16,
-        "racha": [
-          16,
-          3,
-          1
-        ],
-        "equipoReal": "Celta",
-        "foto": "https://cdn.biwenger.com/i/p/31321.png",
         "presidente": "",
         "escudoPresidente": ""
       },
@@ -2545,6 +2531,20 @@
         ],
         "equipoReal": "Alavés",
         "foto": "https://cdn.biwenger.com/i/p/39924.png",
+        "presidente": "",
+        "escudoPresidente": ""
+      },
+      {
+        "nombre": "Natan",
+        "posicion": "Defensa",
+        "puntos": 7,
+        "racha": [
+          7,
+          4,
+          7
+        ],
+        "equipoReal": "Betis",
+        "foto": "https://cdn.biwenger.com/i/p/19614.png",
         "presidente": "",
         "escudoPresidente": ""
       },
@@ -2696,13 +2696,13 @@
             "jornada": "Round 5",
             "rival": "Betis",
             "esLocal": true,
-            "dificultad": 59
+            "dificultad": 58
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Málaga",
             "esLocal": false,
-            "dificultad": 28
+            "dificultad": 30
           },
           {
             "jornada": "Round 7",
@@ -3225,13 +3225,13 @@
             "jornada": "Round 5",
             "rival": "Betis",
             "esLocal": true,
-            "dificultad": 59
+            "dificultad": 58
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Málaga",
             "esLocal": false,
-            "dificultad": 28
+            "dificultad": 30
           },
           {
             "jornada": "Round 7",
@@ -3493,7 +3493,7 @@
             "jornada": "Round 6 (postponed)",
             "rival": "Osasuna",
             "esLocal": true,
-            "dificultad": 35
+            "dificultad": 34
           },
           {
             "jornada": "Round 7",
@@ -3519,7 +3519,7 @@
             "jornada": "Round 6 (postponed)",
             "rival": "Osasuna",
             "esLocal": true,
-            "dificultad": 35
+            "dificultad": 34
           },
           {
             "jornada": "Round 7",
@@ -3643,13 +3643,13 @@
             "jornada": "Round 5",
             "rival": "Atlético",
             "esLocal": true,
-            "dificultad": 48
+            "dificultad": 47
           },
           {
             "jornada": "Round 7",
             "rival": "Valencia",
             "esLocal": false,
-            "dificultad": 9
+            "dificultad": 8
           },
           {
             "jornada": "Round 8",
@@ -3753,7 +3753,7 @@
             "jornada": "Round 6 (postponed)",
             "rival": "Osasuna",
             "esLocal": true,
-            "dificultad": 35
+            "dificultad": 34
           },
           {
             "jornada": "Round 7",
@@ -3931,13 +3931,13 @@
             "jornada": "Round 5",
             "rival": "Betis",
             "esLocal": true,
-            "dificultad": 59
+            "dificultad": 58
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Málaga",
             "esLocal": false,
-            "dificultad": 28
+            "dificultad": 30
           },
           {
             "jornada": "Round 7",
@@ -4015,7 +4015,7 @@
             "jornada": "Round 6 (postponed)",
             "rival": "Osasuna",
             "esLocal": true,
-            "dificultad": 35
+            "dificultad": 34
           },
           {
             "jornada": "Round 7",
@@ -4061,13 +4061,13 @@
             "jornada": "Round 5",
             "rival": "Betis",
             "esLocal": true,
-            "dificultad": 59
+            "dificultad": 58
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Málaga",
             "esLocal": false,
-            "dificultad": 28
+            "dificultad": 30
           },
           {
             "jornada": "Round 7",
@@ -4199,7 +4199,7 @@
             "jornada": "Round 6 (postponed)",
             "rival": "Osasuna",
             "esLocal": true,
-            "dificultad": 35
+            "dificultad": 34
           },
           {
             "jornada": "Round 7",
@@ -4329,7 +4329,7 @@
             "jornada": "Round 6 (postponed)",
             "rival": "Osasuna",
             "esLocal": true,
-            "dificultad": 35
+            "dificultad": 34
           },
           {
             "jornada": "Round 7",
@@ -4741,13 +4741,13 @@
             "jornada": "Round 5",
             "rival": "Atlético",
             "esLocal": true,
-            "dificultad": 48
+            "dificultad": 47
           },
           {
             "jornada": "Round 7",
             "rival": "Valencia",
             "esLocal": false,
-            "dificultad": 9
+            "dificultad": 8
           },
           {
             "jornada": "Round 8",
@@ -5900,13 +5900,13 @@
             "jornada": "Round 5",
             "rival": "Betis",
             "esLocal": true,
-            "dificultad": 59
+            "dificultad": 58
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Málaga",
             "esLocal": false,
-            "dificultad": 28
+            "dificultad": 30
           },
           {
             "jornada": "Round 7",
@@ -6030,13 +6030,13 @@
             "jornada": "Round 5",
             "rival": "Atlético",
             "esLocal": true,
-            "dificultad": 48
+            "dificultad": 47
           },
           {
             "jornada": "Round 7",
             "rival": "Valencia",
             "esLocal": false,
-            "dificultad": 9
+            "dificultad": 8
           },
           {
             "jornada": "Round 8",
@@ -6062,7 +6062,7 @@
             "jornada": "Round 6 (postponed)",
             "rival": "Osasuna",
             "esLocal": true,
-            "dificultad": 35
+            "dificultad": 34
           },
           {
             "jornada": "Round 7",
@@ -6166,7 +6166,7 @@
             "jornada": "Round 6 (postponed)",
             "rival": "Osasuna",
             "esLocal": true,
-            "dificultad": 35
+            "dificultad": 34
           },
           {
             "jornada": "Round 7",
@@ -6270,7 +6270,7 @@
             "jornada": "Round 6 (postponed)",
             "rival": "Osasuna",
             "esLocal": true,
-            "dificultad": 35
+            "dificultad": 34
           },
           {
             "jornada": "Round 7",
@@ -6296,7 +6296,7 @@
             "jornada": "Round 6 (postponed)",
             "rival": "Osasuna",
             "esLocal": true,
-            "dificultad": 35
+            "dificultad": 34
           },
           {
             "jornada": "Round 7",
@@ -6316,13 +6316,13 @@
             "jornada": "Round 5",
             "rival": "Atlético",
             "esLocal": true,
-            "dificultad": 48
+            "dificultad": 47
           },
           {
             "jornada": "Round 7",
             "rival": "Valencia",
             "esLocal": false,
-            "dificultad": 9
+            "dificultad": 8
           },
           {
             "jornada": "Round 8",
@@ -6939,13 +6939,13 @@
             "jornada": "Round 5",
             "rival": "Atlético",
             "esLocal": true,
-            "dificultad": 48
+            "dificultad": 47
           },
           {
             "jornada": "Round 7",
             "rival": "Valencia",
             "esLocal": false,
-            "dificultad": 9
+            "dificultad": 8
           },
           {
             "jornada": "Round 8",
@@ -6991,13 +6991,13 @@
             "jornada": "Round 5",
             "rival": "Betis",
             "esLocal": true,
-            "dificultad": 59
+            "dificultad": 58
           },
           {
             "jornada": "Round 6 (postponed)",
             "rival": "Málaga",
             "esLocal": false,
-            "dificultad": 28
+            "dificultad": 30
           },
           {
             "jornada": "Round 7",
