@@ -213,7 +213,7 @@
   <section class="block">
     <div class="section-head">
       <h3>Mapa de amenazas</h3>
-      <span class="cond">Quién está subiendo más de nivel ahora mismo</span>
+      <span class="cond" id="etiquetaAmenazas">Quién está subiendo más de nivel</span>
     </div>
     <div id="amenazas"></div>
   </section>
@@ -481,13 +481,24 @@
       cont.innerHTML = '<div class="aviso-suave">Ningún rival está apretando ahora mismo. En cuanto se cierre una jornada nueva y alguien pegue un tirón, aparecerá aquí.</div>';
       return;
     }
+
+    var tramo = amenazas[0].desdeJornada && amenazas[0].hastaJornada
+      ? 'Jornadas ' + amenazas[0].desdeJornada + ' a ' + amenazas[0].hastaJornada
+      : '';
+    var etiqueta = document.getElementById('etiquetaAmenazas');
+    if (etiqueta && tramo) etiqueta.textContent = tramo;
+
     cont.innerHTML = '<div class="amenazas">' + amenazas.map(function (a, i) {
       var motivos = [];
-      if (a.puestos > 0) {
-        motivos.push('Ha subido <b>' + a.puestos + (a.puestos === 1 ? ' puesto' : ' puestos') + '</b> en la última jornada.');
+      if (a.sumado != null) {
+        motivos.push('Ha sumado <b>' + a.sumado + ' puntos</b> en las últimas ' +
+          a.jornadas + (a.jornadas === 1 ? ' jornada' : ' jornadas') + '.');
       }
       if (a.sobreMedia > 0) {
-        motivos.push('Sumó <b>' + a.sobreMedia + ' puntos</b> por encima de la media de la liga.');
+        motivos.push('Eso son <b>' + a.sobreMedia + '</b> por encima de la media de la liga.');
+      }
+      if (a.puestos > 0) {
+        motivos.push('Ha escalado <b>' + a.puestos + (a.puestos === 1 ? ' puesto' : ' puestos') + '</b>.');
       }
       if (!motivos.length) motivos.push('Va de menos a más.');
 
