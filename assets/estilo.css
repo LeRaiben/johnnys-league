@@ -63,10 +63,13 @@
   .status { margin-left:auto; text-align:right; }
   .status .cond { font-size:0.74rem; color:var(--grey); display:block; }
   .status .round { font-family:'Anton',sans-serif; font-size:1.75rem; color:var(--gold); }
-  .jump { display:flex; gap:4px; overflow-x:auto; border-top:1px solid var(--navy-line); }
-  .jump a { color:rgba(247,247,245,0.82); text-decoration:none; padding:16px 20px;
-            font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.09em;
-            text-transform:uppercase; font-size:0.98rem; white-space:nowrap;
+  /* Con 10 secciones el menú ya no cabe en una línea: en pantallas anchas
+     se reparte en dos filas centradas, y en móvil sigue deslizándose. */
+  .jump { display:flex; flex-wrap:wrap; justify-content:center; gap:0 2px;
+          border-top:1px solid var(--navy-line); }
+  .jump a { color:rgba(247,247,245,0.82); text-decoration:none; padding:14px 15px;
+            font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.07em;
+            text-transform:uppercase; font-size:0.92rem; white-space:nowrap;
             border-bottom:3px solid transparent; transition:color .15s; }
   .jump a:hover { color:var(--white); border-bottom-color:var(--red); }
   .jump a:focus-visible { outline:2px solid var(--gold); outline-offset:-2px; }
@@ -234,7 +237,14 @@
     .stories{grid-template-columns:1fr;}
     .archive{grid-template-columns:repeat(2,1fr);}
     .status{display:none;} .crest{width:58px;height:58px;}
-    .jump a{padding:13px 14px; font-size:0.86rem;}
+    /* En móvil no interesa que se amontone en cuatro filas: se desliza
+       con el dedo, y el degradado del borde avisa de que hay más. */
+    .jump{ flex-wrap:nowrap; overflow-x:auto; justify-content:flex-start;
+           -webkit-overflow-scrolling:touch; scrollbar-width:none;
+           -webkit-mask-image:linear-gradient(to right, #000 88%, transparent 100%);
+           mask-image:linear-gradient(to right, #000 88%, transparent 100%); }
+    .jump::-webkit-scrollbar{ display:none; }
+    .jump a{padding:13px 13px; font-size:0.86rem; letter-spacing:0.05em;}
     .masthead .bar{padding:16px 0 13px; gap:16px;}
     .row,.table-head{grid-template-columns:28px 1fr 62px;}
     .row .value,.table-head span:nth-child(3){display:none;}
