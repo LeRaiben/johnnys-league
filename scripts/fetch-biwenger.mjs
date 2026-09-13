@@ -1332,39 +1332,68 @@ function calcularTermometro(tabla, rachas, movimientos, clausulas) {
 }
 
 /**
- * De los 11 presidentes rivales, quién está subiendo más de nivel AHORA
- * MISMO. Se combinan dos cosas reales: cuántos puestos ha subido en la
- * última jornada, y cuánto sumó esa jornada respecto a la media de la
- * liga. (El valor de la plantilla se queda fuera: Biwenger no guarda su
- * histórico por jornada, solo el valor de ahora mismo, así que no se
- * puede medir su crecimiento real sin inventarlo.)
+ * De los 11 presidentes rivales, quién está subiendo más de nivel.
+ *
+ * Se mira una ventana de las últimas jornadas CERRADAS (no una sola, que
+ * daba una foto muy pobre y se quedaba en blanco mientras la jornada en
+ * curso seguía abierta). Para cada rival se compara lo que ha sumado en
+ * esa ventana contra la media de la liga en el mismo tramo, y cuántos
+ * puestos ha escalado.
  */
-function calcularMapaAmenazas(tabla, historico, tendencias) {
-  if (historico.length < 2) return [];
+function calcularMapaAmenazas(tabla, historico, ventana = 3) {
+  // Una jornada solo cuenta si alguien sumó puntos en ella: mientras la
+  // jornada en curso no cierra, Biwenger repite los totales anteriores.
+  const cerradas = [];
+  let firmaAnterior = null;
+  for (const foto of historico) {
+    const firma = foto.equipos.map((e) => e.puntos).join(',');
+    if (firma !== firmaAnterior) {
+      cerradas.push(foto);
+      firmaAnterior = firma;
+    }
+  }
+  if (cerradas.length < 2) return [];
 
-  const ultima = historico[historico.length - 1];
-  const anterior = historico[historico.length - 2];
-  const puntosAnterior = new Map(anterior.equipos.map((e) => [e.equipo, e.puntos]));
-  const mediaUltimaJornada = ultima.equipos.reduce((s, e) => {
-    const antes = puntosAnterior.get(e.equipo);
-    return s + (antes != null ? e.puntos - antes : 0);
-  }, 0) / (ultima.equipos.length || 1);
+  const ultima = cerradas[cerradas.length - 1];
+  // Punto de partida de la ventana: hasta `ventana` jornadas atrás
+  const inicio = cerradas[Math.max(0, cerradas.length - 1 - ventana)];
+  const jornadasUsadas = ultima.jornada - inicio.jornada;
 
-  const candidatos = tabla
+  const antes = new Map(inicio.equipos.map((e) => [e.equipo, e]));
+  const ahora = new Map(ultima.equipos.map((e) => [e.equipo, e]));
+
+  const sumados = ultima.equipos.map((e) => {
+    const previo = antes.get(e.equipo);
+    return previo ? e.puntos - previo.puntos : 0;
+  });
+  const media = sumados.reduce((s, v) => s + v, 0) / (sumados.length || 1);
+
+  return tabla
     .filter((e) => !e.esTuyo)
     .map((e) => {
-      const antesPuntos = puntosAnterior.get(e.equipo);
-      const deltaJornada = antesPuntos != null ? e.puntos - antesPuntos : 0;
-      const sobreMedia = Math.round(deltaJornada - mediaUltimaJornada);
-      const puestos = tendencias[e.equipo]?.puestos || 0;
-      const score = puestos * 3 + sobreMedia;
-      return { equipo: e.equipo, escudo: e.escudo, puestos, sobreMedia, score };
-    })
-    .sort((a, b) => b.score - a.score)
-    .filter((e) => e.score > 0)
-    .slice(0, 3);
+      const previo = antes.get(e.equipo);
+      const actual = ahora.get(e.equipo);
+      if (!previo || !actual) return null;
 
-  return candidatos;
+      const sumado = actual.puntos - previo.puntos;
+      const sobreMedia = Math.round(sumado - media);
+      const puestos = previo.posicion - actual.posicion;   // positivo = ha escalado
+
+      return {
+        equipo: e.equipo,
+        escudo: e.escudo,
+        sumado,
+        sobreMedia,
+        puestos,
+        jornadas: jornadasUsadas,
+        desdeJornada: inicio.jornada,
+        hastaJornada: ultima.jornada,
+        score: puestos * 3 + sobreMedia
+      };
+    })
+    .filter((e) => e && e.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3);
 }
 
 /**
@@ -1484,7 +1513,7 @@ async function principal() {
   console.log('Premios de la semana calculados.');
 
   const termometro = calcularTermometro(tabla, rachas, movimientos, soloClausulas);
-  const amenazas = calcularMapaAmenazas(tabla, historico, tendencias);
+  const amenazas = calcularMapaAmenazas(tabla, historico);
   console.log(`Termómetro: ${termometro.length} titulares. Amenazas: ${amenazas.length}.`);
 
   console.log('Consultando el calendario de dificultad de los 20 equipos reales...');
