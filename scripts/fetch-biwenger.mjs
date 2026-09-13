@@ -900,7 +900,7 @@ function calcularCalendarioPresidentes(plantillas, catalogoJugadores, calendario
  * son los umbrales para clasificar (qué consideramos "rival fácil" o
  * "ser titular"), y van explicados donde se usan.
  */
-async function analizarJugadores(plantillas, catalogoJugadores, scoreID, tabla) {
+async function analizarJugadores(plantillas, catalogoJugadores, scoreID, tabla, clausulas = {}) {
   if (!scoreID) return [];
 
   const presidentePorId = new Map(tabla.map((e) => [String(e.id), { nombre: e.equipo, escudo: e.escudo }]));
@@ -925,7 +925,7 @@ async function analizarJugadores(plantillas, catalogoJugadores, scoreID, tabla) 
       const i = cursor++;
       const c = candidatos[i];
       try {
-        salida[i] = analizarUno(c, await fichaJugador(c.slug), scoreID, presidentePorId);
+        salida[i] = analizarUno(c, await fichaJugador(c.slug), scoreID, presidentePorId, clausulas);
       } catch {
         salida[i] = null;
       }
@@ -936,7 +936,7 @@ async function analizarJugadores(plantillas, catalogoJugadores, scoreID, tabla) 
   return salida.filter(Boolean);
 }
 
-function analizarUno(c, ficha, scoreID, presidentePorId) {
+function analizarUno(c, ficha, scoreID, presidentePorId, clausulas = {}) {
   const reports = (ficha.reports || []).filter((r) => r.match?.status === 'finished');
 
   // Partidos con puntuación publicada, del más antiguo al más reciente
@@ -978,6 +978,23 @@ function analizarUno(c, ficha, scoreID, presidentePorId) {
   // Se deja fuera antes que inventar una dificultad que no es la suya.
 
   const presi = presidentePorId.get(c.presidenteId);
+  const datosClausula = clausulas[c.id] || {};
+  const clausula = datosClausula.clausula ?? null;
+
+  // Cuánto tiene que pagar de más quien quiera robarlo, respecto a lo que
+  // vale hoy en el mercado. Cuanto más bajo, más fácil es que se lo lleven.
+  const margen = clausula != null && precio > 0 ? clausula - precio : null;
+  const margenPorcentaje = margen != null && precio > 0
+    ? Math.round((margen / precio) * 100)
+    : null;
+
+  // Biwenger da la fecha de blindaje en segundos
+  const blindadoHasta = datosClausula.blindadoHasta
+    ? new Date(datosClausula.blindadoHasta * 1000).toISOString()
+    : null;
+  const blindado = datosClausula.blindadoHasta
+    ? datosClausula.blindadoHasta * 1000 > Date.now()
+    : false;
 
   return {
     id: c.id,
@@ -998,7 +1015,14 @@ function analizarUno(c, ficha, scoreID, presidentePorId) {
     puntosPorMillon,
     racha,
     rachaTitular,
-    ultimoMinutos
+    ultimoMinutos,
+    clausula,
+    clausulaTexto: clausula != null ? millones(clausula) : null,
+    pagadoPorSuDueno: datosClausula.pagado ?? null,
+    margen,
+    margenPorcentaje,
+    blindado,
+    blindadoHasta
   };
 }
 
@@ -1008,16 +1032,31 @@ function analizarUno(c, ficha, scoreID, presidentePorId) {
  */
 async function traerPlantillas(tabla) {
   const plantillas = {};
+  const clausulas = {};   // idJugador -> { clausula, pagado, blindadoHasta }
+
   for (const equipo of tabla) {
     try {
-      const datos = await pedir(`${API}/user/${equipo.id}?fields=*,players`);
-      plantillas[equipo.id] = (datos.players || []).map((p) => String(p.id));
+      const campos = encodeURIComponent('*,players(id,owner)');
+      const datos = await pedir(`${API}/user/${equipo.id}?fields=${campos}`);
+      const jugadores = datos.players || [];
+      plantillas[equipo.id] = jugadores.map((p) => String(p.id));
+
+      // La cláusula la pone cada presidente a mano, así que es un dato suyo,
+      // no del jugador: viene dentro de "owner" junto a lo que pagó por él.
+      for (const p of jugadores) {
+        if (!p.owner) continue;
+        clausulas[String(p.id)] = {
+          clausula: p.owner.clause ?? null,
+          pagado: p.owner.price ?? null,
+          blindadoHasta: p.owner.clauseLockedUntil ?? null
+        };
+      }
     } catch (e) {
       console.warn(`Aviso: no se pudo leer la plantilla de ${equipo.equipo}.`, e.message);
       plantillas[equipo.id] = [];
     }
   }
-  return plantillas;
+  return { plantillas, clausulas };
 }
 
 /**
@@ -1095,9 +1134,57 @@ function calcularGangas(mercadoBiwenger, jugadores, catalogoJugadores) {
 }
 
 /**
- * Para cada presidente, qué jugadores suyos pintan mejor para la próxima
- * jornada: cruza cómo viene de forma con lo fácil o difícil que le toca.
+ * Aviso de riesgo de cláusula.
+ *
+ * Un jugador está "en peligro" cuando se juntan tres cosas: que llevárselo
+ * cueste poco más de lo que vale hoy, que esté rindiendo lo suficiente
+ * como para que a otro le interese, y que no esté blindado.
+ *
+ * El umbral de "poco margen" no lo inventamos: lo saca de la propia liga,
+ * cogiendo el 25% de jugadores con el margen más bajo. Así se adapta solo
+ * a cómo tengáis de altas las cláusulas en cada momento (en esta liga el
+ * margen típico ronda el 60%, pero eso cambia con el tiempo).
  */
+function calcularRiesgoClausula(jugadores) {
+  const conDatos = jugadores.filter(
+    (j) => j.clausula != null && j.precio > 0 && j.partidosJugados >= MINIMO_PARTIDOS
+      && j.margenPorcentaje != null
+  );
+  if (conDatos.length < 8) return [];   // con muy pocos, el cuartil no dice nada
+
+  const margenesOrdenados = conDatos.map((j) => j.margenPorcentaje).sort((a, b) => a - b);
+  const umbralMargen = margenesOrdenados[Math.floor(margenesOrdenados.length * 0.25)];
+
+  const mediaPuntosPorMillon =
+    conDatos.reduce((s, j) => s + j.puntosPorMillon, 0) / conDatos.length;
+
+  return conDatos
+    .filter((j) => !j.blindado
+      && j.margenPorcentaje <= umbralMargen
+      && j.puntosPorMillon >= mediaPuntosPorMillon)
+    .map((j) => ({
+      nombre: j.nombre,
+      foto: j.foto,
+      posicion: j.posicion,
+      equipoReal: j.equipoReal,
+      presidente: j.presidente,
+      escudoPresidente: j.escudoPresidente,
+      precioTexto: j.precioTexto,
+      clausulaTexto: j.clausulaTexto,
+      margenPorcentaje: j.margenPorcentaje,
+      margenTexto: j.margen != null ? millones(j.margen) : null,
+      media: j.media,
+      puntosPorMillon: j.puntosPorMillon,
+      racha: j.racha,
+      rachaTitular: j.rachaTitular,
+      // Los más baratos de robar son los de peligro alto
+      nivel: j.margenPorcentaje <= umbralMargen / 2 ? 'alto' : 'medio'
+    }))
+    .sort((a, b) => a.margenPorcentaje - b.margenPorcentaje)
+    .slice(0, 20);
+}
+
+
 function calcularRecomendaciones(jugadores, calendarioEquipos, tabla) {
   const porPresidente = {};
 
@@ -1505,7 +1592,7 @@ async function principal() {
   const jornada = await traerPartidos(equiposReales);
 
   console.log('Calculando el Once Ideal (esto tarda un poco más, pregunta jugador a jugador)...');
-  const plantillas = await traerPlantillas(tabla);
+  const { plantillas, clausulas } = await traerPlantillas(tabla);
   const onceIdeal = await calcularOnceIdeal(plantillas, jugadores, scoreID, tabla);
   console.log(onceIdeal ? `Once Ideal: ${onceIdeal.jornada}, ${onceIdeal.total} puntos.` : 'Once Ideal: sin datos todavía.');
 
@@ -1522,7 +1609,7 @@ async function principal() {
   console.log('Calendario de dificultad calculado.');
 
   console.log('Analizando a todos los jugadores de las 12 plantillas...');
-  const jugadoresAnalizados = await analizarJugadores(plantillas, jugadores, scoreID, tabla);
+  const jugadoresAnalizados = await analizarJugadores(plantillas, jugadores, scoreID, tabla, clausulas);
   console.log(`Jugadores analizados: ${jugadoresAnalizados.length}.`);
 
   const valorJusto = calcularValorJusto(jugadoresAnalizados);
@@ -1530,6 +1617,7 @@ async function principal() {
   const gangas = calcularGangas(mercadoBiwenger, jugadoresAnalizados, jugadores);
   const recomendaciones = calcularRecomendaciones(jugadoresAnalizados, calendarioEquipos, tabla);
   const predictor = calcularPredictor(recomendaciones);
+  const riesgoClausula = calcularRiesgoClausula(jugadoresAnalizados);
   console.log(`Chollos: ${valorJusto.chollos.length} · Gangas del mercado: ${gangas.length} · Predictor: ${predictor.length}.`);
 
   const salida = {
@@ -1556,7 +1644,8 @@ async function principal() {
     enRacha,
     gangas,
     recomendaciones,
-    predictor
+    predictor,
+    riesgoClausula
   };
 
   await mkdir(resolve(RAIZ, 'data'), { recursive: true });
