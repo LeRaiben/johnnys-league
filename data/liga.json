@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-13T19:57:36.951Z",
+  "actualizado": "2026-09-13T20:16:28.416Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 5,
   "jornadaEnJuego": true,
@@ -92,7 +92,7 @@
       "fecha": "2026-09-13T19:00:00.000Z",
       "golesLocal": 0,
       "golesVisitante": 0,
-      "estado": "break"
+      "estado": "secondTime"
     },
     {
       "local": "Villarreal",
@@ -420,6 +420,19 @@
     }
   ],
   "mercadoPresidentes": [
+    {
+      "tipo": "venta",
+      "nombre": "Cárdenas",
+      "foto": "https://cdn.biwenger.com/i/p/22975.png",
+      "posicion": "Portero",
+      "equipoReal": "Rayo Vallecano",
+      "vendedor": "Lottin Capital",
+      "pide": "1,5 M",
+      "pideBruto": 1490000,
+      "valorMercado": "1,5 M",
+      "valorBruto": 1490000,
+      "diferencia": 0
+    },
     {
       "tipo": "venta",
       "nombre": "Mandi",
@@ -2314,7 +2327,7 @@
       "balance": "+23,9 M",
       "balanceBruto": 23905000,
       "sobreprecioMedio": 30,
-      "enVenta": 0,
+      "enVenta": 1,
       "fichajeEstrella": {
         "nombre": "Pépé",
         "precio": "14,9 M",
