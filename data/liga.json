@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-13T18:16:58.454Z",
+  "actualizado": "2026-09-13T18:34:07.720Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 5,
   "jornadaEnJuego": true,
@@ -82,7 +82,7 @@
       "fecha": "2026-09-13T16:30:00.000Z",
       "golesLocal": 1,
       "golesVisitante": 1,
-      "estado": "secondTime"
+      "estado": "finished"
     },
     {
       "local": "Real Sociedad",
@@ -275,8 +275,8 @@
       "iniciales": "LC",
       "escudo": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
       "puntos": 130,
-      "valor": "37,4 M",
-      "valorBruto": 37420000,
+      "valor": "37,1 M",
+      "valorBruto": 37090000,
       "esTuyo": false,
       "puntosJornada": 19,
       "jugadosJornada": 5,
@@ -1124,6 +1124,19 @@
     },
     {
       "tipo": "venta",
+      "nombre": "Luiz Felipe",
+      "foto": "https://cdn.biwenger.com/i/p/26676.png",
+      "posicion": "Defensa",
+      "equipoReal": "Rayo Vallecano",
+      "vendedor": "Las Víboras FC",
+      "pide": "0,1 M",
+      "pideBruto": 150000,
+      "valorMercado": "0,1 M",
+      "valorBruto": 150000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
       "nombre": "Fortuño",
       "foto": "https://cdn.biwenger.com/i/p/30334.png",
       "posicion": "Portero",
@@ -1133,6 +1146,19 @@
       "pideBruto": 150000,
       "valorMercado": "0,1 M",
       "valorBruto": 150000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Cubarsí",
+      "foto": "https://cdn.biwenger.com/i/p/32440.png",
+      "posicion": "Defensa",
+      "equipoReal": "Barcelona",
+      "vendedor": "Las Víboras FC",
+      "pide": "9,6 M",
+      "pideBruto": 9610000,
+      "valorMercado": "9,6 M",
+      "valorBruto": 9610000,
       "diferencia": 0
     },
     {
@@ -2206,7 +2232,7 @@
       "balance": "−2,5 M",
       "balanceBruto": -2461201,
       "sobreprecioMedio": 50,
-      "enVenta": 15,
+      "enVenta": 17,
       "fichajeEstrella": {
         "nombre": "Camello",
         "precio": "6,7 M",
@@ -2273,10 +2299,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
       "iniciales": "LC",
       "puntos": 130,
-      "valor": "37,4 M",
-      "valorBruto": 37420000,
+      "valor": "37,1 M",
+      "valorBruto": 37090000,
       "esTuyo": false,
-      "puntosPorMillon": 3.47,
+      "puntosPorMillon": 3.5,
       "mediaJornada": 26,
       "clausulasHechas": 1,
       "clausulasSufridas": 4,
@@ -2300,8 +2326,8 @@
       "puestoGasto": 6,
       "puestoActividad": 5,
       "vsMediaPuntos": -31,
-      "vsMediaEficiencia": -20,
-      "vsMediaValor": -16,
+      "vsMediaEficiencia": -19,
+      "vsMediaValor": -17,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
@@ -2937,13 +2963,6 @@
         ]
       },
       {
-        "nombre": "Neyou",
-        "posicion": "Centrocampista",
-        "foto": "https://cdn.biwenger.com/i/p/33691.png",
-        "equipoReal": "",
-        "jornadas": []
-      },
-      {
         "nombre": "Yusi",
         "posicion": "Defensa",
         "foto": "https://cdn.biwenger.com/i/p/37525.png",
@@ -2976,12 +2995,6 @@
         "equipoReal": "Deportivo",
         "jornadas": [
           {
-            "jornada": "Round 5",
-            "rival": "Getafe",
-            "esLocal": false,
-            "dificultad": null
-          },
-          {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
@@ -2991,7 +3004,13 @@
             "jornada": "Round 7",
             "rival": "Betis",
             "esLocal": true,
-            "dificultad": 49
+            "dificultad": 47
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Real Sociedad",
+            "esLocal": false,
+            "dificultad": 39
           }
         ]
       },
@@ -3082,22 +3101,22 @@
         "equipoReal": "Getafe",
         "jornadas": [
           {
-            "jornada": "Round 5",
-            "rival": "Deportivo",
-            "esLocal": true,
-            "dificultad": null
-          },
-          {
             "jornada": "Round 6 (postponed)",
             "rival": "Betis",
             "esLocal": false,
-            "dificultad": 63
+            "dificultad": 61
           },
           {
             "jornada": "Round 7",
             "rival": "Málaga",
             "esLocal": true,
             "dificultad": 21
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Barcelona",
+            "esLocal": false,
+            "dificultad": 94
           }
         ]
       },
@@ -3264,22 +3283,22 @@
         "equipoReal": "Getafe",
         "jornadas": [
           {
-            "jornada": "Round 5",
-            "rival": "Deportivo",
-            "esLocal": true,
-            "dificultad": null
-          },
-          {
             "jornada": "Round 6 (postponed)",
             "rival": "Betis",
             "esLocal": false,
-            "dificultad": 63
+            "dificultad": 61
           },
           {
             "jornada": "Round 7",
             "rival": "Málaga",
             "esLocal": true,
             "dificultad": 21
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Barcelona",
+            "esLocal": false,
+            "dificultad": 94
           }
         ]
       },
@@ -3316,12 +3335,6 @@
         "equipoReal": "Deportivo",
         "jornadas": [
           {
-            "jornada": "Round 5",
-            "rival": "Getafe",
-            "esLocal": false,
-            "dificultad": null
-          },
-          {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
@@ -3331,7 +3344,13 @@
             "jornada": "Round 7",
             "rival": "Betis",
             "esLocal": true,
-            "dificultad": 49
+            "dificultad": 47
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Real Sociedad",
+            "esLocal": false,
+            "dificultad": 39
           }
         ]
       }
@@ -3814,12 +3833,6 @@
         "equipoReal": "Deportivo",
         "jornadas": [
           {
-            "jornada": "Round 5",
-            "rival": "Getafe",
-            "esLocal": false,
-            "dificultad": null
-          },
-          {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
@@ -3829,7 +3842,13 @@
             "jornada": "Round 7",
             "rival": "Betis",
             "esLocal": true,
-            "dificultad": 49
+            "dificultad": 47
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Real Sociedad",
+            "esLocal": false,
+            "dificultad": 39
           }
         ]
       },
@@ -4336,22 +4355,22 @@
         "equipoReal": "Getafe",
         "jornadas": [
           {
-            "jornada": "Round 5",
-            "rival": "Deportivo",
-            "esLocal": true,
-            "dificultad": null
-          },
-          {
             "jornada": "Round 6 (postponed)",
             "rival": "Betis",
             "esLocal": false,
-            "dificultad": 63
+            "dificultad": 61
           },
           {
             "jornada": "Round 7",
             "rival": "Málaga",
             "esLocal": true,
             "dificultad": 21
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Barcelona",
+            "esLocal": false,
+            "dificultad": 94
           }
         ]
       },
@@ -4388,12 +4407,6 @@
         "equipoReal": "Deportivo",
         "jornadas": [
           {
-            "jornada": "Round 5",
-            "rival": "Getafe",
-            "esLocal": false,
-            "dificultad": null
-          },
-          {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
@@ -4403,7 +4416,13 @@
             "jornada": "Round 7",
             "rival": "Betis",
             "esLocal": true,
-            "dificultad": 49
+            "dificultad": 47
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Real Sociedad",
+            "esLocal": false,
+            "dificultad": 39
           }
         ]
       },
@@ -4832,22 +4851,22 @@
         "equipoReal": "Getafe",
         "jornadas": [
           {
-            "jornada": "Round 5",
-            "rival": "Deportivo",
-            "esLocal": true,
-            "dificultad": null
-          },
-          {
             "jornada": "Round 6 (postponed)",
             "rival": "Betis",
             "esLocal": false,
-            "dificultad": 63
+            "dificultad": 61
           },
           {
             "jornada": "Round 7",
             "rival": "Málaga",
             "esLocal": true,
             "dificultad": 21
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Barcelona",
+            "esLocal": false,
+            "dificultad": 94
           }
         ]
       },
@@ -5068,22 +5087,22 @@
         "equipoReal": "Getafe",
         "jornadas": [
           {
-            "jornada": "Round 5",
-            "rival": "Deportivo",
-            "esLocal": true,
-            "dificultad": null
-          },
-          {
             "jornada": "Round 6 (postponed)",
             "rival": "Betis",
             "esLocal": false,
-            "dificultad": 63
+            "dificultad": 61
           },
           {
             "jornada": "Round 7",
             "rival": "Málaga",
             "esLocal": true,
             "dificultad": 21
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Barcelona",
+            "esLocal": false,
+            "dificultad": 94
           }
         ]
       },
@@ -5094,12 +5113,6 @@
         "equipoReal": "Deportivo",
         "jornadas": [
           {
-            "jornada": "Round 5",
-            "rival": "Getafe",
-            "esLocal": false,
-            "dificultad": null
-          },
-          {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
@@ -5109,7 +5122,13 @@
             "jornada": "Round 7",
             "rival": "Betis",
             "esLocal": true,
-            "dificultad": 49
+            "dificultad": 47
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Real Sociedad",
+            "esLocal": false,
+            "dificultad": 39
           }
         ]
       },
@@ -5252,12 +5271,6 @@
         "equipoReal": "Deportivo",
         "jornadas": [
           {
-            "jornada": "Round 5",
-            "rival": "Getafe",
-            "esLocal": false,
-            "dificultad": null
-          },
-          {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
@@ -5267,7 +5280,13 @@
             "jornada": "Round 7",
             "rival": "Betis",
             "esLocal": true,
-            "dificultad": 49
+            "dificultad": 47
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Real Sociedad",
+            "esLocal": false,
+            "dificultad": 39
           }
         ]
       },
@@ -5389,22 +5408,22 @@
         "equipoReal": "Getafe",
         "jornadas": [
           {
-            "jornada": "Round 5",
-            "rival": "Deportivo",
-            "esLocal": true,
-            "dificultad": null
-          },
-          {
             "jornada": "Round 6 (postponed)",
             "rival": "Betis",
             "esLocal": false,
-            "dificultad": 63
+            "dificultad": 61
           },
           {
             "jornada": "Round 7",
             "rival": "Málaga",
             "esLocal": true,
             "dificultad": 21
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Barcelona",
+            "esLocal": false,
+            "dificultad": 94
           }
         ]
       },
@@ -5521,22 +5540,22 @@
         "equipoReal": "Getafe",
         "jornadas": [
           {
-            "jornada": "Round 5",
-            "rival": "Deportivo",
-            "esLocal": true,
-            "dificultad": null
-          },
-          {
             "jornada": "Round 6 (postponed)",
             "rival": "Betis",
             "esLocal": false,
-            "dificultad": 63
+            "dificultad": 61
           },
           {
             "jornada": "Round 7",
             "rival": "Málaga",
             "esLocal": true,
             "dificultad": 21
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Barcelona",
+            "esLocal": false,
+            "dificultad": 94
           }
         ]
       },
@@ -5729,12 +5748,6 @@
         "equipoReal": "Deportivo",
         "jornadas": [
           {
-            "jornada": "Round 5",
-            "rival": "Getafe",
-            "esLocal": false,
-            "dificultad": null
-          },
-          {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
@@ -5744,7 +5757,13 @@
             "jornada": "Round 7",
             "rival": "Betis",
             "esLocal": true,
-            "dificultad": 49
+            "dificultad": 47
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Real Sociedad",
+            "esLocal": false,
+            "dificultad": 39
           }
         ]
       },
@@ -5913,12 +5932,6 @@
         "equipoReal": "Deportivo",
         "jornadas": [
           {
-            "jornada": "Round 5",
-            "rival": "Getafe",
-            "esLocal": false,
-            "dificultad": null
-          },
-          {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
@@ -5928,7 +5941,13 @@
             "jornada": "Round 7",
             "rival": "Betis",
             "esLocal": true,
-            "dificultad": 49
+            "dificultad": 47
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Real Sociedad",
+            "esLocal": false,
+            "dificultad": 39
           }
         ]
       },
@@ -6338,12 +6357,6 @@
         "equipoReal": "Deportivo",
         "jornadas": [
           {
-            "jornada": "Round 5",
-            "rival": "Getafe",
-            "esLocal": false,
-            "dificultad": null
-          },
-          {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
@@ -6353,7 +6366,13 @@
             "jornada": "Round 7",
             "rival": "Betis",
             "esLocal": true,
-            "dificultad": 49
+            "dificultad": 47
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Real Sociedad",
+            "esLocal": false,
+            "dificultad": 39
           }
         ]
       },
@@ -6390,12 +6409,6 @@
         "equipoReal": "Deportivo",
         "jornadas": [
           {
-            "jornada": "Round 5",
-            "rival": "Getafe",
-            "esLocal": false,
-            "dificultad": null
-          },
-          {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
@@ -6405,7 +6418,13 @@
             "jornada": "Round 7",
             "rival": "Betis",
             "esLocal": true,
-            "dificultad": 49
+            "dificultad": 47
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Real Sociedad",
+            "esLocal": false,
+            "dificultad": 39
           }
         ]
       },
@@ -6657,12 +6676,6 @@
         "equipoReal": "Deportivo",
         "jornadas": [
           {
-            "jornada": "Round 5",
-            "rival": "Getafe",
-            "esLocal": false,
-            "dificultad": null
-          },
-          {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
@@ -6672,7 +6685,13 @@
             "jornada": "Round 7",
             "rival": "Betis",
             "esLocal": true,
-            "dificultad": 49
+            "dificultad": 47
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Real Sociedad",
+            "esLocal": false,
+            "dificultad": 39
           }
         ]
       },
@@ -6926,12 +6945,6 @@
         "equipoReal": "Deportivo",
         "jornadas": [
           {
-            "jornada": "Round 5",
-            "rival": "Getafe",
-            "esLocal": false,
-            "dificultad": null
-          },
-          {
             "jornada": "Round 6 (postponed)",
             "rival": "Sevilla",
             "esLocal": true,
@@ -6941,7 +6954,13 @@
             "jornada": "Round 7",
             "rival": "Betis",
             "esLocal": true,
-            "dificultad": 49
+            "dificultad": 47
+          },
+          {
+            "jornada": "Round 8",
+            "rival": "Real Sociedad",
+            "esLocal": false,
+            "dificultad": 39
           }
         ]
       },
