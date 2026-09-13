@@ -834,21 +834,24 @@ async function traerCatalogoJugadores() {
  */
 async function traerCalendarioEquipos(detalleEquipos, cuantasJornadas = 3) {
   const calendario = {};
+
   for (const [id, equipo] of Object.entries(detalleEquipos)) {
     if (!equipo.slug) continue;
     try {
       const campos = encodeURIComponent('matches(round,date,status,home,away)');
       const datos = await pedir(`${CDN}/teams/la-liga/${equipo.slug}?fields=${campos}`, false);
-      const pendientes = (datos.matches || []).filter((p) => p.status !== 'finished');
+      const partidos = datos.matches || [];
+
+      // La dificultad no es la misma para los dos equipos de un partido:
+      // jugar en casa o fuera cambia el número, así que cogemos el suyo.
+      const pendientes = partidos.filter((p) => p.status !== 'finished');
       calendario[id] = pendientes.slice(0, cuantasJornadas).map((p) => {
         const esLocal = p.home?.id === Number(id);
-        const propio = esLocal ? p.home : p.away;
-        const rival = esLocal ? p.away : p.home;
         return {
           jornada: p.round?.name || '',
-          rival: rival?.name || '',
           esLocal,
-          dificultad: propio?.difficulty?.rating ?? null
+          rival: (esLocal ? p.away : p.home)?.name || '',
+          dificultad: (esLocal ? p.home : p.away)?.difficulty?.rating ?? null
         };
       });
     } catch (e) {
@@ -885,9 +888,123 @@ function calcularCalendarioPresidentes(plantillas, catalogoJugadores, calendario
 }
 
 /**
+ * ====== PIEZA BASE DEL ANÁLISIS DE JUGADORES ======
+ *
+ * Analiza a TODOS los jugadores repartidos en las 12 plantillas y saca,
+ * para cada uno, todo lo que hace falta para las secciones de análisis:
+ * su rendimiento real, si es caro o barato para lo que da, su racha de
+ * puntos, su racha de titularidades, y cómo se comporta según lo difícil
+ * que sea el rival.
+ *
+ * Todo sale de datos reales de Biwenger. Lo único que ponemos nosotros
+ * son los umbrales para clasificar (qué consideramos "rival fácil" o
+ * "ser titular"), y van explicados donde se usan.
+ */
+async function analizarJugadores(plantillas, catalogoJugadores, scoreID, tabla) {
+  if (!scoreID) return [];
+
+  const presidentePorId = new Map(tabla.map((e) => [String(e.id), { nombre: e.equipo, escudo: e.escudo }]));
+
+  const candidatos = [];
+  for (const [equipoId, ids] of Object.entries(plantillas)) {
+    for (const id of ids) {
+      const info = catalogoJugadores[id];
+      // Ojo: info trae equipoId, que es el equipo REAL del jugador (Betis,
+      // Celta...). El del presidente que lo tiene en plantilla lo guardamos
+      // aparte como presidenteId para que no se pisen entre ellos.
+      if (info?.slug) candidatos.push({ id: String(id), ...info, presidenteId: String(equipoId) });
+    }
+  }
+
+  const LIMITE = 8;
+  let cursor = 0;
+  const salida = new Array(candidatos.length);
+
+  async function trabajador() {
+    while (cursor < candidatos.length) {
+      const i = cursor++;
+      const c = candidatos[i];
+      try {
+        salida[i] = analizarUno(c, await fichaJugador(c.slug), scoreID, presidentePorId);
+      } catch {
+        salida[i] = null;
+      }
+    }
+  }
+  await Promise.all(new Array(LIMITE).fill(0).map(trabajador));
+
+  return salida.filter(Boolean);
+}
+
+function analizarUno(c, ficha, scoreID, presidentePorId) {
+  const reports = (ficha.reports || []).filter((r) => r.match?.status === 'finished');
+
+  // Partidos con puntuación publicada, del más antiguo al más reciente
+  const partidos = reports
+    .map((r) => ({
+      idJornada: r.match?.round?.id ?? null,
+      jornada: r.match?.round?.name || '',
+      puntos: r.points?.[scoreID] ?? null,
+      minutos: r.rawStats?.minutesPlayed ?? 0
+    }))
+    .filter((p) => p.puntos != null);
+
+  const jugados = partidos.filter((p) => p.minutos > 0);
+  const puntosTotales = partidos.reduce((s, p) => s + p.puntos, 0);
+  const media = jugados.length ? Number((puntosTotales / jugados.length).toFixed(1)) : 0;
+
+  // Cuánto rinde por cada millón que cuesta. Es la misma idea que usamos
+  // con los presidentes, pero jugador a jugador.
+  const precio = c.price || 0;
+  const cuantosMillones = precio / 1e6;
+  const puntosPorMillon = cuantosMillones > 0 ? Number((puntosTotales / cuantosMillones).toFixed(2)) : 0;
+
+  // Racha de puntos: los últimos partidos, el más reciente primero
+  const racha = partidos.slice(-5).reverse().map((p) => p.puntos);
+
+  // Racha de titularidades: cuántos partidos seguidos lleva jugando de
+  // salida. Umbral de 60 minutos = lo damos por titular; menos de eso
+  // suele ser haber entrado de cambio. Un 0 rompe la racha directamente.
+  let rachaTitular = 0;
+  for (let i = partidos.length - 1; i >= 0; i--) {
+    if (partidos[i].minutos >= 60) rachaTitular++;
+    else break;
+  }
+  const ultimoMinutos = partidos.length ? partidos[partidos.length - 1].minutos : null;
+
+  // Rendimiento según el rival: NO se puede calcular. Biwenger solo publica
+  // la dificultad de los partidos que están POR JUGAR; en cuanto un partido
+  // termina, ese dato desaparece de su ficha. Comprobado equipo por equipo.
+  // Se deja fuera antes que inventar una dificultad que no es la suya.
+
+  const presi = presidentePorId.get(c.presidenteId);
+
+  return {
+    id: c.id,
+    nombre: c.name,
+    slug: c.slug,
+    posicion: nombrePosicion(c.position),
+    posicionCodigo: c.position,
+    foto: urlFoto(c.id),
+    equipoReal: c.equipo,
+    equipoIdReal: String(c.equipoId ?? ''),
+    presidente: presi?.nombre || '',
+    escudoPresidente: presi?.escudo || '',
+    precio,
+    precioTexto: millones(precio),
+    puntosTotales,
+    partidosJugados: jugados.length,
+    media,
+    puntosPorMillon,
+    racha,
+    rachaTitular,
+    ultimoMinutos
+  };
+}
+
+/**
  * Para cada uno de los 12 equipos, pide la lista de IDs de jugadores
- * que tiene en plantilla ahora mismo. Necesario para saber a quién
- * preguntarle su puntuación de cara al Once Ideal.
+ * que tiene en plantilla ahora mismo.
  */
 async function traerPlantillas(tabla) {
   const plantillas = {};
@@ -904,10 +1021,137 @@ async function traerPlantillas(tabla) {
 }
 
 /**
- * Pide la ficha pública de un jugador (sin necesitar login) y se queda
- * con su última jornada ya disputada: puntos (según el sistema de
- * puntuación de la liga) y si llegó a jugar minutos de verdad.
+ * ====== SECCIONES DE ANÁLISIS ======
+ * Todas parten de lo que ya calculó analizarJugadores(), así que aquí
+ * no se pide nada nuevo a Biwenger: solo se ordena y se elige.
  */
+
+// Solo tenemos en cuenta a quien haya jugado un mínimo, para que un
+// jugador con un único partido bueno no se cuele en todos los rankings.
+const MINIMO_PARTIDOS = 2;
+
+function calcularValorJusto(jugadores) {
+  const conMinimo = jugadores.filter((j) => j.partidosJugados >= MINIMO_PARTIDOS && j.precio > 0);
+  if (!conMinimo.length) return { chollos: [], caros: [] };
+
+  const ordenados = conMinimo.slice().sort((a, b) => b.puntosPorMillon - a.puntosPorMillon);
+  return {
+    chollos: ordenados.slice(0, 8),
+    caros: ordenados.slice(-8).reverse()
+  };
+}
+
+function calcularEnRacha(jugadores) {
+  // "En racha" = media alta en sus dos últimos partidos jugados
+  const conRacha = jugadores
+    .filter((j) => j.racha.length >= 2 && j.partidosJugados >= MINIMO_PARTIDOS)
+    .map((j) => {
+      const ultimos = j.racha.slice(0, 2);
+      const mediaReciente = ultimos.reduce((s, v) => s + v, 0) / ultimos.length;
+      return { ...j, mediaReciente: Number(mediaReciente.toFixed(1)) };
+    });
+
+  const calientes = conRacha.slice().sort((a, b) => b.mediaReciente - a.mediaReciente).slice(0, 8);
+  const frios = conRacha.slice().sort((a, b) => a.mediaReciente - b.mediaReciente).slice(0, 8);
+  return { calientes, frios };
+}
+
+/**
+ * Jugadores del mercado libre de Biwenger que, por lo que están rindiendo,
+ * cuestan menos de lo que deberían. Se compara su rendimiento contra la
+ * media de puntos por millón de toda la liga.
+ */
+function calcularGangas(mercadoBiwenger, jugadores, catalogoJugadores) {
+  if (!mercadoBiwenger.length || !jugadores.length) return [];
+
+  const conMinimo = jugadores.filter((j) => j.partidosJugados >= MINIMO_PARTIDOS);
+  if (!conMinimo.length) return [];
+  const mediaLiga = conMinimo.reduce((s, j) => s + j.puntosPorMillon, 0) / conMinimo.length;
+
+  // Del mercado libre solo sabemos nombre y precio, así que buscamos su
+  // ficha en el catálogo para poder analizarlo igual que a los demás.
+  const porNombre = new Map(jugadores.map((j) => [j.nombre, j]));
+
+  return mercadoBiwenger
+    .map((m) => {
+      const analizado = porNombre.get(m.nombre);
+      if (!analizado || analizado.partidosJugados < MINIMO_PARTIDOS) return null;
+      const ventaja = Math.round(((analizado.puntosPorMillon - mediaLiga) / mediaLiga) * 100);
+      if (ventaja < 20) return null;   // por debajo de un 20% mejor no es noticia
+      return {
+        nombre: analizado.nombre,
+        foto: analizado.foto,
+        posicion: analizado.posicion,
+        equipoReal: analizado.equipoReal,
+        precio: m.precio,
+        puntosPorMillon: analizado.puntosPorMillon,
+        media: analizado.media,
+        ventaja
+      };
+    })
+    .filter(Boolean)
+    .sort((a, b) => b.ventaja - a.ventaja)
+    .slice(0, 6);
+}
+
+/**
+ * Para cada presidente, qué jugadores suyos pintan mejor para la próxima
+ * jornada: cruza cómo viene de forma con lo fácil o difícil que le toca.
+ */
+function calcularRecomendaciones(jugadores, calendarioEquipos, tabla) {
+  const porPresidente = {};
+
+  for (const j of jugadores) {
+    if (!j.presidente) continue;
+    const proximos = calendarioEquipos[String(j.equipoIdReal ?? '')] || [];
+    const proxima = proximos[0] || null;
+
+    // Nota de 0 a 10, mitad forma y mitad facilidad del rival.
+    // La dificultad de Biwenger va de 0 (muy fácil) a 100 (muy difícil).
+    const formaReciente = j.racha.length ? j.racha.slice(0, 2).reduce((s, v) => s + v, 0) / Math.min(2, j.racha.length) : 0;
+    const notaForma = Math.max(0, Math.min(5, formaReciente / 2));
+    const notaRival = proxima && proxima.dificultad != null
+      ? Math.max(0, Math.min(5, (100 - proxima.dificultad) / 20))
+      : 2.5;
+
+    const nota = Number((notaForma + notaRival).toFixed(1));
+
+    (porPresidente[j.presidente] = porPresidente[j.presidente] || []).push({
+      nombre: j.nombre,
+      foto: j.foto,
+      posicion: j.posicion,
+      equipoReal: j.equipoReal,
+      racha: j.racha,
+      rachaTitular: j.rachaTitular,
+      nota,
+      rival: proxima?.rival || '',
+      esLocal: proxima?.esLocal ?? null,
+      dificultad: proxima?.dificultad ?? null
+    });
+  }
+
+  for (const nombre of Object.keys(porPresidente)) {
+    porPresidente[nombre].sort((a, b) => b.nota - a.nota);
+  }
+  return porPresidente;
+}
+
+/**
+ * Los jugadores de toda la liga que mejor pinta tienen para la próxima
+ * jornada, sin importar de quién sean.
+ */
+function calcularPredictor(recomendaciones) {
+  const todos = [];
+  for (const [presidente, lista] of Object.entries(recomendaciones)) {
+    for (const j of lista) todos.push({ ...j, presidente });
+  }
+  return todos
+    .filter((j) => j.dificultad != null && j.rachaTitular > 0)
+    .sort((a, b) => b.nota - a.nota)
+    .slice(0, 10);
+}
+
+
 async function traerUltimaJornadaJugador(slug, scoreID) {
   const datos = await fichaJugador(slug);
   const reports = datos.reports || [];
@@ -1020,6 +1264,107 @@ async function calcularOnceIdeal(plantillas, catalogoJugadores, scoreID, tabla) 
 
 function nombrePosicion(codigo) {
   return { 1: 'Portero', 2: 'Defensa', 3: 'Centrocampista', 4: 'Delantero' }[codigo] || '';
+}
+
+/**
+ * Un resumen automático de cómo está el ambiente de la liga esta semana:
+ * lo reñido que está el liderato, quién está en mejor racha, cómo de
+ * movido está el mercado... Todo sacado de datos que ya calculamos en
+ * otro sitio, aquí solo se elige qué contar primero.
+ */
+function calcularTermometro(tabla, rachas, movimientos, clausulas) {
+  const titulares = [];
+
+  // 1. Lo reñido que está el liderato
+  if (tabla.length >= 2) {
+    const gap = tabla[0].puntos - tabla[1].puntos;
+    titulares.push({
+      tipo: 'liderato',
+      texto: gap <= 5
+        ? `El liderato está que arde: solo ${gap} ${gap === 1 ? 'punto separa' : 'puntos separan'} a ${tabla[0].equipo} de ${tabla[1].equipo}.`
+        : `${tabla[0].equipo} manda con comodidad: le saca ${gap} puntos a ${tabla[1].equipo}.`
+    });
+  }
+
+  // 2. Lo apretada que está la zona baja
+  if (tabla.length >= 2) {
+    const ultimo = tabla[tabla.length - 1];
+    const penultimo = tabla[tabla.length - 2];
+    const gapBajo = penultimo.puntos - ultimo.puntos;
+    if (gapBajo <= 8) {
+      titulares.push({
+        tipo: 'colista',
+        texto: `Ojo abajo: ${ultimo.equipo} y ${penultimo.equipo} solo se llevan ${gapBajo} puntos.`
+      });
+    }
+  }
+
+  // 3. La racha más larga activa ahora mismo
+  if (rachas.length) {
+    const mejor = rachas[0];
+    titulares.push({
+      tipo: 'racha',
+      texto: mejor.tipo === 'positiva'
+        ? `${mejor.equipo} lleva ${mejor.jornadas} jornadas seguidas por encima de la media. Está que se sale.`
+        : `${mejor.equipo} lleva ${mejor.jornadas} jornadas seguidas por debajo de la media. Necesita reaccionar.`
+    });
+  }
+
+  // 4. Mayor remontada de la última jornada
+  if (movimientos && movimientos.remontada) {
+    titulares.push({
+      tipo: 'remontada',
+      texto: `${movimientos.remontada.equipo} dio el golpe en la Jornada ${movimientos.jornada}: ${movimientos.remontada.delta} puntos, muy por encima de la media (${movimientos.media}).`
+    });
+  }
+
+  // 5. Pulso del mercado: cláusulas en los últimos 7 días
+  const hace7dias = Date.now() - 7 * 24 * 60 * 60 * 1000;
+  const recientes = clausulas.filter((c) => c.fecha && new Date(c.fecha).getTime() >= hace7dias);
+  titulares.push({
+    tipo: 'mercado',
+    texto: recientes.length
+      ? `Mercado movido: ${recientes.length} ${recientes.length === 1 ? 'cláusula pagada' : 'cláusulas pagadas'} en los últimos 7 días.`
+      : 'Mercado parado: ninguna cláusula pagada en los últimos 7 días.'
+  });
+
+  return titulares;
+}
+
+/**
+ * De los 11 presidentes rivales, quién está subiendo más de nivel AHORA
+ * MISMO. Se combinan dos cosas reales: cuántos puestos ha subido en la
+ * última jornada, y cuánto sumó esa jornada respecto a la media de la
+ * liga. (El valor de la plantilla se queda fuera: Biwenger no guarda su
+ * histórico por jornada, solo el valor de ahora mismo, así que no se
+ * puede medir su crecimiento real sin inventarlo.)
+ */
+function calcularMapaAmenazas(tabla, historico, tendencias) {
+  if (historico.length < 2) return [];
+
+  const ultima = historico[historico.length - 1];
+  const anterior = historico[historico.length - 2];
+  const puntosAnterior = new Map(anterior.equipos.map((e) => [e.equipo, e.puntos]));
+  const mediaUltimaJornada = ultima.equipos.reduce((s, e) => {
+    const antes = puntosAnterior.get(e.equipo);
+    return s + (antes != null ? e.puntos - antes : 0);
+  }, 0) / (ultima.equipos.length || 1);
+
+  const candidatos = tabla
+    .filter((e) => !e.esTuyo)
+    .map((e) => {
+      const antesPuntos = puntosAnterior.get(e.equipo);
+      const deltaJornada = antesPuntos != null ? e.puntos - antesPuntos : 0;
+      const sobreMedia = Math.round(deltaJornada - mediaUltimaJornada);
+      const puestos = tendencias[e.equipo]?.puestos || 0;
+      const score = puestos * 3 + sobreMedia;
+      return { equipo: e.equipo, escudo: e.escudo, puestos, sobreMedia, score };
+    })
+    .sort((a, b) => b.score - a.score)
+    .filter((e) => e.score > 0)
+    .slice(0, 3);
+
+  return candidatos;
 }
 
 /**
@@ -1138,10 +1483,25 @@ async function principal() {
   const premios = calcularPremios(soloClausulas, presidentes, onceIdeal?.paquete);
   console.log('Premios de la semana calculados.');
 
+  const termometro = calcularTermometro(tabla, rachas, movimientos, soloClausulas);
+  const amenazas = calcularMapaAmenazas(tabla, historico, tendencias);
+  console.log(`Termómetro: ${termometro.length} titulares. Amenazas: ${amenazas.length}.`);
+
   console.log('Consultando el calendario de dificultad de los 20 equipos reales...');
   const calendarioEquipos = await traerCalendarioEquipos(catalogo.detalleEquipos);
   const calendario = calcularCalendarioPresidentes(plantillas, jugadores, calendarioEquipos, tabla);
   console.log('Calendario de dificultad calculado.');
+
+  console.log('Analizando a todos los jugadores de las 12 plantillas...');
+  const jugadoresAnalizados = await analizarJugadores(plantillas, jugadores, scoreID, tabla);
+  console.log(`Jugadores analizados: ${jugadoresAnalizados.length}.`);
+
+  const valorJusto = calcularValorJusto(jugadoresAnalizados);
+  const enRacha = calcularEnRacha(jugadoresAnalizados);
+  const gangas = calcularGangas(mercadoBiwenger, jugadoresAnalizados, jugadores);
+  const recomendaciones = calcularRecomendaciones(jugadoresAnalizados, calendarioEquipos, tabla);
+  const predictor = calcularPredictor(recomendaciones);
+  console.log(`Chollos: ${valorJusto.chollos.length} · Gangas del mercado: ${gangas.length} · Predictor: ${predictor.length}.`);
 
   const salida = {
     actualizado: new Date().toISOString(),
@@ -1159,7 +1519,15 @@ async function principal() {
     movimientos,
     onceIdeal,
     premios,
-    calendario
+    calendario,
+    termometro,
+    amenazas,
+    jugadores: jugadoresAnalizados,
+    valorJusto,
+    enRacha,
+    gangas,
+    recomendaciones,
+    predictor
   };
 
   await mkdir(resolve(RAIZ, 'data'), { recursive: true });
