@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-13T17:16:57.892Z",
+  "actualizado": "2026-09-13T17:30:20.283Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 5,
   "jornadaEnJuego": true,
@@ -82,7 +82,7 @@
       "fecha": "2026-09-13T16:30:00.000Z",
       "golesLocal": 0,
       "golesVisitante": 0,
-      "estado": "firstTime"
+      "estado": "break"
     },
     {
       "local": "Real Sociedad",
@@ -134,10 +134,10 @@
       "valor": "46,1 M",
       "valorBruto": 46100000,
       "esTuyo": false,
-      "puntosJornada": 57,
-      "jugadosJornada": 6,
+      "puntosJornada": 58,
+      "jugadosJornada": 7,
       "alineadosJornada": 11,
-      "puntosProvisional": 291
+      "puntosProvisional": 292
     },
     {
       "posicion": 3,
@@ -150,10 +150,10 @@
       "valor": "35,5 M",
       "valorBruto": 35490000,
       "esTuyo": true,
-      "puntosJornada": 20,
-      "jugadosJornada": 4,
+      "puntosJornada": 24,
+      "jugadosJornada": 5,
       "alineadosJornada": 11,
-      "puntosProvisional": 242
+      "puntosProvisional": 246
     },
     {
       "posicion": 4,
@@ -167,7 +167,7 @@
       "valorBruto": 35930000,
       "esTuyo": false,
       "puntosJornada": 35,
-      "jugadosJornada": 6,
+      "jugadosJornada": 7,
       "alineadosJornada": 11,
       "puntosProvisional": 257
     },
@@ -182,10 +182,10 @@
       "valor": "44,1 M",
       "valorBruto": 44140000,
       "esTuyo": false,
-      "puntosJornada": 46,
-      "jugadosJornada": 4,
+      "puntosJornada": 49,
+      "jugadosJornada": 5,
       "alineadosJornada": 11,
-      "puntosProvisional": 256
+      "puntosProvisional": 259
     },
     {
       "posicion": 6,
@@ -214,10 +214,10 @@
       "valor": "57,4 M",
       "valorBruto": 57430000,
       "esTuyo": false,
-      "puntosJornada": 26,
-      "jugadosJornada": 6,
+      "puntosJornada": 39,
+      "jugadosJornada": 8,
       "alineadosJornada": 11,
-      "puntosProvisional": 214
+      "puntosProvisional": 227
     },
     {
       "posicion": 8,
@@ -246,10 +246,10 @@
       "valor": "54,2 M",
       "valorBruto": 54180000,
       "esTuyo": false,
-      "puntosJornada": 36,
-      "jugadosJornada": 4,
+      "puntosJornada": 55,
+      "jugadosJornada": 6,
       "alineadosJornada": 11,
-      "puntosProvisional": 218
+      "puntosProvisional": 237
     },
     {
       "posicion": 10,
@@ -262,10 +262,10 @@
       "valor": "42,4 M",
       "valorBruto": 42350000,
       "esTuyo": false,
-      "puntosJornada": 14,
-      "jugadosJornada": 3,
+      "puntosJornada": 13,
+      "jugadosJornada": 4,
       "alineadosJornada": 11,
-      "puntosProvisional": 190
+      "puntosProvisional": 189
     },
     {
       "posicion": 11,
@@ -294,10 +294,10 @@
       "valor": "41,3 M",
       "valorBruto": 41320000,
       "esTuyo": false,
-      "puntosJornada": 29,
-      "jugadosJornada": 5,
+      "puntosJornada": 37,
+      "jugadosJornada": 7,
       "alineadosJornada": 11,
-      "puntosProvisional": 111
+      "puntosProvisional": 119
     }
   ],
   "mercadoBiwenger": [
@@ -2407,7 +2407,7 @@
   "onceIdeal": {
     "jornada": "Jornada 4",
     "formacion": "4-3-3",
-    "total": 138,
+    "total": 133,
     "titulares": [
       {
         "nombre": "Álvaro Valles",
@@ -2425,6 +2425,22 @@
         "escudoPresidente": ""
       },
       {
+        "nombre": "Espart",
+        "posicion": "Defensa",
+        "puntos": 11,
+        "racha": [
+          11,
+          5,
+          4,
+          3,
+          9
+        ],
+        "equipoReal": "Barcelona",
+        "foto": "https://cdn.biwenger.com/i/p/40075.png",
+        "presidente": "",
+        "escudoPresidente": ""
+      },
+      {
         "nombre": "Castrín",
         "posicion": "Defensa",
         "puntos": 10,
@@ -2436,20 +2452,6 @@
         ],
         "equipoReal": "Sevilla",
         "foto": "https://cdn.biwenger.com/i/p/38072.png",
-        "presidente": "",
-        "escudoPresidente": ""
-      },
-      {
-        "nombre": "Cubarsí",
-        "posicion": "Defensa",
-        "puntos": 8,
-        "racha": [
-          8,
-          6,
-          10
-        ],
-        "equipoReal": "Barcelona",
-        "foto": "https://cdn.biwenger.com/i/p/32440.png",
         "presidente": "",
         "escudoPresidente": ""
       },
@@ -2484,21 +2486,6 @@
         "escudoPresidente": ""
       },
       {
-        "nombre": "Pedri",
-        "posicion": "Centrocampista",
-        "puntos": 15,
-        "racha": [
-          15,
-          3,
-          11,
-          3
-        ],
-        "equipoReal": "Barcelona",
-        "foto": "https://cdn.biwenger.com/i/p/19441.png",
-        "presidente": "",
-        "escudoPresidente": ""
-      },
-      {
         "nombre": "Bellingham",
         "posicion": "Centrocampista",
         "puntos": 14,
@@ -2527,6 +2514,22 @@
         ],
         "equipoReal": "Real Sociedad",
         "foto": "https://cdn.biwenger.com/i/p/17344.png",
+        "presidente": "",
+        "escudoPresidente": ""
+      },
+      {
+        "nombre": "Iker Muñoz",
+        "posicion": "Centrocampista",
+        "puntos": 7,
+        "racha": [
+          7,
+          3,
+          2,
+          4,
+          5
+        ],
+        "equipoReal": "Osasuna",
+        "foto": "https://cdn.biwenger.com/i/p/18128.png",
         "presidente": "",
         "escudoPresidente": ""
       },
