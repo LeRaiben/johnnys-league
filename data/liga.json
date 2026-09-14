@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-14T19:41:56.367Z",
+  "actualizado": "2026-09-14T19:57:52.325Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 5,
   "jornadaEnJuego": true,
@@ -101,8 +101,8 @@
       "escudoVisitante": "https://cdn.biwenger.com/i/t/87.png",
       "fecha": "2026-09-14T19:00:00.000Z",
       "golesLocal": 1,
-      "golesVisitante": 1,
-      "estado": "firstTime"
+      "golesVisitante": 2,
+      "estado": "break"
     }
   ],
   "nombreJornada": "Jornada 5",
@@ -131,8 +131,8 @@
       "iniciales": "CC",
       "escudo": "https://cdn.biwenger.com/i/u/11412340.png",
       "puntos": 234,
-      "valor": "46,1 M",
-      "valorBruto": 46060000,
+      "valor": "42,8 M",
+      "valorBruto": 42770000,
       "esTuyo": false,
       "puntosJornada": 59,
       "jugadosJornada": 8,
@@ -275,8 +275,8 @@
       "iniciales": "LC",
       "escudo": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
       "puntos": 130,
-      "valor": "41,8 M",
-      "valorBruto": 41810000,
+      "valor": "45,1 M",
+      "valorBruto": 45100000,
       "esTuyo": false,
       "puntosJornada": 19,
       "jugadosJornada": 5,
@@ -1306,6 +1306,22 @@
     },
     {
       "tipo": "clausula",
+      "fecha": "2026-09-14T19:44:31.000Z",
+      "nombre": "Natan",
+      "foto": "https://cdn.biwenger.com/i/p/19614.png",
+      "posicion": "Defensa",
+      "equipoReal": "Betis",
+      "vendedor": "Cañoneros CF",
+      "comprador": "Lottin Capital",
+      "escudoComprador": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
+      "pide": "4,6 M",
+      "pideBruto": 4606000,
+      "valorMercado": "3,3 M",
+      "valorBruto": 3290000,
+      "diferencia": 1316000
+    },
+    {
+      "tipo": "clausula",
       "fecha": "2026-09-10T13:18:41.000Z",
       "nombre": "Koke",
       "foto": "https://cdn.biwenger.com/i/p/1083.png",
@@ -1859,7 +1875,7 @@
       "fichajeEstrella": null,
       "total": 12,
       "puestoEficiencia": 3,
-      "puestoValor": 7,
+      "puestoValor": 8,
       "puestoGasto": 8,
       "puestoActividad": 10,
       "vsMediaPuntos": 26,
@@ -1877,20 +1893,20 @@
       "escudo": "https://cdn.biwenger.com/i/u/11412340.png",
       "iniciales": "CC",
       "puntos": 234,
-      "valor": "46,1 M",
-      "valorBruto": 46060000,
+      "valor": "42,8 M",
+      "valorBruto": 42770000,
       "esTuyo": false,
-      "puntosPorMillon": 5.08,
+      "puntosPorMillon": 5.47,
       "mediaJornada": 46.8,
       "clausulasHechas": 1,
-      "clausulasSufridas": 3,
-      "operaciones": 4,
+      "clausulasSufridas": 4,
+      "operaciones": 5,
       "gastado": "34,5 M",
       "gastadoBruto": 34502000,
-      "ingresado": "7,5 M",
-      "ingresadoBruto": 7510000,
-      "balance": "−27,0 M",
-      "balanceBruto": -26992000,
+      "ingresado": "12,1 M",
+      "ingresadoBruto": 12116000,
+      "balance": "−22,4 M",
+      "balanceBruto": -22386000,
       "sobreprecioMedio": 39,
       "enVenta": 0,
       "fichajeEstrella": {
@@ -1900,12 +1916,12 @@
       },
       "total": 12,
       "puestoEficiencia": 4,
-      "puestoValor": 3,
+      "puestoValor": 6,
       "puestoGasto": 2,
       "puestoActividad": 6,
       "vsMediaPuntos": 24,
-      "vsMediaEficiencia": 14,
-      "vsMediaValor": 6,
+      "vsMediaEficiencia": 23,
+      "vsMediaValor": -2,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
@@ -1941,7 +1957,7 @@
       "puestoGasto": 9,
       "puestoActividad": 7,
       "vsMediaPuntos": 18,
-      "vsMediaEficiencia": 41,
+      "vsMediaEficiencia": 40,
       "vsMediaValor": -19,
       "tendencia": {
         "puestos": 0,
@@ -2019,7 +2035,7 @@
       },
       "total": 12,
       "puestoEficiencia": 5,
-      "puestoValor": 4,
+      "puestoValor": 3,
       "puestoGasto": 4,
       "puestoActividad": 8,
       "vsMediaPuntos": 11,
@@ -2097,7 +2113,7 @@
       },
       "total": 12,
       "puestoEficiencia": 6,
-      "puestoValor": 6,
+      "puestoValor": 7,
       "puestoGasto": 1,
       "puestoActividad": 2,
       "vsMediaPuntos": 0,
@@ -2138,7 +2154,7 @@
       "puestoGasto": 11,
       "puestoActividad": 9,
       "vsMediaPuntos": 0,
-      "vsMediaEficiencia": -20,
+      "vsMediaEficiencia": -21,
       "vsMediaValor": 22,
       "tendencia": {
         "puestos": 0,
@@ -2216,11 +2232,11 @@
       },
       "total": 12,
       "puestoEficiencia": 8,
-      "puestoValor": 8,
+      "puestoValor": 9,
       "puestoGasto": 5,
       "puestoActividad": 3,
       "vsMediaPuntos": -7,
-      "vsMediaEficiencia": -6,
+      "vsMediaEficiencia": -7,
       "vsMediaValor": -3,
       "tendencia": {
         "puestos": 0,
@@ -2234,21 +2250,21 @@
       "escudo": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
       "iniciales": "LC",
       "puntos": 130,
-      "valor": "41,8 M",
-      "valorBruto": 41810000,
+      "valor": "45,1 M",
+      "valorBruto": 45100000,
       "esTuyo": false,
-      "puntosPorMillon": 3.11,
+      "puntosPorMillon": 2.88,
       "mediaJornada": 26,
-      "clausulasHechas": 1,
+      "clausulasHechas": 2,
       "clausulasSufridas": 4,
-      "operaciones": 5,
-      "gastado": "14,9 M",
-      "gastadoBruto": 14872000,
+      "operaciones": 6,
+      "gastado": "19,5 M",
+      "gastadoBruto": 19478000,
       "ingresado": "38,8 M",
       "ingresadoBruto": 38777000,
-      "balance": "+23,9 M",
-      "balanceBruto": 23905000,
-      "sobreprecioMedio": 29,
+      "balance": "+19,3 M",
+      "balanceBruto": 19299000,
+      "sobreprecioMedio": 35,
       "enVenta": 2,
       "fichajeEstrella": {
         "nombre": "Pépé",
@@ -2257,12 +2273,12 @@
       },
       "total": 12,
       "puestoEficiencia": 11,
-      "puestoValor": 9,
+      "puestoValor": 4,
       "puestoGasto": 6,
       "puestoActividad": 5,
       "vsMediaPuntos": -31,
-      "vsMediaEficiencia": -30,
-      "vsMediaValor": -4,
+      "vsMediaEficiencia": -35,
+      "vsMediaValor": 3,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
@@ -2298,7 +2314,7 @@
       "puestoGasto": 12,
       "puestoActividad": 12,
       "vsMediaPuntos": -57,
-      "vsMediaEficiencia": -55,
+      "vsMediaEficiencia": -56,
       "vsMediaValor": -5,
       "tendencia": {
         "puestos": 0,
@@ -2586,6 +2602,32 @@
   },
   "calendario": {
     "Lottin Capital": [
+      {
+        "nombre": "Natan",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/19614.png",
+        "equipoReal": "Betis",
+        "jornadas": [
+          {
+            "jornada": "Round 5",
+            "esLocal": false,
+            "rival": "Villarreal",
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "esLocal": true,
+            "rival": "Getafe",
+            "dificultad": 26
+          },
+          {
+            "jornada": "Round 7",
+            "esLocal": false,
+            "rival": "Deportivo",
+            "dificultad": 56
+          }
+        ]
+      },
       {
         "nombre": "Pépé",
         "posicion": "Delantero",
@@ -4887,32 +4929,6 @@
         ]
       },
       {
-        "nombre": "Natan",
-        "posicion": "Defensa",
-        "foto": "https://cdn.biwenger.com/i/p/19614.png",
-        "equipoReal": "Betis",
-        "jornadas": [
-          {
-            "jornada": "Round 5",
-            "esLocal": false,
-            "rival": "Villarreal",
-            "dificultad": null
-          },
-          {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Getafe",
-            "dificultad": 26
-          },
-          {
-            "jornada": "Round 7",
-            "esLocal": false,
-            "rival": "Deportivo",
-            "dificultad": 56
-          }
-        ]
-      },
-      {
         "nombre": "Olasagasti",
         "posicion": "Centrocampista",
         "foto": "https://cdn.biwenger.com/i/p/29661.png",
@@ -6943,7 +6959,7 @@
     },
     {
       "tipo": "mercado",
-      "texto": "Mercado movido: 9 cláusulas pagadas en los últimos 7 días."
+      "texto": "Mercado movido: 10 cláusulas pagadas en los últimos 7 días."
     }
   ],
   "amenazas": [
@@ -6982,6 +6998,38 @@
     }
   ],
   "jugadores": [
+    {
+      "id": "19614",
+      "nombre": "Natan",
+      "slug": "natan",
+      "posicion": "Defensa",
+      "posicionCodigo": 2,
+      "foto": "https://cdn.biwenger.com/i/p/19614.png",
+      "equipoReal": "Betis",
+      "equipoIdReal": "87",
+      "presidente": "Lottin Capital",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
+      "precio": 3290000,
+      "precioTexto": "3,3 M",
+      "puntosTotales": 18,
+      "partidosJugados": 3,
+      "media": 6,
+      "puntosPorMillon": 5.47,
+      "racha": [
+        7,
+        4,
+        7
+      ],
+      "rachaTitular": 3,
+      "ultimoMinutos": 90,
+      "clausula": 6448400,
+      "clausulaTexto": "6,4 M",
+      "pagadoPorSuDueno": 4606000,
+      "margen": 3158400,
+      "margenPorcentaje": 96,
+      "blindado": true,
+      "blindadoHasta": "2026-09-29T19:44:31.000Z"
+    },
     {
       "id": "34479",
       "nombre": "Pépé",
@@ -9849,38 +9897,6 @@
       "blindadoHasta": null
     },
     {
-      "id": "19614",
-      "nombre": "Natan",
-      "slug": "natan",
-      "posicion": "Defensa",
-      "posicionCodigo": 2,
-      "foto": "https://cdn.biwenger.com/i/p/19614.png",
-      "equipoReal": "Betis",
-      "equipoIdReal": "87",
-      "presidente": "Cañoneros CF",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/11412340.png",
-      "precio": 3290000,
-      "precioTexto": "3,3 M",
-      "puntosTotales": 18,
-      "partidosJugados": 3,
-      "media": 6,
-      "puntosPorMillon": 5.47,
-      "racha": [
-        7,
-        4,
-        7
-      ],
-      "rachaTitular": 3,
-      "ultimoMinutos": 90,
-      "clausula": 4606000,
-      "clausulaTexto": "4,6 M",
-      "pagadoPorSuDueno": null,
-      "margen": 1316000,
-      "margenPorcentaje": 40,
-      "blindado": false,
-      "blindadoHasta": null
-    },
-    {
       "id": "29661",
       "nombre": "Olasagasti",
       "slug": "jon-ander-olasagasti",
@@ -11594,8 +11610,8 @@
       "pagadoPorSuDueno": 1590000,
       "margen": 1115000,
       "margenPorcentaje": 50,
-      "blindado": true,
-      "blindadoHasta": "2026-09-14T19:45:52.000Z"
+      "blindado": false,
+      "blindadoHasta": null
     },
     {
       "id": "12494",
@@ -13311,8 +13327,8 @@
         "pagadoPorSuDueno": 1590000,
         "margen": 1115000,
         "margenPorcentaje": 50,
-        "blindado": true,
-        "blindadoHasta": "2026-09-14T19:45:52.000Z",
+        "blindado": false,
+        "blindadoHasta": null,
         "mediaReciente": -0.5
       },
       {
@@ -13611,6 +13627,22 @@
         "rival": "Villarreal",
         "esLocal": true,
         "dificultad": 30
+      },
+      {
+        "nombre": "Natan",
+        "foto": "https://cdn.biwenger.com/i/p/19614.png",
+        "posicion": "Defensa",
+        "equipoReal": "Betis",
+        "racha": [
+          7,
+          4,
+          7
+        ],
+        "rachaTitular": 3,
+        "nota": 5.3,
+        "rival": "Villarreal",
+        "esLocal": false,
+        "dificultad": null
       },
       {
         "nombre": "Carreira",
@@ -15029,22 +15061,6 @@
         "rival": "Villarreal",
         "esLocal": true,
         "dificultad": 30
-      },
-      {
-        "nombre": "Natan",
-        "foto": "https://cdn.biwenger.com/i/p/19614.png",
-        "posicion": "Defensa",
-        "equipoReal": "Betis",
-        "racha": [
-          7,
-          4,
-          7
-        ],
-        "rachaTitular": 3,
-        "nota": 5.3,
-        "rival": "Villarreal",
-        "esLocal": false,
-        "dificultad": null
       },
       {
         "nombre": "Dotor",
