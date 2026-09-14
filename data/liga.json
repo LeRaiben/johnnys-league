@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-14T16:18:27.956Z",
+  "actualizado": "2026-09-14T16:35:10.809Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 5,
   "jornadaEnJuego": true,
@@ -243,8 +243,8 @@
       "iniciales": "LV",
       "escudo": "https://cdn.biwenger.com/i/u/13934763.png",
       "puntos": 182,
-      "valor": "59,2 M",
-      "valorBruto": 59170000,
+      "valor": "56,0 M",
+      "valorBruto": 56000000,
       "esTuyo": false,
       "puntosJornada": 63,
       "jugadosJornada": 8,
@@ -275,8 +275,8 @@
       "iniciales": "LC",
       "escudo": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
       "puntos": 130,
-      "valor": "38,6 M",
-      "valorBruto": 38640000,
+      "valor": "41,8 M",
+      "valorBruto": 41810000,
       "esTuyo": false,
       "puntosJornada": 19,
       "jugadosJornada": 5,
@@ -939,19 +939,6 @@
       "valorMercado": "9,1 M",
       "valorBruto": 9050000,
       "diferencia": -50000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Giménez",
-      "foto": "https://cdn.biwenger.com/i/p/1676.png",
-      "posicion": "Defensa",
-      "equipoReal": "Deportivo",
-      "vendedor": "Las Víboras FC",
-      "pide": "2,6 M",
-      "pideBruto": 2590000,
-      "valorMercado": "3,2 M",
-      "valorBruto": 3170000,
-      "diferencia": -580000
     },
     {
       "tipo": "venta",
@@ -2138,7 +2125,7 @@
       "puestoGasto": 11,
       "puestoActividad": 9,
       "vsMediaPuntos": 0,
-      "vsMediaEficiencia": -21,
+      "vsMediaEficiencia": -20,
       "vsMediaValor": 22,
       "tendencia": {
         "puestos": 0,
@@ -2152,10 +2139,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/13934763.png",
       "iniciales": "LV",
       "puntos": 182,
-      "valor": "59,2 M",
-      "valorBruto": 59170000,
+      "valor": "56,0 M",
+      "valorBruto": 56000000,
       "esTuyo": false,
-      "puntosPorMillon": 3.08,
+      "puntosPorMillon": 3.25,
       "mediaJornada": 36.4,
       "clausulasHechas": 10,
       "clausulasSufridas": 3,
@@ -2167,20 +2154,20 @@
       "balance": "−2,5 M",
       "balanceBruto": -2461201,
       "sobreprecioMedio": 48,
-      "enVenta": 17,
+      "enVenta": 16,
       "fichajeEstrella": {
         "nombre": "Camello",
         "precio": "6,7 M",
         "foto": "https://cdn.biwenger.com/i/p/17756.png"
       },
       "total": 12,
-      "puestoEficiencia": 11,
+      "puestoEficiencia": 10,
       "puestoValor": 1,
       "puestoGasto": 3,
       "puestoActividad": 1,
       "vsMediaPuntos": -4,
-      "vsMediaEficiencia": -31,
-      "vsMediaValor": 36,
+      "vsMediaEficiencia": -27,
+      "vsMediaValor": 29,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
@@ -2234,10 +2221,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
       "iniciales": "LC",
       "puntos": 130,
-      "valor": "38,6 M",
-      "valorBruto": 38640000,
+      "valor": "41,8 M",
+      "valorBruto": 41810000,
       "esTuyo": false,
-      "puntosPorMillon": 3.36,
+      "puntosPorMillon": 3.11,
       "mediaJornada": 26,
       "clausulasHechas": 1,
       "clausulasSufridas": 4,
@@ -2256,13 +2243,13 @@
         "foto": "https://cdn.biwenger.com/i/p/34479.png"
       },
       "total": 12,
-      "puestoEficiencia": 10,
-      "puestoValor": 10,
+      "puestoEficiencia": 11,
+      "puestoValor": 9,
       "puestoGasto": 6,
       "puestoActividad": 5,
       "vsMediaPuntos": -31,
-      "vsMediaEficiencia": -24,
-      "vsMediaValor": -11,
+      "vsMediaEficiencia": -30,
+      "vsMediaValor": -4,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
@@ -2294,7 +2281,7 @@
       "fichajeEstrella": null,
       "total": 12,
       "puestoEficiencia": 12,
-      "puestoValor": 9,
+      "puestoValor": 10,
       "puestoGasto": 12,
       "puestoActividad": 12,
       "vsMediaPuntos": -57,
@@ -2635,6 +2622,32 @@
             "esLocal": false,
             "rival": "Betis",
             "dificultad": 57
+          }
+        ]
+      },
+      {
+        "nombre": "Giménez",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/1676.png",
+        "equipoReal": "Deportivo",
+        "jornadas": [
+          {
+            "jornada": "Round 6 (postponed)",
+            "esLocal": true,
+            "rival": "Sevilla",
+            "dificultad": 60
+          },
+          {
+            "jornada": "Round 7",
+            "esLocal": true,
+            "rival": "Betis",
+            "dificultad": 46
+          },
+          {
+            "jornada": "Round 8",
+            "esLocal": false,
+            "rival": "Real Sociedad",
+            "dificultad": 33
           }
         ]
       },
@@ -6209,32 +6222,6 @@
         ]
       },
       {
-        "nombre": "Giménez",
-        "posicion": "Defensa",
-        "foto": "https://cdn.biwenger.com/i/p/1676.png",
-        "equipoReal": "Deportivo",
-        "jornadas": [
-          {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Sevilla",
-            "dificultad": 60
-          },
-          {
-            "jornada": "Round 7",
-            "esLocal": true,
-            "rival": "Betis",
-            "dificultad": 46
-          },
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Real Sociedad",
-            "dificultad": 33
-          }
-        ]
-      },
-      {
         "nombre": "Arguibide",
         "posicion": "Defensa",
         "foto": "https://cdn.biwenger.com/i/p/10292.png",
@@ -7048,6 +7035,39 @@
       "margenPorcentaje": 62,
       "blindado": true,
       "blindadoHasta": "2026-09-16T09:14:48.000Z"
+    },
+    {
+      "id": "1676",
+      "nombre": "Giménez",
+      "slug": "jose-gimenez",
+      "posicion": "Defensa",
+      "posicionCodigo": 2,
+      "foto": "https://cdn.biwenger.com/i/p/1676.png",
+      "equipoReal": "Deportivo",
+      "equipoIdReal": "6",
+      "presidente": "Lottin Capital",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
+      "precio": 3170000,
+      "precioTexto": "3,2 M",
+      "puntosTotales": 16,
+      "partidosJugados": 4,
+      "media": 4,
+      "puntosPorMillon": 5.05,
+      "racha": [
+        4,
+        6,
+        3,
+        3
+      ],
+      "rachaTitular": 2,
+      "ultimoMinutos": 90,
+      "clausula": 6020000,
+      "clausulaTexto": "6,0 M",
+      "pagadoPorSuDueno": 4300000,
+      "margen": 2850000,
+      "margenPorcentaje": 90,
+      "blindado": true,
+      "blindadoHasta": "2026-09-29T16:29:33.000Z"
     },
     {
       "id": "2044",
@@ -11531,39 +11551,6 @@
       "blindadoHasta": "2026-09-29T05:04:41.000Z"
     },
     {
-      "id": "1676",
-      "nombre": "Giménez",
-      "slug": "jose-gimenez",
-      "posicion": "Defensa",
-      "posicionCodigo": 2,
-      "foto": "https://cdn.biwenger.com/i/p/1676.png",
-      "equipoReal": "Deportivo",
-      "equipoIdReal": "6",
-      "presidente": "Las Víboras FC",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
-      "precio": 3170000,
-      "precioTexto": "3,2 M",
-      "puntosTotales": 16,
-      "partidosJugados": 4,
-      "media": 4,
-      "puntosPorMillon": 5.05,
-      "racha": [
-        4,
-        6,
-        3,
-        3
-      ],
-      "rachaTitular": 2,
-      "ultimoMinutos": 90,
-      "clausula": 5404000,
-      "clausulaTexto": "5,4 M",
-      "pagadoPorSuDueno": 3860000,
-      "margen": 2234000,
-      "margenPorcentaje": 70,
-      "blindado": true,
-      "blindadoHasta": "2026-09-24T05:10:25.000Z"
-    },
-    {
       "id": "10292",
       "nombre": "Arguibide",
       "slug": "inigo-arguibide",
@@ -13663,6 +13650,23 @@
         "rival": "Levante",
         "esLocal": false,
         "dificultad": 49
+      },
+      {
+        "nombre": "Giménez",
+        "foto": "https://cdn.biwenger.com/i/p/1676.png",
+        "posicion": "Defensa",
+        "equipoReal": "Deportivo",
+        "racha": [
+          4,
+          6,
+          3,
+          3
+        ],
+        "rachaTitular": 2,
+        "nota": 4.5,
+        "rival": "Sevilla",
+        "esLocal": true,
+        "dificultad": 60
       },
       {
         "nombre": "Ceballos",
@@ -15961,23 +15965,6 @@
         "rival": "Villarreal",
         "esLocal": false,
         "dificultad": 17
-      },
-      {
-        "nombre": "Giménez",
-        "foto": "https://cdn.biwenger.com/i/p/1676.png",
-        "posicion": "Defensa",
-        "equipoReal": "Deportivo",
-        "racha": [
-          4,
-          6,
-          3,
-          3
-        ],
-        "rachaTitular": 2,
-        "nota": 4.5,
-        "rival": "Sevilla",
-        "esLocal": true,
-        "dificultad": 60
       },
       {
         "nombre": "Brugué",
