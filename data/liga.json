@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-14T11:12:44.482Z",
+  "actualizado": "2026-09-14T11:33:28.211Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 5,
   "jornadaEnJuego": true,
@@ -195,8 +195,8 @@
       "iniciales": "MP",
       "escudo": "https://cdn.biwenger.com/i/u/10271251.png",
       "puntos": 192,
-      "valor": "45,6 M",
-      "valorBruto": 45640000,
+      "valor": "43,8 M",
+      "valorBruto": 43760000,
       "esTuyo": false,
       "puntosJornada": 44,
       "jugadosJornada": 10,
@@ -510,19 +510,6 @@
       "valorMercado": "0,4 M",
       "valorBruto": 440000,
       "diferencia": 170000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Raúl Moro",
-      "foto": "https://cdn.biwenger.com/i/p/33697.png",
-      "posicion": "Delantero",
-      "equipoReal": "Osasuna",
-      "vendedor": "Manchester Pity",
-      "pide": "3,3 M",
-      "pideBruto": 3250000,
-      "valorMercado": "1,9 M",
-      "valorBruto": 1880000,
-      "diferencia": 1370000
     },
     {
       "tipo": "venta",
@@ -1889,7 +1876,7 @@
       "puestoGasto": 8,
       "puestoActividad": 10,
       "vsMediaPuntos": 26,
-      "vsMediaEficiencia": 27,
+      "vsMediaEficiencia": 26,
       "vsMediaValor": -3,
       "tendencia": {
         "puestos": 0,
@@ -1930,8 +1917,8 @@
       "puestoGasto": 2,
       "puestoActividad": 6,
       "vsMediaPuntos": 24,
-      "vsMediaEficiencia": 15,
-      "vsMediaValor": 5,
+      "vsMediaEficiencia": 14,
+      "vsMediaValor": 6,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
@@ -2045,7 +2032,7 @@
       },
       "total": 12,
       "puestoEficiencia": 5,
-      "puestoValor": 5,
+      "puestoValor": 4,
       "puestoGasto": 4,
       "puestoActividad": 8,
       "vsMediaPuntos": 11,
@@ -2063,10 +2050,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/10271251.png",
       "iniciales": "MP",
       "puntos": 192,
-      "valor": "45,6 M",
-      "valorBruto": 45640000,
+      "valor": "43,8 M",
+      "valorBruto": 43760000,
       "esTuyo": false,
-      "puntosPorMillon": 4.21,
+      "puntosPorMillon": 4.39,
       "mediaJornada": 38.4,
       "clausulasHechas": 0,
       "clausulasSufridas": 2,
@@ -2078,16 +2065,16 @@
       "balance": "+13,6 M",
       "balanceBruto": 13598000,
       "sobreprecioMedio": null,
-      "enVenta": 8,
+      "enVenta": 7,
       "fichajeEstrella": null,
       "total": 12,
       "puestoEficiencia": 7,
-      "puestoValor": 4,
+      "puestoValor": 5,
       "puestoGasto": 10,
       "puestoActividad": 11,
       "vsMediaPuntos": 2,
-      "vsMediaEficiencia": -5,
-      "vsMediaValor": 4,
+      "vsMediaEficiencia": -1,
+      "vsMediaValor": 0,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
@@ -2127,8 +2114,8 @@
       "puestoGasto": 1,
       "puestoActividad": 2,
       "vsMediaPuntos": 0,
-      "vsMediaEficiencia": 0,
-      "vsMediaValor": -3,
+      "vsMediaEficiencia": -1,
+      "vsMediaValor": -2,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
@@ -2164,7 +2151,7 @@
       "puestoGasto": 11,
       "puestoActividad": 9,
       "vsMediaPuntos": 0,
-      "vsMediaEficiencia": -20,
+      "vsMediaEficiencia": -21,
       "vsMediaValor": 22,
       "tendencia": {
         "puestos": 0,
@@ -2205,8 +2192,8 @@
       "puestoGasto": 3,
       "puestoActividad": 1,
       "vsMediaPuntos": -4,
-      "vsMediaEficiencia": -30,
-      "vsMediaValor": 35,
+      "vsMediaEficiencia": -31,
+      "vsMediaValor": 36,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
@@ -2288,7 +2275,7 @@
       "puestoActividad": 5,
       "vsMediaPuntos": -31,
       "vsMediaEficiencia": -24,
-      "vsMediaValor": -12,
+      "vsMediaValor": -11,
       "tendencia": {
         "puestos": 0,
         "puntos": 0,
@@ -3601,32 +3588,6 @@
             "esLocal": false,
             "rival": "Levante",
             "dificultad": 46
-          }
-        ]
-      },
-      {
-        "nombre": "Raúl Moro",
-        "posicion": "Delantero",
-        "foto": "https://cdn.biwenger.com/i/p/33697.png",
-        "equipoReal": "Osasuna",
-        "jornadas": [
-          {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Atlético",
-            "dificultad": 62
-          },
-          {
-            "jornada": "Round 7",
-            "esLocal": true,
-            "rival": "Rayo Vallecano",
-            "dificultad": 25
-          },
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Betis",
-            "dificultad": 57
           }
         ]
       },
@@ -8264,38 +8225,6 @@
       "pagadoPorSuDueno": 650001,
       "margen": 860002,
       "margenPorcentaje": 195,
-      "blindado": false,
-      "blindadoHasta": null
-    },
-    {
-      "id": "33697",
-      "nombre": "Raúl Moro",
-      "slug": "raul-moro",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/33697.png",
-      "equipoReal": "Osasuna",
-      "equipoIdReal": "93",
-      "presidente": "Manchester Pity",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10271251.png",
-      "precio": 1880000,
-      "precioTexto": "1,9 M",
-      "puntosTotales": 11,
-      "partidosJugados": 3,
-      "media": 3.7,
-      "puntosPorMillon": 5.85,
-      "racha": [
-        3,
-        5,
-        3
-      ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 30,
-      "clausula": 5138014,
-      "clausulaTexto": "5,1 M",
-      "pagadoPorSuDueno": 3670010,
-      "margen": 3258014,
-      "margenPorcentaje": 173,
       "blindado": false,
       "blindadoHasta": null
     },
@@ -14291,22 +14220,6 @@
         "rival": "Deportivo",
         "esLocal": false,
         "dificultad": 55
-      },
-      {
-        "nombre": "Raúl Moro",
-        "foto": "https://cdn.biwenger.com/i/p/33697.png",
-        "posicion": "Delantero",
-        "equipoReal": "Osasuna",
-        "racha": [
-          3,
-          5,
-          3
-        ],
-        "rachaTitular": 0,
-        "nota": 3.9,
-        "rival": "Atlético",
-        "esLocal": false,
-        "dificultad": 62
       },
       {
         "nombre": "Barja",
