@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-15T23:15:20.156Z",
+  "actualizado": "2026-09-15T23:29:36.013Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 6,
   "jornadaEnJuego": true,
@@ -211,8 +211,8 @@
       "iniciales": "LV",
       "escudo": "https://cdn.biwenger.com/i/u/13934763.png",
       "puntos": 247,
-      "valor": "57,9 M",
-      "valorBruto": 57850000,
+      "valor": "55,7 M",
+      "valorBruto": 55670000,
       "esTuyo": false,
       "puntosJornada": 0,
       "jugadosJornada": 0,
@@ -848,19 +848,6 @@
       "valorMercado": "1,8 M",
       "valorBruto": 1770000,
       "diferencia": 0
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Arguibide",
-      "foto": "https://cdn.biwenger.com/i/p/10292.png",
-      "posicion": "Defensa",
-      "equipoReal": "Osasuna",
-      "vendedor": "Las Víboras FC",
-      "pide": "1,4 M",
-      "pideBruto": 1430000,
-      "valorMercado": "2,2 M",
-      "valorBruto": 2180000,
-      "diferencia": -750000
     },
     {
       "tipo": "venta",
@@ -1859,7 +1846,7 @@
       "puestoGasto": 5,
       "puestoActividad": 7,
       "vsMediaPuntos": 16,
-      "vsMediaEficiencia": 102,
+      "vsMediaEficiencia": 101,
       "vsMediaValor": -46,
       "tendencia": null
     },
@@ -1934,7 +1921,7 @@
       "puestoActividad": 8,
       "vsMediaPuntos": 3,
       "vsMediaEficiencia": -20,
-      "vsMediaValor": 20,
+      "vsMediaValor": 21,
       "tendencia": null
     },
     {
@@ -1967,7 +1954,7 @@
       "puestoActividad": 9,
       "vsMediaPuntos": 2,
       "vsMediaEficiencia": 13,
-      "vsMediaValor": -15,
+      "vsMediaValor": -14,
       "tendencia": null
     },
     {
@@ -1976,10 +1963,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/13934763.png",
       "iniciales": "LV",
       "puntos": 247,
-      "valor": "57,9 M",
-      "valorBruto": 57850000,
+      "valor": "55,7 M",
+      "valorBruto": 55670000,
       "esTuyo": false,
-      "puntosPorMillon": 4.27,
+      "puntosPorMillon": 4.44,
       "mediaJornada": 41.2,
       "clausulasHechas": 10,
       "clausulasSufridas": 3,
@@ -1991,7 +1978,7 @@
       "balance": "−2,5 M",
       "balanceBruto": -2461201,
       "sobreprecioMedio": 46,
-      "enVenta": 16,
+      "enVenta": 15,
       "fichajeEstrella": {
         "nombre": "Camello",
         "precio": "6,7 M",
@@ -2003,8 +1990,8 @@
       "puestoGasto": 3,
       "puestoActividad": 1,
       "vsMediaPuntos": 2,
-      "vsMediaEficiencia": -29,
-      "vsMediaValor": 34,
+      "vsMediaEficiencia": -26,
+      "vsMediaValor": 30,
       "tendencia": null
     },
     {
@@ -5946,32 +5933,6 @@
         "foto": "https://cdn.biwenger.com/i/p/3310.png",
         "equipoReal": "",
         "jornadas": []
-      },
-      {
-        "nombre": "Arguibide",
-        "posicion": "Defensa",
-        "foto": "https://cdn.biwenger.com/i/p/10292.png",
-        "equipoReal": "Osasuna",
-        "jornadas": [
-          {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Atlético",
-            "dificultad": 60
-          },
-          {
-            "jornada": "Round 7",
-            "esLocal": true,
-            "rival": "Rayo Vallecano",
-            "dificultad": 35
-          },
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Betis",
-            "dificultad": 65
-          }
-        ]
       },
       {
         "nombre": "Boyé",
@@ -11122,40 +11083,6 @@
       "blindadoHasta": null
     },
     {
-      "id": "10292",
-      "nombre": "Arguibide",
-      "slug": "inigo-arguibide",
-      "posicion": "Defensa",
-      "posicionCodigo": 2,
-      "foto": "https://cdn.biwenger.com/i/p/10292.png",
-      "equipoReal": "Osasuna",
-      "equipoIdReal": "93",
-      "presidente": "Las Víboras FC",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
-      "precio": 2180000,
-      "precioTexto": "2,2 M",
-      "puntosTotales": 10,
-      "partidosJugados": 5,
-      "media": 2,
-      "puntosPorMillon": 4.59,
-      "racha": [
-        1,
-        -2,
-        7,
-        1,
-        3
-      ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 59,
-      "clausula": 3270000,
-      "clausulaTexto": "3,3 M",
-      "pagadoPorSuDueno": 1590000,
-      "margen": 1090000,
-      "margenPorcentaje": 50,
-      "blindado": false,
-      "blindadoHasta": null
-    },
-    {
       "id": "12494",
       "nombre": "Boyé",
       "slug": "lucas-boye",
@@ -12851,41 +12778,6 @@
     ],
     "frios": [
       {
-        "id": "10292",
-        "nombre": "Arguibide",
-        "slug": "inigo-arguibide",
-        "posicion": "Defensa",
-        "posicionCodigo": 2,
-        "foto": "https://cdn.biwenger.com/i/p/10292.png",
-        "equipoReal": "Osasuna",
-        "equipoIdReal": "93",
-        "presidente": "Las Víboras FC",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
-        "precio": 2180000,
-        "precioTexto": "2,2 M",
-        "puntosTotales": 10,
-        "partidosJugados": 5,
-        "media": 2,
-        "puntosPorMillon": 4.59,
-        "racha": [
-          1,
-          -2,
-          7,
-          1,
-          3
-        ],
-        "rachaTitular": 0,
-        "ultimoMinutos": 59,
-        "clausula": 3270000,
-        "clausulaTexto": "3,3 M",
-        "pagadoPorSuDueno": 1590000,
-        "margen": 1090000,
-        "margenPorcentaje": 50,
-        "blindado": false,
-        "blindadoHasta": null,
-        "mediaReciente": -0.5
-      },
-      {
         "id": "29185",
         "nombre": "Pablo Durán",
         "slug": "pablo-duran",
@@ -13125,6 +13017,39 @@
         "blindado": true,
         "blindadoHasta": "2026-09-16T01:33:13.000Z",
         "mediaReciente": 0.5
+      },
+      {
+        "id": "25392",
+        "nombre": "Jofre Carreras",
+        "slug": "jofre-carreras",
+        "posicion": "Delantero",
+        "posicionCodigo": 4,
+        "foto": "https://cdn.biwenger.com/i/p/25392.png",
+        "equipoReal": "Espanyol",
+        "equipoIdReal": "7",
+        "presidente": "Gorila FC",
+        "escudoPresidente": "https://cdn.biwenger.com/i/u/11411835.png",
+        "precio": 200000,
+        "precioTexto": "0,2 M",
+        "puntosTotales": 3,
+        "partidosJugados": 3,
+        "media": 1,
+        "puntosPorMillon": 15,
+        "racha": [
+          2,
+          0,
+          1
+        ],
+        "rachaTitular": 0,
+        "ultimoMinutos": 7,
+        "clausula": 600000,
+        "clausulaTexto": "0,6 M",
+        "pagadoPorSuDueno": null,
+        "margen": 400000,
+        "margenPorcentaje": 200,
+        "blindado": false,
+        "blindadoHasta": null,
+        "mediaReciente": 1
       }
     ]
   },
@@ -15695,24 +15620,6 @@
         "rival": "",
         "esLocal": null,
         "dificultad": null
-      },
-      {
-        "nombre": "Arguibide",
-        "foto": "https://cdn.biwenger.com/i/p/10292.png",
-        "posicion": "Defensa",
-        "equipoReal": "Osasuna",
-        "racha": [
-          1,
-          -2,
-          7,
-          1,
-          3
-        ],
-        "rachaTitular": 0,
-        "nota": 2,
-        "rival": "Atlético",
-        "esLocal": false,
-        "dificultad": 60
       }
     ],
     "Seif fc": [
