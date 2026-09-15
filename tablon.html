@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tablón · Johnny's League</title>
+<meta name="description" content="El tablón de anuncios de los presidentes de Johnny's League.">
+<link rel="icon" href="assets/escudo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/estilo.css">
+<style>
+  /* Acceso */
+  .acceso { background:var(--navy-soft); padding:28px; max-width:440px; margin:0 auto; }
+  .acceso h3 { font-family:'Anton',sans-serif; font-size:1.3rem; margin:0 0 6px; }
+  .acceso p { font-size:0.9rem; color:var(--grey); margin:0 0 20px; line-height:1.5; }
+  .campo { margin-bottom:14px; }
+  .campo label { display:block; font-family:'Barlow Condensed',sans-serif; font-weight:600;
+    letter-spacing:0.05em; text-transform:uppercase; font-size:0.68rem; color:var(--grey); margin-bottom:6px; }
+  .campo input { width:100%; background:rgba(2,18,52,0.6); color:var(--white);
+    border:1px solid var(--navy-line); font-family:'Source Serif 4',serif; font-size:0.95rem;
+    padding:11px 13px; border-radius:4px; box-sizing:border-box; }
+  .campo input:focus { outline:none; border-color:var(--gold-dim); }
+  .boton { background:var(--red); color:#fff; border:none; cursor:pointer;
+    font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.07em;
+    text-transform:uppercase; font-size:0.9rem; padding:12px 24px; border-radius:4px; }
+  .boton:hover { filter:brightness(1.12); }
+  .boton:disabled { opacity:0.5; cursor:default; }
+  .boton.secundario { background:transparent; border:1px solid var(--navy-line); color:var(--grey); }
+
+  .mensaje-estado { font-size:0.88rem; padding:11px 14px; border-radius:4px; margin-bottom:16px; line-height:1.45; }
+  .mensaje-estado.error { background:rgba(192,24,44,0.15); color:#E8746A; border-left:3px solid #E8746A; }
+  .mensaje-estado.ok { background:rgba(111,207,151,0.12); color:#6FCF97; border-left:3px solid #6FCF97; }
+
+  /* Barra de sesión */
+  .sesion { display:flex; align-items:center; justify-content:space-between; gap:14px;
+    background:var(--navy-soft); padding:13px 18px; margin-bottom:22px; flex-wrap:wrap; }
+  .sesion .quien { font-family:'Barlow Condensed',sans-serif; letter-spacing:0.03em;
+    font-size:0.86rem; color:rgba(247,247,245,0.86); }
+  .sesion .quien b { color:var(--gold); }
+
+  /* Escribir */
+  .escribir { background:var(--navy-soft); padding:20px; margin-bottom:26px; }
+  .escribir textarea { width:100%; min-height:96px; background:rgba(2,18,52,0.6); color:var(--white);
+    border:1px solid var(--navy-line); font-family:'Source Serif 4',serif; font-size:0.96rem;
+    padding:12px 14px; border-radius:4px; box-sizing:border-box; resize:vertical; line-height:1.5; }
+  .escribir textarea:focus { outline:none; border-color:var(--gold-dim); }
+  .escribir .pie { display:flex; align-items:center; justify-content:space-between;
+    margin-top:12px; gap:12px; flex-wrap:wrap; }
+  .escribir .cuenta { font-family:'Barlow Condensed',sans-serif; font-size:0.74rem; color:var(--grey); }
+
+  /* Mensajes */
+  .lista-msg { display:grid; gap:12px; }
+  .msg { background:var(--navy-soft); padding:17px 20px; border-left:3px solid var(--navy-line); }
+  .msg.mio { border-left-color:var(--gold); }
+  .msg .cab { display:flex; align-items:baseline; gap:11px; margin-bottom:9px; flex-wrap:wrap; }
+  .msg .autor { font-family:'Anton',sans-serif; font-size:1rem; }
+  .msg.mio .autor { color:var(--gold); }
+  .msg .cuando { font-family:'Barlow Condensed',sans-serif; font-size:0.72rem;
+    color:var(--grey); letter-spacing:0.03em; text-transform:uppercase; }
+  .msg .texto { font-size:0.98rem; line-height:1.6; color:rgba(247,247,245,0.92);
+    white-space:pre-wrap; word-wrap:break-word; }
+  .msg .borrar { background:none; border:none; color:var(--grey); cursor:pointer;
+    font-family:'Barlow Condensed',sans-serif; font-size:0.72rem; letter-spacing:0.04em;
+    text-transform:uppercase; padding:4px 0; margin-top:9px; }
+  .msg .borrar:hover { color:#E8746A; }
+
+  .aviso-suave { background:var(--navy-soft); border-left:3px solid var(--gold-dim);
+    padding:16px 18px; font-size:0.92rem; color:rgba(247,247,245,0.82); }
+</style>
+</head>
+<body>
+
+<div class="lomo" aria-hidden="true"></div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="bar">
+      <a href="index.html"><img class="crest" src="assets/escudo.png" alt="Escudo de Johnny's League"></a>
+      <div class="titles">
+        <h1>Johnny's League</h1>
+        <div class="tagline">crónica semanal de la liga</div>
+      </div>
+      <div class="status">
+        <span class="cond">Tablón</span>
+        <span class="round" id="cuantos">—</span>
+      </div>
+    </div>
+    <div class="jump">
+      <a href="index.html#portada">Portada</a>
+      <a href="index.html#clasificacion">Clasificación</a>
+      <a href="index.html#mercado">Mercado</a>
+      <a href="presidentes.html">Presidentes</a>
+      <a href="estadisticas.html">Estadísticas</a>
+      <a href="jugadores.html">Jugadores</a>
+      <a href="oportunidades.html">Oportunidades</a>
+      <a href="calendario.html">Calendario</a>
+      <a href="comparador.html">Comparador</a>
+      <a href="tablon.html" class="activo">Tablón</a>
+      <a href="index.html#cronicas">Crónicas</a>
+      <a href="hemeroteca.html">Hemeroteca</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" style="border-bottom:none;">
+    <div class="hero-titulo">
+      <h2>El tablón</h2>
+    </div>
+    <p class="section-note" style="margin-top:-18px;">
+      Aquí se habla de la liga. Solo para presidentes.
+    </p>
+  </section>
+
+  <section class="block" style="border-top:none; padding-top:0;">
+    <div id="zonaEstado"></div>
+
+    <!-- Pantalla de acceso -->
+    <div id="zonaAcceso" hidden>
+      <div class="acceso">
+        <h3>Entrar</h3>
+        <p>El tablón es privado. Usa el correo y la contraseña que te haya dado el presidente.</p>
+        <div class="campo">
+          <label for="correo">Correo</label>
+          <input type="email" id="correo" autocomplete="email" placeholder="tu@correo.com">
+        </div>
+        <div class="campo">
+          <label for="clave">Contraseña</label>
+          <input type="password" id="clave" autocomplete="current-password" placeholder="••••••••">
+        </div>
+        <button class="boton" id="btnEntrar">Entrar</button>
+      </div>
+    </div>
+
+    <!-- Tablón -->
+    <div id="zonaTablon" hidden>
+      <div class="sesion">
+        <span class="quien">Conectado como <b id="miNombre">—</b></span>
+        <button class="boton secundario" id="btnSalir">Salir</button>
+      </div>
+
+      <div class="escribir">
+        <textarea id="texto" maxlength="2000" placeholder="¿Qué cuentas? Pullas, fichajes, quejas arbitrales..."></textarea>
+        <div class="pie">
+          <span class="cuenta"><span id="contador">0</span> / 2000</span>
+          <button class="boton" id="btnPublicar">Publicar</button>
+        </div>
+      </div>
+
+      <div id="lista"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <span class="cond">Johnny's League · hecha por y para la liga</span>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script>
+(function () {
+  // Estos dos datos son públicos a propósito: la seguridad real está en las
+  // reglas de la base de datos (RLS), que solo dejan leer y escribir a quien
+  // ha iniciado sesión, y borrar únicamente sus propios mensajes.
+  var URL_SUPABASE = 'https://hgmswhslnuqlzqbvuifw.supabase.co';
+  var CLAVE_PUBLICA = 'sb_publishable_mJwquJGh9WzRrxCrrceZng_B0GynTvN';
+
+  var sb = window.supabase.createClient(URL_SUPABASE, CLAVE_PUBLICA);
+  var usuario = null;
+
+  var esc = function (s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  };
+
+  function estado(texto, tipo) {
+    var z = document.getElementById('zonaEstado');
+    if (!texto) { z.innerHTML = ''; return; }
+    z.innerHTML = '<div class="mensaje-estado ' + (tipo || 'error') + '">' + esc(texto) + '</div>';
+  }
+
+  function nombreDe(u) {
+    if (!u) return '';
+    var meta = u.user_metadata || {};
+    return meta.nombre || meta.equipo || meta.full_name || (u.email || '').split('@')[0];
+  }
+
+  function cuando(iso) {
+    var f = new Date(iso);
+    var ahora = new Date();
+    var mins = Math.round((ahora - f) / 60000);
+    if (mins < 1) return 'ahora mismo';
+    if (mins < 60) return 'hace ' + mins + ' min';
+    var horas = Math.round(mins / 60);
+    if (horas < 24) return 'hace ' + horas + (horas === 1 ? ' hora' : ' horas');
+    return f.toLocaleDateString('es-ES', { day: '2-digit', month: 'short' }) + ' · ' +
+           f.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
+  }
+
+  /* ---------- Pintar mensajes ---------- */
+  function pintar(mensajes) {
+    var cont = document.getElementById('lista');
+    document.getElementById('cuantos').textContent = mensajes.length;
+
+    if (!mensajes.length) {
+      cont.innerHTML = '<div class="aviso-suave">Todavía no hay nada en el tablón. Estrénalo tú.</div>';
+      return;
+    }
+
+    cont.innerHTML = '<div class="lista-msg">' + mensajes.map(function (m) {
+      var mio = usuario && m.autor === usuario.id;
+      return '<div class="msg' + (mio ? ' mio' : '') + '">' +
+        '<div class="cab">' +
+          '<span class="autor">' + esc(m.nombre) + '</span>' +
+          '<span class="cuando">' + esc(cuando(m.creado)) + '</span>' +
+        '</div>' +
+        '<div class="texto">' + esc(m.texto) + '</div>' +
+        (mio ? '<button class="borrar" data-id="' + m.id + '">Borrar</button>' : '') +
+      '</div>';
+    }).join('') + '</div>';
+
+    cont.querySelectorAll('.borrar').forEach(function (b) {
+      b.addEventListener('click', function () { borrar(b.dataset.id); });
+    });
+  }
+
+  async function cargar() {
+    var r = await sb.from('mensajes')
+      .select('id, creado, autor, nombre, texto')
+      .order('creado', { ascending: false })
+      .limit(100);
+    if (r.error) { estado('No se han podido cargar los mensajes: ' + r.error.message); return; }
+    estado('');
+    pintar(r.data || []);
+  }
+
+  async function publicar() {
+    var caja = document.getElementById('texto');
+    var texto = caja.value.trim();
+    if (!texto) { estado('Escribe algo antes de publicar.'); return; }
+
+    var btn = document.getElementById('btnPublicar');
+    btn.disabled = true;
+    var r = await sb.from('mensajes').insert({
+      autor: usuario.id,
+      nombre: nombreDe(usuario),
+      texto: texto
+    });
+    btn.disabled = false;
+
+    if (r.error) { estado('No se ha podido publicar: ' + r.error.message); return; }
+    caja.value = '';
+    document.getElementById('contador').textContent = '0';
+    cargar();
+  }
+
+  async function borrar(id) {
+    if (!confirm('¿Borrar este mensaje?')) return;
+    var r = await sb.from('mensajes').delete().eq('id', id);
+    if (r.error) { estado('No se ha podido borrar: ' + r.error.message); return; }
+    cargar();
+  }
+
+  /* ---------- Sesión ---------- */
+  function mostrarTablon() {
+    document.getElementById('zonaAcceso').hidden = true;
+    document.getElementById('zonaTablon').hidden = false;
+    document.getElementById('miNombre').textContent = nombreDe(usuario);
+    cargar();
+  }
+
+  function mostrarAcceso() {
+    document.getElementById('zonaTablon').hidden = true;
+    document.getElementById('zonaAcceso').hidden = false;
+    document.getElementById('cuantos').textContent = '—';
+  }
+
+  async function entrar() {
+    var correo = document.getElementById('correo').value.trim();
+    var clave = document.getElementById('clave').value;
+    if (!correo || !clave) { estado('Pon tu correo y tu contraseña.'); return; }
+
+    var btn = document.getElementById('btnEntrar');
+    btn.disabled = true;
+    var r = await sb.auth.signInWithPassword({ email: correo, password: clave });
+    btn.disabled = false;
+
+    if (r.error) {
+      estado(r.error.message === 'Invalid login credentials'
+        ? 'Correo o contraseña incorrectos.'
+        : 'No se ha podido entrar: ' + r.error.message);
+      return;
+    }
+    usuario = r.data.user;
+    estado('');
+    mostrarTablon();
+  }
+
+  async function salir() {
+    await sb.auth.signOut();
+    usuario = null;
+    mostrarAcceso();
+  }
+
+  /* ---------- Arranque ---------- */
+  document.getElementById('btnEntrar').addEventListener('click', entrar);
+  document.getElementById('clave').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') entrar();
+  });
+  document.getElementById('btnSalir').addEventListener('click', salir);
+  document.getElementById('btnPublicar').addEventListener('click', publicar);
+  document.getElementById('texto').addEventListener('input', function () {
+    document.getElementById('contador').textContent = this.value.length;
+  });
+
+  sb.auth.getSession().then(function (r) {
+    var sesion = (r.data || {}).session;
+    if (sesion && sesion.user) { usuario = sesion.user; mostrarTablon(); }
+    else { mostrarAcceso(); }
+  }).catch(function () { mostrarAcceso(); });
+})();
+</script>
+</body>
+</html>
