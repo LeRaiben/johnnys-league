@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-15T21:18:37.773Z",
+  "actualizado": "2026-09-15T21:31:58.030Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 6,
   "jornadaEnJuego": true,
@@ -41,8 +41,8 @@
       "escudoVisitante": "https://cdn.biwenger.com/i/t/15.png",
       "fecha": "2026-09-15T19:30:00.000Z",
       "golesLocal": 2,
-      "golesVisitante": 2,
-      "estado": "secondTime"
+      "golesVisitante": 3,
+      "estado": "finished"
     },
     {
       "local": "Atlético",
@@ -2573,22 +2573,22 @@
         "equipoReal": "Elche",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Real Madrid",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Espanyol",
-            "dificultad": 56
+            "dificultad": 58
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Celta",
-            "dificultad": 34
+            "dificultad": 36
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Villarreal",
+            "dificultad": 27
           }
         ]
       },
@@ -2729,22 +2729,22 @@
         "equipoReal": "Elche",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Real Madrid",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Espanyol",
-            "dificultad": 56
+            "dificultad": 58
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Celta",
-            "dificultad": 34
+            "dificultad": 36
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Villarreal",
+            "dificultad": 27
           }
         ]
       },
@@ -3175,22 +3175,22 @@
         "equipoReal": "Real Madrid",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Elche",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Atlético",
-            "dificultad": 51
+            "dificultad": 50
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Villarreal",
             "dificultad": 12
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Sevilla",
+            "dificultad": 53
           }
         ]
       },
@@ -3279,22 +3279,22 @@
         "equipoReal": "Real Madrid",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Elche",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Atlético",
-            "dificultad": 51
+            "dificultad": 50
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Villarreal",
             "dificultad": 12
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Sevilla",
+            "dificultad": 53
           }
         ]
       },
@@ -3463,22 +3463,22 @@
         "equipoReal": "Real Madrid",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Elche",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Atlético",
-            "dificultad": 51
+            "dificultad": 50
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Villarreal",
             "dificultad": 12
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Sevilla",
+            "dificultad": 53
           }
         ]
       },
@@ -3775,22 +3775,22 @@
         "equipoReal": "Elche",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Real Madrid",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Espanyol",
-            "dificultad": 56
+            "dificultad": 58
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Celta",
-            "dificultad": 34
+            "dificultad": 36
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Villarreal",
+            "dificultad": 27
           }
         ]
       },
@@ -4665,22 +4665,22 @@
         "equipoReal": "Real Madrid",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Elche",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Atlético",
-            "dificultad": 51
+            "dificultad": 50
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Villarreal",
             "dificultad": 12
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Sevilla",
+            "dificultad": 53
           }
         ]
       },
@@ -4795,22 +4795,22 @@
         "equipoReal": "Elche",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Real Madrid",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Espanyol",
-            "dificultad": 56
+            "dificultad": 58
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Celta",
-            "dificultad": 34
+            "dificultad": 36
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Villarreal",
+            "dificultad": 27
           }
         ]
       },
@@ -4873,22 +4873,22 @@
         "equipoReal": "Real Madrid",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Elche",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Atlético",
-            "dificultad": 51
+            "dificultad": 50
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Villarreal",
             "dificultad": 12
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Sevilla",
+            "dificultad": 53
           }
         ]
       },
@@ -4979,22 +4979,22 @@
         "equipoReal": "Real Madrid",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Elche",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Atlético",
-            "dificultad": 51
+            "dificultad": 50
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Villarreal",
             "dificultad": 12
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Sevilla",
+            "dificultad": 53
           }
         ]
       },
@@ -5090,22 +5090,22 @@
         "equipoReal": "Elche",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Real Madrid",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Espanyol",
-            "dificultad": 56
+            "dificultad": 58
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Celta",
-            "dificultad": 34
+            "dificultad": 36
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Villarreal",
+            "dificultad": 27
           }
         ]
       },
@@ -5116,22 +5116,22 @@
         "equipoReal": "Real Madrid",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Elche",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Atlético",
-            "dificultad": 51
+            "dificultad": 50
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Villarreal",
             "dificultad": 12
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Sevilla",
+            "dificultad": 53
           }
         ]
       },
@@ -5142,22 +5142,22 @@
         "equipoReal": "Elche",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Real Madrid",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Espanyol",
-            "dificultad": 56
+            "dificultad": 58
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Celta",
-            "dificultad": 34
+            "dificultad": 36
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Villarreal",
+            "dificultad": 27
           }
         ]
       },
@@ -5430,22 +5430,22 @@
         "equipoReal": "Elche",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Real Madrid",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Espanyol",
-            "dificultad": 56
+            "dificultad": 58
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Celta",
-            "dificultad": 34
+            "dificultad": 36
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Villarreal",
+            "dificultad": 27
           }
         ]
       },
@@ -13459,10 +13459,10 @@
           4
         ],
         "rachaTitular": 0,
-        "nota": 4,
-        "rival": "Real Madrid",
-        "esLocal": true,
-        "dificultad": null
+        "nota": 3.6,
+        "rival": "Espanyol",
+        "esLocal": false,
+        "dificultad": 58
       },
       {
         "nombre": "Rubén García",
@@ -13495,10 +13495,10 @@
           1
         ],
         "rachaTitular": 5,
-        "nota": 3.5,
-        "rival": "Real Madrid",
-        "esLocal": true,
-        "dificultad": null
+        "nota": 3.1,
+        "rival": "Espanyol",
+        "esLocal": false,
+        "dificultad": 58
       },
       {
         "nombre": "Kevin Sánchez",
@@ -13856,9 +13856,9 @@
         ],
         "rachaTitular": 0,
         "nota": 5,
-        "rival": "Elche",
+        "rival": "Atlético",
         "esLocal": false,
-        "dificultad": null
+        "dificultad": 50
       },
       {
         "nombre": "Oblak",
@@ -13954,9 +13954,9 @@
         "racha": [],
         "rachaTitular": 0,
         "nota": 2.5,
-        "rival": "Elche",
+        "rival": "Atlético",
         "esLocal": false,
-        "dificultad": null
+        "dificultad": 50
       }
     ],
     "CD Tiro Buchón": [
@@ -13974,9 +13974,9 @@
         ],
         "rachaTitular": 5,
         "nota": 7.3,
-        "rival": "Elche",
+        "rival": "Atlético",
         "esLocal": false,
-        "dificultad": null
+        "dificultad": 50
       },
       {
         "nombre": "Aubameyang",
@@ -14116,24 +14116,6 @@
         "dificultad": 42
       },
       {
-        "nombre": "Cepeda",
-        "foto": "https://cdn.biwenger.com/i/p/39874.png",
-        "posicion": "Delantero",
-        "equipoReal": "Elche",
-        "racha": [
-          2,
-          7,
-          3,
-          4,
-          2
-        ],
-        "rachaTitular": 0,
-        "nota": 4.8,
-        "rival": "Real Madrid",
-        "esLocal": true,
-        "dificultad": null
-      },
-      {
         "nombre": "Bouare",
         "foto": "https://cdn.biwenger.com/i/p/43172.png",
         "posicion": "Centrocampista",
@@ -14185,6 +14167,24 @@
         "rival": "Racing",
         "esLocal": true,
         "dificultad": 46
+      },
+      {
+        "nombre": "Cepeda",
+        "foto": "https://cdn.biwenger.com/i/p/39874.png",
+        "posicion": "Delantero",
+        "equipoReal": "Elche",
+        "racha": [
+          2,
+          7,
+          3,
+          4,
+          2
+        ],
+        "rachaTitular": 0,
+        "nota": 4.3,
+        "rival": "Espanyol",
+        "esLocal": false,
+        "dificultad": 58
       },
       {
         "nombre": "Murillo",
@@ -14750,9 +14750,9 @@
         ],
         "rachaTitular": 5,
         "nota": 7.5,
-        "rival": "Elche",
+        "rival": "Atlético",
         "esLocal": false,
-        "dificultad": null
+        "dificultad": 50
       },
       {
         "nombre": "Recio",
@@ -14886,25 +14886,9 @@
         ],
         "rachaTitular": 4,
         "nota": 3.5,
-        "rival": "Elche",
+        "rival": "Atlético",
         "esLocal": false,
-        "dificultad": null
-      },
-      {
-        "nombre": "Redondo",
-        "foto": "https://cdn.biwenger.com/i/p/38422.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Elche",
-        "racha": [
-          6,
-          -3,
-          3
-        ],
-        "rachaTitular": 3,
-        "nota": 3.3,
-        "rival": "Real Madrid",
-        "esLocal": true,
-        "dificultad": null
+        "dificultad": 50
       },
       {
         "nombre": "Moncayola",
@@ -14923,6 +14907,22 @@
         "rival": "Atlético",
         "esLocal": false,
         "dificultad": 60
+      },
+      {
+        "nombre": "Redondo",
+        "foto": "https://cdn.biwenger.com/i/p/38422.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Elche",
+        "racha": [
+          6,
+          -3,
+          3
+        ],
+        "rachaTitular": 3,
+        "nota": 2.9,
+        "rival": "Espanyol",
+        "esLocal": false,
+        "dificultad": 58
       },
       {
         "nombre": "Boselli",
@@ -14993,9 +14993,9 @@
         ],
         "rachaTitular": 5,
         "nota": 6.3,
-        "rival": "Elche",
+        "rival": "Atlético",
         "esLocal": false,
-        "dificultad": null
+        "dificultad": 50
       },
       {
         "nombre": "Huijsen",
@@ -15010,9 +15010,9 @@
         ],
         "rachaTitular": 4,
         "nota": 5.8,
-        "rival": "Elche",
+        "rival": "Atlético",
         "esLocal": false,
-        "dificultad": null
+        "dificultad": 50
       },
       {
         "nombre": "Miguel Román",
@@ -15129,10 +15129,10 @@
         "equipoReal": "Elche",
         "racha": [],
         "rachaTitular": 0,
-        "nota": 2.5,
-        "rival": "Real Madrid",
-        "esLocal": true,
-        "dificultad": null
+        "nota": 2.1,
+        "rival": "Espanyol",
+        "esLocal": false,
+        "dificultad": 58
       },
       {
         "nombre": "Iturbe",
@@ -15141,10 +15141,10 @@
         "equipoReal": "Elche",
         "racha": [],
         "rachaTitular": 0,
-        "nota": 2.5,
-        "rival": "Real Madrid",
-        "esLocal": true,
-        "dificultad": null
+        "nota": 2.1,
+        "rival": "Espanyol",
+        "esLocal": false,
+        "dificultad": 58
       },
       {
         "nombre": "Maguette Gueye",
@@ -15235,24 +15235,6 @@
         "dificultad": 28
       },
       {
-        "nombre": "Gonzalo Villar",
-        "foto": "https://cdn.biwenger.com/i/p/25403.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Elche",
-        "racha": [
-          6,
-          4,
-          5,
-          2,
-          4
-        ],
-        "rachaTitular": 5,
-        "nota": 5,
-        "rival": "Real Madrid",
-        "esLocal": true,
-        "dificultad": null
-      },
-      {
         "nombre": "Lago",
         "foto": "https://cdn.biwenger.com/i/p/33474.png",
         "posicion": "Defensa",
@@ -15269,6 +15251,24 @@
         "rival": "Racing",
         "esLocal": true,
         "dificultad": 46
+      },
+      {
+        "nombre": "Gonzalo Villar",
+        "foto": "https://cdn.biwenger.com/i/p/25403.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Elche",
+        "racha": [
+          6,
+          4,
+          5,
+          2,
+          4
+        ],
+        "rachaTitular": 5,
+        "nota": 4.6,
+        "rival": "Espanyol",
+        "esLocal": false,
+        "dificultad": 58
       },
       {
         "nombre": "Iñigo Vicente",
@@ -16236,6 +16236,25 @@
       "presidente": "Gorila FC"
     },
     {
+      "nombre": "Mbappé",
+      "foto": "https://cdn.biwenger.com/i/p/19577.png",
+      "posicion": "Delantero",
+      "equipoReal": "Real Madrid",
+      "racha": [
+        21,
+        0,
+        16,
+        23,
+        2
+      ],
+      "rachaTitular": 5,
+      "nota": 7.5,
+      "rival": "Atlético",
+      "esLocal": false,
+      "dificultad": 50,
+      "presidente": "Cañoneros CF"
+    },
+    {
       "nombre": "Camello",
       "foto": "https://cdn.biwenger.com/i/p/17756.png",
       "posicion": "Delantero",
@@ -16252,25 +16271,6 @@
       "rival": "Osasuna",
       "esLocal": false,
       "dificultad": 40,
-      "presidente": "Las Víboras FC"
-    },
-    {
-      "nombre": "Espart",
-      "foto": "https://cdn.biwenger.com/i/p/40075.png",
-      "posicion": "Defensa",
-      "equipoReal": "Barcelona",
-      "racha": [
-        11,
-        5,
-        4,
-        3,
-        9
-      ],
-      "rachaTitular": 5,
-      "nota": 7.5,
-      "rival": "Racing",
-      "esLocal": true,
-      "dificultad": 31,
       "presidente": "Las Víboras FC"
     }
   ],
