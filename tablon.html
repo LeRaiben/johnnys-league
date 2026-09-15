@@ -10,10 +10,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/estilo.css">
 <style>
-  /* Acceso */
-  .acceso { background:var(--navy-soft); padding:28px; max-width:440px; margin:0 auto; }
-  .acceso h3 { font-family:'Anton',sans-serif; font-size:1.3rem; margin:0 0 6px; }
-  .acceso p { font-size:0.9rem; color:var(--grey); margin:0 0 20px; line-height:1.5; }
   .campo { margin-bottom:14px; }
   .campo label { display:block; font-family:'Barlow Condensed',sans-serif; font-weight:600;
     letter-spacing:0.05em; text-transform:uppercase; font-size:0.68rem; color:var(--grey); margin-bottom:6px; }
@@ -21,23 +17,15 @@
     border:1px solid var(--navy-line); font-family:'Source Serif 4',serif; font-size:0.95rem;
     padding:11px 13px; border-radius:4px; box-sizing:border-box; }
   .campo input:focus { outline:none; border-color:var(--gold-dim); }
+  
   .boton { background:var(--red); color:#fff; border:none; cursor:pointer;
     font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.07em;
     text-transform:uppercase; font-size:0.9rem; padding:12px 24px; border-radius:4px; }
   .boton:hover { filter:brightness(1.12); }
   .boton:disabled { opacity:0.5; cursor:default; }
-  .boton.secundario { background:transparent; border:1px solid var(--navy-line); color:var(--grey); }
 
   .mensaje-estado { font-size:0.88rem; padding:11px 14px; border-radius:4px; margin-bottom:16px; line-height:1.45; }
   .mensaje-estado.error { background:rgba(192,24,44,0.15); color:#E8746A; border-left:3px solid #E8746A; }
-  .mensaje-estado.ok { background:rgba(111,207,151,0.12); color:#6FCF97; border-left:3px solid #6FCF97; }
-
-  /* Barra de sesión */
-  .sesion { display:flex; align-items:center; justify-content:space-between; gap:14px;
-    background:var(--navy-soft); padding:13px 18px; margin-bottom:22px; flex-wrap:wrap; }
-  .sesion .quien { font-family:'Barlow Condensed',sans-serif; letter-spacing:0.03em;
-    font-size:0.86rem; color:rgba(247,247,245,0.86); }
-  .sesion .quien b { color:var(--gold); }
 
   /* Escribir */
   .escribir { background:var(--navy-soft); padding:20px; margin-bottom:26px; }
@@ -51,11 +39,9 @@
 
   /* Mensajes */
   .lista-msg { display:grid; gap:12px; }
-  .msg { background:var(--navy-soft); padding:17px 20px; border-left:3px solid var(--navy-line); }
-  .msg.mio { border-left-color:var(--gold); }
+  .msg { background:var(--navy-soft); padding:17px 20px; border-left:3px solid var(--gold); }
   .msg .cab { display:flex; align-items:baseline; gap:11px; margin-bottom:9px; flex-wrap:wrap; }
-  .msg .autor { font-family:'Anton',sans-serif; font-size:1rem; }
-  .msg.mio .autor { color:var(--gold); }
+  .msg .autor { font-family:'Anton',sans-serif; font-size:1rem; color:var(--gold); }
   .msg .cuando { font-family:'Barlow Condensed',sans-serif; font-size:0.72rem;
     color:var(--grey); letter-spacing:0.03em; text-transform:uppercase; }
   .msg .texto { font-size:0.98rem; line-height:1.6; color:rgba(247,247,245,0.92);
@@ -110,47 +96,29 @@
       <h2>El tablón</h2>
     </div>
     <p class="section-note" style="margin-top:-18px;">
-      Aquí se habla de la liga. Solo para presidentes.
+      Espacio libre para publicar y comentar sobre la liga.
     </p>
   </section>
 
   <section class="block" style="border-top:none; padding-top:0;">
     <div id="zonaEstado"></div>
 
-    <!-- Pantalla de acceso -->
-    <div id="zonaAcceso" hidden>
-      <div class="acceso">
-        <h3>Entrar</h3>
-        <p>El tablón es privado. Usa el correo y la contraseña que te haya dado el presidente.</p>
-        <div class="campo">
-          <label for="correo">Correo</label>
-          <input type="email" id="correo" autocomplete="email" placeholder="tu@correo.com">
-        </div>
-        <div class="campo">
-          <label for="clave">Contraseña</label>
-          <input type="password" id="clave" autocomplete="current-password" placeholder="••••••••">
-        </div>
-        <button class="boton" id="btnEntrar">Entrar</button>
+    <div class="escribir">
+      <div class="campo">
+        <label for="nombre">Tu Nombre / Equipo</label>
+        <input type="text" id="nombre" placeholder="Ej: Presi Rayo / Juan">
       </div>
-    </div>
-
-    <!-- Tablón -->
-    <div id="zonaTablon" hidden>
-      <div class="sesion">
-        <span class="quien">Conectado como <b id="miNombre">—</b></span>
-        <button class="boton secundario" id="btnSalir">Salir</button>
-      </div>
-
-      <div class="escribir">
+      <div class="campo">
+        <label for="texto">Mensaje</label>
         <textarea id="texto" maxlength="2000" placeholder="¿Qué cuentas? Pullas, fichajes, quejas arbitrales..."></textarea>
-        <div class="pie">
-          <span class="cuenta"><span id="contador">0</span> / 2000</span>
-          <button class="boton" id="btnPublicar">Publicar</button>
-        </div>
       </div>
-
-      <div id="lista"></div>
+      <div class="pie">
+        <span class="cuenta"><span id="contador">0</span> / 2000</span>
+        <button class="boton" id="btnPublicar">Publicar</button>
+      </div>
     </div>
+
+    <div id="lista"></div>
   </section>
 
 </main>
@@ -166,7 +134,6 @@
   var CLAVE_PUBLICA = 'sb_publishable_mJwquJGh9WzRrxCrrceZng_B0GynTvN';
 
   var sb = window.supabase.createClient(URL_SUPABASE, CLAVE_PUBLICA);
-  var usuario = null;
 
   var esc = function (s) {
     return String(s == null ? '' : s)
@@ -174,16 +141,10 @@
       .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
   };
 
-  function estado(texto, tipo) {
+  function estado(texto) {
     var z = document.getElementById('zonaEstado');
     if (!texto) { z.innerHTML = ''; return; }
-    z.innerHTML = '<div class="mensaje-estado ' + (tipo || 'error') + '">' + esc(texto) + '</div>';
-  }
-
-  function nombreDe(u) {
-    if (!u) return '';
-    var meta = u.user_metadata || {};
-    return meta.nombre || meta.equipo || meta.full_name || (u.email || '').split('@')[0];
+    z.innerHTML = '<div class="mensaje-estado error">' + esc(texto) + '</div>';
   }
 
   function cuando(iso) {
@@ -198,7 +159,6 @@
            f.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
   }
 
-  /* ---------- Pintar mensajes ---------- */
   function pintar(mensajes) {
     var cont = document.getElementById('lista');
     document.getElementById('cuantos').textContent = mensajes.length;
@@ -209,14 +169,13 @@
     }
 
     cont.innerHTML = '<div class="lista-msg">' + mensajes.map(function (m) {
-      var mio = usuario && m.autor === usuario.id;
-      return '<div class="msg' + (mio ? ' mio' : '') + '">' +
+      return '<div class="msg">' +
         '<div class="cab">' +
           '<span class="autor">' + esc(m.nombre) + '</span>' +
           '<span class="cuando">' + esc(cuando(m.creado)) + '</span>' +
         '</div>' +
         '<div class="texto">' + esc(m.texto) + '</div>' +
-        (mio ? '<button class="borrar" data-id="' + m.id + '">Borrar</button>' : '') +
+        '<button class="borrar" data-id="' + m.id + '">Borrar</button>' +
       '</div>';
     }).join('') + '</div>';
 
@@ -227,7 +186,7 @@
 
   async function cargar() {
     var r = await sb.from('mensajes')
-      .select('id, creado, autor, nombre, texto')
+      .select('id, creado, nombre, texto')
       .order('creado', { ascending: false })
       .limit(100);
     if (r.error) { estado('No se han podido cargar los mensajes: ' + r.error.message); return; }
@@ -236,15 +195,17 @@
   }
 
   async function publicar() {
+    var nombre = document.getElementById('nombre').value.trim();
     var caja = document.getElementById('texto');
     var texto = caja.value.trim();
-    if (!texto) { estado('Escribe algo antes de publicar.'); return; }
+
+    if (!nombre) { estado('Escribe tu nombre o equipo antes de publicar.'); return; }
+    if (!texto) { estado('Escribe un mensaje antes de publicar.'); return; }
 
     var btn = document.getElementById('btnPublicar');
     btn.disabled = true;
     var r = await sb.from('mensajes').insert({
-      autor: usuario.id,
-      nombre: nombreDe(usuario),
+      nombre: nombre,
       texto: texto
     });
     btn.disabled = false;
@@ -262,63 +223,12 @@
     cargar();
   }
 
-  /* ---------- Sesión ---------- */
-  function mostrarTablon() {
-    document.getElementById('zonaAcceso').hidden = true;
-    document.getElementById('zonaTablon').hidden = false;
-    document.getElementById('miNombre').textContent = nombreDe(usuario);
-    cargar();
-  }
-
-  function mostrarAcceso() {
-    document.getElementById('zonaTablon').hidden = true;
-    document.getElementById('zonaAcceso').hidden = false;
-    document.getElementById('cuantos').textContent = '—';
-  }
-
-  async function entrar() {
-    var correo = document.getElementById('correo').value.trim();
-    var clave = document.getElementById('clave').value;
-    if (!correo || !clave) { estado('Pon tu correo y tu contraseña.'); return; }
-
-    var btn = document.getElementById('btnEntrar');
-    btn.disabled = true;
-    var r = await sb.auth.signInWithPassword({ email: correo, password: clave });
-    btn.disabled = false;
-
-    if (r.error) {
-      estado(r.error.message === 'Invalid login credentials'
-        ? 'Correo o contraseña incorrectos.'
-        : 'No se ha podido entrar: ' + r.error.message);
-      return;
-    }
-    usuario = r.data.user;
-    estado('');
-    mostrarTablon();
-  }
-
-  async function salir() {
-    await sb.auth.signOut();
-    usuario = null;
-    mostrarAcceso();
-  }
-
-  /* ---------- Arranque ---------- */
-  document.getElementById('btnEntrar').addEventListener('click', entrar);
-  document.getElementById('clave').addEventListener('keydown', function (e) {
-    if (e.key === 'Enter') entrar();
-  });
-  document.getElementById('btnSalir').addEventListener('click', salir);
   document.getElementById('btnPublicar').addEventListener('click', publicar);
   document.getElementById('texto').addEventListener('input', function () {
     document.getElementById('contador').textContent = this.value.length;
   });
 
-  sb.auth.getSession().then(function (r) {
-    var sesion = (r.data || {}).session;
-    if (sesion && sesion.user) { usuario = sesion.user; mostrarTablon(); }
-    else { mostrarAcceso(); }
-  }).catch(function () { mostrarAcceso(); });
+  cargar();
 })();
 </script>
 </body>
