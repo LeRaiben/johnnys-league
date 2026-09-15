@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-15T07:44:59.700Z",
+  "actualizado": "2026-09-15T07:59:11.105Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 5,
   "jornadaEnJuego": true,
@@ -679,71 +679,6 @@
       "valorMercado": "0,8 M",
       "valorBruto": 810000,
       "diferencia": -210000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Jofre Carreras",
-      "foto": "https://cdn.biwenger.com/i/p/25392.png",
-      "posicion": "Delantero",
-      "equipoReal": "Espanyol",
-      "vendedor": "Gorila FC",
-      "pide": "0,7 M",
-      "pideBruto": 700000,
-      "valorMercado": "0,2 M",
-      "valorBruto": 200000,
-      "diferencia": 500000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Pablo Durán",
-      "foto": "https://cdn.biwenger.com/i/p/29185.png",
-      "posicion": "Delantero",
-      "equipoReal": "Celta",
-      "vendedor": "Gorila FC",
-      "pide": "0,8 M",
-      "pideBruto": 800000,
-      "valorMercado": "0,4 M",
-      "valorBruto": 400000,
-      "diferencia": 400000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Valentín Gómez",
-      "foto": "https://cdn.biwenger.com/i/p/38318.png",
-      "posicion": "Defensa",
-      "equipoReal": "Betis",
-      "vendedor": "Gorila FC",
-      "pide": "0,8 M",
-      "pideBruto": 800000,
-      "valorMercado": "0,3 M",
-      "valorBruto": 310000,
-      "diferencia": 490000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Arana",
-      "foto": "https://cdn.biwenger.com/i/p/41262.png",
-      "posicion": "Delantero",
-      "equipoReal": "Racing",
-      "vendedor": "Gorila FC",
-      "pide": "0,5 M",
-      "pideBruto": 450000,
-      "valorMercado": "0,3 M",
-      "valorBruto": 270000,
-      "diferencia": 180000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Facundo González",
-      "foto": "https://cdn.biwenger.com/i/p/41275.png",
-      "posicion": "Defensa",
-      "equipoReal": "Racing",
-      "vendedor": "Gorila FC",
-      "pide": "1,8 M",
-      "pideBruto": 1800008,
-      "valorMercado": "1,4 M",
-      "valorBruto": 1400000,
-      "diferencia": 400008
     },
     {
       "tipo": "venta",
@@ -2251,7 +2186,7 @@
       "balance": "−13,3 M",
       "balanceBruto": -13325300,
       "sobreprecioMedio": 82,
-      "enVenta": 5,
+      "enVenta": 0,
       "fichajeEstrella": {
         "nombre": "Baena",
         "precio": "12,6 M",
@@ -5908,32 +5843,6 @@
         ]
       },
       {
-        "nombre": "Pedri",
-        "posicion": "Centrocampista",
-        "foto": "https://cdn.biwenger.com/i/p/19441.png",
-        "equipoReal": "Barcelona",
-        "jornadas": [
-          {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Racing",
-            "dificultad": 31
-          },
-          {
-            "jornada": "Round 7",
-            "esLocal": false,
-            "rival": "Sevilla",
-            "dificultad": 44
-          },
-          {
-            "jornada": "Round 8",
-            "esLocal": true,
-            "rival": "Getafe",
-            "dificultad": 20
-          }
-        ]
-      },
-      {
         "nombre": "Germán Parreño",
         "posicion": "Portero",
         "foto": "https://cdn.biwenger.com/i/p/2086.png",
@@ -6008,6 +5917,32 @@
             "esLocal": false,
             "rival": "Alavés",
             "dificultad": 63
+          }
+        ]
+      },
+      {
+        "nombre": "Pedri",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/19441.png",
+        "equipoReal": "Barcelona",
+        "jornadas": [
+          {
+            "jornada": "Round 6 (postponed)",
+            "esLocal": true,
+            "rival": "Racing",
+            "dificultad": 31
+          },
+          {
+            "jornada": "Round 7",
+            "esLocal": false,
+            "rival": "Sevilla",
+            "dificultad": 44
+          },
+          {
+            "jornada": "Round 8",
+            "esLocal": true,
+            "rival": "Getafe",
+            "dificultad": 20
           }
         ]
       },
@@ -11146,40 +11081,6 @@
       "blindadoHasta": "2026-09-24T01:33:13.000Z"
     },
     {
-      "id": "19441",
-      "nombre": "Pedri",
-      "slug": "pedri",
-      "posicion": "Centrocampista",
-      "posicionCodigo": 3,
-      "foto": "https://cdn.biwenger.com/i/p/19441.png",
-      "equipoReal": "Barcelona",
-      "equipoIdReal": "3",
-      "presidente": "FC FORUSIA",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
-      "precio": 15850000,
-      "precioTexto": "15,8 M",
-      "puntosTotales": 36,
-      "partidosJugados": 5,
-      "media": 7.2,
-      "puntosPorMillon": 2.27,
-      "racha": [
-        4,
-        15,
-        3,
-        11,
-        3
-      ],
-      "rachaTitular": 4,
-      "ultimoMinutos": 66,
-      "clausula": 22696560,
-      "clausulaTexto": "22,7 M",
-      "pagadoPorSuDueno": 18913800,
-      "margen": 6846560,
-      "margenPorcentaje": 43,
-      "blindado": true,
-      "blindadoHasta": "2026-09-22T15:27:53.000Z"
-    },
-    {
       "id": "2086",
       "nombre": "Germán Parreño",
       "slug": "german",
@@ -11270,6 +11171,40 @@
       "margenPorcentaje": 30,
       "blindado": false,
       "blindadoHasta": null
+    },
+    {
+      "id": "19441",
+      "nombre": "Pedri",
+      "slug": "pedri",
+      "posicion": "Centrocampista",
+      "posicionCodigo": 3,
+      "foto": "https://cdn.biwenger.com/i/p/19441.png",
+      "equipoReal": "Barcelona",
+      "equipoIdReal": "3",
+      "presidente": "FC FORUSIA",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
+      "precio": 15850000,
+      "precioTexto": "15,8 M",
+      "puntosTotales": 36,
+      "partidosJugados": 5,
+      "media": 7.2,
+      "puntosPorMillon": 2.27,
+      "racha": [
+        4,
+        15,
+        3,
+        11,
+        3
+      ],
+      "rachaTitular": 4,
+      "ultimoMinutos": 66,
+      "clausula": 22696560,
+      "clausulaTexto": "22,7 M",
+      "pagadoPorSuDueno": 18913800,
+      "margen": 6846560,
+      "margenPorcentaje": 43,
+      "blindado": true,
+      "blindadoHasta": "2026-09-22T15:27:53.000Z"
     },
     {
       "id": "19693",
