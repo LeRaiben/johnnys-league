@@ -740,19 +740,7 @@
       .subscribe();
   }
 
-  // Conversión auxiliar para VAPID
-  function urlBase64ToUint8Array(base64String) {
-    var padding = '='.repeat((4 - base64String.length % 4) % 4);
-    var base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/');
-    var rawData = window.atob(base64);
-    var outputArray = new Uint8Array(rawData.length);
-    for (var i = 0; i < rawData.length; ++i) {
-      outputArray[i] = rawData.charCodeAt(i);
-    }
-    return outputArray;
-  }
-
-  // Lógica completa del Botón de Notificaciones
+  // Lógica de Notificaciones con conversión limpia P-256
   var btnNotif = document.getElementById('btnNotificaciones');
   if (btnNotif) {
     btnNotif.onclick = async function() {
@@ -768,18 +756,26 @@
           return;
         }
 
-        // 1. Registrar Service Worker
         var reg = await navigator.serviceWorker.register('./sw.js');
         await navigator.serviceWorker.ready;
 
-        // 2. Crear suscripción con tu clave pública
         var VAPID_PUBLIC_KEY = 'BLBb_eng5V0_n__iZFFR3bKN-EpcbaLgSIcXrkMsj4SOK1HhvS2fbqUeNX2_5sDDKE-wTde4wB2j1Dxjgwcinjc';
+        
+        var base64 = VAPID_PUBLIC_KEY.trim().replace(/-/g, '+').replace(/_/g, '/');
+        while (base64.length % 4) {
+          base64 += '=';
+        }
+        var rawData = window.atob(base64);
+        var outputArray = new Uint8Array(rawData.length);
+        for (var i = 0; i < rawData.length; ++i) {
+          outputArray[i] = rawData.charCodeAt(i);
+        }
+
         var sub = await reg.pushManager.subscribe({
           userVisibleOnly: true,
-          applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
+          applicationServerKey: outputArray
         });
 
-        // 3. Guardar en Supabase
         var res = await sb.from('suscripciones').upsert({
           suscripcion: JSON.stringify(sub)
         });
