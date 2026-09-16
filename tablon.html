@@ -26,6 +26,13 @@
   .boton:disabled { opacity:0.5; cursor:default; }
   .boton-secundario { background:var(--navy-soft); border:1px solid var(--gold-dim); color:var(--white); padding:8px 12px; font-size:0.8rem; display:inline-flex; align-items:center; gap:4px; }
 
+  /* Botón Notificaciones */
+  .btn-notificaciones { background:var(--navy-soft); border:1px solid var(--gold-dim); color:var(--white);
+    font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.06em;
+    text-transform:uppercase; font-size:0.85rem; padding:10px 16px; border-radius:4px;
+    cursor:pointer; display:inline-flex; align-items:center; gap:8px; margin-bottom:20px; transition:background 0.2s; }
+  .btn-notificaciones:hover { background:rgba(212,175,55,0.12); }
+
   .mensaje-estado { font-size:0.88rem; padding:11px 14px; border-radius:4px; margin-bottom:16px; line-height:1.45; }
   .mensaje-estado.error { background:rgba(192,24,44,0.15); color:#E8746A; border-left:3px solid #E8746A; }
 
@@ -136,6 +143,11 @@
 
   <section class="block" style="border-top:none; padding-top:0;">
     <div id="zonaEstado"></div>
+
+    <!-- Botón de Notificaciones Movil -->
+    <button type="button" class="btn-notificaciones" id="btnNotificaciones">
+      🔔 Activar notificaciones en el móvil
+    </button>
 
     <!-- Publicar Mensaje Principal -->
     <div class="escribir">
@@ -726,6 +738,24 @@
       .on('postgres_changes', { event: '*', schema: 'public', table: 'mensajes' }, function () { cargar(); })
       .on('postgres_changes', { event: '*', schema: 'public', table: 'encuestas' }, function () { cargar(); })
       .subscribe();
+  }
+
+  // Evento de Botón de Notificaciones (si ya tenías lógica implementada o para asociarla)
+  var btnNotif = document.getElementById('btnNotificaciones');
+  if (btnNotif) {
+    btnNotif.onclick = function() {
+      if ('Notification' in window) {
+        Notification.requestPermission().then(function(permission) {
+          if (permission === 'granted') {
+            alert('¡Notificaciones activadas correctamente!');
+          } else {
+            alert('Has denegado o bloqueado las notificaciones.');
+          }
+        });
+      } else {
+        alert('Tu navegador no soporta notificaciones.');
+      }
+    };
   }
 
   document.getElementById('btnToggleGif').onclick = function() {
