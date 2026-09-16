@@ -44,15 +44,15 @@
   .preview-adjunto button { position:absolute; top:-6px; right:-6px; background:var(--red); color:#fff; border:none; border-radius:50%; width:20px; height:20px; cursor:pointer; font-size:12px; line-height:1; }
 
   /* GIFs */
-  .gif-container { display:grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap:8px; max-height:200px; overflow-y:auto; margin-top:10px; }
-  .gif-container img { width:100%; height:80px; object-fit:cover; border-radius:4px; cursor:pointer; border:1px solid transparent; }
+  .gif-container { display:grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap:8px; max-height:180px; overflow-y:auto; margin-top:10px; }
+  .gif-container img { width:100%; height:75px; object-fit:cover; border-radius:4px; cursor:pointer; border:1px solid transparent; }
   .gif-container img:hover { border-color:var(--gold); }
 
   /* Encuestas */
   .poll-box { background:rgba(2,18,52,0.7); border:1px solid var(--navy-line); padding:12px; border-radius:4px; margin-top:10px; }
-  .poll-opt { margin-bottom:8px; cursor:pointer; position:relative; overflow:hidden; border:1px solid var(--navy-line); border-radius:4px; padding:8px; display:flex; justify-content:space-between; align-items:center; }
-  .poll-bar { position:absolute; top:0; left:0; bottom:0; background:rgba(212,175,55,0.25); z-index:1; }
-  .poll-text { position:relative; z-index:2; font-size:0.88rem; }
+  .poll-opt { margin-bottom:8px; cursor:pointer; position:relative; overflow:hidden; border:1px solid var(--navy-line); border-radius:4px; padding:8px 12px; display:flex; justify-content:space-between; align-items:center; background:rgba(0,0,0,0.2); }
+  .poll-bar { position:absolute; top:0; left:0; bottom:0; background:rgba(212,175,55,0.3); z-index:1; }
+  .poll-text { position:relative; z-index:2; font-size:0.88rem; font-weight:600; }
   .poll-count { position:relative; z-index:2; font-size:0.78rem; color:var(--gold); font-weight:bold; }
 
   /* Mensajes e Hilos */
@@ -128,12 +128,7 @@
   <section class="block" style="border-top:none; padding-top:0;">
     <div id="zonaEstado"></div>
 
-    <div style="margin-bottom: 20px; text-align: right;">
-      <button id="btnNotif" class="boton" style="background: var(--navy-soft); border: 1px solid var(--gold-dim); font-size: 0.82rem;">
-        🔔 Activar notificaciones en el móvil
-      </button>
-    </div>
-
+    <!-- Publicar Mensaje Principal -->
     <div class="escribir">
       <div class="campo">
         <label for="nombre">Tu Nombre / Equipo</label>
@@ -144,11 +139,13 @@
         <textarea id="texto" maxlength="2000" placeholder="Abre un hilo: pullas, fichajes, debates..."></textarea>
       </div>
 
+      <!-- Herramientas extra -->
       <div style="display:flex; gap:10px; margin-bottom:12px; flex-wrap:wrap;">
         <button type="button" class="boton boton-secundario" id="btnToggleGif">👾 Buscar GIF</button>
         <button type="button" class="boton boton-secundario" id="btnTogglePoll">📊 Añadir Encuesta</button>
       </div>
 
+      <!-- Buscador GIF -->
       <div id="boxGif" style="display:none; margin-bottom:14px; background:rgba(2,18,52,0.5); padding:10px; border-radius:4px;">
         <div style="display:flex; gap:6px;">
           <input type="text" id="searchGif" placeholder="Buscar GIF (ej: gol, risa, meme)..." style="flex:1;">
@@ -157,6 +154,7 @@
         <div id="contenedorGifs" class="gif-container"></div>
       </div>
 
+      <!-- Creador Encuesta -->
       <div id="boxPoll" style="display:none; margin-bottom:14px; background:rgba(2,18,52,0.5); padding:10px; border-radius:4px;">
         <div class="campo">
           <label>Pregunta de la Encuesta</label>
@@ -197,7 +195,6 @@
 (function () {
   var URL_SUPABASE = 'https://hgmswhslnuqlzqbvuifw.supabase.co';
   var CLAVE_PUBLICA = 'sb_publishable_mJwquJGh9WzRrxCrrceZng_B0GynTvN';
-  var TENOR_API_KEY = 'LIVDSRZULEBR';
 
   var sb = window.supabase.createClient(URL_SUPABASE, CLAVE_PUBLICA);
   var imagenBase64Principal = null;
@@ -244,17 +241,31 @@
     return canvas.toDataURL('image/jpeg', 0.82);
   }
 
+  // Servicio para consultar GIFs de Giphy pública fallback
+  function buscarGifsApi(query, callback) {
+    var endpoint = 'https://api.giphy.com/v1/gifs/search?api_key=gG3Xo35ZJ9b4v24u0138p2221b33zG7a&q=' + encodeURIComponent(query) + '&limit=12';
+    fetch(endpoint)
+      .then(function(res){ return res.json(); })
+      .then(function(data){
+        if (data && data.data) {
+          var urls = data.data.map(function(item){ return item.images.fixed_height_small.url; });
+          callback(urls);
+        } else { callback([]); }
+      })
+      .catch(function(){ callback([]); });
+  }
+
   function renderPollHtml(poll) {
-    if (!poll) return '';
+    if (!poll || !poll.opciones) return '';
     var totalVotos = 0;
-    poll.opciones.forEach(function(o){ totalVotos += o.votos; });
+    poll.opciones.forEach(function(o){ totalVotos += (o.votos || 0); });
 
     var htmlOpts = poll.opciones.map(function(opt) {
-      var pct = totalVotos > 0 ? Math.round((opt.votos / totalVotos) * 100) : 0;
+      var pct = totalVotos > 0 ? Math.round(((opt.votos || 0) / totalVotos) * 100) : 0;
       return '<div class="poll-opt" data-pollid="' + poll.id + '" data-optid="' + opt.id + '">' +
         '<div class="poll-bar" style="width:' + pct + '%;"></div>' +
         '<span class="poll-text">' + esc(opt.texto) + '</span>' +
-        '<span class="poll-count">' + pct + '% (' + opt.votos + ')</span>' +
+        '<span class="poll-count">' + pct + '% (' + (opt.votos || 0) + ')</span>' +
       '</div>';
     }).join('');
 
@@ -284,7 +295,7 @@
       '<button class="btn-accion borrar" data-id="' + m.id + '">🗑️ Borrar</button>' +
     '</div>';
 
-    /* Formulario de respuesta extendido con GIF y Encuesta */
+    /* Formulario de respuesta extendido */
     var htmlFormRespuesta = '<div class="form-respuesta" id="reply-box-' + m.id + '" style="display:none;">' +
       '<div class="campo"><label>Tu Nombre / Equipo</label><input type="text" id="reply-name-' + m.id + '" placeholder="Ej: Presi Rayo"></div>' +
       '<div class="campo"><label>Respuesta</label><textarea id="reply-text-' + m.id + '" placeholder="Escribe tu respuesta...">@' + esc(m.nombre) + ' </textarea></div>' +
@@ -436,7 +447,7 @@
 
     var poll = r.data;
     poll.opciones.forEach(function(o) {
-      if (o.id === optId) o.votos += 1;
+      if (o.id === optId) o.votos = (o.votos || 0) + 1;
     });
 
     localStorage.setItem(userKey, 'true');
@@ -451,7 +462,7 @@
     var texto = caja ? caja.value.trim() : '';
 
     if (!nombre) { estado('Escribe tu nombre o equipo antes de publicar.'); return; }
-    if (!texto && !imagenBase64Principal) { estado('Escribe un mensaje o adjunta una imagen.'); return; }
+    if (!texto && !imagenBase64Principal) { estado('Escribe un mensaje o adjunta un GIF/imagen.'); return; }
 
     var btn = document.getElementById('btnPublicar');
     if (btn) btn.disabled = true;
@@ -485,19 +496,18 @@
     document.getElementById('pollOpciones').value = '';
     document.getElementById('boxPoll').style.display = 'none';
     limpiarImagenPrincipal();
+    cargar();
   }
 
   function buscarGifRespuesta(msgId) {
     var input = document.getElementById('reply-search-gif-' + msgId);
-    var q = (input ? input.value.trim() : '') || 'football';
-    var url = 'https://g.tenor.com/v1/search?q=' + encodeURIComponent(q) + '&key=' + TENOR_API_KEY + '&limit=12';
-
-    fetch(url).then(function(res){ return res.json(); }).then(function(data){
+    var q = (input ? input.value.trim() : '') || 'futbol';
+    buscarGifsApi(q, function(urls) {
       var cont = document.getElementById('reply-gifs-cont-' + msgId);
       if (cont) {
-        cont.innerHTML = (data.results || []).map(function(item){
-          var gifUrl = item.media[0].tinygif.url;
-          return '<img src="' + gifUrl + '" onclick="window.seleccionarGifReply(\'' + msgId + '\', \'' + gifUrl + '\')">';
+        if (!urls.length) { cont.innerHTML = '<span style="font-size:0.8rem; color:var(--grey);">No se encontraron GIFs.</span>'; return; }
+        cont.innerHTML = urls.map(function(url){
+          return '<img src="' + url + '" onclick="window.seleccionarGifReply(\'' + msgId + '\', \'' + url + '\')">';
         }).join('');
       }
     });
@@ -534,7 +544,7 @@
     if (!nombre) { alert('Escribe tu nombre.'); return; }
     if (!texto && !file && !imgBase64) { alert('Escribe un mensaje, elige un GIF o adjunta una imagen.'); return; }
 
-    if (file) {
+    if (file && !imgBase64) {
       if (file.size > 5 * 1024 * 1024) { alert('La imagen no puede superar los 5 MB.'); return; }
       imgBase64 = await new Promise(function(resolve){
         var reader = new FileReader();
@@ -557,7 +567,7 @@
 
     if (r.error) { alert('Error al responder: ' + r.error.message); return; }
 
-    // Procesa encuesta dentro de respuesta si existe
+    // Procesa encuesta si se creó una en la respuesta
     var pregInput = document.getElementById('reply-poll-p-' + msgId);
     var optsInput = document.getElementById('reply-poll-o-' + msgId);
     var preg = pregInput ? pregInput.value.trim() : '';
@@ -575,12 +585,14 @@
     }
 
     imagenesRespuestas[msgId] = null;
+    cargar();
   }
 
   async function borrar(id) {
     if (!confirm('¿Borrar este mensaje?')) return;
     var r = await sb.from('mensajes').delete().eq('id', id);
     if (r.error) { estado('No se ha podido borrar: ' + r.error.message); return; }
+    cargar();
   }
 
   function limpiarImagenPrincipal() {
@@ -611,14 +623,12 @@
   };
 
   document.getElementById('btnBuscarGif').onclick = function() {
-    var q = document.getElementById('searchGif').value.trim() || 'football';
-    var url = 'https://g.tenor.com/v1/search?q=' + encodeURIComponent(q) + '&key=' + TENOR_API_KEY + '&limit=12';
-
-    fetch(url).then(function(res){ return res.json(); }).then(function(data){
+    var q = document.getElementById('searchGif').value.trim() || 'futbol';
+    buscarGifsApi(q, function(urls) {
       var cont = document.getElementById('contenedorGifs');
-      cont.innerHTML = (data.results || []).map(function(item){
-        var gifUrl = item.media[0].tinygif.url;
-        return '<img src="' + gifUrl + '" onclick="seleccionarGif(\'' + gifUrl + '\')">';
+      if (!urls.length) { cont.innerHTML = '<span style="font-size:0.8rem; color:var(--grey);">No se encontraron GIFs.</span>'; return; }
+      cont.innerHTML = urls.map(function(url){
+        return '<img src="' + url + '" onclick="seleccionarGif(\'' + url + '\')">';
       }).join('');
     });
   };
