@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-16T18:21:24.541Z",
+  "actualizado": "2026-09-16T18:44:33.897Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 6,
   "jornadaEnJuego": true,
@@ -50,7 +50,7 @@
       "escudoLocal": "https://cdn.biwenger.com/i/t/2.png",
       "escudoVisitante": "https://cdn.biwenger.com/i/t/93.png",
       "fecha": "2026-09-16T17:00:00.000Z",
-      "golesLocal": 2,
+      "golesLocal": 3,
       "golesVisitante": 0,
       "estado": "secondTime"
     },
@@ -3420,26 +3420,7 @@
         "posicion": "Centrocampista",
         "foto": "https://cdn.biwenger.com/i/p/26299.png",
         "equipoReal": "Sevilla",
-        "jornadas": [
-          {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Deportivo",
-            "dificultad": null
-          },
-          {
-            "jornada": "Round 7",
-            "esLocal": true,
-            "rival": "Barcelona",
-            "dificultad": 90
-          },
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Levante",
-            "dificultad": 45
-          }
-        ]
+        "jornadas": []
       },
       {
         "nombre": "Koski",
@@ -3786,26 +3767,7 @@
         "posicion": "Centrocampista",
         "foto": "https://cdn.biwenger.com/i/p/32338.png",
         "equipoReal": "Sevilla",
-        "jornadas": [
-          {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Deportivo",
-            "dificultad": null
-          },
-          {
-            "jornada": "Round 7",
-            "esLocal": true,
-            "rival": "Barcelona",
-            "dificultad": 90
-          },
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Levante",
-            "dificultad": 45
-          }
-        ]
+        "jornadas": []
       },
       {
         "nombre": "Musso",
@@ -5512,26 +5474,7 @@
         "posicion": "Delantero",
         "foto": "https://cdn.biwenger.com/i/p/39350.png",
         "equipoReal": "Sevilla",
-        "jornadas": [
-          {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Deportivo",
-            "dificultad": null
-          },
-          {
-            "jornada": "Round 7",
-            "esLocal": true,
-            "rival": "Barcelona",
-            "dificultad": 90
-          },
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Levante",
-            "dificultad": 45
-          }
-        ]
+        "jornadas": []
       },
       {
         "nombre": "Quagliata",
@@ -5852,26 +5795,7 @@
         "posicion": "Defensa",
         "foto": "https://cdn.biwenger.com/i/p/28115.png",
         "equipoReal": "Sevilla",
-        "jornadas": [
-          {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Deportivo",
-            "dificultad": null
-          },
-          {
-            "jornada": "Round 7",
-            "esLocal": true,
-            "rival": "Barcelona",
-            "dificultad": 90
-          },
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Levante",
-            "dificultad": 45
-          }
-        ]
+        "jornadas": []
       },
       {
         "nombre": "Marcos Fernández",
@@ -5904,52 +5828,14 @@
         "posicion": "Defensa",
         "foto": "https://cdn.biwenger.com/i/p/38072.png",
         "equipoReal": "Sevilla",
-        "jornadas": [
-          {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Deportivo",
-            "dificultad": null
-          },
-          {
-            "jornada": "Round 7",
-            "esLocal": true,
-            "rival": "Barcelona",
-            "dificultad": 90
-          },
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Levante",
-            "dificultad": 45
-          }
-        ]
+        "jornadas": []
       },
       {
         "nombre": "Odysseas",
         "posicion": "Portero",
         "foto": "https://cdn.biwenger.com/i/p/38405.png",
         "equipoReal": "Sevilla",
-        "jornadas": [
-          {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Deportivo",
-            "dificultad": null
-          },
-          {
-            "jornada": "Round 7",
-            "esLocal": true,
-            "rival": "Barcelona",
-            "dificultad": 90
-          },
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Levante",
-            "dificultad": 45
-          }
-        ]
+        "jornadas": []
       },
       {
         "nombre": "Jorge Domínguez",
@@ -13819,8 +13705,8 @@
         ],
         "rachaTitular": 0,
         "nota": 4.3,
-        "rival": "Deportivo",
-        "esLocal": false,
+        "rival": "",
+        "esLocal": null,
         "dificultad": null
       },
       {
@@ -13988,8 +13874,8 @@
         ],
         "rachaTitular": 5,
         "nota": 5.5,
-        "rival": "Deportivo",
-        "esLocal": false,
+        "rival": "",
+        "esLocal": null,
         "dificultad": null
       },
       {
@@ -15242,8 +15128,8 @@
         ],
         "rachaTitular": 3,
         "nota": 3.8,
-        "rival": "Deportivo",
-        "esLocal": false,
+        "rival": "",
+        "esLocal": null,
         "dificultad": null
       },
       {
@@ -15380,8 +15266,8 @@
         ],
         "rachaTitular": 1,
         "nota": 5.5,
-        "rival": "Deportivo",
-        "esLocal": false,
+        "rival": "",
+        "esLocal": null,
         "dificultad": null
       },
       {
@@ -15429,8 +15315,8 @@
         ],
         "rachaTitular": 5,
         "nota": 4.5,
-        "rival": "Deportivo",
-        "esLocal": false,
+        "rival": "",
+        "esLocal": null,
         "dificultad": null
       },
       {
@@ -15446,8 +15332,8 @@
         ],
         "rachaTitular": 4,
         "nota": 4.3,
-        "rival": "Deportivo",
-        "esLocal": false,
+        "rival": "",
+        "esLocal": null,
         "dificultad": null
       },
       {
