@@ -43,12 +43,12 @@
   .preview-adjunto img { max-width:120px; max-height:90px; border-radius:4px; border:1px solid var(--navy-line); display:block; object-fit:cover; }
   .preview-adjunto button { position:absolute; top:-6px; right:-6px; background:var(--red); color:#fff; border:none; border-radius:50%; width:20px; height:20px; cursor:pointer; font-size:12px; line-height:1; }
 
-  /* Modal y Buscador de GIFs */
+  /* GIFs */
   .gif-container { display:grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap:8px; max-height:200px; overflow-y:auto; margin-top:10px; }
   .gif-container img { width:100%; height:80px; object-fit:cover; border-radius:4px; cursor:pointer; border:1px solid transparent; }
   .gif-container img:hover { border-color:var(--gold); }
 
-  /* Encuestas CSS */
+  /* Encuestas */
   .poll-box { background:rgba(2,18,52,0.7); border:1px solid var(--navy-line); padding:12px; border-radius:4px; margin-top:10px; }
   .poll-opt { margin-bottom:8px; cursor:pointer; position:relative; overflow:hidden; border:1px solid var(--navy-line); border-radius:4px; padding:8px; display:flex; justify-content:space-between; align-items:center; }
   .poll-bar { position:absolute; top:0; left:0; bottom:0; background:rgba(212,175,55,0.25); z-index:1; }
@@ -134,7 +134,6 @@
       </button>
     </div>
 
-    <!-- Publicar Mensaje Principal -->
     <div class="escribir">
       <div class="campo">
         <label for="nombre">Tu Nombre / Equipo</label>
@@ -145,13 +144,11 @@
         <textarea id="texto" maxlength="2000" placeholder="Abre un hilo: pullas, fichajes, debates..."></textarea>
       </div>
 
-      <!-- Herramientas extra (GIFs y Encuestas) -->
       <div style="display:flex; gap:10px; margin-bottom:12px; flex-wrap:wrap;">
         <button type="button" class="boton boton-secundario" id="btnToggleGif">👾 Buscar GIF</button>
         <button type="button" class="boton boton-secundario" id="btnTogglePoll">📊 Añadir Encuesta</button>
       </div>
 
-      <!-- Buscador GIF Tenor -->
       <div id="boxGif" style="display:none; margin-bottom:14px; background:rgba(2,18,52,0.5); padding:10px; border-radius:4px;">
         <div style="display:flex; gap:6px;">
           <input type="text" id="searchGif" placeholder="Buscar GIF (ej: gol, risa, meme)..." style="flex:1;">
@@ -160,7 +157,6 @@
         <div id="contenedorGifs" class="gif-container"></div>
       </div>
 
-      <!-- Creador Encuesta -->
       <div id="boxPoll" style="display:none; margin-bottom:14px; background:rgba(2,18,52,0.5); padding:10px; border-radius:4px;">
         <div class="campo">
           <label>Pregunta de la Encuesta</label>
@@ -201,10 +197,11 @@
 (function () {
   var URL_SUPABASE = 'https://hgmswhslnuqlzqbvuifw.supabase.co';
   var CLAVE_PUBLICA = 'sb_publishable_mJwquJGh9WzRrxCrrceZng_B0GynTvN';
-  var TENOR_API_KEY = 'LIVDSRZULEBR'; // Clave pública de demostración para GIFs
+  var TENOR_API_KEY = 'LIVDSRZULEBR';
 
   var sb = window.supabase.createClient(URL_SUPABASE, CLAVE_PUBLICA);
   var imagenBase64Principal = null;
+  var imagenesRespuestas = {};
 
   var esc = function (s) {
     return String(s == null ? '' : s)
@@ -247,7 +244,6 @@
     return canvas.toDataURL('image/jpeg', 0.82);
   }
 
-  /* RENDERIZADO DE ENCUESTAS */
   function renderPollHtml(poll) {
     if (!poll) return '';
     var totalVotos = 0;
@@ -288,10 +284,31 @@
       '<button class="btn-accion borrar" data-id="' + m.id + '">🗑️ Borrar</button>' +
     '</div>';
 
+    /* Formulario de respuesta extendido con GIF y Encuesta */
     var htmlFormRespuesta = '<div class="form-respuesta" id="reply-box-' + m.id + '" style="display:none;">' +
       '<div class="campo"><label>Tu Nombre / Equipo</label><input type="text" id="reply-name-' + m.id + '" placeholder="Ej: Presi Rayo"></div>' +
       '<div class="campo"><label>Respuesta</label><textarea id="reply-text-' + m.id + '" placeholder="Escribe tu respuesta...">@' + esc(m.nombre) + ' </textarea></div>' +
+      
+      '<div style="display:flex; gap:8px; margin-bottom:10px; flex-wrap:wrap;">' +
+        '<button type="button" class="boton boton-secundario btn-reply-gif" data-id="' + m.id + '">👾 GIF</button>' +
+        '<button type="button" class="boton boton-secundario btn-reply-poll" data-id="' + m.id + '">📊 Encuesta</button>' +
+      '</div>' +
+
+      '<div id="reply-box-gif-' + m.id + '" style="display:none; margin-bottom:10px; background:rgba(2,18,52,0.5); padding:8px; border-radius:4px;">' +
+        '<div style="display:flex; gap:6px;">' +
+          '<input type="text" id="reply-search-gif-' + m.id + '" placeholder="Buscar GIF..." style="flex:1;">' +
+          '<button type="button" class="boton btn-search-reply-gif" data-id="' + m.id + '" style="padding:4px 8px; font-size:0.75rem;">Buscar</button>' +
+        '</div>' +
+        '<div id="reply-gifs-cont-' + m.id + '" class="gif-container"></div>' +
+      '</div>' +
+
+      '<div id="reply-box-poll-' + m.id + '" style="display:none; margin-bottom:10px; background:rgba(2,18,52,0.5); padding:8px; border-radius:4px;">' +
+        '<div class="campo"><label>Pregunta Encuesta</label><input type="text" id="reply-poll-p-' + m.id + '" placeholder="Ej: ¿Qué opináis?"></div>' +
+        '<div class="campo"><label>Opciones (separadas por comas)</label><input type="text" id="reply-poll-o-' + m.id + '" placeholder="Sí, No, Quizás"></div>' +
+      '</div>' +
+
       '<div class="campo"><label>Imagen (Opcional)</label><input type="file" id="reply-img-' + m.id + '" accept="image/*" style="color:var(--grey); font-size:0.8rem;"></div>' +
+      '<div id="reply-preview-' + m.id + '" class="preview-adjunto" style="display:none; margin-bottom:10px;"><img id="reply-img-prev-' + m.id + '" src=""><button type="button" onclick="window.quitarImgReply(\'' + m.id + '\')">✕</button></div>' +
       '<button class="boton btn-send-reply" data-id="' + m.id + '" data-rootid="' + idPadreParaGuardar + '">Enviar Respuesta</button>' +
     '</div>';
 
@@ -348,6 +365,24 @@
         var box = document.getElementById('reply-box-' + b.dataset.id);
         if (box) box.style.display = (box.style.display === 'none') ? 'block' : 'none';
       });
+    });
+
+    cont.querySelectorAll('.btn-reply-gif').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var box = document.getElementById('reply-box-gif-' + b.dataset.id);
+        if (box) box.style.display = (box.style.display === 'none') ? 'block' : 'none';
+      });
+    });
+
+    cont.querySelectorAll('.btn-reply-poll').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var box = document.getElementById('reply-box-poll-' + b.dataset.id);
+        if (box) box.style.display = (box.style.display === 'none') ? 'block' : 'none';
+      });
+    });
+
+    cont.querySelectorAll('.btn-search-reply-gif').forEach(function (b) {
+      b.addEventListener('click', function () { buscarGifRespuesta(b.dataset.id); });
     });
 
     cont.querySelectorAll('.btn-send-reply').forEach(function (b) {
@@ -430,7 +465,6 @@
 
     if (r.error) { estado('No se ha podido publicar: ' + r.error.message); if (btn) btn.disabled = false; return; }
 
-    // Procesar encuesta si fue rellenada
     var preg = document.getElementById('pollPregunta').value.trim();
     var optsRaw = document.getElementById('pollOpciones').value.trim();
 
@@ -453,6 +487,39 @@
     limpiarImagenPrincipal();
   }
 
+  function buscarGifRespuesta(msgId) {
+    var input = document.getElementById('reply-search-gif-' + msgId);
+    var q = (input ? input.value.trim() : '') || 'football';
+    var url = 'https://g.tenor.com/v1/search?q=' + encodeURIComponent(q) + '&key=' + TENOR_API_KEY + '&limit=12';
+
+    fetch(url).then(function(res){ return res.json(); }).then(function(data){
+      var cont = document.getElementById('reply-gifs-cont-' + msgId);
+      if (cont) {
+        cont.innerHTML = (data.results || []).map(function(item){
+          var gifUrl = item.media[0].tinygif.url;
+          return '<img src="' + gifUrl + '" onclick="window.seleccionarGifReply(\'' + msgId + '\', \'' + gifUrl + '\')">';
+        }).join('');
+      }
+    });
+  }
+
+  window.seleccionarGifReply = function(msgId, url) {
+    imagenesRespuestas[msgId] = url;
+    var prevCont = document.getElementById('reply-preview-' + msgId);
+    var imgPrev = document.getElementById('reply-img-prev-' + msgId);
+    if (imgPrev) imgPrev.src = url;
+    if (prevCont) prevCont.style.display = 'inline-block';
+    document.getElementById('reply-box-gif-' + msgId).style.display = 'none';
+  };
+
+  window.quitarImgReply = function(msgId) {
+    imagenesRespuestas[msgId] = null;
+    var prevCont = document.getElementById('reply-preview-' + msgId);
+    var imgPrev = document.getElementById('reply-img-prev-' + msgId);
+    if (imgPrev) imgPrev.src = '';
+    if (prevCont) prevCont.style.display = 'none';
+  };
+
   async function enviarRespuesta(msgId, rootPadreId) {
     var nomInput = document.getElementById('reply-name-' + msgId);
     var txtInput = document.getElementById('reply-text-' + msgId);
@@ -462,10 +529,11 @@
     var texto = txtInput ? txtInput.value.trim() : '';
     var file = (fileInput && fileInput.files) ? fileInput.files[0] : null;
 
-    if (!nombre) { alert('Escribe tu nombre.'); return; }
-    if (!texto && !file) { alert('Escribe un mensaje o elige una imagen.'); return; }
+    var imgBase64 = imagenesRespuestas[msgId] || null;
 
-    var imgBase64 = null;
+    if (!nombre) { alert('Escribe tu nombre.'); return; }
+    if (!texto && !file && !imgBase64) { alert('Escribe un mensaje, elige un GIF o adjunta una imagen.'); return; }
+
     if (file) {
       if (file.size > 5 * 1024 * 1024) { alert('La imagen no puede superar los 5 MB.'); return; }
       imgBase64 = await new Promise(function(resolve){
@@ -485,9 +553,28 @@
       imagen: imgBase64,
       mensaje_padre_id: rootPadreId,
       likes: 0
-    });
+    }).select().single();
 
     if (r.error) { alert('Error al responder: ' + r.error.message); return; }
+
+    // Procesa encuesta dentro de respuesta si existe
+    var pregInput = document.getElementById('reply-poll-p-' + msgId);
+    var optsInput = document.getElementById('reply-poll-o-' + msgId);
+    var preg = pregInput ? pregInput.value.trim() : '';
+    var optsRaw = optsInput ? optsInput.value.trim() : '';
+
+    if (preg && optsRaw) {
+      var arrOpts = optsRaw.split(',').map(function(item, idx){ return { id: idx + 1, texto: item.trim(), votos: 0 }; }).filter(function(i){ return i.texto.length > 0; });
+      if (arrOpts.length > 1) {
+        await sb.from('encuestas').insert({
+          mensaje_id: r.data.id,
+          pregunta: preg,
+          opciones: arrOpts
+        });
+      }
+    }
+
+    imagenesRespuestas[msgId] = null;
   }
 
   async function borrar(id) {
@@ -513,7 +600,6 @@
       .subscribe();
   }
 
-  // BUSCADOR TENOR GIFS
   document.getElementById('btnToggleGif').onclick = function() {
     var b = document.getElementById('boxGif');
     b.style.display = (b.style.display === 'none') ? 'block' : 'none';
