@@ -20,45 +20,48 @@
   
   .boton { background:var(--red); color:#fff; border:none; cursor:pointer;
     font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.07em;
-    text-transform:uppercase; font-size:0.9rem; padding:12px 24px; border-radius:4px; }
+    text-transform:uppercase; font-size:0.9rem; padding:10px 20px; border-radius:4px; }
   .boton:hover { filter:brightness(1.12); }
   .boton:disabled { opacity:0.5; cursor:default; }
 
   .mensaje-estado { font-size:0.88rem; padding:11px 14px; border-radius:4px; margin-bottom:16px; line-height:1.45; }
   .mensaje-estado.error { background:rgba(192,24,44,0.15); color:#E8746A; border-left:3px solid #E8746A; }
 
-  /* Escribir */
-  .escribir { background:var(--navy-soft); padding:20px; margin-bottom:26px; }
-  .escribir textarea { width:100%; min-height:96px; background:rgba(2,18,52,0.6); color:var(--white);
+  /* Escribir principal */
+  .escribir { background:var(--navy-soft); padding:20px; margin-bottom:26px; border-radius:4px; }
+  .escribir textarea { width:100%; min-height:80px; background:rgba(2,18,52,0.6); color:var(--white);
     border:1px solid var(--navy-line); font-family:'Source Serif 4',serif; font-size:0.96rem;
     padding:12px 14px; border-radius:4px; box-sizing:border-box; resize:vertical; line-height:1.5; }
   .escribir textarea:focus { outline:none; border-color:var(--gold-dim); }
-  .escribir .pie { display:flex; align-items:center; justify-content:space-between;
-    margin-top:12px; gap:12px; flex-wrap:wrap; }
+  .escribir .pie { display:flex; align-items:center; justify-content:space-between; margin-top:12px; gap:12px; flex-wrap:wrap; }
   .escribir .cuenta { font-family:'Barlow Condensed',sans-serif; font-size:0.74rem; color:var(--grey); }
 
   /* Adjuntar imagen */
   .preview-adjunto { margin-top:10px; position:relative; display:inline-block; }
-  .preview-adjunto img { max-width:140px; max-height:100px; border-radius:4px; border:1px solid var(--navy-line); display:block; }
+  .preview-adjunto img { max-width:120px; max-height:90px; border-radius:4px; border:1px solid var(--navy-line); display:block; }
   .preview-adjunto button { position:absolute; top:-6px; right:-6px; background:var(--red); color:#fff; border:none; border-radius:50%; width:20px; height:20px; cursor:pointer; font-size:12px; line-height:1; }
 
-  /* Mensajes */
-  .lista-msg { display:grid; gap:12px; }
-  .msg { background:var(--navy-soft); padding:17px 20px; border-left:3px solid var(--gold); }
-  .msg .cab { display:flex; align-items:baseline; gap:11px; margin-bottom:9px; flex-wrap:wrap; }
-  .msg .autor { font-family:'Anton',sans-serif; font-size:1rem; color:var(--gold); }
-  .msg .cuando { font-family:'Barlow Condensed',sans-serif; font-size:0.72rem;
-    color:var(--grey); letter-spacing:0.03em; text-transform:uppercase; }
-  .msg .texto { font-size:0.98rem; line-height:1.6; color:rgba(247,247,245,0.92);
-    white-space:pre-wrap; word-wrap:break-word; }
-  .msg .img-adjunta { margin-top:12px; max-width:100%; max-height:400px; border-radius:4px; border:1px solid var(--navy-line); display:block; }
-  .msg .borrar { background:none; border:none; color:var(--grey); cursor:pointer;
-    font-family:'Barlow Condensed',sans-serif; font-size:0.72rem; letter-spacing:0.04em;
-    text-transform:uppercase; padding:4px 0; margin-top:9px; display:block; }
-  .msg .borrar:hover { color:#E8746A; }
+  /* Mensajes e Hilos */
+  .lista-msg { display:grid; gap:16px; }
+  .msg-card { background:var(--navy-soft); border-left:3px solid var(--gold); border-radius:0 4px 4px 0; padding:16px 18px; }
+  .msg-card.respuesta { background:rgba(2, 18, 52, 0.4); border-left:2px solid var(--grey); margin-top:10px; margin-left:20px; }
+  
+  .msg-card .cab { display:flex; align-items:baseline; gap:10px; margin-bottom:8px; flex-wrap:wrap; }
+  .msg-card .autor { font-family:'Anton',sans-serif; font-size:0.98rem; color:var(--gold); }
+  .msg-card.respuesta .autor { color:var(--white); font-size:0.9rem; }
+  .msg-card .cuando { font-family:'Barlow Condensed',sans-serif; font-size:0.72rem; color:var(--grey); text-transform:uppercase; }
+  .msg-card .texto { font-size:0.95rem; line-height:1.5; color:rgba(247,247,245,0.92); white-space:pre-wrap; word-wrap:break-word; }
+  .msg-card .img-adjunta { margin-top:10px; max-width:100%; max-height:350px; border-radius:4px; border:1px solid var(--navy-line); display:block; }
+  
+  .acciones-msg { display:flex; gap:14px; margin-top:10px; align-items:center; }
+  .btn-accion { background:none; border:none; color:var(--grey); cursor:pointer; font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; letter-spacing:0.04em; text-transform:uppercase; padding:0; }
+  .btn-accion:hover { color:var(--white); }
+  .btn-accion.borrar:hover { color:#E8746A; }
 
-  .aviso-suave { background:var(--navy-soft); border-left:3px solid var(--gold-dim);
-    padding:16px 18px; font-size:0.92rem; color:rgba(247,247,245,0.82); }
+  /* Formulario de Respuesta */
+  .form-respuesta { margin-top:12px; padding:12px; background:rgba(2,18,52,0.8); border-radius:4px; border:1px solid var(--navy-line); }
+
+  .aviso-suave { background:var(--navy-soft); border-left:3px solid var(--gold-dim); padding:16px 18px; font-size:0.92rem; color:rgba(247,247,245,0.82); }
 </style>
 </head>
 <body>
@@ -102,13 +105,14 @@
       <h2>El tablón</h2>
     </div>
     <p class="section-note" style="margin-top:-18px;">
-      Espacio libre para publicar y comentar sobre la liga.
+      Espacio libre para publicar, debatir y responder en hilos.
     </p>
   </section>
 
   <section class="block" style="border-top:none; padding-top:0;">
     <div id="zonaEstado"></div>
 
+    <!-- Publicar Mensaje Principal -->
     <div class="escribir">
       <div class="campo">
         <label for="nombre">Tu Nombre / Equipo</label>
@@ -116,7 +120,7 @@
       </div>
       <div class="campo">
         <label for="texto">Mensaje</label>
-        <textarea id="texto" maxlength="2000" placeholder="¿Qué cuentas? Pullas, fichajes, quejas arbitrales..."></textarea>
+        <textarea id="texto" maxlength="2000" placeholder="Abre un hilo: pullas, fichajes, debates..."></textarea>
       </div>
       
       <div class="campo">
@@ -130,7 +134,7 @@
 
       <div class="pie">
         <span class="cuenta"><span id="contador">0</span> / 2000</span>
-        <button class="boton" id="btnPublicar">Publicar</button>
+        <button class="boton" id="btnPublicar">Publicar Hilo</button>
       </div>
     </div>
 
@@ -150,7 +154,7 @@
   var CLAVE_PUBLICA = 'sb_publishable_mJwquJGh9WzRrxCrrceZng_B0GynTvN';
 
   var sb = window.supabase.createClient(URL_SUPABASE, CLAVE_PUBLICA);
-  var imagenBase64 = null;
+  var imagenBase64Principal = null;
 
   var esc = function (s) {
     return String(s == null ? '' : s)
@@ -176,81 +180,6 @@
            f.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
   }
 
-  function pintar(mensajes) {
-    var cont = document.getElementById('lista');
-    document.getElementById('cuantos').textContent = mensajes.length;
-
-    if (!mensajes.length) {
-      cont.innerHTML = '<div class="aviso-suave">Todavía no hay nada en el tablón. Estrénalo tú.</div>';
-      return;
-    }
-
-    cont.innerHTML = '<div class="lista-msg">' + mensajes.map(function (m) {
-      var htmlImg = m.imagen ? '<a href="' + m.imagen + '" target="_blank"><img class="img-adjunta" src="' + m.imagen + '" alt="Imagen adjunta"></a>' : '';
-      return '<div class="msg">' +
-        '<div class="cab">' +
-          '<span class="autor">' + esc(m.nombre) + '</span>' +
-          '<span class="cuando">' + esc(cuando(m.creado)) + '</span>' +
-        '</div>' +
-        '<div class="texto">' + esc(m.texto) + '</div>' +
-        htmlImg +
-        '<button class="borrar" data-id="' + m.id + '">Borrar</button>' +
-      '</div>';
-    }).join('') + '</div>';
-
-    cont.querySelectorAll('.borrar').forEach(function (b) {
-      b.addEventListener('click', function () { borrar(b.dataset.id); });
-    });
-  }
-
-  async function cargar() {
-    var r = await sb.from('mensajes')
-      .select('id, creado, nombre, texto, imagen')
-      .order('creado', { ascending: false })
-      .limit(100);
-    if (r.error) { estado('No se han podido cargar los mensajes: ' + r.error.message); return; }
-    estado('');
-    pintar(r.data || []);
-  }
-
-  async function publicar() {
-    var nombre = document.getElementById('nombre').value.trim();
-    var caja = document.getElementById('texto');
-    var texto = caja.value.trim();
-
-    if (!nombre) { estado('Escribe tu nombre o equipo antes de publicar.'); return; }
-    if (!texto && !imagenBase64) { estado('Escribe un mensaje o adjunta una imagen.'); return; }
-
-    var btn = document.getElementById('btnPublicar');
-    btn.disabled = true;
-    var r = await sb.from('mensajes').insert({
-      nombre: nombre,
-      texto: texto,
-      imagen: imagenBase64
-    });
-    btn.disabled = false;
-
-    if (r.error) { estado('No se ha podido publicar: ' + r.error.message); return; }
-    caja.value = '';
-    limpiarImagen();
-    document.getElementById('contador').textContent = '0';
-    cargar();
-  }
-
-  async function borrar(id) {
-    if (!confirm('¿Borrar este mensaje?')) return;
-    var r = await sb.from('mensajes').delete().eq('id', id);
-    if (r.error) { estado('No se ha podido borrar: ' + r.error.message); return; }
-    cargar();
-  }
-
-  function limpiarImagen() {
-    imagenBase64 = null;
-    document.getElementById('inputImg').value = '';
-    document.getElementById('contenedorPreview').hidden = true;
-  }
-
-  // Redimensionar imagen para optimizar espacio
   function optimizarImagen(imgElement) {
     var canvas = document.createElement('canvas');
     var maxAncho = 1200;
@@ -266,26 +195,177 @@
 
     var ctx = canvas.getContext('2d');
     ctx.drawImage(imgElement, 0, 0, canvas.width, canvas.height);
-    return canvas.toDataURL('image/jpeg', 0.82); // Comprime a JPEG de excelente calidad
+    return canvas.toDataURL('image/jpeg', 0.82);
   }
 
-  // Leer archivo hasta 5MB
+  function renderCard(m, esRespuesta) {
+    var htmlImg = m.imagen ? '<a href="' + m.imagen + '" target="_blank"><img class="img-adjunta" src="' + m.imagen + '" alt="Imagen adjunta"></a>' : '';
+    var claseExtra = esRespuesta ? ' respuesta' : '';
+    
+    var htmlAcciones = '<div class="acciones-msg">';
+    if (!esRespuesta) {
+      htmlAcciones += '<button class="btn-accion btn-toggle-reply" data-id="' + m.id + '">💬 Responder</button>';
+    }
+    htmlAcciones += '<button class="btn-accion borrar" data-id="' + m.id + '">🗑️ Borrar</button></div>';
+
+    var htmlFormRespuesta = '';
+    if (!esRespuesta) {
+      htmlFormRespuesta = '<div class="form-respuesta" id="reply-box-' + m.id + '" hidden>' +
+        '<div class="campo"><label>Tu Nombre / Equipo</label><input type="text" id="reply-name-' + m.id + '" placeholder="Ej: Presi Rayo"></div>' +
+        '<div class="campo"><label>Respuesta</label><textarea id="reply-text-' + m.id + '" placeholder="Escribe tu respuesta..."></textarea></div>' +
+        '<div class="campo"><label>Imagen (Opcional)</label><input type="file" id="reply-img-' + m.id + '" accept="image/*" style="color:var(--grey); font-size:0.8rem;"></div>' +
+        '<button class="boton btn-send-reply" data-id="' + m.id + '">Enviar Respuesta</button>' +
+      '</div>';
+    }
+
+    return '<div class="msg-card' + claseExtra + '">' +
+      '<div class="cab">' +
+        '<span class="autor">' + esc(m.nombre) + '</span>' +
+        '<span class="cuando">' + esc(cuando(m.creado)) + '</span>' +
+      '</div>' +
+      '<div class="texto">' + esc(m.texto) + '</div>' +
+      htmlImg +
+      htmlAcciones +
+      htmlFormRespuesta +
+    '</div>';
+  }
+
+  function pintar(mensajes) {
+    var cont = document.getElementById('lista');
+    
+    // Separar principales de respuestas
+    var principales = mensajes.filter(function(m){ return !m.mensaje_padre_id; });
+    var respuestas = mensajes.filter(function(m){ return m.mensaje_padre_id; });
+
+    document.getElementById('cuantos').textContent = principales.length;
+
+    if (!principales.length) {
+      cont.innerHTML = '<div class="aviso-suave">Todavía no hay ningún hilo. Estrénalo tú.</div>';
+      return;
+    }
+
+    cont.innerHTML = '<div class="lista-msg">' + principales.map(function (p) {
+      var misRespuestas = respuestas.filter(function(r){ return r.mensaje_padre_id === p.id; });
+      // Ordenar respuestas cronológicamente (más antiguas primero)
+      misRespuestas.sort(function(a,b){ return new Date(a.creado) - new Date(b.creado); });
+
+      var htmlRespuestas = misRespuestas.map(function(r){ return renderCard(r, true); }).join('');
+
+      return '<div>' + renderCard(p, false) + htmlRespuestas + '</div>';
+    }).join('') + '</div>';
+
+    // Eventos de botones
+    cont.querySelectorAll('.borrar').forEach(function (b) {
+      b.addEventListener('click', function () { borrar(b.dataset.id); });
+    });
+
+    cont.querySelectorAll('.btn-toggle-reply').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var box = document.getElementById('reply-box-' + b.dataset.id);
+        box.hidden = !box.hidden;
+      });
+    });
+
+    cont.querySelectorAll('.btn-send-reply').forEach(function (b) {
+      b.addEventListener('click', function () { enviarRespuesta(b.dataset.id); });
+    });
+  }
+
+  async function cargar() {
+    var r = await sb.from('mensajes')
+      .select('id, creado, nombre, texto, imagen, mensaje_padre_id')
+      .order('creado', { ascending: false })
+      .limit(150);
+    if (r.error) { estado('No se han podido cargar los mensajes: ' + r.error.message); return; }
+    estado('');
+    pintar(r.data || []);
+  }
+
+  async function publicar() {
+    var nombre = document.getElementById('nombre').value.trim();
+    var caja = document.getElementById('texto');
+    var texto = caja.value.trim();
+
+    if (!nombre) { estado('Escribe tu nombre o equipo antes de publicar.'); return; }
+    if (!texto && !imagenBase64Principal) { estado('Escribe un mensaje o adjunta una imagen.'); return; }
+
+    var btn = document.getElementById('btnPublicar');
+    btn.disabled = true;
+    var r = await sb.from('mensajes').insert({
+      nombre: nombre,
+      texto: texto,
+      imagen: imagenBase64Principal
+    });
+    btn.disabled = false;
+
+    if (r.error) { estado('No se ha podido publicar: ' + r.error.message); return; }
+    caja.value = '';
+    limpiarImagenPrincipal();
+    document.getElementById('contador').textContent = '0';
+    cargar();
+  }
+
+  async function enviarRespuesta(padreId) {
+    var nomInput = document.getElementById('reply-name-' + padreId);
+    var txtInput = document.getElementById('reply-text-' + padreId);
+    var fileInput = document.getElementById('reply-img-' + padreId);
+
+    var nombre = nomInput.value.trim();
+    var texto = txtInput.value.trim();
+    var file = fileInput.files[0];
+
+    if (!nombre) { alert('Escribe tu nombre.'); return; }
+    if (!texto && !file) { alert('Escribe un mensaje o elige una imagen.'); return; }
+
+    var imgBase64 = null;
+    if (file) {
+      if (file.size > 5 * 1024 * 1024) { alert('La imagen no puede superar los 5 MB.'); return; }
+      imgBase64 = await new Promise(function(resolve){
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          var img = new Image();
+          img.onload = function() { resolve(optimizarImagen(img)); };
+          img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+
+    var r = await sb.from('mensajes').insert({
+      nombre: nombre,
+      texto: texto,
+      imagen: imgBase64,
+      mensaje_padre_id: padreId
+    });
+
+    if (r.error) { alert('Error al responder: ' + r.error.message); return; }
+    cargar();
+  }
+
+  async function borrar(id) {
+    if (!confirm('¿Borrar este mensaje? Si es una publicación principal, también se borrarán sus respuestas.')) return;
+    var r = await sb.from('mensajes').delete().eq('id', id);
+    if (r.error) { estado('No se ha podido borrar: ' + r.error.message); return; }
+    cargar();
+  }
+
+  function limpiarImagenPrincipal() {
+    imagenBase64Principal = null;
+    document.getElementById('inputImg').value = '';
+    document.getElementById('contenedorPreview').hidden = true;
+  }
+
   document.getElementById('inputImg').addEventListener('change', function (e) {
     var file = e.target.files[0];
     if (!file) return;
-
-    if (file.size > 5 * 1024 * 1024) {
-      estado('La imagen es demasiado grande. El límite es de 5 MB.');
-      this.value = '';
-      return;
-    }
+    if (file.size > 5 * 1024 * 1024) { estado('La imagen es demasiado grande (máx 5MB).'); this.value = ''; return; }
 
     var reader = new FileReader();
     reader.onload = function (evt) {
       var img = new Image();
       img.onload = function () {
-        imagenBase64 = optimizarImagen(img);
-        document.getElementById('imgPreview').src = imagenBase64;
+        imagenBase64Principal = optimizarImagen(img);
+        document.getElementById('imgPreview').src = imagenBase64Principal;
         document.getElementById('contenedorPreview').hidden = false;
         estado('');
       };
@@ -294,7 +374,7 @@
     reader.readAsDataURL(file);
   });
 
-  document.getElementById('btnQuitarImg').addEventListener('click', limpiarImagen);
+  document.getElementById('btnQuitarImg').addEventListener('click', limpiarImagenPrincipal);
   document.getElementById('btnPublicar').addEventListener('click', publicar);
   document.getElementById('texto').addEventListener('input', function () {
     document.getElementById('contador').textContent = this.value.length;
