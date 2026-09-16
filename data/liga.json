@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-16T19:58:14.251Z",
+  "actualizado": "2026-09-16T20:18:31.669Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 6,
   "jornadaEnJuego": true,
@@ -70,8 +70,8 @@
       "escudoLocal": "https://cdn.biwenger.com/i/t/3.png",
       "escudoVisitante": "https://cdn.biwenger.com/i/t/812.png",
       "fecha": "2026-09-16T19:30:00.000Z",
-      "golesLocal": 1,
-      "golesVisitante": 0,
+      "golesLocal": 4,
+      "golesVisitante": 1,
       "estado": "firstTime"
     },
     {
@@ -134,10 +134,10 @@
       "valor": "56,8 M",
       "valorBruto": 56790000,
       "esTuyo": false,
-      "puntosJornada": 9,
-      "jugadosJornada": 2,
+      "puntosJornada": 18,
+      "jugadosJornada": 4,
       "alineadosJornada": 11,
-      "puntosProvisional": 315
+      "puntosProvisional": 324
     },
     {
       "posicion": 3,
@@ -150,10 +150,10 @@
       "valor": "21,2 M",
       "valorBruto": 21180000,
       "esTuyo": false,
-      "puntosJornada": 9,
-      "jugadosJornada": 2,
+      "puntosJornada": 15,
+      "jugadosJornada": 3,
       "alineadosJornada": 11,
-      "puntosProvisional": 291
+      "puntosProvisional": 297
     },
     {
       "posicion": 4,
@@ -198,10 +198,10 @@
       "valor": "36,8 M",
       "valorBruto": 36790000,
       "esTuyo": false,
-      "puntosJornada": 9,
-      "jugadosJornada": 4,
+      "puntosJornada": 17,
+      "jugadosJornada": 5,
       "alineadosJornada": 11,
-      "puntosProvisional": 257
+      "puntosProvisional": 265
     },
     {
       "posicion": 7,
@@ -214,10 +214,10 @@
       "valor": "52,9 M",
       "valorBruto": 52870000,
       "esTuyo": false,
-      "puntosJornada": -2,
-      "jugadosJornada": 1,
+      "puntosJornada": 0,
+      "jugadosJornada": 2,
       "alineadosJornada": 11,
-      "puntosProvisional": 245
+      "puntosProvisional": 247
     },
     {
       "posicion": 8,
@@ -246,10 +246,10 @@
       "valor": "43,1 M",
       "valorBruto": 43070000,
       "esTuyo": false,
-      "puntosJornada": 29,
-      "jugadosJornada": 5,
+      "puntosJornada": 45,
+      "jugadosJornada": 7,
       "alineadosJornada": 11,
-      "puntosProvisional": 260
+      "puntosProvisional": 276
     },
     {
       "posicion": 10,
@@ -278,10 +278,10 @@
       "valor": "45,2 M",
       "valorBruto": 45240000,
       "esTuyo": false,
-      "puntosJornada": 33,
-      "jugadosJornada": 3,
+      "puntosJornada": 38,
+      "jugadosJornada": 5,
       "alineadosJornada": 11,
-      "puntosProvisional": 202
+      "puntosProvisional": 207
     },
     {
       "posicion": 12,
@@ -420,32 +420,6 @@
     }
   ],
   "mercadoPresidentes": [
-    {
-      "tipo": "venta",
-      "nombre": "Ponce",
-      "foto": "https://cdn.biwenger.com/i/p/5534.png",
-      "posicion": "Delantero",
-      "equipoReal": "Elche",
-      "vendedor": "Lottin Capital",
-      "pide": "0,5 M",
-      "pideBruto": 470000,
-      "valorMercado": "0,4 M",
-      "valorBruto": 430000,
-      "diferencia": 40000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Kevin Sánchez",
-      "foto": "https://cdn.biwenger.com/i/p/41567.png",
-      "posicion": "Delantero",
-      "equipoReal": "Deportivo",
-      "vendedor": "Lottin Capital",
-      "pide": "0,1 M",
-      "pideBruto": 150000,
-      "valorMercado": "0,1 M",
-      "valorBruto": 150000,
-      "diferencia": 0
-    },
     {
       "tipo": "venta",
       "nombre": "Jonny",
@@ -2174,7 +2148,7 @@
       "balance": "+19,3 M",
       "balanceBruto": 19299000,
       "sobreprecioMedio": 32,
-      "enVenta": 2,
+      "enVenta": 0,
       "fichajeEstrella": {
         "nombre": "Pépé",
         "precio": "14,9 M",
@@ -2228,8 +2202,8 @@
   "movimientos": null,
   "onceIdeal": {
     "jornada": "Jornada 5",
-    "formacion": "4-3-3",
-    "total": 154,
+    "formacion": "3-4-3",
+    "total": 153,
     "titulares": [
       {
         "nombre": "Álvaro Valles",
@@ -2294,21 +2268,6 @@
         "escudoPresidente": ""
       },
       {
-        "nombre": "Castrín",
-        "posicion": "Defensa",
-        "puntos": 10,
-        "racha": [
-          10,
-          2,
-          2,
-          5
-        ],
-        "equipoReal": "Sevilla",
-        "foto": "https://cdn.biwenger.com/i/p/38072.png",
-        "presidente": "",
-        "escudoPresidente": ""
-      },
-      {
         "nombre": "Kang-in Lee",
         "posicion": "Centrocampista",
         "puntos": 17,
@@ -2353,6 +2312,22 @@
         ],
         "equipoReal": "Getafe",
         "foto": "https://cdn.biwenger.com/i/p/26092.png",
+        "presidente": "",
+        "escudoPresidente": ""
+      },
+      {
+        "nombre": "Pathé Ciss",
+        "posicion": "Centrocampista",
+        "puntos": 9,
+        "racha": [
+          9,
+          4,
+          6,
+          -1,
+          2
+        ],
+        "equipoReal": "Rayo Vallecano",
+        "foto": "https://cdn.biwenger.com/i/p/24326.png",
         "presidente": "",
         "escudoPresidente": ""
       },
@@ -2459,19 +2434,19 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": true,
             "rival": "Getafe",
-            "dificultad": 22
+            "dificultad": 23
           },
           {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
-            "dificultad": 53
+            "dificultad": 48
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 33
+            "dificultad": 25
           }
         ]
       },
@@ -2563,19 +2538,19 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": true,
             "rival": "Getafe",
-            "dificultad": 22
+            "dificultad": 23
           },
           {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
-            "dificultad": 53
+            "dificultad": 48
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 33
+            "dificultad": 25
           }
         ]
       },
@@ -2797,13 +2772,13 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Osasuna",
-            "dificultad": 40
+            "dificultad": 32
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Athletic",
-            "dificultad": 53
+            "dificultad": 52
           },
           {
             "jornada": "Round 9",
@@ -2875,19 +2850,19 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": true,
             "rival": "Getafe",
-            "dificultad": 22
+            "dificultad": 23
           },
           {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
-            "dificultad": 53
+            "dificultad": 48
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 33
+            "dificultad": 25
           }
         ]
       },
@@ -3191,19 +3166,19 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": true,
             "rival": "Getafe",
-            "dificultad": 22
+            "dificultad": 23
           },
           {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
-            "dificultad": 53
+            "dificultad": 48
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 33
+            "dificultad": 25
           }
         ]
       },
@@ -3609,19 +3584,19 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": true,
             "rival": "Getafe",
-            "dificultad": 22
+            "dificultad": 23
           },
           {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
-            "dificultad": 53
+            "dificultad": 48
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 33
+            "dificultad": 25
           }
         ]
       },
@@ -3947,13 +3922,13 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Osasuna",
-            "dificultad": 40
+            "dificultad": 32
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Athletic",
-            "dificultad": 53
+            "dificultad": 52
           },
           {
             "jornada": "Round 9",
@@ -4027,19 +4002,19 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": true,
             "rival": "Getafe",
-            "dificultad": 22
+            "dificultad": 23
           },
           {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
-            "dificultad": 53
+            "dificultad": 48
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 33
+            "dificultad": 25
           }
         ]
       },
@@ -4235,19 +4210,19 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": true,
             "rival": "Getafe",
-            "dificultad": 22
+            "dificultad": 23
           },
           {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
-            "dificultad": 53
+            "dificultad": 48
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 33
+            "dificultad": 25
           }
         ]
       },
@@ -4419,19 +4394,19 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": true,
             "rival": "Getafe",
-            "dificultad": 22
+            "dificultad": 23
           },
           {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
-            "dificultad": 53
+            "dificultad": 48
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 33
+            "dificultad": 25
           }
         ]
       },
@@ -4445,19 +4420,19 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": true,
             "rival": "Getafe",
-            "dificultad": 22
+            "dificultad": 23
           },
           {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
-            "dificultad": 53
+            "dificultad": 48
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 33
+            "dificultad": 25
           }
         ]
       },
@@ -4471,13 +4446,13 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Osasuna",
-            "dificultad": 40
+            "dificultad": 32
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Athletic",
-            "dificultad": 53
+            "dificultad": 52
           },
           {
             "jornada": "Round 9",
@@ -4549,13 +4524,13 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Osasuna",
-            "dificultad": 40
+            "dificultad": 32
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Athletic",
-            "dificultad": 53
+            "dificultad": 52
           },
           {
             "jornada": "Round 9",
@@ -4575,13 +4550,13 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Osasuna",
-            "dificultad": 40
+            "dificultad": 32
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Athletic",
-            "dificultad": 53
+            "dificultad": 52
           },
           {
             "jornada": "Round 9",
@@ -5047,13 +5022,13 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Osasuna",
-            "dificultad": 40
+            "dificultad": 32
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Athletic",
-            "dificultad": 53
+            "dificultad": 52
           },
           {
             "jornada": "Round 9",
@@ -5439,19 +5414,19 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": true,
             "rival": "Getafe",
-            "dificultad": 22
+            "dificultad": 23
           },
           {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
-            "dificultad": 53
+            "dificultad": 48
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 33
+            "dificultad": 25
           }
         ]
       },
@@ -6015,19 +5990,19 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": true,
             "rival": "Getafe",
-            "dificultad": 22
+            "dificultad": 23
           },
           {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
-            "dificultad": 53
+            "dificultad": 48
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 33
+            "dificultad": 25
           }
         ]
       },
@@ -6126,13 +6101,13 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Osasuna",
-            "dificultad": 40
+            "dificultad": 32
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Athletic",
-            "dificultad": 53
+            "dificultad": 52
           },
           {
             "jornada": "Round 9",
@@ -6178,13 +6153,13 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Osasuna",
-            "dificultad": 40
+            "dificultad": 32
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Athletic",
-            "dificultad": 53
+            "dificultad": 52
           },
           {
             "jornada": "Round 9",
@@ -6204,13 +6179,13 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Osasuna",
-            "dificultad": 40
+            "dificultad": 32
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Athletic",
-            "dificultad": 53
+            "dificultad": 52
           },
           {
             "jornada": "Round 9",
@@ -6282,13 +6257,13 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Osasuna",
-            "dificultad": 40
+            "dificultad": 32
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Athletic",
-            "dificultad": 53
+            "dificultad": 52
           },
           {
             "jornada": "Round 9",
@@ -6499,19 +6474,19 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": true,
             "rival": "Getafe",
-            "dificultad": 22
+            "dificultad": 23
           },
           {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
-            "dificultad": 53
+            "dificultad": 48
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 33
+            "dificultad": 25
           }
         ]
       },
@@ -6577,19 +6552,19 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": true,
             "rival": "Getafe",
-            "dificultad": 22
+            "dificultad": 23
           },
           {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
-            "dificultad": 53
+            "dificultad": 48
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 33
+            "dificultad": 25
           }
         ]
       },
@@ -6707,13 +6682,13 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Osasuna",
-            "dificultad": 40
+            "dificultad": 32
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Athletic",
-            "dificultad": 53
+            "dificultad": 52
           },
           {
             "jornada": "Round 9",
@@ -6851,18 +6826,19 @@
       "escudoPresidente": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
       "precio": 3260000,
       "precioTexto": "3,3 M",
-      "puntosTotales": 16,
-      "partidosJugados": 4,
-      "media": 4,
-      "puntosPorMillon": 4.91,
+      "puntosTotales": 18,
+      "partidosJugados": 5,
+      "media": 3.6,
+      "puntosPorMillon": 5.52,
       "racha": [
+        2,
         4,
         6,
         3,
         3
       ],
-      "rachaTitular": 2,
-      "ultimoMinutos": 90,
+      "rachaTitular": 3,
+      "ultimoMinutos": 83,
       "clausula": 6020000,
       "clausulaTexto": "6,0 M",
       "pagadoPorSuDueno": 4300000,
@@ -7630,18 +7606,18 @@
       "escudoPresidente": "https://cdn.biwenger.com/i/u/10271084.png?v=66",
       "precio": 4130000,
       "precioTexto": "4,1 M",
-      "puntosTotales": 26,
-      "partidosJugados": 5,
+      "puntosTotales": 31,
+      "partidosJugados": 6,
       "media": 5.2,
-      "puntosPorMillon": 6.3,
+      "puntosPorMillon": 7.51,
       "racha": [
+        5,
         5,
         4,
         6,
-        5,
-        6
+        5
       ],
-      "rachaTitular": 5,
+      "rachaTitular": 6,
       "ultimoMinutos": 90,
       "clausula": 6250301,
       "clausulaTexto": "6,3 M",
@@ -8363,18 +8339,18 @@
       "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
       "precio": 13600000,
       "precioTexto": "13,6 M",
-      "puntosTotales": 61,
-      "partidosJugados": 5,
-      "media": 12.2,
-      "puntosPorMillon": 4.49,
+      "puntosTotales": 63,
+      "partidosJugados": 6,
+      "media": 10.5,
+      "puntosPorMillon": 4.63,
       "racha": [
+        2,
         12,
         18,
         12,
-        8,
-        11
+        8
       ],
-      "rachaTitular": 5,
+      "rachaTitular": 6,
       "ultimoMinutos": 90,
       "clausula": 18920000,
       "clausulaTexto": "18,9 M",
@@ -8431,18 +8407,18 @@
       "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
       "precio": 3560000,
       "precioTexto": "3,6 M",
-      "puntosTotales": 26,
-      "partidosJugados": 5,
+      "puntosTotales": 31,
+      "partidosJugados": 6,
       "media": 5.2,
-      "puntosPorMillon": 7.3,
+      "puntosPorMillon": 8.71,
       "racha": [
+        5,
         7,
         5,
         4,
-        6,
-        4
+        6
       ],
-      "rachaTitular": 5,
+      "rachaTitular": 6,
       "ultimoMinutos": 90,
       "clausula": 4984000,
       "clausulaTexto": "5,0 M",
@@ -9007,19 +8983,19 @@
       "escudoPresidente": "https://cdn.biwenger.com/i/u/11411835.png",
       "precio": 3440000,
       "precioTexto": "3,4 M",
-      "puntosTotales": 17,
-      "partidosJugados": 5,
-      "media": 3.4,
-      "puntosPorMillon": 4.94,
+      "puntosTotales": 21,
+      "partidosJugados": 6,
+      "media": 3.5,
+      "puntosPorMillon": 6.1,
       "racha": [
+        4,
         1,
         6,
         3,
-        3,
-        4
+        3
       ],
-      "rachaTitular": 3,
-      "ultimoMinutos": 71,
+      "rachaTitular": 0,
+      "ultimoMinutos": 45,
       "clausula": 5180000,
       "clausulaTexto": "5,2 M",
       "pagadoPorSuDueno": 3700000,
@@ -10585,19 +10561,19 @@
       "escudoPresidente": "https://cdn.biwenger.com/i/u/12659137.png?v=9",
       "precio": 3720000,
       "precioTexto": "3,7 M",
-      "puntosTotales": 27,
-      "partidosJugados": 5,
-      "media": 5.4,
-      "puntosPorMillon": 7.26,
+      "puntosTotales": 35,
+      "partidosJugados": 6,
+      "media": 5.8,
+      "puntosPorMillon": 9.41,
       "racha": [
+        8,
         2,
         3,
         11,
-        6,
-        5
+        6
       ],
-      "rachaTitular": 3,
-      "ultimoMinutos": 63,
+      "rachaTitular": 4,
+      "ultimoMinutos": 89,
       "clausula": 6183000,
       "clausulaTexto": "6,2 M",
       "pagadoPorSuDueno": 1815000,
@@ -10619,19 +10595,19 @@
       "escudoPresidente": "https://cdn.biwenger.com/i/u/12659137.png?v=9",
       "precio": 3010000,
       "precioTexto": "3,0 M",
-      "puntosTotales": 9,
-      "partidosJugados": 5,
-      "media": 1.8,
-      "puntosPorMillon": 2.99,
+      "puntosTotales": 13,
+      "partidosJugados": 6,
+      "media": 2.2,
+      "puntosPorMillon": 4.32,
       "racha": [
+        4,
         1,
         1,
         5,
-        0,
-        2
+        0
       ],
-      "rachaTitular": 5,
-      "ultimoMinutos": 90,
+      "rachaTitular": 0,
+      "ultimoMinutos": 29,
       "clausula": 4214000,
       "clausulaTexto": "4,2 M",
       "pagadoPorSuDueno": 2850000,
@@ -11011,17 +10987,18 @@
       "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
       "precio": 2830000,
       "precioTexto": "2,8 M",
-      "puntosTotales": 15,
-      "partidosJugados": 4,
-      "media": 3.8,
-      "puntosPorMillon": 5.3,
+      "puntosTotales": 20,
+      "partidosJugados": 5,
+      "media": 4,
+      "puntosPorMillon": 7.07,
       "racha": [
+        5,
         5,
         2,
         4,
         4
       ],
-      "rachaTitular": 4,
+      "rachaTitular": 5,
       "ultimoMinutos": 90,
       "clausula": 4350000,
       "clausulaTexto": "4,3 M",
@@ -11078,17 +11055,18 @@
       "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
       "precio": 1820000,
       "precioTexto": "1,8 M",
-      "puntosTotales": 19,
-      "partidosJugados": 4,
-      "media": 4.8,
-      "puntosPorMillon": 10.44,
+      "puntosTotales": 27,
+      "partidosJugados": 5,
+      "media": 5.4,
+      "puntosPorMillon": 14.84,
       "racha": [
+        8,
         10,
         2,
         2,
         5
       ],
-      "rachaTitular": 1,
+      "rachaTitular": 2,
       "ultimoMinutos": 90,
       "clausula": 2730000,
       "clausulaTexto": "2,7 M",
@@ -11111,18 +11089,18 @@
       "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
       "precio": 3420000,
       "precioTexto": "3,4 M",
-      "puntosTotales": 18,
-      "partidosJugados": 5,
-      "media": 3.6,
-      "puntosPorMillon": 5.26,
+      "puntosTotales": 29,
+      "partidosJugados": 6,
+      "media": 4.8,
+      "puntosPorMillon": 8.48,
       "racha": [
+        11,
         3,
         5,
         -2,
-        6,
         6
       ],
-      "rachaTitular": 5,
+      "rachaTitular": 6,
       "ultimoMinutos": 90,
       "clausula": 4788000,
       "clausulaTexto": "4,8 M",
@@ -11303,18 +11281,18 @@
       "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
       "precio": 5310000,
       "precioTexto": "5,3 M",
-      "puntosTotales": 28,
-      "partidosJugados": 5,
-      "media": 5.6,
-      "puntosPorMillon": 5.27,
+      "puntosTotales": 36,
+      "partidosJugados": 6,
+      "media": 6,
+      "puntosPorMillon": 6.78,
       "racha": [
+        8,
         4,
         4,
         6,
-        7,
         7
       ],
-      "rachaTitular": 5,
+      "rachaTitular": 6,
       "ultimoMinutos": 90,
       "clausula": 8450000,
       "clausulaTexto": "8,4 M",
@@ -11784,16 +11762,17 @@
       "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
       "precio": 560000,
       "precioTexto": "0,6 M",
-      "puntosTotales": 2,
-      "partidosJugados": 2,
-      "media": 1,
-      "puntosPorMillon": 3.57,
+      "puntosTotales": 4,
+      "partidosJugados": 3,
+      "media": 1.3,
+      "puntosPorMillon": 7.14,
       "racha": [
+        2,
         0,
         2
       ],
       "rachaTitular": 0,
-      "ultimoMinutos": 54,
+      "ultimoMinutos": 57,
       "clausula": 1120000,
       "clausulaTexto": "1,1 M",
       "pagadoPorSuDueno": null,
@@ -12048,19 +12027,19 @@
       "escudoPresidente": "https://cdn.biwenger.com/i/u/14027560.png",
       "precio": 3940000,
       "precioTexto": "3,9 M",
-      "puntosTotales": 20,
-      "partidosJugados": 5,
-      "media": 4,
-      "puntosPorMillon": 5.08,
+      "puntosTotales": 26,
+      "partidosJugados": 6,
+      "media": 4.3,
+      "puntosPorMillon": 6.6,
       "racha": [
+        6,
         4,
         2,
         7,
-        2,
-        5
+        2
       ],
-      "rachaTitular": 5,
-      "ultimoMinutos": 90,
+      "rachaTitular": 0,
+      "ultimoMinutos": 33,
       "clausula": 5516000,
       "clausulaTexto": "5,5 M",
       "pagadoPorSuDueno": null,
@@ -12569,40 +12548,6 @@
         "blindadoHasta": "2026-09-30T05:14:05.000Z"
       },
       {
-        "id": "40952",
-        "nombre": "Quagliata",
-        "slug": "g-quagliata",
-        "posicion": "Defensa",
-        "posicionCodigo": 2,
-        "foto": "https://cdn.biwenger.com/i/p/40952.png",
-        "equipoReal": "Deportivo",
-        "equipoIdReal": "6",
-        "presidente": "Urdinho Pernambucano",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/12659137.png?v=9",
-        "precio": 3010000,
-        "precioTexto": "3,0 M",
-        "puntosTotales": 9,
-        "partidosJugados": 5,
-        "media": 1.8,
-        "puntosPorMillon": 2.99,
-        "racha": [
-          1,
-          1,
-          5,
-          0,
-          2
-        ],
-        "rachaTitular": 5,
-        "ultimoMinutos": 90,
-        "clausula": 4214000,
-        "clausulaTexto": "4,2 M",
-        "pagadoPorSuDueno": 2850000,
-        "margen": 1204000,
-        "margenPorcentaje": 40,
-        "blindado": true,
-        "blindadoHasta": "2026-09-24T10:41:07.000Z"
-      },
-      {
         "id": "19577",
         "nombre": "Mbappé",
         "slug": "mbappe",
@@ -12669,6 +12614,40 @@
         "margenPorcentaje": 68,
         "blindado": true,
         "blindadoHasta": "2026-09-30T05:03:41.000Z"
+      },
+      {
+        "id": "10276",
+        "nombre": "Cucho",
+        "slug": "cucho",
+        "posicion": "Delantero",
+        "posicionCodigo": 4,
+        "foto": "https://cdn.biwenger.com/i/p/10276.png",
+        "equipoReal": "Betis",
+        "equipoIdReal": "87",
+        "presidente": "Madriguana FC",
+        "escudoPresidente": "https://cdn.biwenger.com/i/u/11412167.png?v=15",
+        "precio": 5370000,
+        "precioTexto": "5,4 M",
+        "puntosTotales": 17,
+        "partidosJugados": 5,
+        "media": 3.4,
+        "puntosPorMillon": 3.17,
+        "racha": [
+          6,
+          2,
+          3,
+          1,
+          5
+        ],
+        "rachaTitular": 2,
+        "ultimoMinutos": 84,
+        "clausula": 9822221,
+        "clausulaTexto": "9,8 M",
+        "pagadoPorSuDueno": 7555555,
+        "margen": 4452221,
+        "margenPorcentaje": 83,
+        "blindado": false,
+        "blindadoHasta": null
       }
     ]
   },
@@ -12708,41 +12687,6 @@
         "blindado": true,
         "blindadoHasta": "2026-09-25T12:40:25.000Z",
         "mediaReciente": 18
-      },
-      {
-        "id": "25769",
-        "nombre": "Aubameyang",
-        "slug": "aubameyang",
-        "posicion": "Delantero",
-        "posicionCodigo": 4,
-        "foto": "https://cdn.biwenger.com/i/p/25769.png",
-        "equipoReal": "Deportivo",
-        "equipoIdReal": "6",
-        "presidente": "CD Tiro Buchón",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
-        "precio": 13600000,
-        "precioTexto": "13,6 M",
-        "puntosTotales": 61,
-        "partidosJugados": 5,
-        "media": 12.2,
-        "puntosPorMillon": 4.49,
-        "racha": [
-          12,
-          18,
-          12,
-          8,
-          11
-        ],
-        "rachaTitular": 5,
-        "ultimoMinutos": 90,
-        "clausula": 18920000,
-        "clausulaTexto": "18,9 M",
-        "pagadoPorSuDueno": 12700777,
-        "margen": 5320000,
-        "margenPorcentaje": 39,
-        "blindado": true,
-        "blindadoHasta": "2026-09-18T05:05:12.000Z",
-        "mediaReciente": 15
       },
       {
         "id": "30487",
@@ -12949,6 +12893,41 @@
         "margenPorcentaje": 80,
         "blindado": true,
         "blindadoHasta": "2026-09-28T05:03:39.000Z",
+        "mediaReciente": 9.5
+      },
+      {
+        "id": "19441",
+        "nombre": "Pedri",
+        "slug": "pedri",
+        "posicion": "Centrocampista",
+        "posicionCodigo": 3,
+        "foto": "https://cdn.biwenger.com/i/p/19441.png",
+        "equipoReal": "Barcelona",
+        "equipoIdReal": "3",
+        "presidente": "FC FORUSIA",
+        "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
+        "precio": 15880000,
+        "precioTexto": "15,9 M",
+        "puntosTotales": 36,
+        "partidosJugados": 5,
+        "media": 7.2,
+        "puntosPorMillon": 2.27,
+        "racha": [
+          4,
+          15,
+          3,
+          11,
+          3
+        ],
+        "rachaTitular": 4,
+        "ultimoMinutos": 66,
+        "clausula": 22696560,
+        "clausulaTexto": "22,7 M",
+        "pagadoPorSuDueno": 18913800,
+        "margen": 6816560,
+        "margenPorcentaje": 43,
+        "blindado": true,
+        "blindadoHasta": "2026-09-22T15:27:53.000Z",
         "mediaReciente": 9.5
       }
     ],
@@ -13244,10 +13223,10 @@
           7
         ],
         "rachaTitular": 4,
-        "nota": 8.9,
+        "nota": 8.8,
         "rival": "Getafe",
         "esLocal": true,
-        "dificultad": 22
+        "dificultad": 23
       },
       {
         "nombre": "Pépé",
@@ -13276,10 +13255,10 @@
           6
         ],
         "rachaTitular": 0,
-        "nota": 6.9,
+        "nota": 6.8,
         "rival": "Getafe",
         "esLocal": true,
-        "dificultad": 22
+        "dificultad": 23
       },
       {
         "nombre": "Galilea",
@@ -13312,10 +13291,10 @@
           4
         ],
         "rachaTitular": 0,
-        "nota": 5.4,
+        "nota": 5.3,
         "rival": "Getafe",
         "esLocal": true,
-        "dificultad": 22
+        "dificultad": 23
       },
       {
         "nombre": "Carreira",
@@ -13385,21 +13364,21 @@
         "dificultad": null
       },
       {
-        "nombre": "Giménez",
-        "foto": "https://cdn.biwenger.com/i/p/1676.png",
-        "posicion": "Defensa",
-        "equipoReal": "Deportivo",
+        "nombre": "De Frutos",
+        "foto": "https://cdn.biwenger.com/i/p/18397.png",
+        "posicion": "Delantero",
+        "equipoReal": "Rayo Vallecano",
         "racha": [
           4,
-          6,
-          3,
-          3
+          1,
+          5,
+          2
         ],
-        "rachaTitular": 2,
+        "rachaTitular": 1,
         "nota": 4.7,
-        "rival": "Betis",
-        "esLocal": true,
-        "dificultad": 57
+        "rival": "Osasuna",
+        "esLocal": false,
+        "dificultad": 32
       },
       {
         "nombre": "Puado",
@@ -13432,23 +13411,6 @@
         "dificultad": 39
       },
       {
-        "nombre": "De Frutos",
-        "foto": "https://cdn.biwenger.com/i/p/18397.png",
-        "posicion": "Delantero",
-        "equipoReal": "Rayo Vallecano",
-        "racha": [
-          4,
-          1,
-          5,
-          2
-        ],
-        "rachaTitular": 1,
-        "nota": 4.3,
-        "rival": "Osasuna",
-        "esLocal": false,
-        "dificultad": 40
-      },
-      {
         "nombre": "Dituro",
         "foto": "https://cdn.biwenger.com/i/p/17482.png",
         "posicion": "Portero",
@@ -13465,6 +13427,24 @@
         "rival": "Espanyol",
         "esLocal": false,
         "dificultad": 58
+      },
+      {
+        "nombre": "Giménez",
+        "foto": "https://cdn.biwenger.com/i/p/1676.png",
+        "posicion": "Defensa",
+        "equipoReal": "Deportivo",
+        "racha": [
+          2,
+          4,
+          6,
+          3,
+          3
+        ],
+        "rachaTitular": 3,
+        "nota": 3.6,
+        "rival": "Betis",
+        "esLocal": true,
+        "dificultad": 57
       },
       {
         "nombre": "Ponce",
@@ -13629,6 +13609,24 @@
         "dificultad": 42
       },
       {
+        "nombre": "Amatucci",
+        "foto": "https://cdn.biwenger.com/i/p/42425.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Deportivo",
+        "racha": [
+          5,
+          5,
+          4,
+          6,
+          5
+        ],
+        "rachaTitular": 6,
+        "nota": 4.7,
+        "rival": "Betis",
+        "esLocal": true,
+        "dificultad": 57
+      },
+      {
         "nombre": "Mandi",
         "foto": "https://cdn.biwenger.com/i/p/2480.png",
         "posicion": "Defensa",
@@ -13645,24 +13643,6 @@
         "rival": "Athletic",
         "esLocal": true,
         "dificultad": null
-      },
-      {
-        "nombre": "Amatucci",
-        "foto": "https://cdn.biwenger.com/i/p/42425.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Deportivo",
-        "racha": [
-          5,
-          4,
-          6,
-          5,
-          6
-        ],
-        "rachaTitular": 5,
-        "nota": 4.4,
-        "rival": "Betis",
-        "esLocal": true,
-        "dificultad": 57
       },
       {
         "nombre": "David Soria",
@@ -13751,10 +13731,10 @@
           3
         ],
         "rachaTitular": 0,
-        "nota": 5.4,
+        "nota": 5.3,
         "rival": "Getafe",
         "esLocal": true,
-        "dificultad": 22
+        "dificultad": 23
       },
       {
         "nombre": "Sergio Gómez",
@@ -13912,24 +13892,6 @@
     ],
     "CD Tiro Buchón": [
       {
-        "nombre": "Aubameyang",
-        "foto": "https://cdn.biwenger.com/i/p/25769.png",
-        "posicion": "Delantero",
-        "equipoReal": "Deportivo",
-        "racha": [
-          12,
-          18,
-          12,
-          8,
-          11
-        ],
-        "rachaTitular": 5,
-        "nota": 7.2,
-        "rival": "Betis",
-        "esLocal": true,
-        "dificultad": 57
-      },
-      {
         "nombre": "Bellingham",
         "foto": "https://cdn.biwenger.com/i/p/30477.png",
         "posicion": "Centrocampista",
@@ -13956,10 +13918,10 @@
           5
         ],
         "rachaTitular": 0,
-        "nota": 6.4,
+        "nota": 6.3,
         "rival": "Getafe",
         "esLocal": true,
-        "dificultad": 22
+        "dificultad": 23
       },
       {
         "nombre": "Pablo Martínez",
@@ -13976,6 +13938,24 @@
         "rival": "Villarreal",
         "esLocal": true,
         "dificultad": 26
+      },
+      {
+        "nombre": "Aubameyang",
+        "foto": "https://cdn.biwenger.com/i/p/25769.png",
+        "posicion": "Delantero",
+        "equipoReal": "Deportivo",
+        "racha": [
+          2,
+          12,
+          18,
+          12,
+          8
+        ],
+        "rachaTitular": 6,
+        "nota": 5.7,
+        "rival": "Betis",
+        "esLocal": true,
+        "dificultad": 57
       },
       {
         "nombre": "Iker Muñoz",
@@ -14049,6 +14029,23 @@
         "dificultad": 42
       },
       {
+        "nombre": "Bouare",
+        "foto": "https://cdn.biwenger.com/i/p/43172.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Rayo Vallecano",
+        "racha": [
+          3,
+          4,
+          3,
+          2
+        ],
+        "rachaTitular": 0,
+        "nota": 5.2,
+        "rival": "Osasuna",
+        "esLocal": false,
+        "dificultad": 32
+      },
+      {
         "nombre": "Jonny",
         "foto": "https://cdn.biwenger.com/i/p/1599.png",
         "posicion": "Defensa",
@@ -14065,23 +14062,6 @@
         "rival": "Athletic",
         "esLocal": false,
         "dificultad": 42
-      },
-      {
-        "nombre": "Bouare",
-        "foto": "https://cdn.biwenger.com/i/p/43172.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Rayo Vallecano",
-        "racha": [
-          3,
-          4,
-          3,
-          2
-        ],
-        "rachaTitular": 0,
-        "nota": 4.8,
-        "rival": "Osasuna",
-        "esLocal": false,
-        "dificultad": 40
       },
       {
         "nombre": "Ilaix Moriba",
@@ -14155,13 +14135,13 @@
         "posicion": "Centrocampista",
         "equipoReal": "Sevilla",
         "racha": [
+          5,
           7,
           5,
           4,
-          6,
-          4
+          6
         ],
-        "rachaTitular": 5,
+        "rachaTitular": 6,
         "nota": 3.5,
         "rival": "Barcelona",
         "esLocal": true,
@@ -14239,10 +14219,10 @@
           6
         ],
         "rachaTitular": 4,
-        "nota": 7.2,
+        "nota": 7.1,
         "rival": "Getafe",
         "esLocal": true,
-        "dificultad": 22
+        "dificultad": 23
       },
       {
         "nombre": "Valentín Gómez",
@@ -14253,10 +14233,10 @@
           6
         ],
         "rachaTitular": 1,
-        "nota": 6.9,
+        "nota": 6.8,
         "rival": "Getafe",
         "esLocal": true,
-        "dificultad": 22
+        "dificultad": 23
       },
       {
         "nombre": "Baena",
@@ -14347,24 +14327,6 @@
         "dificultad": 64
       },
       {
-        "nombre": "Nsongo",
-        "foto": "https://cdn.biwenger.com/i/p/40911.png",
-        "posicion": "Delantero",
-        "equipoReal": "Deportivo",
-        "racha": [
-          1,
-          6,
-          3,
-          3,
-          4
-        ],
-        "rachaTitular": 3,
-        "nota": 3.9,
-        "rival": "Betis",
-        "esLocal": true,
-        "dificultad": 57
-      },
-      {
         "nombre": "De la Fuente",
         "foto": "https://cdn.biwenger.com/i/p/37739.png",
         "posicion": "Defensa",
@@ -14381,6 +14343,24 @@
         "rival": "Athletic",
         "esLocal": true,
         "dificultad": null
+      },
+      {
+        "nombre": "Nsongo",
+        "foto": "https://cdn.biwenger.com/i/p/40911.png",
+        "posicion": "Delantero",
+        "equipoReal": "Deportivo",
+        "racha": [
+          4,
+          1,
+          6,
+          3,
+          3
+        ],
+        "rachaTitular": 0,
+        "nota": 3.4,
+        "rival": "Betis",
+        "esLocal": true,
+        "dificultad": 57
       },
       {
         "nombre": "Catena",
@@ -14475,10 +14455,10 @@
           2
         ],
         "rachaTitular": 3,
-        "nota": 7.3,
+        "nota": 7.7,
         "rival": "Osasuna",
         "esLocal": false,
-        "dificultad": 40
+        "dificultad": 32
       },
       {
         "nombre": "Yangel Herrera",
@@ -14547,10 +14527,10 @@
           5
         ],
         "rachaTitular": 2,
-        "nota": 5.9,
+        "nota": 5.8,
         "rival": "Getafe",
         "esLocal": true,
-        "dificultad": 22
+        "dificultad": 23
       },
       {
         "nombre": "Pablo García",
@@ -14616,7 +14596,7 @@
         "nota": 3.9,
         "rival": "Getafe",
         "esLocal": true,
-        "dificultad": 22
+        "dificultad": 23
       },
       {
         "nombre": "Ratiu",
@@ -14631,10 +14611,28 @@
           -1
         ],
         "rachaTitular": 5,
-        "nota": 3.5,
+        "nota": 3.9,
         "rival": "Osasuna",
         "esLocal": false,
-        "dificultad": 40
+        "dificultad": 32
+      },
+      {
+        "nombre": "Fran Pérez",
+        "foto": "https://cdn.biwenger.com/i/p/27995.png",
+        "posicion": "Delantero",
+        "equipoReal": "Rayo Vallecano",
+        "racha": [
+          3,
+          -3,
+          3,
+          2,
+          2
+        ],
+        "rachaTitular": 0,
+        "nota": 3.4,
+        "rival": "Osasuna",
+        "esLocal": false,
+        "dificultad": 32
       },
       {
         "nombre": "Víctor García",
@@ -14652,24 +14650,6 @@
         "rival": "Athletic",
         "esLocal": true,
         "dificultad": null
-      },
-      {
-        "nombre": "Fran Pérez",
-        "foto": "https://cdn.biwenger.com/i/p/27995.png",
-        "posicion": "Delantero",
-        "equipoReal": "Rayo Vallecano",
-        "racha": [
-          3,
-          -3,
-          3,
-          2,
-          2
-        ],
-        "rachaTitular": 0,
-        "nota": 3,
-        "rival": "Osasuna",
-        "esLocal": false,
-        "dificultad": 40
       },
       {
         "nombre": "Sannadi",
@@ -14928,10 +14908,10 @@
           1
         ],
         "rachaTitular": 4,
-        "nota": 6.8,
+        "nota": 7.2,
         "rival": "Osasuna",
         "esLocal": false,
-        "dificultad": 40
+        "dificultad": 32
       },
       {
         "nombre": "Miguel Román",
@@ -15136,10 +15116,10 @@
           3
         ],
         "rachaTitular": 1,
-        "nota": 5.9,
+        "nota": 5.8,
         "rival": "Getafe",
         "esLocal": true,
-        "dificultad": 22
+        "dificultad": 23
       },
       {
         "nombre": "Dimitrievski",
@@ -15232,6 +15212,42 @@
         "dificultad": 58
       },
       {
+        "nombre": "Quagliata",
+        "foto": "https://cdn.biwenger.com/i/p/40952.png",
+        "posicion": "Defensa",
+        "equipoReal": "Deportivo",
+        "racha": [
+          4,
+          1,
+          1,
+          5,
+          0
+        ],
+        "rachaTitular": 0,
+        "nota": 3.4,
+        "rival": "Betis",
+        "esLocal": true,
+        "dificultad": 57
+      },
+      {
+        "nombre": "Sierra",
+        "foto": "https://cdn.biwenger.com/i/p/39350.png",
+        "posicion": "Delantero",
+        "equipoReal": "Sevilla",
+        "racha": [
+          8,
+          2,
+          3,
+          11,
+          6
+        ],
+        "rachaTitular": 4,
+        "nota": 3,
+        "rival": "Barcelona",
+        "esLocal": true,
+        "dificultad": 89
+      },
+      {
         "nombre": "Mario Martín",
         "foto": "https://cdn.biwenger.com/i/p/2368.png",
         "posicion": "Centrocampista",
@@ -15246,42 +15262,6 @@
         "rival": "Betis",
         "esLocal": false,
         "dificultad": 67
-      },
-      {
-        "nombre": "Quagliata",
-        "foto": "https://cdn.biwenger.com/i/p/40952.png",
-        "posicion": "Defensa",
-        "equipoReal": "Deportivo",
-        "racha": [
-          1,
-          1,
-          5,
-          0,
-          2
-        ],
-        "rachaTitular": 5,
-        "nota": 2.6,
-        "rival": "Betis",
-        "esLocal": true,
-        "dificultad": 57
-      },
-      {
-        "nombre": "Sierra",
-        "foto": "https://cdn.biwenger.com/i/p/39350.png",
-        "posicion": "Delantero",
-        "equipoReal": "Sevilla",
-        "racha": [
-          2,
-          3,
-          11,
-          6,
-          5
-        ],
-        "rachaTitular": 3,
-        "nota": 1.8,
-        "rival": "Barcelona",
-        "esLocal": true,
-        "dificultad": 89
       }
     ],
     "FC FORUSIA": [
@@ -15420,6 +15400,24 @@
         "dificultad": null
       },
       {
+        "nombre": "Castrín",
+        "foto": "https://cdn.biwenger.com/i/p/38072.png",
+        "posicion": "Defensa",
+        "equipoReal": "Sevilla",
+        "racha": [
+          8,
+          10,
+          2,
+          2,
+          5
+        ],
+        "rachaTitular": 2,
+        "nota": 5,
+        "rival": "Barcelona",
+        "esLocal": true,
+        "dificultad": 89
+      },
+      {
         "nombre": "Osambela",
         "foto": "https://cdn.biwenger.com/i/p/19693.png",
         "posicion": "Centrocampista",
@@ -15455,18 +15453,19 @@
         "dificultad": 42
       },
       {
-        "nombre": "Castrín",
-        "foto": "https://cdn.biwenger.com/i/p/38072.png",
-        "posicion": "Defensa",
+        "nombre": "Odysseas",
+        "foto": "https://cdn.biwenger.com/i/p/38405.png",
+        "posicion": "Portero",
         "equipoReal": "Sevilla",
         "racha": [
-          10,
-          2,
-          2,
-          5
+          11,
+          3,
+          5,
+          -2,
+          6
         ],
-        "rachaTitular": 1,
-        "nota": 3.5,
+        "rachaTitular": 6,
+        "nota": 4,
         "rival": "Barcelona",
         "esLocal": true,
         "dificultad": 89
@@ -15486,36 +15485,19 @@
         "dificultad": 64
       },
       {
-        "nombre": "Odysseas",
-        "foto": "https://cdn.biwenger.com/i/p/38405.png",
-        "posicion": "Portero",
-        "equipoReal": "Sevilla",
-        "racha": [
-          3,
-          5,
-          -2,
-          6,
-          6
-        ],
-        "rachaTitular": 5,
-        "nota": 2.5,
-        "rival": "Barcelona",
-        "esLocal": true,
-        "dificultad": 89
-      },
-      {
         "nombre": "Kike Salas",
         "foto": "https://cdn.biwenger.com/i/p/28115.png",
         "posicion": "Defensa",
         "equipoReal": "Sevilla",
         "racha": [
           5,
+          5,
           2,
           4,
           4
         ],
-        "rachaTitular": 4,
-        "nota": 2.3,
+        "rachaTitular": 5,
+        "nota": 3,
         "rival": "Barcelona",
         "esLocal": true,
         "dificultad": 89
@@ -15561,10 +15543,10 @@
           11
         ],
         "rachaTitular": 2,
-        "nota": 7.5,
+        "nota": 7.9,
         "rival": "Osasuna",
         "esLocal": false,
-        "dificultad": 40
+        "dificultad": 32
       },
       {
         "nombre": "Bartra",
@@ -15578,10 +15560,10 @@
           7
         ],
         "rachaTitular": 1,
-        "nota": 7.2,
+        "nota": 7.1,
         "rival": "Getafe",
         "esLocal": true,
-        "dificultad": 22
+        "dificultad": 23
       },
       {
         "nombre": "Expósito",
@@ -15602,6 +15584,24 @@
         "dificultad": 12
       },
       {
+        "nombre": "Pathé Ciss",
+        "foto": "https://cdn.biwenger.com/i/p/24326.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Rayo Vallecano",
+        "racha": [
+          9,
+          4,
+          6,
+          -1,
+          2
+        ],
+        "rachaTitular": 6,
+        "nota": 6.7,
+        "rival": "Osasuna",
+        "esLocal": false,
+        "dificultad": 32
+      },
+      {
         "nombre": "Espart",
         "foto": "https://cdn.biwenger.com/i/p/40075.png",
         "posicion": "Defensa",
@@ -15620,24 +15620,6 @@
         "dificultad": null
       },
       {
-        "nombre": "Pathé Ciss",
-        "foto": "https://cdn.biwenger.com/i/p/24326.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Rayo Vallecano",
-        "racha": [
-          9,
-          4,
-          6,
-          -1,
-          2
-        ],
-        "rachaTitular": 6,
-        "nota": 6.3,
-        "rival": "Osasuna",
-        "esLocal": false,
-        "dificultad": 40
-      },
-      {
         "nombre": "Cubarsí",
         "foto": "https://cdn.biwenger.com/i/p/32440.png",
         "posicion": "Defensa",
@@ -15653,6 +15635,24 @@
         "rival": "Racing",
         "esLocal": true,
         "dificultad": null
+      },
+      {
+        "nombre": "Leo Román",
+        "foto": "https://cdn.biwenger.com/i/p/14630.png",
+        "posicion": "Portero",
+        "equipoReal": "Deportivo",
+        "racha": [
+          8,
+          4,
+          4,
+          6,
+          7
+        ],
+        "rachaTitular": 6,
+        "nota": 5.2,
+        "rival": "Betis",
+        "esLocal": true,
+        "dificultad": 57
       },
       {
         "nombre": "Pablo Ramón",
@@ -15689,18 +15689,6 @@
         "dificultad": null
       },
       {
-        "nombre": "Fortuño",
-        "foto": "https://cdn.biwenger.com/i/p/30334.png",
-        "posicion": "Portero",
-        "equipoReal": "Espanyol",
-        "racha": [],
-        "rachaTitular": 0,
-        "nota": 4.4,
-        "rival": "Elche",
-        "esLocal": true,
-        "dificultad": 12
-      },
-      {
         "nombre": "Pedro Díaz",
         "foto": "https://cdn.biwenger.com/i/p/34483.png",
         "posicion": "Centrocampista",
@@ -15713,28 +15701,22 @@
           3
         ],
         "rachaTitular": 3,
-        "nota": 4.3,
+        "nota": 4.7,
         "rival": "Osasuna",
         "esLocal": false,
-        "dificultad": 40
+        "dificultad": 32
       },
       {
-        "nombre": "Leo Román",
-        "foto": "https://cdn.biwenger.com/i/p/14630.png",
+        "nombre": "Fortuño",
+        "foto": "https://cdn.biwenger.com/i/p/30334.png",
         "posicion": "Portero",
-        "equipoReal": "Deportivo",
-        "racha": [
-          4,
-          4,
-          6,
-          7,
-          7
-        ],
-        "rachaTitular": 5,
-        "nota": 4.2,
-        "rival": "Betis",
+        "equipoReal": "Espanyol",
+        "racha": [],
+        "rachaTitular": 0,
+        "nota": 4.4,
+        "rival": "Elche",
         "esLocal": true,
-        "dificultad": 57
+        "dificultad": 12
       },
       {
         "nombre": "Paco Cortés",
@@ -15793,10 +15775,10 @@
         "equipoReal": "Rayo Vallecano",
         "racha": [],
         "rachaTitular": 0,
-        "nota": 3,
+        "nota": 3.4,
         "rival": "Osasuna",
         "esLocal": false,
-        "dificultad": 40
+        "dificultad": 32
       },
       {
         "nombre": "Riki Rodríguez",
@@ -15804,6 +15786,7 @@
         "posicion": "Centrocampista",
         "equipoReal": "Deportivo",
         "racha": [
+          2,
           0,
           2
         ],
@@ -15852,10 +15835,10 @@
           8
         ],
         "rachaTitular": 5,
-        "nota": 8.9,
+        "nota": 8.8,
         "rival": "Getafe",
         "esLocal": true,
-        "dificultad": 22
+        "dificultad": 23
       },
       {
         "nombre": "Bellerín",
@@ -15870,10 +15853,10 @@
           2
         ],
         "rachaTitular": 3,
-        "nota": 6.9,
+        "nota": 6.8,
         "rival": "Getafe",
         "esLocal": true,
-        "dificultad": 22
+        "dificultad": 23
       },
       {
         "nombre": "Cabrera",
@@ -15942,6 +15925,24 @@
         "dificultad": 39
       },
       {
+        "nombre": "Mario Soriano",
+        "foto": "https://cdn.biwenger.com/i/p/41072.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Deportivo",
+        "racha": [
+          6,
+          4,
+          2,
+          7,
+          2
+        ],
+        "rachaTitular": 0,
+        "nota": 4.7,
+        "rival": "Betis",
+        "esLocal": true,
+        "dificultad": 57
+      },
+      {
         "nombre": "Oriol Rey",
         "foto": "https://cdn.biwenger.com/i/p/37726.png",
         "posicion": "Centrocampista",
@@ -15960,6 +15961,22 @@
         "dificultad": null
       },
       {
+        "nombre": "Tsitaishvili",
+        "foto": "https://cdn.biwenger.com/i/p/41940.png",
+        "posicion": "Delantero",
+        "equipoReal": "Rayo Vallecano",
+        "racha": [
+          2,
+          1,
+          2
+        ],
+        "rachaTitular": 2,
+        "nota": 4.2,
+        "rival": "Osasuna",
+        "esLocal": false,
+        "dificultad": 32
+      },
+      {
         "nombre": "Akhomach",
         "foto": "https://cdn.biwenger.com/i/p/25159.png",
         "posicion": "Delantero",
@@ -15975,40 +15992,6 @@
         "rival": "Málaga",
         "esLocal": false,
         "dificultad": 30
-      },
-      {
-        "nombre": "Tsitaishvili",
-        "foto": "https://cdn.biwenger.com/i/p/41940.png",
-        "posicion": "Delantero",
-        "equipoReal": "Rayo Vallecano",
-        "racha": [
-          2,
-          1,
-          2
-        ],
-        "rachaTitular": 2,
-        "nota": 3.8,
-        "rival": "Osasuna",
-        "esLocal": false,
-        "dificultad": 40
-      },
-      {
-        "nombre": "Mario Soriano",
-        "foto": "https://cdn.biwenger.com/i/p/41072.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Deportivo",
-        "racha": [
-          4,
-          2,
-          7,
-          2,
-          5
-        ],
-        "rachaTitular": 5,
-        "nota": 3.6,
-        "rival": "Betis",
-        "esLocal": true,
-        "dificultad": 57
       }
     ]
   },
@@ -16025,10 +16008,10 @@
         7
       ],
       "rachaTitular": 4,
-      "nota": 8.9,
+      "nota": 8.8,
       "rival": "Getafe",
       "esLocal": true,
-      "dificultad": 22,
+      "dificultad": 23,
       "presidente": "Lottin Capital"
     },
     {
@@ -16044,10 +16027,10 @@
         8
       ],
       "rachaTitular": 5,
-      "nota": 8.9,
+      "nota": 8.8,
       "rival": "Getafe",
       "esLocal": true,
-      "dificultad": 22,
+      "dificultad": 23,
       "presidente": "Seif fc"
     },
     {
@@ -16089,6 +16072,25 @@
       "presidente": "C.d.F Atlético de Cohiba"
     },
     {
+      "nombre": "Camello",
+      "foto": "https://cdn.biwenger.com/i/p/17756.png",
+      "posicion": "Delantero",
+      "equipoReal": "Rayo Vallecano",
+      "racha": [
+        6,
+        12,
+        20,
+        16,
+        11
+      ],
+      "rachaTitular": 2,
+      "nota": 7.9,
+      "rival": "Osasuna",
+      "esLocal": false,
+      "dificultad": 32,
+      "presidente": "Las Víboras FC"
+    },
+    {
       "nombre": "Pépé",
       "foto": "https://cdn.biwenger.com/i/p/34479.png",
       "posicion": "Delantero",
@@ -16106,6 +16108,24 @@
       "esLocal": false,
       "dificultad": 30,
       "presidente": "Lottin Capital"
+    },
+    {
+      "nombre": "Pedrosa",
+      "foto": "https://cdn.biwenger.com/i/p/16889.png",
+      "posicion": "Defensa",
+      "equipoReal": "Rayo Vallecano",
+      "racha": [
+        15,
+        2,
+        0,
+        2
+      ],
+      "rachaTitular": 3,
+      "nota": 7.7,
+      "rival": "Osasuna",
+      "esLocal": false,
+      "dificultad": 32,
+      "presidente": "Madriguana FC"
     },
     {
       "nombre": "Starfelt",
@@ -16144,43 +16164,6 @@
       "presidente": "Cañoneros CF"
     },
     {
-      "nombre": "Camello",
-      "foto": "https://cdn.biwenger.com/i/p/17756.png",
-      "posicion": "Delantero",
-      "equipoReal": "Rayo Vallecano",
-      "racha": [
-        6,
-        12,
-        20,
-        16,
-        11
-      ],
-      "rachaTitular": 2,
-      "nota": 7.5,
-      "rival": "Osasuna",
-      "esLocal": false,
-      "dificultad": 40,
-      "presidente": "Las Víboras FC"
-    },
-    {
-      "nombre": "Pedrosa",
-      "foto": "https://cdn.biwenger.com/i/p/16889.png",
-      "posicion": "Defensa",
-      "equipoReal": "Rayo Vallecano",
-      "racha": [
-        15,
-        2,
-        0,
-        2
-      ],
-      "rachaTitular": 3,
-      "nota": 7.3,
-      "rival": "Osasuna",
-      "esLocal": false,
-      "dificultad": 40,
-      "presidente": "Madriguana FC"
-    },
-    {
       "nombre": "Yangel Herrera",
       "foto": "https://cdn.biwenger.com/i/p/17344.png",
       "posicion": "Centrocampista",
@@ -16201,29 +16184,6 @@
     }
   ],
   "riesgoClausula": [
-    {
-      "nombre": "Alfonso Herrero",
-      "foto": "https://cdn.biwenger.com/i/p/41101.png",
-      "posicion": "Portero",
-      "equipoReal": "Málaga",
-      "presidente": "LXUNITED",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/12600696.png?v=83",
-      "precioTexto": "4,1 M",
-      "clausulaTexto": "5,7 M",
-      "margenPorcentaje": 40,
-      "margenTexto": "1,6 M",
-      "media": 7.6,
-      "puntosPorMillon": 9.34,
-      "racha": [
-        10,
-        10,
-        5,
-        4,
-        9
-      ],
-      "rachaTitular": 5,
-      "nivel": "medio"
-    },
     {
       "nombre": "Álvaro Valles",
       "foto": "https://cdn.biwenger.com/i/p/30487.png",
