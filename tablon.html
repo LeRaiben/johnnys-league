@@ -1,164 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tablón · Johnny's League</title>
-<meta name="description" content="El tablón de anuncios de los presidentes de Johnny's League.">
-<link rel="icon" href="assets/escudo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/estilo.css">
-<style>
-  .campo { margin-bottom:14px; }
-  .campo label { display:block; font-family:'Barlow Condensed',sans-serif; font-weight:600;
-    letter-spacing:0.05em; text-transform:uppercase; font-size:0.68rem; color:var(--grey); margin-bottom:6px; }
-  .campo input[type="text"] { width:100%; background:rgba(2,18,52,0.6); color:var(--white);
-    border:1px solid var(--navy-line); font-family:'Source Serif 4',serif; font-size:0.95rem;
-    padding:11px 13px; border-radius:4px; box-sizing:border-box; }
-  .campo input:focus { outline:none; border-color:var(--gold-dim); }
-  
-  .boton { background:var(--red); color:#fff; border:none; cursor:pointer;
-    font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.07em;
-    text-transform:uppercase; font-size:0.9rem; padding:10px 20px; border-radius:4px; }
-  .boton:hover { filter:brightness(1.12); }
-  .boton:disabled { opacity:0.5; cursor:default; }
-
-  .mensaje-estado { font-size:0.88rem; padding:11px 14px; border-radius:4px; margin-bottom:16px; line-height:1.45; }
-  .mensaje-estado.error { background:rgba(192,24,44,0.15); color:#E8746A; border-left:3px solid #E8746A; }
-
-  /* Escribir principal */
-  .escribir { background:var(--navy-soft); padding:20px; margin-bottom:26px; border-radius:4px; }
-  .escribir textarea { width:100%; min-height:80px; background:rgba(2,18,52,0.6); color:var(--white);
-    border:1px solid var(--navy-line); font-family:'Source Serif 4',serif; font-size:0.96rem;
-    padding:12px 14px; border-radius:4px; box-sizing:border-box; resize:vertical; line-height:1.5; }
-  .escribir textarea:focus { outline:none; border-color:var(--gold-dim); }
-  .escribir .pie { display:flex; align-items:center; justify-content:space-between; margin-top:12px; gap:12px; flex-wrap:wrap; }
-  .escribir .cuenta { font-family:'Barlow Condensed',sans-serif; font-size:0.74rem; color:var(--grey); }
-
-  /* Adjuntar imagen */
-  .preview-adjunto { margin-top:10px; position:relative; display:inline-block; }
-  .preview-adjunto img { max-width:120px; max-height:90px; border-radius:4px; border:1px solid var(--navy-line); display:block; }
-  .preview-adjunto button { position:absolute; top:-6px; right:-6px; background:var(--red); color:#fff; border:none; border-radius:50%; width:20px; height:20px; cursor:pointer; font-size:12px; line-height:1; }
-
-  /* Mensajes e Hilos */
-  .lista-msg { display:grid; gap:16px; }
-  .msg-card { background:var(--navy-soft); border-left:3px solid var(--gold); border-radius:0 4px 4px 0; padding:16px 18px; }
-  .msg-card.respuesta { background:rgba(2, 18, 52, 0.4); border-left:2px solid var(--grey); margin-top:10px; margin-left:18px; }
-  
-  .msg-card .cab { display:flex; align-items:baseline; gap:10px; margin-bottom:8px; flex-wrap:wrap; }
-  .msg-card .autor { font-family:'Anton',sans-serif; font-size:0.98rem; color:var(--gold); }
-  .msg-card.respuesta .autor { color:var(--white); font-size:0.9rem; }
-  .msg-card .cuando { font-family:'Barlow Condensed',sans-serif; font-size:0.72rem; color:var(--grey); text-transform:uppercase; }
-  .msg-card .texto { font-size:0.95rem; line-height:1.5; color:rgba(247,247,245,0.92); white-space:pre-wrap; word-wrap:break-word; }
-  .msg-card .img-adjunta { margin-top:10px; max-width:100%; max-height:350px; border-radius:4px; border:1px solid var(--navy-line); display:block; }
-  
-  .acciones-msg { display:flex; gap:16px; margin-top:10px; align-items:center; }
-  .btn-accion { background:none; border:none; color:var(--grey); cursor:pointer; font-family:'Barlow Condensed',sans-serif; font-size:0.8rem; letter-spacing:0.04em; text-transform:uppercase; padding:0; display:inline-flex; align-items:center; gap:4px; }
-  .btn-accion:hover { color:var(--white); }
-  .btn-accion.borrar:hover { color:#E8746A; }
-  
-  /* Botón Me gusta */
-  .btn-like { color:var(--grey); transition:transform 0.1s ease; }
-  .btn-like.liked { color:#E8746A; }
-  .btn-like:active { transform:scale(1.2); }
-
-  /* Formulario de Respuesta */
-  .form-respuesta { margin-top:12px; padding:12px; background:rgba(2,18,52,0.8); border-radius:4px; border:1px solid var(--navy-line); }
-
-  .aviso-suave { background:var(--navy-soft); border-left:3px solid var(--gold-dim); padding:16px 18px; font-size:0.92rem; color:rgba(247,247,245,0.82); }
-</style>
-</head>
-<body>
-
-<div class="lomo" aria-hidden="true"></div>
-
-<header class="masthead">
-  <div class="wrap">
-    <div class="bar">
-      <a href="index.html"><img class="crest" src="assets/escudo.png" alt="Escudo de Johnny's League"></a>
-      <div class="titles">
-        <h1>Johnny's League</h1>
-        <div class="tagline">crónica semanal de la liga</div>
-      </div>
-      <div class="status">
-        <span class="cond">Tablón</span>
-        <span class="round" id="cuantos">—</span>
-      </div>
-    </div>
-    <div class="jump">
-      <a href="index.html#portada">Portada</a>
-      <a href="index.html#clasificacion">Clasificación</a>
-      <a href="index.html#mercado">Mercado</a>
-      <a href="presidentes.html">Presidentes</a>
-      <a href="estadisticas.html">Estadísticas</a>
-      <a href="jugadores.html">Jugadores</a>
-      <a href="oportunidades.html">Oportunidades</a>
-      <a href="calendario.html">Calendario</a>
-      <a href="comparador.html">Comparador</a>
-      <a href="tablon.html" class="activo">Tablón</a>
-      <a href="index.html#cronicas">Crónicas</a>
-      <a href="hemeroteca.html">Hemeroteca</a>
-    </div>
-  </div>
-</header>
-
-<main class="wrap">
-
-  <section class="hero" style="border-bottom:none;">
-    <div class="hero-titulo">
-      <h2>El tablón</h2>
-    </div>
-    <p class="section-note" style="margin-top:-18px;">
-      Espacio libre para publicar, debatir y responder en hilos.
-    </p>
-  </section>
-
-  <section class="block" style="border-top:none; padding-top:0;">
-    <div id="zonaEstado"></div>
-
-    <!-- Botón Notificaciones -->
-    <div style="margin-bottom: 20px; text-align: right;">
-      <button id="btnNotif" class="boton" style="background: var(--navy-soft); border: 1px solid var(--gold-dim); font-size: 0.82rem;">
-        🔔 Activar notificaciones en el móvil
-      </button>
-    </div>
-
-    <!-- Publicar Mensaje Principal -->
-    <div class="escribir">
-      <div class="campo">
-        <label for="nombre">Tu Nombre / Equipo</label>
-        <input type="text" id="nombre" placeholder="Ej: Presi Rayo / Juan">
-      </div>
-      <div class="campo">
-        <label for="texto">Mensaje</label>
-        <textarea id="texto" maxlength="2000" placeholder="Abre un hilo: pullas, fichajes, debates..."></textarea>
-      </div>
-      
-      <div class="campo">
-        <label for="inputImg">Adjuntar Captura / Imagen (Máx. 5 MB)</label>
-        <input type="file" id="inputImg" accept="image/*" style="color:var(--grey); font-size:0.85rem;">
-        <div id="contenedorPreview" class="preview-adjunto" hidden>
-          <img id="imgPreview" src="" alt="Vista previa">
-          <button type="button" id="btnQuitarImg">✕</button>
-        </div>
-      </div>
-
-      <div class="pie">
-        <span class="cuenta"><span id="contador">0</span> / 2000</span>
-        <button class="boton" id="btnPublicar">Publicar Hilo</button>
-      </div>
-    </div>
-
-    <div id="lista"></div>
-  </section>
-
-</main>
-
-<footer class="wrap">
-  <span class="cond">Johnny's League · hecha por y para la liga</span>
-</footer>
-
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
 <script>
 (function () {
@@ -305,8 +144,13 @@
     var key = 'like_' + id;
     var yaDioLike = localStorage.getItem(key) === 'true';
 
-    var nuevosLikes = yaDioLike ? Math.max(0, likesActuales - 1) : likesActuales + 1;
+    // 1. Obtener la cifra real actualizada desde Supabase para evitar colisiones
+    var resSelect = await sb.from('mensajes').select('likes').eq('id', id).single();
+    var likesBaseDatos = (resSelect.data && resSelect.data.likes !== null) ? resSelect.data.likes : likesActuales;
 
+    var nuevosLikes = yaDioLike ? Math.max(0, likesBaseDatos - 1) : likesBaseDatos + 1;
+
+    // 2. Actualizar interfaz local
     var spanHeart = btnElement.querySelector('span:first-child');
     var spanCount = btnElement.querySelector('.count');
     
@@ -323,7 +167,11 @@
     spanCount.textContent = nuevosLikes;
     btnElement.dataset.likes = nuevosLikes;
 
-    await sb.from('mensajes').update({ likes: nuevosLikes }).eq('id', id);
+    // 3. Persistir el cambio en Supabase
+    var resUpdate = await sb.from('mensajes').update({ likes: nuevosLikes }).eq('id', id);
+    if (resUpdate.error) {
+      console.error('Error al guardar el like:', resUpdate.error.message);
+    }
   }
 
   async function publicar() {
@@ -339,7 +187,8 @@
     var r = await sb.from('mensajes').insert({
       nombre: nombre,
       texto: texto,
-      imagen: imagenBase64Principal
+      imagen: imagenBase64Principal,
+      likes: 0
     });
     btn.disabled = false;
 
@@ -347,7 +196,6 @@
     caja.value = '';
     limpiarImagenPrincipal();
     document.getElementById('contador').textContent = '0';
-    cargar();
   }
 
   async function enviarRespuesta(msgId, rootPadreId) {
@@ -380,18 +228,17 @@
       nombre: nombre,
       texto: texto,
       imagen: imgBase64,
-      mensaje_padre_id: rootPadreId
+      mensaje_padre_id: rootPadreId,
+      likes: 0
     });
 
     if (r.error) { alert('Error al responder: ' + r.error.message); return; }
-    cargar();
   }
 
   async function borrar(id) {
     if (!confirm('¿Borrar este mensaje?')) return;
     var r = await sb.from('mensajes').delete().eq('id', id);
     if (r.error) { estado('No se ha podido borrar: ' + r.error.message); return; }
-    cargar();
   }
 
   function limpiarImagenPrincipal() {
@@ -400,7 +247,16 @@
     document.getElementById('contenedorPreview').hidden = true;
   }
 
-  // Lógica para registrar el Service Worker y notificaciones Push
+  // Configuración de Supabase Realtime para actualizaciones instantáneas de likes y mensajes
+  function activarRealtime() {
+    sb.channel('realtime-tablon')
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'mensajes' }, function () {
+        cargar();
+      })
+      .subscribe();
+  }
+
+  // Notificaciones Push
   function urlBase64ToUint8Array(base64String) {
     var padding = '='.repeat((4 - base64String.length % 4) % 4);
     var base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/');
@@ -435,7 +291,6 @@
           btn.textContent = '🔔 Activar notificaciones en el móvil';
           btn.style.borderColor = 'var(--gold-dim)';
         } else {
-          // Solución para iOS: solicitar permiso síncronamente en el click
           Notification.requestPermission().then(async function (perm) {
             if (perm === 'granted') {
               try {
@@ -465,7 +320,6 @@
     };
   }
 
-  // Registro del SW adaptado a GitHub Pages (scope relativo)
   if ('serviceWorker' in navigator && 'PushManager' in window) {
     navigator.serviceWorker.register('./sw.js', { scope: './' })
       .then(function (reg) {
@@ -501,8 +355,8 @@
     document.getElementById('contador').textContent = this.value.length;
   });
 
+  // Inicialización
   cargar();
+  activarRealtime();
 })();
 </script>
-</body>
-</html>
