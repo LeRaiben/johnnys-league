@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-16T20:49:38.165Z",
+  "actualizado": "2026-09-16T21:00:56.975Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 6,
   "jornadaEnJuego": true,
@@ -420,6 +420,32 @@
     }
   ],
   "mercadoPresidentes": [
+    {
+      "tipo": "venta",
+      "nombre": "Dituro",
+      "foto": "https://cdn.biwenger.com/i/p/17482.png",
+      "posicion": "Portero",
+      "equipoReal": "Elche",
+      "vendedor": "Lottin Capital",
+      "pide": "2,2 M",
+      "pideBruto": 2230000,
+      "valorMercado": "2,2 M",
+      "valorBruto": 2230000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Facundo Bernal",
+      "foto": "https://cdn.biwenger.com/i/p/42370.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Betis",
+      "vendedor": "Lottin Capital",
+      "pide": "2,5 M",
+      "pideBruto": 2490000,
+      "valorMercado": "2,5 M",
+      "valorBruto": 2490000,
+      "diferencia": 0
+    },
     {
       "tipo": "venta",
       "nombre": "Jonny",
@@ -2148,7 +2174,7 @@
       "balance": "+19,3 M",
       "balanceBruto": 19299000,
       "sobreprecioMedio": 32,
-      "enVenta": 0,
+      "enVenta": 2,
       "fichajeEstrella": {
         "nombre": "Pépé",
         "precio": "14,9 M",
