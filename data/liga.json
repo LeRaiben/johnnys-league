@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-16T07:50:29.817Z",
+  "actualizado": "2026-09-16T08:13:31.321Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 6,
   "jornadaEnJuego": true,
@@ -5692,32 +5692,6 @@
         ]
       },
       {
-        "nombre": "Christensen",
-        "posicion": "Defensa",
-        "foto": "https://cdn.biwenger.com/i/p/26678.png",
-        "equipoReal": "Barcelona",
-        "jornadas": [
-          {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Racing",
-            "dificultad": 30
-          },
-          {
-            "jornada": "Round 7",
-            "esLocal": false,
-            "rival": "Sevilla",
-            "dificultad": 44
-          },
-          {
-            "jornada": "Round 8",
-            "esLocal": true,
-            "rival": "Getafe",
-            "dificultad": 18
-          }
-        ]
-      },
-      {
         "nombre": "Germán Parreño",
         "posicion": "Portero",
         "foto": "https://cdn.biwenger.com/i/p/2086.png",
@@ -5870,6 +5844,32 @@
             "esLocal": true,
             "rival": "Atlético",
             "dificultad": 58
+          }
+        ]
+      },
+      {
+        "nombre": "Christensen",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/26678.png",
+        "equipoReal": "Barcelona",
+        "jornadas": [
+          {
+            "jornada": "Round 6 (postponed)",
+            "esLocal": true,
+            "rival": "Racing",
+            "dificultad": 30
+          },
+          {
+            "jornada": "Round 7",
+            "esLocal": false,
+            "rival": "Sevilla",
+            "dificultad": 44
+          },
+          {
+            "jornada": "Round 8",
+            "esLocal": true,
+            "rival": "Getafe",
+            "dificultad": 18
           }
         ]
       },
@@ -10850,39 +10850,6 @@
       "blindadoHasta": "2026-09-24T19:16:07.000Z"
     },
     {
-      "id": "26678",
-      "nombre": "Christensen",
-      "slug": "christensen",
-      "posicion": "Defensa",
-      "posicionCodigo": 2,
-      "foto": "https://cdn.biwenger.com/i/p/26678.png",
-      "equipoReal": "Barcelona",
-      "equipoIdReal": "3",
-      "presidente": "FC FORUSIA",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
-      "precio": 1340000,
-      "precioTexto": "1,3 M",
-      "puntosTotales": 19,
-      "partidosJugados": 4,
-      "media": 4.8,
-      "puntosPorMillon": 14.18,
-      "racha": [
-        5,
-        5,
-        4,
-        5
-      ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 45,
-      "clausula": 2497500,
-      "clausulaTexto": "2,5 M",
-      "pagadoPorSuDueno": 1665000,
-      "margen": 1157500,
-      "margenPorcentaje": 86,
-      "blindado": true,
-      "blindadoHasta": "2026-09-24T01:33:13.000Z"
-    },
-    {
       "id": "2086",
       "nombre": "Germán Parreño",
       "slug": "german",
@@ -11073,6 +11040,39 @@
       "margenPorcentaje": 40,
       "blindado": false,
       "blindadoHasta": null
+    },
+    {
+      "id": "26678",
+      "nombre": "Christensen",
+      "slug": "christensen",
+      "posicion": "Defensa",
+      "posicionCodigo": 2,
+      "foto": "https://cdn.biwenger.com/i/p/26678.png",
+      "equipoReal": "Barcelona",
+      "equipoIdReal": "3",
+      "presidente": "FC FORUSIA",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
+      "precio": 1340000,
+      "precioTexto": "1,3 M",
+      "puntosTotales": 19,
+      "partidosJugados": 4,
+      "media": 4.8,
+      "puntosPorMillon": 14.18,
+      "racha": [
+        5,
+        5,
+        4,
+        5
+      ],
+      "rachaTitular": 0,
+      "ultimoMinutos": 45,
+      "clausula": 2497500,
+      "clausulaTexto": "2,5 M",
+      "pagadoPorSuDueno": 1665000,
+      "margen": 1157500,
+      "margenPorcentaje": 86,
+      "blindado": true,
+      "blindadoHasta": "2026-09-24T01:33:13.000Z"
     },
     {
       "id": "28115",
