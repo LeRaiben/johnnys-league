@@ -50,6 +50,7 @@
   .tags-gif { display:flex; gap:5px; margin-top:8px; flex-wrap:wrap; }
   .tag-gif { background:rgba(255,255,255,0.08); border:none; color:var(--white); font-size:0.72rem; padding:4px 8px; border-radius:3px; cursor:pointer; }
   .tag-gif:hover { background:var(--gold); color:var(--navy); }
+  .giphy-marca { font-size:0.65rem; color:var(--grey); text-align:right; margin-top:4px; font-family:'Barlow Condensed',sans-serif; letter-spacing:0.05em; }
 
   /* Encuestas */
   .poll-box { background:rgba(2,18,52,0.7); border:1px solid var(--navy-line); padding:12px; border-radius:4px; margin-top:10px; }
@@ -100,9 +101,15 @@
         <h1>Johnny's League</h1>
         <div class="tagline">crónica semanal de la liga</div>
       </div>
-      <div class="status">
-        <span class="cond">Tablón</span>
-        <span class="round" id="cuantos">—</span>
+      <div class="status" style="display:flex; align-items:center; gap:10px;">
+        <div>
+          <span class="cond">Tablón</span>
+          <span class="round" id="cuantos">—</span>
+        </div>
+        <!-- Botón de Notificaciones Recuperado -->
+        <button id="btnNotif" type="button" title="Activar notificaciones" style="background:none; border:1px solid var(--gold-dim); color:var(--gold); border-radius:4px; padding:6px 10px; cursor:pointer; font-size:0.85rem; display:inline-flex; align-items:center; gap:4px;">
+          🔔
+        </button>
       </div>
     </div>
     <div class="jump">
@@ -154,18 +161,19 @@
 
       <div id="boxGif" style="display:none; margin-bottom:14px; background:rgba(2,18,52,0.8); padding:10px; border-radius:4px;">
         <div style="display:flex; gap:6px;">
-          <input type="text" id="searchGif" placeholder="Busca GIFs (ej: corazon, risa, gol)..." style="flex:1;">
+          <input type="text" id="searchGif" placeholder="Busca GIFs (ej: futbol, risa, gol)..." style="flex:1;">
           <button type="button" class="boton" id="btnBuscarGif" style="padding:6px 12px; font-size:0.8rem;">Buscar</button>
         </div>
         <div class="tags-gif">
           <button type="button" class="tag-gif" onclick="buscarTagGif('trending')">🔥 Tendencias</button>
           <button type="button" class="tag-gif" onclick="buscarTagGif('futbol')">⚽ Fútbol</button>
-          <button type="button" class="tag-gif" onclick="buscarTagGif('corazon')">❤️ Corazón</button>
+          <button type="button" class="tag-gif" onclick="buscarTagGif('corazon')">❤️ Amor</button>
           <button type="button" class="tag-gif" onclick="buscarTagGif('risa')">😂 Risa</button>
           <button type="button" class="tag-gif" onclick="buscarTagGif('fiesta')">🎉 Fiesta</button>
           <button type="button" class="tag-gif" onclick="buscarTagGif('enfado')">😡 Enfado</button>
         </div>
         <div id="contenedorGifs" class="gif-container"></div>
+        <div class="giphy-marca">GIPHY INTEGRATED</div>
       </div>
 
       <div id="boxPoll" style="display:none; margin-bottom:14px; background:rgba(2,18,52,0.8); padding:10px; border-radius:4px;">
@@ -254,11 +262,11 @@
     return canvas.toDataURL('image/jpeg', 0.82);
   }
 
-  // Motor de GIFs infalible con base de datos masiva categorizada en español + tendencias dinámicas
-  function buscarGifsApi(query, callback) {
+  // Motor híbrido de GIFs optimizado
+  async function buscarGifsApi(query, callback) {
     var q = (query || 'trending').toLowerCase().trim();
 
-    var baseGifs = {
+    var baseLocal = {
       'trending': [
         'https://media2.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif',
         'https://media3.giphy.com/media/l0HlHFRbmaZtBRhXG/giphy.gif',
@@ -273,8 +281,7 @@
         'https://media2.giphy.com/media/3og0IPWYmxGHjzg0Cs/giphy.gif',
         'https://media3.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif',
         'https://media4.giphy.com/media/l0HlDy6ikjspsOKic/giphy.gif',
-        'https://media1.giphy.com/media/3o7TKsQ8UQY8gAKjks/giphy.gif',
-        'https://media.tenor.com/images/e120f269a924b13a3036a49c63db0cb4/tenor.gif'
+        'https://media1.giphy.com/media/3o7TKsQ8UQY8gAKjks/giphy.gif'
       ],
       'amor': [
         'https://media2.giphy.com/media/3og0IPWYmxGHjzg0Cs/giphy.gif',
@@ -306,14 +313,40 @@
       ]
     };
 
-    // Si coincide con alguna categoría conocida, la devuelve inmediatamente de forma instantánea
-    if (baseGifs[q]) {
-      callback(baseGifs[q]);
+    try {
+      var url = q === 'trending' 
+        ? 'https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=15&rating=g'
+        : 'https://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=' + encodeURIComponent(q) + '&limit=15&rating=g&lang=es';
+
+      var resp = await fetch(url);
+      if (!resp.ok) throw new Error('API Giphy bloqueada');
+      var json = await resp.json();
+      
+      if (!json.data || json.data.length === 0) {
+        throw new Error('Sin resultados en Giphy');
+      }
+
+      var urls = json.data.map(function(item){
+        return item.images && item.images.fixed_width ? item.images.fixed_width.url : null;
+      }).filter(Boolean);
+
+      callback(urls);
+    } catch (e) {
+      var matchKey = Object.keys(baseLocal).find(function(k){ return q.includes(k); }) || 'trending';
+      callback(baseLocal[matchKey]);
+    }
+  }
+
+  function pintarGifs(urls, contenedor) {
+    if (!contenedor) return;
+    if (!urls || !urls.length) {
+      contenedor.innerHTML = '<span style="font-size:0.8rem; color:var(--grey);">No se encontraron GIFs.</span>';
       return;
     }
-
-    // Para cualquier otra búsqueda de texto personalizado, combinamos resultados o usamos las tendencias dinámicas
-    callback(baseGifs['trending']);
+    contenedor.innerHTML = urls.map(function(url) {
+      var escUrl = url.replace(/'/g, "\\'");
+      return '<img src="' + esc(url) + '" loading="lazy" alt="GIF" onclick="window.seleccionarGif(\'' + escUrl + '\')">';
+    }).join('');
   }
 
   window.buscarTagGif = function(tag) {
@@ -321,14 +354,11 @@
     if (inputSearch && tag !== 'trending') inputSearch.value = tag;
     else if (inputSearch) inputSearch.value = '';
 
+    var cont = document.getElementById('contenedorGifs');
+    if (cont) cont.innerHTML = '<span style="font-size:0.8rem; color:var(--grey);">Buscando...</span>';
+
     buscarGifsApi(tag, function(urls) {
-      var cont = document.getElementById('contenedorGifs');
-      if (cont) {
-        if (!urls.length) { cont.innerHTML = '<span style="font-size:0.8rem; color:var(--grey);">No se encontraron GIFs. Prueba otra palabra.</span>'; return; }
-        cont.innerHTML = urls.map(function(url){
-          return '<img src="' + url + '" onclick="window.seleccionarGif(\'' + url + '\')">';
-        }).join('');
-      }
+      pintarGifs(urls, cont);
     });
   };
 
@@ -595,11 +625,7 @@
   function buscarGifRespuestaInicial(msgId) {
     buscarGifsApi('trending', function(urls) {
       var cont = document.getElementById('reply-gifs-cont-' + msgId);
-      if (cont) {
-        cont.innerHTML = urls.map(function(url){
-          return '<img src="' + url + '" onclick="window.seleccionarGifReply(\'' + msgId + '\', \'' + url + '\')">';
-        }).join('');
-      }
+      pintarGifs(urls, cont);
     });
   }
 
@@ -608,11 +634,7 @@
     var q = (input ? input.value.trim() : '') || 'trending';
     buscarGifsApi(q, function(urls) {
       var cont = document.getElementById('reply-gifs-cont-' + msgId);
-      if (cont) {
-        cont.innerHTML = urls.map(function(url){
-          return '<img src="' + url + '" onclick="window.seleccionarGifReply(\'' + msgId + '\', \'' + url + '\')">';
-        }).join('');
-      }
+      pintarGifs(urls, cont);
     });
   }
 
@@ -730,14 +752,39 @@
 
   document.getElementById('btnBuscarGif').onclick = function() {
     var q = document.getElementById('searchGif').value.trim() || 'trending';
+    var cont = document.getElementById('contenedorGifs');
+    cont.innerHTML = '<span style="font-size:0.8rem; color:var(--grey);">Buscando...</span>';
     buscarGifsApi(q, function(urls) {
-      var cont = document.getElementById('contenedorGifs');
-      if (!urls.length) { cont.innerHTML = '<span style="font-size:0.8rem; color:var(--grey);">No se encontraron GIFs. Prueba otra palabra.</span>'; return; }
-      cont.innerHTML = urls.map(function(url){
-        return '<img src="' + url + '" onclick="seleccionarGif(\'' + url + '\')">';
-      }).join('');
+      pintarGifs(urls, cont);
     });
   };
+
+  var inputSearchElem = document.getElementById('searchGif');
+  if (inputSearchElem) {
+    inputSearchElem.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        document.getElementById('btnBuscarGif').click();
+      }
+    });
+  }
+
+  // Lógica del botón de notificaciones recuperado
+  var btnNotif = document.getElementById('btnNotif');
+  if (btnNotif) {
+    btnNotif.addEventListener('click', async function() {
+      if (!('Notification' in window)) {
+        alert('Este navegador no soporta notificaciones.');
+        return;
+      }
+      var permiso = await Notification.requestPermission();
+      if (permiso === 'granted') {
+        alert('¡Notificaciones activadas correctamente!');
+      } else {
+        alert('Has denegado o cerrado el permiso de notificaciones.');
+      }
+    });
+  }
 
   window.seleccionarGif = function(url) {
     imagenBase64Principal = url;
