@@ -101,15 +101,9 @@
         <h1>Johnny's League</h1>
         <div class="tagline">crónica semanal de la liga</div>
       </div>
-      <div class="status" style="display:flex; align-items:center; gap:10px;">
-        <div>
-          <span class="cond">Tablón</span>
-          <span class="round" id="cuantos">—</span>
-        </div>
-        <!-- Botón de Notificaciones Recuperado -->
-        <button id="btnNotif" type="button" title="Activar notificaciones" style="background:none; border:1px solid var(--gold-dim); color:var(--gold); border-radius:4px; padding:6px 10px; cursor:pointer; font-size:0.85rem; display:inline-flex; align-items:center; gap:4px;">
-          🔔
-        </button>
+      <div class="status">
+        <span class="cond">Tablón</span>
+        <span class="round" id="cuantos">—</span>
       </div>
     </div>
     <div class="jump">
@@ -262,7 +256,6 @@
     return canvas.toDataURL('image/jpeg', 0.82);
   }
 
-  // Motor híbrido de GIFs optimizado
   async function buscarGifsApi(query, callback) {
     var q = (query || 'trending').toLowerCase().trim();
 
@@ -290,7 +283,7 @@
       ],
       'futbol': [
         'https://media2.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif',
-        'https://media3.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif',
+        'https://media3.giphy.com/media/3oTKSjRrfIPjeiVyM/giphy.gif',
         'https://media1.giphy.com/media/xT5LMFZDsj0AKUDYTS/giphy.gif',
         'https://media0.giphy.com/media/l4FGuhL3U2WyjkaY8/giphy.gif',
         'https://media4.giphy.com/media/3o7aD2saalBwwfBIly/giphy.gif'
@@ -468,7 +461,6 @@
       return '<div>' + renderCard(p, false, p.id, pollsMap) + htmlRespuestas + '</div>';
     }).join('') + '</div>';
 
-    // Eventos
     cont.querySelectorAll('.btn-like').forEach(function (b) {
       b.addEventListener('click', function () { darLike(b.dataset.id, parseInt(b.dataset.likes, 10) || 0, b); });
     });
@@ -765,23 +757,6 @@
       if (e.key === 'Enter') {
         e.preventDefault();
         document.getElementById('btnBuscarGif').click();
-      }
-    });
-  }
-
-  // Lógica del botón de notificaciones recuperado
-  var btnNotif = document.getElementById('btnNotif');
-  if (btnNotif) {
-    btnNotif.addEventListener('click', async function() {
-      if (!('Notification' in window)) {
-        alert('Este navegador no soporta notificaciones.');
-        return;
-      }
-      var permiso = await Notification.requestPermission();
-      if (permiso === 'granted') {
-        alert('¡Notificaciones activadas correctamente!');
-      } else {
-        alert('Has denegado o cerrado el permiso de notificaciones.');
       }
     });
   }
