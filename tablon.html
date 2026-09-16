@@ -154,16 +154,16 @@
 
       <div id="boxGif" style="display:none; margin-bottom:14px; background:rgba(2,18,52,0.8); padding:10px; border-radius:4px;">
         <div style="display:flex; gap:6px;">
-          <input type="text" id="searchGif" placeholder="Busca lo que quieras (ej: risa, gol, llorar, fiesta)..." style="flex:1;">
+          <input type="text" id="searchGif" placeholder="Busca lo que quieras (ej: corazon, risa, gol)..." style="flex:1;">
           <button type="button" class="boton" id="btnBuscarGif" style="padding:6px 12px; font-size:0.8rem;">Buscar</button>
         </div>
         <div class="tags-gif">
           <button type="button" class="tag-gif" onclick="buscarTagGif('trending')">🔥 Tendencias</button>
-          <button type="button" class="tag-gif" onclick="buscarTagGif('soccer football goal')">⚽ Fútbol</button>
-          <button type="button" class="tag-gif" onclick="buscarTagGif('laughing funny')">😂 Risa</button>
-          <button type="button" class="tag-gif" onclick="buscarTagGif('love heart')">❤️ Corazón</button>
-          <button type="button" class="tag-gif" onclick="buscarTagGif('party celebration')">🎉 Fiesta</button>
-          <button type="button" class="tag-gif" onclick="buscarTagGif('angry mad')">😡 Enfado</button>
+          <button type="button" class="tag-gif" onclick="buscarTagGif('futbol')">⚽ Fútbol</button>
+          <button type="button" class="tag-gif" onclick="buscarTagGif('corazon')">❤️ Corazón</button>
+          <button type="button" class="tag-gif" onclick="buscarTagGif('risa')">😂 Risa</button>
+          <button type="button" class="tag-gif" onclick="buscarTagGif('fiesta')">🎉 Fiesta</button>
+          <button type="button" class="tag-gif" onclick="buscarTagGif('enfado')">😡 Enfado</button>
         </div>
         <div id="contenedorGifs" class="gif-container"></div>
       </div>
@@ -254,43 +254,32 @@
     return canvas.toDataURL('image/jpeg', 0.82);
   }
 
-  // Motor de búsqueda de GIFs abierto y sin límites utilizando el proxy público global de Giphy
+  // Motor de búsqueda de GIFs abierto y robusto basado en Tenor API v1
   function buscarGifsApi(query, callback) {
-    var q = (query || 'trending').trim();
+    var q = (query || 'trending').toLowerCase().trim();
     var endpoint = '';
 
     if (q === 'trending') {
-      endpoint = 'https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=20';
+      endpoint = 'https://g.tenor.com/v1/trending?key=LIVDSRZULEBR&limit=16';
     } else {
-      // Pequeño diccionario de sinónimos comunes en español para enriquecer la búsqueda global
-      var sinónimos = {
-        'corazon': 'heart love',
-        'amor': 'love heart',
-        'risa': 'laughing funny lolo',
-        'futbol': 'soccer football goal',
-        'gol': 'soccer goal celebration',
-        'llorar': 'crying sad',
-        'enfado': 'angry mad',
-        'fiesta': 'party celebration'
-      };
-      var terminoFinal = sinónimos[q.toLowerCase()] || q;
-      endpoint = 'https://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=' + encodeURIComponent(terminoFinal) + '&limit=20&rating=g';
+      endpoint = 'https://g.tenor.com/v1/search?q=' + encodeURIComponent(q) + '&key=LIVDSRZULEBR&limit=16';
     }
 
     fetch(endpoint)
       .then(function(res){ return res.json(); })
       .then(function(data){
-        if (data && data.data && data.data.length > 0) {
-          var urls = data.data.map(function(item){ 
-            return item.images && item.images.fixed_height_small ? item.images.fixed_height_small.url : ''; 
+        var results = data.results || [];
+        if (results.length > 0) {
+          var urls = results.map(function(item){
+            return item.media && item.media[0] && item.media[0].tinygif ? item.media[0].tinygif.url : '';
           }).filter(Boolean);
           callback(urls);
         } else {
-          // Búsqueda de respaldo en trending si la específica no devuelve resultados
-          fetch('https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=20')
+          // Fallback a trending si la búsqueda no arroja resultados
+          fetch('https://g.tenor.com/v1/trending?key=LIVDSRZULEBR&limit=16')
             .then(function(r){ return r.json(); })
             .then(function(d){
-              var urls = (d && d.data) ? d.data.map(function(i){ return i.images.fixed_height_small.url; }) : [];
+              var urls = (d.results || []).map(function(i){ return i.media[0].tinygif.url; });
               callback(urls);
             }).catch(function(){ callback([]); });
         }
@@ -300,13 +289,13 @@
 
   window.buscarTagGif = function(tag) {
     var inputSearch = document.getElementById('searchGif');
-    if (inputSearch && tag !== 'trending') inputSearch.value = tag.split(' ')[0];
+    if (inputSearch && tag !== 'trending') inputSearch.value = tag;
     else if (inputSearch) inputSearch.value = '';
 
     buscarGifsApi(tag, function(urls) {
       var cont = document.getElementById('contenedorGifs');
       if (cont) {
-        if (!urls.length) { cont.innerHTML = '<span style="font-size:0.8rem; color:var(--grey);">Escribe otra palabra para buscar...</span>'; return; }
+        if (!urls.length) { cont.innerHTML = '<span style="font-size:0.8rem; color:var(--grey);">No se encontraron GIFs. Prueba otra palabra.</span>'; return; }
         cont.innerHTML = urls.map(function(url){
           return '<img src="' + url + '" onclick="window.seleccionarGif(\'' + url + '\')">';
         }).join('');
@@ -759,7 +748,6 @@
   var btnPub = document.getElementById('btnPublicar');
   if (btnPub) btnPub.addEventListener('click', publicar);
 
-  limpiarImagePrincipal = limpiarImagenPrincipal;
   limpiarImagenPrincipal();
   cargar();
   activarRealtime();
