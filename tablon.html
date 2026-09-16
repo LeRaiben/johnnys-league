@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/estilo.css">
 <style>
+  [hidden] { display: none !important; }
   .campo { margin-bottom:14px; }
   .campo label { display:block; font-family:'Barlow Condensed',sans-serif; font-weight:600;
     letter-spacing:0.05em; text-transform:uppercase; font-size:0.68rem; color:var(--grey); margin-bottom:6px; }
@@ -38,7 +39,7 @@
 
   /* Adjuntar imagen */
   .preview-adjunto { margin-top:10px; position:relative; display:inline-block; }
-  .preview-adjunto img { max-width:120px; max-height:90px; border-radius:4px; border:1px solid var(--navy-line); display:block; }
+  .preview-adjunto img { max-width:120px; max-height:90px; border-radius:4px; border:1px solid var(--navy-line); display:block; object-fit:cover; }
   .preview-adjunto button { position:absolute; top:-6px; right:-6px; background:var(--red); color:#fff; border:none; border-radius:50%; width:20px; height:20px; cursor:pointer; font-size:12px; line-height:1; }
 
   /* Mensajes e Hilos */
@@ -138,7 +139,7 @@
       <div class="campo">
         <label for="inputImg">Adjuntar Captura / Imagen (Máx. 5 MB)</label>
         <input type="file" id="inputImg" accept="image/*" style="color:var(--grey); font-size:0.85rem;">
-        <div id="contenedorPreview" class="preview-adjunto" hidden>
+        <div id="contenedorPreview" class="preview-adjunto" style="display:none;">
           <img id="imgPreview" src="" alt="Vista previa">
           <button type="button" id="btnQuitarImg">✕</button>
         </div>
@@ -197,14 +198,14 @@
   function optimizarImagen(imgElement) {
     var canvas = document.createElement('canvas');
     var maxAncho = 1200;
-    var escala = maxAncho / imgElement.width;
+    var escala = maxAncho / (imgElement.naturalWidth || imgElement.width || 1200);
     
     if (escala < 1) {
       canvas.width = maxAncho;
-      canvas.height = imgElement.height * escala;
+      canvas.height = (imgElement.naturalHeight || imgElement.height) * escala;
     } else {
-      canvas.width = imgElement.width;
-      canvas.height = imgElement.height;
+      canvas.width = imgElement.naturalWidth || imgElement.width;
+      canvas.height = imgElement.naturalHeight || imgElement.height;
     }
 
     var ctx = canvas.getContext('2d');
@@ -216,7 +217,7 @@
     var htmlImg = m.imagen ? '<a href="' + m.imagen + '" target="_blank"><img class="img-adjunta" src="' + m.imagen + '" alt="Imagen adjunta"></a>' : '';
     var claseExtra = esRespuesta ? ' respuesta' : '';
     var idPadreParaGuardar = esRespuesta ? rootPadreId : m.id;
-    var numLikes = m.likes || 0;
+    var numLikes = Number(m.likes) || 0;
     
     var dioLike = localStorage.getItem('like_' + m.id) === 'true';
     var iconoCorazon = dioLike ? '❤️' : '🤍';
@@ -230,7 +231,7 @@
       '<button class="btn-accion borrar" data-id="' + m.id + '">🗑️ Borrar</button>' +
     '</div>';
 
-    var htmlFormRespuesta = '<div class="form-respuesta" id="reply-box-' + m.id + '" hidden>' +
+    var htmlFormRespuesta = '<div class="form-respuesta" id="reply-box-' + m.id + '" style="display:none;">' +
       '<div class="campo"><label>Tu Nombre / Equipo</label><input type="text" id="reply-name-' + m.id + '" placeholder="Ej: Presi Rayo"></div>' +
       '<div class="campo"><label>Respuesta</label><textarea id="reply-text-' + m.id + '" placeholder="Escribe tu respuesta...">@' + esc(m.nombre) + ' </textarea></div>' +
       '<div class="campo"><label>Imagen (Opcional)</label><input type="file" id="reply-img-' + m.id + '" accept="image/*" style="color:var(--grey); font-size:0.8rem;"></div>' +
@@ -275,7 +276,7 @@
 
     // Eventos
     cont.querySelectorAll('.btn-like').forEach(function (b) {
-      b.addEventListener('click', function () { darLike(b.dataset.id, parseInt(b.dataset.likes, 10), b); });
+      b.addEventListener('click', function () { darLike(b.dataset.id, parseInt(b.dataset.likes, 10) || 0, b); });
     });
 
     cont.querySelectorAll('.borrar').forEach(function (b) {
@@ -285,7 +286,7 @@
     cont.querySelectorAll('.btn-toggle-reply').forEach(function (b) {
       b.addEventListener('click', function () {
         var box = document.getElementById('reply-box-' + b.dataset.id);
-        if (box) box.hidden = !box.hidden;
+        if (box) box.style.display = (box.style.display === 'none') ? 'block' : 'none';
       });
     });
 
@@ -309,7 +310,7 @@
     var yaDioLike = localStorage.getItem(key) === 'true';
 
     var resSelect = await sb.from('mensajes').select('likes').eq('id', id).single();
-    var likesBaseDatos = (resSelect.data && resSelect.data.likes !== null) ? resSelect.data.likes : likesActuales;
+    var likesBaseDatos = (resSelect.data && resSelect.data.likes !== null && resSelect.data.likes !== undefined) ? Number(resSelect.data.likes) : likesActuales;
 
     var nuevosLikes = yaDioLike ? Math.max(0, likesBaseDatos - 1) : likesBaseDatos + 1;
 
@@ -329,7 +330,10 @@
     if (spanCount) spanCount.textContent = nuevosLikes;
     btnElement.dataset.likes = nuevosLikes;
 
-    await sb.from('mensajes').update({ likes: nuevosLikes }).eq('id', id);
+    var updateRes = await sb.from('mensajes').update({ likes: nuevosLikes }).eq('id', id);
+    if (updateRes.error) {
+      console.error('Error actualizando likes:', updateRes.error);
+    }
   }
 
   async function publicar() {
@@ -407,8 +411,10 @@
     imagenBase64Principal = null;
     var inp = document.getElementById('inputImg');
     var prev = document.getElementById('contenedorPreview');
+    var imgPrev = document.getElementById('imgPreview');
     if (inp) inp.value = '';
-    if (prev) prev.hidden = true;
+    if (imgPrev) imgPrev.src = '';
+    if (prev) prev.style.display = 'none';
   }
 
   function activarRealtime() {
@@ -501,16 +507,19 @@
 
       var reader = new FileReader();
       reader.onload = function (evt) {
+        var rawBase64 = evt.target.result;
+        var imgPrev = document.getElementById('imgPreview');
+        var prevCont = document.getElementById('contenedorPreview');
+        
+        if (imgPrev) imgPrev.src = rawBase64;
+        if (prevCont) prevCont.style.display = 'inline-block';
+
         var img = new Image();
         img.onload = function () {
           imagenBase64Principal = optimizarImagen(img);
-          var imgPrev = document.getElementById('imgPreview');
-          var prevCont = document.getElementById('contenedorPreview');
-          if (imgPrev) imgPrev.src = imagenBase64Principal;
-          if (prevCont) prevCont.hidden = false;
           estado('');
         };
-        img.src = evt.target.result;
+        img.src = rawBase64;
       };
       reader.readAsDataURL(file);
     });
