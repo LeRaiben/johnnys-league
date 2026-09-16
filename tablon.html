@@ -53,10 +53,15 @@
   .msg-card .texto { font-size:0.95rem; line-height:1.5; color:rgba(247,247,245,0.92); white-space:pre-wrap; word-wrap:break-word; }
   .msg-card .img-adjunta { margin-top:10px; max-width:100%; max-height:350px; border-radius:4px; border:1px solid var(--navy-line); display:block; }
   
-  .acciones-msg { display:flex; gap:14px; margin-top:10px; align-items:center; }
-  .btn-accion { background:none; border:none; color:var(--grey); cursor:pointer; font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; letter-spacing:0.04em; text-transform:uppercase; padding:0; }
+  .acciones-msg { display:flex; gap:16px; margin-top:10px; align-items:center; }
+  .btn-accion { background:none; border:none; color:var(--grey); cursor:pointer; font-family:'Barlow Condensed',sans-serif; font-size:0.8rem; letter-spacing:0.04em; text-transform:uppercase; padding:0; display:inline-flex; align-items:center; gap:4px; }
   .btn-accion:hover { color:var(--white); }
   .btn-accion.borrar:hover { color:#E8746A; }
+  
+  /* Botón Me gusta */
+  .btn-like { color:var(--grey); transition:transform 0.1s ease; }
+  .btn-like.liked { color:#E8746A; }
+  .btn-like:active { transform:scale(1.2); }
 
   /* Formulario de Respuesta */
   .form-respuesta { margin-top:12px; padding:12px; background:rgba(2,18,52,0.8); border-radius:4px; border:1px solid var(--navy-line); }
@@ -202,8 +207,17 @@
     var htmlImg = m.imagen ? '<a href="' + m.imagen + '" target="_blank"><img class="img-adjunta" src="' + m.imagen + '" alt="Imagen adjunta"></a>' : '';
     var claseExtra = esRespuesta ? ' respuesta' : '';
     var idPadreParaGuardar = esRespuesta ? rootPadreId : m.id;
+    var numLikes = m.likes || 0;
+    
+    // Comprobar si el usuario local ya dio like
+    var dioLike = localStorage.getItem('like_' + m.id) === 'true';
+    var iconoCorazon = dioLike ? '❤️' : '🤍';
+    var claseLiked = dioLike ? ' liked' : '';
 
     var htmlAcciones = '<div class="acciones-msg">' +
+      '<button class="btn-accion btn-like' + claseLiked + '" data-id="' + m.id + '" data-likes="' + numLikes + '">' +
+        '<span>' + iconoCorazon + '</span> <span class="count">' + numLikes + '</span>' +
+      '</button>' +
       '<button class="btn-accion btn-toggle-reply" data-id="' + m.id + '">💬 Responder</button>' +
       '<button class="btn-accion borrar" data-id="' + m.id + '">🗑️ Borrar</button>' +
     '</div>';
@@ -250,6 +264,10 @@
     }).join('') + '</div>';
 
     // Eventos
+    cont.querySelectorAll('.btn-like').forEach(function (b) {
+      b.addEventListener('click', function () { darLike(b.dataset.id, parseInt(b.dataset.likes, 10), b); });
+    });
+
     cont.querySelectorAll('.borrar').forEach(function (b) {
       b.addEventListener('click', function () { borrar(b.dataset.id); });
     });
@@ -268,12 +286,39 @@
 
   async function cargar() {
     var r = await sb.from('mensajes')
-      .select('id, creado, nombre, texto, imagen, mensaje_padre_id')
+      .select('id, creado, nombre, texto, imagen, mensaje_padre_id, likes')
       .order('creado', { ascending: false })
       .limit(150);
     if (r.error) { estado('No se han podido cargar los mensajes: ' + r.error.message); return; }
     estado('');
     pintar(r.data || []);
+  }
+
+  async function darLike(id, likesActuales, btnElement) {
+    var key = 'like_' + id;
+    var yaDioLike = localStorage.getItem(key) === 'true';
+
+    var nuevosLikes = yaDioLike ? Math.max(0, likesActuales - 1) : likesActuales + 1;
+
+    // Actualización visual rápida en pantalla
+    var spanHeart = btnElement.querySelector('span:first-child');
+    var spanCount = btnElement.querySelector('.count');
+    
+    if (yaDioLike) {
+      localStorage.removeItem(key);
+      btnElement.classList.remove('liked');
+      spanHeart.textContent = '🤍';
+    } else {
+      localStorage.setItem(key, 'true');
+      btnElement.classList.add('liked');
+      spanHeart.textContent = '❤️';
+    }
+    
+    spanCount.textContent = nuevosLikes;
+    btnElement.dataset.likes = nuevosLikes;
+
+    // Guardar en Supabase
+    await sb.from('mensajes').update({ likes: nuevosLikes }).eq('id', id);
   }
 
   async function publicar() {
