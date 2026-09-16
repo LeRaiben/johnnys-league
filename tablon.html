@@ -24,6 +24,7 @@
     text-transform:uppercase; font-size:0.9rem; padding:10px 20px; border-radius:4px; }
   .boton:hover { filter:brightness(1.12); }
   .boton:disabled { opacity:0.5; cursor:default; }
+  .boton-secundario { background:var(--navy-soft); border:1px solid var(--gold-dim); color:var(--white); padding:6px 12px; font-size:0.8rem; }
 
   .mensaje-estado { font-size:0.88rem; padding:11px 14px; border-radius:4px; margin-bottom:16px; line-height:1.45; }
   .mensaje-estado.error { background:rgba(192,24,44,0.15); color:#E8746A; border-left:3px solid #E8746A; }
@@ -42,6 +43,18 @@
   .preview-adjunto img { max-width:120px; max-height:90px; border-radius:4px; border:1px solid var(--navy-line); display:block; object-fit:cover; }
   .preview-adjunto button { position:absolute; top:-6px; right:-6px; background:var(--red); color:#fff; border:none; border-radius:50%; width:20px; height:20px; cursor:pointer; font-size:12px; line-height:1; }
 
+  /* Modal y Buscador de GIFs */
+  .gif-container { display:grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap:8px; max-height:200px; overflow-y:auto; margin-top:10px; }
+  .gif-container img { width:100%; height:80px; object-fit:cover; border-radius:4px; cursor:pointer; border:1px solid transparent; }
+  .gif-container img:hover { border-color:var(--gold); }
+
+  /* Encuestas CSS */
+  .poll-box { background:rgba(2,18,52,0.7); border:1px solid var(--navy-line); padding:12px; border-radius:4px; margin-top:10px; }
+  .poll-opt { margin-bottom:8px; cursor:pointer; position:relative; overflow:hidden; border:1px solid var(--navy-line); border-radius:4px; padding:8px; display:flex; justify-content:space-between; align-items:center; }
+  .poll-bar { position:absolute; top:0; left:0; bottom:0; background:rgba(212,175,55,0.25); z-index:1; }
+  .poll-text { position:relative; z-index:2; font-size:0.88rem; }
+  .poll-count { position:relative; z-index:2; font-size:0.78rem; color:var(--gold); font-weight:bold; }
+
   /* Mensajes e Hilos */
   .lista-msg { display:grid; gap:16px; }
   .msg-card { background:var(--navy-soft); border-left:3px solid var(--gold); border-radius:0 4px 4px 0; padding:16px 18px; }
@@ -59,14 +72,11 @@
   .btn-accion:hover { color:var(--white); }
   .btn-accion.borrar:hover { color:#E8746A; }
   
-  /* Botón Me gusta */
   .btn-like { color:var(--grey); transition:transform 0.1s ease; }
   .btn-like.liked { color:#E8746A; }
   .btn-like:active { transform:scale(1.2); }
 
-  /* Formulario de Respuesta */
   .form-respuesta { margin-top:12px; padding:12px; background:rgba(2,18,52,0.8); border-radius:4px; border:1px solid var(--navy-line); }
-
   .aviso-suave { background:var(--navy-soft); border-left:3px solid var(--gold-dim); padding:16px 18px; font-size:0.92rem; color:rgba(247,247,245,0.82); }
 </style>
 </head>
@@ -118,7 +128,6 @@
   <section class="block" style="border-top:none; padding-top:0;">
     <div id="zonaEstado"></div>
 
-    <!-- Botón Notificaciones -->
     <div style="margin-bottom: 20px; text-align: right;">
       <button id="btnNotif" class="boton" style="background: var(--navy-soft); border: 1px solid var(--gold-dim); font-size: 0.82rem;">
         🔔 Activar notificaciones en el móvil
@@ -135,7 +144,34 @@
         <label for="texto">Mensaje</label>
         <textarea id="texto" maxlength="2000" placeholder="Abre un hilo: pullas, fichajes, debates..."></textarea>
       </div>
-      
+
+      <!-- Herramientas extra (GIFs y Encuestas) -->
+      <div style="display:flex; gap:10px; margin-bottom:12px; flex-wrap:wrap;">
+        <button type="button" class="boton boton-secundario" id="btnToggleGif">👾 Buscar GIF</button>
+        <button type="button" class="boton boton-secundario" id="btnTogglePoll">📊 Añadir Encuesta</button>
+      </div>
+
+      <!-- Buscador GIF Tenor -->
+      <div id="boxGif" style="display:none; margin-bottom:14px; background:rgba(2,18,52,0.5); padding:10px; border-radius:4px;">
+        <div style="display:flex; gap:6px;">
+          <input type="text" id="searchGif" placeholder="Buscar GIF (ej: gol, risa, meme)..." style="flex:1;">
+          <button type="button" class="boton" id="btnBuscarGif" style="padding:6px 12px; font-size:0.8rem;">Buscar</button>
+        </div>
+        <div id="contenedorGifs" class="gif-container"></div>
+      </div>
+
+      <!-- Creador Encuesta -->
+      <div id="boxPoll" style="display:none; margin-bottom:14px; background:rgba(2,18,52,0.5); padding:10px; border-radius:4px;">
+        <div class="campo">
+          <label>Pregunta de la Encuesta</label>
+          <input type="text" id="pollPregunta" placeholder="Ej: ¿Sanción justa para el delantero?">
+        </div>
+        <div class="campo">
+          <label>Opciones (Separadas por comas)</label>
+          <input type="text" id="pollOpciones" placeholder="Ej: Sí totalmente, Exagerado, No fue nada">
+        </div>
+      </div>
+
       <div class="campo">
         <label for="inputImg">Adjuntar Captura / Imagen (Máx. 5 MB)</label>
         <input type="file" id="inputImg" accept="image/*" style="color:var(--grey); font-size:0.85rem;">
@@ -165,7 +201,7 @@
 (function () {
   var URL_SUPABASE = 'https://hgmswhslnuqlzqbvuifw.supabase.co';
   var CLAVE_PUBLICA = 'sb_publishable_mJwquJGh9WzRrxCrrceZng_B0GynTvN';
-  var VAPID_PUBLIC_KEY = 'BLBb_eng5V0_n__iZFFR3bKN-EpcbaLgSlcXrkMsj4SOK1HhvS2fbqUeNX2_5sDDKE-wTde4wB2j1Dxjgwcinjc';
+  var TENOR_API_KEY = 'LIVDSRZULEBR'; // Clave pública de demostración para GIFs
 
   var sb = window.supabase.createClient(URL_SUPABASE, CLAVE_PUBLICA);
   var imagenBase64Principal = null;
@@ -199,7 +235,6 @@
     var canvas = document.createElement('canvas');
     var maxAncho = 1200;
     var escala = maxAncho / (imgElement.naturalWidth || imgElement.width || 1200);
-    
     if (escala < 1) {
       canvas.width = maxAncho;
       canvas.height = (imgElement.naturalHeight || imgElement.height) * escala;
@@ -207,13 +242,33 @@
       canvas.width = imgElement.naturalWidth || imgElement.width;
       canvas.height = imgElement.naturalHeight || imgElement.height;
     }
-
     var ctx = canvas.getContext('2d');
     ctx.drawImage(imgElement, 0, 0, canvas.width, canvas.height);
     return canvas.toDataURL('image/jpeg', 0.82);
   }
 
-  function renderCard(m, esRespuesta, rootPadreId) {
+  /* RENDERIZADO DE ENCUESTAS */
+  function renderPollHtml(poll) {
+    if (!poll) return '';
+    var totalVotos = 0;
+    poll.opciones.forEach(function(o){ totalVotos += o.votos; });
+
+    var htmlOpts = poll.opciones.map(function(opt) {
+      var pct = totalVotos > 0 ? Math.round((opt.votos / totalVotos) * 100) : 0;
+      return '<div class="poll-opt" data-pollid="' + poll.id + '" data-optid="' + opt.id + '">' +
+        '<div class="poll-bar" style="width:' + pct + '%;"></div>' +
+        '<span class="poll-text">' + esc(opt.texto) + '</span>' +
+        '<span class="poll-count">' + pct + '% (' + opt.votos + ')</span>' +
+      '</div>';
+    }).join('');
+
+    return '<div class="poll-box">' +
+      '<div style="font-weight:bold; font-size:0.9rem; margin-bottom:8px; color:var(--gold);">' + esc(poll.pregunta) + '</div>' +
+      htmlOpts +
+    '</div>';
+  }
+
+  function renderCard(m, esRespuesta, rootPadreId, pollsMap) {
     var htmlImg = m.imagen ? '<a href="' + m.imagen + '" target="_blank"><img class="img-adjunta" src="' + m.imagen + '" alt="Imagen adjunta"></a>' : '';
     var claseExtra = esRespuesta ? ' respuesta' : '';
     var idPadreParaGuardar = esRespuesta ? rootPadreId : m.id;
@@ -222,6 +277,8 @@
     var dioLike = localStorage.getItem('like_' + m.id) === 'true';
     var iconoCorazon = dioLike ? '❤️' : '🤍';
     var claseLiked = dioLike ? ' liked' : '';
+
+    var htmlPoll = pollsMap[m.id] ? renderPollHtml(pollsMap[m.id]) : '';
 
     var htmlAcciones = '<div class="acciones-msg">' +
       '<button class="btn-accion btn-like' + claseLiked + '" data-id="' + m.id + '" data-likes="' + numLikes + '">' +
@@ -245,14 +302,18 @@
       '</div>' +
       '<div class="texto">' + esc(m.texto) + '</div>' +
       htmlImg +
+      htmlPoll +
       htmlAcciones +
       htmlFormRespuesta +
     '</div>';
   }
 
-  function pintar(mensajes) {
+  function pintar(mensajes, encuestas) {
     var cont = document.getElementById('lista');
     if (!cont) return;
+
+    var pollsMap = {};
+    (encuestas || []).forEach(function(p){ pollsMap[p.mensaje_id] = p; });
     
     var principales = mensajes.filter(function(m){ return !m.mensaje_padre_id; });
     var respuestas = mensajes.filter(function(m){ return m.mensaje_padre_id; });
@@ -269,9 +330,8 @@
       var misRespuestas = respuestas.filter(function(r){ return r.mensaje_padre_id === p.id; });
       misRespuestas.sort(function(a,b){ return new Date(a.creado) - new Date(b.creado); });
 
-      var htmlRespuestas = misRespuestas.map(function(r){ return renderCard(r, true, p.id); }).join('');
-
-      return '<div>' + renderCard(p, false, p.id) + htmlRespuestas + '</div>';
+      var htmlRespuestas = misRespuestas.map(function(r){ return renderCard(r, true, p.id, pollsMap); }).join('');
+      return '<div>' + renderCard(p, false, p.id, pollsMap) + htmlRespuestas + '</div>';
     }).join('') + '</div>';
 
     // Eventos
@@ -293,30 +353,30 @@
     cont.querySelectorAll('.btn-send-reply').forEach(function (b) {
       b.addEventListener('click', function () { enviarRespuesta(b.dataset.id, b.dataset.rootid); });
     });
+
+    cont.querySelectorAll('.poll-opt').forEach(function (el) {
+      el.addEventListener('click', function () { votarEncuesta(el.dataset.pollid, parseInt(el.dataset.optid, 10)); });
+    });
   }
 
   async function cargar() {
-    var r = await sb.from('mensajes')
-      .select('id, creado, nombre, texto, imagen, mensaje_padre_id, likes')
-      .order('creado', { ascending: false })
-      .limit(150);
+    var r = await sb.from('mensajes').select('id, creado, nombre, texto, imagen, mensaje_padre_id, likes').order('creado', { ascending: false }).limit(150);
+    var p = await sb.from('encuestas').select('id, mensaje_id, pregunta, opciones, votos');
     if (r.error) { estado('No se han podido cargar los mensajes: ' + r.error.message); return; }
     estado('');
-    pintar(r.data || []);
+    pintar(r.data || [], p.data || []);
   }
 
   async function darLike(id, likesActuales, btnElement) {
     var key = 'like_' + id;
     var yaDioLike = localStorage.getItem(key) === 'true';
-
     var resSelect = await sb.from('mensajes').select('likes').eq('id', id).single();
-    var likesBaseDatos = (resSelect.data && resSelect.data.likes !== null && resSelect.data.likes !== undefined) ? Number(resSelect.data.likes) : likesActuales;
+    var likesBaseDatos = (resSelect.data && resSelect.data.likes !== null) ? Number(resSelect.data.likes) : likesActuales;
 
     var nuevosLikes = yaDioLike ? Math.max(0, likesBaseDatos - 1) : likesBaseDatos + 1;
-
     var spanHeart = btnElement.querySelector('span:first-child');
     var spanCount = btnElement.querySelector('.count');
-    
+
     if (yaDioLike) {
       localStorage.removeItem(key);
       btnElement.classList.remove('liked');
@@ -329,11 +389,24 @@
     
     if (spanCount) spanCount.textContent = nuevosLikes;
     btnElement.dataset.likes = nuevosLikes;
+    await sb.from('mensajes').update({ likes: nuevosLikes }).eq('id', id);
+  }
 
-    var updateRes = await sb.from('mensajes').update({ likes: nuevosLikes }).eq('id', id);
-    if (updateRes.error) {
-      console.error('Error actualizando likes:', updateRes.error);
-    }
+  async function votarEncuesta(pollId, optId) {
+    var userKey = 'voted_poll_' + pollId;
+    if (localStorage.getItem(userKey)) { alert('Ya has votado en esta encuesta.'); return; }
+
+    var r = await sb.from('encuestas').select('*').eq('id', pollId).single();
+    if (r.error || !r.data) return;
+
+    var poll = r.data;
+    poll.opciones.forEach(function(o) {
+      if (o.id === optId) o.votos += 1;
+    });
+
+    localStorage.setItem(userKey, 'true');
+    await sb.from('encuestas').update({ opciones: poll.opciones }).eq('id', pollId);
+    cargar();
   }
 
   async function publicar() {
@@ -353,15 +426,31 @@
       texto: texto,
       imagen: imagenBase64Principal,
       likes: 0
-    });
+    }).select().single();
+
+    if (r.error) { estado('No se ha podido publicar: ' + r.error.message); if (btn) btn.disabled = false; return; }
+
+    // Procesar encuesta si fue rellenada
+    var preg = document.getElementById('pollPregunta').value.trim();
+    var optsRaw = document.getElementById('pollOpciones').value.trim();
+
+    if (preg && optsRaw) {
+      var arrOpts = optsRaw.split(',').map(function(item, idx){ return { id: idx + 1, texto: item.trim(), votos: 0 }; }).filter(function(i){ return i.texto.length > 0; });
+      if (arrOpts.length > 1) {
+        await sb.from('encuestas').insert({
+          mensaje_id: r.data.id,
+          pregunta: preg,
+          opciones: arrOpts
+        });
+      }
+    }
 
     if (btn) btn.disabled = false;
-
-    if (r.error) { estado('No se ha podido publicar: ' + r.error.message); return; }
     if (caja) caja.value = '';
+    document.getElementById('pollPregunta').value = '';
+    document.getElementById('pollOpciones').value = '';
+    document.getElementById('boxPoll').style.display = 'none';
     limpiarImagenPrincipal();
-    var elemContador = document.getElementById('contador');
-    if (elemContador) elemContador.textContent = '0';
   }
 
   async function enviarRespuesta(msgId, rootPadreId) {
@@ -413,105 +502,55 @@
     var prev = document.getElementById('contenedorPreview');
     var imgPrev = document.getElementById('imgPreview');
     if (inp) inp.value = '';
-    if (imgPrev) {
-      imgPrev.removeAttribute('src');
-      imgPrev.src = '';
-    }
-    if (prev) {
-      prev.style.display = 'none';
-      prev.setAttribute('hidden', 'true');
-    }
+    if (imgPrev) { imgPrev.removeAttribute('src'); imgPrev.src = ''; }
+    if (prev) { prev.style.display = 'none'; prev.setAttribute('hidden', 'true'); }
   }
 
   function activarRealtime() {
     sb.channel('realtime-tablon')
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'mensajes' }, function () {
-        cargar();
-      })
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'mensajes' }, function () { cargar(); })
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'encuestas' }, function () { cargar(); })
       .subscribe();
   }
 
-  function urlBase64ToUint8Array(base64String) {
-    var padding = '='.repeat((4 - base64String.length % 4) % 4);
-    var base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/');
-    var rawData = window.atob(base64);
-    var outputArray = new Uint8Array(rawData.length);
-    for (var i = 0; i < rawData.length; ++i) {
-      outputArray[i] = rawData.charCodeAt(i);
-    }
-    return outputArray;
-  }
+  // BUSCADOR TENOR GIFS
+  document.getElementById('btnToggleGif').onclick = function() {
+    var b = document.getElementById('boxGif');
+    b.style.display = (b.style.display === 'none') ? 'block' : 'none';
+  };
 
-  function inicializarNotificaciones(reg) {
-    var btn = document.getElementById('btnNotif');
-    if (!btn) return;
+  document.getElementById('btnTogglePoll').onclick = function() {
+    var b = document.getElementById('boxPoll');
+    b.style.display = (b.style.display === 'none') ? 'block' : 'none';
+  };
 
-    reg.pushManager.getSubscription().then(function (sub) {
-      if (sub) {
-        btn.textContent = '🔕 Desactivar notificaciones';
-        btn.style.borderColor = 'var(--red)';
-      } else {
-        btn.textContent = '🔔 Activar notificaciones en el móvil';
-        btn.style.borderColor = 'var(--gold-dim)';
-      }
+  document.getElementById('btnBuscarGif').onclick = function() {
+    var q = document.getElementById('searchGif').value.trim() || 'football';
+    var url = 'https://g.tenor.com/v1/search?q=' + encodeURIComponent(q) + '&key=' + TENOR_API_KEY + '&limit=12';
+
+    fetch(url).then(function(res){ return res.json(); }).then(function(data){
+      var cont = document.getElementById('contenedorGifs');
+      cont.innerHTML = (data.results || []).map(function(item){
+        var gifUrl = item.media[0].tinygif.url;
+        return '<img src="' + gifUrl + '" onclick="seleccionarGif(\'' + gifUrl + '\')">';
+      }).join('');
     });
+  };
 
-    btn.onclick = function () {
-      reg.pushManager.getSubscription().then(async function (sub) {
-        if (sub) {
-          await sub.unsubscribe();
-          await sb.from('suscripciones').delete().eq('endpoint', sub.endpoint);
-          alert('Notificaciones desactivadas.');
-          btn.textContent = '🔔 Activar notificaciones en el móvil';
-          btn.style.borderColor = 'var(--gold-dim)';
-        } else {
-          Notification.requestPermission().then(async function (perm) {
-            if (perm === 'granted') {
-              try {
-                var nuevaSub = await reg.pushManager.subscribe({
-                  userVisibleOnly: true,
-                  applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
-                });
-
-                var subData = nuevaSub.toJSON();
-                await sb.from('suscripciones').insert({
-                  endpoint: subData.endpoint,
-                  keys: subData.keys
-                });
-
-                alert('¡Notificaciones activadas con éxito!');
-                btn.textContent = '🔕 Desactivar notificaciones';
-                btn.style.borderColor = 'var(--red)';
-              } catch (e) {
-                alert('Error al suscribirse: ' + e.message);
-              }
-            } else {
-              alert('Permiso denegado. Si usas iPhone, ve a Ajustes > Tu App > Notificaciones y actívalas.');
-            }
-          });
-        }
-      });
-    };
-  }
-
-  if ('serviceWorker' in navigator && 'PushManager' in window) {
-    navigator.serviceWorker.register('./sw.js', { scope: './' })
-      .then(function (reg) {
-        inicializarNotificaciones(reg);
-      })
-      .catch(function (err) {
-        console.error('Error al registrar Service Worker:', err);
-      });
-  }
+  window.seleccionarGif = function(url) {
+    imagenBase64Principal = url;
+    var imgPrev = document.getElementById('imgPreview');
+    var prevCont = document.getElementById('contenedorPreview');
+    if (imgPrev) imgPrev.src = url;
+    if (prevCont) { prevCont.style.display = 'inline-block'; prevCont.removeAttribute('hidden'); }
+    document.getElementById('boxGif').style.display = 'none';
+  };
 
   var inputImgElem = document.getElementById('inputImg');
   if (inputImgElem) {
     inputImgElem.addEventListener('change', function (e) {
       var file = e.target.files[0];
-      if (!file) {
-        limpiarImagenPrincipal();
-        return;
-      }
+      if (!file) { limpiarImagenPrincipal(); return; }
       if (file.size > 5 * 1024 * 1024) { estado('La imagen es demasiado grande (máx 5MB).'); this.value = ''; return; }
 
       var reader = new FileReader();
@@ -519,18 +558,11 @@
         var rawBase64 = evt.target.result;
         var imgPrev = document.getElementById('imgPreview');
         var prevCont = document.getElementById('contenedorPreview');
-        
         if (imgPrev) imgPrev.src = rawBase64;
-        if (prevCont) {
-          prevCont.style.display = 'inline-block';
-          prevCont.removeAttribute('hidden');
-        }
+        if (prevCont) { prevCont.style.display = 'inline-block'; prevCont.removeAttribute('hidden'); }
 
         var img = new Image();
-        img.onload = function () {
-          imagenBase64Principal = optimizarImagen(img);
-          estado('');
-        };
+        img.onload = function () { imagenBase64Principal = optimizarImagen(img); estado(''); };
         img.src = rawBase64;
       };
       reader.readAsDataURL(file);
@@ -543,17 +575,7 @@
   var btnPub = document.getElementById('btnPublicar');
   if (btnPub) btnPub.addEventListener('click', publicar);
 
-  var txtArea = document.getElementById('texto');
-  if (txtArea) {
-    txtArea.addEventListener('input', function () {
-      var cnt = document.getElementById('contador');
-      if (cnt) cnt.textContent = this.value.length;
-    });
-  }
-
-  // Forzar reseteo de la vista previa al cargar
   limpiarImagenPrincipal();
-
   cargar();
   activarRealtime();
 })();
