@@ -44,9 +44,9 @@
   .preview-adjunto button { position:absolute; top:-6px; right:-6px; background:var(--red); color:#fff; border:none; border-radius:50%; width:20px; height:20px; cursor:pointer; font-size:12px; line-height:1; }
 
   /* GIFs */
-  .gif-container { display:grid; grid-template-columns: repeat(auto-fill, minmax(85px, 1fr)); gap:6px; max-height:180px; overflow-y:auto; margin-top:10px; }
-  .gif-container img { width:100%; height:70px; object-fit:cover; border-radius:4px; cursor:pointer; border:1px solid transparent; }
-  .gif-container img:hover { border-color:var(--gold); }
+  .gif-container { display:grid; grid-template-columns: repeat(auto-fill, minmax(85px, 1fr)); gap:6px; max-height:200px; overflow-y:auto; margin-top:10px; }
+  .gif-container img { width:100%; height:75px; object-fit:cover; border-radius:4px; cursor:pointer; border:1px solid transparent; transition:transform 0.1s; }
+  .gif-container img:hover { border-color:var(--gold); transform:scale(1.03); }
   .tags-gif { display:flex; gap:5px; margin-top:8px; flex-wrap:wrap; }
   .tag-gif { background:rgba(255,255,255,0.08); border:none; color:var(--white); font-size:0.72rem; padding:4px 8px; border-radius:3px; cursor:pointer; }
   .tag-gif:hover { background:var(--gold); color:var(--navy); }
@@ -154,16 +154,16 @@
 
       <div id="boxGif" style="display:none; margin-bottom:14px; background:rgba(2,18,52,0.8); padding:10px; border-radius:4px;">
         <div style="display:flex; gap:6px;">
-          <input type="text" id="searchGif" placeholder="Buscar GIF (ej: gol, risa, amor)..." style="flex:1;">
+          <input type="text" id="searchGif" placeholder="Busca lo que quieras (ej: risa, gol, llorar, fiesta)..." style="flex:1;">
           <button type="button" class="boton" id="btnBuscarGif" style="padding:6px 12px; font-size:0.8rem;">Buscar</button>
         </div>
         <div class="tags-gif">
-          <button type="button" class="tag-gif" onclick="buscarTagGif('futbol')">⚽ Fútbol</button>
-          <button type="button" class="tag-gif" onclick="buscarTagGif('risa')">😂 Risa</button>
-          <button type="button" class="tag-gif" onclick="buscarTagGif('amor')">❤️ Amor</button>
-          <button type="button" class="tag-gif" onclick="buscarTagGif('celebracion')">🎉 Celebración</button>
-          <button type="button" class="tag-gif" onclick="buscarTagGif('enfado')">😡 Enfado</button>
-          <button type="button" class="tag-gif" onclick="buscarTagGif('aplauso')">👏 Aplauso</button>
+          <button type="button" class="tag-gif" onclick="buscarTagGif('trending')">🔥 Tendencias</button>
+          <button type="button" class="tag-gif" onclick="buscarTagGif('soccer football goal')">⚽ Fútbol</button>
+          <button type="button" class="tag-gif" onclick="buscarTagGif('laughing funny')">😂 Risa</button>
+          <button type="button" class="tag-gif" onclick="buscarTagGif('love heart')">❤️ Corazón</button>
+          <button type="button" class="tag-gif" onclick="buscarTagGif('party celebration')">🎉 Fiesta</button>
+          <button type="button" class="tag-gif" onclick="buscarTagGif('angry mad')">😡 Enfado</button>
         </div>
         <div id="contenedorGifs" class="gif-container"></div>
       </div>
@@ -254,27 +254,29 @@
     return canvas.toDataURL('image/jpeg', 0.82);
   }
 
-  // Sistema híbrido de GIFs blindado (Galería curada instantánea + búsqueda inteligente)
+  // Motor de búsqueda de GIFs abierto y sin límites utilizando el proxy público global de Giphy
   function buscarGifsApi(query, callback) {
-    var q = (query || 'futbol').toLowerCase().trim();
-    
-    var bancoGifs = {
-      'futbol': ['https://media2.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif', 'https://media3.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif', 'https://media1.giphy.com/media/xT5LMFZDsj0AKUDYTS/giphy.gif', 'https://media0.giphy.com/media/l4FGuhL3U2WyjkaY8/giphy.gif', 'https://media4.giphy.com/media/3o7aD2saalBwwfBIly/giphy.gif', 'https://media5.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif'],
-      'risa': ['https://media3.giphy.com/media/l0HlHFRbmaZtBRhXG/giphy.gif', 'https://media2.giphy.com/media/13CoXDiaCcCoyk/giphy.gif', 'https://media1.giphy.com/media/10JhviFuU2gWD6/giphy.gif', 'https://media0.giphy.com/media/10Wx3nIsibQAMw/giphy.gif'],
-      'amor': ['https://media2.giphy.com/media/3og0IPWYmxGHjzg0Cs/giphy.gif', 'https://media3.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif', 'https://media4.giphy.com/media/l0HlDy6ikjspsOKic/giphy.gif', 'https://media1.giphy.com/media/3o7TKsQ8UQY8gAKjks/giphy.gif'],
-      'corazon': ['https://media2.giphy.com/media/3og0IPWYmxGHjzg0Cs/giphy.gif', 'https://media3.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif', 'https://media4.giphy.com/media/l0HlDy6ikjspsOKic/giphy.gif'],
-      'celebracion': ['https://media4.giphy.com/media/artj92V8o75VPL7AeQ/giphy.gif', 'https://media2.giphy.com/media/g9582D3QppSCivf6yV/giphy.gif', 'https://media3.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif'],
-      'enfado': ['https://media1.giphy.com/media/3o7TKRBB3w70VlS2Hu/giphy.gif', 'https://media0.giphy.com/media/5UqMjjqmMij49W3lVM/giphy.gif', 'https://media2.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif'],
-      'aplauso': ['https://media3.giphy.com/media/qlrBlSDevEdRCWzJwl/giphy.gif', 'https://media4.giphy.com/media/7rj2ZgttvgomY/giphy.gif', 'https://media1.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif']
-    };
+    var q = (query || 'trending').trim();
+    var endpoint = '';
 
-    // Traducción rápida de palabras comunes en español a inglés para la API de Giphy
-    var traducciones = { 'corazon': 'heart', 'amor': 'love', 'risa': 'funny laugh', 'futbol': 'soccer football', 'enfado': 'angry', 'aplauso': 'applause clap', 'celebracion': 'celebration' };
-    var queryApi = traducciones[q] || q;
+    if (q === 'trending') {
+      endpoint = 'https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=20';
+    } else {
+      // Pequeño diccionario de sinónimos comunes en español para enriquecer la búsqueda global
+      var sinónimos = {
+        'corazon': 'heart love',
+        'amor': 'love heart',
+        'risa': 'laughing funny lolo',
+        'futbol': 'soccer football goal',
+        'gol': 'soccer goal celebration',
+        'llorar': 'crying sad',
+        'enfado': 'angry mad',
+        'fiesta': 'party celebration'
+      };
+      var terminoFinal = sinónimos[q.toLowerCase()] || q;
+      endpoint = 'https://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=' + encodeURIComponent(terminoFinal) + '&limit=20&rating=g';
+    }
 
-    var seleccionLocal = bancoGifs[q] || bancoGifs['futbol'];
-    var endpoint = 'https://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=' + encodeURIComponent(queryApi) + '&limit=12';
-    
     fetch(endpoint)
       .then(function(res){ return res.json(); })
       .then(function(data){
@@ -284,20 +286,27 @@
           }).filter(Boolean);
           callback(urls);
         } else {
-          callback(seleccionLocal);
+          // Búsqueda de respaldo en trending si la específica no devuelve resultados
+          fetch('https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=20')
+            .then(function(r){ return r.json(); })
+            .then(function(d){
+              var urls = (d && d.data) ? d.data.map(function(i){ return i.images.fixed_height_small.url; }) : [];
+              callback(urls);
+            }).catch(function(){ callback([]); });
         }
       })
-      .catch(function(){ 
-        callback(seleccionLocal); 
-      });
+      .catch(function(){ callback([]); });
   }
 
   window.buscarTagGif = function(tag) {
     var inputSearch = document.getElementById('searchGif');
-    if (inputSearch) inputSearch.value = tag;
+    if (inputSearch && tag !== 'trending') inputSearch.value = tag.split(' ')[0];
+    else if (inputSearch) inputSearch.value = '';
+
     buscarGifsApi(tag, function(urls) {
       var cont = document.getElementById('contenedorGifs');
       if (cont) {
+        if (!urls.length) { cont.innerHTML = '<span style="font-size:0.8rem; color:var(--grey);">Escribe otra palabra para buscar...</span>'; return; }
         cont.innerHTML = urls.map(function(url){
           return '<img src="' + url + '" onclick="window.seleccionarGif(\'' + url + '\')">';
         }).join('');
@@ -566,7 +575,7 @@
   }
 
   function buscarGifRespuestaInicial(msgId) {
-    buscarGifsApi('futbol', function(urls) {
+    buscarGifsApi('trending', function(urls) {
       var cont = document.getElementById('reply-gifs-cont-' + msgId);
       if (cont) {
         cont.innerHTML = urls.map(function(url){
@@ -578,7 +587,7 @@
 
   function buscarGifRespuesta(msgId) {
     var input = document.getElementById('reply-search-gif-' + msgId);
-    var q = (input ? input.value.trim() : '') || 'futbol';
+    var q = (input ? input.value.trim() : '') || 'trending';
     buscarGifsApi(q, function(urls) {
       var cont = document.getElementById('reply-gifs-cont-' + msgId);
       if (cont) {
@@ -692,7 +701,7 @@
     var isOpen = b.style.display === 'block';
     b.style.display = isOpen ? 'none' : 'block';
     if (!isOpen) {
-      buscarTagGif('futbol');
+      buscarTagGif('trending');
     }
   };
 
@@ -702,9 +711,10 @@
   };
 
   document.getElementById('btnBuscarGif').onclick = function() {
-    var q = document.getElementById('searchGif').value.trim() || 'futbol';
+    var q = document.getElementById('searchGif').value.trim() || 'trending';
     buscarGifsApi(q, function(urls) {
       var cont = document.getElementById('contenedorGifs');
+      if (!urls.length) { cont.innerHTML = '<span style="font-size:0.8rem; color:var(--grey);">No se encontraron GIFs. Prueba otra palabra.</span>'; return; }
       cont.innerHTML = urls.map(function(url){
         return '<img src="' + url + '" onclick="seleccionarGif(\'' + url + '\')">';
       }).join('');
@@ -747,9 +757,9 @@
   if (btnQuitar) btnQuitar.addEventListener('click', limpiarImagenPrincipal);
 
   var btnPub = document.getElementById('btnPublicar');
-  if (btnPub) btnPub.getElementById = publicar; // Nota: corregido en bloque de asignación inferior
   if (btnPub) btnPub.addEventListener('click', publicar);
 
+  limpiarImagePrincipal = limpiarImagenPrincipal;
   limpiarImagenPrincipal();
   cargar();
   activarRealtime();
