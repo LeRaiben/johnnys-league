@@ -44,7 +44,7 @@
   /* Mensajes e Hilos */
   .lista-msg { display:grid; gap:16px; }
   .msg-card { background:var(--navy-soft); border-left:3px solid var(--gold); border-radius:0 4px 4px 0; padding:16px 18px; }
-  .msg-card.respuesta { background:rgba(2, 18, 52, 0.4); border-left:2px solid var(--grey); margin-top:10px; margin-left:20px; }
+  .msg-card.respuesta { background:rgba(2, 18, 52, 0.4); border-left:2px solid var(--grey); margin-top:10px; margin-left:18px; }
   
   .msg-card .cab { display:flex; align-items:baseline; gap:10px; margin-bottom:8px; flex-wrap:wrap; }
   .msg-card .autor { font-family:'Anton',sans-serif; font-size:0.98rem; color:var(--gold); }
@@ -198,25 +198,22 @@
     return canvas.toDataURL('image/jpeg', 0.82);
   }
 
-  function renderCard(m, esRespuesta) {
+  function renderCard(m, esRespuesta, rootPadreId) {
     var htmlImg = m.imagen ? '<a href="' + m.imagen + '" target="_blank"><img class="img-adjunta" src="' + m.imagen + '" alt="Imagen adjunta"></a>' : '';
     var claseExtra = esRespuesta ? ' respuesta' : '';
-    
-    var htmlAcciones = '<div class="acciones-msg">';
-    if (!esRespuesta) {
-      htmlAcciones += '<button class="btn-accion btn-toggle-reply" data-id="' + m.id + '">💬 Responder</button>';
-    }
-    htmlAcciones += '<button class="btn-accion borrar" data-id="' + m.id + '">🗑️ Borrar</button></div>';
+    var idPadreParaGuardar = esRespuesta ? rootPadreId : m.id;
 
-    var htmlFormRespuesta = '';
-    if (!esRespuesta) {
-      htmlFormRespuesta = '<div class="form-respuesta" id="reply-box-' + m.id + '" hidden>' +
-        '<div class="campo"><label>Tu Nombre / Equipo</label><input type="text" id="reply-name-' + m.id + '" placeholder="Ej: Presi Rayo"></div>' +
-        '<div class="campo"><label>Respuesta</label><textarea id="reply-text-' + m.id + '" placeholder="Escribe tu respuesta..."></textarea></div>' +
-        '<div class="campo"><label>Imagen (Opcional)</label><input type="file" id="reply-img-' + m.id + '" accept="image/*" style="color:var(--grey); font-size:0.8rem;"></div>' +
-        '<button class="boton btn-send-reply" data-id="' + m.id + '">Enviar Respuesta</button>' +
-      '</div>';
-    }
+    var htmlAcciones = '<div class="acciones-msg">' +
+      '<button class="btn-accion btn-toggle-reply" data-id="' + m.id + '">💬 Responder</button>' +
+      '<button class="btn-accion borrar" data-id="' + m.id + '">🗑️ Borrar</button>' +
+    '</div>';
+
+    var htmlFormRespuesta = '<div class="form-respuesta" id="reply-box-' + m.id + '" hidden>' +
+      '<div class="campo"><label>Tu Nombre / Equipo</label><input type="text" id="reply-name-' + m.id + '" placeholder="Ej: Presi Rayo"></div>' +
+      '<div class="campo"><label>Respuesta</label><textarea id="reply-text-' + m.id + '" placeholder="Escribe tu respuesta...">@' + esc(m.nombre) + ' </textarea></div>' +
+      '<div class="campo"><label>Imagen (Opcional)</label><input type="file" id="reply-img-' + m.id + '" accept="image/*" style="color:var(--grey); font-size:0.8rem;"></div>' +
+      '<button class="boton btn-send-reply" data-id="' + m.id + '" data-rootid="' + idPadreParaGuardar + '">Enviar Respuesta</button>' +
+    '</div>';
 
     return '<div class="msg-card' + claseExtra + '">' +
       '<div class="cab">' +
@@ -233,7 +230,6 @@
   function pintar(mensajes) {
     var cont = document.getElementById('lista');
     
-    // Separar principales de respuestas
     var principales = mensajes.filter(function(m){ return !m.mensaje_padre_id; });
     var respuestas = mensajes.filter(function(m){ return m.mensaje_padre_id; });
 
@@ -246,15 +242,14 @@
 
     cont.innerHTML = '<div class="lista-msg">' + principales.map(function (p) {
       var misRespuestas = respuestas.filter(function(r){ return r.mensaje_padre_id === p.id; });
-      // Ordenar respuestas cronológicamente (más antiguas primero)
       misRespuestas.sort(function(a,b){ return new Date(a.creado) - new Date(b.creado); });
 
-      var htmlRespuestas = misRespuestas.map(function(r){ return renderCard(r, true); }).join('');
+      var htmlRespuestas = misRespuestas.map(function(r){ return renderCard(r, true, p.id); }).join('');
 
-      return '<div>' + renderCard(p, false) + htmlRespuestas + '</div>';
+      return '<div>' + renderCard(p, false, p.id) + htmlRespuestas + '</div>';
     }).join('') + '</div>';
 
-    // Eventos de botones
+    // Eventos
     cont.querySelectorAll('.borrar').forEach(function (b) {
       b.addEventListener('click', function () { borrar(b.dataset.id); });
     });
@@ -267,7 +262,7 @@
     });
 
     cont.querySelectorAll('.btn-send-reply').forEach(function (b) {
-      b.addEventListener('click', function () { enviarRespuesta(b.dataset.id); });
+      b.addEventListener('click', function () { enviarRespuesta(b.dataset.id, b.dataset.rootid); });
     });
   }
 
@@ -305,10 +300,10 @@
     cargar();
   }
 
-  async function enviarRespuesta(padreId) {
-    var nomInput = document.getElementById('reply-name-' + padreId);
-    var txtInput = document.getElementById('reply-text-' + padreId);
-    var fileInput = document.getElementById('reply-img-' + padreId);
+  async function enviarRespuesta(msgId, rootPadreId) {
+    var nomInput = document.getElementById('reply-name-' + msgId);
+    var txtInput = document.getElementById('reply-text-' + msgId);
+    var fileInput = document.getElementById('reply-img-' + msgId);
 
     var nombre = nomInput.value.trim();
     var texto = txtInput.value.trim();
@@ -335,7 +330,7 @@
       nombre: nombre,
       texto: texto,
       imagen: imgBase64,
-      mensaje_padre_id: padreId
+      mensaje_padre_id: rootPadreId
     });
 
     if (r.error) { alert('Error al responder: ' + r.error.message); return; }
@@ -343,7 +338,7 @@
   }
 
   async function borrar(id) {
-    if (!confirm('¿Borrar este mensaje? Si es una publicación principal, también se borrarán sus respuestas.')) return;
+    if (!confirm('¿Borrar este mensaje?')) return;
     var r = await sb.from('mensajes').delete().eq('id', id);
     if (r.error) { estado('No se ha podido borrar: ' + r.error.message); return; }
     cargar();
