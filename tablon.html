@@ -321,7 +321,7 @@
     }
   }
 
-  function pintarGifs(urls, contenedor) {
+  function pintarGifs(urls, contenedor, msgId) {
     if (!contenedor) return;
     if (!urls || !urls.length) {
       contenedor.innerHTML = '<span style="font-size:0.8rem; color:var(--grey);">No se encontraron GIFs.</span>';
@@ -329,6 +329,9 @@
     }
     contenedor.innerHTML = urls.map(function(url) {
       var escUrl = url.replace(/'/g, "\\'");
+      if (msgId) {
+        return '<img src="' + esc(url) + '" loading="lazy" alt="GIF" onclick="window.seleccionarGifReply(\'' + msgId + '\', \'' + escUrl + '\')">';
+      }
       return '<img src="' + esc(url) + '" loading="lazy" alt="GIF" onclick="window.seleccionarGif(\'' + escUrl + '\')">';
     }).join('');
   }
@@ -608,7 +611,7 @@
   function buscarGifRespuestaInicial(msgId) {
     buscarGifsApi('trending', function(urls) {
       var cont = document.getElementById('reply-gifs-cont-' + msgId);
-      pintarGifs(urls, cont);
+      pintarGifs(urls, cont, msgId);
     });
   }
 
@@ -617,7 +620,7 @@
     var q = (input ? input.value.trim() : '') || 'trending';
     buscarGifsApi(q, function(urls) {
       var cont = document.getElementById('reply-gifs-cont-' + msgId);
-      pintarGifs(urls, cont);
+      pintarGifs(urls, cont, msgId);
     });
   }
 
@@ -735,7 +738,10 @@
           return;
         }
 
-        var registration = await navigator.serviceWorker.ready;
+        // Registrar/asegurar Service Worker antes de solicitar suscripción
+        var registration = await navigator.serviceWorker.register('sw.js');
+        await navigator.serviceWorker.ready;
+
         var subscription = await registration.pushManager.subscribe({
           userVisibleOnly: true,
           applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
@@ -784,6 +790,14 @@
         e.preventDefault();
         document.getElementById('btnBuscarGif').click();
       }
+    });
+  }
+
+  var textareaElem = document.getElementById('texto');
+  if (textareaElem) {
+    textareaElem.addEventListener('input', function() {
+      var contador = document.getElementById('contador');
+      if (contador) contador.textContent = this.value.length;
     });
   }
 
