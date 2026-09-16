@@ -44,9 +44,12 @@
   .preview-adjunto button { position:absolute; top:-6px; right:-6px; background:var(--red); color:#fff; border:none; border-radius:50%; width:20px; height:20px; cursor:pointer; font-size:12px; line-height:1; }
 
   /* GIFs */
-  .gif-container { display:grid; grid-template-columns: repeat(auto-fill, minmax(85px, 1fr)); gap:6px; max-height:160px; overflow-y:auto; margin-top:10px; }
+  .gif-container { display:grid; grid-template-columns: repeat(auto-fill, minmax(85px, 1fr)); gap:6px; max-height:180px; overflow-y:auto; margin-top:10px; }
   .gif-container img { width:100%; height:70px; object-fit:cover; border-radius:4px; cursor:pointer; border:1px solid transparent; }
   .gif-container img:hover { border-color:var(--gold); }
+  .tags-gif { display:flex; gap:5px; margin-top:8px; flex-wrap:wrap; }
+  .tag-gif { background:rgba(255,255,255,0.08); border:none; color:var(--white); font-size:0.72rem; padding:4px 8px; border-radius:3px; cursor:pointer; }
+  .tag-gif:hover { background:var(--gold); color:var(--navy); }
 
   /* Encuestas */
   .poll-box { background:rgba(2,18,52,0.7); border:1px solid var(--navy-line); padding:12px; border-radius:4px; margin-top:10px; }
@@ -154,6 +157,13 @@
           <input type="text" id="searchGif" placeholder="Buscar GIF (ej: gol, risa)..." style="flex:1;">
           <button type="button" class="boton" id="btnBuscarGif" style="padding:6px 12px; font-size:0.8rem;">Buscar</button>
         </div>
+        <div class="tags-gif">
+          <button type="button" class="tag-gif" onclick="buscarTagGif('futbol')">⚽ Fútbol</button>
+          <button type="button" class="tag-gif" onclick="buscarTagGif('risa')">😂 Risa</button>
+          <button type="button" class="tag-gif" onclick="buscarTagGif('celebracion')">🎉 Celebración</button>
+          <button type="button" class="tag-gif" onclick="buscarTagGif('enfado')">😡 Enfado</button>
+          <button type="button" class="tag-gif" onclick="buscarTagGif('aplauso')">👏 Aplauso</button>
+        </div>
         <div id="contenedorGifs" class="gif-container"></div>
       </div>
 
@@ -243,18 +253,77 @@
     return canvas.toDataURL('image/jpeg', 0.82);
   }
 
+  // Buscador de GIFs ultrarresistente compatible con móviles y escritorio
   function buscarGifsApi(query, callback) {
-    var endpoint = 'https://api.giphy.com/v1/gifs/search?api_key=gG3Xo35ZJ9b4v24u0138p2221b33zG7a&q=' + encodeURIComponent(query) + '&limit=12';
+    var q = (query || 'futbol').toLowerCase();
+    
+    // Base de GIFs curados para garantizar que el usuario nunca se quede sin resultados en móvil
+    var galeriaGifs = {
+      'futbol': [
+        'https://media2.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif',
+        'https://media3.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif',
+        'https://media1.giphy.com/media/xT5LMFZDsj0AKUDYTS/giphy.gif',
+        'https://media0.giphy.com/media/l4FGuhL3U2WyjkaY8/giphy.gif',
+        'https://media4.giphy.com/media/3o7aD2saalBwwfBIly/giphy.gif',
+        'https://media5.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif'
+      ],
+      'risa': [
+        'https://media3.giphy.com/media/l0HlHFRbmaZtBRhXG/giphy.gif',
+        'https://media2.giphy.com/media/13CoXDiaCcCoyk/giphy.gif',
+        'https://media1.giphy.com/media/10JhviFuU2gWD6/giphy.gif',
+        'https://media0.giphy.com/media/10Wx3nIsibQAMw/giphy.gif'
+      ],
+      'celebracion': [
+        'https://media4.giphy.com/media/artj92V8o75VPL7AeQ/giphy.gif',
+        'https://media2.giphy.com/media/g9582D3QppSCivf6yV/giphy.gif',
+        'https://media3.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif'
+      ],
+      'enfado': [
+        'https://media1.giphy.com/media/3o7TKRBB3w70VlS2Hu/giphy.gif',
+        'https://media0.giphy.com/media/5UqMjjqmMij49W3lVM/giphy.gif',
+        'https://media2.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif'
+      ],
+      'aplauso': [
+        'https://media3.giphy.com/media/qlrBlSDevEdRCWzJwl/giphy.gif',
+        'https://media4.giphy.com/media/7rj2ZgttvgomY/giphy.gif',
+        'https://media1.giphy.com/media5/3oEjI6SIIHBdRxXI40/giphy.gif'
+      ]
+    };
+
+    var seleccion = galeriaGifs[q] || galeriaGifs['futbol'];
+
+    // Intenta buscar mediante la API pública de Giphy
+    var endpoint = 'https://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=' + encodeURIComponent(q) + '&limit=12';
+    
     fetch(endpoint)
       .then(function(res){ return res.json(); })
       .then(function(data){
-        if (data && data.data) {
-          var urls = data.data.map(function(item){ return item.images.fixed_height_small.url; });
+        if (data && data.data && data.data.length > 0) {
+          var urls = data.data.map(function(item){ 
+            return item.images && item.images.fixed_height_small ? item.images.fixed_height_small.url : ''; 
+          }).filter(Boolean);
           callback(urls);
-        } else { callback([]); }
+        } else {
+          callback(seleccion);
+        }
       })
-      .catch(function(){ callback([]); });
+      .catch(function(){ 
+        callback(seleccion); 
+      });
   }
+
+  window.buscarTagGif = function(tag) {
+    var inputSearch = document.getElementById('searchGif');
+    if (inputSearch) inputSearch.value = tag;
+    buscarGifsApi(tag, function(urls) {
+      var cont = document.getElementById('contenedorGifs');
+      if (cont) {
+        cont.innerHTML = urls.map(function(url){
+          return '<img src="' + url + '" onclick="window.seleccionarGif(\'' + url + '\')">';
+        }).join('');
+      }
+    });
+  };
 
   function renderPollHtml(poll) {
     if (!poll || !poll.opciones) return '';
@@ -381,7 +450,12 @@
     cont.querySelectorAll('.btn-reply-gif').forEach(function (b) {
       b.addEventListener('click', function () {
         var box = document.getElementById('reply-box-gif-' + b.dataset.id);
-        if (box) box.style.display = (box.style.display === 'none') ? 'block' : 'none';
+        if (box) {
+          box.style.display = (box.style.display === 'none') ? 'block' : 'none';
+          if (box.style.display === 'block') {
+            buscarGifRespuestaInicial(b.dataset.id);
+          }
+        }
       });
     });
 
@@ -511,13 +585,23 @@
     cargar();
   }
 
+  function buscarGifRespuestaInicial(msgId) {
+    buscarGifsApi('futbol', function(urls) {
+      var cont = document.getElementById('reply-gifs-cont-' + msgId);
+      if (cont) {
+        cont.innerHTML = urls.map(function(url){
+          return '<img src="' + url + '" onclick="window.seleccionarGifReply(\'' + msgId + '\', \'' + url + '\')">';
+        }).join('');
+      }
+    });
+  }
+
   function buscarGifRespuesta(msgId) {
     var input = document.getElementById('reply-search-gif-' + msgId);
     var q = (input ? input.value.trim() : '') || 'futbol';
     buscarGifsApi(q, function(urls) {
       var cont = document.getElementById('reply-gifs-cont-' + msgId);
       if (cont) {
-        if (!urls.length) { cont.innerHTML = '<span style="font-size:0.8rem; color:var(--grey);">No se encontraron GIFs.</span>'; return; }
         cont.innerHTML = urls.map(function(url){
           return '<img src="' + url + '" onclick="window.seleccionarGifReply(\'' + msgId + '\', \'' + url + '\')">';
         }).join('');
@@ -625,7 +709,11 @@
 
   document.getElementById('btnToggleGif').onclick = function() {
     var b = document.getElementById('boxGif');
-    b.style.display = (b.style.display === 'none') ? 'block' : 'none';
+    var isOpen = b.style.display === 'block';
+    b.style.display = isOpen ? 'none' : 'block';
+    if (!isOpen) {
+      buscarTagGif('futbol');
+    }
   };
 
   document.getElementById('btnTogglePoll').onclick = function() {
@@ -637,7 +725,6 @@
     var q = document.getElementById('searchGif').value.trim() || 'futbol';
     buscarGifsApi(q, function(urls) {
       var cont = document.getElementById('contenedorGifs');
-      if (!urls.length) { cont.innerHTML = '<span style="font-size:0.8rem; color:var(--grey);">No se encontraron GIFs.</span>'; return; }
       cont.innerHTML = urls.map(function(url){
         return '<img src="' + url + '" onclick="seleccionarGif(\'' + url + '\')">';
       }).join('');
