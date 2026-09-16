@@ -117,6 +117,13 @@
   <section class="block" style="border-top:none; padding-top:0;">
     <div id="zonaEstado"></div>
 
+    <!-- Botón Notificaciones -->
+    <div style="margin-bottom: 20px; text-align: right;">
+      <button id="btnNotif" class="boton" style="background: var(--navy-soft); border: 1px solid var(--gold-dim); font-size: 0.82rem;">
+        🔔 Activar notificaciones en el móvil
+      </button>
+    </div>
+
     <!-- Publicar Mensaje Principal -->
     <div class="escribir">
       <div class="campo">
@@ -157,6 +164,7 @@
 (function () {
   var URL_SUPABASE = 'https://hgmswhslnuqlzqbvuifw.supabase.co';
   var CLAVE_PUBLICA = 'sb_publishable_mJwquJGh9WzRrxCrrceZng_B0GynTvN';
+  var VAPID_PUBLIC_KEY = 'BLBb_eng5V0_n__iZFFR3bKN-EpcbaLgSlcXrkMsj4SOK1HhvS2fbqUeNX2_5sDDKE-wTde4wB2j1Dxjgwcinjc';
 
   var sb = window.supabase.createClient(URL_SUPABASE, CLAVE_PUBLICA);
   var imagenBase64Principal = null;
@@ -209,7 +217,6 @@
     var idPadreParaGuardar = esRespuesta ? rootPadreId : m.id;
     var numLikes = m.likes || 0;
     
-    // Comprobar si el usuario local ya dio like
     var dioLike = localStorage.getItem('like_' + m.id) === 'true';
     var iconoCorazon = dioLike ? '❤️' : '🤍';
     var claseLiked = dioLike ? ' liked' : '';
@@ -300,7 +307,6 @@
 
     var nuevosLikes = yaDioLike ? Math.max(0, likesActuales - 1) : likesActuales + 1;
 
-    // Actualización visual rápida en pantalla
     var spanHeart = btnElement.querySelector('span:first-child');
     var spanCount = btnElement.querySelector('.count');
     
@@ -317,7 +323,6 @@
     spanCount.textContent = nuevosLikes;
     btnElement.dataset.likes = nuevosLikes;
 
-    // Guardar en Supabase
     await sb.from('mensajes').update({ likes: nuevosLikes }).eq('id', id);
   }
 
@@ -393,6 +398,73 @@
     imagenBase64Principal = null;
     document.getElementById('inputImg').value = '';
     document.getElementById('contenedorPreview').hidden = true;
+  }
+
+  // Lógica para registrar el Service Worker y notificaciones Push
+  function urlBase64ToUint8Array(base64String) {
+    var padding = '='.repeat((4 - base64String.length % 4) % 4);
+    var base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/');
+    var rawData = window.atob(base64);
+    var outputArray = new Uint8Array(rawData.length);
+    for (var i = 0; i < rawData.length; ++i) {
+      outputArray[i] = rawData.charCodeAt(i);
+    }
+    return outputArray;
+  }
+
+  async function actualizarEstadoBotonNotif(reg) {
+    var btn = document.getElementById('btnNotif');
+    if (!btn) return;
+
+    var sub = await reg.pushManager.getSubscription();
+    if (sub) {
+      btn.textContent = '🔕 Desactivar notificaciones';
+      btn.style.borderColor = 'var(--red)';
+    } else {
+      btn.textContent = '🔔 Activar notificaciones en el móvil';
+      btn.style.borderColor = 'var(--gold-dim)';
+    }
+
+    btn.onclick = async function () {
+      if (sub) {
+        await sub.unsubscribe();
+        await sb.from('suscripciones').delete().eq('endpoint', sub.endpoint);
+        alert('Notificaciones desactivadas.');
+      } else {
+        var perm = await Notification.requestPermission();
+        if (perm === 'granted') {
+          try {
+            var nuevaSub = await reg.pushManager.subscribe({
+              userVisibleOnly: true,
+              applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
+            });
+
+            var subData = nuevaSub.toJSON();
+            await sb.from('suscripciones').insert({
+              endpoint: subData.endpoint,
+              keys: subData.keys
+            });
+
+            alert('¡Notificaciones activadas con éxito!');
+          } catch (e) {
+            alert('Error al suscribirse: ' + e.message);
+          }
+        } else {
+          alert('Permiso denegado. Habilita las notificaciones en los ajustes de tu navegador.');
+        }
+      }
+      actualizarEstadoBotonNotif(reg);
+    };
+  }
+
+  if ('serviceWorker' in navigator && 'PushManager' in window) {
+    navigator.serviceWorker.register('sw.js')
+      .then(function (reg) {
+        actualizarEstadoBotonNotif(reg);
+      })
+      .catch(function (err) {
+        console.error('Error al registrar Service Worker:', err);
+      });
   }
 
   document.getElementById('inputImg').addEventListener('change', function (e) {
