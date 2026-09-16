@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-16T20:18:31.669Z",
+  "actualizado": "2026-09-16T20:34:06.538Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 6,
   "jornadaEnJuego": true,
@@ -72,7 +72,7 @@
       "fecha": "2026-09-16T19:30:00.000Z",
       "golesLocal": 4,
       "golesVisitante": 1,
-      "estado": "firstTime"
+      "estado": "break"
     },
     {
       "local": "Levante",
@@ -3192,7 +3192,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Atlético",
-            "dificultad": 50
+            "dificultad": 61
           },
           {
             "jornada": "Round 8",
@@ -3204,7 +3204,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Sevilla",
-            "dificultad": 53
+            "dificultad": 56
           }
         ]
       },
@@ -3296,7 +3296,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Atlético",
-            "dificultad": 50
+            "dificultad": 61
           },
           {
             "jornada": "Round 8",
@@ -3308,7 +3308,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Sevilla",
-            "dificultad": 53
+            "dificultad": 56
           }
         ]
       },
@@ -3480,7 +3480,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Atlético",
-            "dificultad": 50
+            "dificultad": 61
           },
           {
             "jornada": "Round 8",
@@ -3492,7 +3492,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Sevilla",
-            "dificultad": 53
+            "dificultad": 56
           }
         ]
       },
@@ -4682,7 +4682,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Atlético",
-            "dificultad": 50
+            "dificultad": 61
           },
           {
             "jornada": "Round 8",
@@ -4694,7 +4694,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Sevilla",
-            "dificultad": 53
+            "dificultad": 56
           }
         ]
       },
@@ -4890,7 +4890,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Atlético",
-            "dificultad": 50
+            "dificultad": 61
           },
           {
             "jornada": "Round 8",
@@ -4902,7 +4902,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Sevilla",
-            "dificultad": 53
+            "dificultad": 56
           }
         ]
       },
@@ -4996,7 +4996,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Atlético",
-            "dificultad": 50
+            "dificultad": 61
           },
           {
             "jornada": "Round 8",
@@ -5008,7 +5008,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Sevilla",
-            "dificultad": 53
+            "dificultad": 56
           }
         ]
       },
@@ -5126,7 +5126,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Atlético",
-            "dificultad": 50
+            "dificultad": 61
           },
           {
             "jornada": "Round 8",
@@ -5138,7 +5138,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Sevilla",
-            "dificultad": 53
+            "dificultad": 56
           }
         ]
       },
@@ -13755,24 +13755,6 @@
         "dificultad": 18
       },
       {
-        "nombre": "Camavinga",
-        "foto": "https://cdn.biwenger.com/i/p/1733.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Real Madrid",
-        "racha": [
-          6,
-          4,
-          4,
-          4,
-          3
-        ],
-        "rachaTitular": 0,
-        "nota": 5,
-        "rival": "Atlético",
-        "esLocal": false,
-        "dificultad": 50
-      },
-      {
         "nombre": "Oblak",
         "foto": "https://cdn.biwenger.com/i/p/1897.png",
         "posicion": "Portero",
@@ -13807,6 +13789,24 @@
         "rival": "Real Madrid",
         "esLocal": true,
         "dificultad": 64
+      },
+      {
+        "nombre": "Camavinga",
+        "foto": "https://cdn.biwenger.com/i/p/1733.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Real Madrid",
+        "racha": [
+          6,
+          4,
+          4,
+          4,
+          3
+        ],
+        "rachaTitular": 0,
+        "nota": 4.5,
+        "rival": "Atlético",
+        "esLocal": false,
+        "dificultad": 61
       },
       {
         "nombre": "Mariano",
@@ -13863,18 +13863,6 @@
         "dificultad": 39
       },
       {
-        "nombre": "Lunin",
-        "foto": "https://cdn.biwenger.com/i/p/15289.png",
-        "posicion": "Portero",
-        "equipoReal": "Real Madrid",
-        "racha": [],
-        "rachaTitular": 0,
-        "nota": 2.5,
-        "rival": "Atlético",
-        "esLocal": false,
-        "dificultad": 50
-      },
-      {
         "nombre": "Manu Bueno",
         "foto": "https://cdn.biwenger.com/i/p/26299.png",
         "posicion": "Centrocampista",
@@ -13888,6 +13876,18 @@
         "rival": "Barcelona",
         "esLocal": true,
         "dificultad": 89
+      },
+      {
+        "nombre": "Lunin",
+        "foto": "https://cdn.biwenger.com/i/p/15289.png",
+        "posicion": "Portero",
+        "equipoReal": "Real Madrid",
+        "racha": [],
+        "rachaTitular": 0,
+        "nota": 1.9,
+        "rival": "Atlético",
+        "esLocal": false,
+        "dificultad": 61
       }
     ],
     "CD Tiro Buchón": [
@@ -13904,10 +13904,10 @@
           15
         ],
         "rachaTitular": 0,
-        "nota": 7,
+        "nota": 6.5,
         "rival": "Atlético",
         "esLocal": false,
-        "dificultad": 50
+        "dificultad": 61
       },
       {
         "nombre": "Firpo",
@@ -14681,10 +14681,10 @@
           23
         ],
         "rachaTitular": 6,
-        "nota": 7.5,
+        "nota": 7,
         "rival": "Atlético",
         "esLocal": false,
-        "dificultad": 50
+        "dificultad": 61
       },
       {
         "nombre": "Recio",
@@ -14826,24 +14826,6 @@
         "dificultad": 46
       },
       {
-        "nombre": "Konaté",
-        "foto": "https://cdn.biwenger.com/i/p/41087.png",
-        "posicion": "Defensa",
-        "equipoReal": "Real Madrid",
-        "racha": [
-          4,
-          2,
-          2,
-          6,
-          6
-        ],
-        "rachaTitular": 5,
-        "nota": 4,
-        "rival": "Atlético",
-        "esLocal": false,
-        "dificultad": 50
-      },
-      {
         "nombre": "Villares",
         "foto": "https://cdn.biwenger.com/i/p/41076.png",
         "posicion": "Centrocampista",
@@ -14857,6 +14839,24 @@
         "rival": "Betis",
         "esLocal": true,
         "dificultad": 57
+      },
+      {
+        "nombre": "Konaté",
+        "foto": "https://cdn.biwenger.com/i/p/41087.png",
+        "posicion": "Defensa",
+        "equipoReal": "Real Madrid",
+        "racha": [
+          4,
+          2,
+          2,
+          6,
+          6
+        ],
+        "rachaTitular": 5,
+        "nota": 3.5,
+        "rival": "Atlético",
+        "esLocal": false,
+        "dificultad": 61
       },
       {
         "nombre": "Boselli",
@@ -14959,10 +14959,10 @@
           5
         ],
         "rachaTitular": 5,
-        "nota": 5,
+        "nota": 4.5,
         "rival": "Atlético",
         "esLocal": false,
-        "dificultad": 50
+        "dificultad": 61
       },
       {
         "nombre": "Vinícius Jr",
@@ -14977,10 +14977,10 @@
           13
         ],
         "rachaTitular": 6,
-        "nota": 4.5,
+        "nota": 4,
         "rival": "Atlético",
         "esLocal": false,
-        "dificultad": 50
+        "dificultad": 61
       },
       {
         "nombre": "Gordon",
@@ -16145,25 +16145,6 @@
       "presidente": "Gorila FC"
     },
     {
-      "nombre": "Mbappé",
-      "foto": "https://cdn.biwenger.com/i/p/19577.png",
-      "posicion": "Delantero",
-      "equipoReal": "Real Madrid",
-      "racha": [
-        15,
-        21,
-        0,
-        16,
-        23
-      ],
-      "rachaTitular": 6,
-      "nota": 7.5,
-      "rival": "Atlético",
-      "esLocal": false,
-      "dificultad": 50,
-      "presidente": "Cañoneros CF"
-    },
-    {
       "nombre": "Yangel Herrera",
       "foto": "https://cdn.biwenger.com/i/p/17344.png",
       "posicion": "Centrocampista",
@@ -16180,6 +16161,25 @@
       "rival": "Valencia",
       "esLocal": false,
       "dificultad": 18,
+      "presidente": "Madriguana FC"
+    },
+    {
+      "nombre": "Dmitrovic",
+      "foto": "https://cdn.biwenger.com/i/p/9090.png",
+      "posicion": "Portero",
+      "equipoReal": "Espanyol",
+      "racha": [
+        1,
+        10,
+        4,
+        9,
+        4
+      ],
+      "rachaTitular": 6,
+      "nota": 7.2,
+      "rival": "Elche",
+      "esLocal": true,
+      "dificultad": 12,
       "presidente": "Madriguana FC"
     }
   ],
