@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-16T22:47:58.940Z",
+  "actualizado": "2026-09-16T22:59:15.262Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 6,
   "jornadaEnJuego": true,
@@ -265,8 +265,8 @@
       "iniciales": "LC",
       "escudo": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
       "puntos": 169,
-      "valor": "45,2 M",
-      "valorBruto": 45240000,
+      "valor": "44,8 M",
+      "valorBruto": 44810000,
       "esTuyo": false,
       "puntosJornada": 38,
       "jugadosJornada": 5,
@@ -2066,7 +2066,7 @@
       "puestoActividad": 11,
       "vsMediaPuntos": -2,
       "vsMediaEficiencia": -11,
-      "vsMediaValor": 2,
+      "vsMediaValor": 3,
       "tendencia": null
     },
     {
@@ -2149,10 +2149,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
       "iniciales": "LC",
       "puntos": 169,
-      "valor": "45,2 M",
-      "valorBruto": 45240000,
+      "valor": "44,8 M",
+      "valorBruto": 44810000,
       "esTuyo": false,
-      "puntosPorMillon": 3.74,
+      "puntosPorMillon": 3.77,
       "mediaJornada": 28.2,
       "clausulasHechas": 2,
       "clausulasSufridas": 4,
@@ -2177,7 +2177,7 @@
       "puestoActividad": 5,
       "vsMediaPuntos": -30,
       "vsMediaEficiencia": -38,
-      "vsMediaValor": 5,
+      "vsMediaValor": 4,
       "tendencia": null
     },
     {
@@ -2591,32 +2591,6 @@
             "esLocal": true,
             "rival": "Espanyol",
             "dificultad": 48
-          }
-        ]
-      },
-      {
-        "nombre": "Ponce",
-        "posicion": "Delantero",
-        "foto": "https://cdn.biwenger.com/i/p/5534.png",
-        "equipoReal": "Elche",
-        "jornadas": [
-          {
-            "jornada": "Round 7",
-            "esLocal": false,
-            "rival": "Espanyol",
-            "dificultad": 57
-          },
-          {
-            "jornada": "Round 8",
-            "esLocal": true,
-            "rival": "Celta",
-            "dificultad": 36
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": false,
-            "rival": "Villarreal",
-            "dificultad": 26
           }
         ]
       },
@@ -6924,38 +6898,6 @@
       "margenPorcentaje": 50,
       "blindado": false,
       "blindadoHasta": null
-    },
-    {
-      "id": "5534",
-      "nombre": "Ponce",
-      "slug": "ezequiel-ponce",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/5534.png",
-      "equipoReal": "Elche",
-      "equipoIdReal": "75",
-      "presidente": "Lottin Capital",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
-      "precio": 430000,
-      "precioTexto": "0,4 M",
-      "puntosTotales": 10,
-      "partidosJugados": 3,
-      "media": 3.3,
-      "puntosPorMillon": 23.26,
-      "racha": [
-        2,
-        4,
-        4
-      ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 55,
-      "clausula": 1080000,
-      "clausulaTexto": "1,1 M",
-      "pagadoPorSuDueno": 540000,
-      "margen": 650000,
-      "margenPorcentaje": 151,
-      "blindado": true,
-      "blindadoHasta": "2026-09-25T05:10:53.000Z"
     },
     {
       "id": "5771",
@@ -12300,38 +12242,6 @@
         "blindadoHasta": null
       },
       {
-        "id": "5534",
-        "nombre": "Ponce",
-        "slug": "ezequiel-ponce",
-        "posicion": "Delantero",
-        "posicionCodigo": 4,
-        "foto": "https://cdn.biwenger.com/i/p/5534.png",
-        "equipoReal": "Elche",
-        "equipoIdReal": "75",
-        "presidente": "Lottin Capital",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
-        "precio": 430000,
-        "precioTexto": "0,4 M",
-        "puntosTotales": 10,
-        "partidosJugados": 3,
-        "media": 3.3,
-        "puntosPorMillon": 23.26,
-        "racha": [
-          2,
-          4,
-          4
-        ],
-        "rachaTitular": 0,
-        "ultimoMinutos": 55,
-        "clausula": 1080000,
-        "clausulaTexto": "1,1 M",
-        "pagadoPorSuDueno": 540000,
-        "margen": 650000,
-        "margenPorcentaje": 151,
-        "blindado": true,
-        "blindadoHasta": "2026-09-25T05:10:53.000Z"
-      },
-      {
         "id": "41932",
         "nombre": "Yeboah",
         "slug": "yeboah",
@@ -12394,6 +12304,40 @@
         "pagadoPorSuDueno": 331001,
         "margen": 870000,
         "margenPorcentaje": 100,
+        "blindado": false,
+        "blindadoHasta": null
+      },
+      {
+        "id": "27995",
+        "nombre": "Fran Pérez",
+        "slug": "francisco-perez",
+        "posicion": "Delantero",
+        "posicionCodigo": 4,
+        "foto": "https://cdn.biwenger.com/i/p/27995.png",
+        "equipoReal": "Rayo Vallecano",
+        "equipoIdReal": "70",
+        "presidente": "Madriguana FC",
+        "escudoPresidente": "https://cdn.biwenger.com/i/u/11412167.png?v=15",
+        "precio": 370000,
+        "precioTexto": "0,4 M",
+        "puntosTotales": 7,
+        "partidosJugados": 5,
+        "media": 1.4,
+        "puntosPorMillon": 18.92,
+        "racha": [
+          3,
+          -3,
+          3,
+          2,
+          2
+        ],
+        "rachaTitular": 0,
+        "ultimoMinutos": 14,
+        "clausula": 1110000,
+        "clausulaTexto": "1,1 M",
+        "pagadoPorSuDueno": 300000,
+        "margen": 740000,
+        "margenPorcentaje": 200,
         "blindado": false,
         "blindadoHasta": null
       }
@@ -13465,22 +13409,6 @@
         "rival": "Betis",
         "esLocal": true,
         "dificultad": 56
-      },
-      {
-        "nombre": "Ponce",
-        "foto": "https://cdn.biwenger.com/i/p/5534.png",
-        "posicion": "Delantero",
-        "equipoReal": "Elche",
-        "racha": [
-          2,
-          4,
-          4
-        ],
-        "rachaTitular": 0,
-        "nota": 3.6,
-        "rival": "Espanyol",
-        "esLocal": false,
-        "dificultad": 57
       },
       {
         "nombre": "Kevin Sánchez",
