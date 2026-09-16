@@ -144,12 +144,10 @@
   <section class="block" style="border-top:none; padding-top:0;">
     <div id="zonaEstado"></div>
 
-    <!-- Botón de Notificaciones Movil -->
     <button type="button" class="btn-notificaciones" id="btnNotificaciones">
       🔔 Activar notificaciones en el móvil
     </button>
 
-    <!-- Publicar Mensaje Principal -->
     <div class="escribir">
       <div class="campo">
         <label for="nombre">Tu Nombre / Equipo</label>
@@ -222,10 +220,22 @@
 (function () {
   var URL_SUPABASE = 'https://hgmswhslnuqlzqbvuifw.supabase.co';
   var CLAVE_PUBLICA = 'sb_publishable_mJwquJGh9WzRrxCrrceZng_B0GynTvN';
+  var VAPID_PUBLIC_KEY = 'BLBb_eng5V0_n__iZFFR3bKN-EpcbaLgSIcXrkMsj4SOK1HhvS2fbqUeNX2_5sDDKE-wTde4wB2j1Dxjgwcinjc';
 
   var sb = window.supabase.createClient(URL_SUPABASE, CLAVE_PUBLICA);
   var imagenBase64Principal = null;
   var imagenesRespuestas = {};
+
+  function urlBase64ToUint8Array(base64String) {
+    var padding = '='.repeat((4 - base64String.length % 4) % 4);
+    var base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/');
+    var rawData = window.atob(base64);
+    var outputArray = new Uint8Array(rawData.length);
+    for (var i = 0; i < rawData.length; ++i) {
+      outputArray[i] = rawData.charCodeAt(i);
+    }
+    return outputArray;
+  }
 
   var esc = function (s) {
     return String(s == null ? '' : s)
@@ -277,44 +287,15 @@
         'https://media3.giphy.com/media/l0HlHFRbmaZtBRhXG/giphy.gif',
         'https://media4.giphy.com/media/artj92V8o75VPL7AeQ/giphy.gif',
         'https://media1.giphy.com/media/xT5LMFZDsj0AKUDYTS/giphy.gif',
-        'https://media.tenor.com/images/508b8d454641600c73248678255bcf93/tenor.gif',
-        'https://media.tenor.com/images/9c38cc9f36f9a0c7793d508493d6a2ea/tenor.gif',
-        'https://media.tenor.com/images/223789a2468305c6d30e54452170364c/tenor.gif',
-        'https://media.tenor.com/images/d3161c911d51a660a92f87a81b373ea0/tenor.gif'
+        'https://media.tenor.com/images/508b8d454641600c73248678255bcf93/tenor.gif'
       ],
       'corazon': [
         'https://media2.giphy.com/media/3og0IPWYmxGHjzg0Cs/giphy.gif',
-        'https://media3.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif',
-        'https://media4.giphy.com/media/l0HlDy6ikjspsOKic/giphy.gif',
-        'https://media1.giphy.com/media/3o7TKsQ8UQY8gAKjks/giphy.gif'
-      ],
-      'amor': [
-        'https://media2.giphy.com/media/3og0IPWYmxGHjzg0Cs/giphy.gif',
-        'https://media3.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif',
-        'https://media4.giphy.com/media/l0HlDy6ikjspsOKic/giphy.gif'
+        'https://media3.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif'
       ],
       'futbol': [
         'https://media2.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif',
-        'https://media3.giphy.com/media/3oTKSjRrfIPjeiVyM/giphy.gif',
-        'https://media1.giphy.com/media/xT5LMFZDsj0AKUDYTS/giphy.gif',
-        'https://media0.giphy.com/media/l4FGuhL3U2WyjkaY8/giphy.gif',
-        'https://media4.giphy.com/media/3o7aD2saalBwwfBIly/giphy.gif'
-      ],
-      'risa': [
-        'https://media3.giphy.com/media/l0HlHFRbmaZtBRhXG/giphy.gif',
-        'https://media2.giphy.com/media/13CoXDiaCcCoyk/giphy.gif',
-        'https://media1.giphy.com/media/10JhviFuU2gWD6/giphy.gif',
-        'https://media0.giphy.com/media/10Wx3nIsibQAMw/giphy.gif'
-      ],
-      'fiesta': [
-        'https://media4.giphy.com/media/artj92V8o75VPL7AeQ/giphy.gif',
-        'https://media2.giphy.com/media/g9582D3QppSCivf6yV/giphy.gif',
-        'https://media3.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif'
-      ],
-      'enfado': [
-        'https://media1.giphy.com/media/3o7TKRBB3w70VlS2Hu/giphy.gif',
-        'https://media0.giphy.com/media/5UqMjjqmMij49W3lVM/giphy.gif',
-        'https://media2.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif'
+        'https://media3.giphy.com/media/3oTKSjRrfIPjeiVyM/giphy.gif'
       ]
     };
 
@@ -327,9 +308,7 @@
       if (!resp.ok) throw new Error('API Giphy bloqueada');
       var json = await resp.json();
       
-      if (!json.data || json.data.length === 0) {
-        throw new Error('Sin resultados en Giphy');
-      }
+      if (!json.data || json.data.length === 0) throw new Error('Sin resultados');
 
       var urls = json.data.map(function(item){
         return item.images && item.images.fixed_width ? item.images.fixed_width.url : null;
@@ -740,51 +719,36 @@
       .subscribe();
   }
 
-  // Lógica de Notificaciones con conversión limpia P-256
+  // EVENTO DE NOTIFICACIONES CORREGIDO
   var btnNotif = document.getElementById('btnNotificaciones');
   if (btnNotif) {
     btnNotif.onclick = async function() {
-      if (!('serviceWorker' in navigator) || !('PushManager' in window)) {
-        alert('Tu navegador no soporta notificaciones Web Push.');
-        return;
-      }
-
       try {
-        var permission = await Notification.requestPermission();
-        if (permission !== 'granted') {
-          alert('Has denegado o bloqueado las notificaciones.');
+        if (!('serviceWorker' in navigator) || !('PushManager' in window)) {
+          alert('Tu navegador no soporta notificaciones push.');
           return;
         }
 
-        var reg = await navigator.serviceWorker.register('./sw.js');
-        await navigator.serviceWorker.ready;
-
-        var VAPID_PUBLIC_KEY = 'BLBb_eng5V0_n__iZFFR3bKN-EpcbaLgSIcXrkMsj4SOK1HhvS2fbqUeNX2_5sDDKE-wTde4wB2j1Dxjgwcinjc';
-        
-        var base64 = VAPID_PUBLIC_KEY.trim().replace(/-/g, '+').replace(/_/g, '/');
-        while (base64.length % 4) {
-          base64 += '=';
-        }
-        var rawData = window.atob(base64);
-        var outputArray = new Uint8Array(rawData.length);
-        for (var i = 0; i < rawData.length; ++i) {
-          outputArray[i] = rawData.charCodeAt(i);
+        var permission = await Notification.requestPermission();
+        if (permission !== 'granted') {
+          alert('Has denegado el permiso para recibir notificaciones.');
+          return;
         }
 
-        var sub = await reg.pushManager.subscribe({
+        var registration = await navigator.serviceWorker.ready;
+        var subscription = await registration.pushManager.subscribe({
           userVisibleOnly: true,
-          applicationServerKey: outputArray
+          applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
         });
 
-        var res = await sb.from('suscripciones').upsert({
-          suscripcion: JSON.stringify(sub)
-        });
+        var resp = await sb.from('suscriptores_push').insert([
+          { subscription: JSON.stringify(subscription) }
+        ]);
 
-        if (res.error) throw res.error;
+        if (resp.error) throw resp.error;
 
-        alert('¡Notificaciones activadas correctamente!');
+        alert('¡Notificaciones activadas con éxito!');
       } catch (err) {
-        console.error('Error al suscribir:', err);
         alert('Error activando notificaciones: ' + err.message);
       }
     };
