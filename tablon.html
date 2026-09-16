@@ -413,8 +413,14 @@
     var prev = document.getElementById('contenedorPreview');
     var imgPrev = document.getElementById('imgPreview');
     if (inp) inp.value = '';
-    if (imgPrev) imgPrev.src = '';
-    if (prev) prev.style.display = 'none';
+    if (imgPrev) {
+      imgPrev.removeAttribute('src');
+      imgPrev.src = '';
+    }
+    if (prev) {
+      prev.style.display = 'none';
+      prev.setAttribute('hidden', 'true');
+    }
   }
 
   function activarRealtime() {
@@ -502,7 +508,10 @@
   if (inputImgElem) {
     inputImgElem.addEventListener('change', function (e) {
       var file = e.target.files[0];
-      if (!file) return;
+      if (!file) {
+        limpiarImagenPrincipal();
+        return;
+      }
       if (file.size > 5 * 1024 * 1024) { estado('La imagen es demasiado grande (máx 5MB).'); this.value = ''; return; }
 
       var reader = new FileReader();
@@ -512,7 +521,10 @@
         var prevCont = document.getElementById('contenedorPreview');
         
         if (imgPrev) imgPrev.src = rawBase64;
-        if (prevCont) prevCont.style.display = 'inline-block';
+        if (prevCont) {
+          prevCont.style.display = 'inline-block';
+          prevCont.removeAttribute('hidden');
+        }
 
         var img = new Image();
         img.onload = function () {
@@ -538,6 +550,9 @@
       if (cnt) cnt.textContent = this.value.length;
     });
   }
+
+  // Forzar reseteo de la vista previa al cargar
+  limpiarImagenPrincipal();
 
   cargar();
   activarRealtime();
