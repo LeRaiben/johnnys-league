@@ -412,55 +412,64 @@
     return outputArray;
   }
 
-  async function actualizarEstadoBotonNotif(reg) {
+  function inicializarNotificaciones(reg) {
     var btn = document.getElementById('btnNotif');
     if (!btn) return;
 
-    var sub = await reg.pushManager.getSubscription();
-    if (sub) {
-      btn.textContent = '🔕 Desactivar notificaciones';
-      btn.style.borderColor = 'var(--red)';
-    } else {
-      btn.textContent = '🔔 Activar notificaciones en el móvil';
-      btn.style.borderColor = 'var(--gold-dim)';
-    }
-
-    btn.onclick = async function () {
+    reg.pushManager.getSubscription().then(function (sub) {
       if (sub) {
-        await sub.unsubscribe();
-        await sb.from('suscripciones').delete().eq('endpoint', sub.endpoint);
-        alert('Notificaciones desactivadas.');
+        btn.textContent = '🔕 Desactivar notificaciones';
+        btn.style.borderColor = 'var(--red)';
       } else {
-        var perm = await Notification.requestPermission();
-        if (perm === 'granted') {
-          try {
-            var nuevaSub = await reg.pushManager.subscribe({
-              userVisibleOnly: true,
-              applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
-            });
-
-            var subData = nuevaSub.toJSON();
-            await sb.from('suscripciones').insert({
-              endpoint: subData.endpoint,
-              keys: subData.keys
-            });
-
-            alert('¡Notificaciones activadas con éxito!');
-          } catch (e) {
-            alert('Error al suscribirse: ' + e.message);
-          }
-        } else {
-          alert('Permiso denegado. Habilita las notificaciones en los ajustes de tu navegador.');
-        }
+        btn.textContent = '🔔 Activar notificaciones en el móvil';
+        btn.style.borderColor = 'var(--gold-dim)';
       }
-      actualizarEstadoBotonNotif(reg);
+    });
+
+    btn.onclick = function () {
+      reg.pushManager.getSubscription().then(async function (sub) {
+        if (sub) {
+          await sub.unsubscribe();
+          await sb.from('suscripciones').delete().eq('endpoint', sub.endpoint);
+          alert('Notificaciones desactivadas.');
+          btn.textContent = '🔔 Activar notificaciones en el móvil';
+          btn.style.borderColor = 'var(--gold-dim)';
+        } else {
+          // Solución para iOS: solicitar permiso síncronamente en el click
+          Notification.requestPermission().then(async function (perm) {
+            if (perm === 'granted') {
+              try {
+                var nuevaSub = await reg.pushManager.subscribe({
+                  userVisibleOnly: true,
+                  applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
+                });
+
+                var subData = nuevaSub.toJSON();
+                await sb.from('suscripciones').insert({
+                  endpoint: subData.endpoint,
+                  keys: subData.keys
+                });
+
+                alert('¡Notificaciones activadas con éxito!');
+                btn.textContent = '🔕 Desactivar notificaciones';
+                btn.style.borderColor = 'var(--red)';
+              } catch (e) {
+                alert('Error al suscribirse: ' + e.message);
+              }
+            } else {
+              alert('Permiso denegado. Si usas iPhone, ve a Ajustes > Tu App > Notificaciones y actívalas.');
+            }
+          });
+        }
+      });
     };
   }
 
+  // Registro del SW adaptado a GitHub Pages (scope relativo)
   if ('serviceWorker' in navigator && 'PushManager' in window) {
-    navigator.serviceWorker.register('sw.js')
+    navigator.serviceWorker.register('./sw.js', { scope: './' })
       .then(function (reg) {
-        actualizarEstadoBotonNotif(reg);
+        inicializarNotificaciones(reg);
       })
       .catch(function (err) {
         console.error('Error al registrar Service Worker:', err);
