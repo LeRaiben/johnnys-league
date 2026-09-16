@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-16T19:31:11.674Z",
+  "actualizado": "2026-09-16T19:47:01.283Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 6,
   "jornadaEnJuego": true,
@@ -70,9 +70,9 @@
       "escudoLocal": "https://cdn.biwenger.com/i/t/3.png",
       "escudoVisitante": "https://cdn.biwenger.com/i/t/812.png",
       "fecha": "2026-09-16T19:30:00.000Z",
-      "golesLocal": null,
-      "golesVisitante": null,
-      "estado": "preview"
+      "golesLocal": 1,
+      "golesVisitante": 0,
+      "estado": "firstTime"
     },
     {
       "local": "Levante",
@@ -2719,7 +2719,7 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": false,
             "rival": "Barcelona",
-            "dificultad": 91
+            "dificultad": null
           },
           {
             "jornada": "Round 7",
@@ -2901,7 +2901,7 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": false,
             "rival": "Barcelona",
-            "dificultad": 91
+            "dificultad": null
           },
           {
             "jornada": "Round 7",
@@ -3137,7 +3137,7 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": true,
             "rival": "Racing",
-            "dificultad": 30
+            "dificultad": null
           },
           {
             "jornada": "Round 7",
@@ -4287,7 +4287,7 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": false,
             "rival": "Barcelona",
-            "dificultad": 91
+            "dificultad": null
           },
           {
             "jornada": "Round 7",
@@ -4313,7 +4313,7 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": false,
             "rival": "Barcelona",
-            "dificultad": 91
+            "dificultad": null
           },
           {
             "jornada": "Round 7",
@@ -4627,7 +4627,7 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": false,
             "rival": "Barcelona",
-            "dificultad": 91
+            "dificultad": null
           },
           {
             "jornada": "Round 7",
@@ -5307,7 +5307,7 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": true,
             "rival": "Racing",
-            "dificultad": 30
+            "dificultad": null
           },
           {
             "jornada": "Round 7",
@@ -5333,7 +5333,7 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": false,
             "rival": "Barcelona",
-            "dificultad": 91
+            "dificultad": null
           },
           {
             "jornada": "Round 7",
@@ -5413,7 +5413,7 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": false,
             "rival": "Barcelona",
-            "dificultad": 91
+            "dificultad": null
           },
           {
             "jornada": "Round 7",
@@ -5753,7 +5753,7 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": true,
             "rival": "Racing",
-            "dificultad": 30
+            "dificultad": null
           },
           {
             "jornada": "Round 7",
@@ -5831,7 +5831,7 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": true,
             "rival": "Racing",
-            "dificultad": 30
+            "dificultad": null
           },
           {
             "jornada": "Round 7",
@@ -6256,7 +6256,7 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": true,
             "rival": "Racing",
-            "dificultad": 30
+            "dificultad": null
           },
           {
             "jornada": "Round 7",
@@ -6308,7 +6308,7 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": false,
             "rival": "Barcelona",
-            "dificultad": 91
+            "dificultad": null
           },
           {
             "jornada": "Round 7",
@@ -6419,7 +6419,7 @@
             "jornada": "Round 6 (postponed)",
             "esLocal": true,
             "rival": "Racing",
-            "dificultad": 30
+            "dificultad": null
           },
           {
             "jornada": "Round 7",
@@ -13334,6 +13334,23 @@
         "dificultad": 46
       },
       {
+        "nombre": "Iván Martín",
+        "foto": "https://cdn.biwenger.com/i/p/12403.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Racing",
+        "racha": [
+          4,
+          6,
+          5,
+          4
+        ],
+        "rachaTitular": 3,
+        "nota": 5,
+        "rival": "Barcelona",
+        "esLocal": false,
+        "dificultad": null
+      },
+      {
         "nombre": "Yeray",
         "foto": "https://cdn.biwenger.com/i/p/5771.png",
         "posicion": "Defensa",
@@ -13347,6 +13364,21 @@
         "rachaTitular": 1,
         "nota": 4.8,
         "rival": "Levante",
+        "esLocal": false,
+        "dificultad": null
+      },
+      {
+        "nombre": "Belocian",
+        "foto": "https://cdn.biwenger.com/i/p/43259.png",
+        "posicion": "Defensa",
+        "equipoReal": "Racing",
+        "racha": [
+          3,
+          6
+        ],
+        "rachaTitular": 1,
+        "nota": 4.8,
+        "rival": "Barcelona",
         "esLocal": false,
         "dificultad": null
       },
@@ -13463,23 +13495,6 @@
         "dificultad": 57
       },
       {
-        "nombre": "Iván Martín",
-        "foto": "https://cdn.biwenger.com/i/p/12403.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Racing",
-        "racha": [
-          4,
-          6,
-          5,
-          4
-        ],
-        "rachaTitular": 3,
-        "nota": 3,
-        "rival": "Barcelona",
-        "esLocal": false,
-        "dificultad": 91
-      },
-      {
         "nombre": "Copete",
         "foto": "https://cdn.biwenger.com/i/p/26344.png",
         "posicion": "Defensa",
@@ -13502,21 +13517,6 @@
         "rival": "Racing",
         "esLocal": true,
         "dificultad": 46
-      },
-      {
-        "nombre": "Belocian",
-        "foto": "https://cdn.biwenger.com/i/p/43259.png",
-        "posicion": "Defensa",
-        "equipoReal": "Racing",
-        "racha": [
-          3,
-          6
-        ],
-        "rachaTitular": 1,
-        "nota": 2.7,
-        "rival": "Barcelona",
-        "esLocal": false,
-        "dificultad": 91
       }
     ],
     "C.d.F Atlético de Cohiba": [
@@ -13536,23 +13536,6 @@
         "nota": 8.5,
         "rival": "Málaga",
         "esLocal": false,
-        "dificultad": 30
-      },
-      {
-        "nombre": "Gerard Martín",
-        "foto": "https://cdn.biwenger.com/i/p/34111.png",
-        "posicion": "Defensa",
-        "equipoReal": "Barcelona",
-        "racha": [
-          4,
-          6,
-          7,
-          7
-        ],
-        "rachaTitular": 0,
-        "nota": 6,
-        "rival": "Racing",
-        "esLocal": true,
         "dificultad": 30
       },
       {
@@ -13590,6 +13573,23 @@
         "rival": "Athletic",
         "esLocal": false,
         "dificultad": 42
+      },
+      {
+        "nombre": "Gerard Martín",
+        "foto": "https://cdn.biwenger.com/i/p/34111.png",
+        "posicion": "Defensa",
+        "equipoReal": "Barcelona",
+        "racha": [
+          4,
+          6,
+          7,
+          7
+        ],
+        "rachaTitular": 0,
+        "nota": 5,
+        "rival": "Racing",
+        "esLocal": true,
+        "dificultad": null
       },
       {
         "nombre": "De Galarreta",
@@ -14398,6 +14398,21 @@
         "dificultad": 64
       },
       {
+        "nombre": "Arana",
+        "foto": "https://cdn.biwenger.com/i/p/41262.png",
+        "posicion": "Delantero",
+        "equipoReal": "Racing",
+        "racha": [
+          0,
+          2
+        ],
+        "rachaTitular": 0,
+        "nota": 3,
+        "rival": "Barcelona",
+        "esLocal": false,
+        "dificultad": null
+      },
+      {
         "nombre": "Pablo Durán",
         "foto": "https://cdn.biwenger.com/i/p/29185.png",
         "posicion": "Delantero",
@@ -14415,33 +14430,6 @@
         "dificultad": 46
       },
       {
-        "nombre": "Letacek",
-        "foto": "https://cdn.biwenger.com/i/p/34149.png",
-        "posicion": "Portero",
-        "equipoReal": "Getafe",
-        "racha": [],
-        "rachaTitular": 0,
-        "nota": 1.6,
-        "rival": "Betis",
-        "esLocal": false,
-        "dificultad": 67
-      },
-      {
-        "nombre": "Arana",
-        "foto": "https://cdn.biwenger.com/i/p/41262.png",
-        "posicion": "Delantero",
-        "equipoReal": "Racing",
-        "racha": [
-          0,
-          2
-        ],
-        "rachaTitular": 0,
-        "nota": 0.9,
-        "rival": "Barcelona",
-        "esLocal": false,
-        "dificultad": 91
-      },
-      {
         "nombre": "Facundo González",
         "foto": "https://cdn.biwenger.com/i/p/41275.png",
         "posicion": "Defensa",
@@ -14453,10 +14441,22 @@
           3
         ],
         "rachaTitular": 0,
-        "nota": 0.5,
+        "nota": 2.5,
         "rival": "Barcelona",
         "esLocal": false,
-        "dificultad": 91
+        "dificultad": null
+      },
+      {
+        "nombre": "Letacek",
+        "foto": "https://cdn.biwenger.com/i/p/34149.png",
+        "posicion": "Portero",
+        "equipoReal": "Getafe",
+        "racha": [],
+        "rachaTitular": 0,
+        "nota": 1.6,
+        "rival": "Betis",
+        "esLocal": false,
+        "dificultad": 67
       }
     ],
     "Madriguana FC": [
@@ -14550,6 +14550,24 @@
         "dificultad": 22
       },
       {
+        "nombre": "Pablo García",
+        "foto": "https://cdn.biwenger.com/i/p/35763.png",
+        "posicion": "Delantero",
+        "equipoReal": "Racing",
+        "racha": [
+          2,
+          11,
+          1,
+          10,
+          3
+        ],
+        "rachaTitular": 2,
+        "nota": 5.8,
+        "rival": "Barcelona",
+        "esLocal": false,
+        "dificultad": null
+      },
+      {
         "nombre": "Dolan",
         "foto": "https://cdn.biwenger.com/i/p/38308.png",
         "posicion": "Delantero",
@@ -14596,24 +14614,6 @@
         "rival": "Getafe",
         "esLocal": true,
         "dificultad": 22
-      },
-      {
-        "nombre": "Pablo García",
-        "foto": "https://cdn.biwenger.com/i/p/35763.png",
-        "posicion": "Delantero",
-        "equipoReal": "Racing",
-        "racha": [
-          2,
-          11,
-          1,
-          10,
-          3
-        ],
-        "rachaTitular": 2,
-        "nota": 3.7,
-        "rival": "Barcelona",
-        "esLocal": false,
-        "dificultad": 91
       },
       {
         "nombre": "Ratiu",
@@ -14982,24 +14982,6 @@
         "dificultad": 50
       },
       {
-        "nombre": "Gordon",
-        "foto": "https://cdn.biwenger.com/i/p/41200.png",
-        "posicion": "Delantero",
-        "equipoReal": "Barcelona",
-        "racha": [
-          2,
-          3,
-          8,
-          6,
-          10
-        ],
-        "rachaTitular": 4,
-        "nota": 4.8,
-        "rival": "Racing",
-        "esLocal": true,
-        "dificultad": 30
-      },
-      {
         "nombre": "Vinícius Jr",
         "foto": "https://cdn.biwenger.com/i/p/15568.png",
         "posicion": "Delantero",
@@ -15016,6 +14998,41 @@
         "rival": "Atlético",
         "esLocal": false,
         "dificultad": 50
+      },
+      {
+        "nombre": "Gordon",
+        "foto": "https://cdn.biwenger.com/i/p/41200.png",
+        "posicion": "Delantero",
+        "equipoReal": "Barcelona",
+        "racha": [
+          2,
+          3,
+          8,
+          6,
+          10
+        ],
+        "rachaTitular": 4,
+        "nota": 3.8,
+        "rival": "Racing",
+        "esLocal": true,
+        "dificultad": null
+      },
+      {
+        "nombre": "Maguette Gueye",
+        "foto": "https://cdn.biwenger.com/i/p/41267.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Racing",
+        "racha": [
+          2,
+          2,
+          3,
+          4
+        ],
+        "rachaTitular": 0,
+        "nota": 3.5,
+        "rival": "Barcelona",
+        "esLocal": false,
+        "dificultad": null
       },
       {
         "nombre": "Ximo Navarro",
@@ -15085,26 +15102,27 @@
         "rival": "Espanyol",
         "esLocal": false,
         "dificultad": 58
-      },
-      {
-        "nombre": "Maguette Gueye",
-        "foto": "https://cdn.biwenger.com/i/p/41267.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Racing",
-        "racha": [
-          2,
-          2,
-          3,
-          4
-        ],
-        "rachaTitular": 0,
-        "nota": 1.4,
-        "rival": "Barcelona",
-        "esLocal": false,
-        "dificultad": 91
       }
     ],
     "Urdinho Pernambucano": [
+      {
+        "nombre": "Iñigo Vicente",
+        "foto": "https://cdn.biwenger.com/i/p/18564.png",
+        "posicion": "Delantero",
+        "equipoReal": "Racing",
+        "racha": [
+          12,
+          4,
+          9,
+          2,
+          10
+        ],
+        "rachaTitular": 5,
+        "nota": 6.5,
+        "rival": "Barcelona",
+        "esLocal": false,
+        "dificultad": null
+      },
       {
         "nombre": "Ez Abde",
         "foto": "https://cdn.biwenger.com/i/p/25127.png",
@@ -15211,24 +15229,6 @@
         "dificultad": 58
       },
       {
-        "nombre": "Iñigo Vicente",
-        "foto": "https://cdn.biwenger.com/i/p/18564.png",
-        "posicion": "Delantero",
-        "equipoReal": "Racing",
-        "racha": [
-          12,
-          4,
-          9,
-          2,
-          10
-        ],
-        "rachaTitular": 5,
-        "nota": 4.5,
-        "rival": "Barcelona",
-        "esLocal": false,
-        "dificultad": 91
-      },
-      {
         "nombre": "Mario Martín",
         "foto": "https://cdn.biwenger.com/i/p/2368.png",
         "posicion": "Centrocampista",
@@ -15295,10 +15295,10 @@
           3
         ],
         "rachaTitular": 4,
-        "nota": 8.3,
+        "nota": 7.3,
         "rival": "Racing",
         "esLocal": true,
-        "dificultad": 30
+        "dificultad": null
       },
       {
         "nombre": "Marcos Fernández",
@@ -15317,23 +15317,6 @@
         "rival": "Elche",
         "esLocal": true,
         "dificultad": 12
-      },
-      {
-        "nombre": "Christensen",
-        "foto": "https://cdn.biwenger.com/i/p/26678.png",
-        "posicion": "Defensa",
-        "equipoReal": "Barcelona",
-        "racha": [
-          5,
-          5,
-          4,
-          5
-        ],
-        "rachaTitular": 0,
-        "nota": 6,
-        "rival": "Racing",
-        "esLocal": true,
-        "dificultad": 30
       },
       {
         "nombre": "Javi Hernández",
@@ -15397,6 +15380,23 @@
         "rival": "Málaga",
         "esLocal": false,
         "dificultad": 30
+      },
+      {
+        "nombre": "Christensen",
+        "foto": "https://cdn.biwenger.com/i/p/26678.png",
+        "posicion": "Defensa",
+        "equipoReal": "Barcelona",
+        "racha": [
+          5,
+          5,
+          4,
+          5
+        ],
+        "rachaTitular": 0,
+        "nota": 5,
+        "rival": "Racing",
+        "esLocal": true,
+        "dificultad": null
       },
       {
         "nombre": "Osambela",
@@ -15563,41 +15563,6 @@
         "dificultad": 40
       },
       {
-        "nombre": "Espart",
-        "foto": "https://cdn.biwenger.com/i/p/40075.png",
-        "posicion": "Defensa",
-        "equipoReal": "Barcelona",
-        "racha": [
-          11,
-          5,
-          4,
-          3,
-          9
-        ],
-        "rachaTitular": 5,
-        "nota": 7.5,
-        "rival": "Racing",
-        "esLocal": true,
-        "dificultad": 30
-      },
-      {
-        "nombre": "Cubarsí",
-        "foto": "https://cdn.biwenger.com/i/p/32440.png",
-        "posicion": "Defensa",
-        "equipoReal": "Barcelona",
-        "racha": [
-          7,
-          8,
-          6,
-          10
-        ],
-        "rachaTitular": 4,
-        "nota": 7.3,
-        "rival": "Racing",
-        "esLocal": true,
-        "dificultad": 30
-      },
-      {
         "nombre": "Bartra",
         "foto": "https://cdn.biwenger.com/i/p/1125.png",
         "posicion": "Defensa",
@@ -15633,6 +15598,24 @@
         "dificultad": 12
       },
       {
+        "nombre": "Espart",
+        "foto": "https://cdn.biwenger.com/i/p/40075.png",
+        "posicion": "Defensa",
+        "equipoReal": "Barcelona",
+        "racha": [
+          11,
+          5,
+          4,
+          3,
+          9
+        ],
+        "rachaTitular": 5,
+        "nota": 6.5,
+        "rival": "Racing",
+        "esLocal": true,
+        "dificultad": null
+      },
+      {
         "nombre": "Pathé Ciss",
         "foto": "https://cdn.biwenger.com/i/p/24326.png",
         "posicion": "Centrocampista",
@@ -15649,6 +15632,40 @@
         "rival": "Osasuna",
         "esLocal": false,
         "dificultad": 40
+      },
+      {
+        "nombre": "Cubarsí",
+        "foto": "https://cdn.biwenger.com/i/p/32440.png",
+        "posicion": "Defensa",
+        "equipoReal": "Barcelona",
+        "racha": [
+          7,
+          8,
+          6,
+          10
+        ],
+        "rachaTitular": 4,
+        "nota": 6.3,
+        "rival": "Racing",
+        "esLocal": true,
+        "dificultad": null
+      },
+      {
+        "nombre": "Pablo Ramón",
+        "foto": "https://cdn.biwenger.com/i/p/35408.png",
+        "posicion": "Defensa",
+        "equipoReal": "Racing",
+        "racha": [
+          4,
+          6,
+          6,
+          3
+        ],
+        "rachaTitular": 1,
+        "nota": 5,
+        "rival": "Barcelona",
+        "esLocal": false,
+        "dificultad": null
       },
       {
         "nombre": "Brugué",
@@ -15776,23 +15793,6 @@
         "rival": "Osasuna",
         "esLocal": false,
         "dificultad": 40
-      },
-      {
-        "nombre": "Pablo Ramón",
-        "foto": "https://cdn.biwenger.com/i/p/35408.png",
-        "posicion": "Defensa",
-        "equipoReal": "Racing",
-        "racha": [
-          4,
-          6,
-          6,
-          3
-        ],
-        "rachaTitular": 1,
-        "nota": 3,
-        "rival": "Barcelona",
-        "esLocal": false,
-        "dificultad": 91
       },
       {
         "nombre": "Riki Rodríguez",
@@ -16084,25 +16084,6 @@
       "presidente": "C.d.F Atlético de Cohiba"
     },
     {
-      "nombre": "Pedri",
-      "foto": "https://cdn.biwenger.com/i/p/19441.png",
-      "posicion": "Centrocampista",
-      "equipoReal": "Barcelona",
-      "racha": [
-        4,
-        15,
-        3,
-        11,
-        3
-      ],
-      "rachaTitular": 4,
-      "nota": 8.3,
-      "rival": "Racing",
-      "esLocal": true,
-      "dificultad": 30,
-      "presidente": "FC FORUSIA"
-    },
-    {
       "nombre": "Pépé",
       "foto": "https://cdn.biwenger.com/i/p/34479.png",
       "posicion": "Delantero",
@@ -16177,23 +16158,41 @@
       "presidente": "Las Víboras FC"
     },
     {
-      "nombre": "Espart",
-      "foto": "https://cdn.biwenger.com/i/p/40075.png",
+      "nombre": "Pedrosa",
+      "foto": "https://cdn.biwenger.com/i/p/16889.png",
       "posicion": "Defensa",
-      "equipoReal": "Barcelona",
+      "equipoReal": "Rayo Vallecano",
       "racha": [
-        11,
-        5,
-        4,
-        3,
-        9
+        15,
+        2,
+        0,
+        2
       ],
-      "rachaTitular": 5,
-      "nota": 7.5,
-      "rival": "Racing",
-      "esLocal": true,
-      "dificultad": 30,
-      "presidente": "Las Víboras FC"
+      "rachaTitular": 3,
+      "nota": 7.3,
+      "rival": "Osasuna",
+      "esLocal": false,
+      "dificultad": 40,
+      "presidente": "Madriguana FC"
+    },
+    {
+      "nombre": "Yangel Herrera",
+      "foto": "https://cdn.biwenger.com/i/p/17344.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Real Sociedad",
+      "racha": [
+        1,
+        12,
+        3,
+        4,
+        2
+      ],
+      "rachaTitular": 3,
+      "nota": 7.3,
+      "rival": "Valencia",
+      "esLocal": false,
+      "dificultad": 18,
+      "presidente": "Madriguana FC"
     }
   ],
   "riesgoClausula": [
