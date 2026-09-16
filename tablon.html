@@ -227,8 +227,18 @@
   var imagenesRespuestas = {};
 
   function urlBase64ToUint8Array(base64String) {
-    var padding = '='.repeat((4 - base64String.length % 4) % 4);
-    var base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/');
+    // 1. Limpiamos espacios o saltos de línea invisibles
+    var stringSeguro = (base64String || '').trim();
+    
+    // 2. Calculamos el relleno (padding)
+    var padding = '='.repeat((4 - stringSeguro.length % 4) % 4);
+    
+    // 3. Reemplazamos los caracteres de la URL segura
+    var base64 = (stringSeguro + padding)
+      .replace(/\-/g, '+')
+      .replace(/_/g, '/');
+
+    // 4. Decodificamos
     var rawData = window.atob(base64);
     var outputArray = new Uint8Array(rawData.length);
     for (var i = 0; i < rawData.length; ++i) {
