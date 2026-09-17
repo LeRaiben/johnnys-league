@@ -87,6 +87,7 @@
     </div>
     <div class="jump">
       <a href="index.html#portada">Portada</a>
+      <a href="tablon.html">Tablón</a>
       <a href="index.html#clasificacion">Clasificación</a>
       <a href="index.html#mercado">Mercado</a>
       <a href="presidentes.html">Presidentes</a>
@@ -95,12 +96,18 @@
       <a href="oportunidades.html">Oportunidades</a>
       <a href="calendario.html">Calendario</a>
       <a href="comparador.html">Comparador</a>
-      <a href="tablon.html">Tablón</a>
       <a href="index.html#cronicas">Crónicas</a>
       <a href="index.html#hemeroteca">Hemeroteca</a>
     </div>
   </div>
 </header>
+
+<script>
+(function () {
+  var activo = document.querySelector('.jump a.activo');
+  if (activo) activo.scrollIntoView({ inline: 'center', block: 'nearest' });
+})();
+</script>
 
 <main class="wrap">
 

@@ -120,6 +120,7 @@
     </div>
     <div class="jump">
       <a href="index.html#portada">Portada</a>
+      <a href="tablon.html" class="activo">Tablón</a>
       <a href="index.html#clasificacion">Clasificación</a>
       <a href="index.html#mercado">Mercado</a>
       <a href="presidentes.html">Presidentes</a>
@@ -128,12 +129,18 @@
       <a href="oportunidades.html">Oportunidades</a>
       <a href="calendario.html">Calendario</a>
       <a href="comparador.html">Comparador</a>
-      <a href="tablon.html" class="activo">Tablón</a>
       <a href="index.html#cronicas">Crónicas</a>
       <a href="hemeroteca.html">Hemeroteca</a>
     </div>
   </div>
 </header>
+
+<script>
+(function () {
+  var activo = document.querySelector('.jump a.activo');
+  if (activo) activo.scrollIntoView({ inline: 'center', block: 'nearest' });
+})();
+</script>
 
 <main class="wrap">
 
@@ -763,7 +770,13 @@
       var registration = await navigator.serviceWorker.getRegistration('sw.js');
       if (!registration) return;
       var sub = await registration.pushManager.getSubscription();
-      if (sub) marcarBotonActivado();
+      if (!sub) return;
+
+      // No basta con que el navegador recuerde la suscripción: comprobamos
+      // que siga existiendo en Supabase (si se reinició el tablón, no debe
+      // marcarse como activada hasta que la persona vuelva a pulsar el botón).
+      var r = await sb.from('suscriptores_push').select('id').eq('endpoint', sub.endpoint).maybeSingle();
+      if (r.data) marcarBotonActivado();
     } catch (e) { /* silencioso: solo es para pintar el estado inicial */ }
   }
 
