@@ -1,0 +1,14 @@
+{
+  "name": "Johnny's League",
+  "short_name": "Johnny's League",
+  "description": "Crónica semanal y tablón de la liga privada de Biwenger",
+  "start_url": "./tablon.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#021234",
+  "theme_color": "#021234",
+  "icons": [
+    { "src": "assets/escudo.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/escudo.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

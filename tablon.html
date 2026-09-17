@@ -6,6 +6,11 @@
 <title>Tablón · Johnny's League</title>
 <meta name="description" content="El tablón de anuncios de los presidentes de Johnny's League.">
 <link rel="icon" href="assets/escudo.png">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="assets/escudo.png">
+<meta name="theme-color" content="#021234">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Johnny's League">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/estilo.css">
@@ -144,9 +149,14 @@
   <section class="block" style="border-top:none; padding-top:0;">
     <div id="zonaEstado"></div>
 
-    <button type="button" class="btn-notificaciones" id="btnNotificaciones">
-      🔔 Activar notificaciones en el móvil
-    </button>
+    <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:20px;">
+      <button type="button" class="btn-notificaciones" id="btnNotificaciones" style="margin-bottom:0;">
+        🔔 Activar notificaciones en el móvil
+      </button>
+      <button type="button" class="btn-notificaciones" id="btnRefrescar" style="margin-bottom:0;">
+        🔄 Refrescar tablón
+      </button>
+    </div>
 
     <div class="escribir">
       <div class="campo">
@@ -732,41 +742,94 @@
       .subscribe();
   }
 
-  // EVENTO DE NOTIFICACIONES CORREGIDO
+  // Notificaciones push
+  function esIphoneNoInstalado() {
+    var esIOS = /iphone|ipad|ipod/.test(navigator.userAgent.toLowerCase());
+    var standalone = window.navigator.standalone === true ||
+      window.matchMedia('(display-mode: standalone)').matches;
+    return esIOS && !standalone;
+  }
+
+  function marcarBotonActivado() {
+    var b = document.getElementById('btnNotificaciones');
+    if (!b) return;
+    b.textContent = '🔔 Notificaciones activadas';
+    b.disabled = true;
+  }
+
+  async function comprobarSuscripcionExistente() {
+    try {
+      if (!('serviceWorker' in navigator) || !('PushManager' in window)) return;
+      var registration = await navigator.serviceWorker.getRegistration('sw.js');
+      if (!registration) return;
+      var sub = await registration.pushManager.getSubscription();
+      if (sub) marcarBotonActivado();
+    } catch (e) { /* silencioso: solo es para pintar el estado inicial */ }
+  }
+
   var btnNotif = document.getElementById('btnNotificaciones');
   if (btnNotif) {
     btnNotif.onclick = async function() {
-      try {
-        if (!('serviceWorker' in navigator) || !('PushManager' in window)) {
-          alert('Tu navegador no soporta notificaciones push.');
-          return;
-        }
+      if (esIphoneNoInstalado()) {
+        alert('En iPhone, Apple exige tener la web instalada para poder recibir notificaciones.\n\nToca el botón Compartir (el cuadrado con la flecha) y elige "Añadir a pantalla de inicio". Luego abre Johnny\'s League desde ese icono y vuelve a pulsar aquí.');
+        return;
+      }
 
+      if (!('serviceWorker' in navigator) || !('PushManager' in window)) {
+        alert('Este navegador no soporta notificaciones push.');
+        return;
+      }
+
+      btnNotif.disabled = true;
+      var textoOriginal = btnNotif.textContent;
+      btnNotif.textContent = 'Activando…';
+
+      try {
         var permission = await Notification.requestPermission();
         if (permission !== 'granted') {
-          alert('Has denegado el permiso para recibir notificaciones.');
+          alert('Has denegado el permiso de notificaciones. Puedes activarlo luego desde los ajustes de notificaciones del navegador.');
+          btnNotif.textContent = textoOriginal;
+          btnNotif.disabled = false;
           return;
         }
 
-        // Registrar/asegurar Service Worker antes de solicitar suscripción
         var registration = await navigator.serviceWorker.register('sw.js');
         await navigator.serviceWorker.ready;
 
-        var subscription = await registration.pushManager.subscribe({
-          userVisibleOnly: true,
-          applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
-        });
+        var subscription = await registration.pushManager.getSubscription();
+        if (!subscription) {
+          subscription = await registration.pushManager.subscribe({
+            userVisibleOnly: true,
+            applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
+          });
+        }
 
-        var resp = await sb.from('suscriptores_push').insert([
-          { subscription: JSON.stringify(subscription) }
-        ]);
+        var resp = await sb.from('suscriptores_push')
+          .upsert({ subscription: subscription.toJSON() }, { onConflict: 'endpoint' });
 
         if (resp.error) throw resp.error;
 
+        marcarBotonActivado();
         alert('¡Notificaciones activadas con éxito!');
       } catch (err) {
         alert('Error activando notificaciones: ' + err.message);
+        btnNotif.textContent = textoOriginal;
+        btnNotif.disabled = false;
       }
+    };
+  }
+
+  comprobarSuscripcionExistente();
+
+  var btnRefrescar = document.getElementById('btnRefrescar');
+  if (btnRefrescar) {
+    btnRefrescar.onclick = async function() {
+      var textoOriginal = btnRefrescar.textContent;
+      btnRefrescar.disabled = true;
+      btnRefrescar.textContent = '🔄 Actualizando…';
+      await cargar();
+      btnRefrescar.textContent = textoOriginal;
+      btnRefrescar.disabled = false;
     };
   }
 
