@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-17T08:57:44.495Z",
+  "actualizado": "2026-09-17T09:17:35.996Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 6,
   "jornadaEnJuego": true,
@@ -137,8 +137,8 @@
       "iniciales": "SF",
       "escudo": "https://cdn.biwenger.com/i/u/14027560.png",
       "puntos": 282,
-      "valor": "21,7 M",
-      "valorBruto": 21690000,
+      "valor": "21,0 M",
+      "valorBruto": 21010000,
       "esTuyo": false,
       "puntosJornada": 17,
       "jugadosJornada": 5,
@@ -1205,19 +1205,6 @@
     },
     {
       "tipo": "venta",
-      "nombre": "Akhomach",
-      "foto": "https://cdn.biwenger.com/i/p/25159.png",
-      "posicion": "Delantero",
-      "equipoReal": "Villarreal",
-      "vendedor": "Seif fc",
-      "pide": "0,9 M",
-      "pideBruto": 880000,
-      "valorMercado": "0,7 M",
-      "valorBruto": 680000,
-      "diferencia": 200000
-    },
-    {
-      "tipo": "venta",
       "nombre": "José Salinas",
       "foto": "https://cdn.biwenger.com/i/p/37723.png",
       "posicion": "Defensa",
@@ -1879,7 +1866,7 @@
       "puestoGasto": 2,
       "puestoActividad": 6,
       "vsMediaPuntos": 27,
-      "vsMediaEficiencia": 8,
+      "vsMediaEficiencia": 7,
       "vsMediaValor": 10,
       "tendencia": null
     },
@@ -1916,7 +1903,7 @@
       "puestoGasto": 4,
       "puestoActividad": 10,
       "vsMediaPuntos": 26,
-      "vsMediaEficiencia": -11,
+      "vsMediaEficiencia": -12,
       "vsMediaValor": 32,
       "tendencia": null
     },
@@ -1926,10 +1913,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/14027560.png",
       "iniciales": "SF",
       "puntos": 282,
-      "valor": "21,7 M",
-      "valorBruto": 21690000,
+      "valor": "21,0 M",
+      "valorBruto": 21010000,
       "esTuyo": false,
-      "puntosPorMillon": 13,
+      "puntosPorMillon": 13.42,
       "mediaJornada": 47,
       "clausulasHechas": 2,
       "clausulasSufridas": 3,
@@ -1941,7 +1928,7 @@
       "balance": "+6,4 M",
       "balanceBruto": 6397000,
       "sobreprecioMedio": 28,
-      "enVenta": 8,
+      "enVenta": 7,
       "fichajeEstrella": {
         "nombre": "Bellingham",
         "precio": "23,1 M",
@@ -1953,8 +1940,8 @@
       "puestoGasto": 5,
       "puestoActividad": 7,
       "vsMediaPuntos": 16,
-      "vsMediaEficiencia": 116,
-      "vsMediaValor": -50,
+      "vsMediaEficiencia": 122,
+      "vsMediaValor": -52,
       "tendencia": null
     },
     {
@@ -1990,7 +1977,7 @@
       "puestoGasto": 9,
       "puestoActividad": 4,
       "vsMediaPuntos": 10,
-      "vsMediaEficiencia": 37,
+      "vsMediaEficiencia": 36,
       "vsMediaValor": -25,
       "tendencia": null
     },
@@ -2060,7 +2047,7 @@
       "puestoGasto": 10,
       "puestoActividad": 9,
       "vsMediaPuntos": 2,
-      "vsMediaEficiencia": 12,
+      "vsMediaEficiencia": 11,
       "vsMediaValor": -15,
       "tendencia": null
     },
@@ -2167,7 +2154,7 @@
       "puestoGasto": 1,
       "puestoActividad": 2,
       "vsMediaPuntos": -5,
-      "vsMediaEficiencia": -11,
+      "vsMediaEficiencia": -12,
       "vsMediaValor": 0,
       "tendencia": null
     },
@@ -6592,32 +6579,6 @@
             "esLocal": false,
             "rival": "Rayo Vallecano",
             "dificultad": 41
-          }
-        ]
-      },
-      {
-        "nombre": "Akhomach",
-        "posicion": "Delantero",
-        "foto": "https://cdn.biwenger.com/i/p/25159.png",
-        "equipoReal": "Villarreal",
-        "jornadas": [
-          {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Málaga",
-            "dificultad": 30
-          },
-          {
-            "jornada": "Round 7",
-            "esLocal": true,
-            "rival": "Levante",
-            "dificultad": 37
-          },
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Real Madrid",
-            "dificultad": 85
           }
         ]
       },
@@ -11987,39 +11948,6 @@
       "blindadoHasta": "2026-10-02T05:02:23.000Z"
     },
     {
-      "id": "25159",
-      "nombre": "Akhomach",
-      "slug": "ilias-akhomach",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/25159.png",
-      "equipoReal": "Villarreal",
-      "equipoIdReal": "19",
-      "presidente": "Seif fc",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/14027560.png",
-      "precio": 680000,
-      "precioTexto": "0,7 M",
-      "puntosTotales": 5,
-      "partidosJugados": 4,
-      "media": 1.3,
-      "puntosPorMillon": 7.35,
-      "racha": [
-        0,
-        1,
-        2,
-        2
-      ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 7,
-      "clausula": 1360000,
-      "clausulaTexto": "1,4 M",
-      "pagadoPorSuDueno": null,
-      "margen": 680000,
-      "margenPorcentaje": 100,
-      "blindado": false,
-      "blindadoHasta": null
-    },
-    {
       "id": "30487",
       "nombre": "Álvaro Valles",
       "slug": "alvaro-valles",
@@ -13276,40 +13204,6 @@
         "mediaReciente": 0.5
       },
       {
-        "id": "25159",
-        "nombre": "Akhomach",
-        "slug": "ilias-akhomach",
-        "posicion": "Delantero",
-        "posicionCodigo": 4,
-        "foto": "https://cdn.biwenger.com/i/p/25159.png",
-        "equipoReal": "Villarreal",
-        "equipoIdReal": "19",
-        "presidente": "Seif fc",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/14027560.png",
-        "precio": 680000,
-        "precioTexto": "0,7 M",
-        "puntosTotales": 5,
-        "partidosJugados": 4,
-        "media": 1.3,
-        "puntosPorMillon": 7.35,
-        "racha": [
-          0,
-          1,
-          2,
-          2
-        ],
-        "rachaTitular": 0,
-        "ultimoMinutos": 7,
-        "clausula": 1360000,
-        "clausulaTexto": "1,4 M",
-        "pagadoPorSuDueno": null,
-        "margen": 680000,
-        "margenPorcentaje": 100,
-        "blindado": false,
-        "blindadoHasta": null,
-        "mediaReciente": 0.5
-      },
-      {
         "id": "25392",
         "nombre": "Jofre Carreras",
         "slug": "jofre-carreras",
@@ -13337,6 +13231,39 @@
         "clausulaTexto": "0,5 M",
         "pagadoPorSuDueno": null,
         "margen": 360000,
+        "margenPorcentaje": 200,
+        "blindado": false,
+        "blindadoHasta": null,
+        "mediaReciente": 1
+      },
+      {
+        "id": "41262",
+        "nombre": "Arana",
+        "slug": "j-arana",
+        "posicion": "Delantero",
+        "posicionCodigo": 4,
+        "foto": "https://cdn.biwenger.com/i/p/41262.png",
+        "equipoReal": "Racing",
+        "equipoIdReal": "812",
+        "presidente": "Gorila FC",
+        "escudoPresidente": "https://cdn.biwenger.com/i/u/11411835.png",
+        "precio": 270000,
+        "precioTexto": "0,3 M",
+        "puntosTotales": 4,
+        "partidosJugados": 3,
+        "media": 1.3,
+        "puntosPorMillon": 14.81,
+        "racha": [
+          2,
+          0,
+          2
+        ],
+        "rachaTitular": 0,
+        "ultimoMinutos": 59,
+        "clausula": 810000,
+        "clausulaTexto": "0,8 M",
+        "pagadoPorSuDueno": null,
+        "margen": 540000,
         "margenPorcentaje": 200,
         "blindado": false,
         "blindadoHasta": null,
@@ -16115,23 +16042,6 @@
         "rival": "Osasuna",
         "esLocal": false,
         "dificultad": 32
-      },
-      {
-        "nombre": "Akhomach",
-        "foto": "https://cdn.biwenger.com/i/p/25159.png",
-        "posicion": "Delantero",
-        "equipoReal": "Villarreal",
-        "racha": [
-          0,
-          1,
-          2,
-          2
-        ],
-        "rachaTitular": 0,
-        "nota": 3.8,
-        "rival": "Málaga",
-        "esLocal": false,
-        "dificultad": 30
       },
       {
         "nombre": "Nico Serrano",
