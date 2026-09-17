@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-17T18:53:24.985Z",
+  "actualizado": "2026-09-17T19:11:00.738Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 6,
   "jornadaEnJuego": true,
@@ -82,7 +82,7 @@
       "fecha": "2026-09-17T17:00:00.000Z",
       "golesLocal": 1,
       "golesVisitante": 0,
-      "estado": "secondTime"
+      "estado": "finished"
     },
     {
       "local": "Málaga",
@@ -198,10 +198,10 @@
       "valor": "37,0 M",
       "valorBruto": 36970000,
       "esTuyo": false,
-      "puntosJornada": 21,
-      "jugadosJornada": 6,
+      "puntosJornada": 22,
+      "jugadosJornada": 7,
       "alineadosJornada": 11,
-      "puntosProvisional": 269
+      "puntosProvisional": 270
     },
     {
       "posicion": 7,
@@ -2481,12 +2481,6 @@
         "equipoReal": "Betis",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Getafe",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
@@ -2496,7 +2490,13 @@
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 25
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Barcelona",
+            "dificultad": 88
           }
         ]
       },
@@ -2585,12 +2585,6 @@
         "equipoReal": "Betis",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Getafe",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
@@ -2600,7 +2594,13 @@
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 25
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Barcelona",
+            "dificultad": 88
           }
         ]
       },
@@ -2620,7 +2620,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Getafe",
-            "dificultad": 37
+            "dificultad": 36
           },
           {
             "jornada": "Round 8",
@@ -2782,7 +2782,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Atlético",
-            "dificultad": 63
+            "dificultad": 61
           }
         ]
       },
@@ -2871,12 +2871,6 @@
         "equipoReal": "Betis",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Getafe",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
@@ -2886,7 +2880,13 @@
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 25
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Barcelona",
+            "dificultad": 88
           }
         ]
       },
@@ -2925,22 +2925,22 @@
         "equipoReal": "Getafe",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Betis",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": true,
             "rival": "Málaga",
-            "dificultad": 19
+            "dificultad": 20
           },
           {
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Barcelona",
             "dificultad": 95
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Rayo Vallecano",
+            "dificultad": 40
           }
         ]
       },
@@ -3107,22 +3107,22 @@
         "equipoReal": "Getafe",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Betis",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": true,
             "rival": "Málaga",
-            "dificultad": 19
+            "dificultad": 20
           },
           {
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Barcelona",
             "dificultad": 95
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Rayo Vallecano",
+            "dificultad": 40
           }
         ]
       },
@@ -3136,19 +3136,19 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Sevilla",
-            "dificultad": 46
+            "dificultad": 45
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Getafe",
-            "dificultad": 18
+            "dificultad": 17
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Betis",
-            "dificultad": 49
+            "dificultad": 53
           }
         ]
       },
@@ -3187,12 +3187,6 @@
         "equipoReal": "Betis",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Getafe",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
@@ -3202,7 +3196,13 @@
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 25
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Barcelona",
+            "dificultad": 88
           }
         ]
       },
@@ -3562,7 +3562,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Getafe",
-            "dificultad": 37
+            "dificultad": 36
           },
           {
             "jornada": "Round 8",
@@ -3605,12 +3605,6 @@
         "equipoReal": "Betis",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Getafe",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
@@ -3620,7 +3614,13 @@
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 25
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Barcelona",
+            "dificultad": 88
           }
         ]
       },
@@ -3900,7 +3900,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Getafe",
-            "dificultad": 37
+            "dificultad": 36
           },
           {
             "jornada": "Round 8",
@@ -3997,12 +3997,6 @@
         "equipoReal": "Betis",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Getafe",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
@@ -4012,7 +4006,13 @@
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 25
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Barcelona",
+            "dificultad": 88
           }
         ]
       },
@@ -4116,7 +4116,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Atlético",
-            "dificultad": 63
+            "dificultad": 61
           }
         ]
       },
@@ -4179,22 +4179,22 @@
         "equipoReal": "Getafe",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Betis",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": true,
             "rival": "Málaga",
-            "dificultad": 19
+            "dificultad": 20
           },
           {
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Barcelona",
             "dificultad": 95
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Rayo Vallecano",
+            "dificultad": 40
           }
         ]
       },
@@ -4231,12 +4231,6 @@
         "equipoReal": "Betis",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Getafe",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
@@ -4246,7 +4240,13 @@
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 25
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Barcelona",
+            "dificultad": 88
           }
         ]
       },
@@ -4344,7 +4344,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Getafe",
-            "dificultad": 37
+            "dificultad": 36
           },
           {
             "jornada": "Round 8",
@@ -4404,7 +4404,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Atlético",
-            "dificultad": 63
+            "dificultad": 61
           }
         ]
       },
@@ -4415,12 +4415,6 @@
         "equipoReal": "Betis",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Getafe",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
@@ -4430,7 +4424,13 @@
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 25
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Barcelona",
+            "dificultad": 88
           }
         ]
       },
@@ -4441,12 +4441,6 @@
         "equipoReal": "Betis",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Getafe",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
@@ -4456,7 +4450,13 @@
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 25
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Barcelona",
+            "dificultad": 88
           }
         ]
       },
@@ -4664,7 +4664,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Atlético",
-            "dificultad": 63
+            "dificultad": 61
           }
         ]
       },
@@ -4675,22 +4675,22 @@
         "equipoReal": "Getafe",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Betis",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": true,
             "rival": "Málaga",
-            "dificultad": 19
+            "dificultad": 20
           },
           {
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Barcelona",
             "dificultad": 95
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Rayo Vallecano",
+            "dificultad": 40
           }
         ]
       }
@@ -4790,7 +4790,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Getafe",
-            "dificultad": 37
+            "dificultad": 36
           },
           {
             "jornada": "Round 8",
@@ -4859,22 +4859,22 @@
         "equipoReal": "Getafe",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Betis",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": true,
             "rival": "Málaga",
-            "dificultad": 19
+            "dificultad": 20
           },
           {
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Barcelona",
             "dificultad": 95
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Rayo Vallecano",
+            "dificultad": 40
           }
         ]
       },
@@ -4946,7 +4946,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Getafe",
-            "dificultad": 37
+            "dificultad": 36
           },
           {
             "jornada": "Round 8",
@@ -4972,7 +4972,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Getafe",
-            "dificultad": 37
+            "dificultad": 36
           },
           {
             "jornada": "Round 8",
@@ -4998,7 +4998,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Getafe",
-            "dificultad": 37
+            "dificultad": 36
           },
           {
             "jornada": "Round 8",
@@ -5225,22 +5225,22 @@
         "equipoReal": "Getafe",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Betis",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": true,
             "rival": "Málaga",
-            "dificultad": 19
+            "dificultad": 20
           },
           {
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Barcelona",
             "dificultad": 95
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Rayo Vallecano",
+            "dificultad": 40
           }
         ]
       },
@@ -5286,7 +5286,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Getafe",
-            "dificultad": 37
+            "dificultad": 36
           },
           {
             "jornada": "Round 8",
@@ -5306,19 +5306,19 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Sevilla",
-            "dificultad": 46
+            "dificultad": 45
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Getafe",
-            "dificultad": 18
+            "dificultad": 17
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Betis",
-            "dificultad": 49
+            "dificultad": 53
           }
         ]
       },
@@ -5357,22 +5357,22 @@
         "equipoReal": "Getafe",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Betis",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": true,
             "rival": "Málaga",
-            "dificultad": 19
+            "dificultad": 20
           },
           {
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Barcelona",
             "dificultad": 95
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Rayo Vallecano",
+            "dificultad": 40
           }
         ]
       },
@@ -5435,12 +5435,6 @@
         "equipoReal": "Betis",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Getafe",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
@@ -5450,7 +5444,13 @@
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 25
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Barcelona",
+            "dificultad": 88
           }
         ]
       },
@@ -5574,7 +5574,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Getafe",
-            "dificultad": 37
+            "dificultad": 36
           },
           {
             "jornada": "Round 8",
@@ -5606,7 +5606,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Atlético",
-            "dificultad": 63
+            "dificultad": 61
           }
         ]
       }
@@ -5752,19 +5752,19 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Sevilla",
-            "dificultad": 46
+            "dificultad": 45
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Getafe",
-            "dificultad": 18
+            "dificultad": 17
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Betis",
-            "dificultad": 49
+            "dificultad": 53
           }
         ]
       },
@@ -5816,7 +5816,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Atlético",
-            "dificultad": 63
+            "dificultad": 61
           }
         ]
       },
@@ -5830,19 +5830,19 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Sevilla",
-            "dificultad": 46
+            "dificultad": 45
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Getafe",
-            "dificultad": 18
+            "dificultad": 17
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Betis",
-            "dificultad": 49
+            "dificultad": 53
           }
         ]
       },
@@ -5894,7 +5894,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Atlético",
-            "dificultad": 63
+            "dificultad": 61
           }
         ]
       },
@@ -6011,12 +6011,6 @@
         "equipoReal": "Betis",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Getafe",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
@@ -6026,7 +6020,13 @@
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 25
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Barcelona",
+            "dificultad": 88
           }
         ]
       },
@@ -6163,7 +6163,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Atlético",
-            "dificultad": 63
+            "dificultad": 61
           }
         ]
       },
@@ -6241,7 +6241,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Atlético",
-            "dificultad": 63
+            "dificultad": 61
           }
         ]
       },
@@ -6255,19 +6255,19 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Sevilla",
-            "dificultad": 46
+            "dificultad": 45
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Getafe",
-            "dificultad": 18
+            "dificultad": 17
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Betis",
-            "dificultad": 49
+            "dificultad": 53
           }
         ]
       },
@@ -6365,7 +6365,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Getafe",
-            "dificultad": 37
+            "dificultad": 36
           },
           {
             "jornada": "Round 8",
@@ -6418,19 +6418,19 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Sevilla",
-            "dificultad": 46
+            "dificultad": 45
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Getafe",
-            "dificultad": 18
+            "dificultad": 17
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Betis",
-            "dificultad": 49
+            "dificultad": 53
           }
         ]
       },
@@ -6495,12 +6495,6 @@
         "equipoReal": "Betis",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Getafe",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
@@ -6510,7 +6504,13 @@
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 25
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Barcelona",
+            "dificultad": 88
           }
         ]
       },
@@ -6536,7 +6536,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Atlético",
-            "dificultad": 63
+            "dificultad": 61
           }
         ]
       },
@@ -6573,12 +6573,6 @@
         "equipoReal": "Betis",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Getafe",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Deportivo",
@@ -6588,7 +6582,13 @@
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Osasuna",
-            "dificultad": 25
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Barcelona",
+            "dificultad": 88
           }
         ]
       },
@@ -6634,7 +6634,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Getafe",
-            "dificultad": 37
+            "dificultad": 36
           },
           {
             "jornada": "Round 8",
@@ -6860,8 +6860,8 @@
       "pagadoPorSuDueno": 2850000,
       "margen": 1685000,
       "margenPorcentaje": 65,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "1676",
@@ -6958,8 +6958,8 @@
       "pagadoPorSuDueno": 1270000,
       "margen": 650000,
       "margenPorcentaje": 50,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "5771",
@@ -7053,8 +7053,8 @@
       "pagadoPorSuDueno": 175000,
       "margen": 375000,
       "margenPorcentaje": 250,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "10574",
@@ -7087,8 +7087,8 @@
       "pagadoPorSuDueno": null,
       "margen": 1400000,
       "margenPorcentaje": 50,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "12403",
@@ -7121,7 +7121,7 @@
       "margen": 1448000,
       "margenPorcentaje": 40,
       "blindado": true,
-      "blindadoHasta": "2026-09-18T05:05:12.000Z"
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "16317",
@@ -7148,8 +7148,8 @@
       "pagadoPorSuDueno": 360000,
       "margen": 720000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "18397",
@@ -7209,8 +7209,8 @@
       "pagadoPorSuDueno": 150000,
       "margen": 300000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "41567",
@@ -7239,8 +7239,8 @@
       "pagadoPorSuDueno": 156000,
       "margen": 318000,
       "margenPorcentaje": 212,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "42370",
@@ -7273,8 +7273,8 @@
       "pagadoPorSuDueno": null,
       "margen": 1220000,
       "margenPorcentaje": 50,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "43259",
@@ -7372,8 +7372,8 @@
       "pagadoPorSuDueno": 1240000,
       "margen": 700000,
       "margenPorcentaje": 50,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "1927",
@@ -7406,8 +7406,8 @@
       "pagadoPorSuDueno": 7360000,
       "margen": 3659600,
       "margenPorcentaje": 53,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "1995",
@@ -7440,8 +7440,8 @@
       "pagadoPorSuDueno": 3600000,
       "margen": 1530000,
       "margenPorcentaje": 44,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "2055",
@@ -7507,8 +7507,8 @@
       "pagadoPorSuDueno": 3251002,
       "margen": 1621402,
       "margenPorcentaje": 55,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "25384",
@@ -7541,8 +7541,8 @@
       "pagadoPorSuDueno": 4352050,
       "margen": 2028000,
       "margenPorcentaje": 40,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "26092",
@@ -7576,7 +7576,7 @@
       "margen": 1692000,
       "margenPorcentaje": 40,
       "blindado": true,
-      "blindadoHasta": "2026-09-18T16:06:11.000Z"
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "34111",
@@ -7712,7 +7712,7 @@
       "margen": 1112501,
       "margenPorcentaje": 56,
       "blindado": true,
-      "blindadoHasta": "2026-09-18T05:05:11.000Z"
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "1897",
@@ -7745,8 +7745,8 @@
       "pagadoPorSuDueno": 5000010,
       "margen": 2300014,
       "margenPorcentaje": 49,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "2600",
@@ -7779,8 +7779,8 @@
       "pagadoPorSuDueno": 7550005,
       "margen": 4245006,
       "margenPorcentaje": 76,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "5697",
@@ -7813,8 +7813,8 @@
       "pagadoPorSuDueno": 4901000,
       "margen": 2259999,
       "margenPorcentaje": 40,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "15289",
@@ -7841,8 +7841,8 @@
       "pagadoPorSuDueno": null,
       "margen": 840000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "17057",
@@ -7875,8 +7875,8 @@
       "pagadoPorSuDueno": 6370002,
       "margen": 1914000,
       "margenPorcentaje": 30,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "18256",
@@ -7909,8 +7909,8 @@
       "pagadoPorSuDueno": 331001,
       "margen": 890000,
       "margenPorcentaje": 100,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "19299",
@@ -7943,8 +7943,8 @@
       "pagadoPorSuDueno": 3430001,
       "margen": 1392000,
       "margenPorcentaje": 40,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "26299",
@@ -7974,8 +7974,8 @@
       "pagadoPorSuDueno": 650001,
       "margen": 890002,
       "margenPorcentaje": 217,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "39924",
@@ -8110,8 +8110,8 @@
       "pagadoPorSuDueno": 1250000,
       "margen": 1225000,
       "margenPorcentaje": 50,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "4245",
@@ -8206,8 +8206,8 @@
       "pagadoPorSuDueno": 152000,
       "margen": 380000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "18128",
@@ -8274,8 +8274,8 @@
       "pagadoPorSuDueno": 5799000,
       "margen": 4498599,
       "margenPorcentaje": 124,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "21084",
@@ -8377,7 +8377,7 @@
       "margen": 5364000,
       "margenPorcentaje": 39,
       "blindado": true,
-      "blindadoHasta": "2026-09-18T05:05:12.000Z"
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "30510",
@@ -8410,8 +8410,8 @@
       "pagadoPorSuDueno": null,
       "margen": 755000,
       "margenPorcentaje": 50,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "32338",
@@ -8444,8 +8444,8 @@
       "pagadoPorSuDueno": 2610000,
       "margen": 1432000,
       "margenPorcentaje": 40,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "34805",
@@ -8472,8 +8472,8 @@
       "pagadoPorSuDueno": null,
       "margen": 640000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "39874",
@@ -8506,8 +8506,8 @@
       "pagadoPorSuDueno": 780000,
       "margen": 780000,
       "margenPorcentaje": 100,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "39901",
@@ -8539,8 +8539,8 @@
       "pagadoPorSuDueno": 590010,
       "margen": 840000,
       "margenPorcentaje": 100,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "41413",
@@ -8595,8 +8595,8 @@
       "pagadoPorSuDueno": null,
       "margen": 300000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "43172",
@@ -8695,8 +8695,8 @@
       "pagadoPorSuDueno": null,
       "margen": 1392000,
       "margenPorcentaje": 40,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "9887",
@@ -8729,8 +8729,8 @@
       "pagadoPorSuDueno": null,
       "margen": 1880000,
       "margenPorcentaje": 40,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "17731",
@@ -8763,8 +8763,8 @@
       "pagadoPorSuDueno": 4000000,
       "margen": 2200000,
       "margenPorcentaje": 65,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "19547",
@@ -8797,8 +8797,8 @@
       "pagadoPorSuDueno": 12558000,
       "margen": 4609600,
       "margenPorcentaje": 44,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "25392",
@@ -8829,8 +8829,8 @@
       "pagadoPorSuDueno": null,
       "margen": 360000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "29185",
@@ -8862,8 +8862,8 @@
       "pagadoPorSuDueno": 180000,
       "margen": 760000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "31321",
@@ -8922,8 +8922,8 @@
       "pagadoPorSuDueno": null,
       "margen": 300000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "37739",
@@ -8986,8 +8986,8 @@
       "pagadoPorSuDueno": 990000,
       "margen": 1670000,
       "margenPorcentaje": 539,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "40911",
@@ -9052,8 +9052,8 @@
       "pagadoPorSuDueno": null,
       "margen": 540000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "41275",
@@ -9086,8 +9086,8 @@
       "pagadoPorSuDueno": null,
       "margen": 675000,
       "margenPorcentaje": 50,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "41412",
@@ -9120,8 +9120,8 @@
       "pagadoPorSuDueno": null,
       "margen": 1832000,
       "margenPorcentaje": 40,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "3159",
@@ -9154,8 +9154,8 @@
       "pagadoPorSuDueno": 4000000,
       "margen": 2440000,
       "margenPorcentaje": 77,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "9090",
@@ -9188,8 +9188,8 @@
       "pagadoPorSuDueno": 5755400,
       "margen": 3277559,
       "margenPorcentaje": 69,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "10276",
@@ -9222,8 +9222,8 @@
       "pagadoPorSuDueno": 7555555,
       "margen": 4422221,
       "margenPorcentaje": 82,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "12087",
@@ -9250,8 +9250,8 @@
       "pagadoPorSuDueno": null,
       "margen": 480000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "16889",
@@ -9283,8 +9283,8 @@
       "pagadoPorSuDueno": 1020000,
       "margen": 665000,
       "margenPorcentaje": 50,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "17121",
@@ -9316,8 +9316,8 @@
       "pagadoPorSuDueno": 505000,
       "margen": 750000,
       "margenPorcentaje": 100,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "17344",
@@ -9384,8 +9384,8 @@
       "pagadoPorSuDueno": 6050000,
       "margen": 4195000,
       "margenPorcentaje": 114,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "27995",
@@ -9418,8 +9418,8 @@
       "pagadoPorSuDueno": 300000,
       "margen": 740000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "33938",
@@ -9449,8 +9449,8 @@
       "pagadoPorSuDueno": 450000,
       "margen": 1200000,
       "margenPorcentaje": 800,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "35763",
@@ -9483,8 +9483,8 @@
       "pagadoPorSuDueno": 1590000,
       "margen": 1616000,
       "margenPorcentaje": 40,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "38308",
@@ -9551,8 +9551,8 @@
       "pagadoPorSuDueno": null,
       "margen": 1368000,
       "margenPorcentaje": 40,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "19577",
@@ -9619,8 +9619,8 @@
       "pagadoPorSuDueno": 3100000,
       "margen": 1760000,
       "margenPorcentaje": 68,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "29661",
@@ -9653,8 +9653,8 @@
       "pagadoPorSuDueno": 0,
       "margen": 2720340,
       "margenPorcentaje": 78,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "31167",
@@ -9686,8 +9686,8 @@
       "pagadoPorSuDueno": 1650000,
       "margen": 1190000,
       "margenPorcentaje": 50,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "37600",
@@ -9720,8 +9720,8 @@
       "pagadoPorSuDueno": null,
       "margen": 1472000,
       "margenPorcentaje": 40,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "38422",
@@ -9753,8 +9753,8 @@
       "pagadoPorSuDueno": null,
       "margen": 980000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "39801",
@@ -9786,8 +9786,8 @@
       "pagadoPorSuDueno": null,
       "margen": 720000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "41076",
@@ -9817,8 +9817,8 @@
       "pagadoPorSuDueno": null,
       "margen": 530000,
       "margenPorcentaje": 100,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "41087",
@@ -9883,8 +9883,8 @@
       "pagadoPorSuDueno": 523700,
       "margen": 617400,
       "margenPorcentaje": 144,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "41418",
@@ -9916,8 +9916,8 @@
       "pagadoPorSuDueno": 3580200,
       "margen": 2052280,
       "margenPorcentaje": 69,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "41419",
@@ -9950,8 +9950,8 @@
       "pagadoPorSuDueno": 325000,
       "margen": 750000,
       "margenPorcentaje": 100,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "15568",
@@ -10018,8 +10018,8 @@
       "pagadoPorSuDueno": 5340000,
       "margen": 3665999,
       "margenPorcentaje": 96,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "3259",
@@ -10052,8 +10052,8 @@
       "pagadoPorSuDueno": 3666000,
       "margen": 1488000,
       "margenPorcentaje": 40,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "9065",
@@ -10086,8 +10086,8 @@
       "pagadoPorSuDueno": null,
       "margen": 865000,
       "margenPorcentaje": 50,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "27575",
@@ -10148,8 +10148,8 @@
       "pagadoPorSuDueno": 5940000,
       "margen": 2435999,
       "margenPorcentaje": 41,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "37526",
@@ -10176,8 +10176,8 @@
       "pagadoPorSuDueno": null,
       "margen": 300000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "37719",
@@ -10207,8 +10207,8 @@
       "pagadoPorSuDueno": null,
       "margen": 580000,
       "margenPorcentaje": 100,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "38095",
@@ -10238,8 +10238,8 @@
       "pagadoPorSuDueno": null,
       "margen": 860000,
       "margenPorcentaje": 100,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "38449",
@@ -10266,8 +10266,8 @@
       "pagadoPorSuDueno": 240000,
       "margen": 490000,
       "margenPorcentaje": 213,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "41101",
@@ -10300,8 +10300,8 @@
       "pagadoPorSuDueno": null,
       "margen": 1640000,
       "margenPorcentaje": 40,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "41200",
@@ -10368,8 +10368,8 @@
       "pagadoPorSuDueno": null,
       "margen": 820000,
       "margenPorcentaje": 50,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "2368",
@@ -10384,24 +10384,25 @@
       "escudoPresidente": "https://cdn.biwenger.com/i/u/12659137.png?v=9",
       "precio": 1570000,
       "precioTexto": "1,6 M",
-      "puntosTotales": 8,
-      "partidosJugados": 3,
-      "media": 2.7,
-      "puntosPorMillon": 5.1,
+      "puntosTotales": 9,
+      "partidosJugados": 4,
+      "media": 2.3,
+      "puntosPorMillon": 5.73,
       "racha": [
+        1,
         1,
         3,
         4
       ],
-      "rachaTitular": 3,
-      "ultimoMinutos": 90,
+      "rachaTitular": 4,
+      "ultimoMinutos": 87,
       "clausula": 3225000,
       "clausulaTexto": "3,2 M",
       "pagadoPorSuDueno": 2150000,
       "margen": 1655000,
       "margenPorcentaje": 105,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "11677",
@@ -10434,8 +10435,8 @@
       "pagadoPorSuDueno": null,
       "margen": 1296000,
       "margenPorcentaje": 40,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "18564",
@@ -10468,8 +10469,8 @@
       "pagadoPorSuDueno": 0,
       "margen": 2398000,
       "margenPorcentaje": 35,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "25127",
@@ -10533,8 +10534,8 @@
       "pagadoPorSuDueno": 2370000,
       "margen": 1415000,
       "margenPorcentaje": 50,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "33474",
@@ -10601,8 +10602,8 @@
       "pagadoPorSuDueno": 1815000,
       "margen": 2475000,
       "margenPorcentaje": 66,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "40952",
@@ -10703,8 +10704,8 @@
       "pagadoPorSuDueno": null,
       "margen": 1588000,
       "margenPorcentaje": 40,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "34717",
@@ -10859,8 +10860,8 @@
       "pagadoPorSuDueno": 8329999,
       "margen": 2686300,
       "margenPorcentaje": 30,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "19441",
@@ -10960,8 +10961,8 @@
       "pagadoPorSuDueno": 810000,
       "margen": 1512000,
       "margenPorcentaje": 40,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "26678",
@@ -11028,8 +11029,8 @@
       "pagadoPorSuDueno": 2900000,
       "margen": 1470000,
       "margenPorcentaje": 51,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "37644",
@@ -11130,8 +11131,8 @@
       "pagadoPorSuDueno": null,
       "margen": 1364000,
       "margenPorcentaje": 40,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "42261",
@@ -11254,8 +11255,8 @@
       "pagadoPorSuDueno": 100000,
       "margen": 300000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "12494",
@@ -11355,8 +11356,8 @@
       "pagadoPorSuDueno": 1750000,
       "margen": 2450000,
       "margenPorcentaje": 77,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "17756",
@@ -11485,8 +11486,8 @@
       "pagadoPorSuDueno": 170000,
       "margen": 360000,
       "margenPorcentaje": 240,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "30334",
@@ -11513,8 +11514,8 @@
       "pagadoPorSuDueno": null,
       "margen": 300000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "32440",
@@ -11613,8 +11614,8 @@
       "pagadoPorSuDueno": 2550000,
       "margen": 1475000,
       "margenPorcentaje": 63,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "35606",
@@ -11645,8 +11646,8 @@
       "pagadoPorSuDueno": 630000,
       "margen": 990000,
       "margenPorcentaje": 367,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "35706",
@@ -11703,8 +11704,8 @@
       "pagadoPorSuDueno": 60000,
       "margen": 300000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "39736",
@@ -11735,8 +11736,8 @@
       "pagadoPorSuDueno": null,
       "margen": 300000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "40075",
@@ -11769,8 +11770,8 @@
       "pagadoPorSuDueno": 1400000,
       "margen": 4081999,
       "margenPorcentaje": 77,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "41081",
@@ -11801,8 +11802,8 @@
       "pagadoPorSuDueno": null,
       "margen": 540000,
       "margenPorcentaje": 100,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "1074",
@@ -11834,8 +11835,8 @@
       "pagadoPorSuDueno": 3057500,
       "margen": 1580500,
       "margenPorcentaje": 59,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "2247",
@@ -11962,8 +11963,8 @@
       "pagadoPorSuDueno": null,
       "margen": 2080000,
       "margenPorcentaje": 40,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "31475",
@@ -12094,8 +12095,8 @@
       "pagadoPorSuDueno": null,
       "margen": 1568000,
       "margenPorcentaje": 40,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
       "id": "41932",
@@ -12226,8 +12227,8 @@
         "pagadoPorSuDueno": null,
         "margen": 300000,
         "margenPorcentaje": 200,
-        "blindado": false,
-        "blindadoHasta": null
+        "blindado": true,
+        "blindadoHasta": "2026-09-18T19:00:00.000Z"
       },
       {
         "id": "31475",
@@ -12324,8 +12325,8 @@
         "pagadoPorSuDueno": 780000,
         "margen": 780000,
         "margenPorcentaje": 100,
-        "blindado": false,
-        "blindadoHasta": null
+        "blindado": true,
+        "blindadoHasta": "2026-09-18T19:00:00.000Z"
       },
       {
         "id": "38422",
@@ -12357,8 +12358,8 @@
         "pagadoPorSuDueno": null,
         "margen": 980000,
         "margenPorcentaje": 200,
-        "blindado": false,
-        "blindadoHasta": null
+        "blindado": true,
+        "blindadoHasta": "2026-09-18T19:00:00.000Z"
       },
       {
         "id": "41932",
@@ -12423,8 +12424,8 @@
         "pagadoPorSuDueno": 331001,
         "margen": 890000,
         "margenPorcentaje": 100,
-        "blindado": false,
-        "blindadoHasta": null
+        "blindado": true,
+        "blindadoHasta": "2026-09-18T19:00:00.000Z"
       }
     ],
     "caros": [
@@ -12660,8 +12661,8 @@
         "pagadoPorSuDueno": 7555555,
         "margen": 4422221,
         "margenPorcentaje": 82,
-        "blindado": false,
-        "blindadoHasta": null
+        "blindado": true,
+        "blindadoHasta": "2026-09-18T19:00:00.000Z"
       },
       {
         "id": "32440",
@@ -12766,8 +12767,8 @@
         "pagadoPorSuDueno": null,
         "margen": 2080000,
         "margenPorcentaje": 40,
-        "blindado": false,
-        "blindadoHasta": null,
+        "blindado": true,
+        "blindadoHasta": "2026-09-18T19:00:00.000Z",
         "mediaReciente": 14
       },
       {
@@ -12835,8 +12836,8 @@
         "pagadoPorSuDueno": 7360000,
         "margen": 3659600,
         "margenPorcentaje": 53,
-        "blindado": false,
-        "blindadoHasta": null,
+        "blindado": true,
+        "blindadoHasta": "2026-09-18T19:00:00.000Z",
         "mediaReciente": 10
       },
       {
@@ -12870,8 +12871,8 @@
         "pagadoPorSuDueno": null,
         "margen": 1640000,
         "margenPorcentaje": 40,
-        "blindado": false,
-        "blindadoHasta": null,
+        "blindado": true,
+        "blindadoHasta": "2026-09-18T19:00:00.000Z",
         "mediaReciente": 10
       },
       {
@@ -12905,8 +12906,8 @@
         "pagadoPorSuDueno": 8329999,
         "margen": 2686300,
         "margenPorcentaje": 30,
-        "blindado": false,
-        "blindadoHasta": null,
+        "blindado": true,
+        "blindadoHasta": "2026-09-18T19:00:00.000Z",
         "mediaReciente": 10
       },
       {
@@ -12973,8 +12974,8 @@
         "pagadoPorSuDueno": 6370002,
         "margen": 1914000,
         "margenPorcentaje": 30,
-        "blindado": false,
-        "blindadoHasta": null,
+        "blindado": true,
+        "blindadoHasta": "2026-09-18T19:00:00.000Z",
         "mediaReciente": 9
       }
     ],
@@ -13010,8 +13011,8 @@
         "pagadoPorSuDueno": null,
         "margen": 675000,
         "margenPorcentaje": 50,
-        "blindado": false,
-        "blindadoHasta": null,
+        "blindado": true,
+        "blindadoHasta": "2026-09-18T19:00:00.000Z",
         "mediaReciente": -0.5
       },
       {
@@ -13044,8 +13045,8 @@
         "pagadoPorSuDueno": 180000,
         "margen": 760000,
         "margenPorcentaje": 200,
-        "blindado": false,
-        "blindadoHasta": null,
+        "blindado": true,
+        "blindadoHasta": "2026-09-18T19:00:00.000Z",
         "mediaReciente": 0
       },
       {
@@ -13079,8 +13080,8 @@
         "pagadoPorSuDueno": 300000,
         "margen": 740000,
         "margenPorcentaje": 200,
-        "blindado": false,
-        "blindadoHasta": null,
+        "blindado": true,
+        "blindadoHasta": "2026-09-18T19:00:00.000Z",
         "mediaReciente": 0
       },
       {
@@ -13114,8 +13115,8 @@
         "pagadoPorSuDueno": 5799000,
         "margen": 4498599,
         "margenPorcentaje": 124,
-        "blindado": false,
-        "blindadoHasta": null,
+        "blindado": true,
+        "blindadoHasta": "2026-09-18T19:00:00.000Z",
         "mediaReciente": 0.5
       },
       {
@@ -13149,8 +13150,8 @@
         "pagadoPorSuDueno": 4000000,
         "margen": 2200000,
         "margenPorcentaje": 65,
-        "blindado": false,
-        "blindadoHasta": null,
+        "blindado": true,
+        "blindadoHasta": "2026-09-18T19:00:00.000Z",
         "mediaReciente": 0.5
       },
       {
@@ -13183,8 +13184,8 @@
         "pagadoPorSuDueno": null,
         "margen": 720000,
         "margenPorcentaje": 200,
-        "blindado": false,
-        "blindadoHasta": null,
+        "blindado": true,
+        "blindadoHasta": "2026-09-18T19:00:00.000Z",
         "mediaReciente": 0.5
       },
       {
@@ -13216,8 +13217,8 @@
         "pagadoPorSuDueno": null,
         "margen": 360000,
         "margenPorcentaje": 200,
-        "blindado": false,
-        "blindadoHasta": null,
+        "blindado": true,
+        "blindadoHasta": "2026-09-18T19:00:00.000Z",
         "mediaReciente": 1
       },
       {
@@ -13249,8 +13250,8 @@
         "pagadoPorSuDueno": null,
         "margen": 540000,
         "margenPorcentaje": 200,
-        "blindado": false,
-        "blindadoHasta": null,
+        "blindado": true,
+        "blindadoHasta": "2026-09-18T19:00:00.000Z",
         "mediaReciente": 1
       }
     ]
@@ -13288,10 +13289,10 @@
           7
         ],
         "rachaTitular": 4,
-        "nota": 7.5,
-        "rival": "Getafe",
-        "esLocal": true,
-        "dificultad": null
+        "nota": 7.7,
+        "rival": "Deportivo",
+        "esLocal": false,
+        "dificultad": 47
       },
       {
         "nombre": "Iván Martín",
@@ -13344,6 +13345,20 @@
         "dificultad": 23
       },
       {
+        "nombre": "Ceballos",
+        "foto": "https://cdn.biwenger.com/i/p/2044.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Betis",
+        "racha": [
+          6
+        ],
+        "rachaTitular": 0,
+        "nota": 5.7,
+        "rival": "Deportivo",
+        "esLocal": false,
+        "dificultad": 47
+      },
+      {
         "nombre": "Galilea",
         "foto": "https://cdn.biwenger.com/i/p/4070.png",
         "posicion": "Defensa",
@@ -13360,20 +13375,6 @@
         "rival": "Villarreal",
         "esLocal": true,
         "dificultad": 26
-      },
-      {
-        "nombre": "Ceballos",
-        "foto": "https://cdn.biwenger.com/i/p/2044.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Betis",
-        "racha": [
-          6
-        ],
-        "rachaTitular": 0,
-        "nota": 5.5,
-        "rival": "Getafe",
-        "esLocal": true,
-        "dificultad": null
       },
       {
         "nombre": "Carreira",
@@ -13470,10 +13471,10 @@
           4
         ],
         "rachaTitular": 0,
-        "nota": 4,
-        "rival": "Getafe",
-        "esLocal": true,
-        "dificultad": null
+        "nota": 4.2,
+        "rival": "Deportivo",
+        "esLocal": false,
+        "dificultad": 47
       },
       {
         "nombre": "Giménez",
@@ -13564,10 +13565,28 @@
           4
         ],
         "rachaTitular": 5,
-        "nota": 6.8,
-        "rival": "Betis",
-        "esLocal": false,
-        "dificultad": null
+        "nota": 8.3,
+        "rival": "Málaga",
+        "esLocal": true,
+        "dificultad": 20
+      },
+      {
+        "nombre": "David Soria",
+        "foto": "https://cdn.biwenger.com/i/p/11.png",
+        "posicion": "Portero",
+        "equipoReal": "Getafe",
+        "racha": [
+          4,
+          6,
+          5,
+          10,
+          5
+        ],
+        "rachaTitular": 5,
+        "nota": 6.5,
+        "rival": "Málaga",
+        "esLocal": true,
+        "dificultad": 20
       },
       {
         "nombre": "Mandi",
@@ -13600,10 +13619,10 @@
           7
         ],
         "rachaTitular": 1,
-        "nota": 5.7,
+        "nota": 5.8,
         "rival": "Sevilla",
         "esLocal": false,
-        "dificultad": 46
+        "dificultad": 45
       },
       {
         "nombre": "Denis Suárez",
@@ -13622,24 +13641,6 @@
         "rival": "Athletic",
         "esLocal": false,
         "dificultad": 43
-      },
-      {
-        "nombre": "David Soria",
-        "foto": "https://cdn.biwenger.com/i/p/11.png",
-        "posicion": "Portero",
-        "equipoReal": "Getafe",
-        "racha": [
-          4,
-          6,
-          5,
-          10,
-          5
-        ],
-        "rachaTitular": 5,
-        "nota": 5,
-        "rival": "Betis",
-        "esLocal": false,
-        "dificultad": null
       },
       {
         "nombre": "De Galarreta",
@@ -13823,6 +13824,24 @@
         "dificultad": 60
       },
       {
+        "nombre": "Isco",
+        "foto": "https://cdn.biwenger.com/i/p/1249.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Betis",
+        "racha": [
+          3,
+          3,
+          3,
+          2,
+          3
+        ],
+        "rachaTitular": 0,
+        "nota": 4.2,
+        "rival": "Deportivo",
+        "esLocal": false,
+        "dificultad": 47
+      },
+      {
         "nombre": "Mariano",
         "foto": "https://cdn.biwenger.com/i/p/5697.png",
         "posicion": "Delantero",
@@ -13857,24 +13876,6 @@
         "rival": "Real Madrid",
         "esLocal": true,
         "dificultad": 63
-      },
-      {
-        "nombre": "Isco",
-        "foto": "https://cdn.biwenger.com/i/p/1249.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Betis",
-        "racha": [
-          3,
-          3,
-          3,
-          2,
-          3
-        ],
-        "rachaTitular": 0,
-        "nota": 4,
-        "rival": "Getafe",
-        "esLocal": true,
-        "dificultad": null
       },
       {
         "nombre": "Barja",
@@ -14029,6 +14030,20 @@
         "dificultad": 41
       },
       {
+        "nombre": "Firpo",
+        "foto": "https://cdn.biwenger.com/i/p/12596.png",
+        "posicion": "Defensa",
+        "equipoReal": "Betis",
+        "racha": [
+          5
+        ],
+        "rachaTitular": 0,
+        "nota": 5.2,
+        "rival": "Deportivo",
+        "esLocal": false,
+        "dificultad": 47
+      },
+      {
         "nombre": "Bouare",
         "foto": "https://cdn.biwenger.com/i/p/43172.png",
         "posicion": "Centrocampista",
@@ -14062,20 +14077,6 @@
         "rival": "Athletic",
         "esLocal": false,
         "dificultad": 43
-      },
-      {
-        "nombre": "Firpo",
-        "foto": "https://cdn.biwenger.com/i/p/12596.png",
-        "posicion": "Defensa",
-        "equipoReal": "Betis",
-        "racha": [
-          5
-        ],
-        "rachaTitular": 0,
-        "nota": 5,
-        "rival": "Getafe",
-        "esLocal": true,
-        "dificultad": null
       },
       {
         "nombre": "Jonny",
@@ -14269,10 +14270,10 @@
           6
         ],
         "rachaTitular": 4,
-        "nota": 5.8,
-        "rival": "Getafe",
-        "esLocal": true,
-        "dificultad": null
+        "nota": 5.9,
+        "rival": "Deportivo",
+        "esLocal": false,
+        "dificultad": 47
       },
       {
         "nombre": "Valentín Gómez",
@@ -14283,10 +14284,10 @@
           6
         ],
         "rachaTitular": 1,
-        "nota": 5.5,
-        "rival": "Getafe",
-        "esLocal": true,
-        "dificultad": null
+        "nota": 5.7,
+        "rival": "Deportivo",
+        "esLocal": false,
+        "dificultad": 47
       },
       {
         "nombre": "Sivera",
@@ -14393,6 +14394,18 @@
         "dificultad": 23
       },
       {
+        "nombre": "Letacek",
+        "foto": "https://cdn.biwenger.com/i/p/34149.png",
+        "posicion": "Portero",
+        "equipoReal": "Getafe",
+        "racha": [],
+        "rachaTitular": 0,
+        "nota": 4,
+        "rival": "Málaga",
+        "esLocal": true,
+        "dificultad": 20
+      },
+      {
         "nombre": "Facundo González",
         "foto": "https://cdn.biwenger.com/i/p/41275.png",
         "posicion": "Defensa",
@@ -14462,18 +14475,6 @@
         "rival": "Racing",
         "esLocal": true,
         "dificultad": 39
-      },
-      {
-        "nombre": "Letacek",
-        "foto": "https://cdn.biwenger.com/i/p/34149.png",
-        "posicion": "Portero",
-        "equipoReal": "Getafe",
-        "racha": [],
-        "rachaTitular": 0,
-        "nota": 2.5,
-        "rival": "Betis",
-        "esLocal": false,
-        "dificultad": null
       }
     ],
     "Madriguana FC": [
@@ -14511,6 +14512,24 @@
         "rival": "Valencia",
         "esLocal": false,
         "dificultad": 18
+      },
+      {
+        "nombre": "Satriano",
+        "foto": "https://cdn.biwenger.com/i/p/39792.png",
+        "posicion": "Delantero",
+        "equipoReal": "Getafe",
+        "racha": [
+          2,
+          11,
+          2,
+          2,
+          0
+        ],
+        "rachaTitular": 5,
+        "nota": 7.3,
+        "rival": "Málaga",
+        "esLocal": true,
+        "dificultad": 20
       },
       {
         "nombre": "Dmitrovic",
@@ -14567,24 +14586,6 @@
         "dificultad": 39
       },
       {
-        "nombre": "Satriano",
-        "foto": "https://cdn.biwenger.com/i/p/39792.png",
-        "posicion": "Delantero",
-        "equipoReal": "Getafe",
-        "racha": [
-          2,
-          11,
-          2,
-          2,
-          0
-        ],
-        "rachaTitular": 5,
-        "nota": 5.8,
-        "rival": "Betis",
-        "esLocal": false,
-        "dificultad": null
-      },
-      {
         "nombre": "Dolan",
         "foto": "https://cdn.biwenger.com/i/p/38308.png",
         "posicion": "Delantero",
@@ -14632,10 +14633,10 @@
           5
         ],
         "rachaTitular": 2,
-        "nota": 4.5,
-        "rival": "Getafe",
-        "esLocal": true,
-        "dificultad": null
+        "nota": 4.7,
+        "rival": "Deportivo",
+        "esLocal": false,
+        "dificultad": 47
       },
       {
         "nombre": "Ratiu",
@@ -14695,10 +14696,10 @@
         "equipoReal": "Betis",
         "racha": [],
         "rachaTitular": 0,
-        "nota": 2.5,
-        "rival": "Getafe",
-        "esLocal": true,
-        "dificultad": null
+        "nota": 2.6,
+        "rival": "Deportivo",
+        "esLocal": false,
+        "dificultad": 47
       }
     ],
     "Cañoneros CF": [
@@ -14860,6 +14861,23 @@
         "dificultad": 39
       },
       {
+        "nombre": "Boselli",
+        "foto": "https://cdn.biwenger.com/i/p/39801.png",
+        "posicion": "Defensa",
+        "equipoReal": "Getafe",
+        "racha": [
+          1,
+          0,
+          3,
+          -1
+        ],
+        "rachaTitular": 1,
+        "nota": 4.3,
+        "rival": "Málaga",
+        "esLocal": true,
+        "dificultad": 20
+      },
+      {
         "nombre": "Villares",
         "foto": "https://cdn.biwenger.com/i/p/41076.png",
         "posicion": "Centrocampista",
@@ -14891,23 +14909,6 @@
         "rival": "Atlético",
         "esLocal": false,
         "dificultad": 60
-      },
-      {
-        "nombre": "Boselli",
-        "foto": "https://cdn.biwenger.com/i/p/39801.png",
-        "posicion": "Defensa",
-        "equipoReal": "Getafe",
-        "racha": [
-          1,
-          0,
-          3,
-          -1
-        ],
-        "rachaTitular": 1,
-        "nota": 2.8,
-        "rival": "Betis",
-        "esLocal": false,
-        "dificultad": null
       }
     ],
     "LXUNITED": [
@@ -14999,6 +15000,21 @@
         "dificultad": 39
       },
       {
+        "nombre": "Davinchi",
+        "foto": "https://cdn.biwenger.com/i/p/38095.png",
+        "posicion": "Defensa",
+        "equipoReal": "Getafe",
+        "racha": [
+          3,
+          3
+        ],
+        "rachaTitular": 0,
+        "nota": 5.5,
+        "rival": "Málaga",
+        "esLocal": true,
+        "dificultad": 20
+      },
+      {
         "nombre": "Huijsen",
         "foto": "https://cdn.biwenger.com/i/p/37495.png",
         "posicion": "Defensa",
@@ -15035,21 +15051,6 @@
         "dificultad": 60
       },
       {
-        "nombre": "Davinchi",
-        "foto": "https://cdn.biwenger.com/i/p/38095.png",
-        "posicion": "Defensa",
-        "equipoReal": "Getafe",
-        "racha": [
-          3,
-          3
-        ],
-        "rachaTitular": 0,
-        "nota": 4,
-        "rival": "Betis",
-        "esLocal": false,
-        "dificultad": null
-      },
-      {
         "nombre": "Gordon",
         "foto": "https://cdn.biwenger.com/i/p/41200.png",
         "posicion": "Delantero",
@@ -15065,7 +15066,7 @@
         "nota": 4,
         "rival": "Sevilla",
         "esLocal": false,
-        "dificultad": 46
+        "dificultad": 45
       },
       {
         "nombre": "Ximo Navarro",
@@ -15214,6 +15215,21 @@
         "dificultad": 39
       },
       {
+        "nombre": "Ez Abde",
+        "foto": "https://cdn.biwenger.com/i/p/25127.png",
+        "posicion": "Delantero",
+        "equipoReal": "Betis",
+        "racha": [
+          5,
+          3
+        ],
+        "rachaTitular": 1,
+        "nota": 4.7,
+        "rival": "Deportivo",
+        "esLocal": false,
+        "dificultad": 47
+      },
+      {
         "nombre": "Gonzalo Villar",
         "foto": "https://cdn.biwenger.com/i/p/25403.png",
         "posicion": "Centrocampista",
@@ -15232,35 +15248,21 @@
         "dificultad": 57
       },
       {
-        "nombre": "Ez Abde",
-        "foto": "https://cdn.biwenger.com/i/p/25127.png",
-        "posicion": "Delantero",
-        "equipoReal": "Betis",
-        "racha": [
-          5,
-          3
-        ],
-        "rachaTitular": 1,
-        "nota": 4.5,
-        "rival": "Getafe",
-        "esLocal": true,
-        "dificultad": null
-      },
-      {
         "nombre": "Mario Martín",
         "foto": "https://cdn.biwenger.com/i/p/2368.png",
         "posicion": "Centrocampista",
         "equipoReal": "Getafe",
         "racha": [
           1,
+          1,
           3,
           4
         ],
-        "rachaTitular": 3,
-        "nota": 3.5,
-        "rival": "Betis",
-        "esLocal": false,
-        "dificultad": null
+        "rachaTitular": 4,
+        "nota": 4.5,
+        "rival": "Málaga",
+        "esLocal": true,
+        "dificultad": 20
       },
       {
         "nombre": "Quagliata",
@@ -15415,7 +15417,7 @@
         "nota": 5,
         "rival": "Sevilla",
         "esLocal": false,
-        "dificultad": 46
+        "dificultad": 45
       },
       {
         "nombre": "Castrín",
@@ -15465,10 +15467,10 @@
           5
         ],
         "rachaTitular": 1,
-        "nota": 4.2,
+        "nota": 4.3,
         "rival": "Sevilla",
         "esLocal": false,
-        "dificultad": 46
+        "dificultad": 45
       },
       {
         "nombre": "Pablo Ibáñez",
@@ -15603,6 +15605,24 @@
         "dificultad": 12
       },
       {
+        "nombre": "Espart",
+        "foto": "https://cdn.biwenger.com/i/p/40075.png",
+        "posicion": "Defensa",
+        "equipoReal": "Barcelona",
+        "racha": [
+          11,
+          5,
+          4,
+          3,
+          9
+        ],
+        "rachaTitular": 5,
+        "nota": 6.8,
+        "rival": "Sevilla",
+        "esLocal": false,
+        "dificultad": 45
+      },
+      {
         "nombre": "Pathé Ciss",
         "foto": "https://cdn.biwenger.com/i/p/24326.png",
         "posicion": "Centrocampista",
@@ -15621,24 +15641,6 @@
         "dificultad": 32
       },
       {
-        "nombre": "Espart",
-        "foto": "https://cdn.biwenger.com/i/p/40075.png",
-        "posicion": "Defensa",
-        "equipoReal": "Barcelona",
-        "racha": [
-          11,
-          5,
-          4,
-          3,
-          9
-        ],
-        "rachaTitular": 5,
-        "nota": 6.7,
-        "rival": "Sevilla",
-        "esLocal": false,
-        "dificultad": 46
-      },
-      {
         "nombre": "Cubarsí",
         "foto": "https://cdn.biwenger.com/i/p/32440.png",
         "posicion": "Defensa",
@@ -15653,7 +15655,7 @@
         "nota": 6.5,
         "rival": "Sevilla",
         "esLocal": false,
-        "dificultad": 46
+        "dificultad": 45
       },
       {
         "nombre": "Brugué",
@@ -15701,10 +15703,10 @@
           7
         ],
         "rachaTitular": 1,
-        "nota": 5.8,
-        "rival": "Getafe",
-        "esLocal": true,
-        "dificultad": null
+        "nota": 5.9,
+        "rival": "Deportivo",
+        "esLocal": false,
+        "dificultad": 47
       },
       {
         "nombre": "Paco Cortés",
@@ -15871,10 +15873,10 @@
           8
         ],
         "rachaTitular": 5,
-        "nota": 7.5,
-        "rival": "Getafe",
-        "esLocal": true,
-        "dificultad": null
+        "nota": 7.7,
+        "rival": "Deportivo",
+        "esLocal": false,
+        "dificultad": 47
       },
       {
         "nombre": "Cabrera",
@@ -15923,10 +15925,10 @@
           2
         ],
         "rachaTitular": 3,
-        "nota": 5.5,
-        "rival": "Getafe",
-        "esLocal": true,
-        "dificultad": null
+        "nota": 5.7,
+        "rival": "Deportivo",
+        "esLocal": false,
+        "dificultad": 47
       },
       {
         "nombre": "José Salinas",
@@ -16081,6 +16083,25 @@
       "presidente": "C.d.F Atlético de Cohiba"
     },
     {
+      "nombre": "Terrats",
+      "foto": "https://cdn.biwenger.com/i/p/26092.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Getafe",
+      "racha": [
+        14,
+        3,
+        5,
+        6,
+        4
+      ],
+      "rachaTitular": 5,
+      "nota": 8.3,
+      "rival": "Málaga",
+      "esLocal": true,
+      "dificultad": 20,
+      "presidente": "C.d.F Atlético de Cohiba"
+    },
+    {
       "nombre": "Camello",
       "foto": "https://cdn.biwenger.com/i/p/17756.png",
       "posicion": "Delantero",
@@ -16136,6 +16157,24 @@
       "presidente": "Gorila FC"
     },
     {
+      "nombre": "Natan",
+      "foto": "https://cdn.biwenger.com/i/p/19614.png",
+      "posicion": "Defensa",
+      "equipoReal": "Betis",
+      "racha": [
+        15,
+        7,
+        4,
+        7
+      ],
+      "rachaTitular": 4,
+      "nota": 7.7,
+      "rival": "Deportivo",
+      "esLocal": false,
+      "dificultad": 47,
+      "presidente": "Lottin Capital"
+    },
+    {
       "nombre": "Pedrosa",
       "foto": "https://cdn.biwenger.com/i/p/16889.png",
       "posicion": "Defensa",
@@ -16152,6 +16191,25 @@
       "esLocal": false,
       "dificultad": 32,
       "presidente": "Madriguana FC"
+    },
+    {
+      "nombre": "Álvaro Valles",
+      "foto": "https://cdn.biwenger.com/i/p/30487.png",
+      "posicion": "Portero",
+      "equipoReal": "Betis",
+      "racha": [
+        14,
+        14,
+        6,
+        11,
+        8
+      ],
+      "rachaTitular": 5,
+      "nota": 7.7,
+      "rival": "Deportivo",
+      "esLocal": false,
+      "dificultad": 47,
+      "presidente": "Seif fc"
     },
     {
       "nombre": "Yangel Herrera",
@@ -16171,88 +16229,7 @@
       "esLocal": false,
       "dificultad": 18,
       "presidente": "Madriguana FC"
-    },
-    {
-      "nombre": "Dmitrovic",
-      "foto": "https://cdn.biwenger.com/i/p/9090.png",
-      "posicion": "Portero",
-      "equipoReal": "Espanyol",
-      "racha": [
-        1,
-        10,
-        4,
-        9,
-        4
-      ],
-      "rachaTitular": 6,
-      "nota": 7.2,
-      "rival": "Elche",
-      "esLocal": true,
-      "dificultad": 12,
-      "presidente": "Madriguana FC"
-    },
-    {
-      "nombre": "Álvaro García",
-      "foto": "https://cdn.biwenger.com/i/p/33.png",
-      "posicion": "Delantero",
-      "equipoReal": "Rayo Vallecano",
-      "racha": [
-        14,
-        1,
-        3,
-        2,
-        1
-      ],
-      "rachaTitular": 4,
-      "nota": 7.2,
-      "rival": "Osasuna",
-      "esLocal": false,
-      "dificultad": 32,
-      "presidente": "LXUNITED"
-    },
-    {
-      "nombre": "Pablo García",
-      "foto": "https://cdn.biwenger.com/i/p/35763.png",
-      "posicion": "Delantero",
-      "equipoReal": "Racing",
-      "racha": [
-        2,
-        11,
-        1,
-        10,
-        3
-      ],
-      "rachaTitular": 2,
-      "nota": 7.1,
-      "rival": "Celta",
-      "esLocal": false,
-      "dificultad": 23,
-      "presidente": "Madriguana FC"
     }
   ],
-  "riesgoClausula": [
-    {
-      "nombre": "Álvaro Valles",
-      "foto": "https://cdn.biwenger.com/i/p/30487.png",
-      "posicion": "Portero",
-      "equipoReal": "Betis",
-      "presidente": "Seif fc",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/14027560.png",
-      "precioTexto": "5,2 M",
-      "clausulaTexto": "7,3 M",
-      "margenPorcentaje": 40,
-      "margenTexto": "2,1 M",
-      "media": 10.6,
-      "puntosPorMillon": 10.19,
-      "racha": [
-        14,
-        14,
-        6,
-        11,
-        8
-      ],
-      "rachaTitular": 5,
-      "nivel": "medio"
-    }
-  ]
+  "riesgoClausula": []
 }
