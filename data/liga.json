@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-17T10:23:56.134Z",
+  "actualizado": "2026-09-17T10:41:50.774Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 6,
   "jornadaEnJuego": true,
@@ -4007,32 +4007,6 @@
         ]
       },
       {
-        "nombre": "De la Fuente",
-        "posicion": "Defensa",
-        "foto": "https://cdn.biwenger.com/i/p/37739.png",
-        "equipoReal": "Levante",
-        "jornadas": [
-          {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Athletic",
-            "dificultad": null
-          },
-          {
-            "jornada": "Round 7",
-            "esLocal": false,
-            "rival": "Villarreal",
-            "dificultad": 18
-          },
-          {
-            "jornada": "Round 8",
-            "esLocal": true,
-            "rival": "Sevilla",
-            "dificultad": 66
-          }
-        ]
-      },
-      {
         "nombre": "Marc Roca",
         "posicion": "Centrocampista",
         "foto": "https://cdn.biwenger.com/i/p/5807.png",
@@ -4237,6 +4211,32 @@
             "esLocal": false,
             "rival": "Barcelona",
             "dificultad": 95
+          }
+        ]
+      },
+      {
+        "nombre": "De la Fuente",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/37739.png",
+        "equipoReal": "Levante",
+        "jornadas": [
+          {
+            "jornada": "Round 6 (postponed)",
+            "esLocal": true,
+            "rival": "Athletic",
+            "dificultad": null
+          },
+          {
+            "jornada": "Round 7",
+            "esLocal": false,
+            "rival": "Villarreal",
+            "dificultad": 18
+          },
+          {
+            "jornada": "Round 8",
+            "esLocal": true,
+            "rival": "Sevilla",
+            "dificultad": 66
           }
         ]
       },
@@ -8682,40 +8682,6 @@
       "blindadoHasta": "2026-09-25T13:18:41.000Z"
     },
     {
-      "id": "37739",
-      "nombre": "De la Fuente",
-      "slug": "a-de-la-fuente",
-      "posicion": "Defensa",
-      "posicionCodigo": 2,
-      "foto": "https://cdn.biwenger.com/i/p/37739.png",
-      "equipoReal": "Levante",
-      "equipoIdReal": "10",
-      "presidente": "Gorila FC",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/11411835.png",
-      "precio": 4150000,
-      "precioTexto": "4,2 M",
-      "puntosTotales": 31,
-      "partidosJugados": 5,
-      "media": 6.2,
-      "puntosPorMillon": 7.47,
-      "racha": [
-        -1,
-        6,
-        14,
-        7,
-        5
-      ],
-      "rachaTitular": 5,
-      "ultimoMinutos": 71,
-      "clausula": 8204419,
-      "clausulaTexto": "8,2 M",
-      "pagadoPorSuDueno": 5860300,
-      "margen": 4054419,
-      "margenPorcentaje": 98,
-      "blindado": true,
-      "blindadoHasta": "2026-09-25T02:48:15.000Z"
-    },
-    {
       "id": "5807",
       "nombre": "Marc Roca",
       "slug": "marc-roca",
@@ -8974,6 +8940,40 @@
       "margenPorcentaje": 200,
       "blindado": false,
       "blindadoHasta": null
+    },
+    {
+      "id": "37739",
+      "nombre": "De la Fuente",
+      "slug": "a-de-la-fuente",
+      "posicion": "Defensa",
+      "posicionCodigo": 2,
+      "foto": "https://cdn.biwenger.com/i/p/37739.png",
+      "equipoReal": "Levante",
+      "equipoIdReal": "10",
+      "presidente": "Gorila FC",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/11411835.png",
+      "precio": 4150000,
+      "precioTexto": "4,2 M",
+      "puntosTotales": 31,
+      "partidosJugados": 5,
+      "media": 6.2,
+      "puntosPorMillon": 7.47,
+      "racha": [
+        -1,
+        6,
+        14,
+        7,
+        5
+      ],
+      "rachaTitular": 5,
+      "ultimoMinutos": 71,
+      "clausula": 8204419,
+      "clausulaTexto": "8,2 M",
+      "pagadoPorSuDueno": 5860300,
+      "margen": 4054419,
+      "margenPorcentaje": 98,
+      "blindado": true,
+      "blindadoHasta": "2026-09-25T02:48:15.000Z"
     },
     {
       "id": "38318",
