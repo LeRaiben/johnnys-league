@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-17T15:57:48.760Z",
+  "actualizado": "2026-09-17T16:19:26.068Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 6,
   "jornadaEnJuego": true,
@@ -75,16 +75,6 @@
       "estado": "finished"
     },
     {
-      "local": "Levante",
-      "visitante": "Athletic",
-      "escudoLocal": "https://cdn.biwenger.com/i/t/10.png",
-      "escudoVisitante": "https://cdn.biwenger.com/i/t/1.png",
-      "fecha": "2026-09-16T19:30:00.000Z",
-      "golesLocal": null,
-      "golesVisitante": null,
-      "estado": "postponed"
-    },
-    {
       "local": "Betis",
       "visitante": "Getafe",
       "escudoLocal": "https://cdn.biwenger.com/i/t/87.png",
@@ -103,6 +93,16 @@
       "golesLocal": null,
       "golesVisitante": null,
       "estado": "preview"
+    },
+    {
+      "local": "Levante",
+      "visitante": "Athletic",
+      "escudoLocal": "https://cdn.biwenger.com/i/t/10.png",
+      "escudoVisitante": "https://cdn.biwenger.com/i/t/1.png",
+      "fecha": "2026-10-21T18:00:00.000Z",
+      "golesLocal": null,
+      "golesVisitante": null,
+      "estado": "postponed"
     }
   ],
   "nombreJornada": "Jornada 6 (aplazada)",
@@ -2637,12 +2637,6 @@
         "equipoReal": "Athletic",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Levante",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": true,
             "rival": "Alavés",
@@ -2653,6 +2647,12 @@
             "esLocal": false,
             "rival": "Rayo Vallecano",
             "dificultad": 41
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Valencia",
+            "dificultad": 15
           }
         ]
       },
@@ -3003,12 +3003,6 @@
         "equipoReal": "Athletic",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Levante",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": true,
             "rival": "Alavés",
@@ -3019,6 +3013,12 @@
             "esLocal": false,
             "rival": "Rayo Vallecano",
             "dificultad": 41
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Valencia",
+            "dificultad": 15
           }
         ]
       },
@@ -3029,12 +3029,6 @@
         "equipoReal": "Athletic",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Levante",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": true,
             "rival": "Alavés",
@@ -3045,6 +3039,12 @@
             "esLocal": false,
             "rival": "Rayo Vallecano",
             "dificultad": 41
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Valencia",
+            "dificultad": 15
           }
         ]
       },
@@ -3054,12 +3054,6 @@
         "foto": "https://cdn.biwenger.com/i/p/2480.png",
         "equipoReal": "Levante",
         "jornadas": [
-          {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Athletic",
-            "dificultad": null
-          },
           {
             "jornada": "Round 7",
             "esLocal": false,
@@ -3071,6 +3065,12 @@
             "esLocal": true,
             "rival": "Sevilla",
             "dificultad": 66
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Deportivo",
+            "dificultad": 54
           }
         ]
       },
@@ -3343,12 +3343,6 @@
         "equipoReal": "Athletic",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Levante",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": true,
             "rival": "Alavés",
@@ -3359,6 +3353,12 @@
             "esLocal": false,
             "rival": "Rayo Vallecano",
             "dificultad": 41
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Valencia",
+            "dificultad": 15
           }
         ]
       },
@@ -4205,12 +4205,6 @@
         "equipoReal": "Levante",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Athletic",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Villarreal",
@@ -4221,6 +4215,12 @@
             "esLocal": true,
             "rival": "Sevilla",
             "dificultad": 66
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Deportivo",
+            "dificultad": 54
           }
         ]
       },
@@ -4493,12 +4493,6 @@
         "equipoReal": "Levante",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Athletic",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Villarreal",
@@ -4509,6 +4503,12 @@
             "esLocal": true,
             "rival": "Sevilla",
             "dificultad": 66
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Deportivo",
+            "dificultad": 54
           }
         ]
       },
@@ -4597,12 +4597,6 @@
         "equipoReal": "Athletic",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Levante",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": true,
             "rival": "Alavés",
@@ -4613,6 +4607,12 @@
             "esLocal": false,
             "rival": "Rayo Vallecano",
             "dificultad": 41
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Valencia",
+            "dificultad": 15
           }
         ]
       },
@@ -4755,12 +4755,6 @@
         "equipoReal": "Levante",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Athletic",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Villarreal",
@@ -4771,6 +4765,12 @@
             "esLocal": true,
             "rival": "Sevilla",
             "dificultad": 66
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Deportivo",
+            "dificultad": 54
           }
         ]
       },
@@ -5251,12 +5251,6 @@
         "equipoReal": "Athletic",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Levante",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": true,
             "rival": "Alavés",
@@ -5267,6 +5261,12 @@
             "esLocal": false,
             "rival": "Rayo Vallecano",
             "dificultad": 41
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Valencia",
+            "dificultad": 15
           }
         ]
       },
@@ -6096,12 +6096,6 @@
         "equipoReal": "Levante",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Athletic",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Villarreal",
@@ -6112,6 +6106,12 @@
             "esLocal": true,
             "rival": "Sevilla",
             "dificultad": 66
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Deportivo",
+            "dificultad": 54
           }
         ]
       },
@@ -6389,12 +6389,6 @@
         "equipoReal": "Levante",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Athletic",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Villarreal",
@@ -6405,6 +6399,12 @@
             "esLocal": true,
             "rival": "Sevilla",
             "dificultad": 66
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Deportivo",
+            "dificultad": 54
           }
         ]
       },
@@ -6469,12 +6469,6 @@
         "equipoReal": "Athletic",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Levante",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": true,
             "rival": "Alavés",
@@ -6485,6 +6479,12 @@
             "esLocal": false,
             "rival": "Rayo Vallecano",
             "dificultad": 41
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Valencia",
+            "dificultad": 15
           }
         ]
       },
@@ -6547,12 +6547,6 @@
         "equipoReal": "Athletic",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Levante",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": true,
             "rival": "Alavés",
@@ -6563,6 +6557,12 @@
             "esLocal": false,
             "rival": "Rayo Vallecano",
             "dificultad": 41
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Valencia",
+            "dificultad": 15
           }
         ]
       },
@@ -6651,12 +6651,6 @@
         "equipoReal": "Levante",
         "jornadas": [
           {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Athletic",
-            "dificultad": null
-          },
-          {
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Villarreal",
@@ -6667,6 +6661,12 @@
             "esLocal": true,
             "rival": "Sevilla",
             "dificultad": 66
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Deportivo",
+            "dificultad": 54
           }
         ]
       },
@@ -13423,10 +13423,10 @@
           4
         ],
         "rachaTitular": 1,
-        "nota": 4.8,
-        "rival": "Levante",
-        "esLocal": false,
-        "dificultad": null
+        "nota": 4.7,
+        "rival": "Alavés",
+        "esLocal": true,
+        "dificultad": 52
       },
       {
         "nombre": "De Frutos",
@@ -13552,6 +13552,24 @@
         "dificultad": 30
       },
       {
+        "nombre": "Mandi",
+        "foto": "https://cdn.biwenger.com/i/p/2480.png",
+        "posicion": "Defensa",
+        "equipoReal": "Levante",
+        "racha": [
+          4,
+          4,
+          5,
+          8,
+          4
+        ],
+        "rachaTitular": 5,
+        "nota": 6.1,
+        "rival": "Villarreal",
+        "esLocal": false,
+        "dificultad": 18
+      },
+      {
         "nombre": "Terrats",
         "foto": "https://cdn.biwenger.com/i/p/26092.png",
         "posicion": "Centrocampista",
@@ -13617,10 +13635,10 @@
           2
         ],
         "rachaTitular": 3,
-        "nota": 4.8,
-        "rival": "Levante",
-        "esLocal": false,
-        "dificultad": null
+        "nota": 4.7,
+        "rival": "Alavés",
+        "esLocal": true,
+        "dificultad": 52
       },
       {
         "nombre": "Amatucci",
@@ -13659,24 +13677,6 @@
         "dificultad": 43
       },
       {
-        "nombre": "Mandi",
-        "foto": "https://cdn.biwenger.com/i/p/2480.png",
-        "posicion": "Defensa",
-        "equipoReal": "Levante",
-        "racha": [
-          4,
-          4,
-          5,
-          8,
-          4
-        ],
-        "rachaTitular": 5,
-        "nota": 4.5,
-        "rival": "Athletic",
-        "esLocal": true,
-        "dificultad": null
-      },
-      {
         "nombre": "David Soria",
         "foto": "https://cdn.biwenger.com/i/p/11.png",
         "posicion": "Portero",
@@ -13707,10 +13707,10 @@
           3
         ],
         "rachaTitular": 4,
-        "nota": 3.5,
-        "rival": "Levante",
-        "esLocal": false,
-        "dificultad": null
+        "nota": 3.4,
+        "rival": "Alavés",
+        "esLocal": true,
+        "dificultad": 52
       }
     ],
     "Manchester Pity": [
@@ -13727,10 +13727,10 @@
           3
         ],
         "rachaTitular": 5,
-        "nota": 7,
-        "rival": "Levante",
-        "esLocal": false,
-        "dificultad": null
+        "nota": 6.9,
+        "rival": "Alavés",
+        "esLocal": true,
+        "dificultad": 52
       },
       {
         "nombre": "Koski",
@@ -14307,6 +14307,24 @@
         "dificultad": 43
       },
       {
+        "nombre": "De la Fuente",
+        "foto": "https://cdn.biwenger.com/i/p/37739.png",
+        "posicion": "Defensa",
+        "equipoReal": "Levante",
+        "racha": [
+          -1,
+          6,
+          14,
+          7,
+          5
+        ],
+        "rachaTitular": 5,
+        "nota": 5.3,
+        "rival": "Villarreal",
+        "esLocal": false,
+        "dificultad": 18
+      },
+      {
         "nombre": "Larrubia",
         "foto": "https://cdn.biwenger.com/i/p/41412.png",
         "posicion": "Delantero",
@@ -14391,24 +14409,6 @@
         "rival": "Celta",
         "esLocal": false,
         "dificultad": 23
-      },
-      {
-        "nombre": "De la Fuente",
-        "foto": "https://cdn.biwenger.com/i/p/37739.png",
-        "posicion": "Defensa",
-        "equipoReal": "Levante",
-        "racha": [
-          -1,
-          6,
-          14,
-          7,
-          5
-        ],
-        "rachaTitular": 5,
-        "nota": 3.8,
-        "rival": "Athletic",
-        "esLocal": true,
-        "dificultad": null
       },
       {
         "nombre": "Nsongo",
@@ -14621,6 +14621,23 @@
         "dificultad": 63
       },
       {
+        "nombre": "Víctor García",
+        "foto": "https://cdn.biwenger.com/i/p/17121.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Levante",
+        "racha": [
+          0,
+          3,
+          3,
+          1
+        ],
+        "rachaTitular": 1,
+        "nota": 4.8,
+        "rival": "Villarreal",
+        "esLocal": false,
+        "dificultad": 18
+      },
+      {
         "nombre": "Diego Conde",
         "foto": "https://cdn.biwenger.com/i/p/12087.png",
         "posicion": "Portero",
@@ -14669,23 +14686,6 @@
         "dificultad": 32
       },
       {
-        "nombre": "Víctor García",
-        "foto": "https://cdn.biwenger.com/i/p/17121.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Levante",
-        "racha": [
-          0,
-          3,
-          3,
-          1
-        ],
-        "rachaTitular": 1,
-        "nota": 3.3,
-        "rival": "Athletic",
-        "esLocal": true,
-        "dificultad": null
-      },
-      {
         "nombre": "Sannadi",
         "foto": "https://cdn.biwenger.com/i/p/33938.png",
         "posicion": "Delantero",
@@ -14695,10 +14695,10 @@
           1
         ],
         "rachaTitular": 0,
-        "nota": 3,
-        "rival": "Levante",
-        "esLocal": false,
-        "dificultad": null
+        "nota": 2.9,
+        "rival": "Alavés",
+        "esLocal": true,
+        "dificultad": 52
       }
     ],
     "Cañoneros CF": [
@@ -14719,6 +14719,24 @@
         "rival": "Atlético",
         "esLocal": false,
         "dificultad": 60
+      },
+      {
+        "nombre": "Olasagasti",
+        "foto": "https://cdn.biwenger.com/i/p/29661.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Levante",
+        "racha": [
+          1,
+          7,
+          16,
+          5,
+          1
+        ],
+        "rachaTitular": 0,
+        "nota": 6.1,
+        "rival": "Villarreal",
+        "esLocal": false,
+        "dificultad": 18
       },
       {
         "nombre": "Recio",
@@ -14822,24 +14840,6 @@
         "rival": "Villarreal",
         "esLocal": true,
         "dificultad": 26
-      },
-      {
-        "nombre": "Olasagasti",
-        "foto": "https://cdn.biwenger.com/i/p/29661.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Levante",
-        "racha": [
-          1,
-          7,
-          16,
-          5,
-          1
-        ],
-        "rachaTitular": 0,
-        "nota": 4.5,
-        "rival": "Athletic",
-        "esLocal": true,
-        "dificultad": null
       },
       {
         "nombre": "Radu",
@@ -15092,10 +15092,10 @@
         "equipoReal": "Athletic",
         "racha": [],
         "rachaTitular": 0,
-        "nota": 2.5,
-        "rival": "Levante",
-        "esLocal": false,
-        "dificultad": null
+        "nota": 2.4,
+        "rival": "Alavés",
+        "esLocal": true,
+        "dificultad": 52
       },
       {
         "nombre": "Barzic",
@@ -15673,6 +15673,23 @@
         "dificultad": 46
       },
       {
+        "nombre": "Brugué",
+        "foto": "https://cdn.biwenger.com/i/p/15396.png",
+        "posicion": "Delantero",
+        "equipoReal": "Levante",
+        "racha": [
+          8,
+          1,
+          16,
+          2
+        ],
+        "rachaTitular": 4,
+        "nota": 6.3,
+        "rival": "Villarreal",
+        "esLocal": false,
+        "dificultad": 18
+      },
+      {
         "nombre": "Pablo Ramón",
         "foto": "https://cdn.biwenger.com/i/p/35408.png",
         "posicion": "Defensa",
@@ -15688,6 +15705,22 @@
         "rival": "Celta",
         "esLocal": false,
         "dificultad": 23
+      },
+      {
+        "nombre": "Paco Cortés",
+        "foto": "https://cdn.biwenger.com/i/p/39736.png",
+        "posicion": "Delantero",
+        "equipoReal": "Levante",
+        "racha": [
+          2,
+          3,
+          1
+        ],
+        "rachaTitular": 0,
+        "nota": 5.3,
+        "rival": "Villarreal",
+        "esLocal": false,
+        "dificultad": 18
       },
       {
         "nombre": "Leo Román",
@@ -15706,23 +15739,6 @@
         "rival": "Betis",
         "esLocal": true,
         "dificultad": 56
-      },
-      {
-        "nombre": "Brugué",
-        "foto": "https://cdn.biwenger.com/i/p/15396.png",
-        "posicion": "Delantero",
-        "equipoReal": "Levante",
-        "racha": [
-          8,
-          1,
-          16,
-          2
-        ],
-        "rachaTitular": 4,
-        "nota": 4.8,
-        "rival": "Athletic",
-        "esLocal": true,
-        "dificultad": null
       },
       {
         "nombre": "Pedro Díaz",
@@ -15769,22 +15785,6 @@
         "rival": "Racing",
         "esLocal": true,
         "dificultad": 39
-      },
-      {
-        "nombre": "Paco Cortés",
-        "foto": "https://cdn.biwenger.com/i/p/39736.png",
-        "posicion": "Delantero",
-        "equipoReal": "Levante",
-        "racha": [
-          2,
-          3,
-          1
-        ],
-        "rachaTitular": 0,
-        "nota": 3.8,
-        "rival": "Athletic",
-        "esLocal": true,
-        "dificultad": null
       },
       {
         "nombre": "Boyé",
@@ -15911,6 +15911,24 @@
         "dificultad": 12
       },
       {
+        "nombre": "Oriol Rey",
+        "foto": "https://cdn.biwenger.com/i/p/37726.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Levante",
+        "racha": [
+          3,
+          4,
+          4,
+          3,
+          3
+        ],
+        "rachaTitular": 0,
+        "nota": 5.8,
+        "rival": "Villarreal",
+        "esLocal": false,
+        "dificultad": 18
+      },
+      {
         "nombre": "José Salinas",
         "foto": "https://cdn.biwenger.com/i/p/37723.png",
         "posicion": "Defensa",
@@ -15943,23 +15961,6 @@
         "dificultad": 18
       },
       {
-        "nombre": "Yuri",
-        "foto": "https://cdn.biwenger.com/i/p/1074.png",
-        "posicion": "Defensa",
-        "equipoReal": "Athletic",
-        "racha": [
-          5,
-          5,
-          5,
-          -6
-        ],
-        "rachaTitular": 3,
-        "nota": 5,
-        "rival": "Levante",
-        "esLocal": false,
-        "dificultad": null
-      },
-      {
         "nombre": "Yeboah",
         "foto": "https://cdn.biwenger.com/i/p/41932.png",
         "posicion": "Defensa",
@@ -15974,6 +15975,23 @@
         "rival": "Rayo Vallecano",
         "esLocal": true,
         "dificultad": 39
+      },
+      {
+        "nombre": "Yuri",
+        "foto": "https://cdn.biwenger.com/i/p/1074.png",
+        "posicion": "Defensa",
+        "equipoReal": "Athletic",
+        "racha": [
+          5,
+          5,
+          5,
+          -6
+        ],
+        "rachaTitular": 3,
+        "nota": 4.9,
+        "rival": "Alavés",
+        "esLocal": true,
+        "dificultad": 52
       },
       {
         "nombre": "Mario Soriano",
@@ -15992,24 +16010,6 @@
         "rival": "Betis",
         "esLocal": true,
         "dificultad": 56
-      },
-      {
-        "nombre": "Oriol Rey",
-        "foto": "https://cdn.biwenger.com/i/p/37726.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Levante",
-        "racha": [
-          3,
-          4,
-          4,
-          3,
-          3
-        ],
-        "rachaTitular": 0,
-        "nota": 4.3,
-        "rival": "Athletic",
-        "esLocal": true,
-        "dificultad": null
       },
       {
         "nombre": "Tsitaishvili",
@@ -16034,10 +16034,10 @@
         "equipoReal": "Athletic",
         "racha": [],
         "rachaTitular": 0,
-        "nota": 2.5,
-        "rival": "Levante",
-        "esLocal": false,
-        "dificultad": null
+        "nota": 2.4,
+        "rival": "Alavés",
+        "esLocal": true,
+        "dificultad": 52
       }
     ]
   },
