@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-17T21:31:35.704Z",
+  "actualizado": "2026-09-17T21:46:26.621Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 6,
   "jornadaEnJuego": true,
@@ -695,6 +695,32 @@
     },
     {
       "tipo": "venta",
+      "nombre": "Sannadi",
+      "foto": "https://cdn.biwenger.com/i/p/33938.png",
+      "posicion": "Delantero",
+      "equipoReal": "Athletic",
+      "vendedor": "Madriguana FC",
+      "pide": "5,0 M",
+      "pideBruto": 5000000,
+      "valorMercado": "0,1 M",
+      "valorBruto": 150000,
+      "diferencia": 4850000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Dolan",
+      "foto": "https://cdn.biwenger.com/i/p/38308.png",
+      "posicion": "Delantero",
+      "equipoReal": "Espanyol",
+      "vendedor": "Madriguana FC",
+      "pide": "5,0 M",
+      "pideBruto": 5000000,
+      "valorMercado": "2,5 M",
+      "valorBruto": 2540000,
+      "diferencia": 2460000
+    },
+    {
+      "tipo": "venta",
       "nombre": "Álvaro García",
       "foto": "https://cdn.biwenger.com/i/p/33.png",
       "posicion": "Delantero",
@@ -913,6 +939,19 @@
       "valorMercado": "1,9 M",
       "valorBruto": 1880000,
       "diferencia": -110000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Marchal",
+      "foto": "https://cdn.biwenger.com/i/p/42627.png",
+      "posicion": "Delantero",
+      "equipoReal": "Real Sociedad",
+      "vendedor": "FC FORUSIA",
+      "pide": "0,3 M",
+      "pideBruto": 350000,
+      "valorMercado": "0,3 M",
+      "valorBruto": 350000,
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -1936,7 +1975,7 @@
       "balance": "−0,4 M",
       "balanceBruto": -435000,
       "sobreprecioMedio": -21,
-      "enVenta": 0,
+      "enVenta": 2,
       "fichajeEstrella": {
         "nombre": "Boyé",
         "precio": "4,2 M",
@@ -2113,7 +2152,7 @@
       "balance": "−36,5 M",
       "balanceBruto": -36528799,
       "sobreprecioMedio": 24,
-      "enVenta": 3,
+      "enVenta": 4,
       "fichajeEstrella": {
         "nombre": "Pedri",
         "precio": "18,9 M",
