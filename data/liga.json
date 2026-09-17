@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-17T21:57:25.175Z",
+  "actualizado": "2026-09-17T22:15:44.384Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 6,
   "jornadaEnJuego": true,
@@ -903,6 +903,32 @@
     },
     {
       "tipo": "venta",
+      "nombre": "Pablo Ibáñez",
+      "foto": "https://cdn.biwenger.com/i/p/14800.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Alavés",
+      "vendedor": "FC FORUSIA",
+      "pide": "2,5 M",
+      "pideBruto": 2510000,
+      "valorMercado": "2,5 M",
+      "valorBruto": 2510000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Kang-in Lee",
+      "foto": "https://cdn.biwenger.com/i/p/17687.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Atlético",
+      "vendedor": "FC FORUSIA",
+      "pide": "9,0 M",
+      "pideBruto": 9000000,
+      "valorMercado": "8,9 M",
+      "valorBruto": 8950000,
+      "diferencia": 50000
+    },
+    {
+      "tipo": "venta",
       "nombre": "Javi Hernández",
       "foto": "https://cdn.biwenger.com/i/p/25322.png",
       "posicion": "Centrocampista",
@@ -913,6 +939,19 @@
       "valorMercado": "3,8 M",
       "valorBruto": 3780000,
       "diferencia": -30000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Christensen",
+      "foto": "https://cdn.biwenger.com/i/p/26678.png",
+      "posicion": "Defensa",
+      "equipoReal": "Barcelona",
+      "vendedor": "FC FORUSIA",
+      "pide": "1,4 M",
+      "pideBruto": 1360000,
+      "valorMercado": "1,4 M",
+      "valorBruto": 1360000,
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -1700,18 +1739,18 @@
     {
       "tipo": "clausula",
       "fecha": "2026-08-18T14:37:19.000Z",
-      "nombre": "Carlos Martín",
+      "nombre": "Jugador",
       "foto": "https://cdn.biwenger.com/i/p/25158.png",
-      "posicion": "Delantero",
+      "posicion": "",
       "equipoReal": "",
       "vendedor": "Gorila FC",
       "comprador": "Las Víboras FC",
       "escudoComprador": "https://cdn.biwenger.com/i/u/13934763.png",
       "pide": "0,5 M",
       "pideBruto": 540000,
-      "valorMercado": "0,2 M",
-      "valorBruto": 190000,
-      "diferencia": 350000
+      "valorMercado": "0,0 M",
+      "valorBruto": 0,
+      "diferencia": 0
     },
     {
       "tipo": "clausula",
@@ -2081,7 +2120,7 @@
       "ingresadoBruto": 28233799,
       "balance": "−2,5 M",
       "balanceBruto": -2461201,
-      "sobreprecioMedio": 43,
+      "sobreprecioMedio": 25,
       "enVenta": 17,
       "fichajeEstrella": {
         "nombre": "Camello",
@@ -2152,7 +2191,7 @@
       "balance": "−36,5 M",
       "balanceBruto": -36528799,
       "sobreprecioMedio": 24,
-      "enVenta": 4,
+      "enVenta": 7,
       "fichajeEstrella": {
         "nombre": "Pedri",
         "precio": "18,9 M",
@@ -2678,7 +2717,7 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 15
+            "dificultad": 14
           }
         ]
       },
@@ -3044,7 +3083,7 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 15
+            "dificultad": 14
           }
         ]
       },
@@ -3070,7 +3109,7 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 15
+            "dificultad": 14
           }
         ]
       },
@@ -3084,7 +3123,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Villarreal",
-            "dificultad": 18
+            "dificultad": 30
           },
           {
             "jornada": "Round 8",
@@ -3384,7 +3423,7 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 15
+            "dificultad": 14
           }
         ]
       },
@@ -4234,7 +4273,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Villarreal",
-            "dificultad": 18
+            "dificultad": 30
           },
           {
             "jornada": "Round 8",
@@ -4522,7 +4561,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Villarreal",
-            "dificultad": 18
+            "dificultad": 30
           },
           {
             "jornada": "Round 8",
@@ -4638,7 +4677,7 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 15
+            "dificultad": 14
           }
         ]
       },
@@ -4784,7 +4823,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Villarreal",
-            "dificultad": 18
+            "dificultad": 30
           },
           {
             "jornada": "Round 8",
@@ -5292,7 +5331,7 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 15
+            "dificultad": 14
           }
         ]
       },
@@ -6057,13 +6096,6 @@
         ]
       },
       {
-        "nombre": "Tomás Mendes",
-        "posicion": "Centrocampista",
-        "foto": "https://cdn.biwenger.com/i/p/3310.png",
-        "equipoReal": "",
-        "jornadas": []
-      },
-      {
         "nombre": "Boyé",
         "posicion": "Delantero",
         "foto": "https://cdn.biwenger.com/i/p/12494.png",
@@ -6125,7 +6157,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Villarreal",
-            "dificultad": 18
+            "dificultad": 30
           },
           {
             "jornada": "Round 8",
@@ -6418,7 +6450,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Villarreal",
-            "dificultad": 18
+            "dificultad": 30
           },
           {
             "jornada": "Round 8",
@@ -6510,7 +6542,7 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 15
+            "dificultad": 14
           }
         ]
       },
@@ -6588,7 +6620,7 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 15
+            "dificultad": 14
           }
         ]
       },
@@ -6680,7 +6712,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Villarreal",
-            "dificultad": 18
+            "dificultad": 30
           },
           {
             "jornada": "Round 8",
@@ -11264,34 +11296,6 @@
       "blindadoHasta": "2026-09-29T05:04:41.000Z"
     },
     {
-      "id": "3310",
-      "nombre": "Tomás Mendes",
-      "slug": "tomas-mendes",
-      "posicion": "Centrocampista",
-      "posicionCodigo": 3,
-      "foto": "https://cdn.biwenger.com/i/p/3310.png",
-      "equipoReal": "",
-      "equipoIdReal": "",
-      "presidente": "Las Víboras FC",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
-      "precio": 150000,
-      "precioTexto": "0,1 M",
-      "puntosTotales": 0,
-      "partidosJugados": 0,
-      "media": 0,
-      "puntosPorMillon": 0,
-      "racha": [],
-      "rachaTitular": 0,
-      "ultimoMinutos": null,
-      "clausula": 450000,
-      "clausulaTexto": "0,5 M",
-      "pagadoPorSuDueno": 100000,
-      "margen": 300000,
-      "margenPorcentaje": 200,
-      "blindado": true,
-      "blindadoHasta": "2026-09-18T19:00:00.000Z"
-    },
-    {
       "id": "12494",
       "nombre": "Boyé",
       "slug": "lucas-boye",
@@ -13620,24 +13624,6 @@
         "dificultad": 17
       },
       {
-        "nombre": "Mandi",
-        "foto": "https://cdn.biwenger.com/i/p/2480.png",
-        "posicion": "Defensa",
-        "equipoReal": "Levante",
-        "racha": [
-          4,
-          4,
-          5,
-          8,
-          4
-        ],
-        "rachaTitular": 5,
-        "nota": 6.1,
-        "rival": "Villarreal",
-        "esLocal": false,
-        "dificultad": 18
-      },
-      {
         "nombre": "Gerard Martín",
         "foto": "https://cdn.biwenger.com/i/p/34111.png",
         "posicion": "Defensa",
@@ -13654,6 +13640,24 @@
         "rival": "Sevilla",
         "esLocal": false,
         "dificultad": 45
+      },
+      {
+        "nombre": "Mandi",
+        "foto": "https://cdn.biwenger.com/i/p/2480.png",
+        "posicion": "Defensa",
+        "equipoReal": "Levante",
+        "racha": [
+          4,
+          4,
+          5,
+          8,
+          4
+        ],
+        "rachaTitular": 5,
+        "nota": 5.5,
+        "rival": "Villarreal",
+        "esLocal": false,
+        "dificultad": 30
       },
       {
         "nombre": "Denis Suárez",
@@ -14341,24 +14345,6 @@
         "dificultad": 43
       },
       {
-        "nombre": "De la Fuente",
-        "foto": "https://cdn.biwenger.com/i/p/37739.png",
-        "posicion": "Defensa",
-        "equipoReal": "Levante",
-        "racha": [
-          -1,
-          6,
-          14,
-          7,
-          5
-        ],
-        "rachaTitular": 5,
-        "nota": 5.3,
-        "rival": "Villarreal",
-        "esLocal": false,
-        "dificultad": 18
-      },
-      {
         "nombre": "Jofre Carreras",
         "foto": "https://cdn.biwenger.com/i/p/25392.png",
         "posicion": "Delantero",
@@ -14373,6 +14359,24 @@
         "rival": "Elche",
         "esLocal": true,
         "dificultad": 12
+      },
+      {
+        "nombre": "De la Fuente",
+        "foto": "https://cdn.biwenger.com/i/p/37739.png",
+        "posicion": "Defensa",
+        "equipoReal": "Levante",
+        "racha": [
+          -1,
+          6,
+          14,
+          7,
+          5
+        ],
+        "rachaTitular": 5,
+        "nota": 4.8,
+        "rival": "Villarreal",
+        "esLocal": false,
+        "dificultad": 30
       },
       {
         "nombre": "Larrubia",
@@ -14637,23 +14641,6 @@
         "dificultad": 17
       },
       {
-        "nombre": "Víctor García",
-        "foto": "https://cdn.biwenger.com/i/p/17121.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Levante",
-        "racha": [
-          0,
-          3,
-          3,
-          1
-        ],
-        "rachaTitular": 1,
-        "nota": 4.8,
-        "rival": "Villarreal",
-        "esLocal": false,
-        "dificultad": 18
-      },
-      {
         "nombre": "Cucho",
         "foto": "https://cdn.biwenger.com/i/p/10276.png",
         "posicion": "Delantero",
@@ -14670,6 +14657,23 @@
         "rival": "Deportivo",
         "esLocal": false,
         "dificultad": 47
+      },
+      {
+        "nombre": "Víctor García",
+        "foto": "https://cdn.biwenger.com/i/p/17121.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Levante",
+        "racha": [
+          0,
+          3,
+          3,
+          1
+        ],
+        "rachaTitular": 1,
+        "nota": 4.3,
+        "rival": "Villarreal",
+        "esLocal": false,
+        "dificultad": 30
       },
       {
         "nombre": "Ratiu",
@@ -14767,10 +14771,10 @@
           1
         ],
         "rachaTitular": 0,
-        "nota": 6.1,
+        "nota": 5.5,
         "rival": "Villarreal",
         "esLocal": false,
-        "dificultad": 18
+        "dificultad": 30
       },
       {
         "nombre": "Recio",
@@ -15694,23 +15698,6 @@
         "dificultad": 45
       },
       {
-        "nombre": "Brugué",
-        "foto": "https://cdn.biwenger.com/i/p/15396.png",
-        "posicion": "Delantero",
-        "equipoReal": "Levante",
-        "racha": [
-          8,
-          1,
-          16,
-          2
-        ],
-        "rachaTitular": 4,
-        "nota": 6.3,
-        "rival": "Villarreal",
-        "esLocal": false,
-        "dificultad": 18
-      },
-      {
         "nombre": "Pablo Ramón",
         "foto": "https://cdn.biwenger.com/i/p/35408.png",
         "posicion": "Defensa",
@@ -15745,20 +15732,21 @@
         "dificultad": 47
       },
       {
-        "nombre": "Paco Cortés",
-        "foto": "https://cdn.biwenger.com/i/p/39736.png",
+        "nombre": "Brugué",
+        "foto": "https://cdn.biwenger.com/i/p/15396.png",
         "posicion": "Delantero",
         "equipoReal": "Levante",
         "racha": [
-          2,
-          3,
-          1
+          8,
+          1,
+          16,
+          2
         ],
-        "rachaTitular": 0,
-        "nota": 5.3,
+        "rachaTitular": 4,
+        "nota": 5.8,
         "rival": "Villarreal",
         "esLocal": false,
-        "dificultad": 18
+        "dificultad": 30
       },
       {
         "nombre": "Leo Román",
@@ -15777,6 +15765,22 @@
         "rival": "Betis",
         "esLocal": true,
         "dificultad": 60
+      },
+      {
+        "nombre": "Paco Cortés",
+        "foto": "https://cdn.biwenger.com/i/p/39736.png",
+        "posicion": "Delantero",
+        "equipoReal": "Levante",
+        "racha": [
+          2,
+          3,
+          1
+        ],
+        "rachaTitular": 0,
+        "nota": 4.8,
+        "rival": "Villarreal",
+        "esLocal": false,
+        "dificultad": 30
       },
       {
         "nombre": "Pedro Díaz",
@@ -15855,18 +15859,6 @@
         "dificultad": 32
       },
       {
-        "nombre": "Tomás Mendes",
-        "foto": "https://cdn.biwenger.com/i/p/3310.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "",
-        "racha": [],
-        "rachaTitular": 0,
-        "nota": 2.5,
-        "rival": "",
-        "esLocal": null,
-        "dificultad": null
-      },
-      {
         "nombre": "Xavi Grande",
         "foto": "https://cdn.biwenger.com/i/p/37735.png",
         "posicion": "Defensa",
@@ -15931,24 +15923,6 @@
         "dificultad": 12
       },
       {
-        "nombre": "Oriol Rey",
-        "foto": "https://cdn.biwenger.com/i/p/37726.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Levante",
-        "racha": [
-          3,
-          4,
-          4,
-          3,
-          3
-        ],
-        "rachaTitular": 0,
-        "nota": 5.8,
-        "rival": "Villarreal",
-        "esLocal": false,
-        "dificultad": 18
-      },
-      {
         "nombre": "Bellerín",
         "foto": "https://cdn.biwenger.com/i/p/2247.png",
         "posicion": "Defensa",
@@ -15980,6 +15954,24 @@
         "rival": "Valencia",
         "esLocal": false,
         "dificultad": 18
+      },
+      {
+        "nombre": "Oriol Rey",
+        "foto": "https://cdn.biwenger.com/i/p/37726.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Levante",
+        "racha": [
+          3,
+          4,
+          4,
+          3,
+          3
+        ],
+        "rachaTitular": 0,
+        "nota": 5.3,
+        "rival": "Villarreal",
+        "esLocal": false,
+        "dificultad": 30
       },
       {
         "nombre": "José Salinas",
