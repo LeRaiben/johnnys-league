@@ -1201,10 +1201,24 @@ function calcularBlindajesPorExpirar(jugadores) {
   const LIMITE_MS = 4 * 24 * 60 * 60 * 1000;
   const ahora = Date.now();
 
-  return jugadores
+  const candidatos = jugadores
     .filter((j) => j.blindado && j.blindadoHasta)
     .map((j) => ({ ...j, msRestantes: new Date(j.blindadoHasta).getTime() - ahora }))
-    .filter((j) => j.msRestantes > 0 && j.msRestantes <= LIMITE_MS)
+    .filter((j) => j.msRestantes > 0 && j.msRestantes <= LIMITE_MS);
+
+  // Mientras hay una jornada en juego, Biwenger bloquea de golpe la cláusula
+  // de todos los que juegan esa jornada, con la misma hora exacta de
+  // desbloqueo para todos. Eso no es "cláusula recién comprada a punto de
+  // liberarse", es el candado normal del partido en directo, y mostrarlo
+  // como si fuera lo mismo confundiría más que ayudaría. Si más de dos
+  // jugadores comparten la hora exacta (al segundo), lo tratamos como ese
+  // candado de jornada y lo dejamos fuera; solo se enseñan blindajes con
+  // una hora de verdad individual.
+  const cuentaPorHora = {};
+  for (const j of candidatos) cuentaPorHora[j.blindadoHasta] = (cuentaPorHora[j.blindadoHasta] || 0) + 1;
+
+  return candidatos
+    .filter((j) => cuentaPorHora[j.blindadoHasta] <= 2)
     .sort((a, b) => a.msRestantes - b.msRestantes)
     .map((j) => ({
       nombre: j.nombre,
