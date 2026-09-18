@@ -351,8 +351,8 @@
 
     try {
       var url = q === 'trending' 
-        ? 'https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=15&rating=g'
-        : 'https://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=' + encodeURIComponent(q) + '&limit=15&rating=g&lang=es';
+        ? 'https://api.giphy.com/v1/gifs/trending?api_key=1mQUX6GbNiyKgSGIDvubmUwgjwxOCn98&limit=15&rating=g'
+        : 'https://api.giphy.com/v1/gifs/search?api_key=1mQUX6GbNiyKgSGIDvubmUwgjwxOCn98&q=' + encodeURIComponent(q) + '&limit=15&rating=g&lang=es';
 
       var resp = await fetch(url);
       if (!resp.ok) throw new Error('API Giphy bloqueada');
