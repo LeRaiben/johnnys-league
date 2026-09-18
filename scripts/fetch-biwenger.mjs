@@ -965,9 +965,16 @@ function analizarUno(c, ficha, scoreID, presidentePorId, clausulas = {}) {
   // Racha de titularidades: cuántos partidos seguidos lleva jugando de
   // salida. Umbral de 60 minutos = lo damos por titular; menos de eso
   // suele ser haber entrado de cambio. Un 0 rompe la racha directamente.
+  //
+  // OJO: esto se calcula sobre TODAS las jornadas ya disputadas (reports),
+  // no sobre "partidos" (que ya ha descartado las jornadas sin puntuación
+  // publicada). Si una jornada sin puntos desapareciera del cálculo, la
+  // racha la saltaba como si no hubiera existido en vez de romperse ahí
+  // (caso Huijsen: sin puntos publicados en la J5 por no jugar, seguía
+  // contando la racha de antes y después de esa jornada como si fuera una).
   let rachaTitular = 0;
-  for (let i = partidos.length - 1; i >= 0; i--) {
-    if (partidos[i].minutos >= 60) rachaTitular++;
+  for (let i = reports.length - 1; i >= 0; i--) {
+    if ((reports[i].rawStats?.minutesPlayed ?? 0) >= 60) rachaTitular++;
     else break;
   }
   const ultimoMinutos = partidos.length ? partidos[partidos.length - 1].minutos : null;
@@ -1184,6 +1191,34 @@ function calcularRiesgoClausula(jugadores) {
     .slice(0, 20);
 }
 
+/**
+ * Blindajes a punto de caducar: jugadores blindados a los que les quedan
+ * 4 días o menos para volver a poder ser clausulados. En cuanto expira el
+ * blindaje, vuelven a ser un objetivo fácil, así que avisamos antes de que
+ * pase para que su dueño pueda reaccionar (o para que otro esté al loro).
+ */
+function calcularBlindajesPorExpirar(jugadores) {
+  const LIMITE_MS = 4 * 24 * 60 * 60 * 1000;
+  const ahora = Date.now();
+
+  return jugadores
+    .filter((j) => j.blindado && j.blindadoHasta)
+    .map((j) => ({ ...j, msRestantes: new Date(j.blindadoHasta).getTime() - ahora }))
+    .filter((j) => j.msRestantes > 0 && j.msRestantes <= LIMITE_MS)
+    .sort((a, b) => a.msRestantes - b.msRestantes)
+    .map((j) => ({
+      nombre: j.nombre,
+      foto: j.foto,
+      posicion: j.posicion,
+      equipoReal: j.equipoReal,
+      presidente: j.presidente,
+      escudoPresidente: j.escudoPresidente,
+      precioTexto: j.precioTexto,
+      clausulaTexto: j.clausulaTexto,
+      media: j.media,
+      blindadoHasta: j.blindadoHasta
+    }));
+}
 
 function calcularRecomendaciones(jugadores, calendarioEquipos, tabla) {
   const porPresidente = {};
@@ -1524,6 +1559,71 @@ function calcularPremios(clausulas, presidentes, paquete) {
 
 /* ---------- Principal ---------- */
 
+/* ---------- Avisos de clausulas nuevas (push al tablon) ---------- */
+
+// La misma URL y clave publica que usa tablon.html: la clave "publishable"
+// esta pensada para ir expuesta en el cliente, no hace falta guardarla
+// como secreto.
+const SUPABASE_URL_AVISOS = 'https://hgmswhslnuqlzqbvuifw.supabase.co';
+const SUPABASE_ANON_KEY_AVISOS = 'sb_publishable_mJwquJGh9WzRrxCrrceZng_B0GynTvN';
+const RUTA_CLAUSULAS_NOTIFICADAS = () => resolve(RAIZ, 'data', 'clausulas-notificadas.json');
+
+function claveClausula(c) {
+  return [c.fecha, c.nombre, c.comprador, c.vendedor, c.pideBruto].join('|');
+}
+
+// Publica un mensaje de sistema en el tablon cuando hay una clausula nueva.
+// El propio tablon ya tiene un disparador que manda un push a todos los
+// suscritos en cuanto se inserta un mensaje, asi que basta con insertar
+// aqui: no hace falta tocar nada mas de la parte de notificaciones.
+async function avisarClausulasNuevas(clausulas) {
+  if (!clausulas.length) return;
+
+  let notificadas = [];
+  try {
+    notificadas = JSON.parse(await readFile(RUTA_CLAUSULAS_NOTIFICADAS(), 'utf8'));
+  } catch {
+    notificadas = [];
+  }
+
+  // Primera vez que corre esto: dejamos constancia de las clausulas que ya
+  // existen sin avisar de golpe de todo el historial, y a partir de aqui
+  // solo se avisa de las que pasen de verdad desde ahora.
+  if (!notificadas.length) {
+    await mkdir(dirname(RUTA_CLAUSULAS_NOTIFICADAS()), { recursive: true });
+    await writeFile(RUTA_CLAUSULAS_NOTIFICADAS(), JSON.stringify(clausulas.map(claveClausula)), 'utf8');
+    console.log('Aviso de clausulas: primer registro, no se avisa del historial.');
+    return;
+  }
+
+  const yaVistas = new Set(notificadas);
+  const nuevas = clausulas.filter((c) => c.fecha && !yaVistas.has(claveClausula(c)));
+  if (!nuevas.length) return;
+
+  console.log(`Cláusulas nuevas desde la última vez: ${nuevas.length}.`);
+  for (const c of nuevas) {
+    const texto = `⚖️ ${c.comprador} le ha ejecutado la cláusula a ${c.vendedor} y se lleva a ${c.nombre} por ${c.pide}.`;
+    try {
+      const r = await fetch(`${SUPABASE_URL_AVISOS}/rest/v1/mensajes`, {
+        method: 'POST',
+        headers: {
+          apikey: SUPABASE_ANON_KEY_AVISOS,
+          Authorization: `Bearer ${SUPABASE_ANON_KEY_AVISOS}`,
+          'Content-Type': 'application/json',
+          Prefer: 'return=minimal'
+        },
+        body: JSON.stringify({ nombre: "Johnny's League \u{1F916}", texto, likes: 0 })
+      });
+      if (!r.ok) console.log('  No se pudo avisar de una clausula:', r.status, await r.text());
+    } catch (e) {
+      console.log('  Error avisando de clausula:', e.message);
+    }
+  }
+
+  const actualizadas = notificadas.concat(nuevas.map(claveClausula)).slice(-500);
+  await writeFile(RUTA_CLAUSULAS_NOTIFICADAS(), JSON.stringify(actualizadas), 'utf8');
+}
+
 async function principal() {
   console.log('Conectando con Biwenger...');
 
@@ -1618,6 +1718,7 @@ async function principal() {
   const recomendaciones = calcularRecomendaciones(jugadoresAnalizados, calendarioEquipos, tabla);
   const predictor = calcularPredictor(recomendaciones);
   const riesgoClausula = calcularRiesgoClausula(jugadoresAnalizados);
+  const blindajesPorExpirar = calcularBlindajesPorExpirar(jugadoresAnalizados);
   console.log(`Chollos: ${valorJusto.chollos.length} · Gangas del mercado: ${gangas.length} · Predictor: ${predictor.length}.`);
 
   const salida = {
@@ -1645,12 +1746,19 @@ async function principal() {
     gangas,
     recomendaciones,
     predictor,
-    riesgoClausula
+    riesgoClausula,
+    blindajesPorExpirar
   };
 
   await mkdir(resolve(RAIZ, 'data'), { recursive: true });
   await writeFile(resolve(RAIZ, 'data', 'liga.json'), JSON.stringify(salida, null, 2), 'utf8');
   console.log('\nListo. Datos guardados en data/liga.json');
+
+  try {
+    await avisarClausulasNuevas(soloClausulas);
+  } catch (e) {
+    console.log('Aviso de clausulas fallo (no crítico, no afecta a los datos):', e.message);
+  }
 }
 
 principal().catch((err) => {

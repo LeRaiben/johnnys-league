@@ -92,6 +92,13 @@
   .btn-like { color:var(--grey); transition:transform 0.1s ease; }
   .btn-like.liked { color:#E8746A; }
 
+  .reacciones-bar { display:flex; gap:6px; margin-top:8px; flex-wrap:wrap; }
+  .btn-reaccion { background:rgba(2,18,52,0.5); border:1px solid var(--navy-line); color:var(--grey);
+    cursor:pointer; font-family:'Barlow Condensed',sans-serif; font-size:0.78rem; padding:3px 9px;
+    border-radius:14px; display:inline-flex; align-items:center; gap:5px; transition:background 0.15s, border-color 0.15s; }
+  .btn-reaccion:hover { border-color:var(--gold-dim); }
+  .btn-reaccion.activa { background:rgba(212,175,55,0.18); border-color:var(--gold); color:var(--white); }
+
   .form-respuesta { margin-top:12px; padding:12px; background:rgba(2,18,52,0.9); border-radius:4px; border:1px solid var(--navy-line); }
   .aviso-suave { background:var(--navy-soft); border-left:3px solid var(--gold-dim); padding:16px 18px; font-size:0.92rem; color:rgba(247,247,245,0.82); }
 
@@ -240,6 +247,7 @@
   var VAPID_PUBLIC_KEY = 'BAxm9dAiyv4iMU_T7dplE_OZm37o-qp8r0JKa7o8IWudU9e7ig2lvp1VkON5MgKLqTovaVI3zHS8N900Hu7q13Y';
 
   var sb = window.supabase.createClient(URL_SUPABASE, CLAVE_PUBLICA);
+  var REACCIONES_DISPONIBLES = ['👍', '😂', '🔥'];
   var imagenBase64Principal = null;
   var subiendoImagenPrincipal = false;
   var imagenesRespuestas = {};
@@ -431,6 +439,14 @@
       '<button class="btn-accion borrar" data-id="' + m.id + '">🗑️ Borrar</button>' +
     '</div>';
 
+    var htmlReacciones = '<div class="reacciones-bar">' + REACCIONES_DISPONIBLES.map(function (emoji) {
+      var count = Number((m.reacciones || {})[emoji]) || 0;
+      var activa = localStorage.getItem('reaccion_' + m.id + '_' + emoji) === 'true';
+      return '<button class="btn-reaccion' + (activa ? ' activa' : '') + '" data-id="' + m.id + '" data-emoji="' + emoji + '">' +
+        '<span>' + emoji + '</span> <span class="count">' + count + '</span>' +
+      '</button>';
+    }).join('') + '</div>';
+
     var htmlFormRespuesta = '<div class="form-respuesta" id="reply-box-' + m.id + '" style="display:none;">' +
       '<div class="campo"><label>Tu Nombre / Equipo</label><input type="text" id="reply-name-' + m.id + '" placeholder="Ej: Presi Rayo"></div>' +
       '<div class="campo"><label>Respuesta</label><textarea id="reply-text-' + m.id + '" placeholder="Escribe tu respuesta..." style="width:100%; min-height:70px; background:rgba(2,18,52,0.6); color:var(--white); border:1px solid var(--navy-line); padding:10px; border-radius:4px; box-sizing:border-box;">@' + esc(m.nombre) + ' </textarea></div>' +
@@ -467,6 +483,7 @@
       htmlImg +
       htmlPoll +
       htmlAcciones +
+      htmlReacciones +
       htmlFormRespuesta +
     '</div>';
   }
@@ -499,6 +516,10 @@
 
     cont.querySelectorAll('.btn-like').forEach(function (b) {
       b.addEventListener('click', function () { darLike(b.dataset.id, parseInt(b.dataset.likes, 10) || 0, b); });
+    });
+
+    cont.querySelectorAll('.btn-reaccion').forEach(function (b) {
+      b.addEventListener('click', function () { reaccionar(b.dataset.id, b.dataset.emoji, b); });
     });
 
     cont.querySelectorAll('.borrar').forEach(function (b) {
@@ -545,7 +566,7 @@
   }
 
   async function cargar() {
-    var r = await sb.from('mensajes').select('id, creado, nombre, texto, imagen, mensaje_padre_id, likes').order('creado', { ascending: false }).limit(150);
+    var r = await sb.from('mensajes').select('id, creado, nombre, texto, imagen, mensaje_padre_id, likes, reacciones').order('creado', { ascending: false }).limit(150);
     var p = await sb.from('encuestas').select('id, mensaje_id, pregunta, opciones, votos');
     if (r.error) { estado('No se han podido cargar los mensajes: ' + r.error.message); return; }
     estado('');
@@ -575,6 +596,31 @@
     if (spanCount) spanCount.textContent = nuevosLikes;
     btnElement.dataset.likes = nuevosLikes;
     await sb.from('mensajes').update({ likes: nuevosLikes }).eq('id', id);
+  }
+
+  async function reaccionar(id, emoji, btnElement) {
+    var key = 'reaccion_' + id + '_' + emoji;
+    var yaReacciono = localStorage.getItem(key) === 'true';
+    var resSelect = await sb.from('mensajes').select('reacciones').eq('id', id).single();
+    var actuales = (resSelect.data && resSelect.data.reacciones) ? resSelect.data.reacciones : {};
+    var actual = Number(actuales[emoji]) || 0;
+
+    var nuevo = yaReacciono ? Math.max(0, actual - 1) : actual + 1;
+    var nuevasReacciones = Object.assign({}, actuales);
+    nuevasReacciones[emoji] = nuevo;
+
+    if (yaReacciono) {
+      localStorage.removeItem(key);
+      btnElement.classList.remove('activa');
+    } else {
+      localStorage.setItem(key, 'true');
+      btnElement.classList.add('activa');
+    }
+
+    var spanCount = btnElement.querySelector('.count');
+    if (spanCount) spanCount.textContent = nuevo;
+
+    await sb.from('mensajes').update({ reacciones: nuevasReacciones }).eq('id', id);
   }
 
   async function votarEncuesta(pollId, optId) {

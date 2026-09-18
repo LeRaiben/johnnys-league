@@ -65,6 +65,35 @@
     display:flex; align-items:center; gap:7px; }
   .leyenda-riesgo i { width:10px; height:10px; border-radius:50%; display:block; }
 
+  .blindaje { background:var(--navy-soft); padding:15px 18px; display:grid;
+    grid-template-columns:46px minmax(0,1fr) auto; gap:14px; align-items:center;
+    border-left:3px solid var(--gold-dim); }
+  .blindaje.urgente { border-left-color:#E8746A; }
+  .blindaje .pic { width:46px; height:46px; }
+  .blindaje .nom { font-weight:600; font-size:1rem; }
+  .blindaje .sub { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; color:var(--grey);
+    text-transform:uppercase; letter-spacing:0.03em; margin-top:2px; }
+  .blindaje .dueno { display:inline-flex; align-items:center; gap:5px; margin-top:6px;
+    background:rgba(2,18,52,0.6); border-radius:12px; padding:2px 9px 2px 3px; }
+  .blindaje .dueno img { width:17px; height:17px; border-radius:50%; }
+  .blindaje .dueno span { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem;
+    color:rgba(247,247,245,0.88); letter-spacing:0.02em; }
+  .blindaje .cifras { text-align:right; white-space:nowrap; }
+  .blindaje .cuenta { font-family:'Anton',sans-serif; font-size:1.3rem; line-height:1; color:var(--gold); }
+  .blindaje.urgente .cuenta { color:#E8746A; }
+  .blindaje .cuenta small { display:block; font-family:'Barlow Condensed',sans-serif; font-size:0.6rem;
+    letter-spacing:0.05em; text-transform:uppercase; color:var(--grey); font-weight:600; margin-top:3px; }
+  .blindaje .precios { font-family:'Barlow Condensed',sans-serif; font-size:0.72rem;
+    color:var(--grey); margin-top:7px; letter-spacing:0.02em; }
+  .blindaje .precios b { color:var(--ice); font-weight:600; }
+
+  @media (max-width:600px){
+    .blindaje { grid-template-columns:40px minmax(0,1fr); gap:11px; padding:13px 14px; }
+    .blindaje .pic { width:40px; height:40px; }
+    .blindaje .cifras { grid-column:1 / -1; text-align:left; border-top:1px solid var(--navy-line);
+      padding-top:10px; margin-top:2px; }
+  }
+
   @media (max-width:600px){
     .riesgo { grid-template-columns:40px minmax(0,1fr); gap:11px; padding:13px 14px; }
     .riesgo .pic { width:40px; height:40px; }
@@ -129,6 +158,16 @@
   </section>
 
   <section class="block" style="border-top:none; padding-top:0;">
+    <div class="hero-titulo" style="margin-bottom:16px;">
+      <h2 style="font-size:1.6rem;">Blindajes a punto de caducar</h2>
+    </div>
+    <p class="section-note" style="margin-top:-10px; margin-bottom:18px;">
+      Están blindados, pero les quedan 4 días o menos para volver a poder ser clausulados.
+    </p>
+    <div id="listaBlindajes"></div>
+  </section>
+
+  <section class="block">
     <div class="filtro">
       <label class="et" for="presidenteSel">Ver los de:</label>
       <select id="presidenteSel"></select>
@@ -214,6 +253,61 @@
     '</div>';
   }
 
+  function formatoCuentaAtras(ms) {
+    if (ms <= 0) return 'Ya disponible';
+    var totalMin = Math.floor(ms / 60000);
+    var dias = Math.floor(totalMin / (60 * 24));
+    var horas = Math.floor((totalMin % (60 * 24)) / 60);
+    var min = totalMin % 60;
+    if (dias > 0) return dias + 'd ' + horas + 'h';
+    if (horas > 0) return horas + 'h ' + min + 'm';
+    return min + 'm';
+  }
+
+  function filaBlindaje(j) {
+    var dueno = j.presidente
+      ? '<div class="dueno">' +
+        (j.escudoPresidente ? '<img src="' + esc(j.escudoPresidente) + '" alt="">' : '') +
+        '<span>' + esc(j.presidente) + '</span></div>'
+      : '';
+    var msRestantes = new Date(j.blindadoHasta).getTime() - Date.now();
+    var urgente = msRestantes <= 24 * 60 * 60 * 1000;
+
+    return '<div class="blindaje' + (urgente ? ' urgente' : '') + '" data-hasta="' + esc(j.blindadoHasta) + '">' +
+      cajaFoto(j.foto, iniciales(j.nombre)) +
+      '<div>' +
+        '<div class="nom">' + esc(j.nombre) + '</div>' +
+        '<div class="sub">' + esc([j.equipoReal, j.posicion].filter(Boolean).join(' · ')) + '</div>' +
+        dueno +
+      '</div>' +
+      '<div class="cifras">' +
+        '<div class="cuenta"><span class="valor-cuenta">' + esc(formatoCuentaAtras(msRestantes)) + '</span>' +
+          '<small>para poder clausularlo</small></div>' +
+        '<div class="precios">Vale <b>' + esc(j.precioTexto) + '</b> · cláusula <b>' + esc(j.clausulaTexto) + '</b></div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function pintarBlindajes(lista) {
+    var cont = document.getElementById('listaBlindajes');
+    if (!cont) return;
+    if (!lista.length) {
+      cont.innerHTML = '<div class="aviso-suave">Nadie tiene un blindaje a punto de caducar en los próximos 4 días.</div>';
+      return;
+    }
+    cont.innerHTML = '<div class="lista-riesgo">' + lista.map(filaBlindaje).join('') + '</div>';
+
+    setInterval(function () {
+      cont.querySelectorAll('.blindaje').forEach(function (el) {
+        var hasta = el.getAttribute('data-hasta');
+        if (!hasta) return;
+        var ms = new Date(hasta).getTime() - Date.now();
+        var span = el.querySelector('.valor-cuenta');
+        if (span) span.textContent = formatoCuentaAtras(ms);
+      });
+    }, 60000);
+  }
+
   var todos = [];
 
   function pintar(filtro) {
@@ -232,6 +326,8 @@
   cargar('data/liga.json').then(function (liga) {
     document.getElementById('jornadaNum').textContent =
       String(liga.jornadasJugadas || '—').padStart(2, '0');
+
+    pintarBlindajes(liga.blindajesPorExpirar || []);
 
     todos = liga.riesgoClausula || [];
 
