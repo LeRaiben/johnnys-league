@@ -241,6 +241,7 @@
 
   var sb = window.supabase.createClient(URL_SUPABASE, CLAVE_PUBLICA);
   var imagenBase64Principal = null;
+  var subiendoImagenPrincipal = false;
   var imagenesRespuestas = {};
 
   function urlBase64ToUint8Array(base64String) {
@@ -289,7 +290,7 @@
            f.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
   }
 
-  function optimizarImagen(imgElement) {
+  function crearCanvasOptimizado(imgElement) {
     var canvas = document.createElement('canvas');
     var maxAncho = 1200;
     var escala = maxAncho / (imgElement.naturalWidth || imgElement.width || 1200);
@@ -302,7 +303,21 @@
     }
     var ctx = canvas.getContext('2d');
     ctx.drawImage(imgElement, 0, 0, canvas.width, canvas.height);
-    return canvas.toDataURL('image/jpeg', 0.82);
+    return canvas;
+  }
+
+  function subirImagenCanvas(canvas) {
+    return new Promise(function (resolve, reject) {
+      canvas.toBlob(function (blob) {
+        if (!blob) { reject(new Error('No se pudo procesar la imagen.')); return; }
+        var ruta = 'subidas/' + Date.now() + '-' + Math.random().toString(36).slice(2) + '.jpg';
+        sb.storage.from('tablon').upload(ruta, blob, { contentType: 'image/jpeg' }).then(function (r) {
+          if (r.error) { reject(r.error); return; }
+          var pub = sb.storage.from('tablon').getPublicUrl(ruta);
+          resolve(pub.data.publicUrl);
+        }, reject);
+      }, 'image/jpeg', 0.82);
+    });
   }
 
   async function buscarGifsApi(query, callback) {
@@ -397,7 +412,7 @@
   }
 
   function renderCard(m, esRespuesta, rootPadreId, pollsMap) {
-    var htmlImg = m.imagen ? '<a href="' + m.imagen + '" target="_blank"><img class="img-adjunta" src="' + m.imagen + '" alt="Imagen adjunta"></a>' : '';
+    var htmlImg = m.imagen ? '<a href="' + m.imagen + '" target="_blank"><img class="img-adjunta" loading="lazy" src="' + m.imagen + '" alt="Imagen adjunta"></a>' : '';
     var claseExtra = esRespuesta ? ' respuesta' : '';
     var idPadreParaGuardar = esRespuesta ? rootPadreId : m.id;
     var numLikes = Number(m.likes) || 0;
@@ -598,6 +613,7 @@
     var texto = caja ? caja.value.trim() : '';
 
     if (!nombre) { estado('Escribe tu nombre o equipo antes de publicar.'); return; }
+    if (subiendoImagenPrincipal) { estado('Espera a que termine de subirse la imagen.'); return; }
     if (!texto && !imagenBase64Principal) { estado('Escribe un mensaje o adjunta un GIF/imagen.'); return; }
 
     var btn = document.getElementById('btnPublicar');
@@ -684,15 +700,21 @@
 
     if (file && !imgBase64) {
       if (file.size > 5 * 1024 * 1024) { alert('La imagen no puede superar los 5 MB.'); return; }
-      imgBase64 = await new Promise(function(resolve){
+      var imgCargadaReply = await new Promise(function(resolve){
         var reader = new FileReader();
         reader.onload = function(e) {
           var img = new Image();
-          img.onload = function() { resolve(optimizarImagen(img)); };
+          img.onload = function() { resolve(img); };
           img.src = e.target.result;
         };
         reader.readAsDataURL(file);
       });
+      try {
+        imgBase64 = await subirImagenCanvas(crearCanvasOptimizado(imgCargadaReply));
+      } catch (err) {
+        alert('No se pudo subir la imagen: ' + err.message);
+        return;
+      }
     }
 
     var r = await sb.from('mensajes').insert({
@@ -912,7 +934,22 @@
         if (prevCont) { prevCont.style.display = 'inline-block'; prevCont.removeAttribute('hidden'); }
 
         var img = new Image();
-        img.onload = function () { imagenBase64Principal = optimizarImagen(img); estado(''); };
+        img.onload = function () {
+          subiendoImagenPrincipal = true;
+          var btnPubTmp = document.getElementById('btnPublicar');
+          if (btnPubTmp) btnPubTmp.disabled = true;
+          estado('Subiendo imagen…');
+          subirImagenCanvas(crearCanvasOptimizado(img)).then(function (url) {
+            imagenBase64Principal = url;
+            estado('');
+          }).catch(function (err) {
+            estado('No se pudo subir la imagen: ' + err.message);
+            limpiarImagenPrincipal();
+          }).then(function () {
+            subiendoImagenPrincipal = false;
+            if (btnPubTmp) btnPubTmp.disabled = false;
+          });
+        };
         img.src = rawBase64;
       };
       reader.readAsDataURL(file);
