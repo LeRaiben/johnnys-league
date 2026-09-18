@@ -380,9 +380,9 @@
     contenedor.innerHTML = urls.map(function(url) {
       var escUrl = url.replace(/'/g, "\\'");
       if (msgId) {
-        return '<img src="' + esc(url) + '" loading="lazy" alt="GIF" onclick="window.seleccionarGifReply(\'' + msgId + '\', \'' + escUrl + '\')">';
+        return '<img src="' + esc(url) + '" loading="lazy" alt="GIF" onerror="this.remove()" onclick="window.seleccionarGifReply(\'' + msgId + '\', \'' + escUrl + '\')">';
       }
-      return '<img src="' + esc(url) + '" loading="lazy" alt="GIF" onclick="window.seleccionarGif(\'' + escUrl + '\')">';
+      return '<img src="' + esc(url) + '" loading="lazy" alt="GIF" onerror="this.remove()" onclick="window.seleccionarGif(\'' + escUrl + '\')">';
     }).join('');
   }
 
