@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-18T12:22:20.241Z",
+  "actualizado": "2026-09-18T12:44:22.562Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 6,
   "jornadaEnJuego": true,
@@ -1189,19 +1189,6 @@
     },
     {
       "tipo": "venta",
-      "nombre": "Adrián Niño",
-      "foto": "https://cdn.biwenger.com/i/p/35706.png",
-      "posicion": "Delantero",
-      "equipoReal": "Málaga",
-      "vendedor": "Las Víboras FC",
-      "pide": "0,9 M",
-      "pideBruto": 880000,
-      "valorMercado": "1,1 M",
-      "valorBruto": 1060000,
-      "diferencia": -180000
-    },
-    {
-      "tipo": "venta",
       "nombre": "Xavi Grande",
       "foto": "https://cdn.biwenger.com/i/p/37735.png",
       "posicion": "Defensa",
@@ -2269,7 +2256,7 @@
       "balance": "−2,5 M",
       "balanceBruto": -2461201,
       "sobreprecioMedio": 23,
-      "enVenta": 17,
+      "enVenta": 16,
       "fichajeEstrella": {
         "nombre": "Camello",
         "precio": "6,7 M",
@@ -5651,6 +5638,32 @@
     ],
     "Urdinho Pernambucano": [
       {
+        "nombre": "Adrián Niño",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/35706.png",
+        "equipoReal": "Málaga",
+        "jornadas": [
+          {
+            "jornada": "Round 7",
+            "esLocal": false,
+            "rival": "Getafe",
+            "dificultad": 35
+          },
+          {
+            "jornada": "Round 8",
+            "esLocal": true,
+            "rival": "Espanyol",
+            "dificultad": 48
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Real Sociedad",
+            "dificultad": 42
+          }
+        ]
+      },
+      {
         "nombre": "Mario Martín",
         "posicion": "Centrocampista",
         "foto": "https://cdn.biwenger.com/i/p/2368.png",
@@ -6331,6 +6344,32 @@
     ],
     "Las Víboras FC": [
       {
+        "nombre": "Adrián Niño",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/35706.png",
+        "equipoReal": "Málaga",
+        "jornadas": [
+          {
+            "jornada": "Round 7",
+            "esLocal": false,
+            "rival": "Getafe",
+            "dificultad": 35
+          },
+          {
+            "jornada": "Round 8",
+            "esLocal": true,
+            "rival": "Espanyol",
+            "dificultad": 48
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Real Sociedad",
+            "dificultad": 42
+          }
+        ]
+      },
+      {
         "nombre": "Bartra",
         "posicion": "Defensa",
         "foto": "https://cdn.biwenger.com/i/p/1125.png",
@@ -6665,32 +6704,6 @@
             "esLocal": true,
             "rival": "Alavés",
             "dificultad": 59
-          }
-        ]
-      },
-      {
-        "nombre": "Adrián Niño",
-        "posicion": "Delantero",
-        "foto": "https://cdn.biwenger.com/i/p/35706.png",
-        "equipoReal": "Málaga",
-        "jornadas": [
-          {
-            "jornada": "Round 7",
-            "esLocal": false,
-            "rival": "Getafe",
-            "dificultad": 35
-          },
-          {
-            "jornada": "Round 8",
-            "esLocal": true,
-            "rival": "Espanyol",
-            "dificultad": 48
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": true,
-            "rival": "Real Sociedad",
-            "dificultad": 42
           }
         ]
       },
@@ -10902,6 +10915,37 @@
       "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
+      "id": "35706",
+      "nombre": "Adrián Niño",
+      "slug": "adrian-nino",
+      "posicion": "Delantero",
+      "posicionCodigo": 4,
+      "foto": "https://cdn.biwenger.com/i/p/35706.png",
+      "equipoReal": "Málaga",
+      "equipoIdReal": "65",
+      "presidente": "Urdinho Pernambucano",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/12659137.png?v=9",
+      "precio": 1060000,
+      "precioTexto": "1,1 M",
+      "puntosTotales": 11,
+      "partidosJugados": 2,
+      "media": 5.5,
+      "puntosPorMillon": 10.38,
+      "racha": [
+        0,
+        11
+      ],
+      "rachaTitular": 0,
+      "ultimoMinutos": 29,
+      "clausula": 0,
+      "clausulaTexto": "0,0 M",
+      "pagadoPorSuDueno": 2000000,
+      "margen": -1060000,
+      "margenPorcentaje": -100,
+      "blindado": false,
+      "blindadoHasta": null
+    },
+    {
       "id": "2368",
       "nombre": "Mario Martín",
       "slug": "mario-martin",
@@ -11763,6 +11807,37 @@
       "blindadoHasta": "2026-09-25T05:10:53.000Z"
     },
     {
+      "id": "35706",
+      "nombre": "Adrián Niño",
+      "slug": "adrian-nino",
+      "posicion": "Delantero",
+      "posicionCodigo": 4,
+      "foto": "https://cdn.biwenger.com/i/p/35706.png",
+      "equipoReal": "Málaga",
+      "equipoIdReal": "65",
+      "presidente": "Las Víboras FC",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
+      "precio": 1060000,
+      "precioTexto": "1,1 M",
+      "puntosTotales": 11,
+      "partidosJugados": 2,
+      "media": 5.5,
+      "puntosPorMillon": 10.38,
+      "racha": [
+        0,
+        11
+      ],
+      "rachaTitular": 0,
+      "ultimoMinutos": 29,
+      "clausula": 0,
+      "clausulaTexto": "0,0 M",
+      "pagadoPorSuDueno": 2000000,
+      "margen": -1060000,
+      "margenPorcentaje": -100,
+      "blindado": false,
+      "blindadoHasta": null
+    },
+    {
       "id": "1125",
       "nombre": "Bartra",
       "slug": "marc-bartra",
@@ -12185,37 +12260,6 @@
       "margenPorcentaje": 367,
       "blindado": true,
       "blindadoHasta": "2026-09-18T19:00:00.000Z"
-    },
-    {
-      "id": "35706",
-      "nombre": "Adrián Niño",
-      "slug": "adrian-nino",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/35706.png",
-      "equipoReal": "Málaga",
-      "equipoIdReal": "65",
-      "presidente": "Las Víboras FC",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
-      "precio": 1060000,
-      "precioTexto": "1,1 M",
-      "puntosTotales": 11,
-      "partidosJugados": 2,
-      "media": 5.5,
-      "puntosPorMillon": 10.38,
-      "racha": [
-        0,
-        11
-      ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 29,
-      "clausula": 3000000,
-      "clausulaTexto": "3,0 M",
-      "pagadoPorSuDueno": 2000000,
-      "margen": 1940000,
-      "margenPorcentaje": 183,
-      "blindado": true,
-      "blindadoHasta": "2026-09-22T15:15:26.000Z"
     },
     {
       "id": "37735",
@@ -15808,6 +15852,21 @@
         "dificultad": 47
       },
       {
+        "nombre": "Adrián Niño",
+        "foto": "https://cdn.biwenger.com/i/p/35706.png",
+        "posicion": "Delantero",
+        "equipoReal": "Málaga",
+        "racha": [
+          0,
+          11
+        ],
+        "rachaTitular": 0,
+        "nota": 6,
+        "rival": "Getafe",
+        "esLocal": false,
+        "dificultad": 35
+      },
+      {
         "nombre": "Dimitrievski",
         "foto": "https://cdn.biwenger.com/i/p/11677.png",
         "posicion": "Portero",
@@ -16890,7 +16949,48 @@
       "presidente": "Urdinho Pernambucano"
     }
   ],
-  "riesgoClausula": [],
+  "riesgoClausula": [
+    {
+      "nombre": "Adrián Niño",
+      "foto": "https://cdn.biwenger.com/i/p/35706.png",
+      "posicion": "Delantero",
+      "equipoReal": "Málaga",
+      "presidente": "Urdinho Pernambucano",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/12659137.png?v=9",
+      "precioTexto": "1,1 M",
+      "clausulaTexto": "0,0 M",
+      "margenPorcentaje": -100,
+      "margenTexto": "-1,1 M",
+      "media": 5.5,
+      "puntosPorMillon": 10.38,
+      "racha": [
+        0,
+        11
+      ],
+      "rachaTitular": 0,
+      "nivel": "alto"
+    },
+    {
+      "nombre": "Adrián Niño",
+      "foto": "https://cdn.biwenger.com/i/p/35706.png",
+      "posicion": "Delantero",
+      "equipoReal": "Málaga",
+      "presidente": "Las Víboras FC",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
+      "precioTexto": "1,1 M",
+      "clausulaTexto": "0,0 M",
+      "margenPorcentaje": -100,
+      "margenTexto": "-1,1 M",
+      "media": 5.5,
+      "puntosPorMillon": 10.38,
+      "racha": [
+        0,
+        11
+      ],
+      "rachaTitular": 0,
+      "nivel": "alto"
+    }
+  ],
   "blindajesPorExpirar": [
     {
       "nombre": "Koski",
