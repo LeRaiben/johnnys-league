@@ -85,22 +85,39 @@
   /* Mensajes e Hilos */
   .lista-msg { display:grid; gap:16px; }
   .msg-card { background:var(--navy-soft); border-left:3px solid var(--gold); border-radius:0 4px 4px 0; padding:16px 18px; }
-  .msg-card.respuesta { background:rgba(2, 18, 52, 0.4); border-left:2px solid var(--grey); margin-top:10px; margin-left:12px; }
-  
+  .msg-card.respuesta { background:rgba(2, 18, 52, 0.4); border-left:2px solid var(--grey); margin-top:10px; margin-left:0; position:relative; }
+
+  .hilo-respuestas { margin-left:20px; padding-left:18px; border-left:2px solid var(--gold-dim); margin-top:2px; }
+  .msg-card.respuesta::before { content:''; position:absolute; left:-18px; top:19px; width:16px; height:2px; background:var(--gold-dim); }
+
   .msg-card .cab { display:flex; align-items:baseline; gap:10px; margin-bottom:8px; flex-wrap:wrap; }
   .msg-card .autor { font-family:'Anton',sans-serif; font-size:0.98rem; color:var(--gold); }
   .msg-card.respuesta .autor { color:var(--white); font-size:0.9rem; }
   .msg-card .cuando { font-family:'Barlow Condensed',sans-serif; font-size:0.72rem; color:var(--grey); text-transform:uppercase; }
   .msg-card .texto { font-size:0.95rem; line-height:1.5; color:rgba(247,247,245,0.92); white-space:pre-wrap; word-wrap:break-word; }
-  .msg-card .img-adjunta { margin-top:10px; max-width:100%; max-height:350px; border-radius:4px; border:1px solid var(--navy-line); display:block; }
-  
+
+  .img-wrap { position:relative; display:block; margin-top:12px; }
+  .msg-card .img-adjunta { max-width:100%; max-height:420px; border-radius:8px; border:none; display:block; }
+  .corazon-burst { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) scale(0);
+    font-size:64px; pointer-events:none; opacity:0; }
+  .corazon-burst.activo { animation: burstCorazon 0.7s ease; }
+  @keyframes burstCorazon {
+    0% { transform:translate(-50%,-50%) scale(0); opacity:0; }
+    15% { transform:translate(-50%,-50%) scale(1.2); opacity:1; }
+    30% { transform:translate(-50%,-50%) scale(1); opacity:1; }
+    100% { transform:translate(-50%,-50%) scale(1); opacity:0; }
+  }
+
   .acciones-msg { display:flex; gap:16px; margin-top:10px; align-items:center; flex-wrap:wrap; }
   .btn-accion { background:none; border:none; color:var(--grey); cursor:pointer; font-family:'Barlow Condensed',sans-serif; font-size:0.8rem; letter-spacing:0.04em; text-transform:uppercase; padding:0; display:inline-flex; align-items:center; gap:4px; }
   .btn-accion:hover { color:var(--white); }
   .btn-accion.borrar:hover { color:#E8746A; }
-  
+
   .btn-like { color:var(--grey); transition:transform 0.1s ease; }
   .btn-like.liked { color:#E8746A; }
+
+  @keyframes popReaccion { 0% { transform:scale(1); } 45% { transform:scale(1.4); } 100% { transform:scale(1); } }
+  .pop-anim { animation:popReaccion 0.28s ease; }
 
   .reacciones-bar { display:flex; gap:6px; margin-top:8px; flex-wrap:wrap; }
   .btn-reaccion { background:rgba(2,18,52,0.5); border:1px solid var(--navy-line); color:var(--grey);
@@ -113,7 +130,9 @@
   .aviso-suave { background:var(--navy-soft); border-left:3px solid var(--gold-dim); padding:16px 18px; font-size:0.92rem; color:rgba(247,247,245,0.82); }
 
   @media (max-width: 600px) {
-    .msg-card.respuesta { margin-left: 4px; padding: 12px; }
+    .hilo-respuestas { margin-left:10px; padding-left:12px; }
+    .msg-card.respuesta::before { left:-12px; width:10px; }
+    .msg-card.respuesta { padding: 12px; }
     .escribir { padding: 12px; }
   }
 </style>
@@ -431,7 +450,10 @@
   }
 
   function renderCard(m, esRespuesta, rootPadreId, pollsMap) {
-    var htmlImg = m.imagen ? '<a href="' + m.imagen + '" target="_blank"><img class="img-adjunta" loading="lazy" src="' + m.imagen + '" alt="Imagen adjunta"></a>' : '';
+    var htmlImg = m.imagen ? '<div class="img-wrap" ondblclick="window.dobleTapLike(\'' + m.id + '\', this)">' +
+      '<img class="img-adjunta" loading="lazy" src="' + esc(m.imagen) + '" alt="Imagen adjunta">' +
+      '<div class="corazon-burst">❤️</div>' +
+    '</div>' : '';
     var claseExtra = esRespuesta ? ' respuesta' : '';
     var idPadreParaGuardar = esRespuesta ? rootPadreId : m.id;
     var numLikes = Number(m.likes) || 0;
@@ -522,7 +544,8 @@
       misRespuestas.sort(function(a,b){ return new Date(a.creado) - new Date(b.creado); });
 
       var htmlRespuestas = misRespuestas.map(function(r){ return renderCard(r, true, p.id, pollsMap); }).join('');
-      return '<div>' + renderCard(p, false, p.id, pollsMap) + htmlRespuestas + '</div>';
+      var htmlHilo = htmlRespuestas ? '<div class="hilo-respuestas">' + htmlRespuestas + '</div>' : '';
+      return '<div>' + renderCard(p, false, p.id, pollsMap) + htmlHilo + '</div>';
     }).join('') + '</div>';
 
     cont.querySelectorAll('.btn-like').forEach(function (b) {
@@ -584,6 +607,13 @@
     pintar(r.data || [], p.data || []);
   }
 
+  function dispararPop(el) {
+    if (!el) return;
+    el.classList.remove('pop-anim');
+    void el.offsetWidth;
+    el.classList.add('pop-anim');
+  }
+
   async function darLike(id, likesActuales, btnElement) {
     var key = 'like_' + id;
     var yaDioLike = localStorage.getItem(key) === 'true';
@@ -606,6 +636,7 @@
     
     if (spanCount) spanCount.textContent = nuevosLikes;
     btnElement.dataset.likes = nuevosLikes;
+    dispararPop(spanHeart);
     await sb.from('mensajes').update({ likes: nuevosLikes }).eq('id', id);
   }
 
@@ -630,6 +661,7 @@
 
     var spanCount = btnElement.querySelector('.count');
     if (spanCount) spanCount.textContent = nuevo;
+    dispararPop(btnElement.querySelector('span:first-child'));
 
     await sb.from('mensajes').update({ reacciones: nuevasReacciones }).eq('id', id);
   }
@@ -996,6 +1028,19 @@
       if (contador) contador.textContent = this.value.length;
     });
   }
+
+  window.dobleTapLike = function(id, wrapEl) {
+    var btn = document.querySelector('.btn-like[data-id="' + id + '"]');
+    if (btn && !btn.classList.contains('liked')) {
+      darLike(id, parseInt(btn.dataset.likes, 10) || 0, btn);
+    }
+    var corazon = wrapEl.querySelector('.corazon-burst');
+    if (corazon) {
+      corazon.classList.remove('activo');
+      void corazon.offsetWidth;
+      corazon.classList.add('activo');
+    }
+  };
 
   window.seleccionarGif = function(url) {
     imagenBase64Principal = url;
