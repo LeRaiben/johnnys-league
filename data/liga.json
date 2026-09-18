@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-18T15:01:37.062Z",
+  "actualizado": "2026-09-18T15:22:21.594Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 6,
   "jornadaEnJuego": true,
@@ -195,8 +195,8 @@
       "iniciales": "FF",
       "escudo": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
       "puntos": 280,
-      "valor": "50,5 M",
-      "valorBruto": 50540000,
+      "valor": "43,7 M",
+      "valorBruto": 43690000,
       "esTuyo": false,
       "puntosJornada": 49,
       "jugadosJornada": 8,
@@ -227,8 +227,8 @@
       "iniciales": "MP",
       "escudo": "https://cdn.biwenger.com/i/u/10271251.png",
       "puntos": 269,
-      "valor": "44,3 M",
-      "valorBruto": 44250000,
+      "valor": "51,1 M",
+      "valorBruto": 51100000,
       "esTuyo": false,
       "puntosJornada": 30,
       "jugadosJornada": 7,
@@ -2012,7 +2012,7 @@
         "foto": "https://cdn.biwenger.com/i/p/30477.png"
       },
       "total": 12,
-      "puestoEficiencia": 7,
+      "puestoEficiencia": 8,
       "puestoValor": 1,
       "puestoGasto": 4,
       "puestoActividad": 10,
@@ -2086,7 +2086,7 @@
         "foto": "https://cdn.biwenger.com/i/p/12494.png"
       },
       "total": 12,
-      "puestoEficiencia": 5,
+      "puestoEficiencia": 6,
       "puestoValor": 6,
       "puestoGasto": 9,
       "puestoActividad": 4,
@@ -2123,7 +2123,7 @@
         "foto": "https://cdn.biwenger.com/i/p/15568.png"
       },
       "total": 12,
-      "puestoEficiencia": 4,
+      "puestoEficiencia": 5,
       "puestoValor": 7,
       "puestoGasto": 7,
       "puestoActividad": 8,
@@ -2138,10 +2138,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
       "iniciales": "FF",
       "puntos": 280,
-      "valor": "50,5 M",
-      "valorBruto": 50540000,
+      "valor": "43,7 M",
+      "valorBruto": 43690000,
       "esTuyo": false,
-      "puntosPorMillon": 5.54,
+      "puntosPorMillon": 6.41,
       "mediaJornada": 46.7,
       "clausulasHechas": 9,
       "clausulasSufridas": 1,
@@ -2160,13 +2160,13 @@
         "foto": "https://cdn.biwenger.com/i/p/19441.png"
       },
       "total": 12,
-      "puestoEficiencia": 9,
-      "puestoValor": 3,
+      "puestoEficiencia": 4,
+      "puestoValor": 8,
       "puestoGasto": 1,
       "puestoActividad": 2,
       "vsMediaPuntos": 0,
-      "vsMediaEficiencia": -17,
-      "vsMediaValor": 12,
+      "vsMediaEficiencia": -3,
+      "vsMediaValor": -3,
       "tendencia": null
     },
     {
@@ -2208,10 +2208,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/10271251.png",
       "iniciales": "MP",
       "puntos": 269,
-      "valor": "44,3 M",
-      "valorBruto": 44250000,
+      "valor": "51,1 M",
+      "valorBruto": 51100000,
       "esTuyo": false,
-      "puntosPorMillon": 6.08,
+      "puntosPorMillon": 5.26,
       "mediaJornada": 44.8,
       "clausulasHechas": 0,
       "clausulasSufridas": 2,
@@ -2226,13 +2226,13 @@
       "enVenta": 8,
       "fichajeEstrella": null,
       "total": 12,
-      "puestoEficiencia": 8,
-      "puestoValor": 8,
+      "puestoEficiencia": 9,
+      "puestoValor": 3,
       "puestoGasto": 11,
       "puestoActividad": 11,
       "vsMediaPuntos": -4,
-      "vsMediaEficiencia": -8,
-      "vsMediaValor": -2,
+      "vsMediaEficiencia": -21,
+      "vsMediaValor": 13,
       "tendencia": null
     },
     {
@@ -2268,7 +2268,7 @@
       "puestoGasto": 3,
       "puestoActividad": 1,
       "vsMediaPuntos": -6,
-      "vsMediaEficiencia": -26,
+      "vsMediaEficiencia": -27,
       "vsMediaValor": 20,
       "tendencia": null
     },
@@ -2300,7 +2300,7 @@
         "foto": "https://cdn.biwenger.com/i/p/19547.png"
       },
       "total": 12,
-      "puestoEficiencia": 6,
+      "puestoEficiencia": 7,
       "puestoValor": 10,
       "puestoGasto": 6,
       "puestoActividad": 3,
@@ -3620,6 +3620,32 @@
             "esLocal": false,
             "rival": "Real Madrid",
             "dificultad": 74
+          }
+        ]
+      },
+      {
+        "nombre": "Moleiro",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/30495.png",
+        "equipoReal": "Villarreal",
+        "jornadas": [
+          {
+            "jornada": "Round 7",
+            "esLocal": true,
+            "rival": "Levante",
+            "dificultad": 31
+          },
+          {
+            "jornada": "Round 8",
+            "esLocal": false,
+            "rival": "Real Madrid",
+            "dificultad": 81
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Elche",
+            "dificultad": 15
           }
         ]
       },
@@ -6160,32 +6186,6 @@
         ]
       },
       {
-        "nombre": "Moleiro",
-        "posicion": "Centrocampista",
-        "foto": "https://cdn.biwenger.com/i/p/30495.png",
-        "equipoReal": "Villarreal",
-        "jornadas": [
-          {
-            "jornada": "Round 7",
-            "esLocal": true,
-            "rival": "Levante",
-            "dificultad": 31
-          },
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Real Madrid",
-            "dificultad": 81
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": true,
-            "rival": "Elche",
-            "dificultad": 15
-          }
-        ]
-      },
-      {
         "nombre": "Logan Costa",
         "posicion": "Defensa",
         "foto": "https://cdn.biwenger.com/i/p/34717.png",
@@ -8375,6 +8375,40 @@
       "margenPorcentaje": 225,
       "blindado": true,
       "blindadoHasta": "2026-09-18T19:00:00.000Z"
+    },
+    {
+      "id": "30495",
+      "nombre": "Moleiro",
+      "slug": "alberto-moleiro",
+      "posicion": "Centrocampista",
+      "posicionCodigo": 3,
+      "foto": "https://cdn.biwenger.com/i/p/30495.png",
+      "equipoReal": "Villarreal",
+      "equipoIdReal": "19",
+      "presidente": "Manchester Pity",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/10271251.png",
+      "precio": 6850000,
+      "precioTexto": "6,8 M",
+      "puntosTotales": 33,
+      "partidosJugados": 6,
+      "media": 5.5,
+      "puntosPorMillon": 4.82,
+      "racha": [
+        12,
+        4,
+        7,
+        3,
+        3
+      ],
+      "rachaTitular": 1,
+      "ultimoMinutos": 80,
+      "clausula": 10400001,
+      "clausulaTexto": "10,4 M",
+      "pagadoPorSuDueno": 8000001,
+      "margen": 3550001,
+      "margenPorcentaje": 52,
+      "blindado": true,
+      "blindadoHasta": "2026-10-03T15:08:01.000Z"
     },
     {
       "id": "39924",
@@ -11578,40 +11612,6 @@
       "blindadoHasta": "2026-09-18T19:00:00.000Z"
     },
     {
-      "id": "30495",
-      "nombre": "Moleiro",
-      "slug": "alberto-moleiro",
-      "posicion": "Centrocampista",
-      "posicionCodigo": 3,
-      "foto": "https://cdn.biwenger.com/i/p/30495.png",
-      "equipoReal": "Villarreal",
-      "equipoIdReal": "19",
-      "presidente": "FC FORUSIA",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
-      "precio": 6850000,
-      "precioTexto": "6,8 M",
-      "puntosTotales": 33,
-      "partidosJugados": 6,
-      "media": 5.5,
-      "puntosPorMillon": 4.82,
-      "racha": [
-        12,
-        4,
-        7,
-        3,
-        3
-      ],
-      "rachaTitular": 1,
-      "ultimoMinutos": 80,
-      "clausula": 9165000,
-      "clausulaTexto": "9,2 M",
-      "pagadoPorSuDueno": 7050000,
-      "margen": 2315000,
-      "margenPorcentaje": 34,
-      "blindado": true,
-      "blindadoHasta": "2026-10-03T05:04:04.000Z"
-    },
-    {
       "id": "34717",
       "nombre": "Logan Costa",
       "slug": "logan-costa",
@@ -14329,6 +14329,24 @@
     ],
     "Manchester Pity": [
       {
+        "nombre": "Moleiro",
+        "foto": "https://cdn.biwenger.com/i/p/30495.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Villarreal",
+        "racha": [
+          12,
+          4,
+          7,
+          3,
+          3
+        ],
+        "rachaTitular": 1,
+        "nota": 7.5,
+        "rival": "Levante",
+        "esLocal": true,
+        "dificultad": 31
+      },
+      {
         "nombre": "Sancet",
         "foto": "https://cdn.biwenger.com/i/p/17057.png",
         "posicion": "Centrocampista",
@@ -16012,24 +16030,6 @@
     ],
     "FC FORUSIA": [
       {
-        "nombre": "Moleiro",
-        "foto": "https://cdn.biwenger.com/i/p/30495.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Villarreal",
-        "racha": [
-          12,
-          4,
-          7,
-          3,
-          3
-        ],
-        "rachaTitular": 1,
-        "nota": 7.5,
-        "rival": "Levante",
-        "esLocal": true,
-        "dificultad": 31
-      },
-      {
         "nombre": "Kang-in Lee",
         "foto": "https://cdn.biwenger.com/i/p/17687.png",
         "posicion": "Centrocampista",
@@ -16856,6 +16856,25 @@
       "presidente": "Seif fc"
     },
     {
+      "nombre": "Moleiro",
+      "foto": "https://cdn.biwenger.com/i/p/30495.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Villarreal",
+      "racha": [
+        12,
+        4,
+        7,
+        3,
+        3
+      ],
+      "rachaTitular": 1,
+      "nota": 7.5,
+      "rival": "Levante",
+      "esLocal": true,
+      "dificultad": 31,
+      "presidente": "Manchester Pity"
+    },
+    {
       "nombre": "Yangel Herrera",
       "foto": "https://cdn.biwenger.com/i/p/17344.png",
       "posicion": "Centrocampista",
@@ -16873,25 +16892,6 @@
       "esLocal": false,
       "dificultad": 16,
       "presidente": "Madriguana FC"
-    },
-    {
-      "nombre": "Moleiro",
-      "foto": "https://cdn.biwenger.com/i/p/30495.png",
-      "posicion": "Centrocampista",
-      "equipoReal": "Villarreal",
-      "racha": [
-        12,
-        4,
-        7,
-        3,
-        3
-      ],
-      "rachaTitular": 1,
-      "nota": 7.5,
-      "rival": "Levante",
-      "esLocal": true,
-      "dificultad": 31,
-      "presidente": "FC FORUSIA"
     },
     {
       "nombre": "Dmitrovic",
