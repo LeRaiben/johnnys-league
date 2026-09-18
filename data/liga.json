@@ -1,8 +1,8 @@
 {
-  "actualizado": "2026-09-18T19:57:17.123Z",
+  "actualizado": "2026-09-18T20:15:26.838Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
-  "jornadaEnJuego": false,
+  "jornadaEnJuego": true,
   "partidos": [
     {
       "local": "Espanyol",
@@ -12,7 +12,7 @@
       "fecha": "2026-09-18T19:00:00.000Z",
       "golesLocal": 0,
       "golesVisitante": 2,
-      "estado": "break"
+      "estado": "secondTime"
     },
     {
       "local": "Osasuna",
@@ -117,7 +117,11 @@
       "puntos": 364,
       "valor": "49,3 M",
       "valorBruto": 49290000,
-      "esTuyo": false
+      "esTuyo": false,
+      "puntosJornada": -6,
+      "jugadosJornada": 1,
+      "alineadosJornada": 11,
+      "puntosProvisional": 358
     },
     {
       "posicion": 2,
@@ -129,7 +133,11 @@
       "puntos": 356,
       "valor": "57,7 M",
       "valorBruto": 57680000,
-      "esTuyo": false
+      "esTuyo": false,
+      "puntosJornada": 0,
+      "jugadosJornada": 0,
+      "alineadosJornada": 11,
+      "puntosProvisional": 356
     },
     {
       "posicion": 3,
@@ -141,7 +149,11 @@
       "puntos": 312,
       "valor": "21,2 M",
       "valorBruto": 21190000,
-      "esTuyo": false
+      "esTuyo": false,
+      "puntosJornada": 0,
+      "jugadosJornada": 0,
+      "alineadosJornada": 11,
+      "puntosProvisional": 312
     },
     {
       "posicion": 4,
@@ -153,7 +165,11 @@
       "puntos": 302,
       "valor": "47,8 M",
       "valorBruto": 47840000,
-      "esTuyo": false
+      "esTuyo": false,
+      "puntosJornada": 0,
+      "jugadosJornada": 0,
+      "alineadosJornada": 11,
+      "puntosProvisional": 302
     },
     {
       "posicion": 5,
@@ -165,7 +181,11 @@
       "puntos": 286,
       "valor": "44,9 M",
       "valorBruto": 44850000,
-      "esTuyo": true
+      "esTuyo": true,
+      "puntosJornada": 0,
+      "jugadosJornada": 0,
+      "alineadosJornada": 11,
+      "puntosProvisional": 286
     },
     {
       "posicion": 6,
@@ -177,7 +197,11 @@
       "puntos": 280,
       "valor": "43,7 M",
       "valorBruto": 43690000,
-      "esTuyo": false
+      "esTuyo": false,
+      "puntosJornada": 0,
+      "jugadosJornada": 0,
+      "alineadosJornada": 11,
+      "puntosProvisional": 280
     },
     {
       "posicion": 7,
@@ -189,7 +213,11 @@
       "puntos": 273,
       "valor": "39,5 M",
       "valorBruto": 39550000,
-      "esTuyo": false
+      "esTuyo": false,
+      "puntosJornada": 0,
+      "jugadosJornada": 0,
+      "alineadosJornada": 11,
+      "puntosProvisional": 273
     },
     {
       "posicion": 8,
@@ -201,7 +229,11 @@
       "puntos": 269,
       "valor": "51,1 M",
       "valorBruto": 51100000,
-      "esTuyo": false
+      "esTuyo": false,
+      "puntosJornada": 0,
+      "jugadosJornada": 0,
+      "alineadosJornada": 11,
+      "puntosProvisional": 269
     },
     {
       "posicion": 9,
@@ -213,7 +245,11 @@
       "puntos": 265,
       "valor": "54,3 M",
       "valorBruto": 54320000,
-      "esTuyo": false
+      "esTuyo": false,
+      "puntosJornada": 0,
+      "jugadosJornada": 0,
+      "alineadosJornada": 11,
+      "puntosProvisional": 265
     },
     {
       "posicion": 10,
@@ -225,7 +261,11 @@
       "puntos": 263,
       "valor": "42,1 M",
       "valorBruto": 42060000,
-      "esTuyo": false
+      "esTuyo": false,
+      "puntosJornada": 0,
+      "jugadosJornada": 0,
+      "alineadosJornada": 11,
+      "puntosProvisional": 263
     },
     {
       "posicion": 11,
@@ -237,7 +277,11 @@
       "puntos": 214,
       "valor": "47,5 M",
       "valorBruto": 47450000,
-      "esTuyo": false
+      "esTuyo": false,
+      "puntosJornada": 0,
+      "jugadosJornada": 0,
+      "alineadosJornada": 11,
+      "puntosProvisional": 214
     },
     {
       "posicion": 12,
@@ -249,7 +293,11 @@
       "puntos": 186,
       "valor": "43,4 M",
       "valorBruto": 43360000,
-      "esTuyo": false
+      "esTuyo": false,
+      "puntosJornada": 0,
+      "jugadosJornada": 0,
+      "alineadosJornada": 11,
+      "puntosProvisional": 186
     }
   ],
   "mercadoBiwenger": [
