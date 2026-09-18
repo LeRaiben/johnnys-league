@@ -41,6 +41,16 @@
   .mensaje-estado { font-size:0.88rem; padding:11px 14px; border-radius:4px; margin-bottom:16px; line-height:1.45; }
   .mensaje-estado.error { background:rgba(192,24,44,0.15); color:#E8746A; border-left:3px solid #E8746A; }
 
+  .aviso-notif { background:rgba(212,175,55,0.1); border-left:3px solid var(--gold); border-radius:0 4px 4px 0;
+    padding:12px 14px; margin-bottom:16px; display:flex; align-items:center; justify-content:space-between;
+    gap:12px; flex-wrap:wrap; font-size:0.88rem; color:rgba(247,247,245,0.9); }
+  .aviso-notif .acciones { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+  .aviso-notif button.activar { background:var(--gold); color:var(--navy-deep); border:none; cursor:pointer;
+    font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.04em; text-transform:uppercase;
+    font-size:0.78rem; padding:7px 14px; border-radius:4px; }
+  .aviso-notif button.cerrar { background:none; border:none; color:var(--grey); cursor:pointer; font-size:1.1rem;
+    line-height:1; padding:0; }
+
   /* Escribir principal */
   .escribir { background:var(--navy-soft); padding:20px; margin-bottom:26px; border-radius:4px; }
   .escribir textarea { width:100%; min-height:80px; background:rgba(2,18,52,0.6); color:var(--white);
@@ -162,6 +172,7 @@
 
   <section class="block" style="border-top:none; padding-top:0;">
     <div id="zonaEstado"></div>
+    <div id="avisoNotif"></div>
 
     <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:20px;">
       <button type="button" class="btn-notificaciones" id="btnNotificaciones" style="margin-bottom:0;">
@@ -827,24 +838,55 @@
 
   function marcarBotonActivado() {
     var b = document.getElementById('btnNotificaciones');
-    if (!b) return;
-    b.textContent = '🔔 Notificaciones activadas';
-    b.disabled = true;
+    if (b) { b.textContent = '🔔 Notificaciones activadas'; b.disabled = true; }
+    ocultarAvisoNotif();
+  }
+
+  function mostrarAvisoNotif() {
+    if (sessionStorage.getItem('notif_banner_cerrado') === 'true') return;
+    var cont = document.getElementById('avisoNotif');
+    if (!cont) return;
+    cont.innerHTML = '<div class="aviso-notif">' +
+      '<span>🔔 No te van a llegar avisos de mensajes nuevos. Actívalos para no perderte nada.</span>' +
+      '<div class="acciones">' +
+        '<button type="button" class="activar" id="btnActivarDesdeAviso">Activarlas ahora</button>' +
+        '<button type="button" class="cerrar" id="btnCerrarAvisoNotif" aria-label="Cerrar">✕</button>' +
+      '</div>' +
+    '</div>';
+
+    var btnActivar = document.getElementById('btnActivarDesdeAviso');
+    if (btnActivar) btnActivar.addEventListener('click', function () {
+      var b = document.getElementById('btnNotificaciones');
+      if (b) b.click();
+    });
+
+    var btnCerrar = document.getElementById('btnCerrarAvisoNotif');
+    if (btnCerrar) btnCerrar.addEventListener('click', function () {
+      sessionStorage.setItem('notif_banner_cerrado', 'true');
+      cont.innerHTML = '';
+    });
+  }
+
+  function ocultarAvisoNotif() {
+    var cont = document.getElementById('avisoNotif');
+    if (cont) cont.innerHTML = '';
   }
 
   async function comprobarSuscripcionExistente() {
     try {
       if (!('serviceWorker' in navigator) || !('PushManager' in window)) return;
       var registration = await navigator.serviceWorker.getRegistration('sw.js');
-      if (!registration) return;
-      var sub = await registration.pushManager.getSubscription();
-      if (!sub) return;
+      var sub = registration ? await registration.pushManager.getSubscription() : null;
 
       // No basta con que el navegador recuerde la suscripción: comprobamos
       // que siga existiendo en Supabase (si se reinició el tablón, no debe
       // marcarse como activada hasta que la persona vuelva a pulsar el botón).
-      var r = await sb.from('suscriptores_push').select('id').eq('endpoint', sub.endpoint).maybeSingle();
-      if (r.data) marcarBotonActivado();
+      var r = sub ? await sb.from('suscriptores_push').select('id').eq('endpoint', sub.endpoint).maybeSingle() : null;
+      if (r && r.data) {
+        marcarBotonActivado();
+      } else {
+        mostrarAvisoNotif();
+      }
     } catch (e) { /* silencioso: solo es para pintar el estado inicial */ }
   }
 
