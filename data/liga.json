@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-19T16:15:09.575Z",
+  "actualizado": "2026-09-19T16:31:01.944Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -134,10 +134,10 @@
       "valor": "57,0 M",
       "valorBruto": 57020000,
       "esTuyo": false,
-      "puntosJornada": 4,
-      "jugadosJornada": 2,
+      "puntosJornada": 8,
+      "jugadosJornada": 3,
       "alineadosJornada": 11,
-      "puntosProvisional": 360
+      "puntosProvisional": 364
     },
     {
       "posicion": 3,
@@ -445,6 +445,19 @@
       "valorMercado": "2,2 M",
       "valorBruto": 2240000,
       "diferencia": 40000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Yeray",
+      "foto": "https://cdn.biwenger.com/i/p/5771.png",
+      "posicion": "Defensa",
+      "equipoReal": "Athletic",
+      "vendedor": "Lottin Capital",
+      "pide": "1,6 M",
+      "pideBruto": 1640000,
+      "valorMercado": "1,6 M",
+      "valorBruto": 1640000,
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -2314,7 +2327,7 @@
       "balance": "+20,4 M",
       "balanceBruto": 20409000,
       "sobreprecioMedio": 29,
-      "enVenta": 3,
+      "enVenta": 4,
       "fichajeEstrella": {
         "nombre": "Pépé",
         "precio": "14,9 M",
@@ -2840,7 +2853,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Alavés",
-            "dificultad": 57
+            "dificultad": 59
           }
         ]
       },
@@ -2866,7 +2879,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Alavés",
-            "dificultad": 57
+            "dificultad": 59
           }
         ]
       },
@@ -3860,7 +3873,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Alavés",
-            "dificultad": 57
+            "dificultad": 59
           }
         ]
       },
@@ -4278,7 +4291,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Alavés",
-            "dificultad": 57
+            "dificultad": 59
           }
         ]
       },
@@ -4304,7 +4317,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Alavés",
-            "dificultad": 57
+            "dificultad": 59
           }
         ]
       },
@@ -4540,7 +4553,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Alavés",
-            "dificultad": 57
+            "dificultad": 59
           }
         ]
       },
@@ -5036,7 +5049,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Alavés",
-            "dificultad": 57
+            "dificultad": 59
           }
         ]
       },
@@ -5324,7 +5337,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Alavés",
-            "dificultad": 57
+            "dificultad": 59
           }
         ]
       },
@@ -5506,7 +5519,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Alavés",
-            "dificultad": 57
+            "dificultad": 59
           }
         ]
       },
@@ -5794,7 +5807,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Alavés",
-            "dificultad": 57
+            "dificultad": 59
           }
         ]
       },
@@ -6760,7 +6773,7 @@
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Alavés",
-            "dificultad": 57
+            "dificultad": 59
           }
         ]
       },
@@ -8965,19 +8978,19 @@
       "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
       "precio": 1600000,
       "precioTexto": "1,6 M",
-      "puntosTotales": 19,
-      "partidosJugados": 6,
-      "media": 3.2,
-      "puntosPorMillon": 11.88,
+      "puntosTotales": 23,
+      "partidosJugados": 7,
+      "media": 3.3,
+      "puntosPorMillon": 14.38,
       "racha": [
+        4,
         2,
         7,
         1,
-        2,
         2
       ],
-      "rachaTitular": 6,
-      "ultimoMinutos": 85,
+      "rachaTitular": 7,
+      "ultimoMinutos": 66,
       "clausula": 2400000,
       "clausulaTexto": "2,4 M",
       "pagadoPorSuDueno": null,
@@ -15073,24 +15086,6 @@
         "dificultad": 40
       },
       {
-        "nombre": "Abde Rebbach",
-        "foto": "https://cdn.biwenger.com/i/p/30510.png",
-        "posicion": "Delantero",
-        "equipoReal": "Alavés",
-        "racha": [
-          2,
-          7,
-          1,
-          2,
-          2
-        ],
-        "rachaTitular": 6,
-        "nota": 4.3,
-        "rival": "Atlético",
-        "esLocal": true,
-        "dificultad": 58
-      },
-      {
         "nombre": "Jonny",
         "foto": "https://cdn.biwenger.com/i/p/1599.png",
         "posicion": "Defensa",
@@ -15125,6 +15120,24 @@
         "rival": "Athletic",
         "esLocal": true,
         "dificultad": 53
+      },
+      {
+        "nombre": "Abde Rebbach",
+        "foto": "https://cdn.biwenger.com/i/p/30510.png",
+        "posicion": "Delantero",
+        "equipoReal": "Alavés",
+        "racha": [
+          4,
+          2,
+          7,
+          1,
+          2
+        ],
+        "rachaTitular": 7,
+        "nota": 3.6,
+        "rival": "Atlético",
+        "esLocal": true,
+        "dificultad": 58
       },
       {
         "nombre": "Agoumé",
