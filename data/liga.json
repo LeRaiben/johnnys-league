@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-19T18:33:03.475Z",
+  "actualizado": "2026-09-19T18:49:16.088Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -195,8 +195,8 @@
       "iniciales": "FF",
       "escudo": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
       "puntos": 280,
-      "valor": "48,9 M",
-      "valorBruto": 48870000,
+      "valor": "49,2 M",
+      "valorBruto": 49230000,
       "esTuyo": false,
       "puntosJornada": 12,
       "jugadosJornada": 4,
@@ -259,8 +259,8 @@
       "iniciales": "GF",
       "escudo": "https://cdn.biwenger.com/i/u/11411835.png",
       "puntos": 263,
-      "valor": "42,0 M",
-      "valorBruto": 41950000,
+      "valor": "41,6 M",
+      "valorBruto": 41590000,
       "esTuyo": false,
       "puntosJornada": 16,
       "jugadosJornada": 2,
@@ -1280,6 +1280,22 @@
     },
     {
       "tipo": "clausula",
+      "fecha": "2026-09-19T18:35:02.000Z",
+      "nombre": "Pablo Durán",
+      "foto": "https://cdn.biwenger.com/i/p/29185.png",
+      "posicion": "Delantero",
+      "equipoReal": "Celta",
+      "vendedor": "Gorila FC",
+      "comprador": "FC FORUSIA",
+      "escudoComprador": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
+      "pide": "1,1 M",
+      "pideBruto": 1080000,
+      "valorMercado": "0,4 M",
+      "valorBruto": 360000,
+      "diferencia": 720000
+    },
+    {
+      "tipo": "clausula",
       "fecha": "2026-09-19T09:52:34.000Z",
       "nombre": "Denis Suárez",
       "foto": "https://cdn.biwenger.com/i/p/1876.png",
@@ -1874,9 +1890,9 @@
   "rankingClausulas": [
     {
       "nombre": "FC FORUSIA",
-      "veces": 11,
-      "gastado": 41098799,
-      "gastadoTexto": "41,1 M"
+      "veces": 12,
+      "gastado": 42178799,
+      "gastadoTexto": "42,2 M"
     },
     {
       "nombre": "Las Víboras FC",
@@ -1933,7 +1949,7 @@
       },
       "total": 12,
       "puestoEficiencia": 2,
-      "puestoValor": 4,
+      "puestoValor": 5,
       "puestoGasto": 2,
       "puestoActividad": 7,
       "vsMediaPuntos": 30,
@@ -2115,21 +2131,21 @@
       "escudo": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
       "iniciales": "FF",
       "puntos": 280,
-      "valor": "48,9 M",
-      "valorBruto": 48870000,
+      "valor": "49,2 M",
+      "valorBruto": 49230000,
       "esTuyo": false,
-      "puntosPorMillon": 5.73,
+      "puntosPorMillon": 5.69,
       "mediaJornada": 40,
-      "clausulasHechas": 11,
+      "clausulasHechas": 12,
       "clausulasSufridas": 1,
-      "operaciones": 12,
-      "gastado": "41,1 M",
-      "gastadoBruto": 41098799,
+      "operaciones": 13,
+      "gastado": "42,2 M",
+      "gastadoBruto": 42178799,
       "ingresado": "1,6 M",
       "ingresadoBruto": 1560000,
-      "balance": "−39,5 M",
-      "balanceBruto": -39538799,
-      "sobreprecioMedio": 49,
+      "balance": "−40,6 M",
+      "balanceBruto": -40618799,
+      "sobreprecioMedio": 61,
       "enVenta": 9,
       "fichajeEstrella": {
         "nombre": "Pedri",
@@ -2138,11 +2154,11 @@
       },
       "total": 12,
       "puestoEficiencia": 8,
-      "puestoValor": 5,
+      "puestoValor": 4,
       "puestoGasto": 1,
-      "puestoActividad": 2,
+      "puestoActividad": 1,
       "vsMediaPuntos": 0,
-      "vsMediaEficiencia": -8,
+      "vsMediaEficiencia": -9,
       "vsMediaValor": 6,
       "tendencia": {
         "puestos": -1,
@@ -2255,7 +2271,7 @@
       "puestoEficiencia": 10,
       "puestoValor": 2,
       "puestoGasto": 3,
-      "puestoActividad": 1,
+      "puestoActividad": 2,
       "vsMediaPuntos": -6,
       "vsMediaEficiencia": -22,
       "vsMediaValor": 18,
@@ -2271,20 +2287,20 @@
       "escudo": "https://cdn.biwenger.com/i/u/11411835.png",
       "iniciales": "GF",
       "puntos": 263,
-      "valor": "42,0 M",
-      "valorBruto": 41950000,
+      "valor": "41,6 M",
+      "valorBruto": 41590000,
       "esTuyo": false,
-      "puntosPorMillon": 6.27,
+      "puntosPorMillon": 6.32,
       "mediaJornada": 37.6,
       "clausulasHechas": 4,
-      "clausulasSufridas": 3,
-      "operaciones": 7,
+      "clausulasSufridas": 4,
+      "operaciones": 8,
       "gastado": "23,9 M",
       "gastadoBruto": 23944300,
-      "ingresado": "10,6 M",
-      "ingresadoBruto": 10619000,
-      "balance": "−13,3 M",
-      "balanceBruto": -13325300,
+      "ingresado": "11,7 M",
+      "ingresadoBruto": 11699000,
+      "balance": "−12,2 M",
+      "balanceBruto": -12245300,
       "sobreprecioMedio": 80,
       "enVenta": 1,
       "fichajeEstrella": {
@@ -2294,12 +2310,12 @@
       },
       "total": 12,
       "puestoEficiencia": 5,
-      "puestoValor": 9,
+      "puestoValor": 10,
       "puestoGasto": 7,
       "puestoActividad": 3,
       "vsMediaPuntos": -6,
       "vsMediaEficiencia": 1,
-      "vsMediaValor": -9,
+      "vsMediaValor": -10,
       "tendencia": {
         "puestos": -3,
         "puntos": 80,
@@ -2372,7 +2388,7 @@
       "fichajeEstrella": null,
       "total": 12,
       "puestoEficiencia": 11,
-      "puestoValor": 10,
+      "puestoValor": 9,
       "puestoGasto": 12,
       "puestoActividad": 12,
       "vsMediaPuntos": -34,
@@ -2789,13 +2805,13 @@
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Rayo Vallecano",
-            "dificultad": 43
+            "dificultad": 44
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 12
+            "dificultad": 13
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -3129,13 +3145,13 @@
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Rayo Vallecano",
-            "dificultad": 43
+            "dificultad": 44
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 12
+            "dificultad": 13
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -3155,13 +3171,13 @@
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Rayo Vallecano",
-            "dificultad": 43
+            "dificultad": 44
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 12
+            "dificultad": 13
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -3239,13 +3255,13 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Celta",
-            "dificultad": 16
+            "dificultad": 41
           },
           {
             "jornada": "Round 10",
             "esLocal": true,
             "rival": "Málaga",
-            "dificultad": 9
+            "dificultad": 10
           }
         ]
       },
@@ -3449,13 +3465,13 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Celta",
-            "dificultad": 16
+            "dificultad": 41
           },
           {
             "jornada": "Round 10",
             "esLocal": true,
             "rival": "Málaga",
-            "dificultad": 9
+            "dificultad": 10
           }
         ]
       },
@@ -3495,13 +3511,13 @@
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Rayo Vallecano",
-            "dificultad": 43
+            "dificultad": 44
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 12
+            "dificultad": 13
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -3631,13 +3647,13 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Celta",
-            "dificultad": 16
+            "dificultad": 41
           },
           {
             "jornada": "Round 10",
             "esLocal": true,
             "rival": "Málaga",
-            "dificultad": 9
+            "dificultad": 10
           }
         ]
       },
@@ -3711,13 +3727,13 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Celta",
-            "dificultad": 16
+            "dificultad": 41
           },
           {
             "jornada": "Round 10",
             "esLocal": true,
             "rival": "Málaga",
-            "dificultad": 9
+            "dificultad": 10
           }
         ]
       },
@@ -3945,13 +3961,13 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Celta",
-            "dificultad": 16
+            "dificultad": 41
           },
           {
             "jornada": "Round 10",
             "esLocal": true,
             "rival": "Málaga",
-            "dificultad": 9
+            "dificultad": 10
           }
         ]
       },
@@ -4075,13 +4091,13 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Celta",
-            "dificultad": 16
+            "dificultad": 41
           },
           {
             "jornada": "Round 10",
             "esLocal": true,
             "rival": "Málaga",
-            "dificultad": 9
+            "dificultad": 10
           }
         ]
       },
@@ -4181,13 +4197,13 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Celta",
-            "dificultad": 16
+            "dificultad": 41
           },
           {
             "jornada": "Round 10",
             "esLocal": true,
             "rival": "Málaga",
-            "dificultad": 9
+            "dificultad": 10
           }
         ]
       },
@@ -4253,7 +4269,7 @@
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Málaga",
-            "dificultad": 16
+            "dificultad": 17
           },
           {
             "jornada": "Round 9",
@@ -4265,33 +4281,7 @@
             "jornada": "Round 10",
             "esLocal": false,
             "rival": "Racing",
-            "dificultad": 44
-          }
-        ]
-      },
-      {
-        "nombre": "Pablo Durán",
-        "posicion": "Delantero",
-        "foto": "https://cdn.biwenger.com/i/p/29185.png",
-        "equipoReal": "Celta",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Elche",
-            "dificultad": 24
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": true,
-            "rival": "Alavés",
-            "dificultad": 54
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": true,
-            "rival": "Betis",
-            "dificultad": 63
+            "dificultad": 39
           }
         ]
       },
@@ -4567,7 +4557,7 @@
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Málaga",
-            "dificultad": 16
+            "dificultad": 17
           },
           {
             "jornada": "Round 9",
@@ -4579,7 +4569,7 @@
             "jornada": "Round 10",
             "esLocal": false,
             "rival": "Racing",
-            "dificultad": 44
+            "dificultad": 39
           }
         ]
       },
@@ -4801,13 +4791,13 @@
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Rayo Vallecano",
-            "dificultad": 43
+            "dificultad": 44
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 12
+            "dificultad": 13
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -4853,7 +4843,7 @@
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Málaga",
-            "dificultad": 16
+            "dificultad": 17
           },
           {
             "jornada": "Round 9",
@@ -4865,7 +4855,7 @@
             "jornada": "Round 10",
             "esLocal": false,
             "rival": "Racing",
-            "dificultad": 44
+            "dificultad": 39
           }
         ]
       },
@@ -5253,13 +5243,13 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Celta",
-            "dificultad": 16
+            "dificultad": 41
           },
           {
             "jornada": "Round 10",
             "esLocal": true,
             "rival": "Málaga",
-            "dificultad": 9
+            "dificultad": 10
           }
         ]
       },
@@ -5559,13 +5549,13 @@
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Rayo Vallecano",
-            "dificultad": 43
+            "dificultad": 44
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 12
+            "dificultad": 13
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -5899,7 +5889,7 @@
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Málaga",
-            "dificultad": 16
+            "dificultad": 17
           },
           {
             "jornada": "Round 9",
@@ -5911,7 +5901,7 @@
             "jornada": "Round 10",
             "esLocal": false,
             "rival": "Racing",
-            "dificultad": 44
+            "dificultad": 39
           }
         ]
       },
@@ -5944,6 +5934,32 @@
     ],
     "FC FORUSIA": [
       {
+        "nombre": "Pablo Durán",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/29185.png",
+        "equipoReal": "Celta",
+        "jornadas": [
+          {
+            "jornada": "Round 8",
+            "esLocal": false,
+            "rival": "Elche",
+            "dificultad": 24
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Alavés",
+            "dificultad": 54
+          },
+          {
+            "jornada": "Round 10",
+            "esLocal": true,
+            "rival": "Betis",
+            "dificultad": 63
+          }
+        ]
+      },
+      {
         "nombre": "Puado",
         "posicion": "Delantero",
         "foto": "https://cdn.biwenger.com/i/p/16317.png",
@@ -5953,7 +5969,7 @@
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Málaga",
-            "dificultad": 16
+            "dificultad": 17
           },
           {
             "jornada": "Round 9",
@@ -5965,7 +5981,7 @@
             "jornada": "Round 10",
             "esLocal": false,
             "rival": "Racing",
-            "dificultad": 44
+            "dificultad": 39
           }
         ]
       },
@@ -6089,13 +6105,13 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Celta",
-            "dificultad": 16
+            "dificultad": 41
           },
           {
             "jornada": "Round 10",
             "esLocal": true,
             "rival": "Málaga",
-            "dificultad": 9
+            "dificultad": 10
           }
         ]
       },
@@ -6187,7 +6203,7 @@
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Málaga",
-            "dificultad": 16
+            "dificultad": 17
           },
           {
             "jornada": "Round 9",
@@ -6199,7 +6215,7 @@
             "jornada": "Round 10",
             "esLocal": false,
             "rival": "Racing",
-            "dificultad": 44
+            "dificultad": 39
           }
         ]
       },
@@ -6291,7 +6307,7 @@
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Málaga",
-            "dificultad": 16
+            "dificultad": 17
           },
           {
             "jornada": "Round 9",
@@ -6303,7 +6319,7 @@
             "jornada": "Round 10",
             "esLocal": false,
             "rival": "Racing",
-            "dificultad": 44
+            "dificultad": 39
           }
         ]
       },
@@ -6481,13 +6497,13 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Celta",
-            "dificultad": 16
+            "dificultad": 41
           },
           {
             "jornada": "Round 10",
             "esLocal": true,
             "rival": "Málaga",
-            "dificultad": 9
+            "dificultad": 10
           }
         ]
       },
@@ -6579,7 +6595,7 @@
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Málaga",
-            "dificultad": 16
+            "dificultad": 17
           },
           {
             "jornada": "Round 9",
@@ -6591,7 +6607,7 @@
             "jornada": "Round 10",
             "esLocal": false,
             "rival": "Racing",
-            "dificultad": 44
+            "dificultad": 39
           }
         ]
       },
@@ -6657,7 +6673,7 @@
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Málaga",
-            "dificultad": 16
+            "dificultad": 17
           },
           {
             "jornada": "Round 9",
@@ -6669,7 +6685,7 @@
             "jornada": "Round 10",
             "esLocal": false,
             "rival": "Racing",
-            "dificultad": 44
+            "dificultad": 39
           }
         ]
       },
@@ -6874,13 +6890,13 @@
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Rayo Vallecano",
-            "dificultad": 43
+            "dificultad": 44
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 12
+            "dificultad": 13
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -6926,7 +6942,7 @@
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Málaga",
-            "dificultad": 16
+            "dificultad": 17
           },
           {
             "jornada": "Round 9",
@@ -6938,7 +6954,7 @@
             "jornada": "Round 10",
             "esLocal": false,
             "rival": "Racing",
-            "dificultad": 44
+            "dificultad": 39
           }
         ]
       },
@@ -6952,13 +6968,13 @@
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Rayo Vallecano",
-            "dificultad": 43
+            "dificultad": 44
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 12
+            "dificultad": 13
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -7166,13 +7182,13 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Celta",
-            "dificultad": 16
+            "dificultad": 41
           },
           {
             "jornada": "Round 10",
             "esLocal": true,
             "rival": "Málaga",
-            "dificultad": 9
+            "dificultad": 10
           }
         ]
       },
@@ -7238,13 +7254,13 @@
             "jornada": "Round 8",
             "esLocal": false,
             "rival": "Rayo Vallecano",
-            "dificultad": 43
+            "dificultad": 44
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 12
+            "dificultad": 13
           },
           {
             "jornada": "Round 6 (postponed)",
@@ -7267,7 +7283,7 @@
     },
     {
       "tipo": "mercado",
-      "texto": "Mercado movido: 6 cláusulas pagadas en los últimos 7 días."
+      "texto": "Mercado movido: 7 cláusulas pagadas en los últimos 7 días."
     }
   ],
   "amenazas": [
@@ -9388,39 +9404,6 @@
       "blindadoHasta": null
     },
     {
-      "id": "29185",
-      "nombre": "Pablo Durán",
-      "slug": "pablo-duran",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/29185.png",
-      "equipoReal": "Celta",
-      "equipoIdReal": "5",
-      "presidente": "Gorila FC",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/11411835.png",
-      "precio": 360000,
-      "precioTexto": "0,4 M",
-      "puntosTotales": 6,
-      "partidosJugados": 4,
-      "media": 1.5,
-      "puntosPorMillon": 16.67,
-      "racha": [
-        -1,
-        1,
-        3,
-        3
-      ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 69,
-      "clausula": 1080000,
-      "clausulaTexto": "1,1 M",
-      "pagadoPorSuDueno": 180000,
-      "margen": 720000,
-      "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
-    },
-    {
       "id": "31321",
       "nombre": "Starfelt",
       "slug": "carl-starfelt",
@@ -11507,6 +11490,39 @@
       "margenPorcentaje": 60,
       "blindado": true,
       "blindadoHasta": "2026-10-03T15:43:11.000Z"
+    },
+    {
+      "id": "29185",
+      "nombre": "Pablo Durán",
+      "slug": "pablo-duran",
+      "posicion": "Delantero",
+      "posicionCodigo": 4,
+      "foto": "https://cdn.biwenger.com/i/p/29185.png",
+      "equipoReal": "Celta",
+      "equipoIdReal": "5",
+      "presidente": "FC FORUSIA",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
+      "precio": 360000,
+      "precioTexto": "0,4 M",
+      "puntosTotales": 6,
+      "partidosJugados": 4,
+      "media": 1.5,
+      "puntosPorMillon": 16.67,
+      "racha": [
+        -1,
+        1,
+        3,
+        3
+      ],
+      "rachaTitular": 0,
+      "ultimoMinutos": 69,
+      "clausula": 1620000,
+      "clausulaTexto": "1,6 M",
+      "pagadoPorSuDueno": 1080000,
+      "margen": 1260000,
+      "margenPorcentaje": 350,
+      "blindado": true,
+      "blindadoHasta": "2026-10-04T18:35:02.000Z"
     },
     {
       "id": "16317",
@@ -14055,40 +14071,6 @@
         "mediaReciente": -0.5
       },
       {
-        "id": "29185",
-        "nombre": "Pablo Durán",
-        "slug": "pablo-duran",
-        "posicion": "Delantero",
-        "posicionCodigo": 4,
-        "foto": "https://cdn.biwenger.com/i/p/29185.png",
-        "equipoReal": "Celta",
-        "equipoIdReal": "5",
-        "presidente": "Gorila FC",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/11411835.png",
-        "precio": 360000,
-        "precioTexto": "0,4 M",
-        "puntosTotales": 6,
-        "partidosJugados": 4,
-        "media": 1.5,
-        "puntosPorMillon": 16.67,
-        "racha": [
-          -1,
-          1,
-          3,
-          3
-        ],
-        "rachaTitular": 0,
-        "ultimoMinutos": 69,
-        "clausula": 1080000,
-        "clausulaTexto": "1,1 M",
-        "pagadoPorSuDueno": 180000,
-        "margen": 720000,
-        "margenPorcentaje": 200,
-        "blindado": false,
-        "blindadoHasta": null,
-        "mediaReciente": 0
-      },
-      {
         "id": "27995",
         "nombre": "Fran Pérez",
         "slug": "francisco-perez",
@@ -14156,6 +14138,40 @@
         "margenPorcentaje": 100,
         "blindado": false,
         "blindadoHasta": null,
+        "mediaReciente": 0
+      },
+      {
+        "id": "29185",
+        "nombre": "Pablo Durán",
+        "slug": "pablo-duran",
+        "posicion": "Delantero",
+        "posicionCodigo": 4,
+        "foto": "https://cdn.biwenger.com/i/p/29185.png",
+        "equipoReal": "Celta",
+        "equipoIdReal": "5",
+        "presidente": "FC FORUSIA",
+        "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
+        "precio": 360000,
+        "precioTexto": "0,4 M",
+        "puntosTotales": 6,
+        "partidosJugados": 4,
+        "media": 1.5,
+        "puntosPorMillon": 16.67,
+        "racha": [
+          -1,
+          1,
+          3,
+          3
+        ],
+        "rachaTitular": 0,
+        "ultimoMinutos": 69,
+        "clausula": 1620000,
+        "clausulaTexto": "1,6 M",
+        "pagadoPorSuDueno": 1080000,
+        "margen": 1260000,
+        "margenPorcentaje": 350,
+        "blindado": true,
+        "blindadoHasta": "2026-10-04T18:35:02.000Z",
         "mediaReciente": 0
       },
       {
@@ -14413,10 +14429,10 @@
           4
         ],
         "rachaTitular": 0,
-        "nota": 5.1,
+        "nota": 5,
         "rival": "Rayo Vallecano",
         "esLocal": false,
-        "dificultad": 43
+        "dificultad": 44
       },
       {
         "nombre": "Galilea",
@@ -14612,10 +14628,10 @@
           2
         ],
         "rachaTitular": 4,
-        "nota": 6.1,
+        "nota": 6,
         "rival": "Rayo Vallecano",
         "esLocal": false,
-        "dificultad": 43
+        "dificultad": 44
       },
       {
         "nombre": "Gerard Martín",
@@ -14702,10 +14718,10 @@
           2
         ],
         "rachaTitular": 5,
-        "nota": 3.6,
+        "nota": 3.5,
         "rival": "Rayo Vallecano",
         "esLocal": false,
-        "dificultad": 43
+        "dificultad": 44
       },
       {
         "nombre": "Tenaglia",
@@ -14866,10 +14882,10 @@
           3
         ],
         "rachaTitular": 6,
-        "nota": 4.1,
+        "nota": 4,
         "rival": "Rayo Vallecano",
         "esLocal": false,
-        "dificultad": 43
+        "dificultad": 44
       },
       {
         "nombre": "Hjulmand",
@@ -15356,7 +15372,7 @@
         "nota": 4.7,
         "rival": "Málaga",
         "esLocal": false,
-        "dificultad": 16
+        "dificultad": 17
       },
       {
         "nombre": "Arana",
@@ -15457,23 +15473,6 @@
         "rival": "Valencia",
         "esLocal": true,
         "dificultad": 21
-      },
-      {
-        "nombre": "Pablo Durán",
-        "foto": "https://cdn.biwenger.com/i/p/29185.png",
-        "posicion": "Delantero",
-        "equipoReal": "Celta",
-        "racha": [
-          -1,
-          1,
-          3,
-          3
-        ],
-        "rachaTitular": 0,
-        "nota": 3.8,
-        "rival": "Elche",
-        "esLocal": false,
-        "dificultad": 24
       },
       {
         "nombre": "Nsongo",
@@ -15598,10 +15597,10 @@
           -1
         ],
         "rachaTitular": 0,
-        "nota": 5.5,
+        "nota": 5.4,
         "rival": "Málaga",
         "esLocal": false,
-        "dificultad": 16
+        "dificultad": 17
       },
       {
         "nombre": "Carlos Romero",
@@ -15708,7 +15707,7 @@
         "nota": 4.2,
         "rival": "Málaga",
         "esLocal": false,
-        "dificultad": 16
+        "dificultad": 17
       },
       {
         "nombre": "Sannadi",
@@ -15721,10 +15720,10 @@
           1
         ],
         "rachaTitular": 0,
-        "nota": 3.6,
+        "nota": 3.5,
         "rival": "Rayo Vallecano",
         "esLocal": false,
-        "dificultad": 43
+        "dificultad": 44
       },
       {
         "nombre": "Diego Conde",
@@ -16233,10 +16232,10 @@
         "equipoReal": "Athletic",
         "racha": [],
         "rachaTitular": 0,
-        "nota": 2.9,
+        "nota": 2.8,
         "rival": "Rayo Vallecano",
         "esLocal": false,
-        "dificultad": 43
+        "dificultad": 44
       }
     ],
     "Urdinho Pernambucano": [
@@ -16377,7 +16376,7 @@
         "nota": 5.2,
         "rival": "Málaga",
         "esLocal": false,
-        "dificultad": 16
+        "dificultad": 17
       },
       {
         "nombre": "Mario Martín",
@@ -16486,7 +16485,7 @@
         "nota": 6.7,
         "rival": "Málaga",
         "esLocal": false,
-        "dificultad": 16
+        "dificultad": 17
       },
       {
         "nombre": "Cepeda",
@@ -16569,7 +16568,7 @@
         "nota": 5.2,
         "rival": "Málaga",
         "esLocal": false,
-        "dificultad": 16
+        "dificultad": 17
       },
       {
         "nombre": "Pedri",
@@ -16649,7 +16648,7 @@
         "nota": 4.2,
         "rival": "Málaga",
         "esLocal": false,
-        "dificultad": 16
+        "dificultad": 17
       },
       {
         "nombre": "Odysseas",
@@ -16668,6 +16667,23 @@
         "rival": "Barcelona",
         "esLocal": true,
         "dificultad": 89
+      },
+      {
+        "nombre": "Pablo Durán",
+        "foto": "https://cdn.biwenger.com/i/p/29185.png",
+        "posicion": "Delantero",
+        "equipoReal": "Celta",
+        "racha": [
+          -1,
+          1,
+          3,
+          3
+        ],
+        "rachaTitular": 0,
+        "nota": 3.8,
+        "rival": "Elche",
+        "esLocal": false,
+        "dificultad": 24
       },
       {
         "nombre": "Pablo Ibáñez",
@@ -16764,10 +16780,10 @@
           3
         ],
         "rachaTitular": 1,
-        "nota": 7.5,
+        "nota": 7.4,
         "rival": "Málaga",
         "esLocal": false,
-        "dificultad": 16
+        "dificultad": 17
       },
       {
         "nombre": "Espart",
@@ -16966,7 +16982,7 @@
         "nota": 4.2,
         "rival": "Málaga",
         "esLocal": false,
-        "dificultad": 16
+        "dificultad": 17
       },
       {
         "nombre": "Pedro Díaz",
@@ -17098,7 +17114,7 @@
         "nota": 5.8,
         "rival": "Rayo Vallecano",
         "esLocal": false,
-        "dificultad": 43
+        "dificultad": 44
       },
       {
         "nombre": "Bellerín",
@@ -17166,25 +17182,7 @@
         "nota": 5.2,
         "rival": "Málaga",
         "esLocal": false,
-        "dificultad": 16
-      },
-      {
-        "nombre": "Johaneko",
-        "foto": "https://cdn.biwenger.com/i/p/43171.png",
-        "posicion": "Defensa",
-        "equipoReal": "Athletic",
-        "racha": [
-          3,
-          4,
-          4,
-          0,
-          5
-        ],
-        "rachaTitular": 0,
-        "nota": 4.6,
-        "rival": "Rayo Vallecano",
-        "esLocal": false,
-        "dificultad": 43
+        "dificultad": 17
       },
       {
         "nombre": "Mario Soriano",
@@ -17203,6 +17201,24 @@
         "rival": "Betis",
         "esLocal": true,
         "dificultad": 60
+      },
+      {
+        "nombre": "Johaneko",
+        "foto": "https://cdn.biwenger.com/i/p/43171.png",
+        "posicion": "Defensa",
+        "equipoReal": "Athletic",
+        "racha": [
+          3,
+          4,
+          4,
+          0,
+          5
+        ],
+        "rachaTitular": 0,
+        "nota": 4.5,
+        "rival": "Rayo Vallecano",
+        "esLocal": false,
+        "dificultad": 44
       },
       {
         "nombre": "Valentini",
@@ -17248,10 +17264,10 @@
           2
         ],
         "rachaTitular": 0,
-        "nota": 3.9,
+        "nota": 3.8,
         "rival": "Rayo Vallecano",
         "esLocal": false,
-        "dificultad": 43
+        "dificultad": 44
       },
       {
         "nombre": "José Salinas",
@@ -17434,10 +17450,10 @@
         3
       ],
       "rachaTitular": 1,
-      "nota": 7.5,
+      "nota": 7.4,
       "rival": "Málaga",
       "esLocal": false,
-      "dificultad": 16,
+      "dificultad": 17,
       "presidente": "Las Víboras FC"
     },
     {
