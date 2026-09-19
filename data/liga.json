@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-19T06:15:55.895Z",
+  "actualizado": "2026-09-19T06:35:44.578Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -131,8 +131,8 @@
       "iniciales": "CT",
       "escudo": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
       "puntos": 356,
-      "valor": "58,0 M",
-      "valorBruto": 57970000,
+      "valor": "57,0 M",
+      "valorBruto": 57020000,
       "esTuyo": false,
       "puntosJornada": 4,
       "jugadosJornada": 1,
@@ -195,8 +195,8 @@
       "iniciales": "FF",
       "escudo": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
       "puntos": 280,
-      "valor": "47,5 M",
-      "valorBruto": 47550000,
+      "valor": "48,5 M",
+      "valorBruto": 48500000,
       "esTuyo": false,
       "puntosJornada": 9,
       "jugadosJornada": 2,
@@ -614,19 +614,6 @@
       "valorMercado": "3,6 M",
       "valorBruto": 3620000,
       "diferencia": -380000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Cepeda",
-      "foto": "https://cdn.biwenger.com/i/p/39874.png",
-      "posicion": "Delantero",
-      "equipoReal": "Elche",
-      "vendedor": "CD Tiro Buchón",
-      "pide": "0,5 M",
-      "pideBruto": 480000,
-      "valorMercado": "0,9 M",
-      "valorBruto": 950000,
-      "diferencia": -470000
     },
     {
       "tipo": "venta",
@@ -1150,6 +1137,19 @@
     },
     {
       "tipo": "venta",
+      "nombre": "Luismi Cruz",
+      "foto": "https://cdn.biwenger.com/i/p/25777.png",
+      "posicion": "Delantero",
+      "equipoReal": "Deportivo",
+      "vendedor": "Seif fc",
+      "pide": "3,5 M",
+      "pideBruto": 3450000,
+      "valorMercado": "3,5 M",
+      "valorBruto": 3450000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
       "nombre": "Zakharyan",
       "foto": "https://cdn.biwenger.com/i/p/31475.png",
       "posicion": "Centrocampista",
@@ -1189,6 +1189,19 @@
     },
     {
       "tipo": "venta",
+      "nombre": "Veiga",
+      "foto": "https://cdn.biwenger.com/i/p/38493.png",
+      "posicion": "Defensa",
+      "equipoReal": "Villarreal",
+      "vendedor": "Seif fc",
+      "pide": "3,4 M",
+      "pideBruto": 3420000,
+      "valorMercado": "3,4 M",
+      "valorBruto": 3420000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
       "nombre": "Mario Soriano",
       "foto": "https://cdn.biwenger.com/i/p/41072.png",
       "posicion": "Centrocampista",
@@ -1199,6 +1212,19 @@
       "valorMercado": "3,9 M",
       "valorBruto": 3870000,
       "diferencia": 30000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Valentini",
+      "foto": "https://cdn.biwenger.com/i/p/41609.png",
+      "posicion": "Defensa",
+      "equipoReal": "Alavés",
+      "vendedor": "Seif fc",
+      "pide": "0,4 M",
+      "pideBruto": 410000,
+      "valorMercado": "0,4 M",
+      "valorBruto": 410000,
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -1225,6 +1251,35 @@
       "valorMercado": "0,8 M",
       "valorBruto": 810000,
       "diferencia": -70000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Johaneko",
+      "foto": "https://cdn.biwenger.com/i/p/43171.png",
+      "posicion": "Defensa",
+      "equipoReal": "Athletic",
+      "vendedor": "Seif fc",
+      "pide": "0,7 M",
+      "pideBruto": 740000,
+      "valorMercado": "0,7 M",
+      "valorBruto": 740000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "clausula",
+      "fecha": "2026-09-19T06:19:29.000Z",
+      "nombre": "Cepeda",
+      "foto": "https://cdn.biwenger.com/i/p/39874.png",
+      "posicion": "Delantero",
+      "equipoReal": "Elche",
+      "vendedor": "CD Tiro Buchón",
+      "comprador": "FC FORUSIA",
+      "escudoComprador": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
+      "pide": "1,9 M",
+      "pideBruto": 1900000,
+      "valorMercado": "0,9 M",
+      "valorBruto": 950000,
+      "diferencia": 950000
     },
     {
       "tipo": "clausula",
@@ -1773,16 +1828,16 @@
   ],
   "rankingClausulas": [
     {
+      "nombre": "FC FORUSIA",
+      "veces": 10,
+      "gastado": 39988799,
+      "gastadoTexto": "40,0 M"
+    },
+    {
       "nombre": "Las Víboras FC",
       "veces": 10,
       "gastado": 30695000,
       "gastadoTexto": "30,7 M"
-    },
-    {
-      "nombre": "FC FORUSIA",
-      "veces": 9,
-      "gastado": 38088799,
-      "gastadoTexto": "38,1 M"
     },
     {
       "nombre": "Gorila FC",
@@ -1851,22 +1906,22 @@
       "escudo": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
       "iniciales": "CT",
       "puntos": 356,
-      "valor": "58,0 M",
-      "valorBruto": 57970000,
+      "valor": "57,0 M",
+      "valorBruto": 57020000,
       "esTuyo": false,
-      "puntosPorMillon": 6.14,
+      "puntosPorMillon": 6.24,
       "mediaJornada": 50.9,
       "clausulasHechas": 1,
-      "clausulasSufridas": 2,
-      "operaciones": 3,
+      "clausulasSufridas": 3,
+      "operaciones": 4,
       "gastado": "27,7 M",
       "gastadoBruto": 27672000,
-      "ingresado": "20,7 M",
-      "ingresadoBruto": 20732300,
-      "balance": "−6,9 M",
-      "balanceBruto": -6939700,
+      "ingresado": "22,6 M",
+      "ingresadoBruto": 22632300,
+      "balance": "−5,0 M",
+      "balanceBruto": -5039700,
       "sobreprecioMedio": 47,
-      "enVenta": 11,
+      "enVenta": 10,
       "fichajeEstrella": {
         "nombre": "Bellingham",
         "precio": "27,7 M",
@@ -1878,8 +1933,8 @@
       "puestoGasto": 4,
       "puestoActividad": 10,
       "vsMediaPuntos": 27,
-      "vsMediaEficiencia": -2,
-      "vsMediaValor": 25,
+      "vsMediaEficiencia": 0,
+      "vsMediaValor": 23,
       "tendencia": {
         "puestos": 1,
         "puntos": 145,
@@ -1907,7 +1962,7 @@
       "balance": "+6,4 M",
       "balanceBruto": 6397000,
       "sobreprecioMedio": 28,
-      "enVenta": 10,
+      "enVenta": 14,
       "fichajeEstrella": {
         "nombre": "Bellingham",
         "precio": "23,1 M",
@@ -2015,21 +2070,21 @@
       "escudo": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
       "iniciales": "FF",
       "puntos": 280,
-      "valor": "47,5 M",
-      "valorBruto": 47550000,
+      "valor": "48,5 M",
+      "valorBruto": 48500000,
       "esTuyo": false,
-      "puntosPorMillon": 5.89,
+      "puntosPorMillon": 5.77,
       "mediaJornada": 40,
-      "clausulasHechas": 9,
+      "clausulasHechas": 10,
       "clausulasSufridas": 1,
-      "operaciones": 10,
-      "gastado": "38,1 M",
-      "gastadoBruto": 38088799,
+      "operaciones": 11,
+      "gastado": "40,0 M",
+      "gastadoBruto": 39988799,
       "ingresado": "1,6 M",
       "ingresadoBruto": 1560000,
-      "balance": "−36,5 M",
-      "balanceBruto": -36528799,
-      "sobreprecioMedio": 26,
+      "balance": "−38,4 M",
+      "balanceBruto": -38428799,
+      "sobreprecioMedio": 34,
       "enVenta": 9,
       "fichajeEstrella": {
         "nombre": "Pedri",
@@ -2042,8 +2097,8 @@
       "puestoGasto": 1,
       "puestoActividad": 2,
       "vsMediaPuntos": 0,
-      "vsMediaEficiencia": -6,
-      "vsMediaValor": 3,
+      "vsMediaEficiencia": -7,
+      "vsMediaValor": 5,
       "tendencia": {
         "puestos": -1,
         "puntos": 84,
@@ -2198,7 +2253,7 @@
       "puestoGasto": 6,
       "puestoActividad": 3,
       "vsMediaPuntos": -6,
-      "vsMediaEficiencia": 0,
+      "vsMediaEficiencia": 1,
       "vsMediaValor": -9,
       "tendencia": {
         "puestos": -3,
@@ -3956,32 +4011,6 @@
             "esLocal": false,
             "rival": "Espanyol",
             "dificultad": 32
-          }
-        ]
-      },
-      {
-        "nombre": "Cepeda",
-        "posicion": "Delantero",
-        "foto": "https://cdn.biwenger.com/i/p/39874.png",
-        "equipoReal": "Elche",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": true,
-            "rival": "Celta",
-            "dificultad": 27
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": false,
-            "rival": "Villarreal",
-            "dificultad": 33
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": false,
-            "rival": "Rayo Vallecano",
-            "dificultad": 47
           }
         ]
       },
@@ -5896,6 +5925,32 @@
     ],
     "FC FORUSIA": [
       {
+        "nombre": "Cepeda",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/39874.png",
+        "equipoReal": "Elche",
+        "jornadas": [
+          {
+            "jornada": "Round 8",
+            "esLocal": true,
+            "rival": "Celta",
+            "dificultad": 27
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Villarreal",
+            "dificultad": 33
+          },
+          {
+            "jornada": "Round 10",
+            "esLocal": false,
+            "rival": "Rayo Vallecano",
+            "dificultad": 47
+          }
+        ]
+      },
+      {
         "nombre": "Guido Rodríguez",
         "posicion": "Centrocampista",
         "foto": "https://cdn.biwenger.com/i/p/163.png",
@@ -7167,7 +7222,7 @@
     },
     {
       "tipo": "mercado",
-      "texto": "Mercado movido: 3 cláusulas pagadas en los últimos 7 días."
+      "texto": "Mercado movido: 4 cláusulas pagadas en los últimos 7 días."
     }
   ],
   "amenazas": [
@@ -9019,40 +9074,6 @@
       "pagadoPorSuDueno": null,
       "margen": 640000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
-    },
-    {
-      "id": "39874",
-      "nombre": "Cepeda",
-      "slug": "lucas-cepeda",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/39874.png",
-      "equipoReal": "Elche",
-      "equipoIdReal": "75",
-      "presidente": "CD Tiro Buchón",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
-      "precio": 950000,
-      "precioTexto": "0,9 M",
-      "puntosTotales": 28,
-      "partidosJugados": 7,
-      "media": 4,
-      "puntosPorMillon": 29.47,
-      "racha": [
-        4,
-        6,
-        2,
-        7,
-        3
-      ],
-      "rachaTitular": 1,
-      "ultimoMinutos": 90,
-      "clausula": 1900000,
-      "clausulaTexto": "1,9 M",
-      "pagadoPorSuDueno": 780000,
-      "margen": 950000,
-      "margenPorcentaje": 100,
       "blindado": false,
       "blindadoHasta": null
     },
@@ -11466,6 +11487,40 @@
       "blindadoHasta": "2026-10-03T15:43:11.000Z"
     },
     {
+      "id": "39874",
+      "nombre": "Cepeda",
+      "slug": "lucas-cepeda",
+      "posicion": "Delantero",
+      "posicionCodigo": 4,
+      "foto": "https://cdn.biwenger.com/i/p/39874.png",
+      "equipoReal": "Elche",
+      "equipoIdReal": "75",
+      "presidente": "FC FORUSIA",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
+      "precio": 950000,
+      "precioTexto": "0,9 M",
+      "puntosTotales": 28,
+      "partidosJugados": 7,
+      "media": 4,
+      "puntosPorMillon": 29.47,
+      "racha": [
+        4,
+        6,
+        2,
+        7,
+        3
+      ],
+      "rachaTitular": 1,
+      "ultimoMinutos": 90,
+      "clausula": 2850000,
+      "clausulaTexto": "2,9 M",
+      "pagadoPorSuDueno": 1900000,
+      "margen": 1900000,
+      "margenPorcentaje": 200,
+      "blindado": true,
+      "blindadoHasta": "2026-10-04T06:19:29.000Z"
+    },
+    {
       "id": "163",
       "nombre": "Guido Rodríguez",
       "slug": "g-rodriguez",
@@ -13263,8 +13318,8 @@
         "foto": "https://cdn.biwenger.com/i/p/39874.png",
         "equipoReal": "Elche",
         "equipoIdReal": "75",
-        "presidente": "CD Tiro Buchón",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
+        "presidente": "FC FORUSIA",
+        "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
         "precio": 950000,
         "precioTexto": "0,9 M",
         "puntosTotales": 28,
@@ -13280,13 +13335,13 @@
         ],
         "rachaTitular": 1,
         "ultimoMinutos": 90,
-        "clausula": 1900000,
-        "clausulaTexto": "1,9 M",
-        "pagadoPorSuDueno": 780000,
-        "margen": 950000,
-        "margenPorcentaje": 100,
-        "blindado": false,
-        "blindadoHasta": null
+        "clausula": 2850000,
+        "clausulaTexto": "2,9 M",
+        "pagadoPorSuDueno": 1900000,
+        "margen": 1900000,
+        "margenPorcentaje": 200,
+        "blindado": true,
+        "blindadoHasta": "2026-10-04T06:19:29.000Z"
       },
       {
         "id": "41609",
@@ -14889,24 +14944,6 @@
         "dificultad": 58
       },
       {
-        "nombre": "Cepeda",
-        "foto": "https://cdn.biwenger.com/i/p/39874.png",
-        "posicion": "Delantero",
-        "equipoReal": "Elche",
-        "racha": [
-          4,
-          6,
-          2,
-          7,
-          3
-        ],
-        "rachaTitular": 1,
-        "nota": 6.2,
-        "rival": "Celta",
-        "esLocal": true,
-        "dificultad": 27
-      },
-      {
         "nombre": "Freeman",
         "foto": "https://cdn.biwenger.com/i/p/39901.png",
         "posicion": "Defensa",
@@ -16400,6 +16437,24 @@
         "rival": "Málaga",
         "esLocal": false,
         "dificultad": 15
+      },
+      {
+        "nombre": "Cepeda",
+        "foto": "https://cdn.biwenger.com/i/p/39874.png",
+        "posicion": "Delantero",
+        "equipoReal": "Elche",
+        "racha": [
+          4,
+          6,
+          2,
+          7,
+          3
+        ],
+        "rachaTitular": 1,
+        "nota": 6.2,
+        "rival": "Celta",
+        "esLocal": true,
+        "dificultad": 27
       },
       {
         "nombre": "Pacheco",
