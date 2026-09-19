@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-19T07:43:17.369Z",
+  "actualizado": "2026-09-19T07:56:44.208Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -195,8 +195,8 @@
       "iniciales": "FF",
       "escudo": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
       "puntos": 280,
-      "valor": "48,5 M",
-      "valorBruto": 48500000,
+      "valor": "48,9 M",
+      "valorBruto": 48870000,
       "esTuyo": false,
       "puntosJornada": 9,
       "jugadosJornada": 2,
@@ -275,8 +275,8 @@
       "iniciales": "LC",
       "escudo": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
       "puntos": 214,
-      "valor": "48,6 M",
-      "valorBruto": 48630000,
+      "valor": "48,3 M",
+      "valorBruto": 48260000,
       "esTuyo": false,
       "puntosJornada": 0,
       "jugadosJornada": 0,
@@ -1267,6 +1267,22 @@
     },
     {
       "tipo": "clausula",
+      "fecha": "2026-09-19T07:54:24.000Z",
+      "nombre": "Puado",
+      "foto": "https://cdn.biwenger.com/i/p/16317.png",
+      "posicion": "Delantero",
+      "equipoReal": "Espanyol",
+      "vendedor": "Lottin Capital",
+      "comprador": "FC FORUSIA",
+      "escudoComprador": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
+      "pide": "1,1 M",
+      "pideBruto": 1110000,
+      "valorMercado": "0,4 M",
+      "valorBruto": 370000,
+      "diferencia": 740000
+    },
+    {
+      "tipo": "clausula",
       "fecha": "2026-09-19T06:19:29.000Z",
       "nombre": "Cepeda",
       "foto": "https://cdn.biwenger.com/i/p/39874.png",
@@ -1829,9 +1845,9 @@
   "rankingClausulas": [
     {
       "nombre": "FC FORUSIA",
-      "veces": 10,
-      "gastado": 39988799,
-      "gastadoTexto": "40,0 M"
+      "veces": 11,
+      "gastado": 41098799,
+      "gastadoTexto": "41,1 M"
     },
     {
       "nombre": "Las Víboras FC",
@@ -2013,7 +2029,7 @@
       "puestoEficiencia": 5,
       "puestoValor": 7,
       "puestoGasto": 9,
-      "puestoActividad": 4,
+      "puestoActividad": 5,
       "vsMediaPuntos": 8,
       "vsMediaEficiencia": 2,
       "vsMediaValor": 3,
@@ -2070,21 +2086,21 @@
       "escudo": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
       "iniciales": "FF",
       "puntos": 280,
-      "valor": "48,5 M",
-      "valorBruto": 48500000,
+      "valor": "48,9 M",
+      "valorBruto": 48870000,
       "esTuyo": false,
-      "puntosPorMillon": 5.77,
+      "puntosPorMillon": 5.73,
       "mediaJornada": 40,
-      "clausulasHechas": 10,
+      "clausulasHechas": 11,
       "clausulasSufridas": 1,
-      "operaciones": 11,
-      "gastado": "40,0 M",
-      "gastadoBruto": 39988799,
+      "operaciones": 12,
+      "gastado": "41,1 M",
+      "gastadoBruto": 41098799,
       "ingresado": "1,6 M",
       "ingresadoBruto": 1560000,
-      "balance": "−38,4 M",
-      "balanceBruto": -38428799,
-      "sobreprecioMedio": 34,
+      "balance": "−39,5 M",
+      "balanceBruto": -39538799,
+      "sobreprecioMedio": 49,
       "enVenta": 9,
       "fichajeEstrella": {
         "nombre": "Pedri",
@@ -2093,12 +2109,12 @@
       },
       "total": 12,
       "puestoEficiencia": 8,
-      "puestoValor": 6,
+      "puestoValor": 5,
       "puestoGasto": 1,
       "puestoActividad": 2,
       "vsMediaPuntos": 0,
-      "vsMediaEficiencia": -7,
-      "vsMediaValor": 5,
+      "vsMediaEficiencia": -8,
+      "vsMediaValor": 6,
       "tendencia": {
         "puestos": -1,
         "puntos": 84,
@@ -2171,7 +2187,7 @@
       "puestoGasto": 11,
       "puestoActividad": 11,
       "vsMediaPuntos": -4,
-      "vsMediaEficiencia": -16,
+      "vsMediaEficiencia": -15,
       "vsMediaValor": 10,
       "tendencia": {
         "puestos": 0,
@@ -2267,20 +2283,20 @@
       "escudo": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
       "iniciales": "LC",
       "puntos": 214,
-      "valor": "48,6 M",
-      "valorBruto": 48630000,
+      "valor": "48,3 M",
+      "valorBruto": 48260000,
       "esTuyo": false,
-      "puntosPorMillon": 4.4,
+      "puntosPorMillon": 4.43,
       "mediaJornada": 30.6,
       "clausulasHechas": 2,
-      "clausulasSufridas": 4,
-      "operaciones": 6,
+      "clausulasSufridas": 5,
+      "operaciones": 7,
       "gastado": "19,5 M",
       "gastadoBruto": 19478000,
-      "ingresado": "38,8 M",
-      "ingresadoBruto": 38777000,
-      "balance": "+19,3 M",
-      "balanceBruto": 19299000,
+      "ingresado": "39,9 M",
+      "ingresadoBruto": 39887000,
+      "balance": "+20,4 M",
+      "balanceBruto": 20409000,
       "sobreprecioMedio": 29,
       "enVenta": 3,
       "fichajeEstrella": {
@@ -2290,12 +2306,12 @@
       },
       "total": 12,
       "puestoEficiencia": 11,
-      "puestoValor": 5,
+      "puestoValor": 6,
       "puestoGasto": 8,
-      "puestoActividad": 5,
+      "puestoActividad": 4,
       "vsMediaPuntos": -24,
       "vsMediaEficiencia": -29,
-      "vsMediaValor": 5,
+      "vsMediaValor": 4,
       "tendencia": {
         "puestos": 0,
         "puntos": 72,
@@ -2861,32 +2877,6 @@
             "esLocal": false,
             "rival": "Osasuna",
             "dificultad": 32
-          }
-        ]
-      },
-      {
-        "nombre": "Puado",
-        "posicion": "Delantero",
-        "foto": "https://cdn.biwenger.com/i/p/16317.png",
-        "equipoReal": "Espanyol",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Málaga",
-            "dificultad": 15
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": true,
-            "rival": "Atlético",
-            "dificultad": 62
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": false,
-            "rival": "Racing",
-            "dificultad": 46
           }
         ]
       },
@@ -5925,6 +5915,32 @@
     ],
     "FC FORUSIA": [
       {
+        "nombre": "Puado",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/16317.png",
+        "equipoReal": "Espanyol",
+        "jornadas": [
+          {
+            "jornada": "Round 8",
+            "esLocal": false,
+            "rival": "Málaga",
+            "dificultad": 15
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Atlético",
+            "dificultad": 62
+          },
+          {
+            "jornada": "Round 10",
+            "esLocal": false,
+            "rival": "Racing",
+            "dificultad": 46
+          }
+        ]
+      },
+      {
         "nombre": "Cepeda",
         "posicion": "Delantero",
         "foto": "https://cdn.biwenger.com/i/p/39874.png",
@@ -7222,7 +7238,7 @@
     },
     {
       "tipo": "mercado",
-      "texto": "Mercado movido: 4 cláusulas pagadas en los últimos 7 días."
+      "texto": "Mercado movido: 5 cláusulas pagadas en los últimos 7 días."
     }
   ],
   "amenazas": [
@@ -7618,34 +7634,6 @@
       "pagadoPorSuDueno": 3215000,
       "margen": 1432000,
       "margenPorcentaje": 40,
-      "blindado": false,
-      "blindadoHasta": null
-    },
-    {
-      "id": "16317",
-      "nombre": "Puado",
-      "slug": "javi-puado",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/16317.png",
-      "equipoReal": "Espanyol",
-      "equipoIdReal": "7",
-      "presidente": "Lottin Capital",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
-      "precio": 370000,
-      "precioTexto": "0,4 M",
-      "puntosTotales": 0,
-      "partidosJugados": 0,
-      "media": 0,
-      "puntosPorMillon": 0,
-      "racha": [],
-      "rachaTitular": 0,
-      "ultimoMinutos": null,
-      "clausula": 1110000,
-      "clausulaTexto": "1,1 M",
-      "pagadoPorSuDueno": 360000,
-      "margen": 740000,
-      "margenPorcentaje": 200,
       "blindado": false,
       "blindadoHasta": null
     },
@@ -11487,6 +11475,34 @@
       "blindadoHasta": "2026-10-03T15:43:11.000Z"
     },
     {
+      "id": "16317",
+      "nombre": "Puado",
+      "slug": "javi-puado",
+      "posicion": "Delantero",
+      "posicionCodigo": 4,
+      "foto": "https://cdn.biwenger.com/i/p/16317.png",
+      "equipoReal": "Espanyol",
+      "equipoIdReal": "7",
+      "presidente": "FC FORUSIA",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
+      "precio": 370000,
+      "precioTexto": "0,4 M",
+      "puntosTotales": 0,
+      "partidosJugados": 0,
+      "media": 0,
+      "puntosPorMillon": 0,
+      "racha": [],
+      "rachaTitular": 0,
+      "ultimoMinutos": null,
+      "clausula": 1665000,
+      "clausulaTexto": "1,7 M",
+      "pagadoPorSuDueno": 1110000,
+      "margen": 1295000,
+      "margenPorcentaje": 350,
+      "blindado": true,
+      "blindadoHasta": "2026-10-04T07:54:24.000Z"
+    },
+    {
       "id": "39874",
       "nombre": "Cepeda",
       "slug": "lucas-cepeda",
@@ -14430,18 +14446,6 @@
         "dificultad": 39
       },
       {
-        "nombre": "Puado",
-        "foto": "https://cdn.biwenger.com/i/p/16317.png",
-        "posicion": "Delantero",
-        "equipoReal": "Espanyol",
-        "racha": [],
-        "rachaTitular": 0,
-        "nota": 4.3,
-        "rival": "Málaga",
-        "esLocal": false,
-        "dificultad": 15
-      },
-      {
         "nombre": "Giménez",
         "foto": "https://cdn.biwenger.com/i/p/1676.png",
         "posicion": "Defensa",
@@ -16570,6 +16574,18 @@
         "rival": "Barcelona",
         "esLocal": true,
         "dificultad": 89
+      },
+      {
+        "nombre": "Puado",
+        "foto": "https://cdn.biwenger.com/i/p/16317.png",
+        "posicion": "Delantero",
+        "equipoReal": "Espanyol",
+        "racha": [],
+        "rachaTitular": 0,
+        "nota": 4.3,
+        "rival": "Málaga",
+        "esLocal": false,
+        "dificultad": 15
       },
       {
         "nombre": "Osambela",
