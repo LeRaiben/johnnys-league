@@ -358,7 +358,7 @@
       canvas.toBlob(function (blob) {
         if (!blob) { reject(new Error('No se pudo procesar la imagen.')); return; }
         var ruta = 'subidas/' + Date.now() + '-' + Math.random().toString(36).slice(2) + '.jpg';
-        sb.storage.from('tablon').upload(ruta, blob, { contentType: 'image/jpeg' }).then(function (r) {
+        sb.storage.from('tablon').upload(ruta, blob, { contentType: 'image/jpeg', cacheControl: '31536000' }).then(function (r) {
           if (r.error) { reject(r.error); return; }
           var pub = sb.storage.from('tablon').getPublicUrl(ruta);
           resolve(pub.data.publicUrl);
