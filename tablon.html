@@ -609,7 +609,7 @@
   }
 
   async function cargar() {
-    var r = await sb.from('mensajes').select('id, creado, nombre, texto, imagen, mensaje_padre_id, likes, reacciones').order('creado', { ascending: false }).limit(150);
+    var r = await sb.from('mensajes').select('id, creado, nombre, texto, imagen, mensaje_padre_id, likes, reacciones').order('creado', { ascending: false }).limit(1000);
     var p = await sb.from('encuestas').select('id, mensaje_id, pregunta, opciones, votos');
     if (r.error) { estado('No se han podido cargar los mensajes: ' + r.error.message); return; }
     estado('');
