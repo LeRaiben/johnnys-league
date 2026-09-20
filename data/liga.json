@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-20T09:17:19.218Z",
+  "actualizado": "2026-09-20T09:31:57.566Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -163,13 +163,13 @@
       "iniciales": "MF",
       "escudo": "https://cdn.biwenger.com/i/u/11412167.png?v=15",
       "puntos": 302,
-      "valor": "45,8 M",
-      "valorBruto": 45770000,
+      "valor": "43,3 M",
+      "valorBruto": 43290000,
       "esTuyo": false,
-      "puntosJornada": 14,
-      "jugadosJornada": 5,
+      "puntosJornada": 15,
+      "jugadosJornada": 4,
       "alineadosJornada": 11,
-      "puntosProvisional": 316
+      "puntosProvisional": 317
     },
     {
       "posicion": 5,
@@ -731,19 +731,6 @@
       "valorMercado": "3,0 M",
       "valorBruto": 3010000,
       "diferencia": -210000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Logan Costa",
-      "foto": "https://cdn.biwenger.com/i/p/34717.png",
-      "posicion": "Defensa",
-      "equipoReal": "Villarreal",
-      "vendedor": "FC FORUSIA",
-      "pide": "0,2 M",
-      "pideBruto": 240000,
-      "valorMercado": "0,2 M",
-      "valorBruto": 230000,
-      "diferencia": 10000
     },
     {
       "tipo": "venta",
@@ -1868,8 +1855,8 @@
       "puestoGasto": 2,
       "puestoActividad": 6,
       "vsMediaPuntos": 30,
-      "vsMediaEficiencia": 22,
-      "vsMediaValor": 3,
+      "vsMediaEficiencia": 21,
+      "vsMediaValor": 4,
       "tendencia": {
         "puestos": 0,
         "puntos": 129,
@@ -1950,7 +1937,7 @@
       "puestoGasto": 6,
       "puestoActividad": 8,
       "vsMediaPuntos": 11,
-      "vsMediaEficiencia": 71,
+      "vsMediaEficiencia": 70,
       "vsMediaValor": -37,
       "tendencia": {
         "puestos": 1,
@@ -1964,10 +1951,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/11412167.png?v=15",
       "iniciales": "MF",
       "puntos": 302,
-      "valor": "45,8 M",
-      "valorBruto": 45770000,
+      "valor": "43,3 M",
+      "valorBruto": 43290000,
       "esTuyo": false,
-      "puntosPorMillon": 6.6,
+      "puntosPorMillon": 6.98,
       "mediaJornada": 43.1,
       "clausulasHechas": 4,
       "clausulasSufridas": 3,
@@ -1986,13 +1973,13 @@
         "foto": "https://cdn.biwenger.com/i/p/12494.png"
       },
       "total": 12,
-      "puestoEficiencia": 4,
+      "puestoEficiencia": 3,
       "puestoValor": 9,
       "puestoGasto": 9,
       "puestoActividad": 4,
       "vsMediaPuntos": 8,
-      "vsMediaEficiencia": 7,
-      "vsMediaValor": -2,
+      "vsMediaEficiencia": 12,
+      "vsMediaValor": -7,
       "tendencia": {
         "puestos": 5,
         "puntos": 144,
@@ -2033,7 +2020,7 @@
       "puestoActividad": 7,
       "vsMediaPuntos": 2,
       "vsMediaEficiencia": 0,
-      "vsMediaValor": -2,
+      "vsMediaValor": -1,
       "tendencia": {
         "puestos": -3,
         "puntos": 70,
@@ -2061,7 +2048,7 @@
       "balance": "−42,9 M",
       "balanceBruto": -42913799,
       "sobreprecioMedio": 53,
-      "enVenta": 6,
+      "enVenta": 5,
       "fichajeEstrella": {
         "nombre": "Pedri",
         "precio": "18,9 M",
@@ -2073,7 +2060,7 @@
       "puestoGasto": 1,
       "puestoActividad": 1,
       "vsMediaPuntos": 0,
-      "vsMediaEficiencia": -5,
+      "vsMediaEficiencia": -6,
       "vsMediaValor": 2,
       "tendencia": {
         "puestos": -1,
@@ -2105,7 +2092,7 @@
       "enVenta": 1,
       "fichajeEstrella": null,
       "total": 12,
-      "puestoEficiencia": 3,
+      "puestoEficiencia": 4,
       "puestoValor": 11,
       "puestoGasto": 10,
       "puestoActividad": 9,
@@ -2147,8 +2134,8 @@
       "puestoGasto": 11,
       "puestoActividad": 11,
       "vsMediaPuntos": -4,
-      "vsMediaEficiencia": -15,
-      "vsMediaValor": 9,
+      "vsMediaEficiencia": -16,
+      "vsMediaValor": 10,
       "tendencia": {
         "puestos": 0,
         "puntos": 92,
@@ -2229,8 +2216,8 @@
       "puestoGasto": 7,
       "puestoActividad": 3,
       "vsMediaPuntos": -6,
-      "vsMediaEficiencia": 2,
-      "vsMediaValor": -11,
+      "vsMediaEficiencia": 1,
+      "vsMediaValor": -10,
       "tendencia": {
         "puestos": -3,
         "puntos": 80,
@@ -4775,32 +4762,6 @@
         ]
       },
       {
-        "nombre": "Sannadi",
-        "posicion": "Delantero",
-        "foto": "https://cdn.biwenger.com/i/p/33938.png",
-        "equipoReal": "Athletic",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Rayo Vallecano",
-            "dificultad": 44
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": false,
-            "rival": "Valencia",
-            "dificultad": 13
-          },
-          {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Levante",
-            "dificultad": 44
-          }
-        ]
-      },
-      {
         "nombre": "Pablo García",
         "posicion": "Delantero",
         "foto": "https://cdn.biwenger.com/i/p/35763.png",
@@ -4823,32 +4784,6 @@
             "esLocal": true,
             "rival": "Espanyol",
             "dificultad": 38
-          }
-        ]
-      },
-      {
-        "nombre": "Dolan",
-        "posicion": "Delantero",
-        "foto": "https://cdn.biwenger.com/i/p/38308.png",
-        "equipoReal": "Espanyol",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Málaga",
-            "dificultad": 17
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": true,
-            "rival": "Atlético",
-            "dificultad": 63
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": false,
-            "rival": "Racing",
-            "dificultad": 39
           }
         ]
       },
@@ -10145,38 +10080,6 @@
       "blindadoHasta": null
     },
     {
-      "id": "33938",
-      "nombre": "Sannadi",
-      "slug": "maroan-sannadi",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/33938.png",
-      "equipoReal": "Athletic",
-      "equipoIdReal": "1",
-      "presidente": "Madriguana FC",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/11412167.png?v=15",
-      "precio": 150000,
-      "precioTexto": "0,1 M",
-      "puntosTotales": 4,
-      "partidosJugados": 3,
-      "media": 1.3,
-      "puntosPorMillon": 26.67,
-      "racha": [
-        2,
-        1,
-        1
-      ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 28,
-      "clausula": 1350000,
-      "clausulaTexto": "1,4 M",
-      "pagadoPorSuDueno": 450000,
-      "margen": 1200000,
-      "margenPorcentaje": 800,
-      "blindado": false,
-      "blindadoHasta": null
-    },
-    {
       "id": "35763",
       "nombre": "Pablo García",
       "slug": "pablo-garcia",
@@ -10209,40 +10112,6 @@
       "margenPorcentaje": 40,
       "blindado": false,
       "blindadoHasta": null
-    },
-    {
-      "id": "38308",
-      "nombre": "Dolan",
-      "slug": "dolan",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/38308.png",
-      "equipoReal": "Espanyol",
-      "equipoIdReal": "7",
-      "presidente": "Madriguana FC",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/11412167.png?v=15",
-      "precio": 2330000,
-      "precioTexto": "2,3 M",
-      "puntosTotales": 19,
-      "partidosJugados": 6,
-      "media": 3.2,
-      "puntosPorMillon": 8.15,
-      "racha": [
-        3,
-        2,
-        2,
-        2,
-        -1
-      ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 23,
-      "clausula": 4425000,
-      "clausulaTexto": "4,4 M",
-      "pagadoPorSuDueno": 2950000,
-      "margen": 2095000,
-      "margenPorcentaje": 90,
-      "blindado": true,
-      "blindadoHasta": "2026-09-25T15:36:30.000Z"
     },
     {
       "id": "39792",
@@ -15749,24 +15618,6 @@
         "dificultad": 16
       },
       {
-        "nombre": "Dolan",
-        "foto": "https://cdn.biwenger.com/i/p/38308.png",
-        "posicion": "Delantero",
-        "equipoReal": "Espanyol",
-        "racha": [
-          3,
-          2,
-          2,
-          2,
-          -1
-        ],
-        "rachaTitular": 0,
-        "nota": 5.4,
-        "rival": "Málaga",
-        "esLocal": false,
-        "dificultad": 17
-      },
-      {
         "nombre": "Carlos Romero",
         "foto": "https://cdn.biwenger.com/i/p/26566.png",
         "posicion": "Defensa",
@@ -15890,22 +15741,6 @@
         "rival": "Valencia",
         "esLocal": true,
         "dificultad": 22
-      },
-      {
-        "nombre": "Sannadi",
-        "foto": "https://cdn.biwenger.com/i/p/33938.png",
-        "posicion": "Delantero",
-        "equipoReal": "Athletic",
-        "racha": [
-          2,
-          1,
-          1
-        ],
-        "rachaTitular": 0,
-        "nota": 3.5,
-        "rival": "Rayo Vallecano",
-        "esLocal": false,
-        "dificultad": 44
       },
       {
         "nombre": "Diego Conde",
