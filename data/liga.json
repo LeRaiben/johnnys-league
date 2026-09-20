@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-20T14:56:22.584Z",
+  "actualizado": "2026-09-20T15:13:10.267Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -72,7 +72,7 @@
       "fecha": "2026-09-20T14:15:00.000Z",
       "golesLocal": 0,
       "golesVisitante": 0,
-      "estado": "firstTime"
+      "estado": "break"
     },
     {
       "local": "Deportivo",
@@ -786,6 +786,19 @@
     },
     {
       "tipo": "venta",
+      "nombre": "Pacheco",
+      "foto": "https://cdn.biwenger.com/i/p/12424.png",
+      "posicion": "Defensa",
+      "equipoReal": "Real Sociedad",
+      "vendedor": "FC FORUSIA",
+      "pide": "0,2 M",
+      "pideBruto": 190000,
+      "valorMercado": "0,2 M",
+      "valorBruto": 190000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
       "nombre": "Pablo Ibáñez",
       "foto": "https://cdn.biwenger.com/i/p/14800.png",
       "posicion": "Centrocampista",
@@ -812,6 +825,19 @@
     },
     {
       "tipo": "venta",
+      "nombre": "Logan Costa",
+      "foto": "https://cdn.biwenger.com/i/p/34717.png",
+      "posicion": "Defensa",
+      "equipoReal": "Villarreal",
+      "vendedor": "FC FORUSIA",
+      "pide": "0,2 M",
+      "pideBruto": 240000,
+      "valorMercado": "0,2 M",
+      "valorBruto": 230000,
+      "diferencia": 10000
+    },
+    {
+      "tipo": "venta",
       "nombre": "Marcos Fernández",
       "foto": "https://cdn.biwenger.com/i/p/37644.png",
       "posicion": "Delantero",
@@ -835,6 +861,19 @@
       "valorMercado": "2,1 M",
       "valorBruto": 2080000,
       "diferencia": -310000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Jorge Domínguez",
+      "foto": "https://cdn.biwenger.com/i/p/42261.png",
+      "posicion": "Defensa",
+      "equipoReal": "Atlético",
+      "vendedor": "FC FORUSIA",
+      "pide": "0,2 M",
+      "pideBruto": 180000,
+      "valorMercado": "0,2 M",
+      "valorBruto": 180000,
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -2142,7 +2181,7 @@
       "balance": "−48,8 M",
       "balanceBruto": -48835799,
       "sobreprecioMedio": 52,
-      "enVenta": 4,
+      "enVenta": 7,
       "fichajeEstrella": {
         "nombre": "Pedri",
         "precio": "18,9 M",
@@ -2827,19 +2866,19 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 16
+            "dificultad": 17
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Deportivo",
-            "dificultad": 57
+            "dificultad": 58
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Málaga",
-            "dificultad": 17
+            "dificultad": 15
           }
         ]
       },
@@ -2853,19 +2892,19 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 16
+            "dificultad": 17
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Deportivo",
-            "dificultad": 57
+            "dificultad": 58
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Málaga",
-            "dificultad": 17
+            "dificultad": 15
           }
         ]
       },
@@ -3637,19 +3676,19 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 16
+            "dificultad": 17
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Deportivo",
-            "dificultad": 57
+            "dificultad": 58
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Málaga",
-            "dificultad": 17
+            "dificultad": 15
           }
         ]
       },
@@ -4579,19 +4618,19 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 16
+            "dificultad": 17
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Deportivo",
-            "dificultad": 57
+            "dificultad": 58
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Málaga",
-            "dificultad": 17
+            "dificultad": 15
           }
         ]
       },
@@ -4735,19 +4774,19 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 16
+            "dificultad": 17
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Deportivo",
-            "dificultad": 57
+            "dificultad": 58
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Málaga",
-            "dificultad": 17
+            "dificultad": 15
           }
         ]
       },
@@ -5363,19 +5402,19 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 16
+            "dificultad": 17
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Deportivo",
-            "dificultad": 57
+            "dificultad": 58
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Málaga",
-            "dificultad": 17
+            "dificultad": 15
           }
         ]
       },
@@ -6095,19 +6134,19 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 16
+            "dificultad": 17
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Deportivo",
-            "dificultad": 57
+            "dificultad": 58
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Málaga",
-            "dificultad": 17
+            "dificultad": 15
           }
         ]
       },
@@ -6407,19 +6446,19 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 16
+            "dificultad": 17
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Deportivo",
-            "dificultad": 57
+            "dificultad": 58
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Málaga",
-            "dificultad": 17
+            "dificultad": 15
           }
         ]
       }
@@ -7061,19 +7100,19 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 16
+            "dificultad": 17
           },
           {
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Deportivo",
-            "dificultad": 57
+            "dificultad": 58
           },
           {
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Málaga",
-            "dificultad": 17
+            "dificultad": 15
           }
         ]
       },
@@ -14380,7 +14419,7 @@
         "nota": 6.2,
         "rival": "Valencia",
         "esLocal": false,
-        "dificultad": 16
+        "dificultad": 17
       },
       {
         "nombre": "Zubeldia",
@@ -14395,10 +14434,10 @@
           2
         ],
         "rachaTitular": 0,
-        "nota": 6,
+        "nota": 5.9,
         "rival": "Valencia",
         "esLocal": false,
-        "dificultad": 16
+        "dificultad": 17
       },
       {
         "nombre": "Iván Martín",
@@ -14898,7 +14937,7 @@
         "nota": 5.2,
         "rival": "Valencia",
         "esLocal": false,
-        "dificultad": 16
+        "dificultad": 17
       },
       {
         "nombre": "Camavinga",
@@ -15592,10 +15631,10 @@
           2
         ],
         "rachaTitular": 3,
-        "nota": 7.5,
+        "nota": 7.4,
         "rival": "Valencia",
         "esLocal": false,
-        "dificultad": 16
+        "dificultad": 17
       },
       {
         "nombre": "Jutglà",
@@ -15631,7 +15670,7 @@
         "nota": 5.7,
         "rival": "Valencia",
         "esLocal": false,
-        "dificultad": 16
+        "dificultad": 17
       },
       {
         "nombre": "Carlos Romero",
@@ -16089,7 +16128,7 @@
         "nota": 5.7,
         "rival": "Valencia",
         "esLocal": false,
-        "dificultad": 16
+        "dificultad": 17
       },
       {
         "nombre": "Alfonso Herrero",
@@ -16569,7 +16608,7 @@
         "nota": 5.7,
         "rival": "Valencia",
         "esLocal": false,
-        "dificultad": 16
+        "dificultad": 17
       },
       {
         "nombre": "Pedri",
@@ -16656,7 +16695,7 @@
         "nota": 5.2,
         "rival": "Valencia",
         "esLocal": false,
-        "dificultad": 16
+        "dificultad": 17
       },
       {
         "nombre": "Logan Costa",
@@ -17185,10 +17224,10 @@
           3
         ],
         "rachaTitular": 0,
-        "nota": 5.5,
+        "nota": 5.4,
         "rival": "Valencia",
         "esLocal": false,
-        "dificultad": 16
+        "dificultad": 17
       },
       {
         "nombre": "Cabrera",
@@ -17460,25 +17499,6 @@
       "presidente": "Manchester Pity"
     },
     {
-      "nombre": "Yangel Herrera",
-      "foto": "https://cdn.biwenger.com/i/p/17344.png",
-      "posicion": "Centrocampista",
-      "equipoReal": "Real Sociedad",
-      "racha": [
-        1,
-        12,
-        3,
-        4,
-        2
-      ],
-      "rachaTitular": 3,
-      "nota": 7.5,
-      "rival": "Valencia",
-      "esLocal": false,
-      "dificultad": 16,
-      "presidente": "Madriguana FC"
-    },
-    {
       "nombre": "Expósito",
       "foto": "https://cdn.biwenger.com/i/p/19862.png",
       "posicion": "Centrocampista",
@@ -17496,6 +17516,25 @@
       "esLocal": false,
       "dificultad": 15,
       "presidente": "Las Víboras FC"
+    },
+    {
+      "nombre": "Yangel Herrera",
+      "foto": "https://cdn.biwenger.com/i/p/17344.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Real Sociedad",
+      "racha": [
+        1,
+        12,
+        3,
+        4,
+        2
+      ],
+      "rachaTitular": 3,
+      "nota": 7.4,
+      "rival": "Valencia",
+      "esLocal": false,
+      "dificultad": 17,
+      "presidente": "Madriguana FC"
     },
     {
       "nombre": "Pedrosa",
