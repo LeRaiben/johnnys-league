@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-20T18:58:53.708Z",
+  "actualizado": "2026-09-20T19:15:13.561Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -100,9 +100,9 @@
       "escudoLocal": "https://cdn.biwenger.com/i/t/18.png",
       "escudoVisitante": "https://cdn.biwenger.com/i/t/13.png",
       "fecha": "2026-09-20T19:00:00.000Z",
-      "golesLocal": null,
-      "golesVisitante": null,
-      "estado": "preview"
+      "golesLocal": 0,
+      "golesVisitante": 0,
+      "estado": "firstTime"
     }
   ],
   "nombreJornada": "Jornada 7",
@@ -135,7 +135,7 @@
       "valorBruto": 57380000,
       "esTuyo": false,
       "puntosJornada": 45,
-      "jugadosJornada": 8,
+      "jugadosJornada": 7,
       "alineadosJornada": 11,
       "puntosProvisional": 401
     },
@@ -2894,7 +2894,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 17
+            "dificultad": null
           },
           {
             "jornada": "Round 8",
@@ -2920,7 +2920,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 17
+            "dificultad": null
           },
           {
             "jornada": "Round 8",
@@ -3050,7 +3050,7 @@
             "jornada": "Round 7",
             "esLocal": true,
             "rival": "Real Sociedad",
-            "dificultad": 38
+            "dificultad": null
           },
           {
             "jornada": "Round 8",
@@ -3522,13 +3522,13 @@
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Villarreal",
-            "dificultad": 28
+            "dificultad": 44
           },
           {
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Sevilla",
-            "dificultad": 52
+            "dificultad": 53
           },
           {
             "jornada": "Round 10",
@@ -3554,7 +3554,7 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Espanyol",
-            "dificultad": 26
+            "dificultad": 24
           },
           {
             "jornada": "Round 10",
@@ -3580,7 +3580,7 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Espanyol",
-            "dificultad": 26
+            "dificultad": 24
           },
           {
             "jornada": "Round 10",
@@ -3626,13 +3626,13 @@
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Villarreal",
-            "dificultad": 28
+            "dificultad": 44
           },
           {
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Sevilla",
-            "dificultad": 52
+            "dificultad": 53
           },
           {
             "jornada": "Round 10",
@@ -3704,7 +3704,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 17
+            "dificultad": null
           },
           {
             "jornada": "Round 8",
@@ -3788,7 +3788,7 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Espanyol",
-            "dificultad": 26
+            "dificultad": 24
           },
           {
             "jornada": "Round 10",
@@ -3810,13 +3810,13 @@
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Villarreal",
-            "dificultad": 28
+            "dificultad": 44
           },
           {
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Sevilla",
-            "dificultad": 52
+            "dificultad": 53
           },
           {
             "jornada": "Round 10",
@@ -3888,7 +3888,7 @@
             "jornada": "Round 7",
             "esLocal": true,
             "rival": "Real Sociedad",
-            "dificultad": 38
+            "dificultad": null
           },
           {
             "jornada": "Round 8",
@@ -4018,7 +4018,7 @@
             "jornada": "Round 7",
             "esLocal": true,
             "rival": "Real Sociedad",
-            "dificultad": 38
+            "dificultad": null
           },
           {
             "jornada": "Round 8",
@@ -4128,7 +4128,7 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Espanyol",
-            "dificultad": 26
+            "dificultad": 24
           },
           {
             "jornada": "Round 10",
@@ -4260,7 +4260,7 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Espanyol",
-            "dificultad": 26
+            "dificultad": 24
           },
           {
             "jornada": "Round 10",
@@ -4364,7 +4364,7 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Espanyol",
-            "dificultad": 26
+            "dificultad": 24
           },
           {
             "jornada": "Round 10",
@@ -4620,7 +4620,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 17
+            "dificultad": null
           },
           {
             "jornada": "Round 8",
@@ -4776,7 +4776,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 17
+            "dificultad": null
           },
           {
             "jornada": "Round 8",
@@ -4986,13 +4986,13 @@
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Villarreal",
-            "dificultad": 28
+            "dificultad": 44
           },
           {
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Sevilla",
-            "dificultad": 52
+            "dificultad": 53
           },
           {
             "jornada": "Round 10",
@@ -5168,13 +5168,13 @@
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Villarreal",
-            "dificultad": 28
+            "dificultad": 44
           },
           {
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Sevilla",
-            "dificultad": 52
+            "dificultad": 53
           },
           {
             "jornada": "Round 10",
@@ -5274,13 +5274,13 @@
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Villarreal",
-            "dificultad": 28
+            "dificultad": 44
           },
           {
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Sevilla",
-            "dificultad": 52
+            "dificultad": 53
           },
           {
             "jornada": "Round 10",
@@ -5404,7 +5404,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 17
+            "dificultad": null
           },
           {
             "jornada": "Round 8",
@@ -5456,13 +5456,13 @@
             "jornada": "Round 8",
             "esLocal": true,
             "rival": "Villarreal",
-            "dificultad": 28
+            "dificultad": 44
           },
           {
             "jornada": "Round 9",
             "esLocal": true,
             "rival": "Sevilla",
-            "dificultad": 52
+            "dificultad": 53
           },
           {
             "jornada": "Round 10",
@@ -5692,7 +5692,7 @@
             "jornada": "Round 7",
             "esLocal": true,
             "rival": "Real Sociedad",
-            "dificultad": 38
+            "dificultad": null
           },
           {
             "jornada": "Round 8",
@@ -6084,7 +6084,7 @@
             "jornada": "Round 7",
             "esLocal": true,
             "rival": "Real Sociedad",
-            "dificultad": 38
+            "dificultad": null
           },
           {
             "jornada": "Round 8",
@@ -6136,7 +6136,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 17
+            "dificultad": null
           },
           {
             "jornada": "Round 8",
@@ -6194,7 +6194,7 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Espanyol",
-            "dificultad": 26
+            "dificultad": 24
           },
           {
             "jornada": "Round 10",
@@ -6318,7 +6318,7 @@
             "jornada": "Round 7",
             "esLocal": true,
             "rival": "Real Sociedad",
-            "dificultad": 38
+            "dificultad": null
           },
           {
             "jornada": "Round 8",
@@ -6428,7 +6428,7 @@
             "jornada": "Round 9",
             "esLocal": false,
             "rival": "Espanyol",
-            "dificultad": 26
+            "dificultad": 24
           },
           {
             "jornada": "Round 10",
@@ -6448,7 +6448,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 17
+            "dificultad": null
           },
           {
             "jornada": "Round 8",
@@ -7128,7 +7128,7 @@
             "jornada": "Round 7",
             "esLocal": false,
             "rival": "Valencia",
-            "dificultad": 17
+            "dificultad": null
           },
           {
             "jornada": "Round 8",
@@ -14454,42 +14454,6 @@
         "dificultad": 25
       },
       {
-        "nombre": "Remiro",
-        "foto": "https://cdn.biwenger.com/i/p/7003.png",
-        "posicion": "Portero",
-        "equipoReal": "Real Sociedad",
-        "racha": [
-          2,
-          6,
-          5,
-          10,
-          13
-        ],
-        "rachaTitular": 1,
-        "nota": 6.2,
-        "rival": "Valencia",
-        "esLocal": false,
-        "dificultad": 17
-      },
-      {
-        "nombre": "Zubeldia",
-        "foto": "https://cdn.biwenger.com/i/p/8376.png",
-        "posicion": "Defensa",
-        "equipoReal": "Real Sociedad",
-        "racha": [
-          1,
-          6,
-          5,
-          0,
-          2
-        ],
-        "rachaTitular": 0,
-        "nota": 5.9,
-        "rival": "Valencia",
-        "esLocal": false,
-        "dificultad": 17
-      },
-      {
         "nombre": "Pépé",
         "foto": "https://cdn.biwenger.com/i/p/34479.png",
         "posicion": "Delantero",
@@ -14579,6 +14543,24 @@
         "dificultad": 41
       },
       {
+        "nombre": "Remiro",
+        "foto": "https://cdn.biwenger.com/i/p/7003.png",
+        "posicion": "Portero",
+        "equipoReal": "Real Sociedad",
+        "racha": [
+          2,
+          6,
+          5,
+          10,
+          13
+        ],
+        "rachaTitular": 1,
+        "nota": 4.5,
+        "rival": "Valencia",
+        "esLocal": false,
+        "dificultad": null
+      },
+      {
         "nombre": "Kevin Sánchez",
         "foto": "https://cdn.biwenger.com/i/p/41567.png",
         "posicion": "Delantero",
@@ -14591,6 +14573,24 @@
         "rival": "Real Sociedad",
         "esLocal": false,
         "dificultad": 30
+      },
+      {
+        "nombre": "Zubeldia",
+        "foto": "https://cdn.biwenger.com/i/p/8376.png",
+        "posicion": "Defensa",
+        "equipoReal": "Real Sociedad",
+        "racha": [
+          1,
+          6,
+          5,
+          0,
+          2
+        ],
+        "rachaTitular": 0,
+        "nota": 4.3,
+        "rival": "Valencia",
+        "esLocal": false,
+        "dificultad": null
       },
       {
         "nombre": "De Frutos",
@@ -14672,18 +14672,6 @@
         "dificultad": 55
       },
       {
-        "nombre": "Copete",
-        "foto": "https://cdn.biwenger.com/i/p/26344.png",
-        "posicion": "Defensa",
-        "equipoReal": "Valencia",
-        "racha": [],
-        "rachaTitular": 0,
-        "nota": 3.1,
-        "rival": "Real Sociedad",
-        "esLocal": true,
-        "dificultad": 38
-      },
-      {
         "nombre": "Rubén García",
         "foto": "https://cdn.biwenger.com/i/p/1602.png",
         "posicion": "Centrocampista",
@@ -14718,6 +14706,18 @@
         "rival": "Barcelona",
         "esLocal": false,
         "dificultad": 93
+      },
+      {
+        "nombre": "Copete",
+        "foto": "https://cdn.biwenger.com/i/p/26344.png",
+        "posicion": "Defensa",
+        "equipoReal": "Valencia",
+        "racha": [],
+        "rachaTitular": 0,
+        "nota": 2.5,
+        "rival": "Real Sociedad",
+        "esLocal": true,
+        "dificultad": null
       }
     ],
     "C.d.F Atlético de Cohiba": [
@@ -14904,24 +14904,6 @@
     ],
     "Manchester Pity": [
       {
-        "nombre": "Camavinga",
-        "foto": "https://cdn.biwenger.com/i/p/1733.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Real Madrid",
-        "racha": [
-          7,
-          6,
-          4,
-          4,
-          4
-        ],
-        "rachaTitular": 0,
-        "nota": 6.8,
-        "rival": "Villarreal",
-        "esLocal": true,
-        "dificultad": 28
-      },
-      {
         "nombre": "Isco",
         "foto": "https://cdn.biwenger.com/i/p/1249.png",
         "posicion": "Centrocampista",
@@ -14938,6 +14920,24 @@
         "rival": "Osasuna",
         "esLocal": true,
         "dificultad": 25
+      },
+      {
+        "nombre": "Camavinga",
+        "foto": "https://cdn.biwenger.com/i/p/1733.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Real Madrid",
+        "racha": [
+          7,
+          6,
+          4,
+          4,
+          4
+        ],
+        "rachaTitular": 0,
+        "nota": 6,
+        "rival": "Villarreal",
+        "esLocal": true,
+        "dificultad": 44
       },
       {
         "nombre": "Moleiro",
@@ -14974,24 +14974,6 @@
         "rival": "Alavés",
         "esLocal": false,
         "dificultad": 50
-      },
-      {
-        "nombre": "Sergio Gómez",
-        "foto": "https://cdn.biwenger.com/i/p/19299.png",
-        "posicion": "Defensa",
-        "equipoReal": "Real Sociedad",
-        "racha": [
-          0,
-          4,
-          6,
-          4,
-          0
-        ],
-        "rachaTitular": 6,
-        "nota": 5.2,
-        "rival": "Valencia",
-        "esLocal": false,
-        "dificultad": 17
       },
       {
         "nombre": "Manu Bueno",
@@ -15063,18 +15045,6 @@
         "dificultad": 50
       },
       {
-        "nombre": "Lunin",
-        "foto": "https://cdn.biwenger.com/i/p/15289.png",
-        "posicion": "Portero",
-        "equipoReal": "Real Madrid",
-        "racha": [],
-        "rachaTitular": 0,
-        "nota": 3.6,
-        "rival": "Villarreal",
-        "esLocal": true,
-        "dificultad": 28
-      },
-      {
         "nombre": "Mariano",
         "foto": "https://cdn.biwenger.com/i/p/5697.png",
         "posicion": "Delantero",
@@ -15091,6 +15061,36 @@
         "rival": "Atlético",
         "esLocal": true,
         "dificultad": 60
+      },
+      {
+        "nombre": "Sergio Gómez",
+        "foto": "https://cdn.biwenger.com/i/p/19299.png",
+        "posicion": "Defensa",
+        "equipoReal": "Real Sociedad",
+        "racha": [
+          0,
+          4,
+          6,
+          4,
+          0
+        ],
+        "rachaTitular": 6,
+        "nota": 3.5,
+        "rival": "Valencia",
+        "esLocal": false,
+        "dificultad": null
+      },
+      {
+        "nombre": "Lunin",
+        "foto": "https://cdn.biwenger.com/i/p/15289.png",
+        "posicion": "Portero",
+        "equipoReal": "Real Madrid",
+        "racha": [],
+        "rachaTitular": 0,
+        "nota": 2.8,
+        "rival": "Villarreal",
+        "esLocal": true,
+        "dificultad": 44
       },
       {
         "nombre": "Barja",
@@ -15164,42 +15164,6 @@
         "dificultad": 25
       },
       {
-        "nombre": "Bellingham",
-        "foto": "https://cdn.biwenger.com/i/p/30477.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Real Madrid",
-        "racha": [
-          5,
-          4,
-          14,
-          5,
-          15
-        ],
-        "rachaTitular": 1,
-        "nota": 5.8,
-        "rival": "Villarreal",
-        "esLocal": true,
-        "dificultad": 28
-      },
-      {
-        "nombre": "Pepelu",
-        "foto": "https://cdn.biwenger.com/i/p/12221.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Valencia",
-        "racha": [
-          7,
-          2,
-          0,
-          4,
-          2
-        ],
-        "rachaTitular": 2,
-        "nota": 5.3,
-        "rival": "Real Sociedad",
-        "esLocal": true,
-        "dificultad": 38
-      },
-      {
         "nombre": "Agoumé",
         "foto": "https://cdn.biwenger.com/i/p/32338.png",
         "posicion": "Centrocampista",
@@ -15218,6 +15182,42 @@
         "dificultad": 42
       },
       {
+        "nombre": "Bellingham",
+        "foto": "https://cdn.biwenger.com/i/p/30477.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Real Madrid",
+        "racha": [
+          5,
+          4,
+          14,
+          5,
+          15
+        ],
+        "rachaTitular": 1,
+        "nota": 5,
+        "rival": "Villarreal",
+        "esLocal": true,
+        "dificultad": 44
+      },
+      {
+        "nombre": "Pepelu",
+        "foto": "https://cdn.biwenger.com/i/p/12221.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Valencia",
+        "racha": [
+          7,
+          2,
+          0,
+          4,
+          2
+        ],
+        "rachaTitular": 2,
+        "nota": 4.8,
+        "rival": "Real Sociedad",
+        "esLocal": true,
+        "dificultad": null
+      },
+      {
         "nombre": "Jonny",
         "foto": "https://cdn.biwenger.com/i/p/1599.png",
         "posicion": "Defensa",
@@ -15234,24 +15234,6 @@
         "rival": "Atlético",
         "esLocal": true,
         "dificultad": 60
-      },
-      {
-        "nombre": "Danjuma",
-        "foto": "https://cdn.biwenger.com/i/p/24509.png",
-        "posicion": "Delantero",
-        "equipoReal": "Valencia",
-        "racha": [
-          4,
-          1,
-          6,
-          6,
-          3
-        ],
-        "rachaTitular": 3,
-        "nota": 4.3,
-        "rival": "Real Sociedad",
-        "esLocal": true,
-        "dificultad": 38
       },
       {
         "nombre": "Pablo Martínez",
@@ -15288,6 +15270,24 @@
         "rival": "Real Madrid",
         "esLocal": false,
         "dificultad": 70
+      },
+      {
+        "nombre": "Danjuma",
+        "foto": "https://cdn.biwenger.com/i/p/24509.png",
+        "posicion": "Delantero",
+        "equipoReal": "Valencia",
+        "racha": [
+          4,
+          1,
+          6,
+          6,
+          3
+        ],
+        "rachaTitular": 3,
+        "nota": 3.8,
+        "rival": "Real Sociedad",
+        "esLocal": true,
+        "dificultad": null
       },
       {
         "nombre": "Bouare",
@@ -15638,24 +15638,6 @@
     ],
     "Madriguana FC": [
       {
-        "nombre": "Yangel Herrera",
-        "foto": "https://cdn.biwenger.com/i/p/17344.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Real Sociedad",
-        "racha": [
-          1,
-          12,
-          3,
-          4,
-          2
-        ],
-        "rachaTitular": 3,
-        "nota": 7.4,
-        "rival": "Valencia",
-        "esLocal": false,
-        "dificultad": 17
-      },
-      {
         "nombre": "Jutglà",
         "foto": "https://cdn.biwenger.com/i/p/3159.png",
         "posicion": "Delantero",
@@ -15674,22 +15656,22 @@
         "dificultad": 24
       },
       {
-        "nombre": "Oyarzabal",
-        "foto": "https://cdn.biwenger.com/i/p/2603.png",
-        "posicion": "Delantero",
+        "nombre": "Yangel Herrera",
+        "foto": "https://cdn.biwenger.com/i/p/17344.png",
+        "posicion": "Centrocampista",
         "equipoReal": "Real Sociedad",
         "racha": [
-          2,
-          4,
+          1,
+          12,
           3,
-          8,
-          1
+          4,
+          2
         ],
-        "rachaTitular": 4,
-        "nota": 5.7,
+        "rachaTitular": 3,
+        "nota": 5.8,
         "rival": "Valencia",
         "esLocal": false,
-        "dificultad": 17
+        "dificultad": null
       },
       {
         "nombre": "Cucho",
@@ -15744,6 +15726,24 @@
         "rival": "Málaga",
         "esLocal": false,
         "dificultad": 15
+      },
+      {
+        "nombre": "Oyarzabal",
+        "foto": "https://cdn.biwenger.com/i/p/2603.png",
+        "posicion": "Delantero",
+        "equipoReal": "Real Sociedad",
+        "racha": [
+          2,
+          4,
+          3,
+          8,
+          1
+        ],
+        "rachaTitular": 4,
+        "nota": 4,
+        "rival": "Valencia",
+        "esLocal": false,
+        "dificultad": null
       },
       {
         "nombre": "Pablo García",
@@ -15861,10 +15861,10 @@
           16
         ],
         "rachaTitular": 7,
-        "nota": 8.6,
+        "nota": 7.8,
         "rival": "Villarreal",
         "esLocal": true,
-        "dificultad": 28
+        "dificultad": 44
       },
       {
         "nombre": "Radu",
@@ -15885,24 +15885,6 @@
         "dificultad": 24
       },
       {
-        "nombre": "Konaté",
-        "foto": "https://cdn.biwenger.com/i/p/41087.png",
-        "posicion": "Defensa",
-        "equipoReal": "Real Madrid",
-        "racha": [
-          7,
-          4,
-          2,
-          2,
-          6
-        ],
-        "rachaTitular": 4,
-        "nota": 6.3,
-        "rival": "Villarreal",
-        "esLocal": true,
-        "dificultad": 28
-      },
-      {
         "nombre": "Dotor",
         "foto": "https://cdn.biwenger.com/i/p/31167.png",
         "posicion": "Centrocampista",
@@ -15919,6 +15901,24 @@
         "rival": "Espanyol",
         "esLocal": true,
         "dificultad": 41
+      },
+      {
+        "nombre": "Konaté",
+        "foto": "https://cdn.biwenger.com/i/p/41087.png",
+        "posicion": "Defensa",
+        "equipoReal": "Real Madrid",
+        "racha": [
+          7,
+          4,
+          2,
+          2,
+          6
+        ],
+        "rachaTitular": 4,
+        "nota": 5.5,
+        "rival": "Villarreal",
+        "esLocal": true,
+        "dificultad": 44
       },
       {
         "nombre": "Villares",
@@ -16133,24 +16133,6 @@
         "dificultad": 55
       },
       {
-        "nombre": "Guedes",
-        "foto": "https://cdn.biwenger.com/i/p/10745.png",
-        "posicion": "Delantero",
-        "equipoReal": "Real Sociedad",
-        "racha": [
-          3,
-          3,
-          4,
-          3,
-          2
-        ],
-        "rachaTitular": 1,
-        "nota": 5.7,
-        "rival": "Valencia",
-        "esLocal": false,
-        "dificultad": 17
-      },
-      {
         "nombre": "Alfonso Herrero",
         "foto": "https://cdn.biwenger.com/i/p/41101.png",
         "posicion": "Portero",
@@ -16237,6 +16219,24 @@
         "dificultad": 30
       },
       {
+        "nombre": "Guedes",
+        "foto": "https://cdn.biwenger.com/i/p/10745.png",
+        "posicion": "Delantero",
+        "equipoReal": "Real Sociedad",
+        "racha": [
+          3,
+          3,
+          4,
+          3,
+          2
+        ],
+        "rachaTitular": 1,
+        "nota": 4,
+        "rival": "Valencia",
+        "esLocal": false,
+        "dificultad": null
+      },
+      {
         "nombre": "Huijsen",
         "foto": "https://cdn.biwenger.com/i/p/37495.png",
         "posicion": "Defensa",
@@ -16249,10 +16249,22 @@
           6
         ],
         "rachaTitular": 0,
-        "nota": 4.3,
+        "nota": 3.5,
         "rival": "Villarreal",
         "esLocal": true,
-        "dificultad": 28
+        "dificultad": 44
+      },
+      {
+        "nombre": "Rego",
+        "foto": "https://cdn.biwenger.com/i/p/38449.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Athletic",
+        "racha": [],
+        "rachaTitular": 0,
+        "nota": 2.9,
+        "rival": "Rayo Vallecano",
+        "esLocal": false,
+        "dificultad": 42
       },
       {
         "nombre": "Vinícius Jr",
@@ -16267,22 +16279,10 @@
           8
         ],
         "rachaTitular": 0,
-        "nota": 3.6,
+        "nota": 2.8,
         "rival": "Villarreal",
         "esLocal": true,
-        "dificultad": 28
-      },
-      {
-        "nombre": "Rego",
-        "foto": "https://cdn.biwenger.com/i/p/38449.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Athletic",
-        "racha": [],
-        "rachaTitular": 0,
-        "nota": 2.9,
-        "rival": "Rayo Vallecano",
-        "esLocal": false,
-        "dificultad": 42
+        "dificultad": 44
       },
       {
         "nombre": "Iturbe",
@@ -16368,24 +16368,6 @@
         "dificultad": 42
       },
       {
-        "nombre": "Dimitrievski",
-        "foto": "https://cdn.biwenger.com/i/p/11677.png",
-        "posicion": "Portero",
-        "equipoReal": "Valencia",
-        "racha": [
-          7,
-          4,
-          3,
-          1,
-          0
-        ],
-        "rachaTitular": 6,
-        "nota": 5.8,
-        "rival": "Real Sociedad",
-        "esLocal": true,
-        "dificultad": 38
-      },
-      {
         "nombre": "Rafita",
         "foto": "https://cdn.biwenger.com/i/p/41093.png",
         "posicion": "Defensa",
@@ -16402,6 +16384,24 @@
         "rival": "Espanyol",
         "esLocal": true,
         "dificultad": 41
+      },
+      {
+        "nombre": "Dimitrievski",
+        "foto": "https://cdn.biwenger.com/i/p/11677.png",
+        "posicion": "Portero",
+        "equipoReal": "Valencia",
+        "racha": [
+          7,
+          4,
+          3,
+          1,
+          0
+        ],
+        "rachaTitular": 6,
+        "nota": 5.3,
+        "rival": "Real Sociedad",
+        "esLocal": true,
+        "dificultad": null
       },
       {
         "nombre": "Calatrava",
@@ -16619,20 +16619,6 @@
         "dificultad": 42
       },
       {
-        "nombre": "Pacheco",
-        "foto": "https://cdn.biwenger.com/i/p/12424.png",
-        "posicion": "Defensa",
-        "equipoReal": "Real Sociedad",
-        "racha": [
-          3
-        ],
-        "rachaTitular": 0,
-        "nota": 5.7,
-        "rival": "Valencia",
-        "esLocal": false,
-        "dificultad": 17
-      },
-      {
         "nombre": "Pedri",
         "foto": "https://cdn.biwenger.com/i/p/19441.png",
         "posicion": "Centrocampista",
@@ -16687,22 +16673,6 @@
         "dificultad": 93
       },
       {
-        "nombre": "Guido Rodríguez",
-        "foto": "https://cdn.biwenger.com/i/p/163.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Valencia",
-        "racha": [
-          5,
-          4,
-          8
-        ],
-        "rachaTitular": 1,
-        "nota": 5.3,
-        "rival": "Real Sociedad",
-        "esLocal": true,
-        "dificultad": 38
-      },
-      {
         "nombre": "Cepeda",
         "foto": "https://cdn.biwenger.com/i/p/39874.png",
         "posicion": "Delantero",
@@ -16719,23 +16689,6 @@
         "rival": "Celta",
         "esLocal": true,
         "dificultad": 47
-      },
-      {
-        "nombre": "Marchal",
-        "foto": "https://cdn.biwenger.com/i/p/42627.png",
-        "posicion": "Delantero",
-        "equipoReal": "Real Sociedad",
-        "racha": [
-          2,
-          2,
-          5,
-          2
-        ],
-        "rachaTitular": 0,
-        "nota": 5.2,
-        "rival": "Valencia",
-        "esLocal": false,
-        "dificultad": 17
       },
       {
         "nombre": "Castrín",
@@ -16756,20 +16709,20 @@
         "dificultad": 42
       },
       {
-        "nombre": "Córdoba",
-        "foto": "https://cdn.biwenger.com/i/p/35308.png",
-        "posicion": "Defensa",
+        "nombre": "Guido Rodríguez",
+        "foto": "https://cdn.biwenger.com/i/p/163.png",
+        "posicion": "Centrocampista",
         "equipoReal": "Valencia",
         "racha": [
+          5,
           4,
-          3,
-          -2
+          8
         ],
-        "rachaTitular": 0,
+        "rachaTitular": 1,
         "nota": 4.8,
         "rival": "Real Sociedad",
         "esLocal": true,
-        "dificultad": 38
+        "dificultad": null
       },
       {
         "nombre": "Puado",
@@ -16782,6 +16735,36 @@
         "rival": "Málaga",
         "esLocal": false,
         "dificultad": 15
+      },
+      {
+        "nombre": "Córdoba",
+        "foto": "https://cdn.biwenger.com/i/p/35308.png",
+        "posicion": "Defensa",
+        "equipoReal": "Valencia",
+        "racha": [
+          4,
+          3,
+          -2
+        ],
+        "rachaTitular": 0,
+        "nota": 4.3,
+        "rival": "Real Sociedad",
+        "esLocal": true,
+        "dificultad": null
+      },
+      {
+        "nombre": "Pacheco",
+        "foto": "https://cdn.biwenger.com/i/p/12424.png",
+        "posicion": "Defensa",
+        "equipoReal": "Real Sociedad",
+        "racha": [
+          3
+        ],
+        "rachaTitular": 0,
+        "nota": 4,
+        "rival": "Valencia",
+        "esLocal": false,
+        "dificultad": null
       },
       {
         "nombre": "Jorge Domínguez",
@@ -16826,6 +16809,23 @@
         "rival": "Atlético",
         "esLocal": true,
         "dificultad": 60
+      },
+      {
+        "nombre": "Marchal",
+        "foto": "https://cdn.biwenger.com/i/p/42627.png",
+        "posicion": "Delantero",
+        "equipoReal": "Real Sociedad",
+        "racha": [
+          2,
+          2,
+          5,
+          2
+        ],
+        "rachaTitular": 0,
+        "nota": 3.5,
+        "rival": "Valencia",
+        "esLocal": false,
+        "dificultad": null
       },
       {
         "nombre": "Logan Costa",
@@ -17274,21 +17274,6 @@
         "dificultad": 30
       },
       {
-        "nombre": "Zakharyan",
-        "foto": "https://cdn.biwenger.com/i/p/31475.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Real Sociedad",
-        "racha": [
-          2,
-          3
-        ],
-        "rachaTitular": 0,
-        "nota": 5.4,
-        "rival": "Valencia",
-        "esLocal": false,
-        "dificultad": 17
-      },
-      {
         "nombre": "Cabrera",
         "foto": "https://cdn.biwenger.com/i/p/11800.png",
         "posicion": "Defensa",
@@ -17371,6 +17356,21 @@
         "rival": "Rayo Vallecano",
         "esLocal": false,
         "dificultad": 42
+      },
+      {
+        "nombre": "Zakharyan",
+        "foto": "https://cdn.biwenger.com/i/p/31475.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Real Sociedad",
+        "racha": [
+          2,
+          3
+        ],
+        "rachaTitular": 0,
+        "nota": 3.8,
+        "rival": "Valencia",
+        "esLocal": false,
+        "dificultad": null
       },
       {
         "nombre": "José Salinas",
@@ -17521,25 +17521,6 @@
       "presidente": "Seif fc"
     },
     {
-      "nombre": "Mbappé",
-      "foto": "https://cdn.biwenger.com/i/p/19577.png",
-      "posicion": "Delantero",
-      "equipoReal": "Real Madrid",
-      "racha": [
-        5,
-        15,
-        21,
-        0,
-        16
-      ],
-      "rachaTitular": 7,
-      "nota": 8.6,
-      "rival": "Villarreal",
-      "esLocal": true,
-      "dificultad": 28,
-      "presidente": "Cañoneros CF"
-    },
-    {
       "nombre": "Ez Abde",
       "foto": "https://cdn.biwenger.com/i/p/25127.png",
       "posicion": "Delantero",
@@ -17555,6 +17536,25 @@
       "esLocal": true,
       "dificultad": 25,
       "presidente": "Urdinho Pernambucano"
+    },
+    {
+      "nombre": "Mbappé",
+      "foto": "https://cdn.biwenger.com/i/p/19577.png",
+      "posicion": "Delantero",
+      "equipoReal": "Real Madrid",
+      "racha": [
+        5,
+        15,
+        21,
+        0,
+        16
+      ],
+      "rachaTitular": 7,
+      "nota": 7.8,
+      "rival": "Villarreal",
+      "esLocal": true,
+      "dificultad": 44,
+      "presidente": "Cañoneros CF"
     },
     {
       "nombre": "Baena",
@@ -17614,23 +17614,20 @@
       "presidente": "Las Víboras FC"
     },
     {
-      "nombre": "Yangel Herrera",
-      "foto": "https://cdn.biwenger.com/i/p/17344.png",
-      "posicion": "Centrocampista",
-      "equipoReal": "Real Sociedad",
+      "nombre": "Valentín Gómez",
+      "foto": "https://cdn.biwenger.com/i/p/38318.png",
+      "posicion": "Defensa",
+      "equipoReal": "Betis",
       "racha": [
-        1,
-        12,
-        3,
-        4,
-        2
+        8,
+        6
       ],
-      "rachaTitular": 3,
-      "nota": 7.4,
-      "rival": "Valencia",
-      "esLocal": false,
-      "dificultad": 17,
-      "presidente": "Madriguana FC"
+      "rachaTitular": 1,
+      "nota": 7.3,
+      "rival": "Osasuna",
+      "esLocal": true,
+      "dificultad": 25,
+      "presidente": "Gorila FC"
     }
   ],
   "riesgoClausula": [
