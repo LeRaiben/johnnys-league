@@ -19,7 +19,7 @@
   .campo { margin-bottom:14px; }
   .campo label { display:block; font-family:'Barlow Condensed',sans-serif; font-weight:600;
     letter-spacing:0.05em; text-transform:uppercase; font-size:0.68rem; color:var(--grey); margin-bottom:6px; }
-  .campo input[type="text"] { width:100%; background:rgba(2,18,52,0.6); color:var(--white);
+  .campo input[type="text"], .campo input[type="email"], .campo input[type="password"] { width:100%; background:rgba(2,18,52,0.6); color:var(--white);
     border:1px solid var(--navy-line); font-family:'Source Serif 4',serif; font-size:0.95rem;
     padding:11px 13px; border-radius:4px; box-sizing:border-box; }
   .campo input:focus { outline:none; border-color:var(--gold-dim); }
@@ -269,6 +269,12 @@
 
 <footer class="wrap">
   <span class="cond">Johnny's League · hecha por y para la liga</span>
+  <span id="togglePresidente" style="cursor:pointer; opacity:0.35; margin-left:10px; font-size:0.75rem;">·</span>
+  <div id="cajaPresidente" style="display:none; margin-top:12px; max-width:280px;">
+    <div class="campo"><input type="email" id="presiEmail" placeholder="Email"></div>
+    <div class="campo"><input type="password" id="presiPass" placeholder="Contraseña"></div>
+    <button type="button" class="boton" id="btnEntrarPresidente" style="font-size:0.8rem; padding:8px 16px;">Entrar</button>
+  </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
@@ -280,6 +286,7 @@
 
   var sb = window.supabase.createClient(URL_SUPABASE, CLAVE_PUBLICA);
   var REACCIONES_DISPONIBLES = ['👍', '😂', '🔥'];
+  var esAdmin = false;
   var imagenBase64Principal = null;
   var subiendoImagenPrincipal = false;
   var imagenesRespuestas = {};
@@ -471,7 +478,7 @@
         '<span>' + iconoCorazon + '</span> <span class="count">' + numLikes + '</span>' +
       '</button>' +
       '<button class="btn-accion btn-toggle-reply" data-id="' + m.id + '">💬 Responder</button>' +
-      '<button class="btn-accion borrar" data-id="' + m.id + '">🗑️ Borrar</button>' +
+      (esAdmin ? '<button class="btn-accion borrar" data-id="' + m.id + '">🗑️ Borrar</button>' : '') +
     '</div>';
 
     var htmlReacciones = '<div class="reacciones-bar">' + REACCIONES_DISPONIBLES.map(function (emoji) {
@@ -839,9 +846,16 @@
   }
 
   async function borrar(id) {
-    if (!confirm('¿Borrar este mensaje?')) return;
-    var r = await sb.from('mensajes').delete().eq('id', id);
+    var respuestas = await sb.from('mensajes').select('id', { count: 'exact', head: true }).eq('mensaje_padre_id', id);
+    var numRespuestas = respuestas.count || 0;
+    var texto = numRespuestas > 0
+      ? '¿Borrar este mensaje? También se borrarán sus ' + numRespuestas + ' respuesta' + (numRespuestas === 1 ? '' : 's') + '.'
+      : '¿Borrar este mensaje?';
+    if (!confirm(texto)) return;
+
+    var r = await sb.from('mensajes').delete().eq('id', id).select();
     if (r.error) { estado('No se ha podido borrar: ' + r.error.message); return; }
+    if (!r.data || !r.data.length) { estado('No tienes permiso para borrar mensajes.'); return; }
     cargar();
   }
 
@@ -853,6 +867,38 @@
     if (inp) inp.value = '';
     if (imgPrev) { imgPrev.removeAttribute('src'); imgPrev.src = ''; }
     if (prev) { prev.style.display = 'none'; prev.setAttribute('hidden', 'true'); }
+  }
+
+  async function comprobarSesionAdmin() {
+    try {
+      var r = await sb.auth.getSession();
+      esAdmin = !!(r.data && r.data.session);
+    } catch (e) { esAdmin = false; }
+  }
+
+  var togglePresidente = document.getElementById('togglePresidente');
+  if (togglePresidente) {
+    togglePresidente.addEventListener('click', function () {
+      var caja = document.getElementById('cajaPresidente');
+      if (caja) caja.style.display = (caja.style.display === 'none') ? 'block' : 'none';
+    });
+  }
+
+  var btnEntrarPresidente = document.getElementById('btnEntrarPresidente');
+  if (btnEntrarPresidente) {
+    btnEntrarPresidente.addEventListener('click', async function () {
+      var email = document.getElementById('presiEmail').value.trim();
+      var pass = document.getElementById('presiPass').value;
+      if (!email || !pass) { alert('Rellena email y contraseña.'); return; }
+
+      var r = await sb.auth.signInWithPassword({ email: email, password: pass });
+      if (r.error) { alert('No se ha podido entrar: ' + r.error.message); return; }
+
+      esAdmin = true;
+      document.getElementById('cajaPresidente').style.display = 'none';
+      document.getElementById('presiPass').value = '';
+      cargar();
+    });
   }
 
   function activarRealtime() {
@@ -1098,8 +1144,10 @@
   if (btnPub) btnPub.addEventListener('click', publicar);
 
   limpiarImagenPrincipal();
-  cargar();
-  activarRealtime();
+  comprobarSesionAdmin().then(function () {
+    cargar();
+    activarRealtime();
+  });
 })();
 </script>
 </body>
