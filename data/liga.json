@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-20T15:13:10.267Z",
+  "actualizado": "2026-09-20T15:30:29.129Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -72,7 +72,7 @@
       "fecha": "2026-09-20T14:15:00.000Z",
       "golesLocal": 0,
       "golesVisitante": 0,
-      "estado": "break"
+      "estado": "secondTime"
     },
     {
       "local": "Deportivo",
@@ -873,6 +873,19 @@
       "pideBruto": 180000,
       "valorMercado": "0,2 M",
       "valorBruto": 180000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Marchal",
+      "foto": "https://cdn.biwenger.com/i/p/42627.png",
+      "posicion": "Delantero",
+      "equipoReal": "Real Sociedad",
+      "vendedor": "FC FORUSIA",
+      "pide": "0,3 M",
+      "pideBruto": 330000,
+      "valorMercado": "0,3 M",
+      "valorBruto": 330000,
       "diferencia": 0
     },
     {
@@ -2181,7 +2194,7 @@
       "balance": "−48,8 M",
       "balanceBruto": -48835799,
       "sobreprecioMedio": 52,
-      "enVenta": 7,
+      "enVenta": 8,
       "fichajeEstrella": {
         "nombre": "Pedri",
         "precio": "18,9 M",
