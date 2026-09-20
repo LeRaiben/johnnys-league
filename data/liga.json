@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-20T13:43:03.137Z",
+  "actualizado": "2026-09-20T13:56:29.187Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -60,7 +60,7 @@
       "escudoLocal": "https://cdn.biwenger.com/i/t/8.png",
       "escudoVisitante": "https://cdn.biwenger.com/i/t/65.png",
       "fecha": "2026-09-20T12:00:00.000Z",
-      "golesLocal": 0,
+      "golesLocal": 1,
       "golesVisitante": 0,
       "estado": "secondTime"
     },
@@ -679,6 +679,19 @@
       "valorMercado": "0,4 M",
       "valorBruto": 400000,
       "diferencia": 20000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Quagliata",
+      "foto": "https://cdn.biwenger.com/i/p/40952.png",
+      "posicion": "Defensa",
+      "equipoReal": "Deportivo",
+      "vendedor": "Urdinho Pernambucano",
+      "pide": "5,0 M",
+      "pideBruto": 5000000,
+      "valorMercado": "2,9 M",
+      "valorBruto": 2920000,
+      "diferencia": 2080000
     },
     {
       "tipo": "venta",
@@ -2076,7 +2089,7 @@
       "balance": "+32,0 M",
       "balanceBruto": 32046666,
       "sobreprecioMedio": null,
-      "enVenta": 1,
+      "enVenta": 2,
       "fichajeEstrella": null,
       "total": 12,
       "puestoEficiencia": 4,
