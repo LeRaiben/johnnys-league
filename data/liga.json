@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-21T19:32:01.795Z",
+  "actualizado": "2026-09-21T19:46:32.729Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -6700,7 +6700,7 @@
     },
     {
       "tipo": "mercado",
-      "texto": "Mercado movido: 12 cláusulas pagadas en los últimos 7 días."
+      "texto": "Mercado movido: 11 cláusulas pagadas en los últimos 7 días."
     }
   ],
   "amenazas": [
@@ -9485,8 +9485,8 @@
       "pagadoPorSuDueno": 3100000,
       "margen": 1910000,
       "margenPorcentaje": 79,
-      "blindado": true,
-      "blindadoHasta": "2026-09-21T19:44:31.000Z"
+      "blindado": false,
+      "blindadoHasta": null
     },
     {
       "id": "18570",
@@ -9587,8 +9587,8 @@
       "pagadoPorSuDueno": 0,
       "margen": 2760340,
       "margenPorcentaje": 77,
-      "blindado": true,
-      "blindadoHasta": "2026-09-21T19:44:31.000Z"
+      "blindado": false,
+      "blindadoHasta": null
     },
     {
       "id": "31167",
@@ -9621,8 +9621,8 @@
       "pagadoPorSuDueno": 1650000,
       "margen": 1175000,
       "margenPorcentaje": 50,
-      "blindado": true,
-      "blindadoHasta": "2026-09-21T19:44:31.000Z"
+      "blindado": false,
+      "blindadoHasta": null
     },
     {
       "id": "37600",
@@ -9655,8 +9655,8 @@
       "pagadoPorSuDueno": null,
       "margen": 1456000,
       "margenPorcentaje": 40,
-      "blindado": true,
-      "blindadoHasta": "2026-09-21T19:44:31.000Z"
+      "blindado": false,
+      "blindadoHasta": null
     },
     {
       "id": "38422",
@@ -9689,8 +9689,8 @@
       "pagadoPorSuDueno": null,
       "margen": 550000,
       "margenPorcentaje": 100,
-      "blindado": true,
-      "blindadoHasta": "2026-09-21T19:44:31.000Z"
+      "blindado": false,
+      "blindadoHasta": null
     },
     {
       "id": "39801",
@@ -9723,8 +9723,8 @@
       "pagadoPorSuDueno": null,
       "margen": 700000,
       "margenPorcentaje": 200,
-      "blindado": true,
-      "blindadoHasta": "2026-09-21T19:44:31.000Z"
+      "blindado": false,
+      "blindadoHasta": null
     },
     {
       "id": "41076",
@@ -9755,8 +9755,8 @@
       "pagadoPorSuDueno": null,
       "margen": 520000,
       "margenPorcentaje": 100,
-      "blindado": true,
-      "blindadoHasta": "2026-09-21T19:44:31.000Z"
+      "blindado": false,
+      "blindadoHasta": null
     },
     {
       "id": "41087",
@@ -9822,8 +9822,8 @@
       "pagadoPorSuDueno": 523700,
       "margen": 657400,
       "margenPorcentaje": 169,
-      "blindado": true,
-      "blindadoHasta": "2026-09-21T19:44:31.000Z"
+      "blindado": false,
+      "blindadoHasta": null
     },
     {
       "id": "41418",
@@ -9856,8 +9856,8 @@
       "pagadoPorSuDueno": 3580200,
       "margen": 2272280,
       "margenPorcentaje": 83,
-      "blindado": true,
-      "blindadoHasta": "2026-09-21T19:44:31.000Z"
+      "blindado": false,
+      "blindadoHasta": null
     },
     {
       "id": "1876",
@@ -12463,8 +12463,8 @@
         "pagadoPorSuDueno": null,
         "margen": 520000,
         "margenPorcentaje": 100,
-        "blindado": true,
-        "blindadoHasta": "2026-09-21T19:44:31.000Z"
+        "blindado": false,
+        "blindadoHasta": null
       },
       {
         "id": "41609",
@@ -13187,8 +13187,8 @@
         "pagadoPorSuDueno": 0,
         "margen": 2760340,
         "margenPorcentaje": 77,
-        "blindado": true,
-        "blindadoHasta": "2026-09-21T19:44:31.000Z",
+        "blindado": false,
+        "blindadoHasta": null,
         "mediaReciente": 0
       },
       {
@@ -13222,8 +13222,8 @@
         "pagadoPorSuDueno": null,
         "margen": 550000,
         "margenPorcentaje": 100,
-        "blindado": true,
-        "blindadoHasta": "2026-09-21T19:44:31.000Z",
+        "blindado": false,
+        "blindadoHasta": null,
         "mediaReciente": 0
       },
       {
@@ -16432,6 +16432,29 @@
         2
       ],
       "rachaTitular": 0,
+      "nivel": "medio"
+    },
+    {
+      "nombre": "Dotor",
+      "foto": "https://cdn.biwenger.com/i/p/31167.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Málaga",
+      "presidente": "Cañoneros CF",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/11412340.png",
+      "precioTexto": "2,4 M",
+      "clausulaTexto": "3,5 M",
+      "margenPorcentaje": 50,
+      "margenTexto": "1,2 M",
+      "media": 5.3,
+      "puntosPorMillon": 13.62,
+      "racha": [
+        3,
+        10,
+        2,
+        3,
+        7
+      ],
+      "rachaTitular": 2,
       "nivel": "medio"
     },
     {
