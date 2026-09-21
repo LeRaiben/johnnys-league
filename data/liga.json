@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-21T07:43:12.529Z",
+  "actualizado": "2026-09-21T07:58:13.749Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -243,8 +243,8 @@
       "iniciales": "LV",
       "escudo": "https://cdn.biwenger.com/i/u/13934763.png",
       "puntos": 265,
-      "valor": "61,1 M",
-      "valorBruto": 61140000,
+      "valor": "59,0 M",
+      "valorBruto": 58970000,
       "esTuyo": false,
       "puntosJornada": 62,
       "jugadosJornada": 11,
@@ -822,19 +822,6 @@
       "valorMercado": "1,2 M",
       "valorBruto": 1220000,
       "diferencia": -290000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Pablo Ramón",
-      "foto": "https://cdn.biwenger.com/i/p/35408.png",
-      "posicion": "Defensa",
-      "equipoReal": "Racing",
-      "vendedor": "Las Víboras FC",
-      "pide": "2,2 M",
-      "pideBruto": 2190000,
-      "valorMercado": "2,2 M",
-      "valorBruto": 2170000,
-      "diferencia": 20000
     },
     {
       "tipo": "venta",
@@ -1641,7 +1628,7 @@
       "puestoActividad": 6,
       "vsMediaPuntos": 30,
       "vsMediaEficiencia": 20,
-      "vsMediaValor": 4,
+      "vsMediaValor": 5,
       "tendencia": {
         "puestos": 0,
         "puntos": 129,
@@ -1681,7 +1668,7 @@
       "puestoGasto": 4,
       "puestoActividad": 10,
       "vsMediaPuntos": 27,
-      "vsMediaEficiencia": 3,
+      "vsMediaEficiencia": 2,
       "vsMediaValor": 20,
       "tendencia": {
         "puestos": 1,
@@ -1883,7 +1870,7 @@
       "puestoActividad": 9,
       "vsMediaPuntos": -3,
       "vsMediaEficiencia": 20,
-      "vsMediaValor": -22,
+      "vsMediaValor": -21,
       "tendencia": {
         "puestos": -1,
         "puntos": 88,
@@ -1919,7 +1906,7 @@
       "puestoGasto": 11,
       "puestoActividad": 11,
       "vsMediaPuntos": -4,
-      "vsMediaEficiencia": -12,
+      "vsMediaEficiencia": -13,
       "vsMediaValor": 6,
       "tendencia": {
         "puestos": 0,
@@ -1933,10 +1920,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/13934763.png",
       "iniciales": "LV",
       "puntos": 265,
-      "valor": "61,1 M",
-      "valorBruto": 61140000,
+      "valor": "59,0 M",
+      "valorBruto": 58970000,
       "esTuyo": false,
-      "puntosPorMillon": 4.33,
+      "puntosPorMillon": 4.49,
       "mediaJornada": 37.9,
       "clausulasHechas": 12,
       "clausulasSufridas": 3,
@@ -1948,20 +1935,20 @@
       "balance": "−7,4 M",
       "balanceBruto": -7391201,
       "sobreprecioMedio": 30,
-      "enVenta": 16,
+      "enVenta": 15,
       "fichajeEstrella": {
         "nombre": "Camello",
         "precio": "6,7 M",
         "foto": "https://cdn.biwenger.com/i/p/17756.png"
       },
       "total": 12,
-      "puestoEficiencia": 11,
+      "puestoEficiencia": 10,
       "puestoValor": 1,
       "puestoGasto": 2,
       "puestoActividad": 2,
       "vsMediaPuntos": -6,
-      "vsMediaEficiencia": -31,
-      "vsMediaValor": 32,
+      "vsMediaEficiencia": -29,
+      "vsMediaValor": 28,
       "tendencia": {
         "puestos": 1,
         "puntos": 113,
@@ -2002,7 +1989,7 @@
       "puestoActividad": 3,
       "vsMediaPuntos": -6,
       "vsMediaEficiencia": 0,
-      "vsMediaValor": -10,
+      "vsMediaValor": -9,
       "tendencia": {
         "puestos": -3,
         "puntos": 80,
@@ -2074,12 +2061,12 @@
       "enVenta": 0,
       "fichajeEstrella": null,
       "total": 12,
-      "puestoEficiencia": 10,
+      "puestoEficiencia": 11,
       "puestoValor": 9,
       "puestoGasto": 12,
       "puestoActividad": 12,
       "vsMediaPuntos": -34,
-      "vsMediaEficiencia": -30,
+      "vsMediaEficiencia": -31,
       "vsMediaValor": -8,
       "tendencia": {
         "puestos": 0,
@@ -6395,32 +6382,6 @@
             "esLocal": true,
             "rival": "Elche",
             "dificultad": 28
-          }
-        ]
-      },
-      {
-        "nombre": "Pablo Ramón",
-        "posicion": "Defensa",
-        "foto": "https://cdn.biwenger.com/i/p/35408.png",
-        "equipoReal": "Racing",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": true,
-            "rival": "Valencia",
-            "dificultad": 22
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": false,
-            "rival": "Osasuna",
-            "dificultad": 32
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": true,
-            "rival": "Espanyol",
-            "dificultad": 35
           }
         ]
       },
@@ -12187,40 +12148,6 @@
       "blindadoHasta": "2026-09-30T05:03:41.000Z"
     },
     {
-      "id": "35408",
-      "nombre": "Pablo Ramón",
-      "slug": "pablo-ramon",
-      "posicion": "Defensa",
-      "posicionCodigo": 2,
-      "foto": "https://cdn.biwenger.com/i/p/35408.png",
-      "equipoReal": "Racing",
-      "equipoIdReal": "812",
-      "presidente": "Las Víboras FC",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
-      "precio": 2170000,
-      "precioTexto": "2,2 M",
-      "puntosTotales": 20,
-      "partidosJugados": 5,
-      "media": 4,
-      "puntosPorMillon": 9.22,
-      "racha": [
-        1,
-        4,
-        6,
-        6,
-        3
-      ],
-      "rachaTitular": 1,
-      "ultimoMinutos": 90,
-      "clausula": 3825000,
-      "clausulaTexto": "3,8 M",
-      "pagadoPorSuDueno": 2550000,
-      "margen": 1655000,
-      "margenPorcentaje": 76,
-      "blindado": false,
-      "blindadoHasta": null
-    },
-    {
       "id": "35606",
       "nombre": "El-Abdellaoui",
       "slug": "el-abdellaoui",
@@ -16603,24 +16530,6 @@
         "rival": "Real Sociedad",
         "esLocal": false,
         "dificultad": 44
-      },
-      {
-        "nombre": "Pablo Ramón",
-        "foto": "https://cdn.biwenger.com/i/p/35408.png",
-        "posicion": "Defensa",
-        "equipoReal": "Racing",
-        "racha": [
-          1,
-          4,
-          6,
-          6,
-          3
-        ],
-        "rachaTitular": 1,
-        "nota": 5.2,
-        "rival": "Valencia",
-        "esLocal": true,
-        "dificultad": 22
       },
       {
         "nombre": "Brugué",
