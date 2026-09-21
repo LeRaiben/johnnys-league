@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-21T13:18:10.693Z",
+  "actualizado": "2026-09-21T13:33:37.180Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -600,6 +600,19 @@
       "pideBruto": 150000,
       "valorMercado": "0,0 M",
       "valorBruto": 0,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Huijsen",
+      "foto": "https://cdn.biwenger.com/i/p/37495.png",
+      "posicion": "Defensa",
+      "equipoReal": "Real Madrid",
+      "vendedor": "LXUNITED",
+      "pide": "5,8 M",
+      "pideBruto": 5770000,
+      "valorMercado": "5,8 M",
+      "valorBruto": 5770000,
       "diferencia": 0
     },
     {
@@ -1766,7 +1779,7 @@
       "balance": "+7,8 M",
       "balanceBruto": 7780334,
       "sobreprecioMedio": 50,
-      "enVenta": 0,
+      "enVenta": 1,
       "fichajeEstrella": {
         "nombre": "Vinícius Jr",
         "precio": "23,0 M",
@@ -16919,6 +16932,18 @@
       "clausulaTexto": "17,8 M",
       "media": 6.5,
       "blindadoHasta": "2026-09-25T12:42:59.000Z"
+    },
+    {
+      "nombre": "Koke",
+      "foto": "https://cdn.biwenger.com/i/p/1083.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Atlético",
+      "presidente": "Gorila FC",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/11411835.png",
+      "precioTexto": "3,3 M",
+      "clausulaTexto": "6,4 M",
+      "media": 5.9,
+      "blindadoHasta": "2026-09-25T13:18:41.000Z"
     }
   ]
 }
