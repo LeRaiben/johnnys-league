@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-21T12:00:14.205Z",
+  "actualizado": "2026-09-21T12:23:14.706Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -147,8 +147,8 @@
       "iniciales": "SF",
       "escudo": "https://cdn.biwenger.com/i/u/14027560.png",
       "puntos": 312,
-      "valor": "30,3 M",
-      "valorBruto": 30330000,
+      "valor": "29,0 M",
+      "valorBruto": 28990000,
       "esTuyo": false,
       "puntosJornada": 55,
       "jugadosJornada": 10,
@@ -887,6 +887,19 @@
       "valorMercado": "0,5 M",
       "valorBruto": 520000,
       "diferencia": -30000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Bright Ede",
+      "foto": "https://cdn.biwenger.com/i/p/42395.png",
+      "posicion": "Defensa",
+      "equipoReal": "Deportivo",
+      "vendedor": "Seif fc",
+      "pide": "0,8 M",
+      "pideBruto": 750000,
+      "valorMercado": "0,8 M",
+      "valorBruto": 750000,
+      "diferencia": 0
     },
     {
       "tipo": "clausula",
@@ -1628,7 +1641,7 @@
       "puestoActividad": 6,
       "vsMediaPuntos": 30,
       "vsMediaEficiencia": 19,
-      "vsMediaValor": 5,
+      "vsMediaValor": 6,
       "tendencia": {
         "puestos": 0,
         "puntos": 129,
@@ -1668,7 +1681,7 @@
       "puestoGasto": 4,
       "puestoActividad": 10,
       "vsMediaPuntos": 27,
-      "vsMediaEficiencia": 2,
+      "vsMediaEficiencia": 1,
       "vsMediaValor": 21,
       "tendencia": {
         "puestos": 1,
@@ -1682,10 +1695,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/14027560.png",
       "iniciales": "SF",
       "puntos": 312,
-      "valor": "30,3 M",
-      "valorBruto": 30330000,
+      "valor": "29,0 M",
+      "valorBruto": 28990000,
       "esTuyo": false,
-      "puntosPorMillon": 10.29,
+      "puntosPorMillon": 10.76,
       "mediaJornada": 44.6,
       "clausulasHechas": 2,
       "clausulasSufridas": 3,
@@ -1697,7 +1710,7 @@
       "balance": "+6,4 M",
       "balanceBruto": 6397000,
       "sobreprecioMedio": 27,
-      "enVenta": 0,
+      "enVenta": 1,
       "fichajeEstrella": {
         "nombre": "Bellingham",
         "precio": "23,1 M",
@@ -1709,8 +1722,8 @@
       "puestoGasto": 6,
       "puestoActividad": 8,
       "vsMediaPuntos": 11,
-      "vsMediaEficiencia": 63,
-      "vsMediaValor": -34,
+      "vsMediaEficiencia": 69,
+      "vsMediaValor": -37,
       "tendencia": {
         "puestos": 1,
         "puntos": 113,
@@ -1750,7 +1763,7 @@
       "puestoGasto": 9,
       "puestoActividad": 4,
       "vsMediaPuntos": 8,
-      "vsMediaEficiencia": 12,
+      "vsMediaEficiencia": 11,
       "vsMediaValor": -6,
       "tendencia": {
         "puestos": 5,
@@ -1792,7 +1805,7 @@
       "puestoActividad": 7,
       "vsMediaPuntos": 2,
       "vsMediaEficiencia": -1,
-      "vsMediaValor": -1,
+      "vsMediaValor": 0,
       "tendencia": {
         "puestos": -3,
         "puntos": 70,
@@ -1869,7 +1882,7 @@
       "puestoGasto": 10,
       "puestoActividad": 9,
       "vsMediaPuntos": -3,
-      "vsMediaEficiencia": 19,
+      "vsMediaEficiencia": 18,
       "vsMediaValor": -21,
       "tendencia": {
         "puestos": -1,
@@ -1988,7 +2001,7 @@
       "puestoGasto": 7,
       "puestoActividad": 3,
       "vsMediaPuntos": -6,
-      "vsMediaEficiencia": 0,
+      "vsMediaEficiencia": -1,
       "vsMediaValor": -9,
       "tendencia": {
         "puestos": -3,
@@ -2029,7 +2042,7 @@
       "puestoGasto": 8,
       "puestoActividad": 5,
       "vsMediaPuntos": -24,
-      "vsMediaEficiencia": -33,
+      "vsMediaEficiencia": -34,
       "vsMediaValor": 11,
       "tendencia": {
         "puestos": 0,
@@ -6596,32 +6609,6 @@
         ]
       },
       {
-        "nombre": "José Salinas",
-        "posicion": "Defensa",
-        "foto": "https://cdn.biwenger.com/i/p/37723.png",
-        "equipoReal": "Málaga",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": true,
-            "rival": "Espanyol",
-            "dificultad": 39
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": true,
-            "rival": "Real Sociedad",
-            "dificultad": 55
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": false,
-            "rival": "Alavés",
-            "dificultad": 65
-          }
-        ]
-      },
-      {
         "nombre": "Oriol Rey",
         "posicion": "Centrocampista",
         "foto": "https://cdn.biwenger.com/i/p/37726.png",
@@ -6722,32 +6709,6 @@
             "esLocal": true,
             "rival": "Málaga",
             "dificultad": 9
-          }
-        ]
-      },
-      {
-        "nombre": "Yeboah",
-        "posicion": "Defensa",
-        "foto": "https://cdn.biwenger.com/i/p/41932.png",
-        "equipoReal": "Osasuna",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Betis",
-            "dificultad": 66
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": true,
-            "rival": "Racing",
-            "dificultad": 26
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": false,
-            "rival": "Sevilla",
-            "dificultad": 57
           }
         ]
       },
@@ -12311,40 +12272,6 @@
       "blindadoHasta": "2026-10-02T05:02:24.000Z"
     },
     {
-      "id": "37723",
-      "nombre": "José Salinas",
-      "slug": "jose-salinas",
-      "posicion": "Defensa",
-      "posicionCodigo": 2,
-      "foto": "https://cdn.biwenger.com/i/p/37723.png",
-      "equipoReal": "Málaga",
-      "equipoIdReal": "65",
-      "presidente": "Seif fc",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/14027560.png",
-      "precio": 910000,
-      "precioTexto": "0,9 M",
-      "puntosTotales": 12,
-      "partidosJugados": 6,
-      "media": 2,
-      "puntosPorMillon": 13.19,
-      "racha": [
-        3,
-        0,
-        2,
-        5,
-        1
-      ],
-      "rachaTitular": 1,
-      "ultimoMinutos": 90,
-      "clausula": 2000000,
-      "clausulaTexto": "2,0 M",
-      "pagadoPorSuDueno": 1000000,
-      "margen": 1090000,
-      "margenPorcentaje": 120,
-      "blindado": true,
-      "blindadoHasta": "2026-09-29T05:04:41.000Z"
-    },
-    {
       "id": "37726",
       "nombre": "Oriol Rey",
       "slug": "oriol-rey",
@@ -12478,38 +12405,6 @@
       "margenPorcentaje": 226,
       "blindado": true,
       "blindadoHasta": "2026-10-04T05:01:36.000Z"
-    },
-    {
-      "id": "41932",
-      "nombre": "Yeboah",
-      "slug": "yeboah",
-      "posicion": "Defensa",
-      "posicionCodigo": 2,
-      "foto": "https://cdn.biwenger.com/i/p/41932.png",
-      "equipoReal": "Osasuna",
-      "equipoIdReal": "93",
-      "presidente": "Seif fc",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/14027560.png",
-      "precio": 430000,
-      "precioTexto": "0,4 M",
-      "puntosTotales": 8,
-      "partidosJugados": 3,
-      "media": 2.7,
-      "puntosPorMillon": 18.6,
-      "racha": [
-        2,
-        6,
-        0
-      ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 90,
-      "clausula": 1290000,
-      "clausulaTexto": "1,3 M",
-      "pagadoPorSuDueno": 404020,
-      "margen": 860000,
-      "margenPorcentaje": 200,
-      "blindado": true,
-      "blindadoHasta": "2026-09-29T05:04:40.000Z"
     },
     {
       "id": "41940",
@@ -16608,40 +16503,6 @@
         "dificultad": 40
       },
       {
-        "nombre": "José Salinas",
-        "foto": "https://cdn.biwenger.com/i/p/37723.png",
-        "posicion": "Defensa",
-        "equipoReal": "Málaga",
-        "racha": [
-          3,
-          0,
-          2,
-          5,
-          1
-        ],
-        "rachaTitular": 1,
-        "nota": 3.8,
-        "rival": "Espanyol",
-        "esLocal": true,
-        "dificultad": 39
-      },
-      {
-        "nombre": "Yeboah",
-        "foto": "https://cdn.biwenger.com/i/p/41932.png",
-        "posicion": "Defensa",
-        "equipoReal": "Osasuna",
-        "racha": [
-          2,
-          6,
-          0
-        ],
-        "rachaTitular": 0,
-        "nota": 3.7,
-        "rival": "Betis",
-        "esLocal": false,
-        "dificultad": 66
-      },
-      {
         "nombre": "Oriol Rey",
         "foto": "https://cdn.biwenger.com/i/p/37726.png",
         "posicion": "Centrocampista",
@@ -16884,6 +16745,48 @@
     }
   ],
   "riesgoClausula": [
+    {
+      "nombre": "Adrián Niño",
+      "foto": "https://cdn.biwenger.com/i/p/35706.png",
+      "posicion": "Delantero",
+      "equipoReal": "Málaga",
+      "presidente": "Urdinho Pernambucano",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/12659137.png?v=9",
+      "precioTexto": "1,1 M",
+      "clausulaTexto": "0,0 M",
+      "margenPorcentaje": -100,
+      "margenTexto": "-1,1 M",
+      "media": 4.3,
+      "puntosPorMillon": 12.38,
+      "racha": [
+        2,
+        0,
+        11
+      ],
+      "rachaTitular": 0,
+      "nivel": "alto"
+    },
+    {
+      "nombre": "Adrián Niño",
+      "foto": "https://cdn.biwenger.com/i/p/35706.png",
+      "posicion": "Delantero",
+      "equipoReal": "Málaga",
+      "presidente": "Las Víboras FC",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
+      "precioTexto": "1,1 M",
+      "clausulaTexto": "0,0 M",
+      "margenPorcentaje": -100,
+      "margenTexto": "-1,1 M",
+      "media": 4.3,
+      "puntosPorMillon": 12.38,
+      "racha": [
+        2,
+        0,
+        11
+      ],
+      "rachaTitular": 0,
+      "nivel": "alto"
+    },
     {
       "nombre": "Álvaro Valles",
       "foto": "https://cdn.biwenger.com/i/p/30487.png",
