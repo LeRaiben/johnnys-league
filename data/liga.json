@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-21T21:32:24.626Z",
+  "actualizado": "2026-09-21T21:46:39.681Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -131,8 +131,8 @@
       "iniciales": "CT",
       "escudo": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
       "puntos": 409,
-      "valor": "54,2 M",
-      "valorBruto": 54170000,
+      "valor": "52,9 M",
+      "valorBruto": 52850000,
       "esTuyo": false,
       "puntosJornada": 46,
       "jugadosJornada": 7,
@@ -601,19 +601,6 @@
       "valorMercado": "3,1 M",
       "valorBruto": 3150000,
       "diferencia": 1020000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Jugador",
-      "foto": "https://cdn.biwenger.com/i/p/27625.png",
-      "posicion": "",
-      "equipoReal": "",
-      "vendedor": "CD Tiro Buchón",
-      "pide": "0,1 M",
-      "pideBruto": 150000,
-      "valorMercado": "0,0 M",
-      "valorBruto": 0,
-      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -1696,10 +1683,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
       "iniciales": "CT",
       "puntos": 409,
-      "valor": "54,2 M",
-      "valorBruto": 54170000,
+      "valor": "52,9 M",
+      "valorBruto": 52850000,
       "esTuyo": false,
-      "puntosPorMillon": 7.55,
+      "puntosPorMillon": 7.74,
       "mediaJornada": 58.4,
       "clausulasHechas": 1,
       "clausulasSufridas": 4,
@@ -1711,7 +1698,7 @@
       "balance": "−3,0 M",
       "balanceBruto": -2984700,
       "sobreprecioMedio": 46,
-      "enVenta": 3,
+      "enVenta": 2,
       "fichajeEstrella": {
         "nombre": "Bellingham",
         "precio": "27,7 M",
@@ -1723,8 +1710,8 @@
       "puestoGasto": 4,
       "puestoActividad": 8,
       "vsMediaPuntos": 24,
-      "vsMediaEficiencia": -1,
-      "vsMediaValor": 23,
+      "vsMediaEficiencia": 1,
+      "vsMediaValor": 20,
       "tendencia": {
         "puestos": 1,
         "puntos": 198,
@@ -1806,7 +1793,7 @@
       "puestoActividad": 5,
       "vsMediaPuntos": 6,
       "vsMediaEficiencia": 7,
-      "vsMediaValor": -3,
+      "vsMediaValor": -2,
       "tendencia": {
         "puestos": 5,
         "puntos": 192,
@@ -1961,8 +1948,8 @@
       "puestoGasto": 11,
       "puestoActividad": 10,
       "vsMediaPuntos": -6,
-      "vsMediaEficiencia": 12,
-      "vsMediaValor": -18,
+      "vsMediaEficiencia": 11,
+      "vsMediaValor": -17,
       "tendencia": {
         "puestos": -2,
         "puntos": 125,
@@ -2003,7 +1990,7 @@
       "puestoActividad": 2,
       "vsMediaPuntos": -6,
       "vsMediaEficiencia": -16,
-      "vsMediaValor": 9,
+      "vsMediaValor": 10,
       "tendencia": {
         "puestos": -4,
         "puntos": 114,
@@ -3492,32 +3479,6 @@
             "esLocal": true,
             "rival": "Málaga",
             "dificultad": 9
-          }
-        ]
-      },
-      {
-        "nombre": "Pablo Martínez",
-        "posicion": "Centrocampista",
-        "foto": "https://cdn.biwenger.com/i/p/4245.png",
-        "equipoReal": "Málaga",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": true,
-            "rival": "Espanyol",
-            "dificultad": 39
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": true,
-            "rival": "Real Sociedad",
-            "dificultad": 55
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": false,
-            "rival": "Alavés",
-            "dificultad": 65
           }
         ]
       },
@@ -8194,40 +8155,6 @@
       "margenPorcentaje": 50,
       "blindado": true,
       "blindadoHasta": "2026-09-26T06:19:28.000Z"
-    },
-    {
-      "id": "4245",
-      "nombre": "Pablo Martínez",
-      "slug": "pablo-martinez",
-      "posicion": "Centrocampista",
-      "posicionCodigo": 3,
-      "foto": "https://cdn.biwenger.com/i/p/4245.png",
-      "equipoReal": "Málaga",
-      "equipoIdReal": "65",
-      "presidente": "CD Tiro Buchón",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
-      "precio": 1170000,
-      "precioTexto": "1,2 M",
-      "puntosTotales": 15,
-      "partidosJugados": 5,
-      "media": 3,
-      "puntosPorMillon": 12.82,
-      "racha": [
-        3,
-        2,
-        5,
-        3,
-        2
-      ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 23,
-      "clausula": 1785003,
-      "clausulaTexto": "1,8 M",
-      "pagadoPorSuDueno": 1190002,
-      "margen": 615003,
-      "margenPorcentaje": 53,
-      "blindado": true,
-      "blindadoHasta": "2026-09-29T05:04:41.000Z"
     },
     {
       "id": "12221",
@@ -14211,24 +14138,6 @@
         "rival": "Atlético",
         "esLocal": true,
         "dificultad": 64
-      },
-      {
-        "nombre": "Pablo Martínez",
-        "foto": "https://cdn.biwenger.com/i/p/4245.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Málaga",
-        "racha": [
-          3,
-          2,
-          5,
-          3,
-          2
-        ],
-        "rachaTitular": 0,
-        "nota": 4.3,
-        "rival": "Espanyol",
-        "esLocal": true,
-        "dificultad": 39
       },
       {
         "nombre": "Bouare",
