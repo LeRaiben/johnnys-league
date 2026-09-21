@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-21T20:16:50.205Z",
+  "actualizado": "2026-09-21T20:31:29.104Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -656,6 +656,19 @@
     },
     {
       "tipo": "venta",
+      "nombre": "Guido Rodríguez",
+      "foto": "https://cdn.biwenger.com/i/p/163.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Valencia",
+      "vendedor": "FC FORUSIA",
+      "pide": "3,6 M",
+      "pideBruto": 3650000,
+      "valorMercado": "3,6 M",
+      "valorBruto": 3650000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
       "nombre": "Pacheco",
       "foto": "https://cdn.biwenger.com/i/p/12424.png",
       "posicion": "Defensa",
@@ -679,6 +692,19 @@
       "valorMercado": "9,2 M",
       "valorBruto": 9200000,
       "diferencia": -60000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Osambela",
+      "foto": "https://cdn.biwenger.com/i/p/19693.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Osasuna",
+      "vendedor": "FC FORUSIA",
+      "pide": "0,1 M",
+      "pideBruto": 150000,
+      "valorMercado": "0,1 M",
+      "valorBruto": 150000,
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -1964,7 +1990,7 @@
       "balance": "−48,8 M",
       "balanceBruto": -48835799,
       "sobreprecioMedio": 45,
-      "enVenta": 5,
+      "enVenta": 7,
       "fichajeEstrella": {
         "nombre": "Pedri",
         "precio": "18,9 M",
