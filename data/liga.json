@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-21T09:41:18.842Z",
+  "actualizado": "2026-09-21T09:57:29.912Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -487,6 +487,19 @@
     },
     {
       "tipo": "venta",
+      "nombre": "Camavinga",
+      "foto": "https://cdn.biwenger.com/i/p/1733.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Real Madrid",
+      "vendedor": "Manchester Pity",
+      "pide": "1,9 M",
+      "pideBruto": 1870000,
+      "valorMercado": "1,8 M",
+      "valorBruto": 1830000,
+      "diferencia": 40000
+    },
+    {
+      "tipo": "venta",
       "nombre": "Mariano",
       "foto": "https://cdn.biwenger.com/i/p/5697.png",
       "posicion": "Delantero",
@@ -510,6 +523,32 @@
       "valorMercado": "6,3 M",
       "valorBruto": 6280000,
       "diferencia": 0
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Barja",
+      "foto": "https://cdn.biwenger.com/i/p/18256.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Osasuna",
+      "vendedor": "Manchester Pity",
+      "pide": "1,0 M",
+      "pideBruto": 960000,
+      "valorMercado": "1,0 M",
+      "valorBruto": 960000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Sergio Gómez",
+      "foto": "https://cdn.biwenger.com/i/p/19299.png",
+      "posicion": "Defensa",
+      "equipoReal": "Real Sociedad",
+      "vendedor": "Manchester Pity",
+      "pide": "3,4 M",
+      "pideBruto": 3390000,
+      "valorMercado": "3,3 M",
+      "valorBruto": 3320000,
+      "diferencia": 70000
     },
     {
       "tipo": "venta",
@@ -1846,7 +1885,7 @@
       "balance": "+16,9 M",
       "balanceBruto": 16868000,
       "sobreprecioMedio": null,
-      "enVenta": 3,
+      "enVenta": 6,
       "fichajeEstrella": null,
       "total": 12,
       "puestoEficiencia": 9,
