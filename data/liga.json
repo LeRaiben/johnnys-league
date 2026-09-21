@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-21T18:20:44.999Z",
+  "actualizado": "2026-09-21T18:44:48.674Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -131,8 +131,8 @@
       "iniciales": "CT",
       "escudo": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
       "puntos": 409,
-      "valor": "55,3 M",
-      "valorBruto": 55280000,
+      "valor": "54,2 M",
+      "valorBruto": 54170000,
       "esTuyo": false,
       "puntosJornada": 46,
       "jugadosJornada": 7,
@@ -275,8 +275,8 @@
       "iniciales": "LC",
       "escudo": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
       "puntos": 259,
-      "valor": "50,9 M",
-      "valorBruto": 50850000,
+      "valor": "47,0 M",
+      "valorBruto": 47040000,
       "esTuyo": false,
       "puntosJornada": 45,
       "jugadosJornada": 9,
@@ -422,6 +422,19 @@
   "mercadoPresidentes": [
     {
       "tipo": "venta",
+      "nombre": "Rubén García",
+      "foto": "https://cdn.biwenger.com/i/p/1602.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Osasuna",
+      "vendedor": "Lottin Capital",
+      "pide": "2,5 M",
+      "pideBruto": 2470000,
+      "valorMercado": "2,5 M",
+      "valorBruto": 2470000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
       "nombre": "Galilea",
       "foto": "https://cdn.biwenger.com/i/p/4070.png",
       "posicion": "Defensa",
@@ -435,16 +448,16 @@
     },
     {
       "tipo": "venta",
-      "nombre": "Iván Martín",
-      "foto": "https://cdn.biwenger.com/i/p/12403.png",
-      "posicion": "Centrocampista",
-      "equipoReal": "Racing",
+      "nombre": "Zubeldia",
+      "foto": "https://cdn.biwenger.com/i/p/8376.png",
+      "posicion": "Defensa",
+      "equipoReal": "Real Sociedad",
       "vendedor": "Lottin Capital",
-      "pide": "3,5 M",
-      "pideBruto": 3530000,
-      "valorMercado": "3,4 M",
-      "valorBruto": 3400000,
-      "diferencia": 130000
+      "pide": "1,4 M",
+      "pideBruto": 1450000,
+      "valorMercado": "1,4 M",
+      "valorBruto": 1450000,
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -458,6 +471,19 @@
       "valorMercado": "3,6 M",
       "valorBruto": 3580000,
       "diferencia": 20000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Pépé",
+      "foto": "https://cdn.biwenger.com/i/p/34479.png",
+      "posicion": "Delantero",
+      "equipoReal": "Villarreal",
+      "vendedor": "Lottin Capital",
+      "pide": "10,6 M",
+      "pideBruto": 10590000,
+      "valorMercado": "10,6 M",
+      "valorBruto": 10590000,
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -874,6 +900,22 @@
       "valorMercado": "0,8 M",
       "valorBruto": 750000,
       "diferencia": 0
+    },
+    {
+      "tipo": "clausula",
+      "fecha": "2026-09-21T18:38:46.000Z",
+      "nombre": "Freeman",
+      "foto": "https://cdn.biwenger.com/i/p/39901.png",
+      "posicion": "Defensa",
+      "equipoReal": "Villarreal",
+      "vendedor": "CD Tiro Buchón",
+      "comprador": "Lottin Capital",
+      "escudoComprador": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
+      "pide": "2,1 M",
+      "pideBruto": 2055000,
+      "valorMercado": "1,1 M",
+      "valorBruto": 1110000,
+      "diferencia": 945000
     },
     {
       "tipo": "clausula",
@@ -1574,10 +1616,10 @@
       "gastadoTexto": "8,4 M"
     },
     {
-      "nombre": "LXUNITED",
-      "veces": 2,
-      "gastado": 25131666,
-      "gastadoTexto": "25,1 M"
+      "nombre": "Lottin Capital",
+      "veces": 3,
+      "gastado": 21533000,
+      "gastadoTexto": "21,5 M"
     }
   ],
   "presidentes": [
@@ -1610,12 +1652,12 @@
       },
       "total": 12,
       "puestoEficiencia": 2,
-      "puestoValor": 4,
+      "puestoValor": 3,
       "puestoGasto": 3,
       "puestoActividad": 6,
       "vsMediaPuntos": 26,
-      "vsMediaEficiencia": 13,
-      "vsMediaValor": 9,
+      "vsMediaEficiencia": 12,
+      "vsMediaValor": 10,
       "tendencia": {
         "puestos": 0,
         "puntos": 178,
@@ -1628,20 +1670,20 @@
       "escudo": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
       "iniciales": "CT",
       "puntos": 409,
-      "valor": "55,3 M",
-      "valorBruto": 55280000,
+      "valor": "54,2 M",
+      "valorBruto": 54170000,
       "esTuyo": false,
-      "puntosPorMillon": 7.4,
+      "puntosPorMillon": 7.55,
       "mediaJornada": 58.4,
       "clausulasHechas": 1,
-      "clausulasSufridas": 3,
-      "operaciones": 4,
+      "clausulasSufridas": 4,
+      "operaciones": 5,
       "gastado": "27,7 M",
       "gastadoBruto": 27672000,
-      "ingresado": "22,6 M",
-      "ingresadoBruto": 22632300,
-      "balance": "−5,0 M",
-      "balanceBruto": -5039700,
+      "ingresado": "24,7 M",
+      "ingresadoBruto": 24687300,
+      "balance": "−3,0 M",
+      "balanceBruto": -2984700,
       "sobreprecioMedio": 46,
       "enVenta": 3,
       "fichajeEstrella": {
@@ -1650,13 +1692,13 @@
         "foto": "https://cdn.biwenger.com/i/p/30477.png"
       },
       "total": 12,
-      "puestoEficiencia": 6,
+      "puestoEficiencia": 5,
       "puestoValor": 1,
       "puestoGasto": 4,
-      "puestoActividad": 10,
+      "puestoActividad": 8,
       "vsMediaPuntos": 24,
-      "vsMediaEficiencia": -3,
-      "vsMediaValor": 25,
+      "vsMediaEficiencia": -1,
+      "vsMediaValor": 23,
       "tendencia": {
         "puestos": 1,
         "puntos": 198,
@@ -1694,10 +1736,10 @@
       "puestoEficiencia": 1,
       "puestoValor": 12,
       "puestoGasto": 6,
-      "puestoActividad": 8,
+      "puestoActividad": 9,
       "vsMediaPuntos": 12,
-      "vsMediaEficiencia": 66,
-      "vsMediaValor": -35,
+      "vsMediaEficiencia": 65,
+      "vsMediaValor": -34,
       "tendencia": {
         "puestos": 1,
         "puntos": 168,
@@ -1735,7 +1777,7 @@
       "puestoEficiencia": 4,
       "puestoValor": 8,
       "puestoGasto": 9,
-      "puestoActividad": 4,
+      "puestoActividad": 5,
       "vsMediaPuntos": 6,
       "vsMediaEficiencia": 7,
       "vsMediaValor": -3,
@@ -1770,12 +1812,12 @@
       "fichajeEstrella": null,
       "total": 12,
       "puestoEficiencia": 9,
-      "puestoValor": 3,
+      "puestoValor": 2,
       "puestoGasto": 10,
       "puestoActividad": 11,
       "vsMediaPuntos": 2,
       "vsMediaEficiencia": -10,
-      "vsMediaValor": 10,
+      "vsMediaValor": 11,
       "tendencia": {
         "puestos": 3,
         "puntos": 159,
@@ -1815,8 +1857,8 @@
       "puestoGasto": 5,
       "puestoActividad": 7,
       "vsMediaPuntos": 0,
-      "vsMediaEficiencia": -5,
-      "vsMediaValor": 3,
+      "vsMediaEficiencia": -6,
+      "vsMediaValor": 4,
       "tendencia": {
         "puestos": -4,
         "puntos": 113,
@@ -1851,13 +1893,13 @@
         "foto": "https://cdn.biwenger.com/i/p/17756.png"
       },
       "total": 12,
-      "puestoEficiencia": 5,
+      "puestoEficiencia": 6,
       "puestoValor": 7,
       "puestoGasto": 2,
       "puestoActividad": 1,
       "vsMediaPuntos": -1,
-      "vsMediaEficiencia": -1,
-      "vsMediaValor": -2,
+      "vsMediaEficiencia": -2,
+      "vsMediaValor": -1,
       "tendencia": {
         "puestos": 3,
         "puntos": 175,
@@ -1891,7 +1933,7 @@
       "puestoEficiencia": 3,
       "puestoValor": 11,
       "puestoGasto": 11,
-      "puestoActividad": 9,
+      "puestoActividad": 10,
       "vsMediaPuntos": -6,
       "vsMediaEficiencia": 12,
       "vsMediaValor": -18,
@@ -1930,12 +1972,12 @@
       },
       "total": 12,
       "puestoEficiencia": 10,
-      "puestoValor": 5,
+      "puestoValor": 4,
       "puestoGasto": 1,
       "puestoActividad": 2,
       "vsMediaPuntos": -6,
-      "vsMediaEficiencia": -15,
-      "vsMediaValor": 8,
+      "vsMediaEficiencia": -16,
+      "vsMediaValor": 9,
       "tendencia": {
         "puestos": -4,
         "puntos": 114,
@@ -1975,8 +2017,8 @@
       "puestoGasto": 7,
       "puestoActividad": 3,
       "vsMediaPuntos": -6,
-      "vsMediaEficiencia": -3,
-      "vsMediaValor": -6,
+      "vsMediaEficiencia": -4,
+      "vsMediaValor": -5,
       "tendencia": {
         "puestos": -3,
         "puntos": 125,
@@ -1989,35 +2031,35 @@
       "escudo": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
       "iniciales": "LC",
       "puntos": 259,
-      "valor": "50,9 M",
-      "valorBruto": 50850000,
+      "valor": "47,0 M",
+      "valorBruto": 47040000,
       "esTuyo": false,
-      "puntosPorMillon": 5.09,
+      "puntosPorMillon": 5.51,
       "mediaJornada": 37,
-      "clausulasHechas": 2,
+      "clausulasHechas": 3,
       "clausulasSufridas": 5,
-      "operaciones": 7,
-      "gastado": "19,5 M",
-      "gastadoBruto": 19478000,
+      "operaciones": 8,
+      "gastado": "21,5 M",
+      "gastadoBruto": 21533000,
       "ingresado": "39,9 M",
       "ingresadoBruto": 39887000,
-      "balance": "+20,4 M",
-      "balanceBruto": 20409000,
-      "sobreprecioMedio": 29,
-      "enVenta": 4,
+      "balance": "+18,4 M",
+      "balanceBruto": 18354000,
+      "sobreprecioMedio": 48,
+      "enVenta": 6,
       "fichajeEstrella": {
         "nombre": "Pépé",
         "precio": "14,9 M",
         "foto": "https://cdn.biwenger.com/i/p/34479.png"
       },
       "total": 12,
-      "puestoEficiencia": 12,
-      "puestoValor": 2,
+      "puestoEficiencia": 11,
+      "puestoValor": 5,
       "puestoGasto": 8,
-      "puestoActividad": 5,
+      "puestoActividad": 4,
       "vsMediaPuntos": -21,
-      "vsMediaEficiencia": -33,
-      "vsMediaValor": 15,
+      "vsMediaEficiencia": -28,
+      "vsMediaValor": 7,
       "tendencia": {
         "puestos": 0,
         "puntos": 117,
@@ -2048,13 +2090,13 @@
       "enVenta": 0,
       "fichajeEstrella": null,
       "total": 12,
-      "puestoEficiencia": 11,
+      "puestoEficiencia": 12,
       "puestoValor": 9,
       "puestoGasto": 12,
       "puestoActividad": 12,
       "vsMediaPuntos": -30,
       "vsMediaEficiencia": -29,
-      "vsMediaValor": -4,
+      "vsMediaValor": -3,
       "tendencia": {
         "puestos": 0,
         "puntos": 139,
@@ -2304,6 +2346,32 @@
   "calendario": {
     "Lottin Capital": [
       {
+        "nombre": "Freeman",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/39901.png",
+        "equipoReal": "Villarreal",
+        "jornadas": [
+          {
+            "jornada": "Round 8",
+            "esLocal": false,
+            "rival": "Real Madrid",
+            "dificultad": 70
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Elche",
+            "dificultad": 26
+          },
+          {
+            "jornada": "Round 10",
+            "esLocal": false,
+            "rival": "Valencia",
+            "dificultad": 13
+          }
+        ]
+      },
+      {
         "nombre": "Natan",
         "posicion": "Defensa",
         "foto": "https://cdn.biwenger.com/i/p/19614.png",
@@ -2460,32 +2528,6 @@
         ]
       },
       {
-        "nombre": "Yeray",
-        "posicion": "Defensa",
-        "foto": "https://cdn.biwenger.com/i/p/5771.png",
-        "equipoReal": "Athletic",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Rayo Vallecano",
-            "dificultad": 40
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": false,
-            "rival": "Valencia",
-            "dificultad": 13
-          },
-          {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": false,
-            "rival": "Levante",
-            "dificultad": 42
-          }
-        ]
-      },
-      {
         "nombre": "Remiro",
         "posicion": "Portero",
         "foto": "https://cdn.biwenger.com/i/p/7003.png",
@@ -2586,32 +2628,6 @@
             "esLocal": true,
             "rival": "Betis",
             "dificultad": 62
-          }
-        ]
-      },
-      {
-        "nombre": "Iván Martín",
-        "posicion": "Centrocampista",
-        "foto": "https://cdn.biwenger.com/i/p/12403.png",
-        "equipoReal": "Racing",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": true,
-            "rival": "Valencia",
-            "dificultad": 22
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": false,
-            "rival": "Osasuna",
-            "dificultad": 32
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": true,
-            "rival": "Espanyol",
-            "dificultad": 35
           }
         ]
       },
@@ -3710,32 +3726,6 @@
             "esLocal": true,
             "rival": "Deportivo",
             "dificultad": 48
-          }
-        ]
-      },
-      {
-        "nombre": "Freeman",
-        "posicion": "Defensa",
-        "foto": "https://cdn.biwenger.com/i/p/39901.png",
-        "equipoReal": "Villarreal",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Real Madrid",
-            "dificultad": 70
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": true,
-            "rival": "Elche",
-            "dificultad": 26
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": false,
-            "rival": "Valencia",
-            "dificultad": 13
           }
         ]
       },
@@ -6710,7 +6700,7 @@
     },
     {
       "tipo": "mercado",
-      "texto": "Mercado movido: 11 cláusulas pagadas en los últimos 7 días."
+      "texto": "Mercado movido: 12 cláusulas pagadas en los últimos 7 días."
     }
   ],
   "amenazas": [
@@ -6749,6 +6739,40 @@
     }
   ],
   "jugadores": [
+    {
+      "id": "39901",
+      "nombre": "Freeman",
+      "slug": "alex-freeman",
+      "posicion": "Defensa",
+      "posicionCodigo": 2,
+      "foto": "https://cdn.biwenger.com/i/p/39901.png",
+      "equipoReal": "Villarreal",
+      "equipoIdReal": "19",
+      "presidente": "Lottin Capital",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
+      "precio": 1110000,
+      "precioTexto": "1,1 M",
+      "puntosTotales": 23,
+      "partidosJugados": 6,
+      "media": 3.8,
+      "puntosPorMillon": 20.72,
+      "racha": [
+        4,
+        6,
+        4,
+        4,
+        5
+      ],
+      "rachaTitular": 2,
+      "ultimoMinutos": 90,
+      "clausula": 3082500,
+      "clausulaTexto": "3,1 M",
+      "pagadoPorSuDueno": 2055000,
+      "margen": 1972500,
+      "margenPorcentaje": 178,
+      "blindado": true,
+      "blindadoHasta": "2026-10-06T18:38:46.000Z"
+    },
     {
       "id": "19614",
       "nombre": "Natan",
@@ -6949,39 +6973,6 @@
       "blindadoHasta": "2026-10-03T05:04:05.000Z"
     },
     {
-      "id": "5771",
-      "nombre": "Yeray",
-      "slug": "yeray-alvarez",
-      "posicion": "Defensa",
-      "posicionCodigo": 2,
-      "foto": "https://cdn.biwenger.com/i/p/5771.png",
-      "equipoReal": "Athletic",
-      "equipoIdReal": "1",
-      "presidente": "Lottin Capital",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
-      "precio": 1520000,
-      "precioTexto": "1,5 M",
-      "puntosTotales": 14,
-      "partidosJugados": 4,
-      "media": 3.5,
-      "puntosPorMillon": 9.21,
-      "racha": [
-        4,
-        5,
-        1,
-        4
-      ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 90,
-      "clausula": 2490000,
-      "clausulaTexto": "2,5 M",
-      "pagadoPorSuDueno": 1660000,
-      "margen": 970000,
-      "margenPorcentaje": 64,
-      "blindado": true,
-      "blindadoHasta": "2026-09-29T05:04:41.000Z"
-    },
-    {
       "id": "7003",
       "nombre": "Remiro",
       "slug": "alex-remiro",
@@ -7108,40 +7099,6 @@
       "pagadoPorSuDueno": null,
       "margen": 1410000,
       "margenPorcentaje": 50,
-      "blindado": false,
-      "blindadoHasta": null
-    },
-    {
-      "id": "12403",
-      "nombre": "Iván Martín",
-      "slug": "ivan-martin",
-      "posicion": "Centrocampista",
-      "posicionCodigo": 3,
-      "foto": "https://cdn.biwenger.com/i/p/12403.png",
-      "equipoReal": "Racing",
-      "equipoIdReal": "812",
-      "presidente": "Lottin Capital",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
-      "precio": 3400000,
-      "precioTexto": "3,4 M",
-      "puntosTotales": 22,
-      "partidosJugados": 5,
-      "media": 4.4,
-      "puntosPorMillon": 6.47,
-      "racha": [
-        3,
-        4,
-        6,
-        5,
-        4
-      ],
-      "rachaTitular": 1,
-      "ultimoMinutos": 84,
-      "clausula": 4760000,
-      "clausulaTexto": "4,8 M",
-      "pagadoPorSuDueno": 3215000,
-      "margen": 1360000,
-      "margenPorcentaje": 40,
       "blindado": false,
       "blindadoHasta": null
     },
@@ -8209,8 +8166,8 @@
       "pagadoPorSuDueno": 1250000,
       "margen": 1160000,
       "margenPorcentaje": 50,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-26T06:19:28.000Z"
     },
     {
       "id": "4245",
@@ -8308,8 +8265,8 @@
       "pagadoPorSuDueno": 152000,
       "margen": 460000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-26T06:19:28.000Z"
     },
     {
       "id": "18251",
@@ -8342,8 +8299,8 @@
       "pagadoPorSuDueno": 5799000,
       "margen": 4968599,
       "margenPorcentaje": 158,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-26T06:19:28.000Z"
     },
     {
       "id": "21084",
@@ -8377,7 +8334,7 @@
       "margen": 1140000,
       "margenPorcentaje": 50,
       "blindado": true,
-      "blindadoHasta": "2026-09-25T05:10:52.000Z"
+      "blindadoHasta": "2026-09-26T06:19:28.000Z"
     },
     {
       "id": "24509",
@@ -8444,8 +8401,8 @@
       "pagadoPorSuDueno": 12700777,
       "margen": 5474000,
       "margenPorcentaje": 38,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-26T06:19:28.000Z"
     },
     {
       "id": "30510",
@@ -8478,8 +8435,8 @@
       "pagadoPorSuDueno": null,
       "margen": 815000,
       "margenPorcentaje": 50,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-26T06:19:28.000Z"
     },
     {
       "id": "32338",
@@ -8512,8 +8469,8 @@
       "pagadoPorSuDueno": 2610000,
       "margen": 1468000,
       "margenPorcentaje": 40,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-26T06:19:28.000Z"
     },
     {
       "id": "34805",
@@ -8540,42 +8497,8 @@
       "pagadoPorSuDueno": null,
       "margen": 640000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
-    },
-    {
-      "id": "39901",
-      "nombre": "Freeman",
-      "slug": "alex-freeman",
-      "posicion": "Defensa",
-      "posicionCodigo": 2,
-      "foto": "https://cdn.biwenger.com/i/p/39901.png",
-      "equipoReal": "Villarreal",
-      "equipoIdReal": "19",
-      "presidente": "CD Tiro Buchón",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
-      "precio": 1110000,
-      "precioTexto": "1,1 M",
-      "puntosTotales": 23,
-      "partidosJugados": 6,
-      "media": 3.8,
-      "puntosPorMillon": 20.72,
-      "racha": [
-        4,
-        6,
-        4,
-        4,
-        5
-      ],
-      "rachaTitular": 2,
-      "ultimoMinutos": 90,
-      "clausula": 2055000,
-      "clausulaTexto": "2,1 M",
-      "pagadoPorSuDueno": 590010,
-      "margen": 945000,
-      "margenPorcentaje": 85,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-26T06:19:28.000Z"
     },
     {
       "id": "41413",
@@ -8603,7 +8526,7 @@
       "margen": 300000,
       "margenPorcentaje": 200,
       "blindado": true,
-      "blindadoHasta": "2026-09-24T05:10:25.000Z"
+      "blindadoHasta": "2026-09-26T06:19:28.000Z"
     },
     {
       "id": "41560",
@@ -8630,8 +8553,8 @@
       "pagadoPorSuDueno": null,
       "margen": 300000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-26T06:19:28.000Z"
     },
     {
       "id": "43172",
@@ -8664,8 +8587,8 @@
       "pagadoPorSuDueno": 360020,
       "margen": 910000,
       "margenPorcentaje": 100,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-26T06:19:28.000Z"
     },
     {
       "id": "1083",
@@ -12410,8 +12333,8 @@
         "pagadoPorSuDueno": 152000,
         "margen": 460000,
         "margenPorcentaje": 200,
-        "blindado": false,
-        "blindadoHasta": null
+        "blindado": true,
+        "blindadoHasta": "2026-09-26T06:19:28.000Z"
       },
       {
         "id": "31475",
@@ -12985,7 +12908,7 @@
         "margen": 1140000,
         "margenPorcentaje": 50,
         "blindado": true,
-        "blindadoHasta": "2026-09-25T05:10:52.000Z",
+        "blindadoHasta": "2026-09-26T06:19:28.000Z",
         "mediaReciente": 10.5
       },
       {
@@ -13401,8 +13324,8 @@
         "pagadoPorSuDueno": 5799000,
         "margen": 4968599,
         "margenPorcentaje": 158,
-        "blindado": false,
-        "blindadoHasta": null,
+        "blindado": true,
+        "blindadoHasta": "2026-09-26T06:19:28.000Z",
         "mediaReciente": 0.5
       }
     ]
@@ -13481,41 +13404,6 @@
         "dificultad": 23
       },
       {
-        "nombre": "Iván Martín",
-        "foto": "https://cdn.biwenger.com/i/p/12403.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Racing",
-        "racha": [
-          3,
-          4,
-          6,
-          5,
-          4
-        ],
-        "rachaTitular": 1,
-        "nota": 5.7,
-        "rival": "Valencia",
-        "esLocal": true,
-        "dificultad": 22
-      },
-      {
-        "nombre": "Yeray",
-        "foto": "https://cdn.biwenger.com/i/p/5771.png",
-        "posicion": "Defensa",
-        "equipoReal": "Athletic",
-        "racha": [
-          4,
-          5,
-          1,
-          4
-        ],
-        "rachaTitular": 0,
-        "nota": 5.3,
-        "rival": "Rayo Vallecano",
-        "esLocal": false,
-        "dificultad": 40
-      },
-      {
         "nombre": "Giménez",
         "foto": "https://cdn.biwenger.com/i/p/1676.png",
         "posicion": "Defensa",
@@ -13584,6 +13472,24 @@
         "rival": "Valencia",
         "esLocal": true,
         "dificultad": 22
+      },
+      {
+        "nombre": "Freeman",
+        "foto": "https://cdn.biwenger.com/i/p/39901.png",
+        "posicion": "Defensa",
+        "equipoReal": "Villarreal",
+        "racha": [
+          4,
+          6,
+          4,
+          4,
+          5
+        ],
+        "rachaTitular": 2,
+        "nota": 4,
+        "rival": "Real Madrid",
+        "esLocal": false,
+        "dificultad": 70
       },
       {
         "nombre": "Remiro",
@@ -14297,24 +14203,6 @@
         "rival": "Espanyol",
         "esLocal": true,
         "dificultad": 39
-      },
-      {
-        "nombre": "Freeman",
-        "foto": "https://cdn.biwenger.com/i/p/39901.png",
-        "posicion": "Defensa",
-        "equipoReal": "Villarreal",
-        "racha": [
-          4,
-          6,
-          4,
-          4,
-          5
-        ],
-        "rachaTitular": 2,
-        "nota": 4,
-        "rival": "Real Madrid",
-        "esLocal": false,
-        "dificultad": 70
       },
       {
         "nombre": "Bouare",
@@ -16547,52 +16435,6 @@
       "nivel": "medio"
     },
     {
-      "nombre": "Jonny",
-      "foto": "https://cdn.biwenger.com/i/p/1599.png",
-      "posicion": "Defensa",
-      "equipoReal": "Alavés",
-      "presidente": "CD Tiro Buchón",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
-      "precioTexto": "2,3 M",
-      "clausulaTexto": "3,5 M",
-      "margenPorcentaje": 50,
-      "margenTexto": "1,2 M",
-      "media": 4.8,
-      "puntosPorMillon": 12.5,
-      "racha": [
-        4,
-        6,
-        2,
-        7,
-        4
-      ],
-      "rachaTitular": 1,
-      "nivel": "medio"
-    },
-    {
-      "nombre": "Abde Rebbach",
-      "foto": "https://cdn.biwenger.com/i/p/30510.png",
-      "posicion": "Delantero",
-      "equipoReal": "Alavés",
-      "presidente": "CD Tiro Buchón",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
-      "precioTexto": "1,6 M",
-      "clausulaTexto": "2,4 M",
-      "margenPorcentaje": 50,
-      "margenTexto": "0,8 M",
-      "media": 3.3,
-      "puntosPorMillon": 14.11,
-      "racha": [
-        4,
-        2,
-        7,
-        1,
-        2
-      ],
-      "rachaTitular": 7,
-      "nivel": "medio"
-    },
-    {
       "nombre": "Castrín",
       "foto": "https://cdn.biwenger.com/i/p/38072.png",
       "posicion": "Defensa",
@@ -16702,18 +16544,6 @@
       "blindadoHasta": "2026-09-24T05:10:25.000Z"
     },
     {
-      "nombre": "Murillo",
-      "foto": "https://cdn.biwenger.com/i/p/41413.png",
-      "posicion": "Defensa",
-      "equipoReal": "Málaga",
-      "presidente": "CD Tiro Buchón",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
-      "precioTexto": "0,1 M",
-      "clausulaTexto": "0,5 M",
-      "media": 0,
-      "blindadoHasta": "2026-09-24T05:10:25.000Z"
-    },
-    {
       "nombre": "Cabrera",
       "foto": "https://cdn.biwenger.com/i/p/11800.png",
       "posicion": "Defensa",
@@ -16784,18 +16614,6 @@
       "clausulaTexto": "5,2 M",
       "media": 3.3,
       "blindadoHasta": "2026-09-25T05:10:51.000Z"
-    },
-    {
-      "nombre": "Ilaix Moriba",
-      "foto": "https://cdn.biwenger.com/i/p/21084.png",
-      "posicion": "Centrocampista",
-      "equipoReal": "Celta",
-      "presidente": "CD Tiro Buchón",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
-      "precioTexto": "2,3 M",
-      "clausulaTexto": "3,4 M",
-      "media": 5,
-      "blindadoHasta": "2026-09-25T05:10:52.000Z"
     },
     {
       "nombre": "Barzic",
