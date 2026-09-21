@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-21T07:24:51.777Z",
+  "actualizado": "2026-09-21T07:43:12.529Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -131,8 +131,8 @@
       "iniciales": "CT",
       "escudo": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
       "puntos": 356,
-      "valor": "57,4 M",
-      "valorBruto": 57370000,
+      "valor": "55,3 M",
+      "valorBruto": 55280000,
       "esTuyo": false,
       "puntosJornada": 46,
       "jugadosJornada": 7,
@@ -497,6 +497,32 @@
       "valorMercado": "5,7 M",
       "valorBruto": 5670000,
       "diferencia": 30000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Sancet",
+      "foto": "https://cdn.biwenger.com/i/p/17057.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Athletic",
+      "vendedor": "Manchester Pity",
+      "pide": "6,3 M",
+      "pideBruto": 6280000,
+      "valorMercado": "6,3 M",
+      "valorBruto": 6280000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Hjulmand",
+      "foto": "https://cdn.biwenger.com/i/p/42444.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Atlético",
+      "vendedor": "Manchester Pity",
+      "pide": "4,7 M",
+      "pideBruto": 4660000,
+      "valorMercado": "4,7 M",
+      "valorBruto": 4660000,
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -1614,7 +1640,7 @@
       "puestoGasto": 3,
       "puestoActividad": 6,
       "vsMediaPuntos": 30,
-      "vsMediaEficiencia": 21,
+      "vsMediaEficiencia": 20,
       "vsMediaValor": 4,
       "tendencia": {
         "puestos": 0,
@@ -1628,10 +1654,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
       "iniciales": "CT",
       "puntos": 356,
-      "valor": "57,4 M",
-      "valorBruto": 57370000,
+      "valor": "55,3 M",
+      "valorBruto": 55280000,
       "esTuyo": false,
-      "puntosPorMillon": 6.21,
+      "puntosPorMillon": 6.44,
       "mediaJornada": 50.9,
       "clausulasHechas": 1,
       "clausulasSufridas": 3,
@@ -1650,13 +1676,13 @@
         "foto": "https://cdn.biwenger.com/i/p/30477.png"
       },
       "total": 12,
-      "puestoEficiencia": 7,
+      "puestoEficiencia": 5,
       "puestoValor": 2,
       "puestoGasto": 4,
       "puestoActividad": 10,
       "vsMediaPuntos": 27,
-      "vsMediaEficiencia": -1,
-      "vsMediaValor": 24,
+      "vsMediaEficiencia": 3,
+      "vsMediaValor": 20,
       "tendencia": {
         "puestos": 1,
         "puntos": 145,
@@ -1697,7 +1723,7 @@
       "puestoActividad": 8,
       "vsMediaPuntos": 11,
       "vsMediaEficiencia": 64,
-      "vsMediaValor": -35,
+      "vsMediaValor": -34,
       "tendencia": {
         "puestos": 1,
         "puntos": 113,
@@ -1737,8 +1763,8 @@
       "puestoGasto": 9,
       "puestoActividad": 4,
       "vsMediaPuntos": 8,
-      "vsMediaEficiencia": 13,
-      "vsMediaValor": -8,
+      "vsMediaEficiencia": 12,
+      "vsMediaValor": -7,
       "tendencia": {
         "puestos": 5,
         "puntos": 144,
@@ -1773,13 +1799,13 @@
         "foto": "https://cdn.biwenger.com/i/p/15568.png"
       },
       "total": 12,
-      "puestoEficiencia": 6,
+      "puestoEficiencia": 7,
       "puestoValor": 7,
       "puestoGasto": 5,
       "puestoActividad": 7,
       "vsMediaPuntos": 2,
       "vsMediaEficiencia": 0,
-      "vsMediaValor": -2,
+      "vsMediaValor": -1,
       "tendencia": {
         "puestos": -3,
         "puntos": 70,
@@ -1820,7 +1846,7 @@
       "puestoActividad": 1,
       "vsMediaPuntos": 0,
       "vsMediaEficiencia": -13,
-      "vsMediaValor": 10,
+      "vsMediaValor": 11,
       "tendencia": {
         "puestos": -1,
         "puntos": 84,
@@ -1885,7 +1911,7 @@
       "balance": "+16,9 M",
       "balanceBruto": 16868000,
       "sobreprecioMedio": null,
-      "enVenta": 1,
+      "enVenta": 3,
       "fichajeEstrella": null,
       "total": 12,
       "puestoEficiencia": 8,
@@ -1894,7 +1920,7 @@
       "puestoActividad": 11,
       "vsMediaPuntos": -4,
       "vsMediaEficiencia": -12,
-      "vsMediaValor": 5,
+      "vsMediaValor": 6,
       "tendencia": {
         "puestos": 0,
         "puntos": 92,
@@ -1970,12 +1996,12 @@
         "foto": "https://cdn.biwenger.com/i/p/19547.png"
       },
       "total": 12,
-      "puestoEficiencia": 5,
+      "puestoEficiencia": 6,
       "puestoValor": 10,
       "puestoGasto": 7,
       "puestoActividad": 3,
       "vsMediaPuntos": -6,
-      "vsMediaEficiencia": 1,
+      "vsMediaEficiencia": 0,
       "vsMediaValor": -10,
       "tendencia": {
         "puestos": -3,
@@ -3521,32 +3547,6 @@
             "esLocal": false,
             "rival": "Celta",
             "dificultad": 35
-          }
-        ]
-      },
-      {
-        "nombre": "Iker Muñoz",
-        "posicion": "Centrocampista",
-        "foto": "https://cdn.biwenger.com/i/p/18128.png",
-        "equipoReal": "Osasuna",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Betis",
-            "dificultad": 66
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": true,
-            "rival": "Racing",
-            "dificultad": 26
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": false,
-            "rival": "Sevilla",
-            "dificultad": 57
           }
         ]
       },
@@ -8585,40 +8585,6 @@
       "margenPorcentaje": 200,
       "blindado": false,
       "blindadoHasta": null
-    },
-    {
-      "id": "18128",
-      "nombre": "Iker Muñoz",
-      "slug": "iker-munoz",
-      "posicion": "Centrocampista",
-      "posicionCodigo": 3,
-      "foto": "https://cdn.biwenger.com/i/p/18128.png",
-      "equipoReal": "Osasuna",
-      "equipoIdReal": "93",
-      "presidente": "CD Tiro Buchón",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
-      "precio": 2090000,
-      "precioTexto": "2,1 M",
-      "puntosTotales": 21,
-      "partidosJugados": 6,
-      "media": 3.5,
-      "puntosPorMillon": 10.05,
-      "racha": [
-        0,
-        7,
-        3,
-        2,
-        4
-      ],
-      "rachaTitular": 1,
-      "ultimoMinutos": 90,
-      "clausula": 3135000,
-      "clausulaTexto": "3,1 M",
-      "pagadoPorSuDueno": 2060001,
-      "margen": 1045000,
-      "margenPorcentaje": 50,
-      "blindado": true,
-      "blindadoHasta": "2026-09-24T05:10:25.000Z"
     },
     {
       "id": "18251",
@@ -14971,24 +14937,6 @@
         "dificultad": 52
       },
       {
-        "nombre": "Iker Muñoz",
-        "foto": "https://cdn.biwenger.com/i/p/18128.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Osasuna",
-        "racha": [
-          0,
-          7,
-          3,
-          2,
-          4
-        ],
-        "rachaTitular": 1,
-        "nota": 3.5,
-        "rival": "Betis",
-        "esLocal": false,
-        "dificultad": 66
-      },
-      {
         "nombre": "Abde Rebbach",
         "foto": "https://cdn.biwenger.com/i/p/30510.png",
         "posicion": "Delantero",
@@ -17407,6 +17355,30 @@
       "blindadoHasta": "2026-09-23T05:10:10.000Z"
     },
     {
+      "nombre": "Hjulmand",
+      "foto": "https://cdn.biwenger.com/i/p/42444.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Atlético",
+      "presidente": "Manchester Pity",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/10271251.png",
+      "precioTexto": "4,7 M",
+      "clausulaTexto": "6,5 M",
+      "media": 4,
+      "blindadoHasta": "2026-09-24T05:10:25.000Z"
+    },
+    {
+      "nombre": "Murillo",
+      "foto": "https://cdn.biwenger.com/i/p/41413.png",
+      "posicion": "Defensa",
+      "equipoReal": "Málaga",
+      "presidente": "CD Tiro Buchón",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
+      "precioTexto": "0,1 M",
+      "clausulaTexto": "0,5 M",
+      "media": 0,
+      "blindadoHasta": "2026-09-24T05:10:25.000Z"
+    },
+    {
       "nombre": "Cabrera",
       "foto": "https://cdn.biwenger.com/i/p/11800.png",
       "posicion": "Defensa",
@@ -17525,6 +17497,18 @@
       "clausulaTexto": "1,1 M",
       "media": 2.8,
       "blindadoHasta": "2026-09-25T05:10:53.000Z"
+    },
+    {
+      "nombre": "Logan Costa",
+      "foto": "https://cdn.biwenger.com/i/p/34717.png",
+      "posicion": "Defensa",
+      "equipoReal": "Villarreal",
+      "presidente": "FC FORUSIA",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
+      "precioTexto": "0,2 M",
+      "clausulaTexto": "1,1 M",
+      "media": 3,
+      "blindadoHasta": "2026-09-25T07:42:02.000Z"
     }
   ]
 }
