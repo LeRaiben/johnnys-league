@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-22T06:38:04.060Z",
+  "actualizado": "2026-09-22T06:55:22.472Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -4385,14 +4385,52 @@
         "posicion": "Delantero",
         "foto": "https://cdn.biwenger.com/i/p/41262.png",
         "equipoReal": "Racing",
-        "jornadas": []
+        "jornadas": [
+          {
+            "jornada": "Round 8",
+            "esLocal": true,
+            "rival": "Valencia",
+            "dificultad": 22
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Osasuna",
+            "dificultad": 32
+          },
+          {
+            "jornada": "Round 10",
+            "esLocal": true,
+            "rival": "Espanyol",
+            "dificultad": 35
+          }
+        ]
       },
       {
         "nombre": "Facundo González",
         "posicion": "Defensa",
         "foto": "https://cdn.biwenger.com/i/p/41275.png",
         "equipoReal": "Racing",
-        "jornadas": []
+        "jornadas": [
+          {
+            "jornada": "Round 8",
+            "esLocal": true,
+            "rival": "Valencia",
+            "dificultad": 22
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Osasuna",
+            "dificultad": 32
+          },
+          {
+            "jornada": "Round 10",
+            "esLocal": true,
+            "rival": "Espanyol",
+            "dificultad": 35
+          }
+        ]
       },
       {
         "nombre": "Larrubia",
@@ -4687,7 +4725,26 @@
         "posicion": "Delantero",
         "foto": "https://cdn.biwenger.com/i/p/35763.png",
         "equipoReal": "Racing",
-        "jornadas": []
+        "jornadas": [
+          {
+            "jornada": "Round 8",
+            "esLocal": true,
+            "rival": "Valencia",
+            "dificultad": 22
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Osasuna",
+            "dificultad": 32
+          },
+          {
+            "jornada": "Round 10",
+            "esLocal": true,
+            "rival": "Espanyol",
+            "dificultad": 35
+          }
+        ]
       },
       {
         "nombre": "Satriano",
@@ -5374,7 +5431,26 @@
         "posicion": "Centrocampista",
         "foto": "https://cdn.biwenger.com/i/p/41267.png",
         "equipoReal": "Racing",
-        "jornadas": []
+        "jornadas": [
+          {
+            "jornada": "Round 8",
+            "esLocal": true,
+            "rival": "Valencia",
+            "dificultad": 22
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Osasuna",
+            "dificultad": 32
+          },
+          {
+            "jornada": "Round 10",
+            "esLocal": true,
+            "rival": "Espanyol",
+            "dificultad": 35
+          }
+        ]
       }
     ],
     "Urdinho Pernambucano": [
@@ -5435,7 +5511,26 @@
         "posicion": "Delantero",
         "foto": "https://cdn.biwenger.com/i/p/18564.png",
         "equipoReal": "Racing",
-        "jornadas": []
+        "jornadas": [
+          {
+            "jornada": "Round 8",
+            "esLocal": true,
+            "rival": "Valencia",
+            "dificultad": 22
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Osasuna",
+            "dificultad": 32
+          },
+          {
+            "jornada": "Round 10",
+            "esLocal": true,
+            "rival": "Espanyol",
+            "dificultad": 35
+          }
+        ]
       },
       {
         "nombre": "Ez Abde",
@@ -14440,6 +14535,22 @@
         "dificultad": 15
       },
       {
+        "nombre": "Arana",
+        "foto": "https://cdn.biwenger.com/i/p/41262.png",
+        "posicion": "Delantero",
+        "equipoReal": "Racing",
+        "racha": [
+          2,
+          0,
+          2
+        ],
+        "rachaTitular": 0,
+        "nota": 4.4,
+        "rival": "Valencia",
+        "esLocal": true,
+        "dificultad": 22
+      },
+      {
         "nombre": "Nsongo",
         "foto": "https://cdn.biwenger.com/i/p/40911.png",
         "posicion": "Delantero",
@@ -14476,6 +14587,24 @@
         "dificultad": 66
       },
       {
+        "nombre": "Facundo González",
+        "foto": "https://cdn.biwenger.com/i/p/41275.png",
+        "posicion": "Defensa",
+        "equipoReal": "Racing",
+        "racha": [
+          0,
+          -1,
+          1,
+          3,
+          3
+        ],
+        "rachaTitular": 0,
+        "nota": 3.9,
+        "rival": "Valencia",
+        "esLocal": true,
+        "dificultad": 22
+      },
+      {
         "nombre": "Larrubia",
         "foto": "https://cdn.biwenger.com/i/p/41412.png",
         "posicion": "Delantero",
@@ -14494,22 +14623,6 @@
         "dificultad": 39
       },
       {
-        "nombre": "Arana",
-        "foto": "https://cdn.biwenger.com/i/p/41262.png",
-        "posicion": "Delantero",
-        "equipoReal": "Racing",
-        "racha": [
-          2,
-          0,
-          2
-        ],
-        "rachaTitular": 0,
-        "nota": 3,
-        "rival": "",
-        "esLocal": null,
-        "dificultad": null
-      },
-      {
         "nombre": "De la Fuente",
         "foto": "https://cdn.biwenger.com/i/p/37739.png",
         "posicion": "Defensa",
@@ -14526,24 +14639,6 @@
         "rival": "Sevilla",
         "esLocal": true,
         "dificultad": 63
-      },
-      {
-        "nombre": "Facundo González",
-        "foto": "https://cdn.biwenger.com/i/p/41275.png",
-        "posicion": "Defensa",
-        "equipoReal": "Racing",
-        "racha": [
-          0,
-          -1,
-          1,
-          3,
-          3
-        ],
-        "rachaTitular": 0,
-        "nota": 2.5,
-        "rival": "",
-        "esLocal": null,
-        "dificultad": null
       },
       {
         "nombre": "Letacek",
@@ -14632,6 +14727,24 @@
         "dificultad": 15
       },
       {
+        "nombre": "Pablo García",
+        "foto": "https://cdn.biwenger.com/i/p/35763.png",
+        "posicion": "Delantero",
+        "equipoReal": "Racing",
+        "racha": [
+          -1,
+          2,
+          11,
+          1,
+          10
+        ],
+        "rachaTitular": 1,
+        "nota": 4.2,
+        "rival": "Valencia",
+        "esLocal": true,
+        "dificultad": 22
+      },
+      {
         "nombre": "Diego Conde",
         "foto": "https://cdn.biwenger.com/i/p/12087.png",
         "posicion": "Portero",
@@ -14696,24 +14809,6 @@
         "rival": "Real Madrid",
         "esLocal": false,
         "dificultad": 70
-      },
-      {
-        "nombre": "Pablo García",
-        "foto": "https://cdn.biwenger.com/i/p/35763.png",
-        "posicion": "Delantero",
-        "equipoReal": "Racing",
-        "racha": [
-          -1,
-          2,
-          11,
-          1,
-          10
-        ],
-        "rachaTitular": 1,
-        "nota": 2.8,
-        "rival": "",
-        "esLocal": null,
-        "dificultad": null
       },
       {
         "nombre": "Víctor García",
@@ -15005,6 +15100,24 @@
         "dificultad": 25
       },
       {
+        "nombre": "Maguette Gueye",
+        "foto": "https://cdn.biwenger.com/i/p/41267.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Racing",
+        "racha": [
+          9,
+          2,
+          2,
+          3,
+          4
+        ],
+        "rachaTitular": 0,
+        "nota": 6.7,
+        "rival": "Valencia",
+        "esLocal": true,
+        "dificultad": 22
+      },
+      {
         "nombre": "Álvaro Núñez",
         "foto": "https://cdn.biwenger.com/i/p/37719.png",
         "posicion": "Defensa",
@@ -15055,24 +15168,6 @@
         "rival": "Espanyol",
         "esLocal": true,
         "dificultad": 39
-      },
-      {
-        "nombre": "Maguette Gueye",
-        "foto": "https://cdn.biwenger.com/i/p/41267.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Racing",
-        "racha": [
-          9,
-          2,
-          2,
-          3,
-          4
-        ],
-        "rachaTitular": 0,
-        "nota": 5.3,
-        "rival": "",
-        "esLocal": null,
-        "dificultad": null
       },
       {
         "nombre": "Barzic",
@@ -15347,6 +15442,24 @@
         "dificultad": 41
       },
       {
+        "nombre": "Iñigo Vicente",
+        "foto": "https://cdn.biwenger.com/i/p/18564.png",
+        "posicion": "Delantero",
+        "equipoReal": "Racing",
+        "racha": [
+          0,
+          4,
+          12,
+          4,
+          9
+        ],
+        "rachaTitular": 1,
+        "nota": 4.9,
+        "rival": "Valencia",
+        "esLocal": true,
+        "dificultad": 22
+      },
+      {
         "nombre": "Quagliata",
         "foto": "https://cdn.biwenger.com/i/p/40952.png",
         "posicion": "Defensa",
@@ -15363,24 +15476,6 @@
         "rival": "Real Sociedad",
         "esLocal": false,
         "dificultad": 44
-      },
-      {
-        "nombre": "Iñigo Vicente",
-        "foto": "https://cdn.biwenger.com/i/p/18564.png",
-        "posicion": "Delantero",
-        "equipoReal": "Racing",
-        "racha": [
-          0,
-          4,
-          12,
-          4,
-          9
-        ],
-        "rachaTitular": 1,
-        "nota": 3.5,
-        "rival": "",
-        "esLocal": null,
-        "dificultad": null
       },
       {
         "nombre": "Mario Martín",
