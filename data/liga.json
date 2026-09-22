@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-22T10:57:09.363Z",
+  "actualizado": "2026-09-22T11:15:15.118Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -275,8 +275,8 @@
       "iniciales": "LC",
       "escudo": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
       "puntos": 259,
-      "valor": "47,2 M",
-      "valorBruto": 47190000,
+      "valor": "46,0 M",
+      "valorBruto": 46030000,
       "esTuyo": false,
       "puntosJornada": 45,
       "jugadosJornada": 9,
@@ -432,19 +432,6 @@
       "valorMercado": "2,4 M",
       "valorBruto": 2440000,
       "diferencia": 30000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Galilea",
-      "foto": "https://cdn.biwenger.com/i/p/4070.png",
-      "posicion": "Defensa",
-      "equipoReal": "Málaga",
-      "vendedor": "Lottin Capital",
-      "pide": "1,3 M",
-      "pideBruto": 1270000,
-      "valorMercado": "1,2 M",
-      "valorBruto": 1160000,
-      "diferencia": 110000
     },
     {
       "tipo": "venta",
@@ -2262,7 +2249,7 @@
       "puestoGasto": 1,
       "puestoActividad": 2,
       "vsMediaPuntos": -6,
-      "vsMediaEficiencia": -14,
+      "vsMediaEficiencia": -15,
       "vsMediaValor": 7,
       "tendencia": {
         "puestos": -4,
@@ -2317,10 +2304,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
       "iniciales": "LC",
       "puntos": 259,
-      "valor": "47,2 M",
-      "valorBruto": 47190000,
+      "valor": "46,0 M",
+      "valorBruto": 46030000,
       "esTuyo": false,
-      "puntosPorMillon": 5.49,
+      "puntosPorMillon": 5.63,
       "mediaJornada": 37,
       "clausulasHechas": 3,
       "clausulasSufridas": 5,
@@ -2332,7 +2319,7 @@
       "balance": "+18,4 M",
       "balanceBruto": 18354000,
       "sobreprecioMedio": 45,
-      "enVenta": 5,
+      "enVenta": 4,
       "fichajeEstrella": {
         "nombre": "Pépé",
         "precio": "14,9 M",
@@ -2344,8 +2331,8 @@
       "puestoGasto": 8,
       "puestoActividad": 4,
       "vsMediaPuntos": -21,
-      "vsMediaEficiencia": -32,
-      "vsMediaValor": 12,
+      "vsMediaEficiencia": -30,
+      "vsMediaValor": 9,
       "tendencia": {
         "puestos": 0,
         "puntos": 117,
@@ -2757,32 +2744,6 @@
             "esLocal": false,
             "rival": "Celta",
             "dificultad": 35
-          }
-        ]
-      },
-      {
-        "nombre": "Galilea",
-        "posicion": "Defensa",
-        "foto": "https://cdn.biwenger.com/i/p/4070.png",
-        "equipoReal": "Málaga",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": true,
-            "rival": "Espanyol",
-            "dificultad": 39
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": true,
-            "rival": "Real Sociedad",
-            "dificultad": 55
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": false,
-            "rival": "Alavés",
-            "dificultad": 65
           }
         ]
       },
@@ -7060,40 +7021,6 @@
       "margenPorcentaje": 82,
       "blindado": true,
       "blindadoHasta": "2026-09-26T13:59:22.000Z"
-    },
-    {
-      "id": "4070",
-      "nombre": "Galilea",
-      "slug": "einar-galilea",
-      "posicion": "Defensa",
-      "posicionCodigo": 2,
-      "foto": "https://cdn.biwenger.com/i/p/4070.png",
-      "equipoReal": "Málaga",
-      "equipoIdReal": "65",
-      "presidente": "Lottin Capital",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
-      "precio": 1160000,
-      "precioTexto": "1,2 M",
-      "puntosTotales": 19,
-      "partidosJugados": 6,
-      "media": 3.2,
-      "puntosPorMillon": 16.38,
-      "racha": [
-        3,
-        3,
-        5,
-        0,
-        4
-      ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 90,
-      "clausula": 1905000,
-      "clausulaTexto": "1,9 M",
-      "pagadoPorSuDueno": 1270000,
-      "margen": 745000,
-      "margenPorcentaje": 64,
-      "blindado": false,
-      "blindadoHasta": null
     },
     {
       "id": "5069",
@@ -13445,24 +13372,6 @@
         "rival": "Real Sociedad",
         "esLocal": false,
         "dificultad": 44
-      },
-      {
-        "nombre": "Galilea",
-        "foto": "https://cdn.biwenger.com/i/p/4070.png",
-        "posicion": "Defensa",
-        "equipoReal": "Málaga",
-        "racha": [
-          3,
-          3,
-          5,
-          0,
-          4
-        ],
-        "rachaTitular": 0,
-        "nota": 4.5,
-        "rival": "Espanyol",
-        "esLocal": true,
-        "dificultad": 39
       },
       {
         "nombre": "De Frutos",
