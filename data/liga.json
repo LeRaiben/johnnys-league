@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-22T22:32:01.054Z",
+  "actualizado": "2026-09-22T22:47:33.633Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -523,6 +523,19 @@
       "valorMercado": "3,3 M",
       "valorBruto": 3280000,
       "diferencia": 110000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Aubameyang",
+      "foto": "https://cdn.biwenger.com/i/p/25769.png",
+      "posicion": "Delantero",
+      "equipoReal": "Deportivo",
+      "vendedor": "CD Tiro Buchón",
+      "pide": "14,4 M",
+      "pideBruto": 14450000,
+      "valorMercado": "14,4 M",
+      "valorBruto": 14450000,
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -1906,7 +1919,7 @@
       "balance": "−3,0 M",
       "balanceBruto": -2984700,
       "sobreprecioMedio": 46,
-      "enVenta": 0,
+      "enVenta": 1,
       "fichajeEstrella": {
         "nombre": "Bellingham",
         "precio": "27,7 M",
