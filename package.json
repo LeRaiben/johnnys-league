@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "datos": "node --env-file=.env scripts/fetch-biwenger.mjs",
-    "servir": "npx --yes serve ."
+    "servir": "npx --yes serve .",
+    "probar-duelos": "node scripts/probar-preguntas.mjs",
+    "probar-partida": "node scripts/probar-partida.mjs"
   }
 }
