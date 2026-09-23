@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-23T12:00:10.299Z",
+  "actualizado": "2026-09-23T12:24:34.095Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -147,8 +147,8 @@
       "iniciales": "SF",
       "escudo": "https://cdn.biwenger.com/i/u/14027560.png",
       "puntos": 367,
-      "valor": "26,9 M",
-      "valorBruto": 26880000,
+      "valor": "35,1 M",
+      "valorBruto": 35060000,
       "esTuyo": false,
       "puntosJornada": 55,
       "jugadosJornada": 10,
@@ -211,8 +211,8 @@
       "iniciales": "LV",
       "escudo": "https://cdn.biwenger.com/i/u/13934763.png",
       "puntos": 327,
-      "valor": "39,2 M",
-      "valorBruto": 39240000,
+      "valor": "31,1 M",
+      "valorBruto": 31060000,
       "esTuyo": false,
       "puntosJornada": 62,
       "jugadosJornada": 11,
@@ -812,19 +812,6 @@
     },
     {
       "tipo": "venta",
-      "nombre": "Camello",
-      "foto": "https://cdn.biwenger.com/i/p/17756.png",
-      "posicion": "Delantero",
-      "equipoReal": "Rayo Vallecano",
-      "vendedor": "Las Víboras FC",
-      "pide": "5,2 M",
-      "pideBruto": 5230000,
-      "valorMercado": "8,2 M",
-      "valorBruto": 8180000,
-      "diferencia": -2950000
-    },
-    {
-      "tipo": "venta",
       "nombre": "Expósito",
       "foto": "https://cdn.biwenger.com/i/p/19862.png",
       "posicion": "Centrocampista",
@@ -999,11 +986,11 @@
       "posicion": "Defensa",
       "equipoReal": "Athletic",
       "vendedor": "Seif fc",
-      "pide": "2,8 M",
-      "pideBruto": 2800000,
+      "pide": "2,9 M",
+      "pideBruto": 2880000,
       "valorMercado": "2,9 M",
       "valorBruto": 2880000,
-      "diferencia": -80000
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -1012,11 +999,24 @@
       "posicion": "Defensa",
       "equipoReal": "Betis",
       "vendedor": "Seif fc",
-      "pide": "2,7 M",
-      "pideBruto": 2740000,
+      "pide": "2,8 M",
+      "pideBruto": 2780000,
       "valorMercado": "2,8 M",
       "valorBruto": 2780000,
-      "diferencia": -40000
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Camello",
+      "foto": "https://cdn.biwenger.com/i/p/17756.png",
+      "posicion": "Delantero",
+      "equipoReal": "Rayo Vallecano",
+      "vendedor": "Seif fc",
+      "pide": "8,2 M",
+      "pideBruto": 8180000,
+      "valorMercado": "8,2 M",
+      "valorBruto": 8180000,
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -1039,10 +1039,10 @@
       "equipoReal": "Deportivo",
       "vendedor": "Seif fc",
       "pide": "3,5 M",
-      "pideBruto": 3510000,
+      "pideBruto": 3540000,
       "valorMercado": "3,5 M",
       "valorBruto": 3540000,
-      "diferencia": -30000
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -1077,11 +1077,11 @@
       "posicion": "Defensa",
       "equipoReal": "Villarreal",
       "vendedor": "Seif fc",
-      "pide": "3,5 M",
-      "pideBruto": 3510000,
+      "pide": "3,6 M",
+      "pideBruto": 3610000,
       "valorMercado": "3,6 M",
       "valorBruto": 3610000,
-      "diferencia": -100000
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -1091,10 +1091,10 @@
       "equipoReal": "Deportivo",
       "vendedor": "Seif fc",
       "pide": "3,9 M",
-      "pideBruto": 3900000,
+      "pideBruto": 3940000,
       "valorMercado": "3,9 M",
       "valorBruto": 3940000,
-      "diferencia": -40000
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -1104,10 +1104,10 @@
       "equipoReal": "Alavés",
       "vendedor": "Seif fc",
       "pide": "0,5 M",
-      "pideBruto": 460000,
+      "pideBruto": 530000,
       "valorMercado": "0,5 M",
       "valorBruto": 530000,
-      "diferencia": -70000
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -1142,11 +1142,27 @@
       "posicion": "Defensa",
       "equipoReal": "Athletic",
       "vendedor": "Seif fc",
-      "pide": "0,7 M",
-      "pideBruto": 740000,
+      "pide": "0,8 M",
+      "pideBruto": 750000,
       "valorMercado": "0,8 M",
       "valorBruto": 750000,
-      "diferencia": -10000
+      "diferencia": 0
+    },
+    {
+      "tipo": "clausula",
+      "fecha": "2026-09-23T12:01:56.000Z",
+      "nombre": "Camello",
+      "foto": "https://cdn.biwenger.com/i/p/17756.png",
+      "posicion": "Delantero",
+      "equipoReal": "Rayo Vallecano",
+      "vendedor": "Las Víboras FC",
+      "comprador": "Seif fc",
+      "escudoComprador": "https://cdn.biwenger.com/i/u/14027560.png",
+      "pide": "14,5 M",
+      "pideBruto": 14534000,
+      "valorMercado": "8,2 M",
+      "valorBruto": 8180000,
+      "diferencia": 6354000
     },
     {
       "tipo": "clausula",
@@ -1863,10 +1879,10 @@
       "gastadoTexto": "8,4 M"
     },
     {
-      "nombre": "Lottin Capital",
+      "nombre": "Seif fc",
       "veces": 3,
-      "gastado": 21533000,
-      "gastadoTexto": "21,5 M"
+      "gastado": 39169000,
+      "gastadoTexto": "39,2 M"
     }
   ],
   "presidentes": [
@@ -1898,12 +1914,12 @@
         "foto": "https://cdn.biwenger.com/i/p/19577.png"
       },
       "total": 12,
-      "puestoEficiencia": 3,
+      "puestoEficiencia": 4,
       "puestoValor": 2,
-      "puestoGasto": 3,
+      "puestoGasto": 4,
       "puestoActividad": 6,
       "vsMediaPuntos": 26,
-      "vsMediaEficiencia": 7,
+      "vsMediaEficiencia": 8,
       "vsMediaValor": 13,
       "tendencia": {
         "puestos": 0,
@@ -1941,10 +1957,10 @@
       "total": 12,
       "puestoEficiencia": 8,
       "puestoValor": 1,
-      "puestoGasto": 4,
-      "puestoActividad": 8,
+      "puestoGasto": 5,
+      "puestoActividad": 9,
       "vsMediaPuntos": 24,
-      "vsMediaEficiencia": -9,
+      "vsMediaEficiencia": -8,
       "vsMediaValor": 32,
       "tendencia": {
         "puestos": 1,
@@ -1958,35 +1974,35 @@
       "escudo": "https://cdn.biwenger.com/i/u/14027560.png",
       "iniciales": "SF",
       "puntos": 367,
-      "valor": "26,9 M",
-      "valorBruto": 26880000,
+      "valor": "35,1 M",
+      "valorBruto": 35060000,
       "esTuyo": false,
-      "puntosPorMillon": 13.65,
+      "puntosPorMillon": 10.47,
       "mediaJornada": 52.4,
-      "clausulasHechas": 2,
+      "clausulasHechas": 3,
       "clausulasSufridas": 3,
-      "operaciones": 5,
-      "gastado": "24,6 M",
-      "gastadoBruto": 24635000,
+      "operaciones": 6,
+      "gastado": "39,2 M",
+      "gastadoBruto": 39169000,
       "ingresado": "31,0 M",
       "ingresadoBruto": 31032000,
-      "balance": "+6,4 M",
-      "balanceBruto": 6397000,
-      "sobreprecioMedio": 27,
-      "enVenta": 12,
+      "balance": "−8,1 M",
+      "balanceBruto": -8137000,
+      "sobreprecioMedio": 44,
+      "enVenta": 13,
       "fichajeEstrella": {
         "nombre": "Bellingham",
         "precio": "23,1 M",
         "foto": "https://cdn.biwenger.com/i/p/30477.png"
       },
       "total": 12,
-      "puestoEficiencia": 1,
-      "puestoValor": 12,
-      "puestoGasto": 6,
-      "puestoActividad": 9,
+      "puestoEficiencia": 2,
+      "puestoValor": 10,
+      "puestoGasto": 2,
+      "puestoActividad": 7,
       "vsMediaPuntos": 12,
-      "vsMediaEficiencia": 70,
-      "vsMediaValor": -37,
+      "vsMediaEficiencia": 32,
+      "vsMediaValor": -18,
       "tendencia": {
         "puestos": 1,
         "puntos": 168,
@@ -2021,12 +2037,12 @@
         "foto": "https://cdn.biwenger.com/i/p/12494.png"
       },
       "total": 12,
-      "puestoEficiencia": 5,
+      "puestoEficiencia": 6,
       "puestoValor": 8,
       "puestoGasto": 9,
       "puestoActividad": 5,
       "vsMediaPuntos": 6,
-      "vsMediaEficiencia": 5,
+      "vsMediaEficiencia": 6,
       "vsMediaValor": -2,
       "tendencia": {
         "puestos": 5,
@@ -2058,12 +2074,12 @@
       "enVenta": 1,
       "fichajeEstrella": null,
       "total": 12,
-      "puestoEficiencia": 2,
+      "puestoEficiencia": 3,
       "puestoValor": 11,
       "puestoGasto": 10,
       "puestoActividad": 11,
       "vsMediaPuntos": 2,
-      "vsMediaEficiencia": 29,
+      "vsMediaEficiencia": 30,
       "vsMediaValor": -24,
       "tendencia": {
         "puestos": 3,
@@ -2099,12 +2115,12 @@
         "foto": "https://cdn.biwenger.com/i/p/15568.png"
       },
       "total": 12,
-      "puestoEficiencia": 4,
-      "puestoValor": 10,
-      "puestoGasto": 5,
-      "puestoActividad": 7,
+      "puestoEficiencia": 5,
+      "puestoValor": 9,
+      "puestoGasto": 6,
+      "puestoActividad": 8,
       "vsMediaPuntos": 0,
-      "vsMediaEficiencia": 5,
+      "vsMediaEficiencia": 6,
       "vsMediaValor": -8,
       "tendencia": {
         "puestos": -4,
@@ -2118,35 +2134,35 @@
       "escudo": "https://cdn.biwenger.com/i/u/13934763.png",
       "iniciales": "LV",
       "puntos": 327,
-      "valor": "39,2 M",
-      "valorBruto": 39240000,
+      "valor": "31,1 M",
+      "valorBruto": 31060000,
       "esTuyo": false,
-      "puntosPorMillon": 8.33,
+      "puntosPorMillon": 10.53,
       "mediaJornada": 46.7,
       "clausulasHechas": 12,
-      "clausulasSufridas": 3,
-      "operaciones": 15,
+      "clausulasSufridas": 4,
+      "operaciones": 16,
       "gastado": "35,6 M",
       "gastadoBruto": 35625000,
-      "ingresado": "28,2 M",
-      "ingresadoBruto": 28233799,
-      "balance": "−7,4 M",
-      "balanceBruto": -7391201,
+      "ingresado": "42,8 M",
+      "ingresadoBruto": 42767799,
+      "balance": "+7,1 M",
+      "balanceBruto": 7142799,
       "sobreprecioMedio": 28,
-      "enVenta": 17,
+      "enVenta": 16,
       "fichajeEstrella": {
         "nombre": "Camello",
         "precio": "6,7 M",
         "foto": "https://cdn.biwenger.com/i/p/17756.png"
       },
       "total": 12,
-      "puestoEficiencia": 6,
-      "puestoValor": 9,
-      "puestoGasto": 2,
+      "puestoEficiencia": 1,
+      "puestoValor": 12,
+      "puestoGasto": 3,
       "puestoActividad": 1,
       "vsMediaPuntos": -1,
-      "vsMediaEficiencia": 4,
-      "vsMediaValor": -8,
+      "vsMediaEficiencia": 33,
+      "vsMediaValor": -27,
       "tendencia": {
         "puestos": 3,
         "puntos": 175,
@@ -2186,7 +2202,7 @@
       "puestoGasto": 1,
       "puestoActividad": 2,
       "vsMediaPuntos": -6,
-      "vsMediaEficiencia": -16,
+      "vsMediaEficiencia": -15,
       "vsMediaValor": 8,
       "tendencia": {
         "puestos": -3,
@@ -2223,7 +2239,7 @@
       "puestoGasto": 11,
       "puestoActividad": 10,
       "vsMediaPuntos": -6,
-      "vsMediaEficiencia": -18,
+      "vsMediaEficiencia": -17,
       "vsMediaValor": 11,
       "tendencia": {
         "puestos": -3,
@@ -2264,7 +2280,7 @@
       "puestoGasto": 7,
       "puestoActividad": 3,
       "vsMediaPuntos": -6,
-      "vsMediaEficiencia": -8,
+      "vsMediaEficiencia": -7,
       "vsMediaValor": -2,
       "tendencia": {
         "puestos": -3,
@@ -2342,7 +2358,7 @@
       "puestoGasto": 12,
       "puestoActividad": 12,
       "vsMediaPuntos": -30,
-      "vsMediaEficiencia": -38,
+      "vsMediaEficiencia": -37,
       "vsMediaValor": 9,
       "tendencia": {
         "puestos": 0,
@@ -6122,32 +6138,6 @@
         ]
       },
       {
-        "nombre": "Camello",
-        "posicion": "Delantero",
-        "foto": "https://cdn.biwenger.com/i/p/17756.png",
-        "equipoReal": "Rayo Vallecano",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": true,
-            "rival": "Athletic",
-            "dificultad": 52
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": false,
-            "rival": "Getafe",
-            "dificultad": 37
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": true,
-            "rival": "Elche",
-            "dificultad": 28
-          }
-        ]
-      },
-      {
         "nombre": "Expósito",
         "posicion": "Centrocampista",
         "foto": "https://cdn.biwenger.com/i/p/19862.png",
@@ -6409,6 +6399,32 @@
       }
     ],
     "Seif fc": [
+      {
+        "nombre": "Camello",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/17756.png",
+        "equipoReal": "Rayo Vallecano",
+        "jornadas": [
+          {
+            "jornada": "Round 8",
+            "esLocal": true,
+            "rival": "Athletic",
+            "dificultad": 52
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Getafe",
+            "dificultad": 37
+          },
+          {
+            "jornada": "Round 10",
+            "esLocal": true,
+            "rival": "Elche",
+            "dificultad": 28
+          }
+        ]
+      },
       {
         "nombre": "Yuri",
         "posicion": "Defensa",
@@ -6764,7 +6780,7 @@
     },
     {
       "tipo": "mercado",
-      "texto": "Mercado movido: 9 cláusulas pagadas en los últimos 7 días."
+      "texto": "Mercado movido: 10 cláusulas pagadas en los últimos 7 días."
     }
   ],
   "amenazas": [
@@ -11274,40 +11290,6 @@
       "blindadoHasta": null
     },
     {
-      "id": "17756",
-      "nombre": "Camello",
-      "slug": "sergio-camello",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/17756.png",
-      "equipoReal": "Rayo Vallecano",
-      "equipoIdReal": "70",
-      "presidente": "Las Víboras FC",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
-      "precio": 8180000,
-      "precioTexto": "8,2 M",
-      "puntosTotales": 78,
-      "partidosJugados": 7,
-      "media": 11.1,
-      "puntosPorMillon": 9.54,
-      "racha": [
-        11,
-        6,
-        12,
-        20,
-        16
-      ],
-      "rachaTitular": 3,
-      "ultimoMinutos": 71,
-      "clausula": 14534000,
-      "clausulaTexto": "14,5 M",
-      "pagadoPorSuDueno": 6734000,
-      "margen": 6354000,
-      "margenPorcentaje": 78,
-      "blindado": false,
-      "blindadoHasta": null
-    },
-    {
       "id": "19862",
       "nombre": "Expósito",
       "slug": "edu-exposito-2",
@@ -11625,6 +11607,40 @@
       "margenPorcentaje": 100,
       "blindado": false,
       "blindadoHasta": null
+    },
+    {
+      "id": "17756",
+      "nombre": "Camello",
+      "slug": "sergio-camello",
+      "posicion": "Delantero",
+      "posicionCodigo": 4,
+      "foto": "https://cdn.biwenger.com/i/p/17756.png",
+      "equipoReal": "Rayo Vallecano",
+      "equipoIdReal": "70",
+      "presidente": "Seif fc",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/14027560.png",
+      "precio": 8180000,
+      "precioTexto": "8,2 M",
+      "puntosTotales": 78,
+      "partidosJugados": 7,
+      "media": 11.1,
+      "puntosPorMillon": 9.54,
+      "racha": [
+        11,
+        6,
+        12,
+        20,
+        16
+      ],
+      "rachaTitular": 3,
+      "ultimoMinutos": 71,
+      "clausula": 17440800,
+      "clausulaTexto": "17,4 M",
+      "pagadoPorSuDueno": 14534000,
+      "margen": 9260800,
+      "margenPorcentaje": 113,
+      "blindado": true,
+      "blindadoHasta": "2026-10-08T12:01:56.000Z"
     },
     {
       "id": "1074",
@@ -15415,24 +15431,6 @@
         "dificultad": 15
       },
       {
-        "nombre": "Camello",
-        "foto": "https://cdn.biwenger.com/i/p/17756.png",
-        "posicion": "Delantero",
-        "equipoReal": "Rayo Vallecano",
-        "racha": [
-          11,
-          6,
-          12,
-          20,
-          16
-        ],
-        "rachaTitular": 3,
-        "nota": 6.7,
-        "rival": "Athletic",
-        "esLocal": true,
-        "dificultad": 52
-      },
-      {
         "nombre": "Pathé Ciss",
         "foto": "https://cdn.biwenger.com/i/p/24326.png",
         "posicion": "Centrocampista",
@@ -15682,6 +15680,24 @@
         "rival": "Osasuna",
         "esLocal": true,
         "dificultad": 23
+      },
+      {
+        "nombre": "Camello",
+        "foto": "https://cdn.biwenger.com/i/p/17756.png",
+        "posicion": "Delantero",
+        "equipoReal": "Rayo Vallecano",
+        "racha": [
+          11,
+          6,
+          12,
+          20,
+          16
+        ],
+        "rachaTitular": 3,
+        "nota": 6.7,
+        "rival": "Athletic",
+        "esLocal": true,
+        "dificultad": 52
       },
       {
         "nombre": "Mario Soriano",
