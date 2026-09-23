@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-23T11:49:20.023Z",
+  "actualizado": "2026-09-23T12:00:10.299Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -510,6 +510,19 @@
       "valorMercado": "14,5 M",
       "valorBruto": 14540000,
       "diferencia": -90000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Larrubia",
+      "foto": "https://cdn.biwenger.com/i/p/41412.png",
+      "posicion": "Delantero",
+      "equipoReal": "Málaga",
+      "vendedor": "Gorila FC",
+      "pide": "5,2 M",
+      "pideBruto": 5200000,
+      "valorMercado": "4,3 M",
+      "valorBruto": 4330000,
+      "diferencia": 870000
     },
     {
       "tipo": "venta",
@@ -2239,7 +2252,7 @@
       "balance": "−12,2 M",
       "balanceBruto": -12245300,
       "sobreprecioMedio": 55,
-      "enVenta": 0,
+      "enVenta": 1,
       "fichajeEstrella": {
         "nombre": "Baena",
         "precio": "12,6 M",
