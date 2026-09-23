@@ -21,6 +21,25 @@ function azarSemilla(semilla) {
 
 const millones = (b) => (Math.round(b / 100000) / 10).toFixed(1).replace('.', ',') + ' M';
 
+// ¿es la respuesta el primero de toda la liga en ese campo, sin empate?
+function extremoGlobal(p, r, campo, mayor, que) {
+  const orden = liga.presidentes.slice().sort((a, b) => (mayor ? b[campo] - a[campo] : a[campo] - b[campo]));
+  if (orden[0][campo] === orden[1][campo]) return mal(`empate en ${campo}: la pregunta no tiene respuesta única`);
+  if (orden[0].equipo !== r) mal(`${que} es ${orden[0].equipo}, no ${r}`);
+}
+
+// ¿es la respuesta el primero de las cuatro opciones, sin empate?
+function extremoEntreOpciones(p, r, campo, mayor, que) {
+  const valores = p.opciones.map((o) => {
+    const x = liga.presidentes.find((q) => q.equipo === o);
+    if (!x) mal('equipo inexistente en opciones: ' + o);
+    return x ? x[campo] : (mayor ? -1 : Infinity);
+  });
+  const tope = mayor ? Math.max(...valores) : Math.min(...valores);
+  if (valores.filter((v) => v === tope).length > 1) mal(`empate en ${campo} entre las opciones`);
+  if (valores[p.correcta] !== tope) mal(`${r} no es ${que}`);
+}
+
 // --- comprobadores por categoría: ¿la correcta es correcta de verdad? -------
 const comprueban = {
   plantilla(p, r) {
@@ -43,28 +62,70 @@ const comprueban = {
     if (String(e.puntos) !== r) mal(`${equipo} lleva ${e.puntos}, no ${r}`);
   },
   historico(p, r) {
-    const n = Number(/^¿Quién iba líder en la jornada (\d+)\?$/.exec(p.enunciado)?.[1]);
-    const j = historico.find((x) => x.jornada === n);
-    if (!j) return mal('jornada inexistente: ' + n);
-    const lider = j.equipos.find((e) => e.posicion === 1) || j.equipos[0];
-    if (lider.equipo !== r) mal(`en la j${n} iba líder ${lider.equipo}, no ${r}`);
+    const puesto = /^¿En qué puesto iba (.+) en la jornada (\d+)\?$/.exec(p.enunciado);
+    if (puesto) {
+      const j = historico.find((x) => x.jornada === Number(puesto[2]));
+      if (!j) return mal('jornada inexistente: ' + puesto[2]);
+      const e = j.equipos.find((x) => x.equipo === puesto[1]);
+      if (!e) return mal(`${puesto[1]} no jugaba la j${puesto[2]}`);
+      if (e.posicion + 'º' !== r) mal(`${puesto[1]} iba ${e.posicion}º en la j${puesto[2]}, no ${r}`);
+      return;
+    }
+
+    const quien = /^¿Quién iba (líder|segundo|tercero|último) en la jornada (\d+)\?$/.exec(p.enunciado);
+    if (!quien) return mal('enunciado de historico no reconocido: ' + p.enunciado);
+
+    const j = historico.find((x) => x.jornada === Number(quien[2]));
+    if (!j) return mal('jornada inexistente: ' + quien[2]);
+
+    const esperado = quien[1] === 'último'
+      ? Math.max(...j.equipos.map((e) => e.posicion))
+      : { 'líder': 1, 'segundo': 2, 'tercero': 3 }[quien[1]];
+
+    const e = j.equipos.find((x) => x.posicion === esperado);
+    if (!e) return mal(`nadie en el puesto ${esperado} de la j${quien[2]}`);
+    if (e.equipo !== r) mal(`en la j${quien[2]} iba ${quien[1]} ${e.equipo}, no ${r}`);
   },
   paquete(p, r) {
     if (liga.premios.paquete.nombre !== r) mal(`el paquete es ${liga.premios.paquete.nombre}, no ${r}`);
   },
   valor(p, r) {
-    const valores = p.opciones.map((o) => {
-      const x = liga.presidentes.find((q) => q.equipo === o);
-      if (!x) mal('equipo inexistente en opciones: ' + o);
-      return x ? x.valorBruto : -1;
-    });
-    const max = Math.max(...valores);
-    if (valores[p.correcta] !== max) mal(`${r} no es la plantilla más cara de las cuatro`);
-    if (valores.filter((v) => v === max).length > 1) mal('empate a valor entre las opciones');
+    const cuanto = /^¿Cuánto vale la plantilla de (.+)\?$/.exec(p.enunciado);
+    if (cuanto) {
+      const x = liga.presidentes.find((q) => q.equipo === cuanto[1]);
+      if (!x) return mal('equipo inexistente: ' + cuanto[1]);
+      if ((x.valor || '') !== r) mal(`la plantilla de ${cuanto[1]} vale ${x.valor}, no ${r}`);
+      return;
+    }
+    if (p.enunciado === '¿Quién tiene la plantilla más cara de la liga?') {
+      return extremoGlobal(p, r, 'valorBruto', true, 'la plantilla más cara de la liga');
+    }
+    if (p.enunciado === '¿Cuál de estas cuatro plantillas vale más?') {
+      return extremoEntreOpciones(p, r, 'valorBruto', true, 'la más cara de las cuatro');
+    }
+    if (p.enunciado === '¿Cuál de estas cuatro plantillas vale menos?') {
+      return extremoEntreOpciones(p, r, 'valorBruto', false, 'la más barata de las cuatro');
+    }
+    mal('enunciado de valor no reconocido: ' + p.enunciado);
   },
   clausulador(p, r) {
-    const top = liga.rankingClausulas.slice().sort((a, b) => b.veces - a.veces)[0];
-    if (top.nombre !== r) mal(`el que más clausula es ${top.nombre}, no ${r}`);
+    const cuantas = /^¿Cuántas cláusulas ha hecho (.+)\?$/.exec(p.enunciado);
+    if (cuantas) {
+      const x = liga.presidentes.find((q) => q.equipo === cuantas[1]);
+      if (!x) return mal('equipo inexistente: ' + cuantas[1]);
+      if (String(x.clausulasHechas) !== r) mal(`${cuantas[1]} ha hecho ${x.clausulasHechas}, no ${r}`);
+      return;
+    }
+    if (p.enunciado === '¿Quién ha clausulado más veces esta temporada?') {
+      return extremoGlobal(p, r, 'clausulasHechas', true, 'el que más clausula');
+    }
+    if (p.enunciado === '¿Cuál de estos cuatro ha clausulado más veces?') {
+      return extremoEntreOpciones(p, r, 'clausulasHechas', true, 'el que más clausula de los cuatro');
+    }
+    if (p.enunciado === '¿A quién le han clausulado más jugadores?') {
+      return extremoGlobal(p, r, 'clausulasSufridas', true, 'el que más las sufre');
+    }
+    mal('enunciado de clausulador no reconocido: ' + p.enunciado);
   },
   precio(p, r) {
     const nombre = /^¿Cuánto vale (.+) en el mercado\?$/.exec(p.enunciado)?.[1];
@@ -135,6 +196,33 @@ for (const cat of ['precio', 'puntos']) {
   if (flojo >= 0) {
     mal(`${cat}: la correcta cae en ${flojo + 1}º puesto solo el ` +
         `${(100 * reparto[flojo] / total).toFixed(1)}% de las veces; se puede acertar a ciegas`);
+  }
+}
+
+// --- 1c. variedad: ¿cuántas respuestas distintas da cada categoría? ---------
+// Si una categoría contesta casi siempre lo mismo, se memoriza en dos duelos
+// y deja de ser una pregunta.
+console.log('\n1c. Respuestas distintas por categoría (3000 duelos)');
+const respuestas = {};
+const enunciados = {};
+for (let i = 0; i < 3000; i++) {
+  for (const p of generarPreguntas(liga, historico, 8, { azar: azarSemilla(i) })) {
+    (respuestas[p.categoria] ||= new Map()).set(
+      p.opciones[p.correcta],
+      (respuestas[p.categoria].get(p.opciones[p.correcta]) || 0) + 1
+    );
+    (enunciados[p.categoria] ||= new Set()).add(p.enunciado.replace(/[^?]+(?=\?)/, (m) => m.slice(0, 28)));
+  }
+}
+for (const cat of Object.keys(respuestas).sort()) {
+  const mapa = respuestas[cat];
+  const total = [...mapa.values()].reduce((a, b) => a + b, 0);
+  const masComun = [...mapa.entries()].sort((a, b) => b[1] - a[1])[0];
+  const cuota = (100 * masComun[1] / total).toFixed(0);
+  console.log(`   ${cat.padEnd(15)} ${String(mapa.size).padStart(3)} respuestas distintas, ` +
+              `${String(enunciados[cat].size).padStart(2)} enunciados, la más repetida ${cuota}% (${masComun[0]})`);
+  if (cat !== 'paquete' && mapa.size < 4) {
+    mal(`${cat}: solo ${mapa.size} respuestas distintas, se memoriza enseguida`);
   }
 }
 

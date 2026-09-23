@@ -68,6 +68,69 @@ function montar(azar, categoria, enunciado, correcta, distractores) {
   return { categoria, enunciado, opciones, correcta: opciones.indexOf(buena) };
 }
 
+// Los presidentes que tienen un número en ese campo. presidentes[] es la fuente
+// rica (clausulasHechas, clausulasSufridas, valorBruto); clasificacion[] el plan B.
+function presidentesCon(liga, campo) {
+  const fuente = (liga.presidentes && liga.presidentes.length ? liga.presidentes : liga.clasificacion) || [];
+  return fuente.filter((p) => p && p.equipo && Number.isFinite(p[campo]));
+}
+
+// El primero de la lista por ese campo, con el resto detrás. Devuelve null si
+// hay empate arriba: una pregunta con dos respuestas buenas no es una pregunta.
+function extremo(lista, campo, mayor) {
+  if (!lista || lista.length < 4) return null;
+  const orden = lista.slice().sort((a, b) => (mayor ? b[campo] - a[campo] : a[campo] - b[campo]));
+  if (orden[0][campo] === orden[1][campo]) return null;
+  return { primero: orden[0], resto: orden.slice(1) };
+}
+
+// Varias formas de preguntar lo mismo, barajadas. Se queda con la primera que
+// salga bien: si a una variante le falta un dato o le empatan los números, se
+// prueba la siguiente en vez de perder la categoría entera.
+function primeraQueSalga(variantes, contexto) {
+  for (const variante of barajar(variantes, contexto.azar)) {
+    let pregunta = null;
+    try {
+      pregunta = variante(contexto);
+    } catch (error) {
+      pregunta = null;
+    }
+    if (pregunta) return pregunta;
+  }
+  return null;
+}
+
+// Una jornada del histórico con tabla suficiente para montar cuatro opciones.
+function jornadaAlAzar(historico, azar) {
+  const jornadas = (historico || []).filter((j) => {
+    if (!j || !Array.isArray(j.equipos)) return false;
+    return j.equipos.filter((e) => e && e.equipo && Number.isFinite(e.posicion)).length >= 4;
+  });
+  const jornada = elegir(jornadas, azar);
+  if (!jornada) return null;
+  return {
+    jornada: jornada.jornada,
+    equipos: jornada.equipos.filter((e) => e && e.equipo && Number.isFinite(e.posicion)),
+  };
+}
+
+// "¿Quién iba <mote> en la jornada N?" para un puesto concreto de la tabla.
+function enPuesto(historico, azar, puesto, mote) {
+  const jornada = jornadaAlAzar(historico, azar);
+  if (!jornada) return null;
+
+  const enEsePuesto = jornada.equipos.find((e) => e.posicion === puesto);
+  if (!enEsePuesto) return null;
+
+  // Los vecinos de tabla primero: un distractor del otro extremo no cuela.
+  const vecinos = jornada.equipos
+    .filter((e) => e.equipo !== enEsePuesto.equipo)
+    .sort((a, b) => Math.abs(a.posicion - puesto) - Math.abs(b.posicion - puesto));
+
+  return montar(azar, 'historico', `¿Quién iba ${mote} en la jornada ${jornada.jornada}?`,
+    enEsePuesto.equipo, barajar(vecinos.slice(0, 5), azar).concat(vecinos.slice(5)).map((e) => e.equipo));
+}
+
 // Nombres de los doce presidentes. La clasificación es la fuente buena (trae
 // también el id de Biwenger); presidentes[] es el plan B.
 function nombresEquipos(liga) {
@@ -185,36 +248,40 @@ export const CATEGORIAS = [
   },
 
   // ¿Quién iba líder en la jornada 3?
+  //
+  // También con variantes: en siete jornadas el líder ha sido casi siempre el
+  // mismo, así que preguntar solo por el primero se memoriza igual de rápido.
+  // Se pregunta por el primero, el segundo, el tercero, el último y por el
+  // puesto de uno concreto.
   {
     clave: 'historico',
-    construir({ historico, azar }) {
-      const jornadas = historico.filter(
-        (j) => j && Array.isArray(j.equipos) && j.equipos.length >= 4
-      );
-      if (!jornadas.length) return null;
+    construir: (contexto) => primeraQueSalga([
 
-      const jornada = elegir(jornadas, azar);
-      if (!jornada) return null;
+      ({ historico, azar }) => enPuesto(historico, azar, 1, 'líder'),
+      ({ historico, azar }) => enPuesto(historico, azar, 2, 'segundo'),
+      ({ historico, azar }) => enPuesto(historico, azar, 3, 'tercero'),
 
-      const lider = jornada.equipos.find((e) => e && e.posicion === 1) || jornada.equipos[0];
-      if (!lider || !lider.equipo) return null;
+      ({ historico, azar }) => {
+        const jornada = jornadaAlAzar(historico, azar);
+        if (!jornada) return null;
+        const ultimo = Math.max(...jornada.equipos.map((e) => e.posicion || 0));
+        return enPuesto([jornada], azar, ultimo, 'último');
+      },
 
-      // Los perseguidores primero: un distractor del fondo de la tabla no cuela.
-      const perseguidores = jornada.equipos
-        .filter((e) => e && e.equipo && e.equipo !== lider.equipo)
-        .sort((a, b) => (a.posicion || 99) - (b.posicion || 99));
+      // Al revés: te doy el equipo y dime el puesto. Los distractores son los
+      // puestos reales que ocupaban otros esa jornada.
+      ({ historico, azar }) => {
+        const jornada = jornadaAlAzar(historico, azar);
+        if (!jornada) return null;
+        const equipo = elegir(jornada.equipos, azar);
+        if (!equipo || !Number.isFinite(equipo.posicion)) return null;
+        const otros = barajar(jornada.equipos.filter((e) => e.equipo !== equipo.equipo), azar);
+        return montar(azar, 'historico',
+          `¿En qué puesto iba ${equipo.equipo} en la jornada ${jornada.jornada}?`,
+          equipo.posicion + 'º', otros.map((e) => e.posicion + 'º'));
+      },
 
-      const cerca = barajar(perseguidores.slice(0, 6), azar).map((e) => e.equipo);
-      const resto = barajar(perseguidores.slice(6), azar).map((e) => e.equipo);
-
-      return montar(
-        azar,
-        'historico',
-        `¿Quién iba líder en la jornada ${jornada.jornada}?`,
-        lider.equipo,
-        cerca.concat(resto)
-      );
-    },
+    ], contexto),
   },
 
   // ¿Quién fue el paquete de la jornada 7?
@@ -243,52 +310,109 @@ export const CATEGORIAS = [
   },
 
   // ¿Qué plantilla vale más?
+  //
+  // Con una sola forma de preguntarlo la respuesta sería la misma durante
+  // semanas y se memorizaría en dos duelos. Por eso van cuatro variantes: la
+  // más cara y la más barata de cuatro al azar (la respuesta cambia según a
+  // quién le toque salir), la más cara de toda la liga, y cuánto vale una.
   {
     clave: 'valor',
-    construir({ liga, azar }) {
-      const fuente = (liga.presidentes && liga.presidentes.length ? liga.presidentes : liga.clasificacion) || [];
-      const conValor = fuente.filter((p) => p && p.equipo && Number.isFinite(p.valorBruto));
-      if (conValor.length < 4) return null;
+    construir: (contexto) => primeraQueSalga([
 
-      const cuatro = barajar(conValor, azar).slice(0, 4).sort((a, b) => b.valorBruto - a.valorBruto);
+      ({ liga, azar }) => {
+        const cuatro = barajar(presidentesCon(liga, 'valorBruto'), azar).slice(0, 4);
+        const e = extremo(cuatro, 'valorBruto', true);
+        if (!e) return null;
+        return montar(azar, 'valor', '¿Cuál de estas cuatro plantillas vale más?',
+          e.primero.equipo, e.resto.map((p) => p.equipo));
+      },
 
-      // Si los dos primeros empatan en valor, la pregunta no tiene respuesta.
-      if (cuatro[0].valorBruto === cuatro[1].valorBruto) return null;
+      ({ liga, azar }) => {
+        const cuatro = barajar(presidentesCon(liga, 'valorBruto'), azar).slice(0, 4);
+        const e = extremo(cuatro, 'valorBruto', false);
+        if (!e) return null;
+        return montar(azar, 'valor', '¿Cuál de estas cuatro plantillas vale menos?',
+          e.primero.equipo, e.resto.map((p) => p.equipo));
+      },
 
-      return montar(
-        azar,
-        'valor',
-        '¿Qué plantilla vale más ahora mismo?',
-        cuatro[0].equipo,
-        cuatro.slice(1).map((p) => p.equipo)
-      );
-    },
+      ({ liga, azar }) => {
+        const e = extremo(presidentesCon(liga, 'valorBruto'), 'valorBruto', true);
+        if (!e) return null;
+        return montar(azar, 'valor', '¿Quién tiene la plantilla más cara de la liga?',
+          e.primero.equipo, barajar(e.resto, azar).map((p) => p.equipo));
+      },
+
+      // Aquí los distractores son los valores reales de otros presidentes, no
+      // cifras redondeadas: así no se puede descartar por lo que no existe.
+      ({ liga, azar }) => {
+        const todos = presidentesCon(liga, 'valorBruto');
+        if (todos.length < 4) return null;
+        const p = elegir(todos, azar);
+        if (!p) return null;
+        const texto = (x) => x.valor || millones(x.valorBruto);
+        return montar(azar, 'valor', `¿Cuánto vale la plantilla de ${p.equipo}?`,
+          texto(p), barajar(todos.filter((x) => x.equipo !== p.equipo), azar).map(texto));
+      },
+
+    ], contexto),
   },
 
   // ¿Quién ha clausulado más veces?
+  //
+  // Mismo problema que 'valor': el que más clausula lo es durante media
+  // temporada. Las variantes preguntan por el de toda la liga, por el mejor de
+  // cuatro al azar, por el que más las ha sufrido (que es otro) y por cuántas
+  // lleva uno concreto.
   {
     clave: 'clausulador',
-    construir({ liga, azar, equipos }) {
-      const ranking = (liga.rankingClausulas || [])
-        .filter((r) => r && r.nombre && Number.isFinite(r.veces))
-        .sort((a, b) => b.veces - a.veces);
-      if (ranking.length < 2) return null;
+    construir: (contexto) => primeraQueSalga([
 
-      // Empate en lo alto: no hay una respuesta buena, fuera la pregunta.
-      if (ranking[0].veces === ranking[1].veces) return null;
+      ({ liga, azar, equipos }) => {
+        const e = extremo(presidentesCon(liga, 'clausulasHechas'), 'clausulasHechas', true);
+        if (e) {
+          return montar(azar, 'clausulador', '¿Quién ha clausulado más veces esta temporada?',
+            e.primero.equipo, barajar(e.resto, azar).map((p) => p.equipo));
+        }
+        // Plan B si no hubiera presidentes[]: el ranking de cláusulas, que solo
+        // trae el top cinco y hay que completar con el resto de equipos.
+        const ranking = (liga.rankingClausulas || [])
+          .filter((r) => r && r.nombre && Number.isFinite(r.veces))
+          .sort((a, b) => b.veces - a.veces);
+        if (ranking.length < 2 || ranking[0].veces === ranking[1].veces) return null;
+        const lider = ranking[0].nombre;
+        const perseguidores = ranking.slice(1).map((r) => r.nombre);
+        const otros = barajar(equipos.filter((x) => x !== lider && !perseguidores.includes(x)), azar);
+        return montar(azar, 'clausulador', '¿Quién ha clausulado más veces esta temporada?',
+          lider, perseguidores.concat(otros));
+      },
 
-      const lider = ranking[0].nombre;
-      const perseguidores = ranking.slice(1).map((r) => r.nombre);
-      const otros = barajar(equipos.filter((e) => e !== lider && !perseguidores.includes(e)), azar);
+      ({ liga, azar }) => {
+        const cuatro = barajar(presidentesCon(liga, 'clausulasHechas'), azar).slice(0, 4);
+        const e = extremo(cuatro, 'clausulasHechas', true);
+        if (!e) return null;
+        return montar(azar, 'clausulador', '¿Cuál de estos cuatro ha clausulado más veces?',
+          e.primero.equipo, e.resto.map((p) => p.equipo));
+      },
 
-      return montar(
-        azar,
-        'clausulador',
-        '¿Quién ha clausulado más veces esta temporada?',
-        lider,
-        perseguidores.concat(otros)
-      );
-    },
+      // La otra cara: quien más las sufre no suele ser quien más las hace.
+      ({ liga, azar }) => {
+        const e = extremo(presidentesCon(liga, 'clausulasSufridas'), 'clausulasSufridas', true);
+        if (!e) return null;
+        return montar(azar, 'clausulador', '¿A quién le han clausulado más jugadores?',
+          e.primero.equipo, barajar(e.resto, azar).map((p) => p.equipo));
+      },
+
+      ({ liga, azar }) => {
+        const todos = presidentesCon(liga, 'clausulasHechas');
+        if (todos.length < 4) return null;
+        const p = elegir(todos, azar);
+        if (!p) return null;
+        return montar(azar, 'clausulador', `¿Cuántas cláusulas ha hecho ${p.equipo}?`,
+          String(p.clausulasHechas),
+          barajar(todos.filter((x) => x.equipo !== p.equipo), azar).map((x) => String(x.clausulasHechas)));
+      },
+
+    ], contexto),
   },
 
   // ¿Cuánto vale Mbappé en el mercado?
