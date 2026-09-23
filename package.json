@@ -6,6 +6,7 @@
   "scripts": {
     "datos": "node --env-file=.env scripts/fetch-biwenger.mjs",
     "servir": "npx --yes serve .",
-    "probar-duelos": "node scripts/probar-preguntas.mjs"
+    "probar-duelos": "node scripts/probar-preguntas.mjs",
+    "probar-partida": "node scripts/probar-partida.mjs"
   }
 }

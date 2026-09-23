@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Duelos · Johnny's League</title>
+<meta name="description" content="Reta a otro presidente: ocho preguntas sobre la liga, contrarreloj.">
+<link rel="icon" href="assets/escudo.png">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="assets/escudo.png">
+<meta name="theme-color" content="#021234">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Johnny's League">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/estilo.css">
+<style>
+  [hidden] { display: none !important; }
+
+  :root { --verde:#1E9E5A; --verde-luz:rgba(30,158,90,0.22); --rojo-luz:rgba(192,24,44,0.22); }
+
+  .boton { background:var(--red); color:#fff; border:none; cursor:pointer;
+    font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.07em;
+    text-transform:uppercase; font-size:0.9rem; padding:10px 20px; border-radius:4px; }
+  .boton:hover { filter:brightness(1.12); }
+  .boton-secundario { background:var(--navy-soft); border:1px solid var(--gold-dim); color:var(--white); }
+
+  /* ------------------------------------------------------------------ */
+  /* La partida se come la pantalla entera. En el móvil se juega el 100% */
+  /* de las veces, así que manda el móvil: dvh en vez de vh (por la      */
+  /* barra del navegador, que aparece y desaparece) y safe-area para el  */
+  /* notch y la barra de gestos.                                         */
+  /* ------------------------------------------------------------------ */
+  .partida { position:fixed; inset:0; z-index:100; background:var(--navy);
+    display:grid; grid-template-rows:auto auto 1fr auto;
+    height:100vh; height:100dvh;
+    padding:calc(10px + env(safe-area-inset-top)) 16px calc(14px + env(safe-area-inset-bottom));
+    gap:12px; }
+
+  /* Marcador de arriba */
+  .partida .marcador { display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+    font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.07em;
+    text-transform:uppercase; font-size:0.78rem; color:var(--grey); }
+  .partida .marcador .total { font-family:'Anton',sans-serif; font-size:1.5rem; letter-spacing:0;
+    color:var(--gold); line-height:1; }
+
+  /* Barra de tiempo */
+  .tiempo { height:6px; background:rgba(255,255,255,0.10); border-radius:3px; overflow:hidden; }
+  .tiempo i { display:block; height:100%; width:100%; background:var(--ice); border-radius:3px;
+    transform-origin:left center; }
+  .tiempo.poco i { background:var(--red); }
+
+  /* Enunciado */
+  .pregunta { display:flex; flex-direction:column; justify-content:center; align-items:center;
+    text-align:center; gap:10px; min-height:0; }
+  .pregunta .categoria { font-family:'Barlow Condensed',sans-serif; font-weight:600;
+    letter-spacing:0.12em; text-transform:uppercase; font-size:0.68rem; color:var(--gold-dim); }
+  .pregunta h2 { font-family:'Anton',sans-serif; font-weight:400; margin:0;
+    font-size:clamp(1.35rem, 6.2vw, 2.3rem); line-height:1.12; letter-spacing:0.01em;
+    text-wrap:balance; }
+
+  /* Las cuatro opciones. Tienen que caber sin scroll con el teclado cerrado. */
+  .opciones { display:grid; grid-template-rows:repeat(4, minmax(0, 1fr)); gap:9px; min-height:0; }
+  .opciones button { width:100%; height:100%; min-height:56px;
+    background:var(--navy-soft); color:var(--white); border:1px solid var(--navy-line);
+    border-radius:6px; padding:10px 14px; cursor:pointer;
+    font-family:'Source Serif 4',serif; font-size:clamp(0.95rem, 4.1vw, 1.15rem); font-weight:600;
+    line-height:1.25; text-align:center;
+    display:flex; align-items:center; justify-content:center;
+    transition:background 0.12s, border-color 0.12s, opacity 0.18s;
+    -webkit-tap-highlight-color:transparent; }
+  .opciones button:active { transform:scale(0.985); }
+  .opciones button.buena { background:var(--verde-luz); border-color:var(--verde); color:#fff; }
+  .opciones button.mala  { background:var(--rojo-luz);  border-color:var(--red);   color:#fff; }
+  .opciones button.apagada { opacity:0.35; }
+  .opciones.bloqueada button { cursor:default; }
+
+  /* Los puntos, subiendo en grande */
+  .puntos-vuelan { position:fixed; left:50%; top:46%; transform:translate(-50%,-50%); z-index:120;
+    font-family:'Anton',sans-serif; font-size:3.6rem; color:var(--gold); pointer-events:none;
+    text-shadow:0 2px 22px rgba(2,18,52,0.85); animation:subir 0.85s ease-out forwards; }
+  .puntos-vuelan.cero { color:var(--red); }
+  @keyframes subir {
+    0%   { opacity:0; transform:translate(-50%,-30%) scale(0.7); }
+    22%  { opacity:1; transform:translate(-50%,-52%) scale(1.12); }
+    100% { opacity:0; transform:translate(-50%,-125%) scale(1); }
+  }
+
+  @media (prefers-reduced-motion:reduce) {
+    .puntos-vuelan { animation:none; opacity:1; }
+    .tiempo i { transition:none !important; }
+  }
+
+  /* Pantalla de cierre */
+  .cierre { text-align:center; padding:40px 0 10px; }
+  .cierre .total-grande { font-family:'Anton',sans-serif; font-size:4.2rem; line-height:0.95;
+    color:var(--gold); }
+  .cierre .de { font-family:'Barlow Condensed',sans-serif; letter-spacing:0.08em;
+    text-transform:uppercase; font-size:0.8rem; color:var(--grey); margin-top:6px; }
+  .repaso { margin:28px 0 24px; text-align:left; }
+  .repaso .fila { display:flex; align-items:flex-start; gap:12px; padding:11px 0;
+    border-bottom:1px solid var(--navy-line); }
+  .repaso .fila:last-child { border-bottom:none; }
+  .repaso .marca { flex:none; width:22px; font-size:1rem; line-height:1.4; }
+  .repaso .txt { min-width:0; flex:1; }
+  .repaso .txt .q { font-size:0.95rem; line-height:1.35; }
+  .repaso .txt .a { font-family:'Barlow Condensed',sans-serif; letter-spacing:0.04em;
+    text-transform:uppercase; font-size:0.74rem; color:var(--grey); margin-top:3px; }
+  .repaso .pts { flex:none; font-family:'Anton',sans-serif; font-size:1.05rem; color:var(--gold); }
+  .repaso .pts.cero { color:rgba(247,247,245,0.28); }
+
+  .aviso-paso { background:rgba(224,169,79,0.1); border-left:3px solid var(--gold);
+    border-radius:0 4px 4px 0; padding:12px 14px; margin-bottom:22px;
+    font-size:0.88rem; color:rgba(247,247,245,0.9); }
+</style>
+</head>
+<body>
+
+<div class="lomo" aria-hidden="true"></div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="bar">
+      <a href="index.html"><img class="crest" src="assets/escudo.png" alt="Escudo de Johnny's League"></a>
+      <div class="titles">
+        <h1>Johnny's League</h1>
+        <div class="tagline">crónica semanal de la liga</div>
+      </div>
+      <div class="status">
+        <span class="cond">Duelos</span>
+        <span class="round">⚔️</span>
+      </div>
+    </div>
+    <div class="jump">
+      <a href="index.html#portada">Portada</a>
+      <a href="tablon.html">Tablón</a>
+      <a href="duelos.html" class="activo">Duelos</a>
+      <a href="index.html#clasificacion">Clasificación</a>
+      <a href="index.html#mercado">Mercado</a>
+      <a href="presidentes.html">Presidentes</a>
+      <a href="index.html#cronicas">Crónicas</a>
+    </div>
+    <div class="jump">
+      <a href="estadisticas.html">Estadísticas</a>
+      <a href="jugadores.html">Jugadores</a>
+      <a href="oportunidades.html">Oportunidades</a>
+      <a href="calendario.html">Calendario</a>
+      <a href="comparador.html">Comparador</a>
+      <a href="hemeroteca.html">Hemeroteca</a>
+    </div>
+  </div>
+</header>
+
+<script>
+(function () {
+  var activo = document.querySelector('.jump a.activo');
+  if (activo) activo.scrollIntoView({ inline: 'center', block: 'nearest' });
+})();
+</script>
+
+<main class="wrap">
+
+  <section class="hero" style="border-bottom:none;">
+    <div class="hero-titulo">
+      <h2 style="font-family:'Anton',sans-serif; font-weight:400; font-size:clamp(2rem,7vw,3.2rem); margin:0 0 6px;">
+        Duelos de presidentes
+      </h2>
+      <p style="color:var(--grey); margin:0 0 22px; max-width:46ch;">
+        Ocho preguntas sobre la liga, diez segundos cada una. Gana el que más puntúe.
+      </p>
+    </div>
+
+    <div class="aviso-paso">
+      <strong>Paso 4:</strong> esto es la pantalla de partida con preguntas de mentira y sin base de
+      datos, para ver si el juego apetece. El lobby, el rival y el resultado de verdad llegan en el
+      paso 5.
+    </div>
+
+    <button type="button" class="boton" id="btnJugar" style="font-size:1rem; padding:14px 28px;">
+      Jugar una partida de prueba
+    </button>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <span class="cond">Johnny's League · hecha por y para la liga</span>
+</footer>
+
+
+<!-- ===================== PARTIDA ===================== -->
+<div class="partida" id="partida" hidden>
+  <div class="marcador">
+    <span id="cuenta">1 / 8</span>
+    <span class="total" id="total">0</span>
+  </div>
+
+  <div class="tiempo" id="tiempo"><i id="tiempoBarra"></i></div>
+
+  <div class="pregunta">
+    <span class="categoria" id="categoria"></span>
+    <h2 id="enunciado"></h2>
+  </div>
+
+  <div class="opciones" id="opciones"></div>
+</div>
+
+
+<!-- ===================== CIERRE ===================== -->
+<section class="wrap cierre" id="cierre" hidden>
+  <div class="total-grande" id="cierreTotal">0</div>
+  <div class="de">de 1600 posibles</div>
+  <div class="repaso" id="repaso"></div>
+  <button type="button" class="boton" id="btnOtra" style="font-size:1rem; padding:13px 26px;">Otra partida</button>
+</section>
+
+
+<script>
+(function () {
+  'use strict';
+
+  // ====================================================================
+  // DATOS DE PRUEBA. Se van en el paso 5, cuando las preguntas vengan de
+  // duelo_preguntas_para_jugar. Mismo formato que devuelve el generador:
+  // { orden, categoria, enunciado, opciones, correcta }.
+  //
+  // Los textos son largos y cortos a propósito, con los nombres reales más
+  // largos de la liga, para que la pantalla se pruebe en lo peor que le va
+  // a tocar y no con cuatro opciones de una palabra.
+  // ====================================================================
+  var PREGUNTAS_DE_PRUEBA = [
+    { orden:1, categoria:'plantilla', enunciado:'¿De quién es Lamine Yamal?',
+      opciones:['Urdinho Pernambucano','C.d.F Atlético de Cohiba','Manchester Pity','Las Víboras FC'], correcta:1 },
+    { orden:2, categoria:'puntos', enunciado:'¿Cuántos puntos lleva CD Tiro Buchón?',
+      opciones:['409','387','425','394'], correcta:0 },
+    { orden:3, categoria:'clausula_cara', enunciado:'¿Quién pagó los 23,1 M por Bellingham?',
+      opciones:['Seif fc','FC FORUSIA','Gorila FC','Cañoneros CF'], correcta:0 },
+    { orden:4, categoria:'valor', enunciado:'¿Cuál de estas cuatro plantillas vale menos?',
+      opciones:['Madriguana FC','Lottin Capital','Manchester Pity','Urdinho Pernambucano'], correcta:2 },
+    { orden:5, categoria:'historico', enunciado:'¿Quién iba líder en la jornada 3?',
+      opciones:['LXUNITED','Cañoneros CF','Seif fc','CD Tiro Buchón'], correcta:0 },
+    { orden:6, categoria:'paquete', enunciado:'¿Quién fue el paquete de la jornada 7?',
+      opciones:['Redondo','Lunin','Osambela','Nico Serrano'], correcta:0 },
+    { orden:7, categoria:'clausulador', enunciado:'¿A quién le han clausulado más jugadores?',
+      opciones:['FC FORUSIA','Cañoneros CF','Seif fc','C.d.F Atlético de Cohiba'], correcta:1 },
+    { orden:8, categoria:'precio', enunciado:'¿Cuánto vale Vinícius Jr en el mercado?',
+      opciones:['18,4 M','14,9 M','22,1 M','16,2 M'], correcta:2 }
+  ];
+
+  var LIMITE_MS = 10000;   // el mismo tope que aplica duelo_responder
+  var AVISO_MS  = 3000;    // cuando la barra se pone roja
+
+  // Cuánto se queda la respuesta en pantalla antes de pasar a la siguiente.
+  // El plan dice medio segundo; con un fallo eso no da tiempo ni a leer cuál
+  // era la buena, así que el fallo aguanta algo más. Sin botón de siguiente:
+  // que no se pueda parar a pensar entre preguntas.
+  var ESPERA_ACIERTO = 550;
+  var ESPERA_FALLO   = 1250;
+
+  var elPartida   = document.getElementById('partida');
+  var elCuenta    = document.getElementById('cuenta');
+  var elTotal     = document.getElementById('total');
+  var elTiempo    = document.getElementById('tiempo');
+  var elBarra     = document.getElementById('tiempoBarra');
+  var elCategoria = document.getElementById('categoria');
+  var elEnunciado = document.getElementById('enunciado');
+  var elOpciones  = document.getElementById('opciones');
+  var elCierre    = document.getElementById('cierre');
+
+  var preguntas = [];
+  var indice = 0;
+  var total = 0;
+  var respuestas = [];
+  var arranque = 0;
+  var animacion = null;
+  var relojFin = null;         // los 10 segundos de la pregunta
+  var relojSiguiente = null;   // la pausa entre una pregunta y la siguiente
+  var contestada = false;
+
+  // Mismo cálculo que duelo_responder en Supabase. Aquí es solo para pintar:
+  // en el juego de verdad los puntos los da el servidor, nunca el navegador.
+  function puntosDe(acierto, ms) {
+    if (!acierto) return 0;
+    var topado = Math.min(Math.max(ms, 0), LIMITE_MS);
+    return 100 + Math.max(Math.round(100 * (LIMITE_MS - topado) / LIMITE_MS), 0);
+  }
+
+  function vibrar(patron) {
+    try { if (navigator.vibrate) navigator.vibrate(patron); } catch (e) {}
+  }
+
+  function empezar() {
+    // Cortar lo que quedara vivo de una partida anterior. Ahora mismo no puede
+    // pasar (la pantalla de partida tapa el botón de jugar), pero en cuanto
+    // haya revancha y se pueda volver al lobby a medias, un temporizador
+    // huérfano pasaría de pregunta en la partida nueva.
+    cancelAnimationFrame(animacion);
+    clearTimeout(relojFin);
+    clearTimeout(relojSiguiente);
+    contestada = true;
+
+    preguntas = PREGUNTAS_DE_PRUEBA.slice();
+    indice = 0;
+    total = 0;
+    respuestas = [];
+    elTotal.textContent = '0';
+    elCierre.hidden = true;
+    elPartida.hidden = false;
+    // Sin scroll mientras se juega: un arrastre sin querer no puede mover
+    // la pantalla con el dedo a medio camino de un botón.
+    document.body.style.overflow = 'hidden';
+    pintar();
+  }
+
+  function pintar() {
+    var p = preguntas[indice];
+    contestada = false;
+
+    elCuenta.textContent = (indice + 1) + ' / ' + preguntas.length;
+    elCategoria.textContent = p.categoria.replace(/_/g, ' ');
+    elEnunciado.textContent = p.enunciado;
+
+    elOpciones.className = 'opciones';
+    elOpciones.innerHTML = '';
+    p.opciones.forEach(function (texto, i) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = texto;
+      b.addEventListener('click', function () { responder(i); });
+      elOpciones.appendChild(b);
+    });
+
+    // Barra a tope y sin transición, antes de soltarla.
+    elTiempo.classList.remove('poco');
+    elBarra.style.transform = 'scaleX(1)';
+
+    arranque = performance.now();
+    animacion = requestAnimationFrame(tic);
+    relojFin = setTimeout(function () { responder(null); }, LIMITE_MS);
+  }
+
+  function tic(ahora) {
+    var queda = Math.max(0, LIMITE_MS - (ahora - arranque));
+    elBarra.style.transform = 'scaleX(' + (queda / LIMITE_MS) + ')';
+    if (queda <= AVISO_MS) elTiempo.classList.add('poco');
+    if (queda > 0 && !contestada) animacion = requestAnimationFrame(tic);
+  }
+
+  function responder(elegida) {
+    if (contestada) return;
+    contestada = true;
+
+    var ms = Math.round(performance.now() - arranque);
+    cancelAnimationFrame(animacion);
+    clearTimeout(relojFin);
+
+    var p = preguntas[indice];
+    var acierto = elegida !== null && elegida === p.correcta;
+    var puntos = puntosDe(acierto, ms);
+    total += puntos;
+
+    respuestas.push({ pregunta: p, elegida: elegida, acierto: acierto, ms: ms, puntos: puntos });
+
+    // Verde la buena siempre; roja la mala solo si la ha pulsado él. Así el
+    // fallo enseña cuál era la correcta en vez de dejarte a medias.
+    elOpciones.classList.add('bloqueada');
+    var botones = elOpciones.querySelectorAll('button');
+    for (var i = 0; i < botones.length; i++) {
+      if (i === p.correcta) botones[i].classList.add('buena');
+      else if (i === elegida) botones[i].classList.add('mala');
+      else botones[i].classList.add('apagada');
+    }
+
+    elTotal.textContent = String(total);
+    volarPuntos(puntos);
+    vibrar(acierto ? 30 : [40, 60, 40]);
+
+    relojSiguiente = setTimeout(function () {
+      indice++;
+      if (indice < preguntas.length) pintar();
+      else terminar();
+    }, acierto ? ESPERA_ACIERTO : ESPERA_FALLO);
+  }
+
+  function volarPuntos(puntos) {
+    var v = document.createElement('div');
+    v.className = 'puntos-vuelan' + (puntos ? '' : ' cero');
+    v.textContent = puntos ? '+' + puntos : '0';
+    document.body.appendChild(v);
+    setTimeout(function () { v.remove(); }, 900);
+  }
+
+  function terminar() {
+    elPartida.hidden = true;
+    document.body.style.overflow = '';
+
+    document.getElementById('cierreTotal').textContent = String(total);
+
+    var repaso = document.getElementById('repaso');
+    repaso.innerHTML = '';
+    respuestas.forEach(function (r) {
+      var fila = document.createElement('div');
+      fila.className = 'fila';
+
+      var marca = document.createElement('div');
+      marca.className = 'marca';
+      marca.textContent = r.acierto ? '✅' : (r.elegida === null ? '⌛' : '❌');
+
+      var txt = document.createElement('div');
+      txt.className = 'txt';
+      var q = document.createElement('div');
+      q.className = 'q';
+      q.textContent = r.pregunta.enunciado;
+      var a = document.createElement('div');
+      a.className = 'a';
+      a.textContent = r.acierto
+        ? 'Bien, en ' + (r.ms / 1000).toFixed(1) + ' s'
+        : (r.elegida === null ? 'Se acabó el tiempo. Era ' : 'Era ') + r.pregunta.opciones[r.pregunta.correcta];
+      txt.appendChild(q);
+      txt.appendChild(a);
+
+      var pts = document.createElement('div');
+      pts.className = 'pts' + (r.puntos ? '' : ' cero');
+      pts.textContent = r.puntos;
+
+      fila.appendChild(marca);
+      fila.appendChild(txt);
+      fila.appendChild(pts);
+      repaso.appendChild(fila);
+    });
+
+    elCierre.hidden = false;
+    elCierre.scrollIntoView({ block: 'start' });
+  }
+
+  // Con el teclado, del 1 al 4. Solo para probar rápido desde el ordenador;
+  // esto se juega con el dedo.
+  document.addEventListener('keydown', function (e) {
+    if (elPartida.hidden || contestada) return;
+    var n = parseInt(e.key, 10);
+    if (n >= 1 && n <= 4) responder(n - 1);
+  });
+
+  document.getElementById('btnJugar').addEventListener('click', empezar);
+  document.getElementById('btnOtra').addEventListener('click', empezar);
+})();
+</script>
+
+</body>
+</html>
