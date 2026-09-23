@@ -135,6 +135,21 @@ const comprueban = {
   },
 };
 
+// --- 0. la copia que despliega la Edge Function --------------------------
+// crear-duelo se despliega con su propia copia del generador. Si se separa de
+// esta, el juego usaría preguntas de una versión distinta de la probada.
+console.log('\n0. Copia del generador en la Edge Function');
+{
+  const aqui = readFileSync(new URL('../assets/preguntas-duelo.js', import.meta.url));
+  const alla = readFileSync(new URL('../supabase/functions/crear-duelo/preguntas-duelo.js', import.meta.url));
+  if (!aqui.equals(alla)) {
+    mal('supabase/functions/crear-duelo/preguntas-duelo.js no es igual que assets/preguntas-duelo.js.\n' +
+        '          Copiala otra vez y vuelve a desplegar crear-duelo.');
+  } else {
+    console.log('   idéntica a assets/preguntas-duelo.js');
+  }
+}
+
 // --- 1. invariantes sobre 3000 duelos --------------------------------------
 console.log('\n1. 3000 duelos con los datos reales');
 const vistas = {};

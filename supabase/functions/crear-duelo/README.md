@@ -40,3 +40,21 @@ Al tocar el generador:
     cp assets/preguntas-duelo.js supabase/functions/crear-duelo/preguntas-duelo.js
     npm run probar-duelos
     # y volver a desplegar la función
+
+## Probado en producción (23-09-2026)
+
+Camino feliz completo, con el trigger `notificar_nuevo_mensaje` desactivado un
+momento para no mandar una push al grupo por una prueba, y reactivado justo
+después. El duelo, las preguntas y el mensaje se borraron al terminar.
+
+- crear duelo → `{ "duelo_id": 1 }`, ocho preguntas de ocho categorías distintas
+- repetir la pareja al revés → 409, no se pueden acumular duelos
+- `anon` leyendo `duelo_preguntas` del duelo real → permission denied
+- un jugador del duelo pidiendo las suyas → las ocho, sin la columna `correcta`
+- un tercero pidiéndolas → "No juegas este duelo"
+- acierto en 2000 ms → 180 puntos; con `ms=1` por petición manual → 200, topado
+- fallo y tiempo agotado → 0 puntos, y devuelve cuál era la buena
+- repetir una pregunta ya contestada → rechazada
+- `duelo_cerrar` con el duelo a medias → no cierra
+
+Las respuestas generadas se contrastaron contra `liga.json` una a una.
