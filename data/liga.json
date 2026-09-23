@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-23T12:24:34.095Z",
+  "actualizado": "2026-09-23T12:45:24.170Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -147,8 +147,8 @@
       "iniciales": "SF",
       "escudo": "https://cdn.biwenger.com/i/u/14027560.png",
       "puntos": 367,
-      "valor": "35,1 M",
-      "valorBruto": 35060000,
+      "valor": "44,4 M",
+      "valorBruto": 44390000,
       "esTuyo": false,
       "puntosJornada": 55,
       "jugadosJornada": 10,
@@ -227,8 +227,8 @@
       "iniciales": "FF",
       "escudo": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
       "puntos": 310,
-      "valor": "45,9 M",
-      "valorBruto": 45910000,
+      "valor": "36,6 M",
+      "valorBruto": 36580000,
       "esTuyo": false,
       "puntosJornada": 30,
       "jugadosJornada": 8,
@@ -1150,6 +1150,22 @@
     },
     {
       "tipo": "clausula",
+      "fecha": "2026-09-23T12:37:29.000Z",
+      "nombre": "Kang-in Lee",
+      "foto": "https://cdn.biwenger.com/i/p/17687.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Atlético",
+      "vendedor": "FC FORUSIA",
+      "comprador": "Seif fc",
+      "escudoComprador": "https://cdn.biwenger.com/i/u/14027560.png",
+      "pide": "12,1 M",
+      "pideBruto": 12130300,
+      "valorMercado": "9,3 M",
+      "valorBruto": 9330000,
+      "diferencia": 2800300
+    },
+    {
+      "tipo": "clausula",
       "fecha": "2026-09-23T12:01:56.000Z",
       "nombre": "Camello",
       "foto": "https://cdn.biwenger.com/i/p/17756.png",
@@ -1867,6 +1883,12 @@
       "gastadoTexto": "35,6 M"
     },
     {
+      "nombre": "Seif fc",
+      "veces": 4,
+      "gastado": 51299300,
+      "gastadoTexto": "51,3 M"
+    },
+    {
       "nombre": "Gorila FC",
       "veces": 4,
       "gastado": 23944300,
@@ -1877,12 +1899,6 @@
       "veces": 4,
       "gastado": 8370000,
       "gastadoTexto": "8,4 M"
-    },
-    {
-      "nombre": "Seif fc",
-      "veces": 3,
-      "gastado": 39169000,
-      "gastadoTexto": "39,2 M"
     }
   ],
   "presidentes": [
@@ -1914,12 +1930,12 @@
         "foto": "https://cdn.biwenger.com/i/p/19577.png"
       },
       "total": 12,
-      "puestoEficiencia": 4,
+      "puestoEficiencia": 3,
       "puestoValor": 2,
       "puestoGasto": 4,
-      "puestoActividad": 6,
+      "puestoActividad": 7,
       "vsMediaPuntos": 26,
-      "vsMediaEficiencia": 8,
+      "vsMediaEficiencia": 9,
       "vsMediaValor": 13,
       "tendencia": {
         "puestos": 0,
@@ -1955,7 +1971,7 @@
         "foto": "https://cdn.biwenger.com/i/p/30477.png"
       },
       "total": 12,
-      "puestoEficiencia": 8,
+      "puestoEficiencia": 9,
       "puestoValor": 1,
       "puestoGasto": 5,
       "puestoActividad": 9,
@@ -1974,21 +1990,21 @@
       "escudo": "https://cdn.biwenger.com/i/u/14027560.png",
       "iniciales": "SF",
       "puntos": 367,
-      "valor": "35,1 M",
-      "valorBruto": 35060000,
+      "valor": "44,4 M",
+      "valorBruto": 44390000,
       "esTuyo": false,
-      "puntosPorMillon": 10.47,
+      "puntosPorMillon": 8.27,
       "mediaJornada": 52.4,
-      "clausulasHechas": 3,
+      "clausulasHechas": 4,
       "clausulasSufridas": 3,
-      "operaciones": 6,
-      "gastado": "39,2 M",
-      "gastadoBruto": 39169000,
+      "operaciones": 7,
+      "gastado": "51,3 M",
+      "gastadoBruto": 51299300,
       "ingresado": "31,0 M",
       "ingresadoBruto": 31032000,
-      "balance": "−8,1 M",
-      "balanceBruto": -8137000,
-      "sobreprecioMedio": 44,
+      "balance": "−20,3 M",
+      "balanceBruto": -20267300,
+      "sobreprecioMedio": 40,
       "enVenta": 13,
       "fichajeEstrella": {
         "nombre": "Bellingham",
@@ -1996,13 +2012,13 @@
         "foto": "https://cdn.biwenger.com/i/p/30477.png"
       },
       "total": 12,
-      "puestoEficiencia": 2,
-      "puestoValor": 10,
-      "puestoGasto": 2,
-      "puestoActividad": 7,
+      "puestoEficiencia": 7,
+      "puestoValor": 6,
+      "puestoGasto": 1,
+      "puestoActividad": 5,
       "vsMediaPuntos": 12,
-      "vsMediaEficiencia": 32,
-      "vsMediaValor": -18,
+      "vsMediaEficiencia": 5,
+      "vsMediaValor": 4,
       "tendencia": {
         "puestos": 1,
         "puntos": 168,
@@ -2040,7 +2056,7 @@
       "puestoEficiencia": 6,
       "puestoValor": 8,
       "puestoGasto": 9,
-      "puestoActividad": 5,
+      "puestoActividad": 6,
       "vsMediaPuntos": 6,
       "vsMediaEficiencia": 6,
       "vsMediaValor": -2,
@@ -2074,12 +2090,12 @@
       "enVenta": 1,
       "fichajeEstrella": null,
       "total": 12,
-      "puestoEficiencia": 3,
+      "puestoEficiencia": 2,
       "puestoValor": 11,
       "puestoGasto": 10,
       "puestoActividad": 11,
       "vsMediaPuntos": 2,
-      "vsMediaEficiencia": 30,
+      "vsMediaEficiencia": 31,
       "vsMediaValor": -24,
       "tendencia": {
         "puestos": 3,
@@ -2120,7 +2136,7 @@
       "puestoGasto": 6,
       "puestoActividad": 8,
       "vsMediaPuntos": 0,
-      "vsMediaEficiencia": 6,
+      "vsMediaEficiencia": 7,
       "vsMediaValor": -8,
       "tendencia": {
         "puestos": -4,
@@ -2175,20 +2191,20 @@
       "escudo": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
       "iniciales": "FF",
       "puntos": 310,
-      "valor": "45,9 M",
-      "valorBruto": 45910000,
+      "valor": "36,6 M",
+      "valorBruto": 36580000,
       "esTuyo": false,
-      "puntosPorMillon": 6.75,
+      "puntosPorMillon": 8.47,
       "mediaJornada": 44.3,
       "clausulasHechas": 14,
-      "clausulasSufridas": 1,
-      "operaciones": 15,
+      "clausulasSufridas": 2,
+      "operaciones": 16,
       "gastado": "50,4 M",
       "gastadoBruto": 50395799,
-      "ingresado": "1,6 M",
-      "ingresadoBruto": 1560000,
-      "balance": "−48,8 M",
-      "balanceBruto": -48835799,
+      "ingresado": "13,7 M",
+      "ingresadoBruto": 13690300,
+      "balance": "−36,7 M",
+      "balanceBruto": -36705499,
       "sobreprecioMedio": 35,
       "enVenta": 3,
       "fichajeEstrella": {
@@ -2197,13 +2213,13 @@
         "foto": "https://cdn.biwenger.com/i/p/19441.png"
       },
       "total": 12,
-      "puestoEficiencia": 9,
-      "puestoValor": 6,
-      "puestoGasto": 1,
+      "puestoEficiencia": 4,
+      "puestoValor": 10,
+      "puestoGasto": 2,
       "puestoActividad": 2,
       "vsMediaPuntos": -6,
-      "vsMediaEficiencia": -15,
-      "vsMediaValor": 8,
+      "vsMediaEficiencia": 7,
+      "vsMediaValor": -14,
       "tendencia": {
         "puestos": -3,
         "puntos": 114,
@@ -2275,7 +2291,7 @@
         "foto": "https://cdn.biwenger.com/i/p/19547.png"
       },
       "total": 12,
-      "puestoEficiencia": 7,
+      "puestoEficiencia": 8,
       "puestoValor": 7,
       "puestoGasto": 7,
       "puestoActividad": 3,
@@ -2321,7 +2337,7 @@
       "puestoGasto": 8,
       "puestoActividad": 4,
       "vsMediaPuntos": -21,
-      "vsMediaEficiencia": -30,
+      "vsMediaEficiencia": -29,
       "vsMediaValor": 9,
       "tendencia": {
         "puestos": 0,
@@ -5798,32 +5814,6 @@
         ]
       },
       {
-        "nombre": "Kang-in Lee",
-        "posicion": "Centrocampista",
-        "foto": "https://cdn.biwenger.com/i/p/17687.png",
-        "equipoReal": "Atlético",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Alavés",
-            "dificultad": 49
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": false,
-            "rival": "Espanyol",
-            "dificultad": 22
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": true,
-            "rival": "Deportivo",
-            "dificultad": 48
-          }
-        ]
-      },
-      {
         "nombre": "Pedri",
         "posicion": "Centrocampista",
         "foto": "https://cdn.biwenger.com/i/p/19441.png",
@@ -6400,6 +6390,32 @@
     ],
     "Seif fc": [
       {
+        "nombre": "Kang-in Lee",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/17687.png",
+        "equipoReal": "Atlético",
+        "jornadas": [
+          {
+            "jornada": "Round 8",
+            "esLocal": false,
+            "rival": "Alavés",
+            "dificultad": 49
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Espanyol",
+            "dificultad": 22
+          },
+          {
+            "jornada": "Round 10",
+            "esLocal": true,
+            "rival": "Deportivo",
+            "dificultad": 48
+          }
+        ]
+      },
+      {
         "nombre": "Camello",
         "posicion": "Delantero",
         "foto": "https://cdn.biwenger.com/i/p/17756.png",
@@ -6780,7 +6796,7 @@
     },
     {
       "tipo": "mercado",
-      "texto": "Mercado movido: 10 cláusulas pagadas en los últimos 7 días."
+      "texto": "Mercado movido: 11 cláusulas pagadas en los últimos 7 días."
     }
   ],
   "amenazas": [
@@ -10416,11 +10432,11 @@
       ],
       "rachaTitular": 1,
       "ultimoMinutos": 90,
-      "clausula": 9139000,
-      "clausulaTexto": "9,1 M",
+      "clausula": 9594000,
+      "clausulaTexto": "9,6 M",
       "pagadoPorSuDueno": 0,
-      "margen": 2359000,
-      "margenPorcentaje": 35,
+      "margen": 2814000,
+      "margenPorcentaje": 42,
       "blindado": false,
       "blindadoHasta": null
     },
@@ -10483,11 +10499,11 @@
       ],
       "rachaTitular": 7,
       "ultimoMinutos": 60,
-      "clausula": 4284000,
-      "clausulaTexto": "4,3 M",
+      "clausula": 4869000,
+      "clausulaTexto": "4,9 M",
       "pagadoPorSuDueno": 2370000,
-      "margen": 1224000,
-      "margenPorcentaje": 40,
+      "margen": 1809000,
+      "margenPorcentaje": 59,
       "blindado": false,
       "blindadoHasta": null
     },
@@ -10846,40 +10862,6 @@
       "pagadoPorSuDueno": 200000,
       "margen": 410000,
       "margenPorcentaje": 216,
-      "blindado": false,
-      "blindadoHasta": null
-    },
-    {
-      "id": "17687",
-      "nombre": "Kang-in Lee",
-      "slug": "kang-in-lee",
-      "posicion": "Centrocampista",
-      "posicionCodigo": 3,
-      "foto": "https://cdn.biwenger.com/i/p/17687.png",
-      "equipoReal": "Atlético",
-      "equipoIdReal": "2",
-      "presidente": "FC FORUSIA",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
-      "precio": 9330000,
-      "precioTexto": "9,3 M",
-      "puntosTotales": 50,
-      "partidosJugados": 7,
-      "media": 7.1,
-      "puntosPorMillon": 5.36,
-      "racha": [
-        4,
-        17,
-        3,
-        2,
-        6
-      ],
-      "rachaTitular": 3,
-      "ultimoMinutos": 88,
-      "clausula": 12130300,
-      "clausulaTexto": "12,1 M",
-      "pagadoPorSuDueno": 8329999,
-      "margen": 2800300,
-      "margenPorcentaje": 30,
       "blindado": false,
       "blindadoHasta": null
     },
@@ -11607,6 +11589,40 @@
       "margenPorcentaje": 100,
       "blindado": false,
       "blindadoHasta": null
+    },
+    {
+      "id": "17687",
+      "nombre": "Kang-in Lee",
+      "slug": "kang-in-lee",
+      "posicion": "Centrocampista",
+      "posicionCodigo": 3,
+      "foto": "https://cdn.biwenger.com/i/p/17687.png",
+      "equipoReal": "Atlético",
+      "equipoIdReal": "2",
+      "presidente": "Seif fc",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/14027560.png",
+      "precio": 9330000,
+      "precioTexto": "9,3 M",
+      "puntosTotales": 50,
+      "partidosJugados": 7,
+      "media": 7.1,
+      "puntosPorMillon": 5.36,
+      "racha": [
+        4,
+        17,
+        3,
+        2,
+        6
+      ],
+      "rachaTitular": 3,
+      "ultimoMinutos": 88,
+      "clausula": 14556360,
+      "clausulaTexto": "14,6 M",
+      "pagadoPorSuDueno": 12130300,
+      "margen": 5226360,
+      "margenPorcentaje": 56,
+      "blindado": true,
+      "blindadoHasta": "2026-10-08T12:37:29.000Z"
     },
     {
       "id": "17756",
@@ -12792,8 +12808,8 @@
         "foto": "https://cdn.biwenger.com/i/p/17687.png",
         "equipoReal": "Atlético",
         "equipoIdReal": "2",
-        "presidente": "FC FORUSIA",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
+        "presidente": "Seif fc",
+        "escudoPresidente": "https://cdn.biwenger.com/i/u/14027560.png",
         "precio": 9330000,
         "precioTexto": "9,3 M",
         "puntosTotales": 50,
@@ -12809,13 +12825,13 @@
         ],
         "rachaTitular": 3,
         "ultimoMinutos": 88,
-        "clausula": 12130300,
-        "clausulaTexto": "12,1 M",
-        "pagadoPorSuDueno": 8329999,
-        "margen": 2800300,
-        "margenPorcentaje": 30,
-        "blindado": false,
-        "blindadoHasta": null,
+        "clausula": 14556360,
+        "clausulaTexto": "14,6 M",
+        "pagadoPorSuDueno": 12130300,
+        "margen": 5226360,
+        "margenPorcentaje": 56,
+        "blindado": true,
+        "blindadoHasta": "2026-10-08T12:37:29.000Z",
         "mediaReciente": 10.5
       },
       {
@@ -15177,24 +15193,6 @@
         "dificultad": 25
       },
       {
-        "nombre": "Kang-in Lee",
-        "foto": "https://cdn.biwenger.com/i/p/17687.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Atlético",
-        "racha": [
-          4,
-          17,
-          3,
-          2,
-          6
-        ],
-        "rachaTitular": 3,
-        "nota": 7.5,
-        "rival": "Alavés",
-        "esLocal": false,
-        "dificultad": 49
-      },
-      {
         "nombre": "Pedrosa",
         "foto": "https://cdn.biwenger.com/i/p/16889.png",
         "posicion": "Defensa",
@@ -15682,6 +15680,24 @@
         "dificultad": 23
       },
       {
+        "nombre": "Kang-in Lee",
+        "foto": "https://cdn.biwenger.com/i/p/17687.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Atlético",
+        "racha": [
+          4,
+          17,
+          3,
+          2,
+          6
+        ],
+        "rachaTitular": 3,
+        "nota": 7.5,
+        "rival": "Alavés",
+        "esLocal": false,
+        "dificultad": 49
+      },
+      {
         "nombre": "Camello",
         "foto": "https://cdn.biwenger.com/i/p/17756.png",
         "posicion": "Delantero",
@@ -16059,25 +16075,6 @@
       "presidente": "Gorila FC"
     },
     {
-      "nombre": "Kang-in Lee",
-      "foto": "https://cdn.biwenger.com/i/p/17687.png",
-      "posicion": "Centrocampista",
-      "equipoReal": "Atlético",
-      "racha": [
-        4,
-        17,
-        3,
-        2,
-        6
-      ],
-      "rachaTitular": 3,
-      "nota": 7.5,
-      "rival": "Alavés",
-      "esLocal": false,
-      "dificultad": 49,
-      "presidente": "FC FORUSIA"
-    },
-    {
       "nombre": "Expósito",
       "foto": "https://cdn.biwenger.com/i/p/19862.png",
       "posicion": "Centrocampista",
@@ -16095,6 +16092,25 @@
       "esLocal": false,
       "dificultad": 15,
       "presidente": "Las Víboras FC"
+    },
+    {
+      "nombre": "Kang-in Lee",
+      "foto": "https://cdn.biwenger.com/i/p/17687.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Atlético",
+      "racha": [
+        4,
+        17,
+        3,
+        2,
+        6
+      ],
+      "rachaTitular": 3,
+      "nota": 7.5,
+      "rival": "Alavés",
+      "esLocal": false,
+      "dificultad": 49,
+      "presidente": "Seif fc"
     }
   ],
   "riesgoClausula": [
