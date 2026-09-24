@@ -401,3 +401,29 @@ grant execute on function public.duelo_cerrar(bigint, boolean)                  
 --   duelo_respuestas         INSERT  -> permission denied           ✅
 --   duelo_preguntas_para_jugar / duelo_responder / duelo_cerrar     ✅ ejecutan
 --   duelos_caducar                   -> permission denied           ✅
+
+
+-- ----------------------------------------------------------------------------
+-- 6. Cron de caducidad
+-- ----------------------------------------------------------------------------
+-- A los 3 días sin terminar, el duelo se cierra con lo que haya y quien no
+-- jugó lo pierde. Se ejecuta como postgres, que es el dueño de la función:
+-- por eso funciona aunque duelos_caducar esté revocada para anon.
+--
+-- Ojo: al cerrar publica el resultado en `mensajes`, y eso dispara la push.
+
+create extension if not exists pg_cron;
+
+select cron.unschedule(jobid) from cron.job where jobname = 'duelos-caducar';
+
+-- 04:00 UTC = 06:00 en España en verano, 05:00 en invierno. A esa hora no hay
+-- nadie a medio duelo.
+select cron.schedule(
+  'duelos-caducar',
+  '0 4 * * *',
+  $$select public.duelos_caducar();$$
+);
+
+-- Para comprobarlo:
+--   select jobname, schedule, active from cron.job where jobname = 'duelos-caducar';
+--   select * from cron.job_run_details order by start_time desc limit 5;
