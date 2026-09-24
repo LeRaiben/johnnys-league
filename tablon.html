@@ -198,6 +198,13 @@ document.getElementById('btn-aceptar-pikachu').addEventListener('click', functio
 <main class="wrap">
 
   <section class="hero" style="border-bottom:none;">
+    <span id="togglePresidente" title="Acceso admin"
+          style="position:absolute; top:14px; right:0; z-index:2; cursor:pointer;
+                 font-size:1.1rem; opacity:0.55; line-height:1;">🔒</span>
+    <span id="estadoSesion" class="cond"
+          style="position:absolute; top:14px; right:0; z-index:2; display:none; color:var(--gold); white-space:nowrap;">
+      🔓 Admin · <span id="btnSalirAdmin" style="cursor:pointer; text-decoration:underline;">salir</span>
+    </span>
     <div class="hero-titulo">
       <h2>El tablón</h2>
     </div>
@@ -217,11 +224,6 @@ document.getElementById('btn-aceptar-pikachu').addEventListener('click', functio
       <button type="button" class="btn-notificaciones" id="btnRefrescar" style="margin-bottom:0;">
         🔄 Refrescar tablón
       </button>
-      <button type="button" class="btn-notificaciones" id="togglePresidente" title="Acceso admin"
-              style="margin-bottom:0; margin-left:auto; padding:10px 14px;">🔒</button>
-      <span id="estadoSesion" class="cond" style="display:none; margin-left:auto; color:var(--gold);">
-        🔓 Admin · <span id="btnSalirAdmin" style="cursor:pointer; text-decoration:underline;">salir</span>
-      </span>
     </div>
 
     <div id="cajaPresidente" style="display:none; margin-bottom:20px; max-width:280px;">
