@@ -112,6 +112,53 @@
   .aviso-paso { background:rgba(224,169,79,0.1); border-left:3px solid var(--gold);
     border-radius:0 4px 4px 0; padding:12px 14px; margin-bottom:22px;
     font-size:0.88rem; color:rgba(247,247,245,0.9); }
+  .aviso-paso.error { background:rgba(192,24,44,0.15); border-left-color:#E8746A; color:#E8746A; }
+
+  /* Rejilla de escudos: elegir quién eres y a quién retas */
+  .escudos { display:grid; grid-template-columns:repeat(auto-fill, minmax(96px, 1fr));
+    gap:10px; margin:18px 0 8px; }
+  .escudos button { background:var(--navy-soft); border:1px solid var(--navy-line); border-radius:6px;
+    padding:12px 8px; cursor:pointer; color:var(--white); display:flex; flex-direction:column;
+    align-items:center; gap:8px; transition:border-color 0.15s, background 0.15s;
+    -webkit-tap-highlight-color:transparent; }
+  .escudos button:hover:not(:disabled) { border-color:var(--gold-dim); background:rgba(224,169,79,0.08); }
+  .escudos button:disabled { opacity:0.32; cursor:default; }
+  .escudos img { width:44px; height:44px; object-fit:contain; }
+  .escudos .nom { font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.03em;
+    text-transform:uppercase; font-size:0.66rem; line-height:1.15; text-align:center; }
+
+  .bloque { margin-bottom:34px; }
+  .bloque > h3 { font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.1em;
+    text-transform:uppercase; font-size:0.72rem; color:var(--grey); margin:0 0 12px;
+    border-top:2px solid var(--red); padding-top:12px; }
+
+  .duelo { display:flex; align-items:center; gap:12px; background:var(--navy-soft);
+    border:1px solid var(--navy-line); border-radius:6px; padding:12px 14px; margin-bottom:9px; }
+  .duelo img { width:36px; height:36px; object-fit:contain; flex:none; }
+  .duelo .txt { min-width:0; flex:1; }
+  .duelo .txt .n { font-weight:600; font-size:0.96rem; }
+  .duelo .txt .d { font-family:'Barlow Condensed',sans-serif; letter-spacing:0.04em;
+    text-transform:uppercase; font-size:0.72rem; color:var(--grey); margin-top:2px; }
+  .duelo .acc { flex:none; }
+  .duelo .marca { flex:none; font-family:'Anton',sans-serif; font-size:1.1rem; }
+  .duelo .marca.gano { color:var(--verde); }
+  .duelo .marca.perdio { color:var(--red); }
+  .duelo .marca.empate { color:var(--gold); }
+
+  .vacio { color:var(--grey); font-size:0.9rem; font-style:italic; }
+
+  table.ranking { width:100%; border-collapse:collapse; font-size:0.92rem; }
+  table.ranking th { font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.06em;
+    text-transform:uppercase; font-size:0.68rem; color:var(--grey); text-align:right;
+    padding:0 0 8px; border-bottom:1px solid var(--navy-line); }
+  table.ranking th:first-child, table.ranking td:first-child { text-align:left; }
+  table.ranking td { padding:9px 0; border-bottom:1px solid var(--navy-line); text-align:right; }
+  table.ranking td.eq { display:flex; align-items:center; gap:9px; }
+  table.ranking td.eq img { width:24px; height:24px; object-fit:contain; }
+  table.ranking tr.yo td { color:var(--gold); font-weight:600; }
+  table.ranking td.pts { font-family:'Anton',sans-serif; color:var(--gold); }
+
+  .cargando { color:var(--grey); font-size:0.9rem; }
 </style>
 </head>
 <body>
@@ -170,16 +217,53 @@
       </p>
     </div>
 
-    <div class="aviso-paso">
-      <strong>Paso 4:</strong> esto es la pantalla de partida con preguntas de mentira y sin base de
-      datos, para ver si el juego apetece. El lobby, el rival y el resultado de verdad llegan en el
-      paso 5.
+    <div class="aviso-paso error" id="error" hidden></div>
+  </section>
+
+  <!-- 1. Quién eres -->
+  <section id="vistaQuien" hidden>
+    <div class="bloque">
+      <h3>¿Quién eres?</h3>
+      <p class="vacio" style="font-style:normal;">Elige tu escudo. Se queda guardado en este móvil.</p>
+      <div class="escudos" id="rejillaQuien"></div>
+    </div>
+  </section>
+
+  <!-- 2. Lobby -->
+  <section id="vistaLobby" hidden>
+    <div class="bloque" id="bloqueTeToca" hidden>
+      <h3>Te toca jugar</h3>
+      <div id="listaTeToca"></div>
     </div>
 
-    <button type="button" class="boton" id="btnJugar" style="font-size:1rem; padding:14px 28px;">
-      Jugar una partida de prueba
-    </button>
+    <div class="bloque" id="bloqueEsperando" hidden>
+      <h3>Esperando al rival</h3>
+      <div id="listaEsperando"></div>
+    </div>
+
+    <div class="bloque">
+      <h3>Retar</h3>
+      <div class="escudos" id="rejillaRetar"></div>
+    </div>
+
+    <div class="bloque" id="bloqueTerminados" hidden>
+      <h3>Terminados</h3>
+      <div id="listaTerminados"></div>
+    </div>
+
+    <div class="bloque">
+      <h3>Ranking de la temporada</h3>
+      <div id="tablaRanking" class="cargando">Cargando…</div>
+    </div>
+
+    <p style="margin-top:30px;">
+      <button type="button" class="boton boton-secundario" id="btnCambiarQuien"
+        style="font-size:0.78rem; padding:8px 14px;">No soy <span id="miNombre"></span></button>
+    </p>
   </section>
+
+  <!-- 4. Resultado -->
+  <section id="vistaResultado" hidden></section>
 
 </main>
 
@@ -206,46 +290,24 @@
 </div>
 
 
-<!-- ===================== CIERRE ===================== -->
+<!-- ===================== CIERRE DE TU PARTIDA ===================== -->
 <section class="wrap cierre" id="cierre" hidden>
   <div class="total-grande" id="cierreTotal">0</div>
   <div class="de">de 1600 posibles</div>
+  <div id="cierreEstado" style="margin-top:18px; font-size:1rem;"></div>
   <div class="repaso" id="repaso"></div>
-  <button type="button" class="boton" id="btnOtra" style="font-size:1rem; padding:13px 26px;">Otra partida</button>
+  <button type="button" class="boton" id="btnVolver" style="font-size:1rem; padding:13px 26px;">Volver</button>
 </section>
 
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
 <script>
 (function () {
   'use strict';
 
-  // ====================================================================
-  // DATOS DE PRUEBA. Se van en el paso 5, cuando las preguntas vengan de
-  // duelo_preguntas_para_jugar. Mismo formato que devuelve el generador:
-  // { orden, categoria, enunciado, opciones, correcta }.
-  //
-  // Los textos son largos y cortos a propósito, con los nombres reales más
-  // largos de la liga, para que la pantalla se pruebe en lo peor que le va
-  // a tocar y no con cuatro opciones de una palabra.
-  // ====================================================================
-  var PREGUNTAS_DE_PRUEBA = [
-    { orden:1, categoria:'plantilla', enunciado:'¿De quién es Lamine Yamal?',
-      opciones:['Urdinho Pernambucano','C.d.F Atlético de Cohiba','Manchester Pity','Las Víboras FC'], correcta:1 },
-    { orden:2, categoria:'puntos', enunciado:'¿Cuántos puntos lleva CD Tiro Buchón?',
-      opciones:['409','387','425','394'], correcta:0 },
-    { orden:3, categoria:'clausula_cara', enunciado:'¿Quién pagó los 23,1 M por Bellingham?',
-      opciones:['Seif fc','FC FORUSIA','Gorila FC','Cañoneros CF'], correcta:0 },
-    { orden:4, categoria:'valor', enunciado:'¿Cuál de estas cuatro plantillas vale menos?',
-      opciones:['Madriguana FC','Lottin Capital','Manchester Pity','Urdinho Pernambucano'], correcta:2 },
-    { orden:5, categoria:'historico', enunciado:'¿Quién iba líder en la jornada 3?',
-      opciones:['LXUNITED','Cañoneros CF','Seif fc','CD Tiro Buchón'], correcta:0 },
-    { orden:6, categoria:'paquete', enunciado:'¿Quién fue el paquete de la jornada 7?',
-      opciones:['Redondo','Lunin','Osambela','Nico Serrano'], correcta:0 },
-    { orden:7, categoria:'clausulador', enunciado:'¿A quién le han clausulado más jugadores?',
-      opciones:['FC FORUSIA','Cañoneros CF','Seif fc','C.d.F Atlético de Cohiba'], correcta:1 },
-    { orden:8, categoria:'precio', enunciado:'¿Cuánto vale Vinícius Jr en el mercado?',
-      opciones:['18,4 M','14,9 M','22,1 M','16,2 M'], correcta:2 }
-  ];
+  var URL_SUPABASE = 'https://hgmswhslnuqlzqbvuifw.supabase.co';
+  var CLAVE_PUBLICA = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhnbXN3aHNsbnVxbHpxYnZ1aWZ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk0ODgxMDAsImV4cCI6MjEwNTA2NDEwMH0.vf-CWR_Iro8IaGI2rLll3iHFYFOPuPYJmeL2Z0bMn9E';
+  var sb = window.supabase.createClient(URL_SUPABASE, CLAVE_PUBLICA);
 
   var LIMITE_MS = 10000;   // el mismo tope que aplica duelo_responder
   var AVISO_MS  = 3000;    // cuando la barra se pone roja
@@ -257,16 +319,297 @@
   var ESPERA_ACIERTO = 550;
   var ESPERA_FALLO   = 1250;
 
-  var elPartida   = document.getElementById('partida');
-  var elCuenta    = document.getElementById('cuenta');
-  var elTotal     = document.getElementById('total');
-  var elTiempo    = document.getElementById('tiempo');
-  var elBarra     = document.getElementById('tiempoBarra');
-  var elCategoria = document.getElementById('categoria');
-  var elEnunciado = document.getElementById('enunciado');
-  var elOpciones  = document.getElementById('opciones');
-  var elCierre    = document.getElementById('cierre');
+  var CLAVE_GUARDADO = 'duelos_presidente';
 
+  var $ = function (id) { return document.getElementById(id); };
+
+  var elPartida = $('partida'), elCuenta = $('cuenta'), elTotal = $('total');
+  var elTiempo = $('tiempo'), elBarra = $('tiempoBarra');
+  var elCategoria = $('categoria'), elEnunciado = $('enunciado'), elOpciones = $('opciones');
+  var elCierre = $('cierre'), elError = $('error');
+
+  var presidentes = [];    // clasificacion de liga.json: { id, equipo, escudo }
+  var yo = null;           // { id, equipo }
+
+  // ------------------------------------------------------------------
+  // Utilidades
+  // ------------------------------------------------------------------
+
+  function porId(id) {
+    for (var i = 0; i < presidentes.length; i++) {
+      if (Number(presidentes[i].id) === Number(id)) return presidentes[i];
+    }
+    return { id: id, equipo: '¿?', escudo: 'assets/escudo.png' };
+  }
+
+  function fallo(texto) {
+    elError.textContent = texto;
+    elError.hidden = false;
+  }
+
+  function limpiarFallo() { elError.hidden = true; }
+
+  function vibrar(patron) {
+    try { if (navigator.vibrate) navigator.vibrate(patron); } catch (e) {}
+  }
+
+  function verVista(cual) {
+    ['vistaQuien', 'vistaLobby', 'vistaResultado'].forEach(function (v) {
+      $(v).hidden = (v !== cual);
+    });
+    elCierre.hidden = true;
+  }
+
+  // El mensaje de error de una RPC de Postgres viene en .message. Se enseña
+  // tal cual porque los de las funciones ya están escritos para leerse.
+  function textoError(error, porDefecto) {
+    if (!error) return porDefecto;
+    return error.message || error.error || porDefecto;
+  }
+
+  // ------------------------------------------------------------------
+  // 1. Quién eres
+  // ------------------------------------------------------------------
+
+  function pintarQuien() {
+    var rejilla = $('rejillaQuien');
+    rejilla.innerHTML = '';
+    presidentes.forEach(function (p) {
+      rejilla.appendChild(botonEscudo(p, false, function () {
+        yo = { id: Number(p.id), equipo: p.equipo };
+        try { localStorage.setItem(CLAVE_GUARDADO, JSON.stringify(yo)); } catch (e) {}
+        irAlLobby();
+      }));
+    });
+    verVista('vistaQuien');
+  }
+
+  function botonEscudo(p, apagado, alPulsar) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.disabled = !!apagado;
+    var img = document.createElement('img');
+    img.src = p.escudo || 'assets/escudo.png';
+    img.alt = '';
+    img.loading = 'lazy';
+    var n = document.createElement('span');
+    n.className = 'nom';
+    n.textContent = p.equipo;
+    b.appendChild(img);
+    b.appendChild(n);
+    if (alPulsar) b.addEventListener('click', alPulsar);
+    return b;
+  }
+
+  // ------------------------------------------------------------------
+  // 2. Lobby
+  // ------------------------------------------------------------------
+
+  function irAlLobby() {
+    limpiarFallo();
+    verVista('vistaLobby');
+    $('miNombre').textContent = yo.equipo;
+    cargarLobby();
+    cargarRanking();
+  }
+
+  function cargarLobby() {
+    sb.rpc('duelos_de', { p_jugador_id: yo.id }).then(function (r) {
+      if (r.error) { fallo('No se han podido cargar tus duelos: ' + textoError(r.error, '')); return; }
+      pintarLobby(r.data || []);
+    });
+  }
+
+  function pintarLobby(duelos) {
+    var teToca = [], esperando = [], terminados = [], ocupados = {};
+
+    duelos.forEach(function (d) {
+      var soyRetador = Number(d.retador_id) === yo.id;
+      var otroId = soyRetador ? d.rival_id : d.retador_id;
+      d._otroId = otroId;
+      d._mias = soyRetador ? d.respuestas_retador : d.respuestas_rival;
+      d._suyas = soyRetador ? d.respuestas_rival : d.respuestas_retador;
+      d._misPuntos = soyRetador ? d.puntos_retador : d.puntos_rival;
+      d._susPuntos = soyRetador ? d.puntos_rival : d.puntos_retador;
+
+      if (d.estado === 'terminado') { terminados.push(d); return; }
+      ocupados[otroId] = true;
+      if (d._mias >= 8) esperando.push(d); else teToca.push(d);
+    });
+
+    // Te toca jugar: primero aquellos en los que el otro ya ha jugado, que
+    // son los que aprietan. El marcador del rival NO se enseña: da más tensión
+    // no saber contra cuánto juegas.
+    teToca.sort(function (a, b) { return (b._suyas >= 8 ? 1 : 0) - (a._suyas >= 8 ? 1 : 0); });
+
+    pintarLista('listaTeToca', 'bloqueTeToca', teToca, function (d) {
+      var otro = porId(d._otroId);
+      var pie = d._suyas >= 8
+        ? otro.equipo + ' ya ha jugado. ¿Te atreves?'
+        : (d._mias > 0 ? 'Lo dejaste a medias, por la ' + (d._mias + 1) : 'Todavía no ha jugado ninguno');
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'boton';
+      b.style.fontSize = '0.8rem';
+      b.style.padding = '9px 16px';
+      b.textContent = d._mias > 0 ? 'Seguir' : 'Jugar';
+      b.addEventListener('click', function () { empezarPartida(d.id); });
+      return { otro: otro, titulo: otro.equipo, pie: pie, accion: b };
+    });
+
+    pintarLista('listaEsperando', 'bloqueEsperando', esperando, function (d) {
+      var otro = porId(d._otroId);
+      return {
+        otro: otro,
+        titulo: otro.equipo,
+        pie: 'Ya jugaste. Esperando a que juegue ' + otro.equipo + '.',
+        accion: null
+      };
+    });
+
+    pintarLista('listaTerminados', 'bloqueTerminados', terminados, function (d) {
+      var otro = porId(d._otroId);
+      var marca = document.createElement('div');
+      var gane = d._misPuntos > d._susPuntos, empate = d._misPuntos === d._susPuntos;
+      marca.className = 'marca ' + (empate ? 'empate' : (gane ? 'gano' : 'perdio'));
+      marca.textContent = d._misPuntos + '–' + d._susPuntos;
+      var caja = document.createElement('div');
+      caja.style.display = 'flex';
+      caja.style.alignItems = 'center';
+      caja.style.gap = '10px';
+      caja.appendChild(marca);
+      var ver = document.createElement('button');
+      ver.type = 'button';
+      ver.className = 'boton boton-secundario';
+      ver.style.fontSize = '0.72rem';
+      ver.style.padding = '7px 11px';
+      ver.textContent = 'Ver';
+      ver.addEventListener('click', function () { verResultado(d.id); });
+      caja.appendChild(ver);
+      return {
+        otro: otro,
+        titulo: otro.equipo,
+        pie: empate ? 'Empate' : (gane ? 'Ganaste' : 'Perdiste'),
+        accion: caja
+      };
+    });
+
+    // Retar: los otros once, apagados si ya hay un duelo pendiente con ellos.
+    var rejilla = $('rejillaRetar');
+    rejilla.innerHTML = '';
+    presidentes.forEach(function (p) {
+      if (Number(p.id) === yo.id) return;
+      var ocupado = !!ocupados[p.id];
+      rejilla.appendChild(botonEscudo(p, ocupado, ocupado ? null : function () { retar(p); }));
+    });
+  }
+
+  function pintarLista(idLista, idBloque, duelos, construir) {
+    var lista = $(idLista);
+    lista.innerHTML = '';
+    $(idBloque).hidden = duelos.length === 0;
+    duelos.forEach(function (d) {
+      var datos = construir(d);
+      var fila = document.createElement('div');
+      fila.className = 'duelo';
+      var img = document.createElement('img');
+      img.src = datos.otro.escudo || 'assets/escudo.png';
+      img.alt = '';
+      var txt = document.createElement('div');
+      txt.className = 'txt';
+      var n = document.createElement('div');
+      n.className = 'n';
+      n.textContent = datos.titulo;
+      var p = document.createElement('div');
+      p.className = 'd';
+      p.textContent = datos.pie;
+      txt.appendChild(n);
+      txt.appendChild(p);
+      fila.appendChild(img);
+      fila.appendChild(txt);
+      if (datos.accion) {
+        var acc = document.createElement('div');
+        acc.className = 'acc';
+        acc.appendChild(datos.accion);
+        fila.appendChild(acc);
+      }
+      lista.appendChild(fila);
+    });
+  }
+
+  function retar(p) {
+    limpiarFallo();
+    var rejilla = $('rejillaRetar');
+    rejilla.style.opacity = '0.5';
+    sb.functions.invoke('crear-duelo', {
+      body: { retador_id: yo.id, rival_id: Number(p.id) }
+    }).then(function (r) {
+      rejilla.style.opacity = '';
+      // Un 4xx de la función llega como error, con el cuerpo en context.
+      if (r.error) {
+        if (r.error.context && r.error.context.json) {
+          r.error.context.json().then(function (cuerpo) {
+            fallo(cuerpo.error || 'No se ha podido crear el duelo');
+            cargarLobby();
+          });
+        } else {
+          fallo('No se ha podido crear el duelo');
+        }
+        return;
+      }
+      if (r.data && r.data.error) { fallo(r.data.error); cargarLobby(); return; }
+      if (r.data && r.data.aviso) fallo(r.data.aviso);
+      empezarPartida(r.data.duelo_id);
+    });
+  }
+
+  // ------------------------------------------------------------------
+  // Ranking
+  // ------------------------------------------------------------------
+
+  function cargarRanking() {
+    sb.from('duelos').select('retador_id, rival_id, puntos_retador, puntos_rival')
+      .eq('estado', 'terminado')
+      .then(function (r) {
+        var caja = $('tablaRanking');
+        if (r.error) { caja.textContent = 'No se ha podido cargar el ranking.'; return; }
+        var filas = r.data || [];
+        if (!filas.length) {
+          caja.className = 'vacio';
+          caja.textContent = 'Todavía no ha terminado ningún duelo.';
+          return;
+        }
+        var t = {};
+        function apunta(id, mios, suyos) {
+          var e = t[id] || (t[id] = { id: id, v: 0, d: 0, e: 0, pts: 0 });
+          e.pts += mios || 0;
+          if (mios > suyos) e.v++; else if (mios < suyos) e.d++; else e.e++;
+        }
+        filas.forEach(function (d) {
+          apunta(d.retador_id, d.puntos_retador, d.puntos_rival);
+          apunta(d.rival_id, d.puntos_rival, d.puntos_retador);
+        });
+        var orden = Object.keys(t).map(function (k) { return t[k]; }).sort(function (a, b) {
+          return (b.v - a.v) || (b.pts - a.pts);
+        });
+        var html = '<table class="ranking"><thead><tr><th>Presidente</th><th>G</th><th>E</th><th>P</th><th>Puntos</th></tr></thead><tbody>';
+        orden.forEach(function (e) {
+          var p = porId(e.id);
+          html += '<tr' + (Number(e.id) === yo.id ? ' class="yo"' : '') + '>' +
+            '<td class="eq"><img src="' + (p.escudo || 'assets/escudo.png') + '" alt="">' + p.equipo + '</td>' +
+            '<td>' + e.v + '</td><td>' + e.e + '</td><td>' + e.d + '</td>' +
+            '<td class="pts">' + e.pts + '</td></tr>';
+        });
+        caja.className = '';
+        caja.innerHTML = html + '</tbody></table>';
+      });
+  }
+
+  // ------------------------------------------------------------------
+  // 3. Partida
+  // ------------------------------------------------------------------
+
+  var dueloActual = null;
   var preguntas = [];
   var indice = 0;
   var total = 0;
@@ -276,40 +619,48 @@
   var relojFin = null;         // los 10 segundos de la pregunta
   var relojSiguiente = null;   // la pausa entre una pregunta y la siguiente
   var contestada = false;
+  var enVuelo = false;         // hay un duelo_responder sin contestar
 
-  // Mismo cálculo que duelo_responder en Supabase. Aquí es solo para pintar:
-  // en el juego de verdad los puntos los da el servidor, nunca el navegador.
-  function puntosDe(acierto, ms) {
-    if (!acierto) return 0;
-    var topado = Math.min(Math.max(ms, 0), LIMITE_MS);
-    return 100 + Math.max(Math.round(100 * (LIMITE_MS - topado) / LIMITE_MS), 0);
-  }
-
-  function vibrar(patron) {
-    try { if (navigator.vibrate) navigator.vibrate(patron); } catch (e) {}
-  }
-
-  function empezar() {
-    // Cortar lo que quedara vivo de una partida anterior. Ahora mismo no puede
-    // pasar (la pantalla de partida tapa el botón de jugar), pero en cuanto
-    // haya revancha y se pueda volver al lobby a medias, un temporizador
-    // huérfano pasaría de pregunta en la partida nueva.
+  function empezarPartida(dueloId) {
+    limpiarFallo();
+    // Cortar lo que quedara vivo de una partida anterior: con la revancha y el
+    // volver al lobby a medias, un temporizador huérfano saltaría de pregunta
+    // en la partida nueva.
     cancelAnimationFrame(animacion);
     clearTimeout(relojFin);
     clearTimeout(relojSiguiente);
     contestada = true;
 
-    preguntas = PREGUNTAS_DE_PRUEBA.slice();
-    indice = 0;
+    dueloActual = dueloId;
     total = 0;
     respuestas = [];
-    elTotal.textContent = '0';
-    elCierre.hidden = true;
-    elPartida.hidden = false;
-    // Sin scroll mientras se juega: un arrastre sin querer no puede mover
-    // la pantalla con el dedo a medio camino de un botón.
-    document.body.style.overflow = 'hidden';
-    pintar();
+
+    Promise.all([
+      sb.rpc('duelo_preguntas_para_jugar', { p_duelo_id: dueloId, p_jugador_id: yo.id }),
+      sb.rpc('duelo_mis_respuestas', { p_duelo_id: dueloId, p_jugador_id: yo.id })
+    ]).then(function (res) {
+      if (res[0].error) { fallo(textoError(res[0].error, 'No se han podido cargar las preguntas')); cargarLobby(); return; }
+      preguntas = res[0].data || [];
+      if (!preguntas.length) { fallo('Ese duelo no tiene preguntas.'); return; }
+
+      // Si se quedó a medias, se retoma donde estaba y se recuperan los puntos
+      // que ya llevaba. Las respuestas de antes no se vuelven a jugar.
+      var hechas = (res[1].data || []);
+      var porOrden = {};
+      hechas.forEach(function (h) { porOrden[h.orden] = h; total += h.puntos || 0; });
+      indice = 0;
+      while (indice < preguntas.length && porOrden[preguntas[indice].orden]) indice++;
+
+      if (indice >= preguntas.length) { fallo('Ya has jugado este duelo.'); cargarLobby(); return; }
+
+      elTotal.textContent = String(total);
+      elCierre.hidden = true;
+      elPartida.hidden = false;
+      // Sin scroll mientras se juega: un arrastre sin querer no puede mover la
+      // pantalla con el dedo a medio camino de un botón.
+      document.body.style.overflow = 'hidden';
+      pintar();
+    });
   }
 
   function pintar() {
@@ -317,12 +668,12 @@
     contestada = false;
 
     elCuenta.textContent = (indice + 1) + ' / ' + preguntas.length;
-    elCategoria.textContent = p.categoria.replace(/_/g, ' ');
+    elCategoria.textContent = String(p.categoria || '').replace(/_/g, ' ');
     elEnunciado.textContent = p.enunciado;
 
     elOpciones.className = 'opciones';
     elOpciones.innerHTML = '';
-    p.opciones.forEach(function (texto, i) {
+    (p.opciones || []).forEach(function (texto, i) {
       var b = document.createElement('button');
       b.type = 'button';
       b.textContent = texto;
@@ -330,7 +681,6 @@
       elOpciones.appendChild(b);
     });
 
-    // Barra a tope y sin transición, antes de soltarla.
     elTiempo.classList.remove('poco');
     elBarra.style.transform = 'scaleX(1)';
 
@@ -347,39 +697,59 @@
   }
 
   function responder(elegida) {
-    if (contestada) return;
+    if (contestada || enVuelo) return;
     contestada = true;
+    enVuelo = true;
 
     var ms = Math.round(performance.now() - arranque);
     cancelAnimationFrame(animacion);
     clearTimeout(relojFin);
 
     var p = preguntas[indice];
-    var acierto = elegida !== null && elegida === p.correcta;
-    var puntos = puntosDe(acierto, ms);
-    total += puntos;
 
-    respuestas.push({ pregunta: p, elegida: elegida, acierto: acierto, ms: ms, puntos: puntos });
+    // Los puntos y el acierto los decide el servidor, nunca el navegador: aquí
+    // no está la respuesta correcta. Hasta que conteste, no se pinta nada.
+    sb.rpc('duelo_responder', {
+      p_duelo_id: dueloActual,
+      p_jugador_id: yo.id,
+      p_orden: p.orden,
+      p_opcion: elegida,
+      p_ms: ms
+    }).then(function (r) {
+      enVuelo = false;
+      if (r.error) {
+        fallo(textoError(r.error, 'No se ha podido guardar tu respuesta'));
+        salirDeLaPartida();
+        cargarLobby();
+        return;
+      }
+      var res = r.data || {};
+      var acierto = !!res.acierto;
+      var puntos = res.puntos || 0;
+      total += puntos;
 
-    // Verde la buena siempre; roja la mala solo si la ha pulsado él. Así el
-    // fallo enseña cuál era la correcta en vez de dejarte a medias.
-    elOpciones.classList.add('bloqueada');
-    var botones = elOpciones.querySelectorAll('button');
-    for (var i = 0; i < botones.length; i++) {
-      if (i === p.correcta) botones[i].classList.add('buena');
-      else if (i === elegida) botones[i].classList.add('mala');
-      else botones[i].classList.add('apagada');
-    }
+      respuestas.push({ pregunta: p, elegida: elegida, acierto: acierto, ms: ms, puntos: puntos, correcta: res.correcta });
 
-    elTotal.textContent = String(total);
-    volarPuntos(puntos);
-    vibrar(acierto ? 30 : [40, 60, 40]);
+      // Verde la buena siempre; roja la mala solo si la ha pulsado él. Así el
+      // fallo enseña cuál era la correcta en vez de dejarte a medias.
+      elOpciones.classList.add('bloqueada');
+      var botones = elOpciones.querySelectorAll('button');
+      for (var i = 0; i < botones.length; i++) {
+        if (i === res.correcta) botones[i].classList.add('buena');
+        else if (i === elegida) botones[i].classList.add('mala');
+        else botones[i].classList.add('apagada');
+      }
 
-    relojSiguiente = setTimeout(function () {
-      indice++;
-      if (indice < preguntas.length) pintar();
-      else terminar();
-    }, acierto ? ESPERA_ACIERTO : ESPERA_FALLO);
+      elTotal.textContent = String(total);
+      volarPuntos(puntos);
+      vibrar(acierto ? 30 : [40, 60, 40]);
+
+      relojSiguiente = setTimeout(function () {
+        indice++;
+        if (indice < preguntas.length) pintar();
+        else terminar();
+      }, acierto ? ESPERA_ACIERTO : ESPERA_FALLO);
+    });
   }
 
   function volarPuntos(puntos) {
@@ -390,13 +760,20 @@
     setTimeout(function () { v.remove(); }, 900);
   }
 
-  function terminar() {
+  function salirDeLaPartida() {
     elPartida.hidden = true;
     document.body.style.overflow = '';
+  }
 
-    document.getElementById('cierreTotal').textContent = String(total);
+  // ------------------------------------------------------------------
+  // 4. Cierre de tu partida
+  // ------------------------------------------------------------------
 
-    var repaso = document.getElementById('repaso');
+  function terminar() {
+    salirDeLaPartida();
+    $('cierreTotal').textContent = String(total);
+
+    var repaso = $('repaso');
     repaso.innerHTML = '';
     respuestas.forEach(function (r) {
       var fila = document.createElement('div');
@@ -415,7 +792,7 @@
       a.className = 'a';
       a.textContent = r.acierto
         ? 'Bien, en ' + (r.ms / 1000).toFixed(1) + ' s'
-        : (r.elegida === null ? 'Se acabó el tiempo. Era ' : 'Era ') + r.pregunta.opciones[r.pregunta.correcta];
+        : (r.elegida === null ? 'Se acabó el tiempo. Era ' : 'Era ') + r.pregunta.opciones[r.correcta];
       txt.appendChild(q);
       txt.appendChild(a);
 
@@ -429,22 +806,140 @@
       repaso.appendChild(fila);
     });
 
+    var estado = $('cierreEstado');
+    estado.textContent = 'Cerrando el duelo…';
     elCierre.hidden = false;
-    elCierre.scrollIntoView({ block: 'start' });
+
+    // Se intenta cerrar siempre al acabar: si el otro ya había jugado, aquí es
+    // donde se publica el resultado en el tablón. Si falta él, no hace nada.
+    sb.rpc('duelo_cerrar', { p_duelo_id: dueloActual }).then(function (r) {
+      var id = dueloActual;
+      if (r.error) { estado.textContent = 'Tu partida está guardada.'; cargarLobby(); return; }
+      var d = r.data || {};
+      if (d.cerrado) {
+        estado.innerHTML = '';
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'boton';
+        b.style.fontSize = '0.9rem';
+        b.textContent = 'Ver el duelo resuelto';
+        b.addEventListener('click', function () { verResultado(id); });
+        estado.appendChild(b);
+      } else {
+        estado.textContent = 'Ahora le toca a tu rival.';
+      }
+      cargarLobby();
+      cargarRanking();
+    });
   }
 
-  // Con el teclado, del 1 al 4. Solo para probar rápido desde el ordenador;
-  // esto se juega con el dedo.
+  // ------------------------------------------------------------------
+  // 5. Resultado de un duelo terminado
+  // ------------------------------------------------------------------
+
+  function verResultado(dueloId) {
+    limpiarFallo();
+    verVista('vistaResultado');
+    var caja = $('vistaResultado');
+    caja.innerHTML = '<p class="cargando">Cargando el duelo…</p>';
+
+    Promise.all([
+      sb.rpc('duelos_de', { p_jugador_id: yo.id }),
+      sb.rpc('duelo_resultado', { p_duelo_id: dueloId }),
+      sb.from('duelo_respuestas').select('jugador_id, orden, opcion, acierto, puntos, ms').eq('duelo_id', dueloId)
+    ]).then(function (res) {
+      var duelo = (res[0].data || []).filter(function (d) { return Number(d.id) === Number(dueloId); })[0];
+      if (!duelo || res[1].error) {
+        caja.innerHTML = '';
+        fallo(textoError(res[1].error, 'No se ha podido cargar el duelo'));
+        irAlLobby();
+        return;
+      }
+
+      var preg = res[1].data || [];
+      var resp = res[2].data || [];
+      var soyRetador = Number(duelo.retador_id) === yo.id;
+      var otroId = soyRetador ? duelo.rival_id : duelo.retador_id;
+      var mios = soyRetador ? duelo.puntos_retador : duelo.puntos_rival;
+      var suyos = soyRetador ? duelo.puntos_rival : duelo.puntos_retador;
+      var otro = porId(otroId);
+
+      var de = {};
+      resp.forEach(function (r) { (de[r.jugador_id] || (de[r.jugador_id] = {}))[r.orden] = r; });
+
+      var gane = mios > suyos, empate = mios === suyos;
+      var html = '<div class="bloque"><h3>' + (empate ? 'Empate' : (gane ? 'Ganaste' : 'Perdiste')) + '</h3>' +
+        '<div style="display:flex; align-items:center; justify-content:center; gap:18px; margin:10px 0 26px;">' +
+        '<div style="text-align:center;"><div class="total-grande" style="font-size:3rem;">' + mios + '</div>' +
+        '<div class="de">tú</div></div>' +
+        '<div style="font-family:\'Anton\',sans-serif; font-size:1.4rem; color:var(--grey);">–</div>' +
+        '<div style="text-align:center;"><div class="total-grande" style="font-size:3rem; color:' +
+        (gane ? 'var(--grey)' : 'var(--gold)') + ';">' + suyos + '</div>' +
+        '<div class="de">' + otro.equipo + '</div></div></div>';
+
+      html += '<div class="repaso">';
+      preg.forEach(function (q) {
+        var mia = (de[yo.id] || {})[q.orden];
+        var suya = (de[otroId] || {})[q.orden];
+        var icono = function (r) {
+          if (!r) return '·';
+          return r.acierto ? '✅' : (r.opcion === null ? '⌛' : '❌');
+        };
+        html += '<div class="fila"><div class="marca">' + icono(mia) + icono(suya) + '</div>' +
+          '<div class="txt"><div class="q">' + q.enunciado + '</div>' +
+          '<div class="a">Era ' + (q.opciones[q.correcta]) + '</div></div>' +
+          '<div class="pts' + (mia && mia.puntos ? '' : ' cero') + '">' + (mia ? mia.puntos : 0) + '</div></div>';
+      });
+      html += '</div>';
+
+      html += '<p style="margin-top:6px; font-size:0.8rem; color:var(--grey);">' +
+        'La primera marca eres tú, la segunda ' + otro.equipo + '.</p>';
+      html += '<div style="margin-top:24px; display:flex; gap:10px; flex-wrap:wrap;">' +
+        '<button type="button" class="boton" id="btnRevancha">Revancha</button>' +
+        '<button type="button" class="boton boton-secundario" id="btnAlLobby">Volver</button></div></div>';
+
+      caja.innerHTML = html;
+      $('btnRevancha').addEventListener('click', function () { retar(otro); });
+      $('btnAlLobby').addEventListener('click', irAlLobby);
+    });
+  }
+
+  // ------------------------------------------------------------------
+  // Arranque
+  // ------------------------------------------------------------------
+
   document.addEventListener('keydown', function (e) {
     if (elPartida.hidden || contestada) return;
     var n = parseInt(e.key, 10);
     if (n >= 1 && n <= 4) responder(n - 1);
   });
 
-  document.getElementById('btnJugar').addEventListener('click', empezar);
-  document.getElementById('btnOtra').addEventListener('click', empezar);
-})();
-</script>
+  $('btnVolver').addEventListener('click', irAlLobby);
+  $('btnCambiarQuien').addEventListener('click', function () {
+    try { localStorage.removeItem(CLAVE_GUARDADO); } catch (e) {}
+    yo = null;
+    pintarQuien();
+  });
+
+  fetch('data/liga.json', { cache: 'no-store' })
+    .then(function (r) { return r.json(); })
+    .then(function (liga) {
+      presidentes = (liga.clasificacion || []).slice().sort(function (a, b) {
+        return String(a.equipo).localeCompare(String(b.equipo), 'es');
+      });
+      try {
+        var g = JSON.parse(localStorage.getItem(CLAVE_GUARDADO) || 'null');
+        // Se valida contra la liga por si el id ya no juega.
+        if (g && presidentes.some(function (p) { return Number(p.id) === Number(g.id); })) {
+          yo = { id: Number(g.id), equipo: porId(g.id).equipo };
+        }
+      } catch (e) {}
+      if (yo) irAlLobby(); else pintarQuien();
+    })
+    .catch(function () {
+      fallo('No se han podido cargar los datos de la liga. Recarga la página.');
+    });
+})();</script>
 
 </body>
 </html>
