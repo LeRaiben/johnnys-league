@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-24T07:49:54.625Z",
+  "actualizado": "2026-09-24T08:01:03.112Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -731,6 +731,19 @@
       "valorMercado": "1,5 M",
       "valorBruto": 1530000,
       "diferencia": 100000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Mario Martín",
+      "foto": "https://cdn.biwenger.com/i/p/2368.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Getafe",
+      "vendedor": "Urdinho Pernambucano",
+      "pide": "3,0 M",
+      "pideBruto": 3000000,
+      "valorMercado": "1,3 M",
+      "valorBruto": 1310000,
+      "diferencia": 1690000
     },
     {
       "tipo": "venta",
@@ -2263,7 +2276,7 @@
       "balance": "+32,0 M",
       "balanceBruto": 32046666,
       "sobreprecioMedio": null,
-      "enVenta": 0,
+      "enVenta": 1,
       "fichajeEstrella": null,
       "total": 12,
       "puestoEficiencia": 10,
