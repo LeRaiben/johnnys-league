@@ -420,7 +420,7 @@ select cron.unschedule(jobid) from cron.job where jobname = 'duelos-caducar';
 -- nadie a medio duelo.
 select cron.schedule(
   'duelos-caducar',
-  '0 4 * * *',
+  '0 11 * * *',
   $$select public.duelos_caducar();$$
 );
 
