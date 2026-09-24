@@ -217,6 +217,17 @@ document.getElementById('btn-aceptar-pikachu').addEventListener('click', functio
       <button type="button" class="btn-notificaciones" id="btnRefrescar" style="margin-bottom:0;">
         🔄 Refrescar tablón
       </button>
+      <button type="button" class="btn-notificaciones" id="togglePresidente" title="Acceso admin"
+              style="margin-bottom:0; margin-left:auto; padding:10px 14px;">🔒</button>
+      <span id="estadoSesion" class="cond" style="display:none; margin-left:auto; color:var(--gold);">
+        🔓 Admin · <span id="btnSalirAdmin" style="cursor:pointer; text-decoration:underline;">salir</span>
+      </span>
+    </div>
+
+    <div id="cajaPresidente" style="display:none; margin-bottom:20px; max-width:280px;">
+      <div class="campo"><input type="email" id="presiEmail" placeholder="Email"></div>
+      <div class="campo"><input type="password" id="presiPass" placeholder="Contraseña"></div>
+      <button type="button" class="boton" id="btnEntrarPresidente" style="font-size:0.8rem; padding:8px 16px;">Entrar</button>
     </div>
 
     <div class="escribir">
@@ -284,13 +295,6 @@ document.getElementById('btn-aceptar-pikachu').addEventListener('click', functio
 
 <footer class="wrap">
   <span class="cond">Johnny's League · hecha por y para la liga</span>
-  <span id="togglePresidente" class="cond" style="cursor:pointer; margin-left:12px; color:var(--gold-dim);">🔒 Acceso admin</span>
-  <span id="estadoSesion" class="cond" style="display:none; margin-left:12px; color:var(--gold);">🔓 Sesión iniciada · <span id="btnSalirAdmin" style="cursor:pointer; text-decoration:underline;">salir</span></span>
-  <div id="cajaPresidente" style="display:none; margin-top:12px; max-width:280px;">
-    <div class="campo"><input type="email" id="presiEmail" placeholder="Email"></div>
-    <div class="campo"><input type="password" id="presiPass" placeholder="Contraseña"></div>
-    <button type="button" class="boton" id="btnEntrarPresidente" style="font-size:0.8rem; padding:8px 16px;">Entrar</button>
-  </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
