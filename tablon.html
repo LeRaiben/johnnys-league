@@ -284,7 +284,8 @@ document.getElementById('btn-aceptar-pikachu').addEventListener('click', functio
 
 <footer class="wrap">
   <span class="cond">Johnny's League · hecha por y para la liga</span>
-  <span id="togglePresidente" style="cursor:pointer; opacity:0.35; margin-left:10px; font-size:0.75rem;">·</span>
+  <span id="togglePresidente" class="cond" style="cursor:pointer; margin-left:12px; color:var(--gold-dim);">🔒 Acceso admin</span>
+  <span id="estadoSesion" class="cond" style="display:none; margin-left:12px; color:var(--gold);">🔓 Sesión iniciada · <span id="btnSalirAdmin" style="cursor:pointer; text-decoration:underline;">salir</span></span>
   <div id="cajaPresidente" style="display:none; margin-top:12px; max-width:280px;">
     <div class="campo"><input type="email" id="presiEmail" placeholder="Email"></div>
     <div class="campo"><input type="password" id="presiPass" placeholder="Contraseña"></div>
@@ -884,11 +885,19 @@ document.getElementById('btn-aceptar-pikachu').addEventListener('click', functio
     if (prev) { prev.style.display = 'none'; prev.setAttribute('hidden', 'true'); }
   }
 
+  function pintarEstadoSesion() {
+    var acceso = document.getElementById('togglePresidente');
+    var estado = document.getElementById('estadoSesion');
+    if (acceso) acceso.style.display = esAdmin ? 'none' : 'inline';
+    if (estado) estado.style.display = esAdmin ? 'inline' : 'none';
+  }
+
   async function comprobarSesionAdmin() {
     try {
       var r = await sb.auth.getSession();
       esAdmin = !!(r.data && r.data.session);
     } catch (e) { esAdmin = false; }
+    pintarEstadoSesion();
   }
 
   var togglePresidente = document.getElementById('togglePresidente');
@@ -912,6 +921,17 @@ document.getElementById('btn-aceptar-pikachu').addEventListener('click', functio
       esAdmin = true;
       document.getElementById('cajaPresidente').style.display = 'none';
       document.getElementById('presiPass').value = '';
+      pintarEstadoSesion();
+      cargar();
+    });
+  }
+
+  var btnSalirAdmin = document.getElementById('btnSalirAdmin');
+  if (btnSalirAdmin) {
+    btnSalirAdmin.addEventListener('click', async function () {
+      await sb.auth.signOut();
+      esAdmin = false;
+      pintarEstadoSesion();
       cargar();
     });
   }

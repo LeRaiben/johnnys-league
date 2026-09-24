@@ -19,7 +19,7 @@ más portadas y crónicas que subís vosotros.
 | `data/liga.json` | Clasificación y mercado. **Se genera solo, no lo toques** |
 | `data/contenido.json` | Portada, crónicas y hemeroteca. **Este sí lo editas tú** |
 | `scripts/fetch-biwenger.mjs` | El script que va a buscar los datos a Biwenger |
-| `.github/workflows/` | La automatización que lo ejecuta dos veces al día |
+| `.github/workflows/` | La automatización que lo ejecuta varias veces al día |
 
 ---
 
@@ -88,7 +88,7 @@ Para que los datos se refresquen sin que hagas nada:
    - `BIWENGER_TOKEN`
    - `BIWENGER_LEAGUE`
    - `BIWENGER_USER`
-3. Listo. A partir de ahí se actualiza a las 8:00 y a las 20:00
+3. Listo. A partir de ahí se actualiza cada 10 minutos entre las 8:00 y la medianoche
 
    Para lanzarlo a mano: pestaña **Actions** → "Actualizar datos de Biwenger" → "Run workflow"
 
