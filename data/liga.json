@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-25T21:57:09.664Z",
+  "actualizado": "2026-09-25T22:15:19.118Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -243,8 +243,8 @@
       "iniciales": "UP",
       "escudo": "https://cdn.biwenger.com/i/u/12659137.png?v=9",
       "puntos": 310,
-      "valor": "55,0 M",
-      "valorBruto": 54950000,
+      "valor": "46,2 M",
+      "valorBruto": 46170000,
       "esTuyo": false,
       "puntosJornada": 37,
       "jugadosJornada": 11,
@@ -275,8 +275,8 @@
       "iniciales": "LC",
       "escudo": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
       "puntos": 259,
-      "valor": "37,7 M",
-      "valorBruto": 37740000,
+      "valor": "46,5 M",
+      "valorBruto": 46520000,
       "esTuyo": false,
       "puntosJornada": 45,
       "jugadosJornada": 9,
@@ -1319,6 +1319,22 @@
     },
     {
       "tipo": "clausula",
+      "fecha": "2026-09-25T22:02:50.000Z",
+      "nombre": "Ez Abde",
+      "foto": "https://cdn.biwenger.com/i/p/25127.png",
+      "posicion": "Delantero",
+      "equipoReal": "Betis",
+      "vendedor": "Urdinho Pernambucano",
+      "comprador": "Lottin Capital",
+      "escudoComprador": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
+      "pide": "14,0 M",
+      "pideBruto": 14014000,
+      "valorMercado": "8,8 M",
+      "valorBruto": 8780000,
+      "diferencia": 5234000
+    },
+    {
+      "tipo": "clausula",
       "fecha": "2026-09-24T00:00:24.000Z",
       "nombre": "Álvaro Núñez",
       "foto": "https://cdn.biwenger.com/i/p/37719.png",
@@ -2074,16 +2090,16 @@
       "gastadoTexto": "51,3 M"
     },
     {
+      "nombre": "Lottin Capital",
+      "veces": 4,
+      "gastado": 35547000,
+      "gastadoTexto": "35,5 M"
+    },
+    {
       "nombre": "Gorila FC",
       "veces": 4,
       "gastado": 23944300,
       "gastadoTexto": "23,9 M"
-    },
-    {
-      "nombre": "Madriguana FC",
-      "veces": 4,
-      "gastado": 8370000,
-      "gastadoTexto": "8,4 M"
     }
   ],
   "presidentes": [
@@ -2116,8 +2132,8 @@
       },
       "total": 12,
       "puestoEficiencia": 4,
-      "puestoValor": 3,
-      "puestoGasto": 4,
+      "puestoValor": 2,
+      "puestoGasto": 5,
       "puestoActividad": 8,
       "vsMediaPuntos": 26,
       "vsMediaEficiencia": 8,
@@ -2157,9 +2173,9 @@
       },
       "total": 12,
       "puestoEficiencia": 7,
-      "puestoValor": 2,
-      "puestoGasto": 5,
-      "puestoActividad": 9,
+      "puestoValor": 1,
+      "puestoGasto": 6,
+      "puestoActividad": 10,
       "vsMediaPuntos": 24,
       "vsMediaEficiencia": 4,
       "vsMediaValor": 17,
@@ -2198,7 +2214,7 @@
       },
       "total": 12,
       "puestoEficiencia": 6,
-      "puestoValor": 5,
+      "puestoValor": 6,
       "puestoGasto": 1,
       "puestoActividad": 5,
       "vsMediaPuntos": 12,
@@ -2239,7 +2255,7 @@
       },
       "total": 12,
       "puestoEficiencia": 5,
-      "puestoValor": 8,
+      "puestoValor": 9,
       "puestoGasto": 9,
       "puestoActividad": 6,
       "vsMediaPuntos": 6,
@@ -2317,8 +2333,8 @@
       },
       "total": 12,
       "puestoEficiencia": 3,
-      "puestoValor": 9,
-      "puestoGasto": 6,
+      "puestoValor": 10,
+      "puestoGasto": 7,
       "puestoActividad": 7,
       "vsMediaPuntos": 0,
       "vsMediaEficiencia": 8,
@@ -2399,7 +2415,7 @@
       },
       "total": 12,
       "puestoEficiencia": 9,
-      "puestoValor": 6,
+      "puestoValor": 7,
       "puestoGasto": 2,
       "puestoActividad": 2,
       "vsMediaPuntos": -6,
@@ -2417,31 +2433,31 @@
       "escudo": "https://cdn.biwenger.com/i/u/12659137.png?v=9",
       "iniciales": "UP",
       "puntos": 310,
-      "valor": "55,0 M",
-      "valorBruto": 54950000,
+      "valor": "46,2 M",
+      "valorBruto": 46170000,
       "esTuyo": false,
-      "puntosPorMillon": 5.64,
+      "puntosPorMillon": 6.71,
       "mediaJornada": 44.3,
       "clausulasHechas": 0,
-      "clausulasSufridas": 5,
-      "operaciones": 5,
+      "clausulasSufridas": 6,
+      "operaciones": 6,
       "gastado": "0,0 M",
       "gastadoBruto": 0,
-      "ingresado": "32,0 M",
-      "ingresadoBruto": 32046666,
-      "balance": "+32,0 M",
-      "balanceBruto": 32046666,
+      "ingresado": "46,1 M",
+      "ingresadoBruto": 46060666,
+      "balance": "+46,1 M",
+      "balanceBruto": 46060666,
       "sobreprecioMedio": null,
       "enVenta": 0,
       "fichajeEstrella": null,
       "total": 12,
-      "puestoEficiencia": 11,
-      "puestoValor": 1,
+      "puestoEficiencia": 10,
+      "puestoValor": 4,
       "puestoGasto": 11,
-      "puestoActividad": 10,
+      "puestoActividad": 9,
       "vsMediaPuntos": -6,
-      "vsMediaEficiencia": -29,
-      "vsMediaValor": 30,
+      "vsMediaEficiencia": -16,
+      "vsMediaValor": 9,
       "tendencia": {
         "puestos": -3,
         "puntos": 125,
@@ -2477,9 +2493,9 @@
       },
       "total": 12,
       "puestoEficiencia": 8,
-      "puestoValor": 7,
-      "puestoGasto": 7,
-      "puestoActividad": 3,
+      "puestoValor": 8,
+      "puestoGasto": 8,
+      "puestoActividad": 4,
       "vsMediaPuntos": -6,
       "vsMediaEficiencia": -8,
       "vsMediaValor": 0,
@@ -2495,21 +2511,21 @@
       "escudo": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
       "iniciales": "LC",
       "puntos": 259,
-      "valor": "37,7 M",
-      "valorBruto": 37740000,
+      "valor": "46,5 M",
+      "valorBruto": 46520000,
       "esTuyo": false,
-      "puntosPorMillon": 6.86,
+      "puntosPorMillon": 5.57,
       "mediaJornada": 37,
-      "clausulasHechas": 3,
+      "clausulasHechas": 4,
       "clausulasSufridas": 5,
-      "operaciones": 8,
-      "gastado": "21,5 M",
-      "gastadoBruto": 21533000,
+      "operaciones": 9,
+      "gastado": "35,5 M",
+      "gastadoBruto": 35547000,
       "ingresado": "39,9 M",
       "ingresadoBruto": 39887000,
-      "balance": "+18,4 M",
-      "balanceBruto": 18354000,
-      "sobreprecioMedio": 39,
+      "balance": "+4,3 M",
+      "balanceBruto": 4340000,
+      "sobreprecioMedio": 44,
       "enVenta": 1,
       "fichajeEstrella": {
         "nombre": "Pépé",
@@ -2517,13 +2533,13 @@
         "foto": "https://cdn.biwenger.com/i/p/34479.png"
       },
       "total": 12,
-      "puestoEficiencia": 10,
-      "puestoValor": 10,
-      "puestoGasto": 8,
-      "puestoActividad": 4,
+      "puestoEficiencia": 11,
+      "puestoValor": 3,
+      "puestoGasto": 4,
+      "puestoActividad": 3,
       "vsMediaPuntos": -21,
-      "vsMediaEficiencia": -14,
-      "vsMediaValor": -11,
+      "vsMediaEficiencia": -30,
+      "vsMediaValor": 10,
       "tendencia": {
         "puestos": 0,
         "puntos": 117,
@@ -2555,7 +2571,7 @@
       "fichajeEstrella": null,
       "total": 12,
       "puestoEficiencia": 12,
-      "puestoValor": 4,
+      "puestoValor": 5,
       "puestoGasto": 12,
       "puestoActividad": 12,
       "vsMediaPuntos": -30,
@@ -2808,6 +2824,32 @@
   },
   "calendario": {
     "Lottin Capital": [
+      {
+        "nombre": "Ez Abde",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/25127.png",
+        "equipoReal": "Betis",
+        "jornadas": [
+          {
+            "jornada": "Round 8",
+            "esLocal": true,
+            "rival": "Osasuna",
+            "dificultad": 23
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Barcelona",
+            "dificultad": 89
+          },
+          {
+            "jornada": "Round 10",
+            "esLocal": false,
+            "rival": "Celta",
+            "dificultad": 35
+          }
+        ]
+      },
       {
         "nombre": "Freeman",
         "posicion": "Defensa",
@@ -5659,32 +5701,6 @@
         ]
       },
       {
-        "nombre": "Ez Abde",
-        "posicion": "Delantero",
-        "foto": "https://cdn.biwenger.com/i/p/25127.png",
-        "equipoReal": "Betis",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": true,
-            "rival": "Osasuna",
-            "dificultad": 23
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": true,
-            "rival": "Barcelona",
-            "dificultad": 89
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": false,
-            "rival": "Celta",
-            "dificultad": 35
-          }
-        ]
-      },
-      {
         "nombre": "Gonzalo Villar",
         "posicion": "Centrocampista",
         "foto": "https://cdn.biwenger.com/i/p/25403.png",
@@ -7033,7 +7049,7 @@
     },
     {
       "tipo": "mercado",
-      "texto": "Mercado movido: 12 cláusulas pagadas en los últimos 7 días."
+      "texto": "Mercado movido: 13 cláusulas pagadas en los últimos 7 días."
     }
   ],
   "amenazas": [
@@ -7072,6 +7088,39 @@
     }
   ],
   "jugadores": [
+    {
+      "id": "25127",
+      "nombre": "Ez Abde",
+      "slug": "abdessamad-ezzalzouli",
+      "posicion": "Delantero",
+      "posicionCodigo": 4,
+      "foto": "https://cdn.biwenger.com/i/p/25127.png",
+      "equipoReal": "Betis",
+      "equipoIdReal": "87",
+      "presidente": "Lottin Capital",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
+      "precio": 8780000,
+      "precioTexto": "8,8 M",
+      "puntosTotales": 27,
+      "partidosJugados": 4,
+      "media": 6.8,
+      "puntosPorMillon": 3.08,
+      "racha": [
+        6,
+        13,
+        5,
+        3
+      ],
+      "rachaTitular": 3,
+      "ultimoMinutos": 90,
+      "clausula": 16816800,
+      "clausulaTexto": "16,8 M",
+      "pagadoPorSuDueno": 14014000,
+      "margen": 8036800,
+      "margenPorcentaje": 92,
+      "blindado": true,
+      "blindadoHasta": "2026-10-10T22:02:50.000Z"
+    },
     {
       "id": "39901",
       "nombre": "Freeman",
@@ -10675,39 +10724,6 @@
       "blindadoHasta": null
     },
     {
-      "id": "25127",
-      "nombre": "Ez Abde",
-      "slug": "abdessamad-ezzalzouli",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/25127.png",
-      "equipoReal": "Betis",
-      "equipoIdReal": "87",
-      "presidente": "Urdinho Pernambucano",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/12659137.png?v=9",
-      "precio": 8780000,
-      "precioTexto": "8,8 M",
-      "puntosTotales": 27,
-      "partidosJugados": 4,
-      "media": 6.8,
-      "puntosPorMillon": 3.08,
-      "racha": [
-        6,
-        13,
-        5,
-        3
-      ],
-      "rachaTitular": 3,
-      "ultimoMinutos": 90,
-      "clausula": 14014000,
-      "clausulaTexto": "14,0 M",
-      "pagadoPorSuDueno": 7630050,
-      "margen": 5234000,
-      "margenPorcentaje": 60,
-      "blindado": false,
-      "blindadoHasta": null
-    },
-    {
       "id": "25403",
       "nombre": "Gonzalo Villar",
       "slug": "gonzalo-villar",
@@ -12824,8 +12840,8 @@
         "foto": "https://cdn.biwenger.com/i/p/25127.png",
         "equipoReal": "Betis",
         "equipoIdReal": "87",
-        "presidente": "Urdinho Pernambucano",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/12659137.png?v=9",
+        "presidente": "Lottin Capital",
+        "escudoPresidente": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
         "precio": 8780000,
         "precioTexto": "8,8 M",
         "puntosTotales": 27,
@@ -12840,13 +12856,13 @@
         ],
         "rachaTitular": 3,
         "ultimoMinutos": 90,
-        "clausula": 14014000,
-        "clausulaTexto": "14,0 M",
-        "pagadoPorSuDueno": 7630050,
-        "margen": 5234000,
-        "margenPorcentaje": 60,
-        "blindado": false,
-        "blindadoHasta": null
+        "clausula": 16816800,
+        "clausulaTexto": "16,8 M",
+        "pagadoPorSuDueno": 14014000,
+        "margen": 8036800,
+        "margenPorcentaje": 92,
+        "blindado": true,
+        "blindadoHasta": "2026-10-10T22:02:50.000Z"
       },
       {
         "id": "2476",
@@ -13166,36 +13182,37 @@
         "mediaReciente": 10
       },
       {
-        "id": "31321",
-        "nombre": "Starfelt",
-        "slug": "carl-starfelt",
-        "posicion": "Defensa",
-        "posicionCodigo": 2,
-        "foto": "https://cdn.biwenger.com/i/p/31321.png",
-        "equipoReal": "Celta",
-        "equipoIdReal": "5",
-        "presidente": "Gorila FC",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/11411835.png",
-        "precio": 1690000,
-        "precioTexto": "1,7 M",
-        "puntosTotales": 20,
-        "partidosJugados": 3,
-        "media": 6.7,
-        "puntosPorMillon": 11.83,
+        "id": "25127",
+        "nombre": "Ez Abde",
+        "slug": "abdessamad-ezzalzouli",
+        "posicion": "Delantero",
+        "posicionCodigo": 4,
+        "foto": "https://cdn.biwenger.com/i/p/25127.png",
+        "equipoReal": "Betis",
+        "equipoIdReal": "87",
+        "presidente": "Lottin Capital",
+        "escudoPresidente": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
+        "precio": 8780000,
+        "precioTexto": "8,8 M",
+        "puntosTotales": 27,
+        "partidosJugados": 4,
+        "media": 6.8,
+        "puntosPorMillon": 3.08,
         "racha": [
-          16,
-          3,
-          1
+          6,
+          13,
+          5,
+          3
         ],
-        "rachaTitular": 0,
+        "rachaTitular": 3,
         "ultimoMinutos": 90,
-        "clausula": 3900000,
-        "clausulaTexto": "3,9 M",
-        "pagadoPorSuDueno": 2600000,
-        "margen": 2210000,
-        "margenPorcentaje": 131,
+        "clausula": 16816800,
+        "clausulaTexto": "16,8 M",
+        "pagadoPorSuDueno": 14014000,
+        "margen": 8036800,
+        "margenPorcentaje": 92,
         "blindado": true,
-        "blindadoHasta": "2026-09-28T05:03:39.000Z",
+        "blindadoHasta": "2026-10-10T22:02:50.000Z",
         "mediaReciente": 9.5
       }
     ],
@@ -13484,6 +13501,23 @@
   "gangas": [],
   "recomendaciones": {
     "Lottin Capital": [
+      {
+        "nombre": "Ez Abde",
+        "foto": "https://cdn.biwenger.com/i/p/25127.png",
+        "posicion": "Delantero",
+        "equipoReal": "Betis",
+        "racha": [
+          6,
+          13,
+          5,
+          3
+        ],
+        "rachaTitular": 3,
+        "nota": 8.6,
+        "rival": "Osasuna",
+        "esLocal": true,
+        "dificultad": 23
+      },
       {
         "nombre": "Natan",
         "foto": "https://cdn.biwenger.com/i/p/19614.png",
@@ -15311,23 +15345,6 @@
     ],
     "Urdinho Pernambucano": [
       {
-        "nombre": "Ez Abde",
-        "foto": "https://cdn.biwenger.com/i/p/25127.png",
-        "posicion": "Delantero",
-        "equipoReal": "Betis",
-        "racha": [
-          6,
-          13,
-          5,
-          3
-        ],
-        "rachaTitular": 3,
-        "nota": 8.6,
-        "rival": "Osasuna",
-        "esLocal": true,
-        "dificultad": 23
-      },
-      {
         "nombre": "Roberto Fernández",
         "foto": "https://cdn.biwenger.com/i/p/35678.png",
         "posicion": "Delantero",
@@ -16300,7 +16317,7 @@
       "rival": "Osasuna",
       "esLocal": true,
       "dificultad": 23,
-      "presidente": "Urdinho Pernambucano"
+      "presidente": "Lottin Capital"
     },
     {
       "nombre": "Álvaro Valles",
