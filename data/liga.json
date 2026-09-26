@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-26T14:59:25.013Z",
+  "actualizado": "2026-09-26T15:17:59.677Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -5166,32 +5166,6 @@
     ],
     "LXUNITED": [
       {
-        "nombre": "Denis Suárez",
-        "posicion": "Centrocampista",
-        "foto": "https://cdn.biwenger.com/i/p/1876.png",
-        "equipoReal": "Alavés",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": true,
-            "rival": "Atlético",
-            "dificultad": 64
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": false,
-            "rival": "Celta",
-            "dificultad": 37
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": true,
-            "rival": "Málaga",
-            "dificultad": 9
-          }
-        ]
-      },
-      {
         "nombre": "Álvaro García",
         "posicion": "Delantero",
         "foto": "https://cdn.biwenger.com/i/p/33.png",
@@ -5214,6 +5188,32 @@
             "esLocal": true,
             "rival": "Elche",
             "dificultad": 28
+          }
+        ]
+      },
+      {
+        "nombre": "Denis Suárez",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/1876.png",
+        "equipoReal": "Alavés",
+        "jornadas": [
+          {
+            "jornada": "Round 8",
+            "esLocal": true,
+            "rival": "Atlético",
+            "dificultad": 64
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Celta",
+            "dificultad": 37
+          },
+          {
+            "jornada": "Round 10",
+            "esLocal": true,
+            "rival": "Málaga",
+            "dificultad": 9
           }
         ]
       },
@@ -10213,40 +10213,6 @@
       "blindadoHasta": null
     },
     {
-      "id": "1876",
-      "nombre": "Denis Suárez",
-      "slug": "denis-suarez",
-      "posicion": "Centrocampista",
-      "posicionCodigo": 3,
-      "foto": "https://cdn.biwenger.com/i/p/1876.png",
-      "equipoReal": "Alavés",
-      "equipoIdReal": "91",
-      "presidente": "LXUNITED",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/12600696.png?v=83",
-      "precio": 1280000,
-      "precioTexto": "1,3 M",
-      "puntosTotales": 26,
-      "partidosJugados": 6,
-      "media": 4.3,
-      "puntosPorMillon": 20.31,
-      "racha": [
-        6,
-        4,
-        4,
-        4,
-        5
-      ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 67,
-      "clausula": 3217500,
-      "clausulaTexto": "3,2 M",
-      "pagadoPorSuDueno": 2145000,
-      "margen": 1937500,
-      "margenPorcentaje": 151,
-      "blindado": true,
-      "blindadoHasta": "2026-10-04T09:52:34.000Z"
-    },
-    {
       "id": "33",
       "nombre": "Álvaro García",
       "slug": "alvaro-garcia",
@@ -10279,6 +10245,40 @@
       "margenPorcentaje": 85,
       "blindado": false,
       "blindadoHasta": null
+    },
+    {
+      "id": "1876",
+      "nombre": "Denis Suárez",
+      "slug": "denis-suarez",
+      "posicion": "Centrocampista",
+      "posicionCodigo": 3,
+      "foto": "https://cdn.biwenger.com/i/p/1876.png",
+      "equipoReal": "Alavés",
+      "equipoIdReal": "91",
+      "presidente": "LXUNITED",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/12600696.png?v=83",
+      "precio": 1280000,
+      "precioTexto": "1,3 M",
+      "puntosTotales": 26,
+      "partidosJugados": 6,
+      "media": 4.3,
+      "puntosPorMillon": 20.31,
+      "racha": [
+        6,
+        4,
+        4,
+        4,
+        5
+      ],
+      "rachaTitular": 0,
+      "ultimoMinutos": 67,
+      "clausula": 3217500,
+      "clausulaTexto": "3,2 M",
+      "pagadoPorSuDueno": 2145000,
+      "margen": 1937500,
+      "margenPorcentaje": 151,
+      "blindado": true,
+      "blindadoHasta": "2026-10-04T09:52:34.000Z"
     },
     {
       "id": "3259",
