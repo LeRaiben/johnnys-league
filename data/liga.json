@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-27T22:33:57.906Z",
+  "actualizado": "2026-09-27T22:48:32.635Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -131,8 +131,8 @@
       "iniciales": "CT",
       "escudo": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
       "puntos": 409,
-      "valor": "49,5 M",
-      "valorBruto": 49470000,
+      "valor": "46,4 M",
+      "valorBruto": 46400000,
       "esTuyo": false,
       "puntosJornada": 46,
       "jugadosJornada": 7,
@@ -179,8 +179,8 @@
       "iniciales": "MP",
       "escudo": "https://cdn.biwenger.com/i/u/10271251.png",
       "puntos": 336,
-      "valor": "34,1 M",
-      "valorBruto": 34060000,
+      "valor": "37,1 M",
+      "valorBruto": 37130000,
       "esTuyo": false,
       "puntosJornada": 67,
       "jugadosJornada": 11,
@@ -461,6 +461,19 @@
     },
     {
       "tipo": "venta",
+      "nombre": "Barja",
+      "foto": "https://cdn.biwenger.com/i/p/18256.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Osasuna",
+      "vendedor": "Manchester Pity",
+      "pide": "0,9 M",
+      "pideBruto": 900000,
+      "valorMercado": "0,9 M",
+      "valorBruto": 900000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
       "nombre": "Sergio Gómez",
       "foto": "https://cdn.biwenger.com/i/p/19299.png",
       "posicion": "Defensa",
@@ -562,19 +575,6 @@
       "valorMercado": "5,7 M",
       "valorBruto": 5730000,
       "diferencia": 60000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Ilaix Moriba",
-      "foto": "https://cdn.biwenger.com/i/p/21084.png",
-      "posicion": "Centrocampista",
-      "equipoReal": "Celta",
-      "vendedor": "CD Tiro Buchón",
-      "pide": "2,7 M",
-      "pideBruto": 2700000,
-      "valorMercado": "3,1 M",
-      "valorBruto": 3070000,
-      "diferencia": -370000
     },
     {
       "tipo": "venta",
@@ -926,6 +926,22 @@
       "valorMercado": "1,0 M",
       "valorBruto": 1030000,
       "diferencia": -80000
+    },
+    {
+      "tipo": "clausula",
+      "fecha": "2026-09-27T22:34:47.000Z",
+      "nombre": "Ilaix Moriba",
+      "foto": "https://cdn.biwenger.com/i/p/21084.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Celta",
+      "vendedor": "CD Tiro Buchón",
+      "comprador": "Manchester Pity",
+      "escudoComprador": "https://cdn.biwenger.com/i/u/10271251.png",
+      "pide": "4,9 M",
+      "pideBruto": 4883000,
+      "valorMercado": "3,1 M",
+      "valorBruto": 3070000,
+      "diferencia": 1813000
     },
     {
       "tipo": "clausula",
@@ -1741,12 +1757,12 @@
         "foto": "https://cdn.biwenger.com/i/p/19577.png"
       },
       "total": 12,
-      "puestoEficiencia": 4,
-      "puestoValor": 4,
+      "puestoEficiencia": 5,
+      "puestoValor": 3,
       "puestoGasto": 5,
       "puestoActividad": 8,
       "vsMediaPuntos": 26,
-      "vsMediaEficiencia": 11,
+      "vsMediaEficiencia": 12,
       "vsMediaValor": 10,
       "tendencia": {
         "puestos": 0,
@@ -1760,35 +1776,35 @@
       "escudo": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
       "iniciales": "CT",
       "puntos": 409,
-      "valor": "49,5 M",
-      "valorBruto": 49470000,
+      "valor": "46,4 M",
+      "valorBruto": 46400000,
       "esTuyo": false,
-      "puntosPorMillon": 8.27,
+      "puntosPorMillon": 8.81,
       "mediaJornada": 58.4,
       "clausulasHechas": 1,
-      "clausulasSufridas": 4,
-      "operaciones": 5,
+      "clausulasSufridas": 5,
+      "operaciones": 6,
       "gastado": "27,7 M",
       "gastadoBruto": 27672000,
-      "ingresado": "24,7 M",
-      "ingresadoBruto": 24687300,
-      "balance": "−3,0 M",
-      "balanceBruto": -2984700,
+      "ingresado": "29,6 M",
+      "ingresadoBruto": 29570300,
+      "balance": "+1,9 M",
+      "balanceBruto": 1898300,
       "sobreprecioMedio": 44,
-      "enVenta": 9,
+      "enVenta": 8,
       "fichajeEstrella": {
         "nombre": "Bellingham",
         "precio": "27,7 M",
         "foto": "https://cdn.biwenger.com/i/p/30477.png"
       },
       "total": 12,
-      "puestoEficiencia": 5,
-      "puestoValor": 1,
+      "puestoEficiencia": 3,
+      "puestoValor": 5,
       "puestoGasto": 6,
-      "puestoActividad": 10,
+      "puestoActividad": 9,
       "vsMediaPuntos": 24,
-      "vsMediaEficiencia": 6,
-      "vsMediaValor": 14,
+      "vsMediaEficiencia": 13,
+      "vsMediaValor": 7,
       "tendencia": {
         "puestos": 1,
         "puntos": 198,
@@ -1824,7 +1840,7 @@
       },
       "total": 12,
       "puestoEficiencia": 7,
-      "puestoValor": 3,
+      "puestoValor": 2,
       "puestoGasto": 1,
       "puestoActividad": 5,
       "vsMediaPuntos": 12,
@@ -1883,31 +1899,35 @@
       "escudo": "https://cdn.biwenger.com/i/u/10271251.png",
       "iniciales": "MP",
       "puntos": 336,
-      "valor": "34,1 M",
-      "valorBruto": 34060000,
+      "valor": "37,1 M",
+      "valorBruto": 37130000,
       "esTuyo": false,
-      "puntosPorMillon": 9.86,
+      "puntosPorMillon": 9.05,
       "mediaJornada": 48,
-      "clausulasHechas": 0,
+      "clausulasHechas": 1,
       "clausulasSufridas": 3,
-      "operaciones": 3,
-      "gastado": "0,0 M",
-      "gastadoBruto": 0,
+      "operaciones": 4,
+      "gastado": "4,9 M",
+      "gastadoBruto": 4883000,
       "ingresado": "16,9 M",
       "ingresadoBruto": 16868000,
-      "balance": "+16,9 M",
-      "balanceBruto": 16868000,
-      "sobreprecioMedio": null,
-      "enVenta": 4,
-      "fichajeEstrella": null,
+      "balance": "+12,0 M",
+      "balanceBruto": 11985000,
+      "sobreprecioMedio": 59,
+      "enVenta": 5,
+      "fichajeEstrella": {
+        "nombre": "Ilaix Moriba",
+        "precio": "4,9 M",
+        "foto": "https://cdn.biwenger.com/i/p/21084.png"
+      },
       "total": 12,
       "puestoEficiencia": 2,
       "puestoValor": 11,
       "puestoGasto": 10,
       "puestoActividad": 11,
       "vsMediaPuntos": 2,
-      "vsMediaEficiencia": 26,
-      "vsMediaValor": -21,
+      "vsMediaEficiencia": 16,
+      "vsMediaValor": -14,
       "tendencia": {
         "puestos": 3,
         "puntos": 159,
@@ -1942,12 +1962,12 @@
         "foto": "https://cdn.biwenger.com/i/p/15568.png"
       },
       "total": 12,
-      "puestoEficiencia": 3,
+      "puestoEficiencia": 4,
       "puestoValor": 10,
       "puestoGasto": 7,
       "puestoActividad": 7,
       "vsMediaPuntos": 0,
-      "vsMediaEficiencia": 11,
+      "vsMediaEficiencia": 12,
       "vsMediaValor": -12,
       "tendencia": {
         "puestos": -4,
@@ -2062,9 +2082,9 @@
       "fichajeEstrella": null,
       "total": 12,
       "puestoEficiencia": 10,
-      "puestoValor": 5,
+      "puestoValor": 4,
       "puestoGasto": 11,
-      "puestoActividad": 9,
+      "puestoActividad": 10,
       "vsMediaPuntos": -6,
       "vsMediaEficiencia": -15,
       "vsMediaValor": 9,
@@ -2144,7 +2164,7 @@
       },
       "total": 12,
       "puestoEficiencia": 11,
-      "puestoValor": 2,
+      "puestoValor": 1,
       "puestoGasto": 4,
       "puestoActividad": 3,
       "vsMediaPuntos": -21,
@@ -2426,8 +2446,8 @@
       "porcentaje": 315
     },
     "masRata": {
-      "nombre": "Manchester Pity",
-      "escudo": "https://cdn.biwenger.com/i/u/10271251.png",
+      "nombre": "Urdinho Pernambucano",
+      "escudo": "https://cdn.biwenger.com/i/u/12659137.png?v=9",
       "gastado": "0,0 M",
       "gastadoBruto": 0
     }
@@ -3245,6 +3265,32 @@
     ],
     "Manchester Pity": [
       {
+        "nombre": "Ilaix Moriba",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/21084.png",
+        "equipoReal": "Celta",
+        "jornadas": [
+          {
+            "jornada": "Round 8",
+            "esLocal": false,
+            "rival": "Elche",
+            "dificultad": 25
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Alavés",
+            "dificultad": 55
+          },
+          {
+            "jornada": "Round 10",
+            "esLocal": true,
+            "rival": "Betis",
+            "dificultad": 62
+          }
+        ]
+      },
+      {
         "nombre": "Isco",
         "posicion": "Centrocampista",
         "foto": "https://cdn.biwenger.com/i/p/1249.png",
@@ -3685,32 +3731,6 @@
             "esLocal": false,
             "rival": "Barcelona",
             "dificultad": 88
-          }
-        ]
-      },
-      {
-        "nombre": "Ilaix Moriba",
-        "posicion": "Centrocampista",
-        "foto": "https://cdn.biwenger.com/i/p/21084.png",
-        "equipoReal": "Celta",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Elche",
-            "dificultad": 25
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": true,
-            "rival": "Alavés",
-            "dificultad": 55
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": true,
-            "rival": "Betis",
-            "dificultad": 62
           }
         ]
       },
@@ -6815,7 +6835,7 @@
     },
     {
       "tipo": "mercado",
-      "texto": "Mercado movido: 5 cláusulas pagadas en los últimos 7 días."
+      "texto": "Mercado movido: 6 cláusulas pagadas en los últimos 7 días."
     }
   ],
   "amenazas": [
@@ -7885,6 +7905,40 @@
       "blindadoHasta": null
     },
     {
+      "id": "21084",
+      "nombre": "Ilaix Moriba",
+      "slug": "ilaix-moriba",
+      "posicion": "Centrocampista",
+      "posicionCodigo": 3,
+      "foto": "https://cdn.biwenger.com/i/p/21084.png",
+      "equipoReal": "Celta",
+      "equipoIdReal": "5",
+      "presidente": "Manchester Pity",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/10271251.png",
+      "precio": 3070000,
+      "precioTexto": "3,1 M",
+      "puntosTotales": 35,
+      "partidosJugados": 7,
+      "media": 5,
+      "puntosPorMillon": 11.4,
+      "racha": [
+        16,
+        5,
+        2,
+        5,
+        2
+      ],
+      "rachaTitular": 4,
+      "ultimoMinutos": 90,
+      "clausula": 6836200,
+      "clausulaTexto": "6,8 M",
+      "pagadoPorSuDueno": 4883000,
+      "margen": 3766200,
+      "margenPorcentaje": 123,
+      "blindado": true,
+      "blindadoHasta": "2026-10-12T22:34:47.000Z"
+    },
+    {
       "id": "1249",
       "nombre": "Isco",
       "slug": "isco",
@@ -8308,8 +8362,8 @@
       "pagadoPorSuDueno": 1250000,
       "margen": 1090000,
       "margenPorcentaje": 50,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-28T18:38:46.000Z"
     },
     {
       "id": "2476",
@@ -8407,8 +8461,8 @@
       "pagadoPorSuDueno": 152000,
       "margen": 460000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-28T18:38:46.000Z"
     },
     {
       "id": "16738",
@@ -8443,40 +8497,6 @@
       "margenPorcentaje": 41,
       "blindado": true,
       "blindadoHasta": "2026-10-07T05:04:06.000Z"
-    },
-    {
-      "id": "21084",
-      "nombre": "Ilaix Moriba",
-      "slug": "ilaix-moriba",
-      "posicion": "Centrocampista",
-      "posicionCodigo": 3,
-      "foto": "https://cdn.biwenger.com/i/p/21084.png",
-      "equipoReal": "Celta",
-      "equipoIdReal": "5",
-      "presidente": "CD Tiro Buchón",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
-      "precio": 3070000,
-      "precioTexto": "3,1 M",
-      "puntosTotales": 35,
-      "partidosJugados": 7,
-      "media": 5,
-      "puntosPorMillon": 11.4,
-      "racha": [
-        16,
-        5,
-        2,
-        5,
-        2
-      ],
-      "rachaTitular": 4,
-      "ultimoMinutos": 90,
-      "clausula": 4883000,
-      "clausulaTexto": "4,9 M",
-      "pagadoPorSuDueno": 1930000,
-      "margen": 1813000,
-      "margenPorcentaje": 59,
-      "blindado": false,
-      "blindadoHasta": null
     },
     {
       "id": "24509",
@@ -8577,8 +8597,8 @@
       "pagadoPorSuDueno": null,
       "margen": 870000,
       "margenPorcentaje": 50,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-28T18:38:46.000Z"
     },
     {
       "id": "32338",
@@ -8611,8 +8631,8 @@
       "pagadoPorSuDueno": 2610000,
       "margen": 1504000,
       "margenPorcentaje": 40,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-28T18:38:46.000Z"
     },
     {
       "id": "34805",
@@ -8639,8 +8659,8 @@
       "pagadoPorSuDueno": null,
       "margen": 640000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-28T18:38:46.000Z"
     },
     {
       "id": "41413",
@@ -8667,8 +8687,8 @@
       "pagadoPorSuDueno": 150000,
       "margen": 300000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-28T18:38:46.000Z"
     },
     {
       "id": "41560",
@@ -8695,8 +8715,8 @@
       "pagadoPorSuDueno": null,
       "margen": 300000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-28T18:38:46.000Z"
     },
     {
       "id": "43172",
@@ -8729,8 +8749,8 @@
       "pagadoPorSuDueno": 360020,
       "margen": 900000,
       "margenPorcentaje": 100,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-09-28T18:38:46.000Z"
     },
     {
       "id": "1083",
@@ -12418,8 +12438,8 @@
         "pagadoPorSuDueno": 152000,
         "margen": 460000,
         "margenPorcentaje": 200,
-        "blindado": false,
-        "blindadoHasta": null
+        "blindado": true,
+        "blindadoHasta": "2026-09-28T18:38:46.000Z"
       },
       {
         "id": "31475",
@@ -13002,8 +13022,8 @@
         "foto": "https://cdn.biwenger.com/i/p/21084.png",
         "equipoReal": "Celta",
         "equipoIdReal": "5",
-        "presidente": "CD Tiro Buchón",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
+        "presidente": "Manchester Pity",
+        "escudoPresidente": "https://cdn.biwenger.com/i/u/10271251.png",
         "precio": 3070000,
         "precioTexto": "3,1 M",
         "puntosTotales": 35,
@@ -13019,13 +13039,13 @@
         ],
         "rachaTitular": 4,
         "ultimoMinutos": 90,
-        "clausula": 4883000,
-        "clausulaTexto": "4,9 M",
-        "pagadoPorSuDueno": 1930000,
-        "margen": 1813000,
-        "margenPorcentaje": 59,
-        "blindado": false,
-        "blindadoHasta": null,
+        "clausula": 6836200,
+        "clausulaTexto": "6,8 M",
+        "pagadoPorSuDueno": 4883000,
+        "margen": 3766200,
+        "margenPorcentaje": 123,
+        "blindado": true,
+        "blindadoHasta": "2026-10-12T22:34:47.000Z",
         "mediaReciente": 10.5
       },
       {
@@ -13992,6 +14012,24 @@
     ],
     "Manchester Pity": [
       {
+        "nombre": "Ilaix Moriba",
+        "foto": "https://cdn.biwenger.com/i/p/21084.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Celta",
+        "racha": [
+          16,
+          5,
+          2,
+          5,
+          2
+        ],
+        "rachaTitular": 4,
+        "nota": 8.8,
+        "rival": "Elche",
+        "esLocal": false,
+        "dificultad": 25
+      },
+      {
         "nombre": "Moleiro",
         "foto": "https://cdn.biwenger.com/i/p/30495.png",
         "posicion": "Centrocampista",
@@ -14177,24 +14215,6 @@
       }
     ],
     "CD Tiro Buchón": [
-      {
-        "nombre": "Ilaix Moriba",
-        "foto": "https://cdn.biwenger.com/i/p/21084.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Celta",
-        "racha": [
-          16,
-          5,
-          2,
-          5,
-          2
-        ],
-        "rachaTitular": 4,
-        "nota": 8.8,
-        "rival": "Elche",
-        "esLocal": false,
-        "dificultad": 25
-      },
       {
         "nombre": "Firpo",
         "foto": "https://cdn.biwenger.com/i/p/12596.png",
@@ -16322,7 +16342,7 @@
       "rival": "Elche",
       "esLocal": false,
       "dificultad": 25,
-      "presidente": "CD Tiro Buchón"
+      "presidente": "Manchester Pity"
     },
     {
       "nombre": "Miguel Román",
@@ -16515,52 +16535,6 @@
         2
       ],
       "rachaTitular": 0,
-      "nivel": "medio"
-    },
-    {
-      "nombre": "Jonny",
-      "foto": "https://cdn.biwenger.com/i/p/1599.png",
-      "posicion": "Defensa",
-      "equipoReal": "Alavés",
-      "presidente": "CD Tiro Buchón",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
-      "precioTexto": "2,2 M",
-      "clausulaTexto": "3,3 M",
-      "margenPorcentaje": 50,
-      "margenTexto": "1,1 M",
-      "media": 4.8,
-      "puntosPorMillon": 13.3,
-      "racha": [
-        4,
-        6,
-        2,
-        7,
-        4
-      ],
-      "rachaTitular": 1,
-      "nivel": "medio"
-    },
-    {
-      "nombre": "Abde Rebbach",
-      "foto": "https://cdn.biwenger.com/i/p/30510.png",
-      "posicion": "Delantero",
-      "equipoReal": "Alavés",
-      "presidente": "CD Tiro Buchón",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
-      "precioTexto": "1,7 M",
-      "clausulaTexto": "2,6 M",
-      "margenPorcentaje": 50,
-      "margenTexto": "0,9 M",
-      "media": 3.3,
-      "puntosPorMillon": 13.22,
-      "racha": [
-        4,
-        2,
-        7,
-        1,
-        2
-      ],
-      "rachaTitular": 7,
       "nivel": "medio"
     },
     {
