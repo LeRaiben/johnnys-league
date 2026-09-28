@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-28T15:27:33.260Z",
+  "actualizado": "2026-09-28T15:47:57.474Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -796,6 +796,19 @@
       "valorMercado": "2,6 M",
       "valorBruto": 2590000,
       "diferencia": 20000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Dimitrievski",
+      "foto": "https://cdn.biwenger.com/i/p/11677.png",
+      "posicion": "Portero",
+      "equipoReal": "Valencia",
+      "vendedor": "Urdinho Pernambucano",
+      "pide": "3,5 M",
+      "pideBruto": 3500000,
+      "valorMercado": "3,1 M",
+      "valorBruto": 3090000,
+      "diferencia": 410000
     },
     {
       "tipo": "venta",
@@ -2429,7 +2442,7 @@
       "balance": "+46,1 M",
       "balanceBruto": 46060666,
       "sobreprecioMedio": null,
-      "enVenta": 0,
+      "enVenta": 1,
       "fichajeEstrella": null,
       "total": 12,
       "puestoEficiencia": 10,
