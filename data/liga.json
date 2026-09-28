@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-28T18:22:10.496Z",
+  "actualizado": "2026-09-28T18:46:24.044Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -7264,7 +7264,7 @@
     },
     {
       "tipo": "mercado",
-      "texto": "Mercado movido: 6 cláusulas pagadas en los últimos 7 días."
+      "texto": "Mercado movido: 5 cláusulas pagadas en los últimos 7 días."
     }
   ],
   "amenazas": [
@@ -8822,8 +8822,8 @@
       "pagadoPorSuDueno": 1250000,
       "margen": 1075000,
       "margenPorcentaje": 50,
-      "blindado": true,
-      "blindadoHasta": "2026-09-28T18:38:46.000Z"
+      "blindado": false,
+      "blindadoHasta": null
     },
     {
       "id": "2476",
@@ -8921,8 +8921,8 @@
       "pagadoPorSuDueno": 152000,
       "margen": 460000,
       "margenPorcentaje": 200,
-      "blindado": true,
-      "blindadoHasta": "2026-09-28T18:38:46.000Z"
+      "blindado": false,
+      "blindadoHasta": null
     },
     {
       "id": "14630",
@@ -9091,8 +9091,8 @@
       "pagadoPorSuDueno": null,
       "margen": 885000,
       "margenPorcentaje": 50,
-      "blindado": true,
-      "blindadoHasta": "2026-09-28T18:38:46.000Z"
+      "blindado": false,
+      "blindadoHasta": null
     },
     {
       "id": "32338",
@@ -9125,8 +9125,8 @@
       "pagadoPorSuDueno": 2610000,
       "margen": 1508000,
       "margenPorcentaje": 40,
-      "blindado": true,
-      "blindadoHasta": "2026-09-28T18:38:46.000Z"
+      "blindado": false,
+      "blindadoHasta": null
     },
     {
       "id": "34805",
@@ -9153,8 +9153,8 @@
       "pagadoPorSuDueno": null,
       "margen": 640000,
       "margenPorcentaje": 200,
-      "blindado": true,
-      "blindadoHasta": "2026-09-28T18:38:46.000Z"
+      "blindado": false,
+      "blindadoHasta": null
     },
     {
       "id": "41413",
@@ -9181,8 +9181,8 @@
       "pagadoPorSuDueno": 150000,
       "margen": 300000,
       "margenPorcentaje": 200,
-      "blindado": true,
-      "blindadoHasta": "2026-09-28T18:38:46.000Z"
+      "blindado": false,
+      "blindadoHasta": null
     },
     {
       "id": "41560",
@@ -9209,8 +9209,8 @@
       "pagadoPorSuDueno": null,
       "margen": 300000,
       "margenPorcentaje": 200,
-      "blindado": true,
-      "blindadoHasta": "2026-09-28T18:38:46.000Z"
+      "blindado": false,
+      "blindadoHasta": null
     },
     {
       "id": "43172",
@@ -9243,8 +9243,8 @@
       "pagadoPorSuDueno": 360020,
       "margen": 860000,
       "margenPorcentaje": 100,
-      "blindado": true,
-      "blindadoHasta": "2026-09-28T18:38:46.000Z"
+      "blindado": false,
+      "blindadoHasta": null
     },
     {
       "id": "1083",
@@ -12930,8 +12930,8 @@
         "pagadoPorSuDueno": 152000,
         "margen": 460000,
         "margenPorcentaje": 200,
-        "blindado": true,
-        "blindadoHasta": "2026-09-28T18:38:46.000Z"
+        "blindado": false,
+        "blindadoHasta": null
       },
       {
         "id": "31475",
@@ -17058,6 +17058,52 @@
         2
       ],
       "rachaTitular": 0,
+      "nivel": "medio"
+    },
+    {
+      "nombre": "Jonny",
+      "foto": "https://cdn.biwenger.com/i/p/1599.png",
+      "posicion": "Defensa",
+      "equipoReal": "Alavés",
+      "presidente": "CD Tiro Buchón",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
+      "precioTexto": "2,1 M",
+      "clausulaTexto": "3,2 M",
+      "margenPorcentaje": 50,
+      "margenTexto": "1,1 M",
+      "media": 4.8,
+      "puntosPorMillon": 13.49,
+      "racha": [
+        4,
+        6,
+        2,
+        7,
+        4
+      ],
+      "rachaTitular": 1,
+      "nivel": "medio"
+    },
+    {
+      "nombre": "Abde Rebbach",
+      "foto": "https://cdn.biwenger.com/i/p/30510.png",
+      "posicion": "Delantero",
+      "equipoReal": "Alavés",
+      "presidente": "CD Tiro Buchón",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
+      "precioTexto": "1,8 M",
+      "clausulaTexto": "2,7 M",
+      "margenPorcentaje": 50,
+      "margenTexto": "0,9 M",
+      "media": 3.3,
+      "puntosPorMillon": 12.99,
+      "racha": [
+        4,
+        2,
+        7,
+        1,
+        2
+      ],
+      "rachaTitular": 7,
       "nivel": "medio"
     },
     {
