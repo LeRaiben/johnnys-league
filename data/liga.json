@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-28T21:31:51.001Z",
+  "actualizado": "2026-09-28T21:49:22.018Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -2858,32 +2858,6 @@
         ]
       },
       {
-        "nombre": "Freeman",
-        "posicion": "Defensa",
-        "foto": "https://cdn.biwenger.com/i/p/39901.png",
-        "equipoReal": "Villarreal",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Real Madrid",
-            "dificultad": 70
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": true,
-            "rival": "Elche",
-            "dificultad": 26
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": false,
-            "rival": "Valencia",
-            "dificultad": 13
-          }
-        ]
-      },
-      {
         "nombre": "Moi Gómez",
         "posicion": "Centrocampista",
         "foto": "https://cdn.biwenger.com/i/p/1462.png",
@@ -3277,6 +3251,32 @@
         "nombre": "Maciá",
         "posicion": "Centrocampista",
         "foto": "https://cdn.biwenger.com/i/p/39357.png",
+        "equipoReal": "Villarreal",
+        "jornadas": [
+          {
+            "jornada": "Round 8",
+            "esLocal": false,
+            "rival": "Real Madrid",
+            "dificultad": 70
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Elche",
+            "dificultad": 26
+          },
+          {
+            "jornada": "Round 10",
+            "esLocal": false,
+            "rival": "Valencia",
+            "dificultad": 13
+          }
+        ]
+      },
+      {
+        "nombre": "Freeman",
+        "posicion": "Defensa",
+        "foto": "https://cdn.biwenger.com/i/p/39901.png",
         "equipoReal": "Villarreal",
         "jornadas": [
           {
@@ -7337,40 +7337,6 @@
       "blindadoHasta": "2026-10-10T22:02:50.000Z"
     },
     {
-      "id": "39901",
-      "nombre": "Freeman",
-      "slug": "alex-freeman",
-      "posicion": "Defensa",
-      "posicionCodigo": 2,
-      "foto": "https://cdn.biwenger.com/i/p/39901.png",
-      "equipoReal": "Villarreal",
-      "equipoIdReal": "19",
-      "presidente": "Lottin Capital",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
-      "precio": 1450000,
-      "precioTexto": "1,4 M",
-      "puntosTotales": 23,
-      "partidosJugados": 6,
-      "media": 3.8,
-      "puntosPorMillon": 15.86,
-      "racha": [
-        4,
-        6,
-        4,
-        4,
-        5
-      ],
-      "rachaTitular": 2,
-      "ultimoMinutos": 90,
-      "clausula": 3082500,
-      "clausulaTexto": "3,1 M",
-      "pagadoPorSuDueno": 2055000,
-      "margen": 1632500,
-      "margenPorcentaje": 113,
-      "blindado": true,
-      "blindadoHasta": "2026-10-06T18:38:46.000Z"
-    },
-    {
       "id": "1462",
       "nombre": "Moi Gómez",
       "slug": "moi-gomez",
@@ -7894,6 +7860,40 @@
       "margenPorcentaje": 105,
       "blindado": true,
       "blindadoHasta": "2026-10-11T05:01:10.000Z"
+    },
+    {
+      "id": "39901",
+      "nombre": "Freeman",
+      "slug": "alex-freeman",
+      "posicion": "Defensa",
+      "posicionCodigo": 2,
+      "foto": "https://cdn.biwenger.com/i/p/39901.png",
+      "equipoReal": "Villarreal",
+      "equipoIdReal": "19",
+      "presidente": "Lottin Capital",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
+      "precio": 1450000,
+      "precioTexto": "1,4 M",
+      "puntosTotales": 23,
+      "partidosJugados": 6,
+      "media": 3.8,
+      "puntosPorMillon": 15.86,
+      "racha": [
+        4,
+        6,
+        4,
+        4,
+        5
+      ],
+      "rachaTitular": 2,
+      "ultimoMinutos": 90,
+      "clausula": 3082500,
+      "clausulaTexto": "3,1 M",
+      "pagadoPorSuDueno": 2055000,
+      "margen": 1632500,
+      "margenPorcentaje": 113,
+      "blindado": true,
+      "blindadoHasta": "2026-10-06T18:38:46.000Z"
     },
     {
       "id": "41567",
@@ -14124,24 +14124,6 @@
         "dificultad": 52
       },
       {
-        "nombre": "Freeman",
-        "foto": "https://cdn.biwenger.com/i/p/39901.png",
-        "posicion": "Defensa",
-        "equipoReal": "Villarreal",
-        "racha": [
-          4,
-          6,
-          4,
-          4,
-          5
-        ],
-        "rachaTitular": 2,
-        "nota": 4,
-        "rival": "Real Madrid",
-        "esLocal": false,
-        "dificultad": 70
-      },
-      {
         "nombre": "Remiro",
         "foto": "https://cdn.biwenger.com/i/p/7003.png",
         "posicion": "Portero",
@@ -14176,6 +14158,24 @@
         "rival": "Deportivo",
         "esLocal": true,
         "dificultad": 54
+      },
+      {
+        "nombre": "Freeman",
+        "foto": "https://cdn.biwenger.com/i/p/39901.png",
+        "posicion": "Defensa",
+        "equipoReal": "Villarreal",
+        "racha": [
+          4,
+          6,
+          4,
+          4,
+          5
+        ],
+        "rachaTitular": 2,
+        "nota": 4,
+        "rival": "Real Madrid",
+        "esLocal": false,
+        "dificultad": 70
       },
       {
         "nombre": "Isi Palazón",
