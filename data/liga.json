@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-29T22:24:01.434Z",
+  "actualizado": "2026-09-29T22:41:49.773Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -131,8 +131,8 @@
       "iniciales": "CT",
       "escudo": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
       "puntos": 409,
-      "valor": "50,8 M",
-      "valorBruto": 50780000,
+      "valor": "49,0 M",
+      "valorBruto": 48980000,
       "esTuyo": false,
       "puntosJornada": 46,
       "jugadosJornada": 7,
@@ -211,8 +211,8 @@
       "iniciales": "LV",
       "escudo": "https://cdn.biwenger.com/i/u/13934763.png",
       "puntos": 327,
-      "valor": "25,6 M",
-      "valorBruto": 25630000,
+      "valor": "27,4 M",
+      "valorBruto": 27430000,
       "esTuyo": false,
       "puntosJornada": 62,
       "jugadosJornada": 11,
@@ -614,19 +614,6 @@
       "valorMercado": "2,6 M",
       "valorBruto": 2600000,
       "diferencia": -240000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Abde Rebbach",
-      "foto": "https://cdn.biwenger.com/i/p/30510.png",
-      "posicion": "Delantero",
-      "equipoReal": "Alavés",
-      "vendedor": "CD Tiro Buchón",
-      "pide": "1,7 M",
-      "pideBruto": 1660000,
-      "valorMercado": "1,8 M",
-      "valorBruto": 1800000,
-      "diferencia": -140000
     },
     {
       "tipo": "venta",
@@ -1381,6 +1368,22 @@
       "valorMercado": "1,6 M",
       "valorBruto": 1590000,
       "diferencia": -10000
+    },
+    {
+      "tipo": "clausula",
+      "fecha": "2026-09-29T22:40:44.000Z",
+      "nombre": "Abde Rebbach",
+      "foto": "https://cdn.biwenger.com/i/p/30510.png",
+      "posicion": "Delantero",
+      "equipoReal": "Alavés",
+      "vendedor": "CD Tiro Buchón",
+      "comprador": "Las Víboras FC",
+      "escudoComprador": "https://cdn.biwenger.com/i/u/13934763.png",
+      "pide": "2,7 M",
+      "pideBruto": 2700000,
+      "valorMercado": "1,8 M",
+      "valorBruto": 1800000,
+      "diferencia": 900000
     },
     {
       "tipo": "clausula",
@@ -2192,9 +2195,9 @@
     },
     {
       "nombre": "Las Víboras FC",
-      "veces": 13,
-      "gastado": 36845000,
-      "gastadoTexto": "36,8 M"
+      "veces": 14,
+      "gastado": 39545000,
+      "gastadoTexto": "39,5 M"
     },
     {
       "nombre": "Seif fc",
@@ -2249,7 +2252,7 @@
       "puestoGasto": 5,
       "puestoActividad": 6,
       "vsMediaPuntos": 26,
-      "vsMediaEficiencia": 130,
+      "vsMediaEficiencia": 131,
       "vsMediaValor": -51,
       "tendencia": {
         "puestos": 0,
@@ -2263,35 +2266,35 @@
       "escudo": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
       "iniciales": "CT",
       "puntos": 409,
-      "valor": "50,8 M",
-      "valorBruto": 50780000,
+      "valor": "49,0 M",
+      "valorBruto": 48980000,
       "esTuyo": false,
-      "puntosPorMillon": 8.05,
+      "puntosPorMillon": 8.35,
       "mediaJornada": 58.4,
       "clausulasHechas": 1,
-      "clausulasSufridas": 5,
-      "operaciones": 6,
+      "clausulasSufridas": 6,
+      "operaciones": 7,
       "gastado": "27,7 M",
       "gastadoBruto": 27672000,
-      "ingresado": "29,6 M",
-      "ingresadoBruto": 29570300,
-      "balance": "+1,9 M",
-      "balanceBruto": 1898300,
+      "ingresado": "32,3 M",
+      "ingresadoBruto": 32270300,
+      "balance": "+4,6 M",
+      "balanceBruto": 4598300,
       "sobreprecioMedio": 43,
-      "enVenta": 8,
+      "enVenta": 7,
       "fichajeEstrella": {
         "nombre": "Bellingham",
         "precio": "27,7 M",
         "foto": "https://cdn.biwenger.com/i/p/30477.png"
       },
       "total": 12,
-      "puestoEficiencia": 4,
-      "puestoValor": 3,
+      "puestoEficiencia": 3,
+      "puestoValor": 4,
       "puestoGasto": 7,
-      "puestoActividad": 9,
+      "puestoActividad": 7,
       "vsMediaPuntos": 24,
-      "vsMediaEficiencia": -3,
-      "vsMediaValor": 16,
+      "vsMediaEficiencia": 1,
+      "vsMediaValor": 12,
       "tendencia": {
         "puestos": 1,
         "puntos": 198,
@@ -2327,9 +2330,9 @@
       },
       "total": 12,
       "puestoEficiencia": 7,
-      "puestoValor": 4,
+      "puestoValor": 3,
       "puestoGasto": 2,
-      "puestoActividad": 7,
+      "puestoActividad": 8,
       "vsMediaPuntos": 12,
       "vsMediaEficiencia": -10,
       "vsMediaValor": 13,
@@ -2370,9 +2373,9 @@
       "puestoEficiencia": 6,
       "puestoValor": 5,
       "puestoGasto": 9,
-      "puestoActividad": 8,
+      "puestoActividad": 9,
       "vsMediaPuntos": 6,
-      "vsMediaEficiencia": -7,
+      "vsMediaEficiencia": -6,
       "vsMediaValor": 3,
       "tendencia": {
         "puestos": 5,
@@ -2408,12 +2411,12 @@
         "foto": "https://cdn.biwenger.com/i/p/21084.png"
       },
       "total": 12,
-      "puestoEficiencia": 3,
+      "puestoEficiencia": 4,
       "puestoValor": 10,
       "puestoGasto": 10,
       "puestoActividad": 11,
       "vsMediaPuntos": 2,
-      "vsMediaEficiencia": -3,
+      "vsMediaEficiencia": -2,
       "vsMediaValor": -5,
       "tendencia": {
         "puestos": 3,
@@ -2454,7 +2457,7 @@
       "puestoGasto": 6,
       "puestoActividad": 4,
       "vsMediaPuntos": 0,
-      "vsMediaEficiencia": -7,
+      "vsMediaEficiencia": -6,
       "vsMediaValor": -3,
       "tendencia": {
         "puestos": -4,
@@ -2468,21 +2471,21 @@
       "escudo": "https://cdn.biwenger.com/i/u/13934763.png",
       "iniciales": "LV",
       "puntos": 327,
-      "valor": "25,6 M",
-      "valorBruto": 25630000,
+      "valor": "27,4 M",
+      "valorBruto": 27430000,
       "esTuyo": false,
-      "puntosPorMillon": 12.76,
+      "puntosPorMillon": 11.92,
       "mediaJornada": 46.7,
-      "clausulasHechas": 13,
+      "clausulasHechas": 14,
       "clausulasSufridas": 4,
-      "operaciones": 17,
-      "gastado": "36,8 M",
-      "gastadoBruto": 36845000,
+      "operaciones": 18,
+      "gastado": "39,5 M",
+      "gastadoBruto": 39545000,
       "ingresado": "42,8 M",
       "ingresadoBruto": 42767799,
-      "balance": "+5,9 M",
-      "balanceBruto": 5922799,
-      "sobreprecioMedio": 25,
+      "balance": "+3,2 M",
+      "balanceBruto": 3222799,
+      "sobreprecioMedio": 27,
       "enVenta": 15,
       "fichajeEstrella": {
         "nombre": "Camello",
@@ -2495,8 +2498,8 @@
       "puestoGasto": 3,
       "puestoActividad": 1,
       "vsMediaPuntos": -1,
-      "vsMediaEficiencia": 53,
-      "vsMediaValor": -41,
+      "vsMediaEficiencia": 44,
+      "vsMediaValor": -37,
       "tendencia": {
         "puestos": 3,
         "puntos": 175,
@@ -2614,7 +2617,7 @@
       "puestoGasto": 8,
       "puestoActividad": 5,
       "vsMediaPuntos": -6,
-      "vsMediaEficiencia": -13,
+      "vsMediaEficiencia": -12,
       "vsMediaValor": -3,
       "tendencia": {
         "puestos": -3,
@@ -2655,7 +2658,7 @@
       "puestoGasto": 4,
       "puestoActividad": 3,
       "vsMediaPuntos": -21,
-      "vsMediaEficiencia": -31,
+      "vsMediaEficiencia": -30,
       "vsMediaValor": 3,
       "tendencia": {
         "puestos": 0,
@@ -4322,32 +4325,6 @@
             "esLocal": false,
             "rival": "Barcelona",
             "dificultad": 88
-          }
-        ]
-      },
-      {
-        "nombre": "Abde Rebbach",
-        "posicion": "Delantero",
-        "foto": "https://cdn.biwenger.com/i/p/30510.png",
-        "equipoReal": "Alavés",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": true,
-            "rival": "Atlético",
-            "dificultad": 64
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": false,
-            "rival": "Celta",
-            "dificultad": 37
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": true,
-            "rival": "Málaga",
-            "dificultad": 9
           }
         ]
       },
@@ -6524,6 +6501,32 @@
     ],
     "Las Víboras FC": [
       {
+        "nombre": "Abde Rebbach",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/30510.png",
+        "equipoReal": "Alavés",
+        "jornadas": [
+          {
+            "jornada": "Round 8",
+            "esLocal": true,
+            "rival": "Atlético",
+            "dificultad": 64
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Celta",
+            "dificultad": 37
+          },
+          {
+            "jornada": "Round 10",
+            "esLocal": true,
+            "rival": "Málaga",
+            "dificultad": 9
+          }
+        ]
+      },
+      {
         "nombre": "Álvaro Núñez",
         "posicion": "Defensa",
         "foto": "https://cdn.biwenger.com/i/p/37719.png",
@@ -7374,7 +7377,7 @@
     },
     {
       "tipo": "mercado",
-      "texto": "Mercado movido: 7 cláusulas pagadas en los últimos 7 días."
+      "texto": "Mercado movido: 8 cláusulas pagadas en los últimos 7 días."
     }
   ],
   "amenazas": [
@@ -8930,8 +8933,8 @@
       "pagadoPorSuDueno": 1250000,
       "margen": 1060000,
       "margenPorcentaje": 50,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-10-04T22:34:47.000Z"
     },
     {
       "id": "2476",
@@ -8999,7 +9002,7 @@
       "margen": 1485075,
       "margenPorcentaje": 62,
       "blindado": true,
-      "blindadoHasta": "2026-10-01T05:02:56.000Z"
+      "blindadoHasta": "2026-10-04T22:34:47.000Z"
     },
     {
       "id": "12596",
@@ -9029,8 +9032,8 @@
       "pagadoPorSuDueno": 152000,
       "margen": 460000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-10-04T22:34:47.000Z"
     },
     {
       "id": "14630",
@@ -9132,7 +9135,7 @@
       "margen": 1300000,
       "margenPorcentaje": 50,
       "blindado": true,
-      "blindadoHasta": "2026-10-01T05:02:56.000Z"
+      "blindadoHasta": "2026-10-04T22:34:47.000Z"
     },
     {
       "id": "30477",
@@ -9166,41 +9169,7 @@
       "margen": 13886400,
       "margenPorcentaje": 72,
       "blindado": true,
-      "blindadoHasta": "2026-09-30T05:18:21.000Z"
-    },
-    {
-      "id": "30510",
-      "nombre": "Abde Rebbach",
-      "slug": "abde-rebbach",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/30510.png",
-      "equipoReal": "Alavés",
-      "equipoIdReal": "91",
-      "presidente": "CD Tiro Buchón",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
-      "precio": 1800000,
-      "precioTexto": "1,8 M",
-      "puntosTotales": 23,
-      "partidosJugados": 7,
-      "media": 3.3,
-      "puntosPorMillon": 12.78,
-      "racha": [
-        4,
-        2,
-        7,
-        1,
-        2
-      ],
-      "rachaTitular": 7,
-      "ultimoMinutos": 66,
-      "clausula": 2700000,
-      "clausulaTexto": "2,7 M",
-      "pagadoPorSuDueno": null,
-      "margen": 900000,
-      "margenPorcentaje": 50,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindadoHasta": "2026-10-04T22:34:47.000Z"
     },
     {
       "id": "32338",
@@ -9233,8 +9202,8 @@
       "pagadoPorSuDueno": 2610000,
       "margen": 2229999,
       "margenPorcentaje": 59,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-10-04T22:34:47.000Z"
     },
     {
       "id": "34805",
@@ -9261,8 +9230,8 @@
       "pagadoPorSuDueno": null,
       "margen": 640000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-10-04T22:34:47.000Z"
     },
     {
       "id": "41413",
@@ -9289,8 +9258,8 @@
       "pagadoPorSuDueno": 150000,
       "margen": 300000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-10-04T22:34:47.000Z"
     },
     {
       "id": "41560",
@@ -9317,8 +9286,8 @@
       "pagadoPorSuDueno": null,
       "margen": 300000,
       "margenPorcentaje": 200,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-10-04T22:34:47.000Z"
     },
     {
       "id": "43172",
@@ -9351,8 +9320,8 @@
       "pagadoPorSuDueno": 360020,
       "margen": 830000,
       "margenPorcentaje": 100,
-      "blindado": false,
-      "blindadoHasta": null
+      "blindado": true,
+      "blindadoHasta": "2026-10-04T22:34:47.000Z"
     },
     {
       "id": "1083",
@@ -11928,6 +11897,40 @@
       "blindadoHasta": "2026-10-04T06:19:29.000Z"
     },
     {
+      "id": "30510",
+      "nombre": "Abde Rebbach",
+      "slug": "abde-rebbach",
+      "posicion": "Delantero",
+      "posicionCodigo": 4,
+      "foto": "https://cdn.biwenger.com/i/p/30510.png",
+      "equipoReal": "Alavés",
+      "equipoIdReal": "91",
+      "presidente": "Las Víboras FC",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
+      "precio": 1800000,
+      "precioTexto": "1,8 M",
+      "puntosTotales": 23,
+      "partidosJugados": 7,
+      "media": 3.3,
+      "puntosPorMillon": 12.78,
+      "racha": [
+        4,
+        2,
+        7,
+        1,
+        2
+      ],
+      "rachaTitular": 7,
+      "ultimoMinutos": 66,
+      "clausula": 4050000,
+      "clausulaTexto": "4,0 M",
+      "pagadoPorSuDueno": 2700000,
+      "margen": 2250000,
+      "margenPorcentaje": 125,
+      "blindado": true,
+      "blindadoHasta": "2026-10-14T22:40:44.000Z"
+    },
+    {
       "id": "37719",
       "nombre": "Álvaro Núñez",
       "slug": "alvaro-nunez",
@@ -13032,8 +13035,8 @@
         "pagadoPorSuDueno": 152000,
         "margen": 460000,
         "margenPorcentaje": 200,
-        "blindado": false,
-        "blindadoHasta": null
+        "blindado": true,
+        "blindadoHasta": "2026-10-04T22:34:47.000Z"
       },
       {
         "id": "31475",
@@ -15017,24 +15020,6 @@
         "dificultad": 52
       },
       {
-        "nombre": "Abde Rebbach",
-        "foto": "https://cdn.biwenger.com/i/p/30510.png",
-        "posicion": "Delantero",
-        "equipoReal": "Alavés",
-        "racha": [
-          4,
-          2,
-          7,
-          1,
-          2
-        ],
-        "rachaTitular": 7,
-        "nota": 3.3,
-        "rival": "Atlético",
-        "esLocal": true,
-        "dificultad": 64
-      },
-      {
         "nombre": "Murillo",
         "foto": "https://cdn.biwenger.com/i/p/41413.png",
         "posicion": "Defensa",
@@ -16610,6 +16595,24 @@
         "dificultad": 39
       },
       {
+        "nombre": "Abde Rebbach",
+        "foto": "https://cdn.biwenger.com/i/p/30510.png",
+        "posicion": "Delantero",
+        "equipoReal": "Alavés",
+        "racha": [
+          4,
+          2,
+          7,
+          1,
+          2
+        ],
+        "rachaTitular": 7,
+        "nota": 3.3,
+        "rival": "Atlético",
+        "esLocal": true,
+        "dificultad": 64
+      },
+      {
         "nombre": "Paco Cortés",
         "foto": "https://cdn.biwenger.com/i/p/39736.png",
         "posicion": "Delantero",
@@ -17155,52 +17158,6 @@
       "nivel": "medio"
     },
     {
-      "nombre": "Jonny",
-      "foto": "https://cdn.biwenger.com/i/p/1599.png",
-      "posicion": "Defensa",
-      "equipoReal": "Alavés",
-      "presidente": "CD Tiro Buchón",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
-      "precioTexto": "2,1 M",
-      "clausulaTexto": "3,2 M",
-      "margenPorcentaje": 50,
-      "margenTexto": "1,1 M",
-      "media": 4.8,
-      "puntosPorMillon": 13.68,
-      "racha": [
-        4,
-        6,
-        2,
-        7,
-        4
-      ],
-      "rachaTitular": 1,
-      "nivel": "medio"
-    },
-    {
-      "nombre": "Abde Rebbach",
-      "foto": "https://cdn.biwenger.com/i/p/30510.png",
-      "posicion": "Delantero",
-      "equipoReal": "Alavés",
-      "presidente": "CD Tiro Buchón",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
-      "precioTexto": "1,8 M",
-      "clausulaTexto": "2,7 M",
-      "margenPorcentaje": 50,
-      "margenTexto": "0,9 M",
-      "media": 3.3,
-      "puntosPorMillon": 12.78,
-      "racha": [
-        4,
-        2,
-        7,
-        1,
-        2
-      ],
-      "rachaTitular": 7,
-      "nivel": "medio"
-    },
-    {
       "nombre": "Dotor",
       "foto": "https://cdn.biwenger.com/i/p/31167.png",
       "posicion": "Centrocampista",
@@ -17283,42 +17240,6 @@
       "clausulaTexto": "27,6 M",
       "media": 6,
       "blindadoHasta": "2026-09-30T05:14:05.000Z"
-    },
-    {
-      "nombre": "Bellingham",
-      "foto": "https://cdn.biwenger.com/i/p/30477.png",
-      "posicion": "Centrocampista",
-      "equipoReal": "Real Madrid",
-      "presidente": "CD Tiro Buchón",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
-      "precioTexto": "19,3 M",
-      "clausulaTexto": "33,2 M",
-      "media": 10.3,
-      "blindadoHasta": "2026-09-30T05:18:21.000Z"
-    },
-    {
-      "nombre": "Pepelu",
-      "foto": "https://cdn.biwenger.com/i/p/12221.png",
-      "posicion": "Centrocampista",
-      "equipoReal": "Valencia",
-      "presidente": "CD Tiro Buchón",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
-      "precioTexto": "2,4 M",
-      "clausulaTexto": "3,9 M",
-      "media": 3.4,
-      "blindadoHasta": "2026-10-01T05:02:56.000Z"
-    },
-    {
-      "nombre": "Danjuma",
-      "foto": "https://cdn.biwenger.com/i/p/24509.png",
-      "posicion": "Delantero",
-      "equipoReal": "Valencia",
-      "presidente": "CD Tiro Buchón",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
-      "precioTexto": "2,6 M",
-      "clausulaTexto": "3,9 M",
-      "media": 4.6,
-      "blindadoHasta": "2026-10-01T05:02:56.000Z"
     },
     {
       "nombre": "Nico Serrano",
