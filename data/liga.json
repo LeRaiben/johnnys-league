@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-29T16:27:55.824Z",
+  "actualizado": "2026-09-29T16:48:39.698Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -809,6 +809,19 @@
       "valorMercado": "2,6 M",
       "valorBruto": 2560000,
       "diferencia": 50000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Miguel Román",
+      "foto": "https://cdn.biwenger.com/i/p/3259.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Celta",
+      "vendedor": "LXUNITED",
+      "pide": "4,0 M",
+      "pideBruto": 4030000,
+      "valorMercado": "4,0 M",
+      "valorBruto": 4030000,
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -2254,7 +2267,7 @@
       "balance": "+9,0 M",
       "balanceBruto": 9000334,
       "sobreprecioMedio": 65,
-      "enVenta": 0,
+      "enVenta": 1,
       "fichajeEstrella": {
         "nombre": "Vinícius Jr",
         "precio": "23,0 M",
@@ -7356,8 +7369,8 @@
       "pagadoPorSuDueno": 4300000,
       "margen": 2530000,
       "margenPorcentaje": 72,
-      "blindado": true,
-      "blindadoHasta": "2026-09-29T16:29:33.000Z"
+      "blindado": false,
+      "blindadoHasta": null
     },
     {
       "id": "2044",
@@ -17060,18 +17073,6 @@
     }
   ],
   "blindajesPorExpirar": [
-    {
-      "nombre": "Giménez",
-      "foto": "https://cdn.biwenger.com/i/p/1676.png",
-      "posicion": "Defensa",
-      "equipoReal": "Deportivo",
-      "presidente": "Lottin Capital",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
-      "precioTexto": "3,5 M",
-      "clausulaTexto": "6,0 M",
-      "media": 4,
-      "blindadoHasta": "2026-09-29T16:29:33.000Z"
-    },
     {
       "nombre": "Natan",
       "foto": "https://cdn.biwenger.com/i/p/19614.png",
