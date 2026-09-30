@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-30T13:27:53.593Z",
+  "actualizado": "2026-09-30T13:47:55.609Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -653,6 +653,19 @@
       "valorMercado": "0,8 M",
       "valorBruto": 810000,
       "diferencia": 130000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Asencio",
+      "foto": "https://cdn.biwenger.com/i/p/35249.png",
+      "posicion": "Defensa",
+      "equipoReal": "Real Madrid",
+      "vendedor": "Madriguana FC",
+      "pide": "0,4 M",
+      "pideBruto": 360000,
+      "valorMercado": "0,4 M",
+      "valorBruto": 360000,
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -2038,7 +2051,7 @@
       "balance": "+1,9 M",
       "balanceBruto": 1860000,
       "sobreprecioMedio": -27,
-      "enVenta": 0,
+      "enVenta": 1,
       "fichajeEstrella": {
         "nombre": "Boyé",
         "precio": "4,2 M",
