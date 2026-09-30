@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-30T08:02:22.842Z",
+  "actualizado": "2026-09-30T08:28:08.278Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -835,6 +835,19 @@
       "valorMercado": "1,4 M",
       "valorBruto": 1420000,
       "diferencia": 20000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Pablo Durán",
+      "foto": "https://cdn.biwenger.com/i/p/29185.png",
+      "posicion": "Delantero",
+      "equipoReal": "Celta",
+      "vendedor": "Urdinho Pernambucano",
+      "pide": "2,0 M",
+      "pideBruto": 2000000,
+      "valorMercado": "1,3 M",
+      "valorBruto": 1340000,
+      "diferencia": 660000
     },
     {
       "tipo": "venta",
@@ -2202,7 +2215,7 @@
       "balance": "+46,1 M",
       "balanceBruto": 46060666,
       "sobreprecioMedio": null,
-      "enVenta": 0,
+      "enVenta": 1,
       "fichajeEstrella": null,
       "total": 12,
       "puestoEficiencia": 9,
