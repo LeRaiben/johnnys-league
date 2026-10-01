@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-01T13:22:13.332Z",
+  "actualizado": "2026-10-01T13:45:47.776Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -163,8 +163,8 @@
       "iniciales": "MF",
       "escudo": "https://cdn.biwenger.com/i/u/11412167.png?v=15",
       "puntos": 350,
-      "valor": "55,3 M",
-      "valorBruto": 55330000,
+      "valor": "55,0 M",
+      "valorBruto": 54990000,
       "esTuyo": false,
       "puntosJornada": 48,
       "jugadosJornada": 9,
@@ -614,19 +614,6 @@
       "valorMercado": "0,8 M",
       "valorBruto": 800000,
       "diferencia": 140000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Asencio",
-      "foto": "https://cdn.biwenger.com/i/p/35249.png",
-      "posicion": "Defensa",
-      "equipoReal": "Real Madrid",
-      "vendedor": "Madriguana FC",
-      "pide": "0,4 M",
-      "pideBruto": 360000,
-      "valorMercado": "0,3 M",
-      "valorBruto": 340000,
-      "diferencia": 20000
     },
     {
       "tipo": "venta",
@@ -2296,10 +2283,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/11412167.png?v=15",
       "iniciales": "MF",
       "puntos": 350,
-      "valor": "55,3 M",
-      "valorBruto": 55330000,
+      "valor": "55,0 M",
+      "valorBruto": 54990000,
       "esTuyo": false,
-      "puntosPorMillon": 6.33,
+      "puntosPorMillon": 6.36,
       "mediaJornada": 50,
       "clausulasHechas": 4,
       "clausulasSufridas": 3,
@@ -2311,7 +2298,7 @@
       "balance": "+1,9 M",
       "balanceBruto": 1860000,
       "sobreprecioMedio": -26,
-      "enVenta": 1,
+      "enVenta": 0,
       "fichajeEstrella": {
         "nombre": "Boyé",
         "precio": "4,2 M",
@@ -2323,7 +2310,7 @@
       "puestoGasto": 9,
       "puestoActividad": 9,
       "vsMediaPuntos": 6,
-      "vsMediaEficiencia": -13,
+      "vsMediaEficiencia": -12,
       "vsMediaValor": 17,
       "tendencia": {
         "puestos": 5,
@@ -5213,32 +5200,6 @@
             "esLocal": false,
             "rival": "Valencia",
             "dificultad": 13
-          }
-        ]
-      },
-      {
-        "nombre": "Asencio",
-        "posicion": "Defensa",
-        "foto": "https://cdn.biwenger.com/i/p/35249.png",
-        "equipoReal": "Real Madrid",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": true,
-            "rival": "Villarreal",
-            "dificultad": 42
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": true,
-            "rival": "Sevilla",
-            "dificultad": 53
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": false,
-            "rival": "Barcelona",
-            "dificultad": 88
           }
         ]
       },
@@ -10454,34 +10415,6 @@
       "margenPorcentaje": 34,
       "blindado": true,
       "blindadoHasta": "2026-10-15T05:03:01.000Z"
-    },
-    {
-      "id": "35249",
-      "nombre": "Asencio",
-      "slug": "raul-asencio",
-      "posicion": "Defensa",
-      "posicionCodigo": 2,
-      "foto": "https://cdn.biwenger.com/i/p/35249.png",
-      "equipoReal": "Real Madrid",
-      "equipoIdReal": "15",
-      "presidente": "Madriguana FC",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/11412167.png?v=15",
-      "precio": 340000,
-      "precioTexto": "0,3 M",
-      "puntosTotales": 0,
-      "partidosJugados": 0,
-      "media": 0,
-      "puntosPorMillon": 0,
-      "racha": [],
-      "rachaTitular": 0,
-      "ultimoMinutos": null,
-      "clausula": 1500000,
-      "clausulaTexto": "1,5 M",
-      "pagadoPorSuDueno": 500000,
-      "margen": 1160000,
-      "margenPorcentaje": 341,
-      "blindado": true,
-      "blindadoHasta": "2026-10-11T05:01:10.000Z"
     },
     {
       "id": "35763",
@@ -15871,18 +15804,6 @@
         "rival": "Barcelona",
         "esLocal": false,
         "dificultad": 94
-      },
-      {
-        "nombre": "Asencio",
-        "foto": "https://cdn.biwenger.com/i/p/35249.png",
-        "posicion": "Defensa",
-        "equipoReal": "Real Madrid",
-        "racha": [],
-        "rachaTitular": 0,
-        "nota": 2.9,
-        "rival": "Villarreal",
-        "esLocal": true,
-        "dificultad": 42
       },
       {
         "nombre": "Víctor García",
