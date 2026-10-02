@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-02T06:16:26.328Z",
+  "actualizado": "2026-10-02T06:42:11.798Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -8322,6 +8322,34 @@
       "blindadoHasta": null
     },
     {
+      "id": "33970",
+      "nombre": "Rosier",
+      "slug": "rosier",
+      "posicion": "Defensa",
+      "posicionCodigo": 2,
+      "foto": "https://cdn.biwenger.com/i/p/33970.png",
+      "equipoReal": "Osasuna",
+      "equipoIdReal": "93",
+      "presidente": "FC FORUSIA",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
+      "precio": 1030000,
+      "precioTexto": "1,0 M",
+      "puntosTotales": 0,
+      "partidosJugados": 0,
+      "media": 0,
+      "puntosPorMillon": 0,
+      "racha": [],
+      "rachaTitular": 0,
+      "ultimoMinutos": null,
+      "clausula": 2250000,
+      "clausulaTexto": "2,3 M",
+      "pagadoPorSuDueno": 1500000,
+      "margen": 1220000,
+      "margenPorcentaje": 118,
+      "blindado": true,
+      "blindadoHasta": "2026-10-14T05:03:37.000Z"
+    },
+    {
       "id": "35308",
       "nombre": "Córdoba",
       "slug": "iker-cordoba",
@@ -9036,38 +9064,6 @@
       "margenPorcentaje": 131,
       "blindado": true,
       "blindadoHasta": "2026-10-05T01:18:00.000Z"
-    },
-    {
-      "id": "43263",
-      "nombre": "Jonathan David",
-      "slug": "jonathan-david",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/43263.png",
-      "equipoReal": "Atlético",
-      "equipoIdReal": "2",
-      "presidente": "Las Víboras FC",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
-      "precio": 10000000,
-      "precioTexto": "10,0 M",
-      "puntosTotales": 34,
-      "partidosJugados": 3,
-      "media": 11.3,
-      "puntosPorMillon": 3.4,
-      "racha": [
-        9,
-        13,
-        12
-      ],
-      "rachaTitular": 2,
-      "ultimoMinutos": 62,
-      "clausula": 13872000,
-      "clausulaTexto": "13,9 M",
-      "pagadoPorSuDueno": 11560000,
-      "margen": 3872000,
-      "margenPorcentaje": 39,
-      "blindado": true,
-      "blindadoHasta": "2026-10-15T05:03:01.000Z"
     },
     {
       "id": "17687",
@@ -9941,39 +9937,6 @@
         "mediaReciente": 12.5
       },
       {
-        "id": "43263",
-        "nombre": "Jonathan David",
-        "slug": "jonathan-david",
-        "posicion": "Delantero",
-        "posicionCodigo": 4,
-        "foto": "https://cdn.biwenger.com/i/p/43263.png",
-        "equipoReal": "Atlético",
-        "equipoIdReal": "2",
-        "presidente": "Las Víboras FC",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
-        "precio": 10000000,
-        "precioTexto": "10,0 M",
-        "puntosTotales": 34,
-        "partidosJugados": 3,
-        "media": 11.3,
-        "puntosPorMillon": 3.4,
-        "racha": [
-          9,
-          13,
-          12
-        ],
-        "rachaTitular": 2,
-        "ultimoMinutos": 62,
-        "clausula": 13872000,
-        "clausulaTexto": "13,9 M",
-        "pagadoPorSuDueno": 11560000,
-        "margen": 3872000,
-        "margenPorcentaje": 39,
-        "blindado": true,
-        "blindadoHasta": "2026-10-15T05:03:01.000Z",
-        "mediaReciente": 11
-      },
-      {
         "id": "21084",
         "nombre": "Ilaix Moriba",
         "slug": "ilaix-moriba",
@@ -10112,6 +10075,40 @@
         "blindado": false,
         "blindadoHasta": null,
         "mediaReciente": 10
+      },
+      {
+        "id": "25127",
+        "nombre": "Ez Abde",
+        "slug": "abdessamad-ezzalzouli",
+        "posicion": "Delantero",
+        "posicionCodigo": 4,
+        "foto": "https://cdn.biwenger.com/i/p/25127.png",
+        "equipoReal": "Betis",
+        "equipoIdReal": "87",
+        "presidente": "Lottin Capital",
+        "escudoPresidente": "https://cdn.biwenger.com/i/u/10270649.png?v=1",
+        "precio": 9670000,
+        "precioTexto": "9,7 M",
+        "puntosTotales": 27,
+        "partidosJugados": 4,
+        "media": 6.8,
+        "puntosPorMillon": 2.79,
+        "racha": [
+          6,
+          13,
+          5,
+          3
+        ],
+        "rachaTitular": 3,
+        "ultimoMinutos": 90,
+        "clausula": 16816800,
+        "clausulaTexto": "16,8 M",
+        "pagadoPorSuDueno": 14014000,
+        "margen": 7146800,
+        "margenPorcentaje": 74,
+        "blindado": true,
+        "blindadoHasta": "2026-10-10T22:02:50.000Z",
+        "mediaReciente": 9.5
       }
     ],
     "frios": [
@@ -12817,25 +12814,21 @@
         "rival": "",
         "esLocal": null,
         "dificultad": null
-      }
-    ],
-    "Las Víboras FC": [
+      },
       {
-        "nombre": "Jonathan David",
-        "foto": "https://cdn.biwenger.com/i/p/43263.png",
-        "posicion": "Delantero",
-        "equipoReal": "Atlético",
-        "racha": [
-          9,
-          13,
-          12
-        ],
-        "rachaTitular": 2,
-        "nota": 7.5,
+        "nombre": "Rosier",
+        "foto": "https://cdn.biwenger.com/i/p/33970.png",
+        "posicion": "Defensa",
+        "equipoReal": "Osasuna",
+        "racha": [],
+        "rachaTitular": 0,
+        "nota": 2.5,
         "rival": "",
         "esLocal": null,
         "dificultad": null
-      },
+      }
+    ],
+    "Las Víboras FC": [
       {
         "nombre": "Brugué",
         "foto": "https://cdn.biwenger.com/i/p/15396.png",
