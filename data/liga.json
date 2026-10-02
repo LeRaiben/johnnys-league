@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-02T21:33:27.358Z",
+  "actualizado": "2026-10-02T21:51:18.131Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -526,6 +526,19 @@
     },
     {
       "tipo": "venta",
+      "nombre": "Lemar",
+      "foto": "https://cdn.biwenger.com/i/p/11196.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Elche",
+      "vendedor": "CD Tiro Buchón",
+      "pide": "3,5 M",
+      "pideBruto": 3490000,
+      "valorMercado": "3,5 M",
+      "valorBruto": 3490000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
       "nombre": "Pepelu",
       "foto": "https://cdn.biwenger.com/i/p/12221.png",
       "posicion": "Centrocampista",
@@ -562,6 +575,19 @@
       "valorMercado": "2,7 M",
       "valorBruto": 2680000,
       "diferencia": -320000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Hugo Álvarez",
+      "foto": "https://cdn.biwenger.com/i/p/32135.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Celta",
+      "vendedor": "CD Tiro Buchón",
+      "pide": "1,2 M",
+      "pideBruto": 1240000,
+      "valorMercado": "1,2 M",
+      "valorBruto": 1240000,
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -2021,7 +2047,7 @@
       "balance": "+4,6 M",
       "balanceBruto": 4598300,
       "sobreprecioMedio": 43,
-      "enVenta": 7,
+      "enVenta": 9,
       "fichajeEstrella": {
         "nombre": "Bellingham",
         "precio": "27,7 M",
