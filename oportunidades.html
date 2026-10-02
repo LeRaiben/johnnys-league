@@ -102,8 +102,78 @@
     .riesgo .margen small { display:inline; margin-left:6px; }
   }
 </style>
+<script>
+  /* Candado de Oportunidades: si este dispositivo no ha puesto la contraseña, la página arranca bloqueada */
+  try { if (localStorage.getItem('jl-oportunidades') !== 'ok') document.documentElement.classList.add('candado'); }
+  catch (e) { document.documentElement.classList.add('candado'); }
+</script>
+<style>
+  html.candado main, html.candado footer { display:none; }
+  html.candado body { overflow:hidden; }
+  .puerta { display:none; }
+  html.candado .puerta { display:flex; position:fixed; inset:0; z-index:100; align-items:center; justify-content:center;
+    padding:20px; background:rgba(1,10,32,0.88); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); }
+  .puerta-caja { width:100%; max-width:380px; background:var(--navy-soft); border-top:3px solid var(--gold);
+    padding:28px 26px 24px; text-align:center; box-shadow:0 18px 50px rgba(0,0,0,0.5); }
+  .puerta-caja img { width:58px; height:58px; border-radius:50%; box-shadow:0 0 0 2px var(--gold-dim); }
+  .puerta-caja h2 { font-family:'Anton',sans-serif; font-weight:400; font-size:1.7rem; letter-spacing:0.02em;
+    margin:14px 0 6px; text-transform:uppercase; }
+  .puerta-caja p { font-size:0.92rem; color:rgba(247,247,245,0.75); margin:0 0 18px; }
+  .puerta-caja input { width:100%; box-sizing:border-box; background:var(--navy); color:var(--white);
+    border:1px solid var(--navy-line); border-radius:4px; padding:12px 14px; font-size:1.05rem;
+    font-family:'Barlow Condensed',sans-serif; letter-spacing:0.05em; text-align:center; }
+  .puerta-caja input:focus { outline:none; border-color:var(--gold); }
+  .puerta-caja button { width:100%; margin-top:12px; background:var(--gold); color:var(--navy-deep); border:0;
+    border-radius:4px; padding:12px; font-family:'Barlow Condensed',sans-serif; font-weight:600;
+    font-size:1.05rem; letter-spacing:0.06em; text-transform:uppercase; cursor:pointer; }
+  .puerta-caja .error { color:#E8746A; font-family:'Barlow Condensed',sans-serif; font-size:0.85rem;
+    letter-spacing:0.03em; min-height:1.2em; margin-top:10px; }
+  .puerta-caja.mal { animation:temblor 0.35s; }
+  @keyframes temblor { 20%,60% { transform:translateX(-8px); } 40%,80% { transform:translateX(8px); } }
+  .puerta-caja .volver { display:inline-block; margin-top:14px; color:var(--grey); font-size:0.85rem; }
+</style>
 </head>
 <body>
+
+<div class="puerta" id="puerta" role="dialog" aria-modal="true" aria-labelledby="puertaTitulo">
+  <form class="puerta-caja" id="puertaForm" autocomplete="off">
+    <img src="assets/escudo.png" alt="">
+    <h2 id="puertaTitulo">Zona privada</h2>
+    <p>Oportunidades es solo para quien tenga la contraseña.</p>
+    <input type="password" id="puertaClave" placeholder="Contraseña" aria-label="Contraseña" autofocus>
+    <button type="submit">Entrar</button>
+    <div class="error" id="puertaError" aria-live="polite"></div>
+    <a class="volver" href="index.html">← Volver a la portada</a>
+  </form>
+</div>
+
+<script>
+(function () {
+  var HUELLA = '03b4aa4e8160c25ebe029f89a10ffcbefc6db8286c50f7d79e32f81e9380ca3d';
+  var form = document.getElementById('puertaForm');
+  var input = document.getElementById('puertaClave');
+  var error = document.getElementById('puertaError');
+  function huella(texto) {
+    return crypto.subtle.digest('SHA-256', new TextEncoder().encode(texto)).then(function (buf) {
+      return Array.from(new Uint8Array(buf)).map(function (b) { return b.toString(16).padStart(2, '0'); }).join('');
+    });
+  }
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    huella(input.value.trim()).then(function (h) {
+      if (h === HUELLA) {
+        try { localStorage.setItem('jl-oportunidades', 'ok'); } catch (e) {}
+        document.documentElement.classList.remove('candado');
+      } else {
+        error.textContent = 'Contraseña incorrecta';
+        input.value = '';
+        form.classList.remove('mal'); void form.offsetWidth; form.classList.add('mal');
+        input.focus();
+      }
+    });
+  });
+})();
+</script>
 
 <div class="lomo" aria-hidden="true"></div>
 
