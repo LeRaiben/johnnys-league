@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-03T11:08:49.196Z",
+  "actualizado": "2026-10-03T14:35:43.534Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -420,6 +420,32 @@
     }
   ],
   "mercadoPresidentes": [
+    {
+      "tipo": "venta",
+      "nombre": "Ceballos",
+      "foto": "https://cdn.biwenger.com/i/p/2044.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Betis",
+      "vendedor": "Lottin Capital",
+      "pide": "3,9 M",
+      "pideBruto": 3940000,
+      "valorMercado": "3,9 M",
+      "valorBruto": 3940000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Rioja",
+      "foto": "https://cdn.biwenger.com/i/p/17442.png",
+      "posicion": "Delantero",
+      "equipoReal": "Valencia",
+      "vendedor": "Lottin Capital",
+      "pide": "1,9 M",
+      "pideBruto": 1880000,
+      "valorMercado": "1,9 M",
+      "valorBruto": 1880000,
+      "diferencia": 0
+    },
     {
       "tipo": "venta",
       "nombre": "Mandi",
@@ -2451,7 +2477,7 @@
       "balance": "+11,0 M",
       "balanceBruto": 10962000,
       "sobreprecioMedio": 36,
-      "enVenta": 0,
+      "enVenta": 2,
       "fichajeEstrella": {
         "nombre": "Pépé",
         "precio": "14,9 M",
