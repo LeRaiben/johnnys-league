@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-05T11:01:22.649Z",
+  "actualizado": "2026-10-05T11:26:27.371Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -3553,32 +3553,6 @@
     ],
     "Manchester Pity": [
       {
-        "nombre": "Ilaix Moriba",
-        "posicion": "Centrocampista",
-        "foto": "https://cdn.biwenger.com/i/p/21084.png",
-        "equipoReal": "Celta",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": false,
-            "rival": "Elche",
-            "dificultad": 25
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": true,
-            "rival": "Alavés",
-            "dificultad": 55
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": true,
-            "rival": "Betis",
-            "dificultad": 62
-          }
-        ]
-      },
-      {
         "nombre": "Berenguer",
         "posicion": "Delantero",
         "foto": "https://cdn.biwenger.com/i/p/897.png",
@@ -3809,6 +3783,32 @@
             "esLocal": true,
             "rival": "Levante",
             "dificultad": 24
+          }
+        ]
+      },
+      {
+        "nombre": "Ilaix Moriba",
+        "posicion": "Centrocampista",
+        "foto": "https://cdn.biwenger.com/i/p/21084.png",
+        "equipoReal": "Celta",
+        "jornadas": [
+          {
+            "jornada": "Round 8",
+            "esLocal": false,
+            "rival": "Elche",
+            "dificultad": 25
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Alavés",
+            "dificultad": 55
+          },
+          {
+            "jornada": "Round 10",
+            "esLocal": true,
+            "rival": "Betis",
+            "dificultad": 62
           }
         ]
       },
@@ -8549,40 +8549,6 @@
       "blindadoHasta": "2026-10-18T05:04:52.000Z"
     },
     {
-      "id": "21084",
-      "nombre": "Ilaix Moriba",
-      "slug": "ilaix-moriba",
-      "posicion": "Centrocampista",
-      "posicionCodigo": 3,
-      "foto": "https://cdn.biwenger.com/i/p/21084.png",
-      "equipoReal": "Celta",
-      "equipoIdReal": "5",
-      "presidente": "Manchester Pity",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10271251.png",
-      "precio": 3290000,
-      "precioTexto": "3,3 M",
-      "puntosTotales": 35,
-      "partidosJugados": 7,
-      "media": 5,
-      "puntosPorMillon": 10.64,
-      "racha": [
-        16,
-        5,
-        2,
-        5,
-        2
-      ],
-      "rachaTitular": 4,
-      "ultimoMinutos": 90,
-      "clausula": 6836200,
-      "clausulaTexto": "6,8 M",
-      "pagadoPorSuDueno": 4883000,
-      "margen": 3546200,
-      "margenPorcentaje": 108,
-      "blindado": true,
-      "blindadoHasta": "2026-10-12T22:34:47.000Z"
-    },
-    {
       "id": "897",
       "nombre": "Berenguer",
       "slug": "alex-berenguer",
@@ -8875,6 +8841,40 @@
       "margenPorcentaje": 67,
       "blindado": false,
       "blindadoHasta": null
+    },
+    {
+      "id": "21084",
+      "nombre": "Ilaix Moriba",
+      "slug": "ilaix-moriba",
+      "posicion": "Centrocampista",
+      "posicionCodigo": 3,
+      "foto": "https://cdn.biwenger.com/i/p/21084.png",
+      "equipoReal": "Celta",
+      "equipoIdReal": "5",
+      "presidente": "Manchester Pity",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/10271251.png",
+      "precio": 3290000,
+      "precioTexto": "3,3 M",
+      "puntosTotales": 35,
+      "partidosJugados": 7,
+      "media": 5,
+      "puntosPorMillon": 10.64,
+      "racha": [
+        16,
+        5,
+        2,
+        5,
+        2
+      ],
+      "rachaTitular": 4,
+      "ultimoMinutos": 90,
+      "clausula": 6836200,
+      "clausulaTexto": "6,8 M",
+      "pagadoPorSuDueno": 4883000,
+      "margen": 3546200,
+      "margenPorcentaje": 108,
+      "blindado": true,
+      "blindadoHasta": "2026-10-12T22:34:47.000Z"
     },
     {
       "id": "30495",
