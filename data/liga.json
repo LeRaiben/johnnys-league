@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-05T06:20:48.553Z",
+  "actualizado": "2026-10-05T06:54:40.026Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -2450,7 +2450,7 @@
   "onceIdeal": {
     "jornada": "Jornada 7",
     "formacion": "3-4-3",
-    "total": 142,
+    "total": 141,
     "titulares": [
       {
         "nombre": "Courtois",
@@ -2604,18 +2604,17 @@
         "escudoPresidente": ""
       },
       {
-        "nombre": "Yamal",
+        "nombre": "Akhomach",
         "posicion": "Delantero",
-        "puntos": 13,
+        "puntos": 12,
         "racha": [
-          13,
-          18,
-          17,
-          18,
-          20
+          12,
+          5,
+          0,
+          1
         ],
-        "equipoReal": "Barcelona",
-        "foto": "https://cdn.biwenger.com/i/p/26271.png",
+        "equipoReal": "Villarreal",
+        "foto": "https://cdn.biwenger.com/i/p/25159.png",
         "presidente": "",
         "escudoPresidente": ""
       }
@@ -8469,6 +8468,40 @@
       "blindadoHasta": null
     },
     {
+      "id": "4245",
+      "nombre": "Pablo Martínez",
+      "slug": "pablo-martinez",
+      "posicion": "Centrocampista",
+      "posicionCodigo": 3,
+      "foto": "https://cdn.biwenger.com/i/p/4245.png",
+      "equipoReal": "Málaga",
+      "equipoIdReal": "65",
+      "presidente": "FC FORUSIA",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
+      "precio": 950000,
+      "precioTexto": "0,9 M",
+      "puntosTotales": 15,
+      "partidosJugados": 5,
+      "media": 3,
+      "puntosPorMillon": 15.79,
+      "racha": [
+        3,
+        2,
+        5,
+        3,
+        2
+      ],
+      "rachaTitular": 0,
+      "ultimoMinutos": 23,
+      "clausula": 1928000,
+      "clausulaTexto": "1,9 M",
+      "pagadoPorSuDueno": 964000,
+      "margen": 978000,
+      "margenPorcentaje": 103,
+      "blindado": true,
+      "blindadoHasta": "2026-10-20T05:04:20.000Z"
+    },
+    {
       "id": "12424",
       "nombre": "Pacheco",
       "slug": "jon-pacheco",
@@ -8749,36 +8782,6 @@
       "blindadoHasta": "2026-10-19T05:04:58.000Z"
     },
     {
-      "id": "42747",
-      "nombre": "Abdelkarim",
-      "slug": "abdelkarim",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/42747.png",
-      "equipoReal": "Barcelona",
-      "equipoIdReal": "3",
-      "presidente": "FC FORUSIA",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
-      "precio": 590000,
-      "precioTexto": "0,6 M",
-      "puntosTotales": 3,
-      "partidosJugados": 1,
-      "media": 3,
-      "puntosPorMillon": 5.08,
-      "racha": [
-        3
-      ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 4,
-      "clausula": 1260120,
-      "clausulaTexto": "1,3 M",
-      "pagadoPorSuDueno": 630060,
-      "margen": 670120,
-      "margenPorcentaje": 114,
-      "blindado": true,
-      "blindadoHasta": "2026-10-15T05:03:01.000Z"
-    },
-    {
       "id": "30510",
       "nombre": "Abde Rebbach",
       "slug": "abde-rebbach",
@@ -8879,40 +8882,6 @@
       "margenPorcentaje": 78,
       "blindado": false,
       "blindadoHasta": null
-    },
-    {
-      "id": "26271",
-      "nombre": "Yamal",
-      "slug": "lamine-yamal",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/26271.png",
-      "equipoReal": "Barcelona",
-      "equipoIdReal": "3",
-      "presidente": "Las Víboras FC",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
-      "precio": 24780000,
-      "precioTexto": "24,8 M",
-      "puntosTotales": 97,
-      "partidosJugados": 7,
-      "media": 13.9,
-      "puntosPorMillon": 3.91,
-      "racha": [
-        13,
-        18,
-        17,
-        18,
-        20
-      ],
-      "rachaTitular": 7,
-      "ultimoMinutos": 90,
-      "clausula": 57883200,
-      "clausulaTexto": "57,9 M",
-      "pagadoPorSuDueno": 48236000,
-      "margen": 33103200,
-      "margenPorcentaje": 134,
-      "blindado": true,
-      "blindadoHasta": "2026-10-19T05:04:57.000Z"
     },
     {
       "id": "34483",
@@ -9879,41 +9848,6 @@
   "enRacha": {
     "calientes": [
       {
-        "id": "26271",
-        "nombre": "Yamal",
-        "slug": "lamine-yamal",
-        "posicion": "Delantero",
-        "posicionCodigo": 4,
-        "foto": "https://cdn.biwenger.com/i/p/26271.png",
-        "equipoReal": "Barcelona",
-        "equipoIdReal": "3",
-        "presidente": "Las Víboras FC",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
-        "precio": 24780000,
-        "precioTexto": "24,8 M",
-        "puntosTotales": 97,
-        "partidosJugados": 7,
-        "media": 13.9,
-        "puntosPorMillon": 3.91,
-        "racha": [
-          13,
-          18,
-          17,
-          18,
-          20
-        ],
-        "rachaTitular": 7,
-        "ultimoMinutos": 90,
-        "clausula": 57883200,
-        "clausulaTexto": "57,9 M",
-        "pagadoPorSuDueno": 48236000,
-        "margen": 33103200,
-        "margenPorcentaje": 134,
-        "blindado": true,
-        "blindadoHasta": "2026-10-19T05:04:57.000Z",
-        "mediaReciente": 15.5
-      },
-      {
         "id": "30495",
         "nombre": "Moleiro",
         "slug": "alberto-moleiro",
@@ -10156,6 +10090,41 @@
         "blindado": true,
         "blindadoHasta": "2026-10-08T12:37:29.000Z",
         "mediaReciente": 10.5
+      },
+      {
+        "id": "19547",
+        "nombre": "Baena",
+        "slug": "alex-baena",
+        "posicion": "Centrocampista",
+        "posicionCodigo": 3,
+        "foto": "https://cdn.biwenger.com/i/p/19547.png",
+        "equipoReal": "Atlético",
+        "equipoIdReal": "2",
+        "presidente": "Gorila FC",
+        "escudoPresidente": "https://cdn.biwenger.com/i/u/11411835.png",
+        "precio": 11530000,
+        "precioTexto": "11,5 M",
+        "puntosTotales": 59,
+        "partidosJugados": 7,
+        "media": 8.4,
+        "puntosPorMillon": 5.12,
+        "racha": [
+          4,
+          16,
+          2,
+          3,
+          21
+        ],
+        "rachaTitular": 2,
+        "ultimoMinutos": 67,
+        "clausula": 15069600,
+        "clausulaTexto": "15,1 M",
+        "pagadoPorSuDueno": 12558000,
+        "margen": 3539600,
+        "margenPorcentaje": 31,
+        "blindado": false,
+        "blindadoHasta": null,
+        "mediaReciente": 10
       }
     ],
     "frios": [
@@ -12838,15 +12807,19 @@
         "dificultad": null
       },
       {
-        "nombre": "Abdelkarim",
-        "foto": "https://cdn.biwenger.com/i/p/42747.png",
-        "posicion": "Delantero",
-        "equipoReal": "Barcelona",
+        "nombre": "Pablo Martínez",
+        "foto": "https://cdn.biwenger.com/i/p/4245.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Málaga",
         "racha": [
-          3
+          3,
+          2,
+          5,
+          3,
+          2
         ],
         "rachaTitular": 0,
-        "nota": 4,
+        "nota": 3.8,
         "rival": "",
         "esLocal": null,
         "dificultad": null
@@ -12919,24 +12892,6 @@
       }
     ],
     "Las Víboras FC": [
-      {
-        "nombre": "Yamal",
-        "foto": "https://cdn.biwenger.com/i/p/26271.png",
-        "posicion": "Delantero",
-        "equipoReal": "Barcelona",
-        "racha": [
-          13,
-          18,
-          17,
-          18,
-          20
-        ],
-        "rachaTitular": 7,
-        "nota": 7.5,
-        "rival": "",
-        "esLocal": null,
-        "dificultad": null
-      },
       {
         "nombre": "Expósito",
         "foto": "https://cdn.biwenger.com/i/p/19862.png",
