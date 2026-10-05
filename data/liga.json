@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-05T11:48:10.778Z",
+  "actualizado": "2026-10-05T12:01:54.571Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -243,8 +243,8 @@
       "iniciales": "FF",
       "escudo": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
       "puntos": 310,
-      "valor": "54,3 M",
-      "valorBruto": 54330000,
+      "valor": "54,1 M",
+      "valorBruto": 54140000,
       "esTuyo": false,
       "puntosJornada": 30,
       "jugadosJornada": 8,
@@ -708,19 +708,6 @@
     },
     {
       "tipo": "venta",
-      "nombre": "Pacheco",
-      "foto": "https://cdn.biwenger.com/i/p/12424.png",
-      "posicion": "Defensa",
-      "equipoReal": "Real Sociedad",
-      "vendedor": "FC FORUSIA",
-      "pide": "0,2 M",
-      "pideBruto": 190000,
-      "valorMercado": "0,2 M",
-      "valorBruto": 190000,
-      "diferencia": 0
-    },
-    {
-      "tipo": "venta",
       "nombre": "Córdoba",
       "foto": "https://cdn.biwenger.com/i/p/35308.png",
       "posicion": "Defensa",
@@ -730,6 +717,19 @@
       "pideBruto": 150000,
       "valorMercado": "0,1 M",
       "valorBruto": 150000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Odysseas",
+      "foto": "https://cdn.biwenger.com/i/p/38405.png",
+      "posicion": "Portero",
+      "equipoReal": "Sevilla",
+      "vendedor": "FC FORUSIA",
+      "pide": "3,2 M",
+      "pideBruto": 3200000,
+      "valorMercado": "3,2 M",
+      "valorBruto": 3200000,
       "diferencia": 0
     },
     {
@@ -1969,7 +1969,7 @@
       "puestoGasto": 5,
       "puestoActividad": 6,
       "vsMediaPuntos": 26,
-      "vsMediaEficiencia": 73,
+      "vsMediaEficiencia": 72,
       "vsMediaValor": -29,
       "tendencia": {
         "puestos": 0,
@@ -2006,7 +2006,7 @@
       },
       "total": 12,
       "puestoEficiencia": 3,
-      "puestoValor": 4,
+      "puestoValor": 3,
       "puestoGasto": 7,
       "puestoActividad": 7,
       "vsMediaPuntos": 24,
@@ -2215,7 +2215,7 @@
       "puestoGasto": 3,
       "puestoActividad": 1,
       "vsMediaPuntos": -1,
-      "vsMediaEficiencia": 4,
+      "vsMediaEficiencia": 3,
       "vsMediaValor": -7,
       "tendencia": {
         "puestos": 3,
@@ -2253,7 +2253,7 @@
       "puestoActividad": 10,
       "vsMediaPuntos": -6,
       "vsMediaEficiencia": -24,
-      "vsMediaValor": 20,
+      "vsMediaValor": 21,
       "tendencia": {
         "puestos": -2,
         "puntos": 125,
@@ -2266,10 +2266,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
       "iniciales": "FF",
       "puntos": 310,
-      "valor": "54,3 M",
-      "valorBruto": 54330000,
+      "valor": "54,1 M",
+      "valorBruto": 54140000,
       "esTuyo": false,
-      "puntosPorMillon": 5.71,
+      "puntosPorMillon": 5.73,
       "mediaJornada": 44.3,
       "clausulasHechas": 15,
       "clausulasSufridas": 3,
@@ -2289,7 +2289,7 @@
       },
       "total": 12,
       "puestoEficiencia": 9,
-      "puestoValor": 3,
+      "puestoValor": 4,
       "puestoGasto": 1,
       "puestoActividad": 2,
       "vsMediaPuntos": -6,
@@ -6215,32 +6215,6 @@
             "esLocal": false,
             "rival": "Alavés",
             "dificultad": 65
-          }
-        ]
-      },
-      {
-        "nombre": "Pacheco",
-        "posicion": "Defensa",
-        "foto": "https://cdn.biwenger.com/i/p/12424.png",
-        "equipoReal": "Real Sociedad",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": true,
-            "rival": "Deportivo",
-            "dificultad": 54
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": false,
-            "rival": "Málaga",
-            "dificultad": 11
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": true,
-            "rival": "Levante",
-            "dificultad": 24
           }
         ]
       },
@@ -11923,36 +11897,6 @@
       "blindadoHasta": "2026-10-20T05:04:20.000Z"
     },
     {
-      "id": "12424",
-      "nombre": "Pacheco",
-      "slug": "jon-pacheco",
-      "posicion": "Defensa",
-      "posicionCodigo": 2,
-      "foto": "https://cdn.biwenger.com/i/p/12424.png",
-      "equipoReal": "Real Sociedad",
-      "equipoIdReal": "13",
-      "presidente": "FC FORUSIA",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
-      "precio": 190000,
-      "precioTexto": "0,2 M",
-      "puntosTotales": 3,
-      "partidosJugados": 1,
-      "media": 3,
-      "puntosPorMillon": 15.79,
-      "racha": [
-        3
-      ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 20,
-      "clausula": 600000,
-      "clausulaTexto": "0,6 M",
-      "pagadoPorSuDueno": 200000,
-      "margen": 410000,
-      "margenPorcentaje": 216,
-      "blindado": false,
-      "blindadoHasta": null
-    },
-    {
       "id": "15828",
       "nombre": "Cristian Romero",
       "slug": "cristian-romero",
@@ -16865,20 +16809,6 @@
         "rival": "Málaga",
         "esLocal": false,
         "dificultad": 15
-      },
-      {
-        "nombre": "Pacheco",
-        "foto": "https://cdn.biwenger.com/i/p/12424.png",
-        "posicion": "Defensa",
-        "equipoReal": "Real Sociedad",
-        "racha": [
-          3
-        ],
-        "rachaTitular": 0,
-        "nota": 3.8,
-        "rival": "Deportivo",
-        "esLocal": true,
-        "dificultad": 54
       },
       {
         "nombre": "Oluwaseyi",
