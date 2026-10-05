@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-04T23:50:20.552Z",
+  "actualizado": "2026-10-05T00:02:36.828Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -291,8 +291,8 @@
       "iniciales": "CA",
       "escudo": "https://cdn.biwenger.com/i/u/10271084.png?v=66",
       "puntos": 231,
-      "valor": "46,8 M",
-      "valorBruto": 46820000,
+      "valor": "44,4 M",
+      "valorBruto": 44400000,
       "esTuyo": false,
       "puntosJornada": 45,
       "jugadosJornada": 9,
@@ -448,16 +448,16 @@
     },
     {
       "tipo": "venta",
-      "nombre": "Mandi",
-      "foto": "https://cdn.biwenger.com/i/p/2480.png",
-      "posicion": "Defensa",
-      "equipoReal": "Levante",
+      "nombre": "Gerard Moreno",
+      "foto": "https://cdn.biwenger.com/i/p/1927.png",
+      "posicion": "Delantero",
+      "equipoReal": "Villarreal",
       "vendedor": "C.d.F Atlético de Cohiba",
-      "pide": "2,5 M",
-      "pideBruto": 2470000,
-      "valorMercado": "2,4 M",
-      "valorBruto": 2420000,
-      "diferencia": 50000
+      "pide": "5,7 M",
+      "pideBruto": 5660000,
+      "valorMercado": "5,7 M",
+      "valorBruto": 5660000,
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -2057,8 +2057,8 @@
       "puestoGasto": 5,
       "puestoActividad": 6,
       "vsMediaPuntos": 26,
-      "vsMediaEficiencia": 72,
-      "vsMediaValor": -29,
+      "vsMediaEficiencia": 71,
+      "vsMediaValor": -28,
       "tendencia": {
         "puestos": 0,
         "puntos": 178,
@@ -2098,8 +2098,8 @@
       "puestoGasto": 7,
       "puestoActividad": 7,
       "vsMediaPuntos": 24,
-      "vsMediaEficiencia": 9,
-      "vsMediaValor": 11,
+      "vsMediaEficiencia": 8,
+      "vsMediaValor": 12,
       "tendencia": {
         "puestos": 1,
         "puntos": 198,
@@ -2139,8 +2139,8 @@
       "puestoGasto": 2,
       "puestoActividad": 8,
       "vsMediaPuntos": 12,
-      "vsMediaEficiencia": -10,
-      "vsMediaValor": 21,
+      "vsMediaEficiencia": -11,
+      "vsMediaValor": 22,
       "tendencia": {
         "puestos": 1,
         "puntos": 168,
@@ -2217,7 +2217,7 @@
       },
       "total": 12,
       "puestoEficiencia": 4,
-      "puestoValor": 9,
+      "puestoValor": 8,
       "puestoGasto": 10,
       "puestoActividad": 11,
       "vsMediaPuntos": 2,
@@ -2299,12 +2299,12 @@
       },
       "total": 12,
       "puestoEficiencia": 6,
-      "puestoValor": 8,
+      "puestoValor": 7,
       "puestoGasto": 3,
       "puestoActividad": 1,
       "vsMediaPuntos": -1,
-      "vsMediaEficiencia": 4,
-      "vsMediaValor": -7,
+      "vsMediaEficiencia": 3,
+      "vsMediaValor": -6,
       "tendencia": {
         "puestos": 3,
         "puntos": 175,
@@ -2381,7 +2381,7 @@
       "puestoGasto": 1,
       "puestoActividad": 2,
       "vsMediaPuntos": -6,
-      "vsMediaEficiencia": -17,
+      "vsMediaEficiencia": -18,
       "vsMediaValor": 11,
       "tendencia": {
         "puestos": -4,
@@ -2477,10 +2477,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/10271084.png?v=66",
       "iniciales": "CA",
       "puntos": 231,
-      "valor": "46,8 M",
-      "valorBruto": 46820000,
+      "valor": "44,4 M",
+      "valorBruto": 44400000,
       "esTuyo": false,
-      "puntosPorMillon": 4.93,
+      "puntosPorMillon": 5.2,
       "mediaJornada": 33,
       "clausulasHechas": 0,
       "clausulasSufridas": 2,
@@ -2496,12 +2496,12 @@
       "fichajeEstrella": null,
       "total": 12,
       "puestoEficiencia": 12,
-      "puestoValor": 7,
+      "puestoValor": 9,
       "puestoGasto": 12,
       "puestoActividad": 12,
       "vsMediaPuntos": -30,
-      "vsMediaEficiencia": -29,
-      "vsMediaValor": -4,
+      "vsMediaEficiencia": -25,
+      "vsMediaValor": -9,
       "tendencia": {
         "puestos": 0,
         "puntos": 139,
@@ -3345,32 +3345,6 @@
             "esLocal": false,
             "rival": "Levante",
             "dificultad": 42
-          }
-        ]
-      },
-      {
-        "nombre": "Mandi",
-        "posicion": "Defensa",
-        "foto": "https://cdn.biwenger.com/i/p/2480.png",
-        "equipoReal": "Levante",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": true,
-            "rival": "Sevilla",
-            "dificultad": 63
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": false,
-            "rival": "Deportivo",
-            "dificultad": 56
-          },
-          {
-            "jornada": "Round 6 (postponed)",
-            "esLocal": true,
-            "rival": "Athletic",
-            "dificultad": 55
           }
         ]
       },
@@ -8109,11 +8083,11 @@
       ],
       "rachaTitular": 7,
       "ultimoMinutos": 90,
-      "clausula": 7936500,
-      "clausulaTexto": "7,9 M",
+      "clausula": 8261500,
+      "clausulaTexto": "8,3 M",
       "pagadoPorSuDueno": 6105000,
-      "margen": 2086500,
-      "margenPorcentaje": 36,
+      "margen": 2411500,
+      "margenPorcentaje": 41,
       "blindado": false,
       "blindadoHasta": null
     },
@@ -8182,40 +8156,6 @@
       "pagadoPorSuDueno": 3435015,
       "margen": 1989021,
       "margenPorcentaje": 71,
-      "blindado": false,
-      "blindadoHasta": null
-    },
-    {
-      "id": "2480",
-      "nombre": "Mandi",
-      "slug": "aissa-mandi",
-      "posicion": "Defensa",
-      "posicionCodigo": 2,
-      "foto": "https://cdn.biwenger.com/i/p/2480.png",
-      "equipoReal": "Levante",
-      "equipoIdReal": "10",
-      "presidente": "C.d.F Atlético de Cohiba",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/10271084.png?v=66",
-      "precio": 2420000,
-      "precioTexto": "2,4 M",
-      "puntosTotales": 26,
-      "partidosJugados": 6,
-      "media": 4.3,
-      "puntosPorMillon": 10.74,
-      "racha": [
-        1,
-        4,
-        4,
-        5,
-        8
-      ],
-      "rachaTitular": 6,
-      "ultimoMinutos": 63,
-      "clausula": 4551402,
-      "clausulaTexto": "4,6 M",
-      "pagadoPorSuDueno": 3251002,
-      "margen": 2131402,
-      "margenPorcentaje": 88,
       "blindado": false,
       "blindadoHasta": null
     },
@@ -8344,11 +8284,11 @@
       ],
       "rachaTitular": 0,
       "ultimoMinutos": 31,
-      "clausula": 8383906,
-      "clausulaTexto": "8,4 M",
+      "clausula": 8513906,
+      "clausulaTexto": "8,5 M",
       "pagadoPorSuDueno": 5988505,
-      "margen": 3313906,
-      "margenPorcentaje": 65,
+      "margen": 3443906,
+      "margenPorcentaje": 68,
       "blindado": false,
       "blindadoHasta": null
     },
@@ -8378,11 +8318,11 @@
       ],
       "rachaTitular": 1,
       "ultimoMinutos": 90,
-      "clausula": 5985029,
-      "clausulaTexto": "6,0 M",
+      "clausula": 6115029,
+      "clausulaTexto": "6,1 M",
       "pagadoPorSuDueno": 4275021,
-      "margen": 2035029,
-      "margenPorcentaje": 52,
+      "margen": 2165029,
+      "margenPorcentaje": 55,
       "blindado": true,
       "blindadoHasta": "2026-10-08T05:04:32.000Z"
     },
@@ -14845,24 +14785,6 @@
         "dificultad": 94
       },
       {
-        "nombre": "Mandi",
-        "foto": "https://cdn.biwenger.com/i/p/2480.png",
-        "posicion": "Defensa",
-        "equipoReal": "Levante",
-        "racha": [
-          1,
-          4,
-          4,
-          5,
-          8
-        ],
-        "rachaTitular": 6,
-        "nota": 3.1,
-        "rival": "Sevilla",
-        "esLocal": true,
-        "dificultad": 63
-      },
-      {
         "nombre": "Tenaglia",
         "foto": "https://cdn.biwenger.com/i/p/25384.png",
         "posicion": "Defensa",
@@ -17660,7 +17582,7 @@
       "presidente": "C.d.F Atlético de Cohiba",
       "escudoPresidente": "https://cdn.biwenger.com/i/u/10271084.png?v=66",
       "precioTexto": "4,0 M",
-      "clausulaTexto": "6,0 M",
+      "clausulaTexto": "6,1 M",
       "media": 5.9,
       "blindadoHasta": "2026-10-08T05:04:32.000Z"
     },
@@ -17699,6 +17621,18 @@
       "clausulaTexto": "14,6 M",
       "media": 7.1,
       "blindadoHasta": "2026-10-08T12:37:29.000Z"
+    },
+    {
+      "nombre": "Álvaro Núñez",
+      "foto": "https://cdn.biwenger.com/i/p/37719.png",
+      "posicion": "Defensa",
+      "equipoReal": "Celta",
+      "presidente": "Las Víboras FC",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
+      "precioTexto": "0,8 M",
+      "clausulaTexto": "1,8 M",
+      "media": 5,
+      "blindadoHasta": "2026-10-09T00:00:24.000Z"
     }
   ]
 }
