@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-06T08:49:07.279Z",
+  "actualizado": "2026-10-06T09:02:25.937Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -243,8 +243,8 @@
       "iniciales": "FF",
       "escudo": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
       "puntos": 310,
-      "valor": "57,2 M",
-      "valorBruto": 57220000,
+      "valor": "56,8 M",
+      "valorBruto": 56810000,
       "esTuyo": false,
       "puntosJornada": 30,
       "jugadosJornada": 8,
@@ -835,19 +835,6 @@
       "valorMercado": "1,1 M",
       "valorBruto": 1150000,
       "diferencia": -10000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Kumbulla",
-      "foto": "https://cdn.biwenger.com/i/p/34080.png",
-      "posicion": "Defensa",
-      "equipoReal": "Rayo Vallecano",
-      "vendedor": "FC FORUSIA",
-      "pide": "0,4 M",
-      "pideBruto": 410000,
-      "valorMercado": "0,4 M",
-      "valorBruto": 410000,
-      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -2383,7 +2370,7 @@
       "puestoActividad": 4,
       "vsMediaPuntos": 0,
       "vsMediaEficiencia": 15,
-      "vsMediaValor": -15,
+      "vsMediaValor": -14,
       "tendencia": {
         "puestos": -4,
         "puntos": 113,
@@ -2474,10 +2461,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
       "iniciales": "FF",
       "puntos": 310,
-      "valor": "57,2 M",
-      "valorBruto": 57220000,
+      "valor": "56,8 M",
+      "valorBruto": 56810000,
       "esTuyo": false,
-      "puntosPorMillon": 5.42,
+      "puntosPorMillon": 5.46,
       "mediaJornada": 44.3,
       "clausulasHechas": 15,
       "clausulasSufridas": 3,
@@ -2489,7 +2476,7 @@
       "balance": "−74,8 M",
       "balanceBruto": -74812899,
       "sobreprecioMedio": 28,
-      "enVenta": 11,
+      "enVenta": 10,
       "fichajeEstrella": {
         "nombre": "Mbappé",
         "precio": "42,1 M",
@@ -2501,8 +2488,8 @@
       "puestoGasto": 1,
       "puestoActividad": 2,
       "vsMediaPuntos": -6,
-      "vsMediaEficiencia": -18,
-      "vsMediaValor": 13,
+      "vsMediaEficiencia": -17,
+      "vsMediaValor": 12,
       "tendencia": {
         "puestos": -4,
         "puntos": 114,
@@ -6605,32 +6592,6 @@
             "esLocal": false,
             "rival": "Sevilla",
             "dificultad": 57
-          }
-        ]
-      },
-      {
-        "nombre": "Kumbulla",
-        "posicion": "Defensa",
-        "foto": "https://cdn.biwenger.com/i/p/34080.png",
-        "equipoReal": "Rayo Vallecano",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": true,
-            "rival": "Athletic",
-            "dificultad": 52
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": false,
-            "rival": "Getafe",
-            "dificultad": 37
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": true,
-            "rival": "Elche",
-            "dificultad": 28
           }
         ]
       },
@@ -12436,34 +12397,6 @@
       "blindadoHasta": "2026-10-14T05:03:37.000Z"
     },
     {
-      "id": "34080",
-      "nombre": "Kumbulla",
-      "slug": "marash-kumbulla",
-      "posicion": "Defensa",
-      "posicionCodigo": 2,
-      "foto": "https://cdn.biwenger.com/i/p/34080.png",
-      "equipoReal": "Rayo Vallecano",
-      "equipoIdReal": "70",
-      "presidente": "FC FORUSIA",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
-      "precio": 410000,
-      "precioTexto": "0,4 M",
-      "puntosTotales": 0,
-      "partidosJugados": 0,
-      "media": 0,
-      "puntosPorMillon": 0,
-      "racha": [],
-      "rachaTitular": 0,
-      "ultimoMinutos": null,
-      "clausula": 1236600,
-      "clausulaTexto": "1,2 M",
-      "pagadoPorSuDueno": 412200,
-      "margen": 826600,
-      "margenPorcentaje": 202,
-      "blindado": true,
-      "blindadoHasta": "2026-10-19T05:04:58.000Z"
-    },
-    {
       "id": "35308",
       "nombre": "Córdoba",
       "slug": "iker-cordoba",
@@ -17378,18 +17311,6 @@
         "rival": "Betis",
         "esLocal": false,
         "dificultad": 66
-      },
-      {
-        "nombre": "Kumbulla",
-        "foto": "https://cdn.biwenger.com/i/p/34080.png",
-        "posicion": "Defensa",
-        "equipoReal": "Rayo Vallecano",
-        "racha": [],
-        "rachaTitular": 0,
-        "nota": 2.4,
-        "rival": "Athletic",
-        "esLocal": true,
-        "dificultad": 52
       },
       {
         "nombre": "Rosier",
