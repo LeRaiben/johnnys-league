@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-06T19:17:54.133Z",
+  "actualizado": "2026-10-06T19:36:15.224Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -420,6 +420,19 @@
     }
   ],
   "mercadoPresidentes": [
+    {
+      "tipo": "venta",
+      "nombre": "Ceballos",
+      "foto": "https://cdn.biwenger.com/i/p/2044.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Betis",
+      "vendedor": "Lottin Capital",
+      "pide": "3,8 M",
+      "pideBruto": 3760000,
+      "valorMercado": "3,8 M",
+      "valorBruto": 3760000,
+      "diferencia": 0
+    },
     {
       "tipo": "venta",
       "nombre": "Isco",
@@ -2532,7 +2545,7 @@
       "balance": "+11,0 M",
       "balanceBruto": 10962000,
       "sobreprecioMedio": 34,
-      "enVenta": 0,
+      "enVenta": 1,
       "fichajeEstrella": {
         "nombre": "Pépé",
         "precio": "14,9 M",
