@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-07T09:14:16.616Z",
+  "actualizado": "2026-10-07T09:37:31.801Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -6375,32 +6375,6 @@
     ],
     "FC FORUSIA": [
       {
-        "nombre": "Mbappé",
-        "posicion": "Delantero",
-        "foto": "https://cdn.biwenger.com/i/p/19577.png",
-        "equipoReal": "Real Madrid",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": true,
-            "rival": "Villarreal",
-            "dificultad": 42
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": true,
-            "rival": "Sevilla",
-            "dificultad": 53
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": false,
-            "rival": "Barcelona",
-            "dificultad": 88
-          }
-        ]
-      },
-      {
         "nombre": "Gayà",
         "posicion": "Defensa",
         "foto": "https://cdn.biwenger.com/i/p/1844.png",
@@ -6527,6 +6501,32 @@
             "esLocal": false,
             "rival": "Racing",
             "dificultad": 37
+          }
+        ]
+      },
+      {
+        "nombre": "Mbappé",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/19577.png",
+        "equipoReal": "Real Madrid",
+        "jornadas": [
+          {
+            "jornada": "Round 8",
+            "esLocal": true,
+            "rival": "Villarreal",
+            "dificultad": 42
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": true,
+            "rival": "Sevilla",
+            "dificultad": 53
+          },
+          {
+            "jornada": "Round 10",
+            "esLocal": false,
+            "rival": "Barcelona",
+            "dificultad": 88
           }
         ]
       },
@@ -12079,40 +12079,6 @@
       "blindadoHasta": "2026-10-18T05:04:52.000Z"
     },
     {
-      "id": "19577",
-      "nombre": "Mbappé",
-      "slug": "mbappe",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/19577.png",
-      "equipoReal": "Real Madrid",
-      "equipoIdReal": "15",
-      "presidente": "FC FORUSIA",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
-      "precio": 25140000,
-      "precioTexto": "25,1 M",
-      "puntosTotales": 81,
-      "partidosJugados": 7,
-      "media": 11.6,
-      "puntosPorMillon": 3.22,
-      "racha": [
-        4,
-        15,
-        21,
-        0,
-        16
-      ],
-      "rachaTitular": 7,
-      "ultimoMinutos": 90,
-      "clausula": 50462880,
-      "clausulaTexto": "50,5 M",
-      "pagadoPorSuDueno": 42052400,
-      "margen": 25322880,
-      "margenPorcentaje": 101,
-      "blindado": true,
-      "blindadoHasta": "2026-10-14T18:01:44.000Z"
-    },
-    {
       "id": "1844",
       "nombre": "Gayà",
       "slug": "gaya",
@@ -12268,6 +12234,40 @@
       "margenPorcentaje": 104,
       "blindado": false,
       "blindadoHasta": null
+    },
+    {
+      "id": "19577",
+      "nombre": "Mbappé",
+      "slug": "mbappe",
+      "posicion": "Delantero",
+      "posicionCodigo": 4,
+      "foto": "https://cdn.biwenger.com/i/p/19577.png",
+      "equipoReal": "Real Madrid",
+      "equipoIdReal": "15",
+      "presidente": "FC FORUSIA",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
+      "precio": 25140000,
+      "precioTexto": "25,1 M",
+      "puntosTotales": 81,
+      "partidosJugados": 7,
+      "media": 11.6,
+      "puntosPorMillon": 3.22,
+      "racha": [
+        4,
+        15,
+        21,
+        0,
+        16
+      ],
+      "rachaTitular": 7,
+      "ultimoMinutos": 90,
+      "clausula": 50462880,
+      "clausulaTexto": "50,5 M",
+      "pagadoPorSuDueno": 42052400,
+      "margen": 25322880,
+      "margenPorcentaje": 101,
+      "blindado": true,
+      "blindadoHasta": "2026-10-14T18:01:44.000Z"
     },
     {
       "id": "19693",
