@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-07T14:14:29.464Z",
+  "actualizado": "2026-10-07T14:37:21.242Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -6702,32 +6702,6 @@
     ],
     "Las Víboras FC": [
       {
-        "nombre": "Abde Rebbach",
-        "posicion": "Delantero",
-        "foto": "https://cdn.biwenger.com/i/p/30510.png",
-        "equipoReal": "Alavés",
-        "jornadas": [
-          {
-            "jornada": "Round 8",
-            "esLocal": true,
-            "rival": "Atlético",
-            "dificultad": 64
-          },
-          {
-            "jornada": "Round 9",
-            "esLocal": false,
-            "rival": "Celta",
-            "dificultad": 37
-          },
-          {
-            "jornada": "Round 10",
-            "esLocal": true,
-            "rival": "Málaga",
-            "dificultad": 9
-          }
-        ]
-      },
-      {
         "nombre": "Boyé",
         "posicion": "Delantero",
         "foto": "https://cdn.biwenger.com/i/p/12494.png",
@@ -6880,6 +6854,32 @@
             "esLocal": false,
             "rival": "Racing",
             "dificultad": 37
+          }
+        ]
+      },
+      {
+        "nombre": "Abde Rebbach",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/30510.png",
+        "equipoReal": "Alavés",
+        "jornadas": [
+          {
+            "jornada": "Round 8",
+            "esLocal": true,
+            "rival": "Atlético",
+            "dificultad": 64
+          },
+          {
+            "jornada": "Round 9",
+            "esLocal": false,
+            "rival": "Celta",
+            "dificultad": 37
+          },
+          {
+            "jornada": "Round 10",
+            "esLocal": true,
+            "rival": "Málaga",
+            "dificultad": 9
           }
         ]
       },
@@ -12480,40 +12480,6 @@
       "blindadoHasta": "2026-10-17T13:32:13.000Z"
     },
     {
-      "id": "30510",
-      "nombre": "Abde Rebbach",
-      "slug": "abde-rebbach",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/30510.png",
-      "equipoReal": "Alavés",
-      "equipoIdReal": "91",
-      "presidente": "Las Víboras FC",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
-      "precio": 1970000,
-      "precioTexto": "2,0 M",
-      "puntosTotales": 23,
-      "partidosJugados": 7,
-      "media": 3.3,
-      "puntosPorMillon": 11.68,
-      "racha": [
-        4,
-        2,
-        7,
-        1,
-        2
-      ],
-      "rachaTitular": 7,
-      "ultimoMinutos": 66,
-      "clausula": 4050000,
-      "clausulaTexto": "4,0 M",
-      "pagadoPorSuDueno": 2700000,
-      "margen": 2080000,
-      "margenPorcentaje": 106,
-      "blindado": true,
-      "blindadoHasta": "2026-10-14T22:40:44.000Z"
-    },
-    {
       "id": "12494",
       "nombre": "Boyé",
       "slug": "lucas-boye",
@@ -12702,6 +12668,40 @@
       "margenPorcentaje": 200,
       "blindado": false,
       "blindadoHasta": null
+    },
+    {
+      "id": "30510",
+      "nombre": "Abde Rebbach",
+      "slug": "abde-rebbach",
+      "posicion": "Delantero",
+      "posicionCodigo": 4,
+      "foto": "https://cdn.biwenger.com/i/p/30510.png",
+      "equipoReal": "Alavés",
+      "equipoIdReal": "91",
+      "presidente": "Las Víboras FC",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
+      "precio": 1970000,
+      "precioTexto": "2,0 M",
+      "puntosTotales": 23,
+      "partidosJugados": 7,
+      "media": 3.3,
+      "puntosPorMillon": 11.68,
+      "racha": [
+        4,
+        2,
+        7,
+        1,
+        2
+      ],
+      "rachaTitular": 7,
+      "ultimoMinutos": 66,
+      "clausula": 4050000,
+      "clausulaTexto": "4,0 M",
+      "pagadoPorSuDueno": 2700000,
+      "margen": 2080000,
+      "margenPorcentaje": 106,
+      "blindado": true,
+      "blindadoHasta": "2026-10-14T22:40:44.000Z"
     },
     {
       "id": "34483",
