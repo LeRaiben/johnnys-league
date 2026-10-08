@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-08T08:15:20.760Z",
+  "actualizado": "2026-10-08T08:39:00.935Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 7,
   "jornadaEnJuego": true,
@@ -497,6 +497,19 @@
       "valorMercado": "2,6 M",
       "valorBruto": 2640000,
       "diferencia": 0
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Starfelt",
+      "foto": "https://cdn.biwenger.com/i/p/31321.png",
+      "posicion": "Defensa",
+      "equipoReal": "Celta",
+      "vendedor": "Gorila FC",
+      "pide": "1,5 M",
+      "pideBruto": 1500000,
+      "valorMercado": "1,3 M",
+      "valorBruto": 1310000,
+      "diferencia": 190000
     },
     {
       "tipo": "venta",
@@ -2127,7 +2140,7 @@
       "balance": "−12,2 M",
       "balanceBruto": -12245300,
       "sobreprecioMedio": 15,
-      "enVenta": 0,
+      "enVenta": 1,
       "fichajeEstrella": {
         "nombre": "Baena",
         "precio": "12,6 M",
