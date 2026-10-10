@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-10T16:52:48.920Z",
+  "actualizado": "2026-10-10T17:11:24.689Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 8,
   "jornadaEnJuego": true,
@@ -40,7 +40,7 @@
       "escudoLocal": "https://cdn.biwenger.com/i/t/3.png",
       "escudoVisitante": "https://cdn.biwenger.com/i/t/8.png",
       "fecha": "2026-10-10T16:30:00.000Z",
-      "golesLocal": 1,
+      "golesLocal": 2,
       "golesVisitante": 0,
       "estado": "firstTime"
     },
@@ -294,10 +294,10 @@
       "valor": "39,8 M",
       "valorBruto": 39800000,
       "esTuyo": false,
-      "puntosJornada": 5,
+      "puntosJornada": 4,
       "jugadosJornada": 2,
       "alineadosJornada": 11,
-      "puntosProvisional": 236
+      "puntosProvisional": 235
     }
   ],
   "mercadoBiwenger": [
@@ -420,19 +420,6 @@
     }
   ],
   "mercadoPresidentes": [
-    {
-      "tipo": "venta",
-      "nombre": "Isi Palazón",
-      "foto": "https://cdn.biwenger.com/i/p/5069.png",
-      "posicion": "Delantero",
-      "equipoReal": "Rayo Vallecano",
-      "vendedor": "Lottin Capital",
-      "pide": "2,8 M",
-      "pideBruto": 2800000,
-      "valorMercado": "2,7 M",
-      "valorBruto": 2720000,
-      "diferencia": 80000
-    },
     {
       "tipo": "venta",
       "nombre": "Isco",
@@ -2388,7 +2375,7 @@
       "balance": "+11,0 M",
       "balanceBruto": 10962000,
       "sobreprecioMedio": 35,
-      "enVenta": 1,
+      "enVenta": 0,
       "fichajeEstrella": {
         "nombre": "Pépé",
         "precio": "14,9 M",
@@ -8403,19 +8390,19 @@
       "escudoPresidente": "https://cdn.biwenger.com/i/u/10271084.png?v=66",
       "precio": 4390000,
       "precioTexto": "4,4 M",
-      "puntosTotales": 40,
-      "partidosJugados": 7,
-      "media": 5.7,
-      "puntosPorMillon": 9.11,
+      "puntosTotales": 42,
+      "partidosJugados": 8,
+      "media": 5.3,
+      "puntosPorMillon": 9.57,
       "racha": [
+        2,
         3,
         5,
         2,
-        13,
-        8
+        13
       ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 15,
+      "rachaTitular": 1,
+      "ultimoMinutos": 61,
       "clausula": 7685998,
       "clausulaTexto": "7,7 M",
       "pagadoPorSuDueno": 5489999,
@@ -14846,24 +14833,6 @@
         "dificultad": 44
       },
       {
-        "nombre": "Ángel Pérez",
-        "foto": "https://cdn.biwenger.com/i/p/39885.png",
-        "posicion": "Delantero",
-        "equipoReal": "Alavés",
-        "racha": [
-          3,
-          5,
-          2,
-          13,
-          8
-        ],
-        "rachaTitular": 0,
-        "nota": 5.2,
-        "rival": "Celta",
-        "esLocal": false,
-        "dificultad": 37
-      },
-      {
         "nombre": "Febas",
         "foto": "https://cdn.biwenger.com/i/p/19860.png",
         "posicion": "Centrocampista",
@@ -14909,6 +14878,24 @@
           5
         ],
         "rachaTitular": 2,
+        "nota": 4.4,
+        "rival": "Celta",
+        "esLocal": false,
+        "dificultad": 37
+      },
+      {
+        "nombre": "Ángel Pérez",
+        "foto": "https://cdn.biwenger.com/i/p/39885.png",
+        "posicion": "Delantero",
+        "equipoReal": "Alavés",
+        "racha": [
+          2,
+          3,
+          5,
+          2,
+          13
+        ],
+        "rachaTitular": 1,
         "nota": 4.4,
         "rival": "Celta",
         "esLocal": false,
