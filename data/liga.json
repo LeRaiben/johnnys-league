@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-10T22:34:07.826Z",
+  "actualizado": "2026-10-10T22:51:52.099Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 8,
   "jornadaEnJuego": true,
@@ -757,6 +757,45 @@
       "valorMercado": "1,1 M",
       "valorBruto": 1090000,
       "diferencia": 40000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Espí",
+      "foto": "https://cdn.biwenger.com/i/p/37711.png",
+      "posicion": "Delantero",
+      "equipoReal": "Real Madrid",
+      "vendedor": "FC FORUSIA",
+      "pide": "2,9 M",
+      "pideBruto": 2860000,
+      "valorMercado": "2,9 M",
+      "valorBruto": 2860000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Odysseas",
+      "foto": "https://cdn.biwenger.com/i/p/38405.png",
+      "posicion": "Portero",
+      "equipoReal": "Sevilla",
+      "vendedor": "FC FORUSIA",
+      "pide": "3,1 M",
+      "pideBruto": 3080000,
+      "valorMercado": "3,1 M",
+      "valorBruto": 3080000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Abdelkarim",
+      "foto": "https://cdn.biwenger.com/i/p/42747.png",
+      "posicion": "Delantero",
+      "equipoReal": "Barcelona",
+      "vendedor": "FC FORUSIA",
+      "pide": "0,5 M",
+      "pideBruto": 540000,
+      "valorMercado": "0,5 M",
+      "valorBruto": 540000,
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -2384,7 +2423,7 @@
       "balance": "−74,8 M",
       "balanceBruto": -74812899,
       "sobreprecioMedio": 30,
-      "enVenta": 2,
+      "enVenta": 5,
       "fichajeEstrella": {
         "nombre": "Mbappé",
         "precio": "42,1 M",
@@ -17938,6 +17977,18 @@
       "clausulaTexto": "8,6 M",
       "media": 8,
       "blindadoHasta": "2026-10-14T19:44:33.000Z"
+    },
+    {
+      "nombre": "Abde Rebbach",
+      "foto": "https://cdn.biwenger.com/i/p/30510.png",
+      "posicion": "Delantero",
+      "equipoReal": "Alavés",
+      "presidente": "Las Víboras FC",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
+      "precioTexto": "2,0 M",
+      "clausulaTexto": "4,0 M",
+      "media": 3.3,
+      "blindadoHasta": "2026-10-14T22:40:44.000Z"
     }
   ]
 }
