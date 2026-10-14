@@ -158,9 +158,96 @@
     .msg-card.respuesta { padding: 12px; }
     .escribir { padding: 12px; }
   }
+
+  /* ===== Chat en directo ===== */
+  #btnChat .chat-punto { display:inline-block; width:8px; height:8px; border-radius:50%; background:#3BD16F; margin-right:6px; box-shadow:0 0 0 0 rgba(59,209,111,0.6); animation:latidoChat 2s infinite; }
+  @keyframes latidoChat { 0%{box-shadow:0 0 0 0 rgba(59,209,111,0.5);} 70%{box-shadow:0 0 0 6px rgba(59,209,111,0);} 100%{box-shadow:0 0 0 0 rgba(59,209,111,0);} }
+  #btnChat .chat-cuenta { font-variant-numeric:tabular-nums; }
+
+  #chatPanel { position:fixed; top:0; right:0; width:380px; max-width:100vw; height:100%; height:100dvh; z-index:1200;
+    background:var(--navy-deep); border-left:1px solid var(--navy-line); box-shadow:-10px 0 40px rgba(0,0,0,0.5);
+    display:flex; flex-direction:column; transform:translateX(100%); transition:transform .25s ease;
+    padding-top:env(safe-area-inset-top,0px); }
+  #chatPanel.abierto { transform:translateX(0); }
+  #chatBackdrop { position:fixed; inset:0; z-index:1199; background:rgba(0,0,0,0.5); opacity:0; pointer-events:none; transition:opacity .25s; }
+  #chatBackdrop.abierto { opacity:1; pointer-events:auto; }
+
+  .chat-cab { display:flex; align-items:center; gap:10px; padding:16px 18px; border-bottom:1px solid var(--navy-line); flex:0 0 auto; }
+  .chat-cab .tit { font-family:'Anton',sans-serif; font-size:1.15rem; color:var(--white); letter-spacing:0.02em; }
+  .chat-cab .online { font-family:'Barlow Condensed',sans-serif; font-size:0.78rem; color:#3BD16F; text-transform:uppercase; letter-spacing:0.06em; }
+  .chat-cerrar { margin-left:auto; background:none; border:none; color:var(--grey); font-size:1.5rem; cursor:pointer; line-height:1; padding:0 4px; }
+  .chat-cerrar:hover { color:var(--white); }
+
+  .chat-conectados { display:flex; gap:8px; overflow-x:auto; padding:12px 18px; border-bottom:1px solid var(--navy-line); flex:0 0 auto; }
+  .chat-conectados::-webkit-scrollbar { height:0; }
+  .chat-chip { flex:0 0 auto; display:flex; align-items:center; gap:6px; background:rgba(255,255,255,0.06); border:1px solid var(--navy-line);
+    border-radius:16px; padding:5px 11px; font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; color:var(--white); cursor:pointer; white-space:nowrap; }
+  .chat-chip:hover { border-color:var(--gold-dim); }
+  .chat-chip .pt { width:7px; height:7px; border-radius:50%; background:#3BD16F; flex:0 0 auto; }
+  .chat-chip.yo { opacity:0.65; cursor:default; }
+  .chat-conectados .vacio { font-family:'Source Serif 4',serif; font-size:0.82rem; color:var(--grey); padding:4px 0; }
+
+  .chat-flujo { flex:1 1 auto; overflow-y:auto; padding:14px 16px; display:flex; flex-direction:column; gap:9px; }
+  .chat-linea { max-width:82%; display:flex; flex-direction:column; }
+  .chat-linea.mio { align-self:flex-end; align-items:flex-end; }
+  .chat-linea .meta { font-family:'Barlow Condensed',sans-serif; font-size:0.72rem; color:var(--gold); text-transform:uppercase; letter-spacing:0.04em; margin:0 4px 2px; }
+  .chat-linea.mio .meta { color:var(--grey); }
+  .chat-burbuja { background:rgba(255,255,255,0.07); color:var(--white); padding:8px 12px; border-radius:14px; border-bottom-left-radius:4px;
+    font-size:0.92rem; line-height:1.4; word-wrap:break-word; overflow-wrap:anywhere; white-space:pre-wrap; }
+  .chat-linea.mio .chat-burbuja { background:var(--gold); color:var(--navy); border-radius:14px; border-bottom-right-radius:4px; }
+  .chat-burbuja a { color:inherit; text-decoration:underline; }
+  .chat-hora { font-size:0.62rem; color:var(--grey); margin:2px 4px 0; }
+  .chat-flujo .aviso-suave { align-self:center; margin:auto 0; }
+
+  .chat-escribir { flex:0 0 auto; display:flex; gap:8px; padding:12px 14px; border-top:1px solid var(--navy-line);
+    padding-bottom:calc(12px + env(safe-area-inset-bottom,0px)); }
+  .chat-escribir input { flex:1 1 auto; background:rgba(255,255,255,0.08); border:1px solid var(--navy-line); border-radius:20px;
+    padding:10px 15px; color:var(--white); font-family:'Source Serif 4',serif; font-size:0.95rem; }
+  .chat-escribir input:focus { outline:none; border-color:var(--gold-dim); }
+  .chat-enviar { flex:0 0 auto; background:var(--gold); color:var(--navy); border:none; border-radius:50%; width:42px; height:42px;
+    font-size:1.2rem; cursor:pointer; display:flex; align-items:center; justify-content:center; }
+  .chat-enviar:disabled { opacity:0.4; cursor:not-allowed; }
+
+  .chat-nombre-caja { padding:22px 18px; }
+  .chat-nombre-caja p { font-family:'Source Serif 4',serif; font-size:0.95rem; color:rgba(247,247,245,0.82); margin:0 0 12px; line-height:1.4; }
+  .chat-nombre-caja input { width:100%; background:rgba(255,255,255,0.08); border:1px solid var(--navy-line); border-radius:6px;
+    padding:12px 14px; color:var(--white); font-family:'Source Serif 4',serif; font-size:1rem; margin-bottom:12px; box-sizing:border-box; }
+  .chat-nombre-caja input:focus { outline:none; border-color:var(--gold-dim); }
+
+  .chat-volver { background:none; border:none; color:var(--gold); font-family:'Barlow Condensed',sans-serif; font-size:0.85rem;
+    text-transform:uppercase; letter-spacing:0.05em; cursor:pointer; padding:0; }
+
+  /* Burbujas de conversaciones privadas tipo Messenger */
+  #dmBurbujas { position:fixed; right:16px; bottom:16px; bottom:calc(16px + env(safe-area-inset-bottom,0px)); z-index:1150;
+    display:flex; flex-direction:column-reverse; gap:12px; align-items:flex-end; }
+  .dm-burbuja { width:56px; height:56px; border-radius:50%; background:var(--gold); color:var(--navy); border:3px solid var(--navy-deep);
+    cursor:pointer; font-family:'Anton',sans-serif; font-size:1.1rem; display:flex; align-items:center; justify-content:center; position:relative;
+    box-shadow:0 6px 18px rgba(0,0,0,0.45); }
+  .dm-burbuja .noleidos { position:absolute; top:-4px; right:-4px; background:var(--red); color:#fff; border-radius:10px; min-width:18px; height:18px;
+    font-family:'Barlow Condensed',sans-serif; font-size:0.72rem; display:flex; align-items:center; justify-content:center; padding:0 4px; }
+
+  @media (max-width:600px) {
+    #chatPanel { width:100vw; }
+  }
+
 </style>
 </head>
 <body>
+
+<div id="chatBackdrop"></div>
+<div id="chatPanel" aria-hidden="true">
+  <div class="chat-cab">
+    <div>
+      <div class="tit" id="chatTitulo">Chat en directo</div>
+      <div class="online" id="chatOnline"></div>
+    </div>
+    <button type="button" class="chat-cerrar" id="chatCerrar" aria-label="Cerrar">&times;</button>
+  </div>
+  <div id="chatCuerpo"></div>
+</div>
+
+<div id="dmBurbujas"></div>
+
 
 <div class="lomo" aria-hidden="true"></div>
 
@@ -232,6 +319,9 @@
       </button>
       <button type="button" class="btn-notificaciones" id="btnRefrescar" style="margin-bottom:0;">
         🔄 Refrescar tablón
+      </button>
+      <button type="button" class="btn-notificaciones" id="btnChat" style="margin-bottom:0;">
+        <span class="chat-punto"></span>💬 Chat en directo <span class="chat-cuenta"></span>
       </button>
     </div>
 
@@ -1272,6 +1362,312 @@
     cargar();
     activarRealtime();
   });
+
+  /* ==================== CHAT EN DIRECTO ==================== */
+  (function iniciarChat() {
+    var MI_ID = localStorage.getItem('chat_id');
+    if (!MI_ID) { MI_ID = 'u' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7); localStorage.setItem('chat_id', MI_ID); }
+    var miNombre = localStorage.getItem('chat_nombre') || '';
+
+    var canalPresencia = null;
+    var online = {};                 // id -> nombre (conectados ahora)
+    var vista = 'grupo';             // 'grupo' | 'nombre' | id de un privado
+    var mensajes = [];               // cache de todo lo cargado
+    var noLeidos = {};               // id -> nº mensajes privados sin leer
+    var dmsAbiertos = [];            // ids con los que tengo conversación abierta
+    try { dmsAbiertos = JSON.parse(localStorage.getItem('chat_dms') || '[]'); } catch (e) { dmsAbiertos = []; }
+
+    var panel = document.getElementById('chatPanel');
+    var backdrop = document.getElementById('chatBackdrop');
+    var cuerpo = document.getElementById('chatCuerpo');
+    var elTitulo = document.getElementById('chatTitulo');
+    var elOnline = document.getElementById('chatOnline');
+    var btnChat = document.getElementById('btnChat');
+    var elCuenta = btnChat ? btnChat.querySelector('.chat-cuenta') : null;
+    var elBurbujas = document.getElementById('dmBurbujas');
+
+    function escH(x) { return String(x == null ? '' : x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+    function conEnlaces(t) { return escH(t).replace(/https?:\/\/[^\s<]+/g, function (u) { return '<a href="' + u + '" target="_blank" rel="noopener noreferrer">' + u + '</a>'; }); }
+    function guardarDms() { try { localStorage.setItem('chat_dms', JSON.stringify(dmsAbiertos)); } catch (e) {} }
+
+    function horaCorta(iso) {
+      var f = new Date(iso);
+      return f.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
+    }
+
+    // Clave de conversación privada entre dos ids (ordenada, para que coincida en ambos lados)
+    function esMiDm(m, otroId) {
+      return m.para_id && ((m.de_id === MI_ID && m.para_id === otroId) || (m.de_id === otroId && m.para_id === MI_ID));
+    }
+
+    // ---- Carga inicial de mensajes (grupo + privados míos) ----
+    function cargarMensajes() {
+      return sb.from('chat_mensajes')
+        .select('id, creado, de_id, de_nombre, para_id, para_nombre, texto')
+        .or('para_id.is.null,para_id.eq.' + MI_ID + ',de_id.eq.' + MI_ID)
+        .order('creado', { ascending: true })
+        .limit(500)
+        .then(function (r) { if (!r.error) mensajes = r.data || []; });
+    }
+
+    // ---- Presencia (quién está conectado) ----
+    function arrancarPresencia() {
+      if (canalPresencia) return;
+      canalPresencia = sb.channel('chat-presencia', { config: { presence: { key: MI_ID } } });
+      canalPresencia
+        .on('presence', { event: 'sync' }, function () {
+          var estado = canalPresencia.presenceState();
+          online = {};
+          Object.keys(estado).forEach(function (k) {
+            var metas = estado[k];
+            if (metas && metas[0]) online[k] = metas[0].nombre || 'Anónimo';
+          });
+          pintarOnline();
+          if (vista === 'grupo') pintarGrupo();
+        })
+        .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'chat_mensajes' }, function (p) {
+          nuevoMensaje(p.new);
+        })
+        .subscribe(function (st) {
+          if (st === 'SUBSCRIBED') canalPresencia.track({ nombre: miNombre || 'Anónimo', desde: Date.now() });
+        });
+    }
+
+    function actualizarMiPresencia() {
+      if (canalPresencia) canalPresencia.track({ nombre: miNombre || 'Anónimo', desde: Date.now() });
+    }
+
+    function nConectados() { return Object.keys(online).length; }
+
+    function pintarOnline() {
+      var n = nConectados();
+      if (elCuenta) elCuenta.textContent = n > 0 ? '(' + n + ')' : '';
+      if (elOnline) elOnline.textContent = n === 1 ? '1 presidente en línea' : n + ' presidentes en línea';
+    }
+
+    // ---- Llega un mensaje nuevo en tiempo real ----
+    function nuevoMensaje(m) {
+      if (mensajes.some(function (x) { return x.id === m.id; })) return;
+      // Solo me interesan: grupo, o privados en los que participo
+      var mio = m.de_id === MI_ID;
+      var paraMi = m.para_id === MI_ID;
+      if (m.para_id && !mio && !paraMi) return;
+      mensajes.push(m);
+
+      if (!m.para_id) {
+        if (vista === 'grupo' && panelAbierto()) pintarGrupo(true);
+      } else {
+        var otro = mio ? m.para_id : m.de_id;
+        if (!mio && dmsAbiertos.indexOf(otro) === -1) { dmsAbiertos.push(otro); guardarDms(); }
+        if (vista === otro && panelAbierto()) {
+          pintarDm(otro, true);
+        } else if (!mio) {
+          noLeidos[otro] = (noLeidos[otro] || 0) + 1;
+        }
+        pintarBurbujas();
+      }
+    }
+
+    function panelAbierto() { return panel.classList.contains('abierto'); }
+
+    // ---- Pintar la lista de conectados (chips) ----
+    function chipsHtml() {
+      var ids = Object.keys(online);
+      var otros = ids.filter(function (id) { return id !== MI_ID; });
+      var html = '<div class="chat-conectados">';
+      // yo primero
+      html += '<span class="chat-chip yo"><span class="pt"></span>' + escH(miNombre || 'Tú') + ' (tú)</span>';
+      if (!otros.length) {
+        html += '<span class="vacio">Nadie más conectado ahora mismo</span>';
+      } else {
+        otros.forEach(function (id) {
+          html += '<span class="chat-chip" data-dm="' + escH(id) + '" data-nombre="' + escH(online[id]) + '"><span class="pt"></span>' + escH(online[id]) + '</span>';
+        });
+      }
+      html += '</div>';
+      return html;
+    }
+
+    // ---- Vista: chat de grupo ----
+    function pintarGrupo(soloAbajo) {
+      vista = 'grupo';
+      elTitulo.textContent = 'Chat de grupo';
+      var delGrupo = mensajes.filter(function (m) { return !m.para_id; });
+      var html = chipsHtml();
+      html += '<div class="chat-flujo" id="chatFlujo">';
+      if (!delGrupo.length) {
+        html += '<div class="aviso-suave">Aún no hay mensajes. Rómpelo tú 👋</div>';
+      } else {
+        delGrupo.forEach(function (m) { html += lineaHtml(m); });
+      }
+      html += '</div>';
+      html += cajaEscribirHtml();
+      cuerpo.innerHTML = html;
+      engancharConversacion(null);
+      bajarFlujo();
+    }
+
+    // ---- Vista: conversación privada ----
+    function pintarDm(otroId, soloAbajo) {
+      vista = otroId;
+      noLeidos[otroId] = 0;
+      var nombreOtro = online[otroId] || nombreConocido(otroId) || 'Presidente';
+      elTitulo.innerHTML = '<button type="button" class="chat-volver" id="chatVolver">‹ Grupo</button>';
+      var delDm = mensajes.filter(function (m) { return esMiDm(m, otroId); });
+      var html = '<div style="padding:10px 18px; border-bottom:1px solid var(--navy-line); font-family:\'Anton\',sans-serif; color:var(--white);">' + escH(nombreOtro) + '</div>';
+      html += '<div class="chat-flujo" id="chatFlujo">';
+      if (!delDm.length) {
+        html += '<div class="aviso-suave">Escríbele a ' + escH(nombreOtro) + ' 💬</div>';
+      } else {
+        delDm.forEach(function (m) { html += lineaHtml(m); });
+      }
+      html += '</div>';
+      html += cajaEscribirHtml();
+      cuerpo.innerHTML = html;
+      var volver = document.getElementById('chatVolver');
+      if (volver) volver.addEventListener('click', function () { pintarGrupo(); });
+      engancharConversacion(otroId);
+      bajarFlujo();
+      pintarBurbujas();
+    }
+
+    function nombreConocido(id) {
+      for (var i = mensajes.length - 1; i >= 0; i--) {
+        if (mensajes[i].de_id === id) return mensajes[i].de_nombre;
+        if (mensajes[i].para_id === id) return mensajes[i].para_nombre;
+      }
+      return null;
+    }
+
+    function lineaHtml(m) {
+      var mio = m.de_id === MI_ID;
+      return '<div class="chat-linea' + (mio ? ' mio' : '') + '">' +
+        (mio ? '' : '<div class="meta">' + escH(m.de_nombre) + '</div>') +
+        '<div class="chat-burbuja">' + conEnlaces(m.texto) + '</div>' +
+        '<div class="chat-hora">' + horaCorta(m.creado) + '</div>' +
+      '</div>';
+    }
+
+    function cajaEscribirHtml() {
+      return '<div class="chat-escribir">' +
+        '<input type="text" id="chatInput" maxlength="1000" placeholder="Escribe un mensaje..." autocomplete="off">' +
+        '<button type="button" class="chat-enviar" id="chatEnviar">➤</button>' +
+      '</div>';
+    }
+
+    function engancharConversacion(otroId) {
+      var input = document.getElementById('chatInput');
+      var btn = document.getElementById('chatEnviar');
+      // chips -> abrir dm
+      cuerpo.querySelectorAll('.chat-chip[data-dm]').forEach(function (c) {
+        c.addEventListener('click', function () { abrirDm(c.dataset.dm, c.dataset.nombre); });
+      });
+      function enviar() {
+        var t = (input.value || '').trim();
+        if (!t) return;
+        input.value = '';
+        var fila = { de_id: MI_ID, de_nombre: miNombre || 'Anónimo', texto: t };
+        if (otroId) {
+          fila.para_id = otroId;
+          fila.para_nombre = online[otroId] || nombreConocido(otroId) || 'Presidente';
+        }
+        sb.from('chat_mensajes').insert(fila).then(function (r) {
+          if (r.error && zonaEstadoChat) zonaEstadoChat('No se pudo enviar: ' + r.error.message);
+        });
+      }
+      if (btn) btn.addEventListener('click', enviar);
+      if (input) {
+        input.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); enviar(); } });
+        input.focus();
+      }
+    }
+
+    var zonaEstadoChat = null;
+
+    function bajarFlujo() {
+      var f = document.getElementById('chatFlujo');
+      if (f) f.scrollTop = f.scrollHeight;
+    }
+
+    // ---- Burbujas tipo Messenger ----
+    function pintarBurbujas() {
+      if (!elBurbujas) return;
+      elBurbujas.innerHTML = dmsAbiertos.map(function (id) {
+        var nombre = online[id] || nombreConocido(id) || '?';
+        var ini = nombre.trim().charAt(0).toUpperCase() || '?';
+        var nl = noLeidos[id] || 0;
+        return '<button type="button" class="dm-burbuja" data-dm="' + escH(id) + '" title="' + escH(nombre) + '">' + escH(ini) +
+          (nl > 0 ? '<span class="noleidos">' + (nl > 9 ? '9+' : nl) + '</span>' : '') + '</button>';
+      }).join('');
+      elBurbujas.querySelectorAll('.dm-burbuja').forEach(function (b) {
+        b.addEventListener('click', function () { abrirPanel(); abrirDm(b.dataset.dm, online[b.dataset.dm] || nombreConocido(b.dataset.dm)); });
+      });
+      // ocultar burbujas si el panel está abierto
+      elBurbujas.style.display = panelAbierto() ? 'none' : 'flex';
+    }
+
+    function abrirDm(otroId, nombre) {
+      if (otroId === MI_ID) return;
+      if (dmsAbiertos.indexOf(otroId) === -1) { dmsAbiertos.push(otroId); guardarDms(); }
+      pintarDm(otroId);
+    }
+
+    // ---- Abrir / cerrar panel ----
+    function pedirNombreSiHaceFalta() {
+      if (miNombre) return false;
+      elTitulo.textContent = 'Chat en directo';
+      elOnline.textContent = '';
+      cuerpo.innerHTML = '<div class="chat-nombre-caja">' +
+        '<p>Elige el nombre con el que vas a aparecer en el chat. Puedes cambiarlo cuando quieras.</p>' +
+        '<input type="text" id="chatNombreInput" maxlength="40" placeholder="Tu nombre o equipo" autocomplete="off">' +
+        '<button type="button" class="boton" id="chatNombreOk">Entrar al chat</button>' +
+      '</div>';
+      var inp = document.getElementById('chatNombreInput');
+      var ok = document.getElementById('chatNombreOk');
+      function guardar() {
+        var v = (inp.value || '').trim();
+        if (!v) { inp.focus(); return; }
+        miNombre = v; localStorage.setItem('chat_nombre', v);
+        actualizarMiPresencia();
+        pintarGrupo();
+      }
+      ok.addEventListener('click', guardar);
+      inp.addEventListener('keydown', function (e) { if (e.key === 'Enter') guardar(); });
+      inp.focus();
+      return true;
+    }
+
+    function abrirPanel() {
+      panel.classList.add('abierto');
+      backdrop.classList.add('abierto');
+      panel.setAttribute('aria-hidden', 'false');
+      if (elBurbujas) elBurbujas.style.display = 'none';
+      arrancarPresencia();
+      if (!pedirNombreSiHaceFalta()) {
+        if (vista === 'grupo' || !vista) pintarGrupo(); else pintarDm(vista);
+      }
+    }
+    function cerrarPanel() {
+      panel.classList.remove('abierto');
+      backdrop.classList.remove('abierto');
+      panel.setAttribute('aria-hidden', 'true');
+      pintarBurbujas();
+    }
+
+    if (btnChat) btnChat.addEventListener('click', abrirPanel);
+    document.getElementById('chatCerrar').addEventListener('click', cerrarPanel);
+    backdrop.addEventListener('click', cerrarPanel);
+
+    // Mantener presencia viva aunque el panel esté cerrado (para enseñar el contador y recibir DMs)
+    cargarMensajes().then(function () {
+      arrancarPresencia();
+      pintarBurbujas();
+    });
+
+    // Al cerrar la pestaña, soltar presencia
+    window.addEventListener('beforeunload', function () { if (canalPresencia) try { canalPresencia.untrack(); } catch (e) {} });
+  })();
+
 })();
 </script>
 </body>
