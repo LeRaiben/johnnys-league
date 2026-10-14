@@ -70,14 +70,15 @@ y actualiza el `.env`. Los tokens de Biwenger duran bastante, pero no para siemp
    El archivo `.env` **no se sube**, ya está protegido por el `.gitignore`.
    Eso es intencionado: tu token no debe estar nunca en internet.
 
-### 3.2 Netlify
+### 3.2 GitHub Pages
 
-1. Crea una cuenta en netlify.com (puedes entrar con GitHub)
-2. "Add new site" → "Import an existing project" → elige tu repositorio
-3. No hace falta configurar nada, ya está en el `netlify.toml`
-4. En un minuto tendrás una dirección tipo `johnnys-league.netlify.app`
+1. En tu repositorio de GitHub, ve a **Settings → Pages**
+2. En "Source" elige "Deploy from a branch", rama `main` y carpeta `/ (root)`
+3. Guarda. En un par de minutos tendrás la web en
+   `https://leraiben.github.io/johnnys-league/`
 
-Ya está online. Compártela con el grupo.
+Ya está online. Compártela con el grupo. Cada commit a `main` la vuelve a publicar
+sola, no hay que hacer nada más.
 
 ### 3.3 Que se actualice sola
 
@@ -122,9 +123,9 @@ a la lista `hemeroteca` con su jornada, título e imagen.
 
 ## Dominio propio (opcional)
 
-Si más adelante quieres `johnnysleague.com` en vez de la dirección de Netlify:
-cómpralo donde prefieras (unos 12 € al año) y en Netlify ve a
-**Domain settings → Add a custom domain**. Te dice exactamente qué tienes que cambiar.
+Si más adelante quieres `johnnysleague.com` en vez de la dirección de GitHub Pages:
+cómpralo donde prefieras (unos 12 € al año) y en tu repositorio de GitHub ve a
+**Settings → Pages → Custom domain**. GitHub te explica qué registros DNS tienes que cambiar.
 
 ---
 
