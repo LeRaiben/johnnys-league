@@ -1223,6 +1223,7 @@
 
         var resp = await sb.from('suscriptores_push')
           .upsert({ subscription: subscription.toJSON() }, { onConflict: 'endpoint' });
+        try { var cid = localStorage.getItem('chat_id'); if (cid) sb.rpc('vincular_push_chat', { p_endpoint: subscription.endpoint, p_chat_id: cid }); } catch (e) {}
 
         if (resp.error) throw resp.error;
 
@@ -1658,10 +1659,31 @@
     document.getElementById('chatCerrar').addEventListener('click', cerrarPanel);
     backdrop.addEventListener('click', cerrarPanel);
 
+    // Vincular este móvil (si tiene avisos activados) con su identidad del chat,
+    // para que los avisos de mensajes privados le lleguen solo a él.
+    function vincularAvisos() {
+      try {
+        if (!('serviceWorker' in navigator) || !('PushManager' in window)) return;
+        navigator.serviceWorker.getRegistration('sw.js').then(function (reg) {
+          if (!reg) return null;
+          return reg.pushManager.getSubscription();
+        }).then(function (sub) {
+          if (sub && sub.endpoint) sb.rpc('vincular_push_chat', { p_endpoint: sub.endpoint, p_chat_id: MI_ID });
+        }).catch(function () {});
+      } catch (e) {}
+    }
+
     // Mantener presencia viva aunque el panel esté cerrado (para enseñar el contador y recibir DMs)
     cargarMensajes().then(function () {
       arrancarPresencia();
       pintarBurbujas();
+      vincularAvisos();
+      // Si se entra desde un aviso del chat, abrir el chat (o el privado) directamente
+      var pChat = new URLSearchParams(location.search).get('chat');
+      if (pChat) {
+        abrirPanel();
+        if (pChat !== '1' && miNombre) abrirDm(pChat, nombreConocido(pChat));
+      }
     });
 
     // Al cerrar la pestaña, soltar presencia
