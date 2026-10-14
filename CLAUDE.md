@@ -5,7 +5,7 @@ Web de Johnny's League, una liga privada de Biwenger con 12 presidentes. El due�
 ## Dónde está publicada
 
 - La web está en GitHub Pages: https://leraiben.github.io/johnnys-league/
-- NO usamos Netlify. (El antiguo `netlify.toml` era un resto de las instrucciones iniciales y se ha borrado.)
+- Es la única web real. Cualquier otra versión antigua está abandonada y no cuenta.
 - Cada commit a `main` publica la web automáticamente en GitHub Pages. No hay otro paso de despliegue.
 
 ## Servicios (solo estos dos)
@@ -13,7 +13,9 @@ Web de Johnny's League, una liga privada de Biwenger con 12 presidentes. El due�
 1. **GitHub**: el código, la publicación (Pages) y un workflow de GitHub Actions.
 2. **Supabase**: proyecto "johnnys-league", id `hgmswhslnuqlzqbvuifw`. Ahí está todo lo dinámico: tablón (mensajes, encuestas, likes), chat en directo, duelos, suscripciones push y la Edge Function `send-push`. Las notificaciones se disparan solas al insertar en la tabla `mensajes`.
 
-No hay servidores propios, ni Netlify, ni Vercel, ni ningún otro servicio.
+No hay servidores propios ni ningún otro servicio.
+
+**Regla:** Netlify no existe para este proyecto. No lo menciones, no lo consultes, no lo propongas y no crees nada relacionado con él. Si aparece cualquier resto de Netlify, bórralo.
 
 ## De dónde salen los datos de la liga
 
