@@ -130,6 +130,28 @@
   .form-respuesta { margin-top:12px; padding:12px; background:rgba(2,18,52,0.9); border-radius:4px; border:1px solid var(--navy-line); }
   .aviso-suave { background:var(--navy-soft); border-left:3px solid var(--gold-dim); padding:16px 18px; font-size:0.92rem; color:rgba(247,247,245,0.82); }
 
+  /* Vídeos de YouTube dentro de los mensajes */
+  .msg-card .texto a { color:var(--gold); text-decoration:underline; word-break:break-all; }
+  .yt-wrap { position:relative; margin-top:12px; width:100%; max-width:560px; aspect-ratio:16/9;
+    background:#000 center/cover no-repeat; border-radius:8px; overflow:hidden; cursor:pointer;
+    border:1px solid var(--navy-line); }
+  .yt-wrap::after { content:''; position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0) 45%); }
+  .yt-wrap .yt-play { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:2;
+    width:68px; height:48px; border-radius:12px; background:#E3242B; border:0; cursor:pointer;
+    display:flex; align-items:center; justify-content:center; box-shadow:0 4px 18px rgba(0,0,0,0.5); transition:transform .15s; }
+  .yt-wrap .yt-play::before { content:''; border-style:solid; border-width:11px 0 11px 19px; border-color:transparent transparent transparent #fff; margin-left:4px; }
+  .yt-wrap:hover .yt-play { transform:translate(-50%,-50%) scale(1.08); }
+  .yt-wrap .yt-titulo { position:absolute; left:12px; right:12px; bottom:10px; z-index:2; color:#fff;
+    font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:0.95rem; line-height:1.2;
+    text-shadow:0 1px 3px rgba(0,0,0,0.8); overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; }
+  .yt-wrap.activo { cursor:default; }
+  .yt-wrap.activo::after { display:none; }
+  .yt-wrap iframe { position:absolute; inset:0; width:100%; height:100%; border:0; z-index:3; }
+  #avisoNovedades { position:fixed; left:50%; bottom:22px; transform:translateX(-50%); z-index:500; display:none;
+    background:var(--gold); color:var(--navy); border:0; border-radius:22px; padding:10px 18px; cursor:pointer;
+    font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:0.95rem; letter-spacing:0.05em;
+    text-transform:uppercase; box-shadow:0 6px 20px rgba(0,0,0,0.45); }
+
   @media (max-width: 600px) {
     .hilo-respuestas { margin-left:10px; padding-left:12px; }
     .msg-card.respuesta::before { left:-12px; width:10px; }
@@ -240,7 +262,7 @@ document.getElementById('btn-aceptar-pikachu').addEventListener('click', functio
       </div>
       <div class="campo">
         <label for="texto">Mensaje</label>
-        <textarea id="texto" maxlength="2000" placeholder="Abre un hilo: pullas, fichajes, debates..."></textarea>
+        <textarea id="texto" maxlength="2000" placeholder="Abre un hilo: pullas, fichajes, debates... (pega un enlace de YouTube y se verá el vídeo)"></textarea>
       </div>
 
       <div style="display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap;">
@@ -340,6 +362,56 @@ document.getElementById('btn-aceptar-pikachu').addEventListener('click', functio
       .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
       .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
   };
+
+  // ---- YouTube: detectar enlaces, pintar la vista previa y reproducir dentro del tablón ----
+  var RE_YT = /(?:https?:\/\/)?(?:www\.|m\.|music\.)?(?:youtube\.com\/(?:watch\?[^\s]*?v=|shorts\/|embed\/|live\/)|youtu\.be\/)([A-Za-z0-9_-]{11})([^\s]*)/g;
+  function videosDeYoutube(texto) {
+    var lista = [], vistos = {}, m;
+    RE_YT.lastIndex = 0;
+    while ((m = RE_YT.exec(String(texto || ''))) && lista.length < 3) {
+      if (vistos[m[1]]) continue;
+      vistos[m[1]] = true;
+      var t = /[?&#]t=(\d+)/.exec(m[2] || '');
+      lista.push({ id: m[1], inicio: t ? parseInt(t[1], 10) : 0 });
+    }
+    return lista;
+  }
+  function textoConEnlaces(texto) {
+    return esc(texto).replace(/https?:\/\/[^\s<]+/g, function (url) {
+      return '<a href="' + url + '" target="_blank" rel="noopener noreferrer">' + url + '</a>';
+    });
+  }
+  function htmlVideos(texto) {
+    return videosDeYoutube(texto).map(function (v) {
+      return '<div class="yt-wrap" data-yt="' + v.id + '" data-inicio="' + v.inicio + '"' +
+        ' style="background-image:url(\'https://i.ytimg.com/vi/' + v.id + '/hqdefault.jpg\')">' +
+        '<button type="button" class="yt-play" aria-label="Reproducir vídeo"></button>' +
+        '<div class="yt-titulo"></div>' +
+      '</div>';
+    }).join('');
+  }
+  var titulosYT = {};
+  function ponerTituloYT(el) {
+    var id = el.dataset.yt, caja = el.querySelector('.yt-titulo');
+    if (!caja) return;
+    if (titulosYT[id] !== undefined) { caja.textContent = titulosYT[id]; return; }
+    titulosYT[id] = '';
+    fetch('https://www.youtube.com/oembed?format=json&url=' + encodeURIComponent('https://www.youtube.com/watch?v=' + id))
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        titulosYT[id] = (d && d.title) || '';
+        document.querySelectorAll('.yt-wrap[data-yt="' + id + '"] .yt-titulo').forEach(function (c) { c.textContent = titulosYT[id]; });
+      })
+      .catch(function () {});
+  }
+  function reproducirYT(el) {
+    if (el.classList.contains('activo')) return;
+    var src = 'https://www.youtube-nocookie.com/embed/' + el.dataset.yt + '?autoplay=1&playsinline=1&rel=0' +
+      (parseInt(el.dataset.inicio, 10) > 0 ? '&start=' + parseInt(el.dataset.inicio, 10) : '');
+    el.classList.add('activo');
+    el.innerHTML = '<iframe src="' + src + '" title="Vídeo de YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+  }
+  function hayVideoSonando() { return !!document.querySelector('#lista .yt-wrap.activo'); }
 
   function estado(texto) {
     var z = document.getElementById('zonaEstado');
@@ -544,7 +616,8 @@ document.getElementById('btn-aceptar-pikachu').addEventListener('click', functio
         '<span class="autor">' + esc(m.nombre) + '</span>' +
         '<span class="cuando">' + esc(cuando(m.creado)) + '</span>' +
       '</div>' +
-      '<div class="texto">' + esc(m.texto) + '</div>' +
+      '<div class="texto">' + textoConEnlaces(m.texto) + '</div>' +
+      htmlVideos(m.texto) +
       htmlImg +
       htmlPoll +
       htmlAcciones +
@@ -586,6 +659,11 @@ document.getElementById('btn-aceptar-pikachu').addEventListener('click', functio
 
     cont.querySelectorAll('.btn-reaccion').forEach(function (b) {
       b.addEventListener('click', function () { reaccionar(b.dataset.id, b.dataset.emoji, b); });
+    });
+
+    cont.querySelectorAll('.yt-wrap').forEach(function (v) {
+      ponerTituloYT(v);
+      v.addEventListener('click', function () { reproducirYT(v); });
     });
 
     cont.querySelectorAll('.borrar').forEach(function (b) {
@@ -636,7 +714,25 @@ document.getElementById('btn-aceptar-pikachu').addEventListener('click', functio
     var p = await sb.from('encuestas').select('id, mensaje_id, pregunta, opciones, votos');
     if (r.error) { estado('No se han podido cargar los mensajes: ' + r.error.message); return; }
     estado('');
+    var aviso = document.getElementById('avisoNovedades');
+    if (aviso) aviso.style.display = 'none';
     pintar(r.data || [], p.data || []);
+  }
+
+  // Si alguien está viendo un vídeo, no repintamos el tablón (cortaría el vídeo):
+  // se avisa con un botón y se actualiza cuando él quiera.
+  function cargarDesdeRealtime() {
+    if (!hayVideoSonando()) { cargar(); return; }
+    var aviso = document.getElementById('avisoNovedades');
+    if (!aviso) {
+      aviso = document.createElement('button');
+      aviso.id = 'avisoNovedades';
+      aviso.type = 'button';
+      aviso.textContent = '🔄 Hay novedades · Actualizar';
+      aviso.addEventListener('click', function () { cargar(); });
+      document.body.appendChild(aviso);
+    }
+    aviso.style.display = 'block';
   }
 
   function dispararPop(el) {
@@ -945,8 +1041,8 @@ document.getElementById('btn-aceptar-pikachu').addEventListener('click', functio
 
   function activarRealtime() {
     sb.channel('realtime-tablon')
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'mensajes' }, function () { cargar(); })
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'encuestas' }, function () { cargar(); })
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'mensajes' }, function () { cargarDesdeRealtime(); })
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'encuestas' }, function () { cargarDesdeRealtime(); })
       .subscribe();
   }
 
