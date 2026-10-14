@@ -11,7 +11,7 @@ Web de Johnny's League, una liga privada de Biwenger con 12 presidentes. El due�
 ## Servicios (solo estos dos)
 
 1. **GitHub**: el código, la publicación (Pages) y un workflow de GitHub Actions.
-2. **Supabase**: proyecto "johnnys-league", id `hgmswhslnuqlzqbvuifw`. Ahí está todo lo dinámico: tablón (mensajes, encuestas, likes), chat en directo, duelos, suscripciones push y la Edge Function `send-push`. Las notificaciones se disparan solas al insertar en la tabla `mensajes`.
+2. **Supabase**: proyecto "johnnys-league", id `hgmswhslnuqlzqbvuifw`. Ahí está todo lo dinámico: tablón (mensajes, encuestas, likes), duelos, suscripciones push y la Edge Function `send-push`. Las notificaciones se disparan solas al insertar en la tabla `mensajes`.
 
 No hay servidores propios ni ningún otro servicio.
 

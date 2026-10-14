@@ -17,12 +17,6 @@ self.addEventListener('push', function (event) {
       url: data.url || '/tablon.html'
     }
   };
-  // Avisos del chat: llevan "tag", así un aviso nuevo sustituye al anterior
-  // en silencio en vez de acumularse.
-  if (data.tag) {
-    options.tag = data.tag;
-    options.renotify = false;
-  }
 
   event.waitUntil(
     self.registration.showNotification(data.title || "Johnny's League", options)
