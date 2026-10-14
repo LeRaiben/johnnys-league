@@ -84,7 +84,7 @@
   .poll-count { position:relative; z-index:2; font-size:0.78rem; color:var(--gold); font-weight:bold; }
 
   /* Mensajes e Hilos */
-  .lista-msg { display:grid; gap:16px; }
+  .lista-msg { display:grid; gap:16px; grid-template-columns:minmax(0,1fr); }
   .msg-card { background:var(--navy-soft); border-left:3px solid var(--gold); border-radius:0 4px 4px 0; padding:16px 18px; }
   .msg-card.respuesta { background:rgba(2, 18, 52, 0.4); border-left:2px solid var(--grey); margin-top:10px; margin-left:0; position:relative; }
 
@@ -95,7 +95,7 @@
   .msg-card .autor { font-family:'Anton',sans-serif; font-size:0.98rem; color:var(--gold); }
   .msg-card.respuesta .autor { color:var(--white); font-size:0.9rem; }
   .msg-card .cuando { font-family:'Barlow Condensed',sans-serif; font-size:0.72rem; color:var(--grey); text-transform:uppercase; }
-  .msg-card .texto { font-size:0.95rem; line-height:1.5; color:rgba(247,247,245,0.92); white-space:pre-wrap; word-wrap:break-word; }
+  .msg-card .texto { font-size:0.95rem; line-height:1.5; color:rgba(247,247,245,0.92); white-space:pre-wrap; word-wrap:break-word; overflow-wrap:anywhere; }
 
   .img-wrap { position:relative; display:block; margin-top:12px; }
   .msg-card .img-adjunta { max-width:100%; max-height:420px; border-radius:8px; border:none; display:block; }
