@@ -140,13 +140,6 @@
   .btn-publicar:active { transform:scale(0.97); }
   .btn-publicar:disabled { opacity:0.5; cursor:default; box-shadow:none; }
 
-  /* ---------- Avatares ---------- */
-  .avatar { flex:0 0 auto; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center;
-    font-family:'Anton',sans-serif; font-size:1.05rem; color:var(--navy-deep); background:var(--c, var(--gold));
-    box-shadow:inset 0 -2px 0 rgba(0,0,0,0.18); text-transform:uppercase; user-select:none; }
-  .avatar.vacio { background:rgba(255,255,255,0.1); color:var(--grey); }
-  .avatar.pequeno { width:32px; height:32px; font-size:0.85rem; }
-
   /* ---------- Mensajes ---------- */
   .lista { display:flex; flex-direction:column; gap:16px; }
   .hilo { background:var(--tarjeta); border:1px solid var(--borde); border-radius:var(--radio); padding:16px;
@@ -190,7 +183,7 @@
   @keyframes pop { 0% { transform:scale(1); } 45% { transform:scale(1.35); } 100% { transform:scale(1); } }
   .pop { animation:pop .28s ease; }
 
-  .respuestas { margin-top:14px; padding-left:14px; margin-left:19px; border-left:2px solid rgba(224,169,79,0.28);
+  .respuestas { margin-top:14px; padding-left:14px; margin-left:2px; border-left:2px solid rgba(224,169,79,0.28);
     display:flex; flex-direction:column; gap:14px; }
   .respuestas .post-texto { font-size:0.96rem; }
   .ver-mas { align-self:flex-start; background:none; border:0; color:var(--gold); cursor:pointer; padding:0;
@@ -266,10 +259,7 @@
     .hero.hero-tablon { padding-top:66px; }
     .hilo, .composer { padding:14px; }
     .composer.respuesta { padding:10px; }
-    .post { gap:10px; }
-    .avatar { width:36px; height:36px; font-size:0.95rem; }
-    .avatar.pequeno { width:28px; height:28px; font-size:0.78rem; }
-    .respuestas { margin-left:6px; padding-left:12px; }
+    .respuestas { margin-left:0; padding-left:12px; }
     .comp-cuenta { display:none; }
     .btn-publicar { margin-left:auto; }
   }
@@ -438,18 +428,6 @@
            f.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
   }
 
-  // Avatar con la inicial y un color fijo para cada nombre
-  var COLORES = ['#E0A94F', '#E8746A', '#7EA9D9', '#5FBF8F', '#B98BE0', '#E89A5B', '#5DB3C4', '#D9C27E'];
-  function avatar(nombre, pequeno) {
-    var limpio = String(nombre || '').trim();
-    var cls = 'avatar' + (pequeno ? ' pequeno' : '');
-    if (!limpio) return '<div class="' + cls + ' vacio">?</div>';
-    var h = 0;
-    for (var i = 0; i < limpio.length; i++) h = (h * 31 + limpio.toLowerCase().charCodeAt(i)) >>> 0;
-    var inicial = Array.from(limpio.replace(/^[@#\s]+/, '') || limpio)[0];
-    return '<div class="' + cls + '" style="--c:' + COLORES[h % COLORES.length] + '">' + esc(inicial) + '</div>';
-  }
-
   // ---------- Texto, enlaces y YouTube ----------
   var RE_YT = /(?:https?:\/\/)?(?:www\.|m\.|music\.)?(?:youtube\.com\/(?:watch\?[^\s]*?v=|shorts\/|embed\/|live\/)|youtu\.be\/)([A-Za-z0-9_-]{11})([^\s]*)/g;
   function videosDeYoutube(texto) {
@@ -585,7 +563,6 @@
     return '<div class="composer ' + (esRespuesta ? 'respuesta' : 'principal') + '" data-comp="' + key + '"' +
         (esRespuesta ? ' data-root="' + opciones.rootId + '"' : '') + '>' +
       '<div class="comp-cab">' +
-        '<span class="comp-avatar">' + avatar(nombre, esRespuesta) + '</span>' +
         '<input type="text" class="comp-nombre" maxlength="40" placeholder="Tu nombre o equipo" value="' + esc(nombre) + '">' +
       '</div>' +
       '<textarea class="comp-texto" maxlength="2000" placeholder="' +
@@ -848,7 +825,6 @@
     }).join('');
 
     return '<article class="post" data-id="' + m.id + '">' +
-      avatar(m.nombre, esRespuesta) +
       '<div class="post-cuerpo">' +
         '<div class="post-cab">' +
           '<span class="post-autor">' + esc(m.nombre) + '</span>' +
@@ -1126,9 +1102,6 @@
     if (e.target.classList.contains('comp-texto')) {
       var n = comp.querySelector('.comp-cuenta .n');
       if (n) n.textContent = e.target.value.length;
-    }
-    if (e.target.classList.contains('comp-nombre')) {
-      comp.querySelector('.comp-avatar').innerHTML = avatar(e.target.value, comp.classList.contains('respuesta'));
     }
   });
 
