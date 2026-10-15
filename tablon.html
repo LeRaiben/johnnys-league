@@ -556,7 +556,9 @@
     return composers[key];
   }
 
-  function nombreGuardado() { return leer('tablon_nombre') || ''; }
+  // El nombre no se recuerda: cada vez se escribe a mano. Borramos el que pudiera quedar de antes.
+  try { localStorage.removeItem('tablon_nombre'); } catch (e) {}
+  function nombreGuardado() { return ''; }
 
   function htmlComposer(key, opciones) {
     var st = estadoComposer(key);
@@ -565,7 +567,7 @@
     return '<div class="composer ' + (esRespuesta ? 'respuesta' : 'principal') + '" data-comp="' + key + '"' +
         (esRespuesta ? ' data-root="' + opciones.rootId + '"' : '') + '>' +
       '<div class="comp-cab">' +
-        '<input type="text" class="comp-nombre" maxlength="40" placeholder="Tu nombre o equipo" value="' + esc(nombre) + '">' +
+        '<input type="text" class="comp-nombre" maxlength="40" autocomplete="off" placeholder="Tu nombre o equipo" value="' + esc(nombre) + '">' +
       '</div>' +
       '<textarea class="comp-texto" maxlength="2000" placeholder="' +
         (esRespuesta ? 'Escribe tu respuesta…' : '¿Qué se cuece? Pullas, fichajes, debates… (pega un enlace de YouTube y se verá el vídeo)') +
@@ -744,7 +746,6 @@
 
     st.enviando = true;
     actualizarBotonPublicar(key);
-    guardar('tablon_nombre', nombre);
 
     var fila = { nombre: nombre, texto: texto || (encuesta ? encuesta.pregunta : ''), imagen: st.imagen, likes: 0 };
     if (rootId) fila.mensaje_padre_id = rootId;
