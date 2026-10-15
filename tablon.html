@@ -26,8 +26,9 @@
   /* ---------- Cabecera del tablón ---------- */
   .hero.hero-tablon { padding-bottom:28px; border-bottom:none; }
   .hero-tablon .hero-titulo { margin-bottom:6px; align-items:center; }
-  .hero-tablon .section-note { margin:0; }
-  .herramientas { position:absolute; top:16px; right:0; z-index:3; display:flex; gap:10px; align-items:center; }
+  .hero-tablon .section-note { margin:0; flex:1 1 260px; }
+  .hero-pie { display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; }
+  .herramientas { position:relative; z-index:3; display:flex; gap:10px; align-items:center; margin-left:auto; }
   .btn-redondo { position:relative; width:46px; height:46px; border-radius:50%; border:1px solid var(--borde);
     background:var(--tarjeta); color:var(--white); cursor:pointer; display:inline-flex; align-items:center;
     justify-content:center; padding:0; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
@@ -147,7 +148,7 @@
   .post { display:flex; gap:12px; min-width:0; }
   .post-cuerpo { flex:1; min-width:0; }
   .post-cab { display:flex; align-items:baseline; gap:8px; flex-wrap:wrap; min-height:22px; }
-  .post-autor { font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:1.05rem; letter-spacing:0.02em; color:var(--white); }
+  .post-autor { font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:1.05rem; letter-spacing:0.02em; color:var(--gold); }
   .post-cuando { font-size:0.8rem; color:var(--grey); }
   .post-borrar { margin-left:auto; background:none; border:0; color:var(--grey); cursor:pointer; padding:2px; display:flex; }
   .post-borrar:hover { color:#F09A90; }
@@ -254,9 +255,8 @@
   @keyframes aparecer { from { opacity:0; transform:translateY(6px); } }
 
   @media (max-width:600px) {
-    .herramientas { top:10px; gap:8px; }
+    .herramientas { gap:8px; }
     .btn-redondo { width:42px; height:42px; }
-    .hero.hero-tablon { padding-top:66px; }
     .hilo, .composer { padding:14px; }
     .composer.respuesta { padding:10px; }
     .respuestas { margin-left:0; padding-left:12px; }
@@ -315,26 +315,28 @@
 <main class="wrap tablon">
 
   <section class="hero hero-tablon">
-    <div class="herramientas">
-      <button type="button" class="btn-redondo pequeno" id="btnAdmin" title="Acceso admin" aria-label="Acceso admin">
-        <svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-      </button>
-      <span class="chip-admin" id="chipAdmin" hidden title="Cerrar sesión de admin">Admin · salir</span>
-      <button type="button" class="btn-redondo" id="btnRefrescar" title="Refrescar el tablón" aria-label="Refrescar el tablón">
-        <svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
-      </button>
-      <button type="button" class="btn-redondo" id="btnNotificaciones" title="Activar notificaciones" aria-label="Activar notificaciones">
-        <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-        <span class="punto"></span>
-      </button>
-      <div class="pista" id="pistaNotif" hidden>
-        <b>Activa los avisos</b><br>Toca la campana y te llegará un aviso cada vez que alguien publique.
-      </div>
-    </div>
     <div class="hero-titulo">
       <h2>El tablón</h2>
     </div>
-    <p class="section-note">Espacio libre para publicar, debatir y responder en hilos.</p>
+    <div class="hero-pie">
+      <p class="section-note">Espacio libre para publicar, debatir y responder en hilos.</p>
+      <div class="herramientas">
+        <button type="button" class="btn-redondo pequeno" id="btnAdmin" title="Acceso admin" aria-label="Acceso admin">
+          <svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        </button>
+        <span class="chip-admin" id="chipAdmin" hidden title="Cerrar sesión de admin">Admin · salir</span>
+        <button type="button" class="btn-redondo" id="btnRefrescar" title="Refrescar el tablón" aria-label="Refrescar el tablón">
+          <svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+        </button>
+        <button type="button" class="btn-redondo" id="btnNotificaciones" title="Activar notificaciones" aria-label="Activar notificaciones">
+          <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          <span class="punto"></span>
+        </button>
+        <div class="pista" id="pistaNotif" hidden>
+          <b>Activa los avisos</b><br>Toca la campana y te llegará un aviso cada vez que alguien publique.
+        </div>
+      </div>
+    </div>
   </section>
 
   <section class="feed">
