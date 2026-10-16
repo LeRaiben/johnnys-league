@@ -831,34 +831,67 @@ async function traerCatalogoJugadores() {
  * dificultad que Biwenger calcula para ESE equipo en cada uno (jugar en
  * casa o fuera cambia la dificultad, así que no es la misma para los dos
  * rivales de un mismo partido).
+ *
+ * Biwenger corta con "429 Too Many Requests" cuando se le pide mucho
+ * seguido. Para que el calendario no se quede en blanco:
+ *  - se espera un poco entre equipo y equipo,
+ *  - si el CDN falla se prueba la API normal (con nuestras credenciales),
+ *  - y si aun así falla, se reutiliza lo último bueno guardado en
+ *    data/calendario-equipos.json, quitando los partidos ya jugados.
  */
-async function traerCalendarioEquipos(detalleEquipos, cuantasJornadas = 3) {
+const RUTA_CALENDARIO_EQUIPOS = () => resolve(RAIZ, 'data', 'calendario-equipos.json');
+const dormir = (ms) => new Promise((r) => setTimeout(r, ms));
+const numeroJornada = (nombre = '') => Number((String(nombre).match(/\d+/) || [])[0]) || 0;
+const fechaMs = (f) => (typeof f === 'number' ? (f < 1e12 ? f * 1000 : f) : Date.parse(f) || 0);
+
+async function traerCalendarioEquipos(detalleEquipos, jornadaActual = 0, cuantasJornadas = 3) {
   const calendario = {};
 
+  let guardado = {};
+  try { guardado = JSON.parse(await readFile(RUTA_CALENDARIO_EQUIPOS(), 'utf8')); } catch (e) {}
+  const nuevoGuardado = { ...guardado };
+
+  let fallos = 0;
   for (const [id, equipo] of Object.entries(detalleEquipos)) {
     if (!equipo.slug) continue;
-    try {
-      const campos = encodeURIComponent('matches(round,date,status,home,away)');
-      const datos = await pedir(`${CDN}/teams/la-liga/${equipo.slug}?fields=${campos}`, false);
-      const partidos = datos.matches || [];
+    const campos = encodeURIComponent('matches(round,date,status,home,away)');
+    let datos = null;
+    for (const intento of [
+      () => pedir(`${CDN}/teams/la-liga/${equipo.slug}?fields=${campos}`, false),
+      () => pedir(`${API}/teams/la-liga/${equipo.slug}?fields=${campos}`)
+    ]) {
+      try { datos = await intento(); break; } catch (e) { datos = null; }
+    }
+    await dormir(400);
 
+    if (datos) {
+      const partidos = datos.matches || [];
       // La dificultad no es la misma para los dos equipos de un partido:
       // jugar en casa o fuera cambia el número, así que cogemos el suyo.
       const pendientes = partidos.filter((p) => p.status !== 'finished');
-      calendario[id] = pendientes.slice(0, cuantasJornadas).map((p) => {
+      const lista = pendientes.slice(0, cuantasJornadas + 2).map((p) => {
         const esLocal = p.home?.id === Number(id);
         return {
           jornada: p.round?.name || '',
+          fecha: p.date ?? null,
           esLocal,
           rival: (esLocal ? p.away : p.home)?.name || '',
           dificultad: (esLocal ? p.home : p.away)?.difficulty?.rating ?? null
         };
       });
-    } catch (e) {
-      console.warn(`Aviso: no se pudo leer el calendario de ${equipo.name}.`, e.message);
-      calendario[id] = [];
+      nuevoGuardado[equipo.name] = lista;
+      calendario[id] = lista.slice(0, cuantasJornadas);
+    } else {
+      fallos++;
+      // Lo último bueno, sin los partidos que ya han pasado
+      const ahora = Date.now();
+      calendario[id] = (guardado[equipo.name] || [])
+        .filter((p) => (p.fecha ? fechaMs(p.fecha) > ahora - 3 * 3600 * 1000 : /postpon|aplaz/i.test(p.jornada) || numeroJornada(p.jornada) >= jornadaActual))
+        .slice(0, cuantasJornadas);
     }
   }
+  if (fallos) console.warn(`Aviso: Biwenger no dio el calendario de ${fallos} equipos; uso el último guardado.`);
+  await writeFile(RUTA_CALENDARIO_EQUIPOS(), JSON.stringify(nuevoGuardado, null, 2), 'utf8');
   return calendario;
 }
 
@@ -1707,6 +1740,10 @@ async function principal() {
 
   console.log('Calculando el Once Ideal (esto tarda un poco más, pregunta jugador a jugador)...');
   const { plantillas, clausulas } = await traerPlantillas(tabla);
+  // El calendario va antes del Once Ideal: el Once Ideal hace muchas
+  // peticiones seguidas y después Biwenger empieza a cortar (429).
+  console.log('Consultando el calendario de dificultad de los 20 equipos reales...');
+  const calendarioEquipos = await traerCalendarioEquipos(catalogo.detalleEquipos, jornadasJugadas);
   const onceIdeal = await calcularOnceIdeal(plantillas, jugadores, scoreID, tabla);
   console.log(onceIdeal ? `Once Ideal: ${onceIdeal.jornada}, ${onceIdeal.total} puntos.` : 'Once Ideal: sin datos todavía.');
 
@@ -1717,8 +1754,6 @@ async function principal() {
   const amenazas = calcularMapaAmenazas(tabla, historico);
   console.log(`Termómetro: ${termometro.length} titulares. Amenazas: ${amenazas.length}.`);
 
-  console.log('Consultando el calendario de dificultad de los 20 equipos reales...');
-  const calendarioEquipos = await traerCalendarioEquipos(catalogo.detalleEquipos);
   const calendario = calcularCalendarioPresidentes(plantillas, jugadores, calendarioEquipos, tabla);
   console.log('Calendario de dificultad calculado.');
 
