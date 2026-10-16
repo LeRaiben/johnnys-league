@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-16T13:10:49.951Z",
+  "actualizado": "2026-10-16T15:17:20.724Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 8,
   "jornadaEnJuego": true,
@@ -916,19 +916,6 @@
     },
     {
       "tipo": "venta",
-      "nombre": "Luiz Felipe",
-      "foto": "https://cdn.biwenger.com/i/p/26676.png",
-      "posicion": "Defensa",
-      "equipoReal": "Rayo Vallecano",
-      "vendedor": "Las Víboras FC",
-      "pide": "0,1 M",
-      "pideBruto": 150000,
-      "valorMercado": "0,1 M",
-      "valorBruto": 150000,
-      "diferencia": 0
-    },
-    {
-      "tipo": "venta",
       "nombre": "Paredes",
       "foto": "https://cdn.biwenger.com/i/p/27996.png",
       "posicion": "Defensa",
@@ -1020,19 +1007,6 @@
     },
     {
       "tipo": "venta",
-      "nombre": "Paco Cortés",
-      "foto": "https://cdn.biwenger.com/i/p/39736.png",
-      "posicion": "Delantero",
-      "equipoReal": "Levante",
-      "vendedor": "Las Víboras FC",
-      "pide": "0,1 M",
-      "pideBruto": 150000,
-      "valorMercado": "0,1 M",
-      "valorBruto": 150000,
-      "diferencia": 0
-    },
-    {
-      "tipo": "venta",
       "nombre": "Riki Rodríguez",
       "foto": "https://cdn.biwenger.com/i/p/41081.png",
       "posicion": "Centrocampista",
@@ -1043,19 +1017,6 @@
       "valorMercado": "0,6 M",
       "valorBruto": 560000,
       "diferencia": -20000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Guliashvili",
-      "foto": "https://cdn.biwenger.com/i/p/41261.png",
-      "posicion": "Delantero",
-      "equipoReal": "Racing",
-      "vendedor": "Las Víboras FC",
-      "pide": "0,2 M",
-      "pideBruto": 180000,
-      "valorMercado": "0,2 M",
-      "valorBruto": 170000,
-      "diferencia": 10000
     },
     {
       "tipo": "venta",
@@ -2415,7 +2376,7 @@
       "balance": "+0,4 M",
       "balanceBruto": 448799,
       "sobreprecioMedio": 22,
-      "enVenta": 15,
+      "enVenta": 12,
       "fichajeEstrella": {
         "nombre": "Camello",
         "precio": "6,7 M",
@@ -3641,6 +3602,35 @@
       }
     ],
     "C.d.F Atlético de Cohiba": [
+      {
+        "nombre": "Paco Cortés",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/39736.png",
+        "equipoReal": "Levante",
+        "jornadas": [
+          {
+            "jornada": "Round 9",
+            "fecha": 1792177200,
+            "esLocal": false,
+            "rival": "Deportivo",
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "fecha": 1792605600,
+            "esLocal": true,
+            "rival": "Athletic",
+            "dificultad": 55
+          },
+          {
+            "jornada": "Round 10",
+            "fecha": 1792949400,
+            "esLocal": false,
+            "rival": "Real Sociedad",
+            "dificultad": 54
+          }
+        ]
+      },
       {
         "nombre": "David Soria",
         "posicion": "Portero",
@@ -6672,6 +6662,35 @@
     ],
     "Urdinho Pernambucano": [
       {
+        "nombre": "Guliashvili",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/41261.png",
+        "equipoReal": "Racing",
+        "jornadas": [
+          {
+            "jornada": "Round 9",
+            "fecha": 1792324800,
+            "esLocal": false,
+            "rival": "Osasuna",
+            "dificultad": 21
+          },
+          {
+            "jornada": "Round 10",
+            "fecha": 1792851300,
+            "esLocal": true,
+            "rival": "Espanyol",
+            "dificultad": 43
+          },
+          {
+            "jornada": "Round 11",
+            "fecha": 1793546100,
+            "esLocal": true,
+            "rival": "Real Madrid",
+            "dificultad": 65
+          }
+        ]
+      },
+      {
         "nombre": "Ryan",
         "posicion": "Portero",
         "foto": "https://cdn.biwenger.com/i/p/2184.png",
@@ -7459,6 +7478,64 @@
     ],
     "Las Víboras FC": [
       {
+        "nombre": "Paco Cortés",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/39736.png",
+        "equipoReal": "Levante",
+        "jornadas": [
+          {
+            "jornada": "Round 9",
+            "fecha": 1792177200,
+            "esLocal": false,
+            "rival": "Deportivo",
+            "dificultad": 50
+          },
+          {
+            "jornada": "Round 6 (postponed)",
+            "fecha": 1792605600,
+            "esLocal": true,
+            "rival": "Athletic",
+            "dificultad": 55
+          },
+          {
+            "jornada": "Round 10",
+            "fecha": 1792949400,
+            "esLocal": false,
+            "rival": "Real Sociedad",
+            "dificultad": 54
+          }
+        ]
+      },
+      {
+        "nombre": "Guliashvili",
+        "posicion": "Delantero",
+        "foto": "https://cdn.biwenger.com/i/p/41261.png",
+        "equipoReal": "Racing",
+        "jornadas": [
+          {
+            "jornada": "Round 9",
+            "fecha": 1792324800,
+            "esLocal": false,
+            "rival": "Osasuna",
+            "dificultad": 21
+          },
+          {
+            "jornada": "Round 10",
+            "fecha": 1792851300,
+            "esLocal": true,
+            "rival": "Espanyol",
+            "dificultad": 43
+          },
+          {
+            "jornada": "Round 11",
+            "fecha": 1793546100,
+            "esLocal": true,
+            "rival": "Real Madrid",
+            "dificultad": 65
+          }
+        ]
+      },
+      {
         "nombre": "Larrubia",
         "posicion": "Delantero",
         "foto": "https://cdn.biwenger.com/i/p/41412.png",
@@ -7807,35 +7884,6 @@
         ]
       },
       {
-        "nombre": "Paco Cortés",
-        "posicion": "Delantero",
-        "foto": "https://cdn.biwenger.com/i/p/39736.png",
-        "equipoReal": "Levante",
-        "jornadas": [
-          {
-            "jornada": "Round 9",
-            "fecha": 1792177200,
-            "esLocal": false,
-            "rival": "Deportivo",
-            "dificultad": 50
-          },
-          {
-            "jornada": "Round 6 (postponed)",
-            "fecha": 1792605600,
-            "esLocal": true,
-            "rival": "Athletic",
-            "dificultad": 55
-          },
-          {
-            "jornada": "Round 10",
-            "fecha": 1792949400,
-            "esLocal": false,
-            "rival": "Real Sociedad",
-            "dificultad": 54
-          }
-        ]
-      },
-      {
         "nombre": "Riki Rodríguez",
         "posicion": "Centrocampista",
         "foto": "https://cdn.biwenger.com/i/p/41081.png",
@@ -7861,35 +7909,6 @@
             "esLocal": true,
             "rival": "Osasuna",
             "dificultad": 17
-          }
-        ]
-      },
-      {
-        "nombre": "Guliashvili",
-        "posicion": "Delantero",
-        "foto": "https://cdn.biwenger.com/i/p/41261.png",
-        "equipoReal": "Racing",
-        "jornadas": [
-          {
-            "jornada": "Round 9",
-            "fecha": 1792324800,
-            "esLocal": false,
-            "rival": "Osasuna",
-            "dificultad": 21
-          },
-          {
-            "jornada": "Round 10",
-            "fecha": 1792851300,
-            "esLocal": true,
-            "rival": "Espanyol",
-            "dificultad": 43
-          },
-          {
-            "jornada": "Round 11",
-            "fecha": 1793546100,
-            "esLocal": true,
-            "rival": "Real Madrid",
-            "dificultad": 65
           }
         ]
       }
@@ -9141,6 +9160,39 @@
       "blindadoHasta": "2026-10-16T19:00:00.000Z"
     },
     {
+      "id": "39736",
+      "nombre": "Paco Cortés",
+      "slug": "paco-cortes",
+      "posicion": "Delantero",
+      "posicionCodigo": 4,
+      "foto": "https://cdn.biwenger.com/i/p/39736.png",
+      "equipoReal": "Levante",
+      "equipoIdReal": "10",
+      "presidente": "C.d.F Atlético de Cohiba",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/10271084.png?v=66",
+      "precio": 150000,
+      "precioTexto": "0,1 M",
+      "puntosTotales": 8,
+      "partidosJugados": 4,
+      "media": 2,
+      "puntosPorMillon": 53.33,
+      "racha": [
+        2,
+        2,
+        3,
+        1
+      ],
+      "rachaTitular": 0,
+      "ultimoMinutos": 1,
+      "clausula": null,
+      "clausulaTexto": null,
+      "pagadoPorSuDueno": null,
+      "margen": null,
+      "margenPorcentaje": null,
+      "blindado": false,
+      "blindadoHasta": null
+    },
+    {
       "id": "11",
       "nombre": "David Soria",
       "slug": "david-soria",
@@ -10072,6 +10124,40 @@
       "margenPorcentaje": 64,
       "blindado": true,
       "blindadoHasta": "2026-10-27T05:04:11.000Z"
+    },
+    {
+      "id": "6259",
+      "nombre": "Hugo Duro",
+      "slug": "hugo-duro",
+      "posicion": "Delantero",
+      "posicionCodigo": 4,
+      "foto": "https://cdn.biwenger.com/i/p/6259.png",
+      "equipoReal": "Valencia",
+      "equipoIdReal": "18",
+      "presidente": "CD Tiro Buchón",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/10272194.png?v=89",
+      "precio": 1570000,
+      "precioTexto": "1,6 M",
+      "puntosTotales": 17,
+      "partidosJugados": 8,
+      "media": 2.1,
+      "puntosPorMillon": 10.83,
+      "racha": [
+        0,
+        3,
+        3,
+        3,
+        2
+      ],
+      "rachaTitular": 3,
+      "ultimoMinutos": 90,
+      "clausula": 2370000,
+      "clausulaTexto": "2,4 M",
+      "pagadoPorSuDueno": 1580000,
+      "margen": 800000,
+      "margenPorcentaje": 51,
+      "blindado": true,
+      "blindadoHasta": "2026-10-31T05:02:37.000Z"
     },
     {
       "id": "11196",
@@ -12563,6 +12649,39 @@
       "blindadoHasta": "2026-10-16T19:00:00.000Z"
     },
     {
+      "id": "41261",
+      "nombre": "Guliashvili",
+      "slug": "g-guliashvili",
+      "posicion": "Delantero",
+      "posicionCodigo": 4,
+      "foto": "https://cdn.biwenger.com/i/p/41261.png",
+      "equipoReal": "Racing",
+      "equipoIdReal": "812",
+      "presidente": "Urdinho Pernambucano",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/12659137.png?v=9",
+      "precio": 170000,
+      "precioTexto": "0,2 M",
+      "puntosTotales": 8,
+      "partidosJugados": 4,
+      "media": 2,
+      "puntosPorMillon": 47.06,
+      "racha": [
+        2,
+        3,
+        2,
+        1
+      ],
+      "rachaTitular": 0,
+      "ultimoMinutos": 15,
+      "clausula": null,
+      "clausulaTexto": null,
+      "pagadoPorSuDueno": null,
+      "margen": null,
+      "margenPorcentaje": null,
+      "blindado": false,
+      "blindadoHasta": null
+    },
+    {
       "id": "2184",
       "nombre": "Ryan",
       "slug": "ryan",
@@ -13446,6 +13565,72 @@
       "blindadoHasta": "2026-10-17T13:32:13.000Z"
     },
     {
+      "id": "39736",
+      "nombre": "Paco Cortés",
+      "slug": "paco-cortes",
+      "posicion": "Delantero",
+      "posicionCodigo": 4,
+      "foto": "https://cdn.biwenger.com/i/p/39736.png",
+      "equipoReal": "Levante",
+      "equipoIdReal": "10",
+      "presidente": "Las Víboras FC",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
+      "precio": 150000,
+      "precioTexto": "0,1 M",
+      "puntosTotales": 8,
+      "partidosJugados": 4,
+      "media": 2,
+      "puntosPorMillon": 53.33,
+      "racha": [
+        2,
+        2,
+        3,
+        1
+      ],
+      "rachaTitular": 0,
+      "ultimoMinutos": 1,
+      "clausula": null,
+      "clausulaTexto": null,
+      "pagadoPorSuDueno": null,
+      "margen": null,
+      "margenPorcentaje": null,
+      "blindado": false,
+      "blindadoHasta": null
+    },
+    {
+      "id": "41261",
+      "nombre": "Guliashvili",
+      "slug": "g-guliashvili",
+      "posicion": "Delantero",
+      "posicionCodigo": 4,
+      "foto": "https://cdn.biwenger.com/i/p/41261.png",
+      "equipoReal": "Racing",
+      "equipoIdReal": "812",
+      "presidente": "Las Víboras FC",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
+      "precio": 170000,
+      "precioTexto": "0,2 M",
+      "puntosTotales": 8,
+      "partidosJugados": 4,
+      "media": 2,
+      "puntosPorMillon": 47.06,
+      "racha": [
+        2,
+        3,
+        2,
+        1
+      ],
+      "rachaTitular": 0,
+      "ultimoMinutos": 15,
+      "clausula": null,
+      "clausulaTexto": null,
+      "pagadoPorSuDueno": null,
+      "margen": null,
+      "margenPorcentaje": null,
+      "blindado": false,
+      "blindadoHasta": null
+    },
+    {
       "id": "41412",
       "nombre": "Larrubia",
       "slug": "david-larrubia",
@@ -13838,39 +14023,6 @@
       "blindadoHasta": "2026-10-16T19:00:00.000Z"
     },
     {
-      "id": "39736",
-      "nombre": "Paco Cortés",
-      "slug": "paco-cortes",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/39736.png",
-      "equipoReal": "Levante",
-      "equipoIdReal": "10",
-      "presidente": "Las Víboras FC",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
-      "precio": 150000,
-      "precioTexto": "0,1 M",
-      "puntosTotales": 8,
-      "partidosJugados": 4,
-      "media": 2,
-      "puntosPorMillon": 53.33,
-      "racha": [
-        2,
-        2,
-        3,
-        1
-      ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 1,
-      "clausula": 450000,
-      "clausulaTexto": "0,5 M",
-      "pagadoPorSuDueno": null,
-      "margen": 300000,
-      "margenPorcentaje": 200,
-      "blindado": true,
-      "blindadoHasta": "2026-10-16T19:00:00.000Z"
-    },
-    {
       "id": "41081",
       "nombre": "Riki Rodríguez",
       "slug": "riki-rodriguez",
@@ -13901,39 +14053,6 @@
       "pagadoPorSuDueno": null,
       "margen": 560000,
       "margenPorcentaje": 100,
-      "blindado": true,
-      "blindadoHasta": "2026-10-16T19:00:00.000Z"
-    },
-    {
-      "id": "41261",
-      "nombre": "Guliashvili",
-      "slug": "g-guliashvili",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/41261.png",
-      "equipoReal": "Racing",
-      "equipoIdReal": "812",
-      "presidente": "Las Víboras FC",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
-      "precio": 170000,
-      "precioTexto": "0,2 M",
-      "puntosTotales": 8,
-      "partidosJugados": 4,
-      "media": 2,
-      "puntosPorMillon": 47.06,
-      "racha": [
-        2,
-        3,
-        2,
-        1
-      ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 15,
-      "clausula": 540000,
-      "clausulaTexto": "0,5 M",
-      "pagadoPorSuDueno": 180000,
-      "margen": 370000,
-      "margenPorcentaje": 218,
       "blindado": true,
       "blindadoHasta": "2026-10-16T19:00:00.000Z"
     },
@@ -14102,64 +14221,6 @@
       "blindadoHasta": "2026-10-31T05:02:37.000Z"
     },
     {
-      "id": "23006",
-      "nombre": "Rivero",
-      "slug": "cristian-rivero",
-      "posicion": "Portero",
-      "posicionCodigo": 1,
-      "foto": "https://cdn.biwenger.com/i/p/23006.png",
-      "equipoReal": "Valencia",
-      "equipoIdReal": "18",
-      "presidente": "Seif fc",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/14027560.png",
-      "precio": 150000,
-      "precioTexto": "0,1 M",
-      "puntosTotales": 0,
-      "partidosJugados": 0,
-      "media": 0,
-      "puntosPorMillon": 0,
-      "racha": [],
-      "rachaTitular": 0,
-      "ultimoMinutos": null,
-      "clausula": 450000,
-      "clausulaTexto": "0,5 M",
-      "pagadoPorSuDueno": 150000,
-      "margen": 300000,
-      "margenPorcentaje": 200,
-      "blindado": true,
-      "blindadoHasta": "2026-10-16T19:00:00.000Z"
-    },
-    {
-      "id": "24956",
-      "nombre": "Nico Serrano",
-      "slug": "nico-serrano",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/24956.png",
-      "equipoReal": "Athletic",
-      "equipoIdReal": "1",
-      "presidente": "Seif fc",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/14027560.png",
-      "precio": 150000,
-      "precioTexto": "0,1 M",
-      "puntosTotales": 2,
-      "partidosJugados": 1,
-      "media": 2,
-      "puntosPorMillon": 13.33,
-      "racha": [
-        2
-      ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 4,
-      "clausula": 450000,
-      "clausulaTexto": "0,5 M",
-      "pagadoPorSuDueno": 150000,
-      "margen": 300000,
-      "margenPorcentaje": 200,
-      "blindado": true,
-      "blindadoHasta": "2026-10-16T19:00:00.000Z"
-    },
-    {
       "id": "30487",
       "nombre": "Álvaro Valles",
       "slug": "alvaro-valles",
@@ -14225,40 +14286,6 @@
       "margenPorcentaje": 326,
       "blindado": true,
       "blindadoHasta": "2026-10-16T19:00:00.000Z"
-    },
-    {
-      "id": "34527",
-      "nombre": "Dani Olmo",
-      "slug": "dani-olmo",
-      "posicion": "Centrocampista",
-      "posicionCodigo": 3,
-      "foto": "https://cdn.biwenger.com/i/p/34527.png",
-      "equipoReal": "Barcelona",
-      "equipoIdReal": "3",
-      "presidente": "Seif fc",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/14027560.png",
-      "precio": 10200000,
-      "precioTexto": "10,2 M",
-      "puntosTotales": 49,
-      "partidosJugados": 8,
-      "media": 6.1,
-      "puntosPorMillon": 4.8,
-      "racha": [
-        5,
-        6,
-        13,
-        1,
-        11
-      ],
-      "rachaTitular": 1,
-      "ultimoMinutos": 61,
-      "clausula": 13242696,
-      "clausulaTexto": "13,2 M",
-      "pagadoPorSuDueno": 11035580,
-      "margen": 3042696,
-      "margenPorcentaje": 30,
-      "blindado": true,
-      "blindadoHasta": "2026-10-25T05:02:08.000Z"
     },
     {
       "id": "37709",
@@ -14423,40 +14450,6 @@
       "margenPorcentaje": 50,
       "blindado": true,
       "blindadoHasta": "2026-10-16T19:00:00.000Z"
-    },
-    {
-      "id": "43171",
-      "nombre": "Johaneko",
-      "slug": "johaneko",
-      "posicion": "Defensa",
-      "posicionCodigo": 2,
-      "foto": "https://cdn.biwenger.com/i/p/43171.png",
-      "equipoReal": "Athletic",
-      "equipoIdReal": "1",
-      "presidente": "Seif fc",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/14027560.png",
-      "precio": 720000,
-      "precioTexto": "0,7 M",
-      "puntosTotales": 16,
-      "partidosJugados": 5,
-      "media": 3.2,
-      "puntosPorMillon": 22.22,
-      "racha": [
-        3,
-        4,
-        4,
-        0,
-        5
-      ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 45,
-      "clausula": 1663540,
-      "clausulaTexto": "1,7 M",
-      "pagadoPorSuDueno": 831770,
-      "margen": 943540,
-      "margenPorcentaje": 131,
-      "blindado": true,
-      "blindadoHasta": "2026-10-16T19:00:00.000Z"
     }
   ],
   "valorJusto": {
@@ -14504,6 +14497,39 @@
         "foto": "https://cdn.biwenger.com/i/p/39736.png",
         "equipoReal": "Levante",
         "equipoIdReal": "10",
+        "presidente": "C.d.F Atlético de Cohiba",
+        "escudoPresidente": "https://cdn.biwenger.com/i/u/10271084.png?v=66",
+        "precio": 150000,
+        "precioTexto": "0,1 M",
+        "puntosTotales": 8,
+        "partidosJugados": 4,
+        "media": 2,
+        "puntosPorMillon": 53.33,
+        "racha": [
+          2,
+          2,
+          3,
+          1
+        ],
+        "rachaTitular": 0,
+        "ultimoMinutos": 1,
+        "clausula": null,
+        "clausulaTexto": null,
+        "pagadoPorSuDueno": null,
+        "margen": null,
+        "margenPorcentaje": null,
+        "blindado": false,
+        "blindadoHasta": null
+      },
+      {
+        "id": "39736",
+        "nombre": "Paco Cortés",
+        "slug": "paco-cortes",
+        "posicion": "Delantero",
+        "posicionCodigo": 4,
+        "foto": "https://cdn.biwenger.com/i/p/39736.png",
+        "equipoReal": "Levante",
+        "equipoIdReal": "10",
         "presidente": "Las Víboras FC",
         "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
         "precio": 150000,
@@ -14520,13 +14546,46 @@
         ],
         "rachaTitular": 0,
         "ultimoMinutos": 1,
-        "clausula": 450000,
-        "clausulaTexto": "0,5 M",
+        "clausula": null,
+        "clausulaTexto": null,
         "pagadoPorSuDueno": null,
-        "margen": 300000,
-        "margenPorcentaje": 200,
-        "blindado": true,
-        "blindadoHasta": "2026-10-16T19:00:00.000Z"
+        "margen": null,
+        "margenPorcentaje": null,
+        "blindado": false,
+        "blindadoHasta": null
+      },
+      {
+        "id": "41261",
+        "nombre": "Guliashvili",
+        "slug": "g-guliashvili",
+        "posicion": "Delantero",
+        "posicionCodigo": 4,
+        "foto": "https://cdn.biwenger.com/i/p/41261.png",
+        "equipoReal": "Racing",
+        "equipoIdReal": "812",
+        "presidente": "Urdinho Pernambucano",
+        "escudoPresidente": "https://cdn.biwenger.com/i/u/12659137.png?v=9",
+        "precio": 170000,
+        "precioTexto": "0,2 M",
+        "puntosTotales": 8,
+        "partidosJugados": 4,
+        "media": 2,
+        "puntosPorMillon": 47.06,
+        "racha": [
+          2,
+          3,
+          2,
+          1
+        ],
+        "rachaTitular": 0,
+        "ultimoMinutos": 15,
+        "clausula": null,
+        "clausulaTexto": null,
+        "pagadoPorSuDueno": null,
+        "margen": null,
+        "margenPorcentaje": null,
+        "blindado": false,
+        "blindadoHasta": null
       },
       {
         "id": "41261",
@@ -14553,13 +14612,13 @@
         ],
         "rachaTitular": 0,
         "ultimoMinutos": 15,
-        "clausula": 540000,
-        "clausulaTexto": "0,5 M",
-        "pagadoPorSuDueno": 180000,
-        "margen": 370000,
-        "margenPorcentaje": 218,
-        "blindado": true,
-        "blindadoHasta": "2026-10-16T19:00:00.000Z"
+        "clausula": null,
+        "clausulaTexto": null,
+        "pagadoPorSuDueno": null,
+        "margen": null,
+        "margenPorcentaje": null,
+        "blindado": false,
+        "blindadoHasta": null
       },
       {
         "id": "31475",
@@ -14658,72 +14717,6 @@
         "pagadoPorSuDueno": 523700,
         "margen": 657400,
         "margenPorcentaje": 169,
-        "blindado": true,
-        "blindadoHasta": "2026-10-16T19:00:00.000Z"
-      },
-      {
-        "id": "35308",
-        "nombre": "Córdoba",
-        "slug": "iker-cordoba",
-        "posicion": "Defensa",
-        "posicionCodigo": 2,
-        "foto": "https://cdn.biwenger.com/i/p/35308.png",
-        "equipoReal": "Valencia",
-        "equipoIdReal": "18",
-        "presidente": "FC FORUSIA",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
-        "precio": 150000,
-        "precioTexto": "0,1 M",
-        "puntosTotales": 5,
-        "partidosJugados": 3,
-        "media": 1.7,
-        "puntosPorMillon": 33.33,
-        "racha": [
-          4,
-          3,
-          -2
-        ],
-        "rachaTitular": 0,
-        "ultimoMinutos": 8,
-        "clausula": 450060,
-        "clausulaTexto": "0,5 M",
-        "pagadoPorSuDueno": 150020,
-        "margen": 300060,
-        "margenPorcentaje": 200,
-        "blindado": true,
-        "blindadoHasta": "2026-10-16T19:00:00.000Z"
-      },
-      {
-        "id": "24734",
-        "nombre": "Jesús Vázquez",
-        "slug": "jesus-vazquez",
-        "posicion": "Defensa",
-        "posicionCodigo": 2,
-        "foto": "https://cdn.biwenger.com/i/p/24734.png",
-        "equipoReal": "Valencia",
-        "equipoIdReal": "18",
-        "presidente": "Madriguana FC",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/11412167.png?v=15",
-        "precio": 600000,
-        "precioTexto": "0,6 M",
-        "puntosTotales": 18,
-        "partidosJugados": 7,
-        "media": 2.6,
-        "puntosPorMillon": 30,
-        "racha": [
-          3,
-          2,
-          4,
-          2,
-          0
-        ],
-        "rachaTitular": 0,
-        "ultimoMinutos": 8,
-        "clausula": 1550000,
-        "clausulaTexto": "1,6 M",
-        "pagadoPorSuDueno": 775000,
-        "margen": 950000,
-        "margenPorcentaje": 158,
         "blindado": true,
         "blindadoHasta": "2026-10-16T19:00:00.000Z"
       }
@@ -16096,6 +16089,23 @@
         "dificultad": 47
       },
       {
+        "nombre": "Paco Cortés",
+        "foto": "https://cdn.biwenger.com/i/p/39736.png",
+        "posicion": "Delantero",
+        "equipoReal": "Levante",
+        "racha": [
+          2,
+          2,
+          3,
+          1
+        ],
+        "rachaTitular": 0,
+        "nota": 3.5,
+        "rival": "Deportivo",
+        "esLocal": false,
+        "dificultad": 50
+      },
+      {
         "nombre": "Rubén Vargas",
         "foto": "https://cdn.biwenger.com/i/p/35615.png",
         "posicion": "Delantero",
@@ -16668,6 +16678,24 @@
         "rival": "Alavés",
         "esLocal": true,
         "dificultad": 47
+      },
+      {
+        "nombre": "Hugo Duro",
+        "foto": "https://cdn.biwenger.com/i/p/6259.png",
+        "posicion": "Delantero",
+        "equipoReal": "Valencia",
+        "racha": [
+          0,
+          3,
+          3,
+          3,
+          2
+        ],
+        "rachaTitular": 3,
+        "nota": 2.9,
+        "rival": "Athletic",
+        "esLocal": true,
+        "dificultad": 58
       },
       {
         "nombre": "Selu Diallo",
@@ -17815,6 +17843,23 @@
         "dificultad": 70
       },
       {
+        "nombre": "Guliashvili",
+        "foto": "https://cdn.biwenger.com/i/p/41261.png",
+        "posicion": "Delantero",
+        "equipoReal": "Racing",
+        "racha": [
+          2,
+          3,
+          2,
+          1
+        ],
+        "rachaTitular": 0,
+        "nota": 5.2,
+        "rival": "Osasuna",
+        "esLocal": false,
+        "dificultad": 21
+      },
+      {
         "nombre": "Saliba",
         "foto": "https://cdn.biwenger.com/i/p/42802.png",
         "posicion": "Centrocampista",
@@ -18541,24 +18586,6 @@
         "dificultad": 59
       },
       {
-        "nombre": "Dani Olmo",
-        "foto": "https://cdn.biwenger.com/i/p/34527.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Barcelona",
-        "racha": [
-          5,
-          6,
-          13,
-          1,
-          11
-        ],
-        "rachaTitular": 1,
-        "nota": 4.8,
-        "rival": "Betis",
-        "esLocal": false,
-        "dificultad": 59
-      },
-      {
         "nombre": "Álvaro Valles",
         "foto": "https://cdn.biwenger.com/i/p/30487.png",
         "posicion": "Portero",
@@ -18575,24 +18602,6 @@
         "rival": "Barcelona",
         "esLocal": true,
         "dificultad": 88
-      },
-      {
-        "nombre": "Johaneko",
-        "foto": "https://cdn.biwenger.com/i/p/43171.png",
-        "posicion": "Defensa",
-        "equipoReal": "Athletic",
-        "racha": [
-          3,
-          4,
-          4,
-          0,
-          5
-        ],
-        "rachaTitular": 0,
-        "nota": 4.3,
-        "rival": "Rayo Vallecano",
-        "esLocal": false,
-        "dificultad": null
       },
       {
         "nombre": "Pedri",
@@ -18629,20 +18638,6 @@
         "rival": "Deportivo",
         "esLocal": false,
         "dificultad": 50
-      },
-      {
-        "nombre": "Nico Serrano",
-        "foto": "https://cdn.biwenger.com/i/p/24956.png",
-        "posicion": "Delantero",
-        "equipoReal": "Athletic",
-        "racha": [
-          2
-        ],
-        "rachaTitular": 0,
-        "nota": 3.5,
-        "rival": "Rayo Vallecano",
-        "esLocal": false,
-        "dificultad": null
       },
       {
         "nombre": "Suazo",
@@ -18685,18 +18680,6 @@
         "rival": "Rayo Vallecano",
         "esLocal": false,
         "dificultad": null
-      },
-      {
-        "nombre": "Rivero",
-        "foto": "https://cdn.biwenger.com/i/p/23006.png",
-        "posicion": "Portero",
-        "equipoReal": "Valencia",
-        "racha": [],
-        "rachaTitular": 0,
-        "nota": 2.1,
-        "rival": "Athletic",
-        "esLocal": true,
-        "dificultad": 58
       }
     ]
   },
