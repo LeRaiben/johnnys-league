@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-15T22:35:11.272Z",
+  "actualizado": "2026-10-16T00:44:36.432Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 8,
   "jornadaEnJuego": true,
@@ -955,6 +955,19 @@
     },
     {
       "tipo": "venta",
+      "nombre": "El-Abdellaoui",
+      "foto": "https://cdn.biwenger.com/i/p/35606.png",
+      "posicion": "Delantero",
+      "equipoReal": "Celta",
+      "vendedor": "Las Víboras FC",
+      "pide": "0,2 M",
+      "pideBruto": 200000,
+      "valorMercado": "0,2 M",
+      "valorBruto": 200000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
       "nombre": "Adrián Niño",
       "foto": "https://cdn.biwenger.com/i/p/35706.png",
       "posicion": "Delantero",
@@ -978,6 +991,32 @@
       "valorMercado": "1,0 M",
       "valorBruto": 1030000,
       "diferencia": -170000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Paco Cortés",
+      "foto": "https://cdn.biwenger.com/i/p/39736.png",
+      "posicion": "Delantero",
+      "equipoReal": "Levante",
+      "vendedor": "Las Víboras FC",
+      "pide": "0,1 M",
+      "pideBruto": 150000,
+      "valorMercado": "0,1 M",
+      "valorBruto": 150000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Riki Rodríguez",
+      "foto": "https://cdn.biwenger.com/i/p/41081.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Deportivo",
+      "vendedor": "Las Víboras FC",
+      "pide": "0,5 M",
+      "pideBruto": 540000,
+      "valorMercado": "0,5 M",
+      "valorBruto": 540000,
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -2350,7 +2389,7 @@
       "balance": "+0,4 M",
       "balanceBruto": 448799,
       "sobreprecioMedio": 23,
-      "enVenta": 11,
+      "enVenta": 14,
       "fichajeEstrella": {
         "nombre": "Camello",
         "precio": "6,7 M",
@@ -18101,6 +18140,18 @@
       "clausulaTexto": "57,9 M",
       "media": 13.4,
       "blindadoHasta": "2026-10-19T05:04:57.000Z"
+    },
+    {
+      "nombre": "Marcos Fernández",
+      "foto": "https://cdn.biwenger.com/i/p/37644.png",
+      "posicion": "Delantero",
+      "equipoReal": "Espanyol",
+      "presidente": "C.d.F Atlético de Cohiba",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/10271084.png?v=66",
+      "precioTexto": "2,0 M",
+      "clausulaTexto": "5,5 M",
+      "media": 4.1,
+      "blindadoHasta": "2026-10-20T00:04:01.000Z"
     }
   ]
 }
