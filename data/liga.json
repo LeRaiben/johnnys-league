@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-16T15:17:20.724Z",
+  "actualizado": "2026-10-16T18:51:34.287Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 8,
   "jornadaEnJuego": true,
@@ -131,8 +131,8 @@
       "iniciales": "CC",
       "escudo": "https://cdn.biwenger.com/i/u/11412340.png",
       "puntos": 466,
-      "valor": "58,1 M",
-      "valorBruto": 58080000,
+      "valor": "56,2 M",
+      "valorBruto": 56190000,
       "esTuyo": false,
       "puntosJornada": 50,
       "jugadosJornada": 10,
@@ -422,16 +422,81 @@
   "mercadoPresidentes": [
     {
       "tipo": "venta",
-      "nombre": "Isi Palazón",
-      "foto": "https://cdn.biwenger.com/i/p/5069.png",
+      "nombre": "Isco",
+      "foto": "https://cdn.biwenger.com/i/p/1249.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Betis",
+      "vendedor": "Manchester Pity",
+      "pide": "8,4 M",
+      "pideBruto": 8380000,
+      "valorMercado": "8,4 M",
+      "valorBruto": 8380000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Camavinga",
+      "foto": "https://cdn.biwenger.com/i/p/1733.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Real Madrid",
+      "vendedor": "Manchester Pity",
+      "pide": "1,9 M",
+      "pideBruto": 1890000,
+      "valorMercado": "1,9 M",
+      "valorBruto": 1890000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Marcos Llorente",
+      "foto": "https://cdn.biwenger.com/i/p/2600.png",
+      "posicion": "Defensa",
+      "equipoReal": "Atlético",
+      "vendedor": "Manchester Pity",
+      "pide": "5,6 M",
+      "pideBruto": 5640000,
+      "valorMercado": "5,6 M",
+      "valorBruto": 5640000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Ilaix Moriba",
+      "foto": "https://cdn.biwenger.com/i/p/21084.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Celta",
+      "vendedor": "Manchester Pity",
+      "pide": "3,5 M",
+      "pideBruto": 3450000,
+      "valorMercado": "3,5 M",
+      "valorBruto": 3450000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Yeremay",
+      "foto": "https://cdn.biwenger.com/i/p/41082.png",
       "posicion": "Delantero",
-      "equipoReal": "Rayo Vallecano",
-      "vendedor": "Lottin Capital",
-      "pide": "2,6 M",
-      "pideBruto": 2640000,
-      "valorMercado": "2,6 M",
-      "valorBruto": 2590000,
-      "diferencia": 50000
+      "equipoReal": "Deportivo",
+      "vendedor": "Manchester Pity",
+      "pide": "4,9 M",
+      "pideBruto": 4910000,
+      "valorMercado": "4,9 M",
+      "valorBruto": 4910000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Gabriel Jesus",
+      "foto": "https://cdn.biwenger.com/i/p/42517.png",
+      "posicion": "Delantero",
+      "equipoReal": "Barcelona",
+      "vendedor": "Manchester Pity",
+      "pide": "5,1 M",
+      "pideBruto": 5070000,
+      "valorMercado": "5,1 M",
+      "valorBruto": 5070000,
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -666,19 +731,6 @@
       "valorMercado": "12,0 M",
       "valorBruto": 11980000,
       "diferencia": 2252000
-    },
-    {
-      "tipo": "venta",
-      "nombre": "Moncayola",
-      "foto": "https://cdn.biwenger.com/i/p/8747.png",
-      "posicion": "Centrocampista",
-      "equipoReal": "Osasuna",
-      "vendedor": "Cañoneros CF",
-      "pide": "2,3 M",
-      "pideBruto": 2280000,
-      "valorMercado": "1,9 M",
-      "valorBruto": 1890000,
-      "diferencia": 390000
     },
     {
       "tipo": "venta",
@@ -1033,6 +1085,19 @@
     },
     {
       "tipo": "venta",
+      "nombre": "Eric García",
+      "foto": "https://cdn.biwenger.com/i/p/20.png",
+      "posicion": "Defensa",
+      "equipoReal": "Barcelona",
+      "vendedor": "Seif fc",
+      "pide": "5,7 M",
+      "pideBruto": 5660000,
+      "valorMercado": "5,7 M",
+      "valorBruto": 5660000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
       "nombre": "Vivian",
       "foto": "https://cdn.biwenger.com/i/p/12400.png",
       "posicion": "Defensa",
@@ -1116,11 +1181,11 @@
       "posicion": "Centrocampista",
       "equipoReal": "Real Sociedad",
       "vendedor": "Seif fc",
-      "pide": "0,3 M",
-      "pideBruto": 330000,
+      "pide": "0,4 M",
+      "pideBruto": 440000,
       "valorMercado": "0,4 M",
       "valorBruto": 440000,
-      "diferencia": -110000
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -1130,10 +1195,10 @@
       "equipoReal": "Barcelona",
       "vendedor": "Seif fc",
       "pide": "10,2 M",
-      "pideBruto": 10190000,
+      "pideBruto": 10200000,
       "valorMercado": "10,2 M",
       "valorBruto": 10200000,
-      "diferencia": -10000
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -1181,11 +1246,11 @@
       "posicion": "Centrocampista",
       "equipoReal": "Deportivo",
       "vendedor": "Seif fc",
-      "pide": "4,5 M",
-      "pideBruto": 4480000,
+      "pide": "4,6 M",
+      "pideBruto": 4590000,
       "valorMercado": "4,6 M",
       "valorBruto": 4590000,
-      "diferencia": -110000
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -1195,10 +1260,10 @@
       "equipoReal": "Alavés",
       "vendedor": "Seif fc",
       "pide": "1,0 M",
-      "pideBruto": 990000,
+      "pideBruto": 1040000,
       "valorMercado": "1,0 M",
       "valorBruto": 1040000,
-      "diferencia": -50000
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -2238,10 +2303,10 @@
       "escudo": "https://cdn.biwenger.com/i/u/11412340.png",
       "iniciales": "CC",
       "puntos": 466,
-      "valor": "58,1 M",
-      "valorBruto": 58080000,
+      "valor": "56,2 M",
+      "valorBruto": 56190000,
       "esTuyo": false,
-      "puntosPorMillon": 8.02,
+      "puntosPorMillon": 8.29,
       "mediaJornada": 58.3,
       "clausulasHechas": 2,
       "clausulasSufridas": 6,
@@ -2253,7 +2318,7 @@
       "balance": "−11,9 M",
       "balanceBruto": -11880000,
       "sobreprecioMedio": 62,
-      "enVenta": 15,
+      "enVenta": 14,
       "fichajeEstrella": {
         "nombre": "Mbappé",
         "precio": "34,5 M",
@@ -2261,12 +2326,12 @@
       },
       "total": 12,
       "puestoEficiencia": 6,
-      "puestoValor": 3,
+      "puestoValor": 4,
       "puestoGasto": 2,
       "puestoActividad": 7,
       "vsMediaPuntos": 21,
-      "vsMediaEficiencia": 4,
-      "vsMediaValor": 13,
+      "vsMediaEficiencia": 7,
+      "vsMediaValor": 10,
       "tendencia": {
         "puestos": -1,
         "puntos": 53,
@@ -2294,7 +2359,7 @@
       "balance": "−2,8 M",
       "balanceBruto": -2826500,
       "sobreprecioMedio": 31,
-      "enVenta": 14,
+      "enVenta": 15,
       "fichajeEstrella": {
         "nombre": "Bellingham",
         "precio": "23,1 M",
@@ -2335,7 +2400,7 @@
       "balance": "+12,0 M",
       "balanceBruto": 11985000,
       "sobreprecioMedio": 42,
-      "enVenta": 0,
+      "enVenta": 6,
       "fichajeEstrella": {
         "nombre": "Ilaix Moriba",
         "precio": "4,9 M",
@@ -2389,7 +2454,7 @@
       "puestoActividad": 1,
       "vsMediaPuntos": 5,
       "vsMediaEficiencia": 17,
-      "vsMediaValor": -13,
+      "vsMediaValor": -12,
       "tendencia": {
         "puestos": 2,
         "puntos": 77,
@@ -2429,8 +2494,8 @@
       "puestoGasto": 9,
       "puestoActividad": 9,
       "vsMediaPuntos": 0,
-      "vsMediaEficiencia": 12,
-      "vsMediaValor": -13,
+      "vsMediaEficiencia": 11,
+      "vsMediaValor": -12,
       "tendencia": {
         "puestos": -2,
         "puntos": 34,
@@ -2470,7 +2535,7 @@
       "puestoGasto": 7,
       "puestoActividad": 5,
       "vsMediaPuntos": -4,
-      "vsMediaEficiencia": -3,
+      "vsMediaEficiencia": -4,
       "vsMediaValor": -3,
       "tendencia": {
         "puestos": 3,
@@ -2507,7 +2572,7 @@
       },
       "total": 12,
       "puestoEficiencia": 12,
-      "puestoValor": 4,
+      "puestoValor": 3,
       "puestoGasto": 1,
       "puestoActividad": 2,
       "vsMediaPuntos": -7,
@@ -2552,7 +2617,7 @@
       "puestoGasto": 6,
       "puestoActividad": 3,
       "vsMediaPuntos": -7,
-      "vsMediaEficiencia": 20,
+      "vsMediaEficiencia": 19,
       "vsMediaValor": -24,
       "tendencia": {
         "puestos": -3,
@@ -2589,7 +2654,7 @@
       "puestoGasto": 12,
       "puestoActividad": 10,
       "vsMediaPuntos": -7,
-      "vsMediaEficiencia": 9,
+      "vsMediaEficiencia": 8,
       "vsMediaValor": -16,
       "tendencia": {
         "puestos": -1,
@@ -2618,7 +2683,7 @@
       "balance": "+12,6 M",
       "balanceBruto": 12604500,
       "sobreprecioMedio": 34,
-      "enVenta": 1,
+      "enVenta": 0,
       "fichajeEstrella": {
         "nombre": "Pépé",
         "precio": "14,9 M",
@@ -2631,7 +2696,7 @@
       "puestoActividad": 4,
       "vsMediaPuntos": -15,
       "vsMediaEficiencia": -18,
-      "vsMediaValor": 1,
+      "vsMediaValor": 2,
       "tendencia": {
         "puestos": 0,
         "puntos": 68,
@@ -2671,7 +2736,7 @@
       "puestoGasto": 11,
       "puestoActividad": 12,
       "vsMediaPuntos": -29,
-      "vsMediaEficiencia": 9,
+      "vsMediaEficiencia": 8,
       "vsMediaValor": -36,
       "tendencia": {
         "puestos": 0,
@@ -5784,35 +5849,6 @@
             "esLocal": false,
             "rival": "Racing",
             "dificultad": 26
-          }
-        ]
-      },
-      {
-        "nombre": "Moncayola",
-        "posicion": "Centrocampista",
-        "foto": "https://cdn.biwenger.com/i/p/8747.png",
-        "equipoReal": "Osasuna",
-        "jornadas": [
-          {
-            "jornada": "Round 9",
-            "fecha": 1792324800,
-            "esLocal": true,
-            "rival": "Racing",
-            "dificultad": 31
-          },
-          {
-            "jornada": "Round 10",
-            "fecha": 1793044800,
-            "esLocal": false,
-            "rival": "Sevilla",
-            "dificultad": 62
-          },
-          {
-            "jornada": "Round 11",
-            "fecha": 1793649600,
-            "esLocal": false,
-            "rival": "Deportivo",
-            "dificultad": 55
           }
         ]
       },
@@ -11650,40 +11686,6 @@
       "blindadoHasta": "2026-10-16T19:00:00.000Z"
     },
     {
-      "id": "8747",
-      "nombre": "Moncayola",
-      "slug": "moncayola",
-      "posicion": "Centrocampista",
-      "posicionCodigo": 3,
-      "foto": "https://cdn.biwenger.com/i/p/8747.png",
-      "equipoReal": "Osasuna",
-      "equipoIdReal": "93",
-      "presidente": "Cañoneros CF",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/11412340.png",
-      "precio": 1890000,
-      "precioTexto": "1,9 M",
-      "puntosTotales": 24,
-      "partidosJugados": 8,
-      "media": 3,
-      "puntosPorMillon": 12.7,
-      "racha": [
-        4,
-        1,
-        3,
-        4,
-        0
-      ],
-      "rachaTitular": 2,
-      "ultimoMinutos": 63,
-      "clausula": 4340000,
-      "clausulaTexto": "4,3 M",
-      "pagadoPorSuDueno": 3100000,
-      "margen": 2450000,
-      "margenPorcentaje": 130,
-      "blindado": true,
-      "blindadoHasta": "2026-10-16T19:00:00.000Z"
-    },
-    {
       "id": "15430",
       "nombre": "Joan García",
       "slug": "joan-garcia",
@@ -13925,38 +13927,6 @@
       "blindadoHasta": "2026-10-16T19:00:00.000Z"
     },
     {
-      "id": "35606",
-      "nombre": "El-Abdellaoui",
-      "slug": "el-abdellaoui",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/35606.png",
-      "equipoReal": "Celta",
-      "equipoIdReal": "5",
-      "presidente": "Las Víboras FC",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
-      "precio": 200000,
-      "precioTexto": "0,2 M",
-      "puntosTotales": 4,
-      "partidosJugados": 3,
-      "media": 1.3,
-      "puntosPorMillon": 20,
-      "racha": [
-        1,
-        2,
-        1
-      ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 64,
-      "clausula": 1260000,
-      "clausulaTexto": "1,3 M",
-      "pagadoPorSuDueno": 630000,
-      "margen": 1060000,
-      "margenPorcentaje": 530,
-      "blindado": true,
-      "blindadoHasta": "2026-10-16T19:00:00.000Z"
-    },
-    {
       "id": "35706",
       "nombre": "Adrián Niño",
       "slug": "adrian-nino",
@@ -14021,74 +13991,6 @@
       "margenPorcentaje": 71,
       "blindado": true,
       "blindadoHasta": "2026-10-16T19:00:00.000Z"
-    },
-    {
-      "id": "41081",
-      "nombre": "Riki Rodríguez",
-      "slug": "riki-rodriguez",
-      "posicion": "Centrocampista",
-      "posicionCodigo": 3,
-      "foto": "https://cdn.biwenger.com/i/p/41081.png",
-      "equipoReal": "Deportivo",
-      "equipoIdReal": "6",
-      "presidente": "Las Víboras FC",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/13934763.png",
-      "precio": 560000,
-      "precioTexto": "0,6 M",
-      "puntosTotales": 11,
-      "partidosJugados": 5,
-      "media": 2.2,
-      "puntosPorMillon": 19.64,
-      "racha": [
-        4,
-        3,
-        2,
-        0,
-        2
-      ],
-      "rachaTitular": 0,
-      "ultimoMinutos": 45,
-      "clausula": 1120000,
-      "clausulaTexto": "1,1 M",
-      "pagadoPorSuDueno": null,
-      "margen": 560000,
-      "margenPorcentaje": 100,
-      "blindado": true,
-      "blindadoHasta": "2026-10-16T19:00:00.000Z"
-    },
-    {
-      "id": "20",
-      "nombre": "Eric García",
-      "slug": "eric-garcia",
-      "posicion": "Defensa",
-      "posicionCodigo": 2,
-      "foto": "https://cdn.biwenger.com/i/p/20.png",
-      "equipoReal": "Barcelona",
-      "equipoIdReal": "3",
-      "presidente": "Seif fc",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/14027560.png",
-      "precio": 5660000,
-      "precioTexto": "5,7 M",
-      "puntosTotales": 39,
-      "partidosJugados": 7,
-      "media": 5.6,
-      "puntosPorMillon": 6.89,
-      "racha": [
-        9,
-        4,
-        4,
-        3,
-        3
-      ],
-      "rachaTitular": 4,
-      "ultimoMinutos": 90,
-      "clausula": 8190962,
-      "clausulaTexto": "8,2 M",
-      "pagadoPorSuDueno": 6300740,
-      "margen": 2530962,
-      "margenPorcentaje": 45,
-      "blindado": true,
-      "blindadoHasta": "2026-10-30T05:08:31.000Z"
     },
     {
       "id": "12400",
@@ -14187,40 +14089,6 @@
       "blindadoHasta": "2026-10-17T12:26:11.000Z"
     },
     {
-      "id": "21008",
-      "nombre": "Nico Williams",
-      "slug": "nico-williams",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/21008.png",
-      "equipoReal": "Athletic",
-      "equipoIdReal": "1",
-      "presidente": "Seif fc",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/14027560.png",
-      "precio": 6660000,
-      "precioTexto": "6,7 M",
-      "puntosTotales": 35,
-      "partidosJugados": 6,
-      "media": 5.8,
-      "puntosPorMillon": 5.26,
-      "racha": [
-        6,
-        11,
-        11,
-        2,
-        1
-      ],
-      "rachaTitular": 3,
-      "ultimoMinutos": 90,
-      "clausula": 8723000,
-      "clausulaTexto": "8,7 M",
-      "pagadoPorSuDueno": 6710000,
-      "margen": 2063000,
-      "margenPorcentaje": 31,
-      "blindado": true,
-      "blindadoHasta": "2026-10-31T05:02:37.000Z"
-    },
-    {
       "id": "30487",
       "nombre": "Álvaro Valles",
       "slug": "alvaro-valles",
@@ -14286,34 +14154,6 @@
       "margenPorcentaje": 326,
       "blindado": true,
       "blindadoHasta": "2026-10-16T19:00:00.000Z"
-    },
-    {
-      "id": "37709",
-      "nombre": "Boayar",
-      "slug": "adam-boayar",
-      "posicion": "Delantero",
-      "posicionCodigo": 4,
-      "foto": "https://cdn.biwenger.com/i/p/37709.png",
-      "equipoReal": "Elche",
-      "equipoIdReal": "75",
-      "presidente": "Seif fc",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/14027560.png",
-      "precio": 150000,
-      "precioTexto": "0,1 M",
-      "puntosTotales": 0,
-      "partidosJugados": 0,
-      "media": 0,
-      "puntosPorMillon": 0,
-      "racha": [],
-      "rachaTitular": 0,
-      "ultimoMinutos": null,
-      "clausula": 450000,
-      "clausulaTexto": "0,5 M",
-      "pagadoPorSuDueno": 150000,
-      "margen": 300000,
-      "margenPorcentaje": 200,
-      "blindado": true,
-      "blindadoHasta": "2026-10-17T05:04:47.000Z"
     },
     {
       "id": "37726",
@@ -17298,24 +17138,6 @@
         "dificultad": 53
       },
       {
-        "nombre": "Moncayola",
-        "foto": "https://cdn.biwenger.com/i/p/8747.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Osasuna",
-        "racha": [
-          4,
-          1,
-          3,
-          4,
-          0
-        ],
-        "rachaTitular": 2,
-        "nota": 4.7,
-        "rival": "Racing",
-        "esLocal": true,
-        "dificultad": 31
-      },
-      {
         "nombre": "De Haas",
         "foto": "https://cdn.biwenger.com/i/p/42271.png",
         "posicion": "Defensa",
@@ -18277,24 +18099,6 @@
         "dificultad": 43
       },
       {
-        "nombre": "Riki Rodríguez",
-        "foto": "https://cdn.biwenger.com/i/p/41081.png",
-        "posicion": "Centrocampista",
-        "equipoReal": "Deportivo",
-        "racha": [
-          4,
-          3,
-          2,
-          0,
-          2
-        ],
-        "rachaTitular": 0,
-        "nota": 5.5,
-        "rival": "Levante",
-        "esLocal": true,
-        "dificultad": 26
-      },
-      {
         "nombre": "Álvaro Núñez",
         "foto": "https://cdn.biwenger.com/i/p/37719.png",
         "posicion": "Defensa",
@@ -18435,22 +18239,6 @@
         "dificultad": 50
       },
       {
-        "nombre": "El-Abdellaoui",
-        "foto": "https://cdn.biwenger.com/i/p/35606.png",
-        "posicion": "Delantero",
-        "equipoReal": "Celta",
-        "racha": [
-          1,
-          2,
-          1
-        ],
-        "rachaTitular": 0,
-        "nota": 3.4,
-        "rival": "Alavés",
-        "esLocal": true,
-        "dificultad": 47
-      },
-      {
         "nombre": "Fortuño",
         "foto": "https://cdn.biwenger.com/i/p/30334.png",
         "posicion": "Portero",
@@ -18514,24 +18302,6 @@
         "dificultad": 13
       },
       {
-        "nombre": "Nico Williams",
-        "foto": "https://cdn.biwenger.com/i/p/21008.png",
-        "posicion": "Delantero",
-        "equipoReal": "Athletic",
-        "racha": [
-          6,
-          11,
-          11,
-          2,
-          1
-        ],
-        "rachaTitular": 3,
-        "nota": 6.8,
-        "rival": "Rayo Vallecano",
-        "esLocal": false,
-        "dificultad": null
-      },
-      {
         "nombre": "Kang-in Lee",
         "foto": "https://cdn.biwenger.com/i/p/17687.png",
         "posicion": "Centrocampista",
@@ -18566,24 +18336,6 @@
         "rival": "Celta",
         "esLocal": false,
         "dificultad": 47
-      },
-      {
-        "nombre": "Eric García",
-        "foto": "https://cdn.biwenger.com/i/p/20.png",
-        "posicion": "Defensa",
-        "equipoReal": "Barcelona",
-        "racha": [
-          9,
-          4,
-          4,
-          3,
-          3
-        ],
-        "rachaTitular": 4,
-        "nota": 5.3,
-        "rival": "Betis",
-        "esLocal": false,
-        "dificultad": 59
       },
       {
         "nombre": "Álvaro Valles",
@@ -18656,18 +18408,6 @@
         "rival": "Real Madrid",
         "esLocal": false,
         "dificultad": 66
-      },
-      {
-        "nombre": "Boayar",
-        "foto": "https://cdn.biwenger.com/i/p/37709.png",
-        "posicion": "Delantero",
-        "equipoReal": "Elche",
-        "racha": [],
-        "rachaTitular": 0,
-        "nota": 2.9,
-        "rival": "Villarreal",
-        "esLocal": false,
-        "dificultad": 43
       },
       {
         "nombre": "Vivian",
@@ -18888,18 +18628,6 @@
       "clausulaTexto": "1,9 M",
       "media": 4,
       "blindadoHasta": "2026-10-17T05:04:46.000Z"
-    },
-    {
-      "nombre": "Boayar",
-      "foto": "https://cdn.biwenger.com/i/p/37709.png",
-      "posicion": "Delantero",
-      "equipoReal": "Elche",
-      "presidente": "Seif fc",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/14027560.png",
-      "precioTexto": "0,1 M",
-      "clausulaTexto": "0,5 M",
-      "media": 0,
-      "blindadoHasta": "2026-10-17T05:04:47.000Z"
     },
     {
       "nombre": "Pedrosa",
