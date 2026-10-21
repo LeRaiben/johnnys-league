@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-20T22:38:56.062Z",
+  "actualizado": "2026-10-21T00:58:34.132Z",
   "nombreLiga": "Johnny's League",
   "jornadasJugadas": 9,
   "jornadaEnJuego": true,
@@ -457,6 +457,19 @@
       "pideBruto": 1840000,
       "valorMercado": "1,8 M",
       "valorBruto": 1840000,
+      "diferencia": 0
+    },
+    {
+      "tipo": "venta",
+      "nombre": "Diego Llorente",
+      "foto": "https://cdn.biwenger.com/i/p/1679.png",
+      "posicion": "Defensa",
+      "equipoReal": "Betis",
+      "vendedor": "Manchester Pity",
+      "pide": "1,4 M",
+      "pideBruto": 1440000,
+      "valorMercado": "1,4 M",
+      "valorBruto": 1440000,
       "diferencia": 0
     },
     {
@@ -955,19 +968,6 @@
     },
     {
       "tipo": "venta",
-      "nombre": "Puado",
-      "foto": "https://cdn.biwenger.com/i/p/16317.png",
-      "posicion": "Delantero",
-      "equipoReal": "Espanyol",
-      "vendedor": "FC FORUSIA",
-      "pide": "2,0 M",
-      "pideBruto": 1980000,
-      "valorMercado": "1,9 M",
-      "valorBruto": 1940000,
-      "diferencia": 40000
-    },
-    {
-      "tipo": "venta",
       "nombre": "Ruibal",
       "foto": "https://cdn.biwenger.com/i/p/19141.png",
       "posicion": "Centrocampista",
@@ -1043,6 +1043,19 @@
       "valorMercado": "5,3 M",
       "valorBruto": 5260000,
       "diferencia": -190000
+    },
+    {
+      "tipo": "venta",
+      "nombre": "De Jong",
+      "foto": "https://cdn.biwenger.com/i/p/18174.png",
+      "posicion": "Centrocampista",
+      "equipoReal": "Barcelona",
+      "vendedor": "Las Víboras FC",
+      "pide": "2,2 M",
+      "pideBruto": 2170000,
+      "valorMercado": "2,2 M",
+      "valorBruto": 2170000,
+      "diferencia": 0
     },
     {
       "tipo": "venta",
@@ -2657,7 +2670,7 @@
       "balance": "+5,7 M",
       "balanceBruto": 5658799,
       "sobreprecioMedio": 21,
-      "enVenta": 12,
+      "enVenta": 13,
       "fichajeEstrella": {
         "nombre": "Camello",
         "precio": "6,7 M",
@@ -2698,7 +2711,7 @@
       "balance": "+25,9 M",
       "balanceBruto": 25889800,
       "sobreprecioMedio": 42,
-      "enVenta": 6,
+      "enVenta": 7,
       "fichajeEstrella": {
         "nombre": "Ilaix Moriba",
         "precio": "4,9 M",
@@ -2739,7 +2752,7 @@
       "balance": "−81,2 M",
       "balanceBruto": -81231554,
       "sobreprecioMedio": 36,
-      "enVenta": 5,
+      "enVenta": 4,
       "fichajeEstrella": {
         "nombre": "Mbappé",
         "precio": "42,1 M",
@@ -12813,6 +12826,40 @@
       "blindadoHasta": "2026-10-30T10:01:38.000Z"
     },
     {
+      "id": "25403",
+      "nombre": "Gonzalo Villar",
+      "slug": "gonzalo-villar",
+      "posicion": "Centrocampista",
+      "posicionCodigo": 3,
+      "foto": "https://cdn.biwenger.com/i/p/25403.png",
+      "equipoReal": "Elche",
+      "equipoIdReal": "75",
+      "presidente": "Urdinho Pernambucano",
+      "escudoPresidente": "https://cdn.biwenger.com/i/u/12659137.png?v=9",
+      "precio": 2660000,
+      "precioTexto": "2,7 M",
+      "puntosTotales": 31,
+      "partidosJugados": 9,
+      "media": 3.4,
+      "puntosPorMillon": 11.65,
+      "racha": [
+        -1,
+        2,
+        5,
+        4,
+        6
+      ],
+      "rachaTitular": 9,
+      "ultimoMinutos": 90,
+      "clausula": 4575000,
+      "clausulaTexto": "4,6 M",
+      "pagadoPorSuDueno": 2370000,
+      "margen": 1915000,
+      "margenPorcentaje": 72,
+      "blindado": false,
+      "blindadoHasta": null
+    },
+    {
       "id": "26092",
       "nombre": "Terrats",
       "slug": "ramon-terrats",
@@ -13305,40 +13352,6 @@
       "margenPorcentaje": 32,
       "blindado": true,
       "blindadoHasta": "2026-10-28T05:04:54.000Z"
-    },
-    {
-      "id": "38405",
-      "nombre": "Odysseas",
-      "slug": "o-vlachodimos",
-      "posicion": "Portero",
-      "posicionCodigo": 1,
-      "foto": "https://cdn.biwenger.com/i/p/38405.png",
-      "equipoReal": "Sevilla",
-      "equipoIdReal": "17",
-      "presidente": "FC FORUSIA",
-      "escudoPresidente": "https://cdn.biwenger.com/i/u/12781315.png?v=57",
-      "precio": 2880000,
-      "precioTexto": "2,9 M",
-      "puntosTotales": 34,
-      "partidosJugados": 9,
-      "media": 3.8,
-      "puntosPorMillon": 11.81,
-      "racha": [
-        -3,
-        6,
-        2,
-        11,
-        3
-      ],
-      "rachaTitular": 9,
-      "ultimoMinutos": 90,
-      "clausula": 4320000,
-      "clausulaTexto": "4,3 M",
-      "pagadoPorSuDueno": null,
-      "margen": 1440000,
-      "margenPorcentaje": 50,
-      "blindado": true,
-      "blindadoHasta": "2026-10-27T13:29:38.000Z"
     },
     {
       "id": "39924",
@@ -15012,6 +15025,41 @@
         "mediaReciente": 0.5
       },
       {
+        "id": "25403",
+        "nombre": "Gonzalo Villar",
+        "slug": "gonzalo-villar",
+        "posicion": "Centrocampista",
+        "posicionCodigo": 3,
+        "foto": "https://cdn.biwenger.com/i/p/25403.png",
+        "equipoReal": "Elche",
+        "equipoIdReal": "75",
+        "presidente": "Urdinho Pernambucano",
+        "escudoPresidente": "https://cdn.biwenger.com/i/u/12659137.png?v=9",
+        "precio": 2660000,
+        "precioTexto": "2,7 M",
+        "puntosTotales": 31,
+        "partidosJugados": 9,
+        "media": 3.4,
+        "puntosPorMillon": 11.65,
+        "racha": [
+          -1,
+          2,
+          5,
+          4,
+          6
+        ],
+        "rachaTitular": 9,
+        "ultimoMinutos": 90,
+        "clausula": 4575000,
+        "clausulaTexto": "4,6 M",
+        "pagadoPorSuDueno": 2370000,
+        "margen": 1915000,
+        "margenPorcentaje": 72,
+        "blindado": false,
+        "blindadoHasta": null,
+        "mediaReciente": 0.5
+      },
+      {
         "id": "17200",
         "nombre": "Aihen",
         "slug": "aihen-munoz",
@@ -15142,39 +15190,6 @@
         "clausulaTexto": "0,5 M",
         "pagadoPorSuDueno": null,
         "margen": 340000,
-        "margenPorcentaje": 200,
-        "blindado": false,
-        "blindadoHasta": null,
-        "mediaReciente": 1
-      },
-      {
-        "id": "41262",
-        "nombre": "Arana",
-        "slug": "j-arana",
-        "posicion": "Delantero",
-        "posicionCodigo": 4,
-        "foto": "https://cdn.biwenger.com/i/p/41262.png",
-        "equipoReal": "Racing",
-        "equipoIdReal": "812",
-        "presidente": "Gorila FC",
-        "escudoPresidente": "https://cdn.biwenger.com/i/u/11411835.png",
-        "precio": 250000,
-        "precioTexto": "0,3 M",
-        "puntosTotales": 4,
-        "partidosJugados": 3,
-        "media": 1.3,
-        "puntosPorMillon": 16,
-        "racha": [
-          2,
-          0,
-          2
-        ],
-        "rachaTitular": 0,
-        "ultimoMinutos": 59,
-        "clausula": 750000,
-        "clausulaTexto": "0,8 M",
-        "pagadoPorSuDueno": null,
-        "margen": 500000,
         "margenPorcentaje": 200,
         "blindado": false,
         "blindadoHasta": null,
@@ -17489,6 +17504,24 @@
         "dificultad": 51
       },
       {
+        "nombre": "Gonzalo Villar",
+        "foto": "https://cdn.biwenger.com/i/p/25403.png",
+        "posicion": "Centrocampista",
+        "equipoReal": "Elche",
+        "racha": [
+          -1,
+          2,
+          5,
+          4,
+          6
+        ],
+        "rachaTitular": 9,
+        "nota": 3,
+        "rival": "Rayo Vallecano",
+        "esLocal": false,
+        "dificultad": 45
+      },
+      {
         "nombre": "Militão",
         "foto": "https://cdn.biwenger.com/i/p/18173.png",
         "posicion": "Defensa",
@@ -17625,24 +17658,6 @@
         "rival": "Racing",
         "esLocal": false,
         "dificultad": 34
-      },
-      {
-        "nombre": "Odysseas",
-        "foto": "https://cdn.biwenger.com/i/p/38405.png",
-        "posicion": "Portero",
-        "equipoReal": "Sevilla",
-        "racha": [
-          -3,
-          6,
-          2,
-          11,
-          3
-        ],
-        "rachaTitular": 9,
-        "nota": 4.2,
-        "rival": "Osasuna",
-        "esLocal": true,
-        "dificultad": 32
       },
       {
         "nombre": "Gayà",
