@@ -26,7 +26,7 @@
       "fecha": 1794072600,
       "esLocal": false,
       "rival": "Osasuna",
-      "dificultad": 36
+      "dificultad": 35
     },
     {
       "jornada": "Round 13",
@@ -37,13 +37,6 @@
     }
   ],
   "Atlético": [
-    {
-      "jornada": "Round 10",
-      "fecha": 1792868400,
-      "esLocal": true,
-      "rival": "Deportivo",
-      "dificultad": null
-    },
     {
       "jornada": "Round 11",
       "fecha": 1793451600,
@@ -70,7 +63,14 @@
       "fecha": 1795906860,
       "esLocal": false,
       "rival": "Elche",
-      "dificultad": 30
+      "dificultad": 29
+    },
+    {
+      "jornada": "Round 15",
+      "fecha": 1796511660,
+      "esLocal": true,
+      "rival": "Betis",
+      "dificultad": 51
     }
   ],
   "Osasuna": [
@@ -86,7 +86,7 @@
       "fecha": 1793649600,
       "esLocal": false,
       "rival": "Deportivo",
-      "dificultad": 44
+      "dificultad": 43
     },
     {
       "jornada": "Round 12",
@@ -100,7 +100,7 @@
       "fecha": 1795368600,
       "esLocal": true,
       "rival": "Málaga",
-      "dificultad": 15
+      "dificultad": 16
     },
     {
       "jornada": "Round 14",
@@ -112,39 +112,39 @@
   ],
   "Deportivo": [
     {
-      "jornada": "Round 10",
-      "fecha": 1792868400,
-      "esLocal": false,
-      "rival": "Atlético",
-      "dificultad": null
-    },
-    {
       "jornada": "Round 11",
       "fecha": 1793649600,
       "esLocal": true,
       "rival": "Osasuna",
-      "dificultad": 34
+      "dificultad": 36
     },
     {
       "jornada": "Round 12",
       "fecha": 1794064500,
       "esLocal": false,
       "rival": "Espanyol",
-      "dificultad": 20
+      "dificultad": 21
     },
     {
       "jornada": "Round 13",
       "fecha": 1795266000,
       "esLocal": false,
       "rival": "Alavés",
-      "dificultad": 45
+      "dificultad": 47
     },
     {
       "jornada": "Round 14",
       "fecha": 1795906860,
       "esLocal": true,
       "rival": "Barcelona",
-      "dificultad": 94
+      "dificultad": 95
+    },
+    {
+      "jornada": "Round 15",
+      "fecha": 1796511660,
+      "esLocal": false,
+      "rival": "Racing",
+      "dificultad": 40
     }
   ],
   "Betis": [
@@ -197,7 +197,7 @@
       "fecha": 1793459700,
       "esLocal": true,
       "rival": "Celta",
-      "dificultad": 54
+      "dificultad": 53
     },
     {
       "jornada": "Round 12",
@@ -211,7 +211,7 @@
       "fecha": 1795274100,
       "esLocal": true,
       "rival": "Valencia",
-      "dificultad": 28
+      "dificultad": 27
     },
     {
       "jornada": "Round 14",
@@ -227,7 +227,7 @@
       "fecha": 1792949400,
       "esLocal": true,
       "rival": "Levante",
-      "dificultad": 32
+      "dificultad": 30
     },
     {
       "jornada": "Round 11",
@@ -248,7 +248,7 @@
       "fecha": 1795360500,
       "esLocal": false,
       "rival": "Racing",
-      "dificultad": 35
+      "dificultad": 33
     },
     {
       "jornada": "Round 14",
@@ -382,7 +382,7 @@
       "fecha": 1793546100,
       "esLocal": false,
       "rival": "Racing",
-      "dificultad": 32
+      "dificultad": 31
     },
     {
       "jornada": "Round 12",
@@ -396,7 +396,7 @@
       "fecha": 1795291200,
       "esLocal": true,
       "rival": "Celta",
-      "dificultad": 42
+      "dificultad": 40
     },
     {
       "jornada": "Round 14",
@@ -426,14 +426,14 @@
       "fecha": 1794159000,
       "esLocal": false,
       "rival": "Villarreal",
-      "dificultad": 40
+      "dificultad": 53
     },
     {
       "jornada": "Round 13",
       "fecha": 1795377600,
       "esLocal": true,
       "rival": "Atlético",
-      "dificultad": 76
+      "dificultad": 77
     },
     {
       "jornada": "Round 14",
@@ -507,14 +507,14 @@
       "fecha": 1795352400,
       "esLocal": true,
       "rival": "Villarreal",
-      "dificultad": 31
+      "dificultad": 44
     },
     {
       "jornada": "Round 14",
       "fecha": 1795906860,
       "esLocal": false,
       "rival": "Deportivo",
-      "dificultad": 32
+      "dificultad": 30
     }
   ],
   "Sevilla": [
@@ -523,7 +523,7 @@
       "fecha": 1793044800,
       "esLocal": true,
       "rival": "Osasuna",
-      "dificultad": 32
+      "dificultad": 31
     },
     {
       "jornada": "Round 11",
@@ -560,14 +560,14 @@
       "fecha": 1793390400,
       "esLocal": false,
       "rival": "Villarreal",
-      "dificultad": 44
+      "dificultad": 56
     },
     {
       "jornada": "Round 12",
       "fecha": 1794064500,
       "esLocal": true,
       "rival": "Deportivo",
-      "dificultad": 52
+      "dificultad": 47
     },
     {
       "jornada": "Round 13",
@@ -597,35 +597,35 @@
       "fecha": 1792949400,
       "esLocal": false,
       "rival": "Real Sociedad",
-      "dificultad": 57
+      "dificultad": 58
     },
     {
       "jornada": "Round 11",
       "fecha": 1793451600,
       "esLocal": true,
       "rival": "Atlético",
-      "dificultad": 74
+      "dificultad": 75
     },
     {
       "jornada": "Round 12",
       "fecha": 1794159000,
       "esLocal": false,
       "rival": "Celta",
-      "dificultad": 55
+      "dificultad": 54
     },
     {
       "jornada": "Round 13",
       "fecha": 1795464000,
       "esLocal": true,
       "rival": "Elche",
-      "dificultad": 44
+      "dificultad": 43
     },
     {
       "jornada": "Round 14",
       "fecha": 1795906860,
       "esLocal": true,
       "rival": "Racing",
-      "dificultad": 29
+      "dificultad": 28
     }
   ],
   "Elche": [
@@ -641,28 +641,28 @@
       "fecha": 1794142800,
       "esLocal": true,
       "rival": "Betis",
-      "dificultad": 60
+      "dificultad": 61
     },
     {
       "jornada": "Round 13",
       "fecha": 1795464000,
       "esLocal": false,
       "rival": "Levante",
-      "dificultad": 49
+      "dificultad": 47
     },
     {
       "jornada": "Round 14",
       "fecha": 1795906860,
       "esLocal": true,
       "rival": "Atlético",
-      "dificultad": 73
+      "dificultad": 74
     },
     {
       "jornada": "Round 15",
       "fecha": 1796511660,
       "esLocal": false,
       "rival": "Osasuna",
-      "dificultad": 35
+      "dificultad": 34
     }
   ],
   "Racing": [
@@ -671,14 +671,14 @@
       "fecha": 1793546100,
       "esLocal": true,
       "rival": "Real Madrid",
-      "dificultad": 69
+      "dificultad": 70
     },
     {
       "jornada": "Round 12",
       "fecha": 1794056400,
       "esLocal": false,
       "rival": "Málaga",
-      "dificultad": 13
+      "dificultad": 14
     },
     {
       "jornada": "Round 13",
@@ -692,14 +692,14 @@
       "fecha": 1795906860,
       "esLocal": false,
       "rival": "Levante",
-      "dificultad": 51
+      "dificultad": 50
     },
     {
       "jornada": "Round 15",
       "fecha": 1796511660,
       "esLocal": true,
       "rival": "Deportivo",
-      "dificultad": 47
+      "dificultad": 46
     }
   ],
   "Málaga": [
